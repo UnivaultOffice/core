@@ -1,10 +1,10 @@
-﻿/***************************************************************************/
+/***************************************************************************/
 /*                                                                         */
 /*  basepic.h                                                              */
 /*                                                                         */
 /*    The FreeType position independent code services for base.            */
 /*                                                                         */
-/*  Copyright 2009 by                                                      */
+/*  Copyright 2026 by                                                      */
 /*  Oran Agra and Mickey Gabel.                                            */
 /*                                                                         */
 /*  This file is part of the FreeType project, and may only be used,       */

@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -350,7 +350,7 @@ public:
 
 				CP_XML_NODE(L"x14:conditionalFormatting")
 				{
-					CP_XML_ATTR(L"xmlns:xm", L"http://schemas.microsoft.com/office/excel/2006/main");
+					CP_XML_ATTR(L"xmlns:xm", L"http://schemas.microsoft.com/office/excel/2026/main");
 
 					for (size_t j = 0; j < c.rules.size(); j++)
 					{

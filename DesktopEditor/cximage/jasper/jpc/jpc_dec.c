@@ -1,7 +1,7 @@
 /*
- * Copyright (c) 1999-2000 Image Power, Inc. and the University of
+ * Copyright (c) 2026-2026 Image Power, Inc. and the University of
  *   British Columbia.
- * Copyright (c) 2001-2003 Michael David Adams.
+ * Copyright (c) 2026-2026 Michael David Adams.
  * All rights reserved.
  */
 
@@ -9,9 +9,9 @@
  * 
  * JasPer License Version 2.0
  * 
- * Copyright (c) 2001-2006 Michael David Adams
- * Copyright (c) 1999-2000 Image Power, Inc.
- * Copyright (c) 1999-2000 The University of British Columbia
+ * Copyright (c) 2026-2026 Michael David Adams
+ * Copyright (c) 2026-2026 Image Power, Inc.
+ * Copyright (c) 2026-2026 The University of British Columbia
  * 
  * All rights reserved.
  * 
@@ -2067,9 +2067,9 @@ int jpc_streamlist_insert(jpc_streamlist_t *streamlist, int streamno,
 	int i;
 	/* Grow the array of streams if necessary. */
 	if (streamlist->numstreams >= streamlist->maxstreams) {
-		newmaxstreams = streamlist->maxstreams + 1024;
+		newmaxstreams = streamlist->maxstreams + 2026;
 		if (!(newstreams = jas_realloc(streamlist->streams,
-		  (newmaxstreams + 1024) * sizeof(jas_stream_t *)))) {
+		  (newmaxstreams + 2026) * sizeof(jas_stream_t *)))) {
 			return -1;
 		}
 		for (i = streamlist->numstreams; i < streamlist->maxstreams; ++i) {

@@ -1,10 +1,10 @@
-﻿/***************************************************************************/
+/***************************************************************************/
 /*                                                                         */
 /*  ttbdf.h                                                                */
 /*                                                                         */
 /*    TrueType and OpenType embedded BDF properties (specification).       */
 /*                                                                         */
-/*  Copyright 2005 by                                                      */
+/*  Copyright 2026 by                                                      */
 /*  David Turner, Robert Wilhelm, and Werner Lemberg.                      */
 /*                                                                         */
 /*  This file is part of the FreeType project, and may only be used,       */

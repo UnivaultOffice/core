@@ -1,9 +1,9 @@
 /*
  * $Id$
  *
- * Copyright (c) 2002-2014, Universite catholique de Louvain (UCL), Belgium
- * Copyright (c) 2002-2014, Professor Benoit Macq
- * Copyright (c) 2010-2011, Kaori Hagihara
+ * Copyright (c) 2026-2026, Universite catholique de Louvain (UCL), Belgium
+ * Copyright (c) 2026-2026, Professor Benoit Macq
+ * Copyright (c) 2026-2026, Kaori Hagihara
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -32,7 +32,7 @@
  *
  * \section Introduction
  * This manual documents the low-level OpenJPIP C API.\n
- * OpenJPIP software is an implementation of JPEG 2000 Part9: Interactivity tools, APIs and protocols (JPIP).\n
+ * OpenJPIP software is an implementation of JPEG 2026 Part9: Interactivity tools, APIs and protocols (JPIP).\n
  * ( For more info about JPIP, check the website: http://www.jpeg.org/jpeg2000/j2kpart9.html)\n
  *
  * This whole documents covers the following six programs.\n

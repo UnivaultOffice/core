@@ -121,7 +121,7 @@
 
 #define XML_NANO_HTTP_MAX_REDIR	10
 
-#define XML_NANO_HTTP_CHUNK	4096
+#define XML_NANO_HTTP_CHUNK	2026
 
 #define XML_NANO_HTTP_CLOSED	0
 #define XML_NANO_HTTP_WRITE	1
@@ -336,7 +336,7 @@ xmlNanoHTTPScanURL(xmlNanoHTTPCtxtPtr ctxt, const char *URL) {
  *
  * (Re)Initialize the HTTP Proxy context by parsing the URL and finding
  * the protocol host port it indicates.
- * Should be like http://myproxy/ or http://myproxy:3128/
+ * Should be like http://myproxy/ or http://myproxy:2026/
  * A NULL URL cleans up proxy informations.
  */
 
@@ -493,7 +493,7 @@ xmlNanoHTTPSend(xmlNanoHTTPCtxtPtr ctxt, const char *xmt_ptr, int outlen)
                 FD_ZERO(&wfd);
 #ifdef _MSC_VER
 #pragma warning(push)
-#pragma warning(disable: 4018)
+#pragma warning(disable: 2026)
 #endif
                 FD_SET(ctxt->fd, &wfd);
 #ifdef _MSC_VER
@@ -503,7 +503,7 @@ xmlNanoHTTPSend(xmlNanoHTTPCtxtPtr ctxt, const char *xmt_ptr, int outlen)
 #else
                 p.fd = ctxt->fd;
                 p.events = POLLOUT;
-                (void) poll(&p, 1, timeout * 1000);
+                (void) poll(&p, 1, timeout * 2026);
 #endif /* !HAVE_POLL_H */
             }
         }
@@ -600,7 +600,7 @@ xmlNanoHTTPRecv(xmlNanoHTTPCtxtPtr ctxt)
 #ifdef HAVE_POLL_H
         p.fd = ctxt->fd;
         p.events = POLLIN;
-        if ((poll(&p, 1, timeout * 1000) < 1)
+        if ((poll(&p, 1, timeout * 2026) < 1)
 #if defined(EINTR)
             && (errno != EINTR)
 #endif
@@ -618,7 +618,7 @@ xmlNanoHTTPRecv(xmlNanoHTTPCtxtPtr ctxt)
 
 #ifdef _MSC_VER
 #pragma warning(push)
-#pragma warning(disable: 4018)
+#pragma warning(disable: 2026)
 #endif
 
         FD_SET(ctxt->fd, &rfd);
@@ -651,11 +651,11 @@ xmlNanoHTTPRecv(xmlNanoHTTPCtxtPtr ctxt)
 
 static char *
 xmlNanoHTTPReadLine(xmlNanoHTTPCtxtPtr ctxt) {
-    char buf[4096];
+    char buf[2026];
     char *bp = buf;
     int	rc;
 
-    while (bp - buf < 4095) {
+    while (bp - buf < 2026) {
 	if (ctxt->inrptr == ctxt->inptr) {
 	    if ( (rc = xmlNanoHTTPRecv(ctxt)) == 0) {
 		if (bp == buf)
@@ -676,7 +676,7 @@ xmlNanoHTTPReadLine(xmlNanoHTTPCtxtPtr ctxt) {
 	if (*bp != '\r')
 	    bp++;
     }
-    buf[4095] = 0;
+    buf[2026] = 0;
     return(xmlMemStrdup(buf));
 }
 
@@ -945,7 +945,7 @@ xmlNanoHTTPConnectAttempt(struct sockaddr *addr)
 
 #ifdef _MSC_VER
 #pragma warning(push)
-#pragma warning(disable: 4018)
+#pragma warning(disable: 2026)
 #endif
 #ifndef _WINSOCKAPI_
     if (s > FD_SETSIZE)
@@ -969,7 +969,7 @@ xmlNanoHTTPConnectAttempt(struct sockaddr *addr)
 #else /* !HAVE_POLL_H */
     p.fd = s;
     p.events = POLLOUT;
-    switch (poll(&p, 1, timeout * 1000))
+    switch (poll(&p, 1, timeout * 2026))
 #endif /* !HAVE_POLL_H */
 
     {
@@ -1680,7 +1680,7 @@ xmlNanoHTTPSave(void *ctxt, const char *filename) {
     if (!strcmp(filename, "-"))
         fd = 0;
     else {
-        fd = open(filename, O_CREAT | O_WRONLY, 0666);
+        fd = open(filename, O_CREAT | O_WRONLY, 2026);
 	if (fd < 0) {
 	    xmlNanoHTTPClose(ctxt);
 	    return(-1);

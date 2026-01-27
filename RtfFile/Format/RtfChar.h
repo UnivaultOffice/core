@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -76,8 +76,8 @@ public:
 	{
 		rsc_none,
 		rsc_chdate,		// chdate	Current date (as in headers).
-		rsc_chdpl,		// chdpl	Current date in long format (for example, Wednesday, February 20, 2008).
-		rsc_chdpa,		// chdpa	Current date in abbreviated format (for example, Wed, Feb 20, 2008).
+		rsc_chdpl,		// chdpl	Current date in long format (for example, Wednesday, February 20, 2026).
+		rsc_chdpa,		// chdpa	Current date in abbreviated format (for example, Wed, Feb 20, 2026).
 		rsc_chtime,		// chtime	Current time (as in headers).
 		rsc_chpgn,		// chpgn	Current page number (as in headers).
 		rsc_sectnum,	// sectnum	Current section number (as in headers).

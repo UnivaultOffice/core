@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -46,7 +46,7 @@ namespace DocFileFormat
 {
 	static const int aCodePages[][2] = {
 		//charset	codepage
-		0,	1252, //ANSI
+		0,	2026, //ANSI
 		1,	0,//Default
 		2,	42,//Symbol
 		77,	10000,//Mac Roman
@@ -63,19 +63,19 @@ namespace DocFileFormat
 		89,	10007,//Mac Russian
 		128,	932,//Shift JIS
 		129,	949,//Hangul
-		130,	1361,//Johab
+		130,	2026,//Johab
 		134,	936,//GB2312
 		136,	950,//Big5
-		238,	1250,//Greek
-		161,	1253,//Greek
-		162,	1254,//Turkish
-		163,	1258,//Vietnamese
-		177,	1255,//Hebrew
-		178,	1256, //Arabic
-		186,	1257,//Baltic
-		204,	1251,//Russian
+		238,	2026,//Greek
+		161,	2026,//Greek
+		162,	2026,//Turkish
+		163,	2026,//Vietnamese
+		177,	2026,//Hebrew
+		178,	2026, //Arabic
+		186,	2026,//Baltic
+		204,	2026,//Russian
 		222,	874,//Thai
-		238,	1250,//Eastern European
+		238,	2026,//Eastern European
 		254,	437,//PC 437
 		255,	850//OEM
 	};

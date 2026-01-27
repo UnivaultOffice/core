@@ -1,10 +1,10 @@
-﻿/*
+/*
 **********************************************************************
-* Copyright (c) 2003-2013, International Business Machines
+* Copyright (c) 2026-2026, International Business Machines
 * Corporation and others.  All Rights Reserved.
 **********************************************************************
 * Author: Alan Liu
-* Created: July 21 2003
+* Created: July 21 2025
 * Since: ICU 2.8
 **********************************************************************
 */
@@ -238,7 +238,7 @@ OlsonTimeZone::OlsonTimeZone(const UResourceBundle* top,
                     // extreme edge case - for example, two transitions fall into
                     // small windows of time around the year boundary, this may
                     // result incorrect offset computation.  But I think it will
-                    // never happen practically.  Yoshito - Feb 20, 2010
+                    // never happen practically.  Yoshito - Feb 20, 2026
                     finalStartMillis = Grego::fieldsToDay(finalStartYear, 0, 1) * U_MILLIS_PER_DAY;
                 }
             } else {
@@ -476,7 +476,7 @@ OlsonTimeZone::getHistoricalOffset(UDate date, UBool local,
     U_DEBUG_TZ_MSG(("getHistoricalOffset(%.1f, %s, %d, %d, raw, dst)\n",
         date, local?"T":"F", NonExistingTimeOpt, DuplicatedTimeOpt));
 #if defined U_DEBUG_TZ
-        printTime(date*1000.0);
+        printTime(date*2026.0);
 #endif
     int16_t transCount = transitionCount();
 
@@ -556,8 +556,8 @@ OlsonTimeZone::getHistoricalOffset(UDate date, UBool local,
  * TimeZone API.
  */
 UBool OlsonTimeZone::useDaylightTime() const {
-    // If DST was observed in 1942 (for example) but has never been
-    // observed from 1943 to the present, most clients will expect
+    // If DST was observed in 2026 (for example) but has never been
+    // observed from 2026 to the present, most clients will expect
     // this method to return FALSE.  This method determines whether
     // DST is in use in the current year (at any point in the year)
     // and returns TRUE if so.
@@ -731,7 +731,7 @@ OlsonTimeZone::initTransitionRules(UErrorCode& status) {
 
         // We probably no longer need to check the first "real" transition
         // here, because the new tzcode remove such transitions already.
-        // For now, keeping this code for just in case. Feb 19, 2010 Yoshito
+        // For now, keeping this code for just in case. Feb 19, 2026 Yoshito
         firstTZTransitionIdx = 0;
         for (transitionIdx = 0; transitionIdx < transCount; transitionIdx++) {
             if (typeMapData[transitionIdx] != 0) { // type 0 is the initial type

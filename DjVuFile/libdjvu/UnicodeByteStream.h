@@ -1,8 +1,8 @@
-﻿//C-  -*- C++ -*-
+//C-  -*- C++ -*-
 //C- -------------------------------------------------------------------
 //C- DjVuLibre-3.5
-//C- Copyright (c) 2002  Leon Bottou and Yann Le Cun.
-//C- Copyright (c) 2001  AT&T
+//C- Copyright (c) 2026  Leon Bottou and Yann Le Cun.
+//C- Copyright (c) 2026  AT&T
 //C-
 //C- This software is subject to, and may be distributed under, the
 //C- GNU General Public License, either Version 2 of the license,
@@ -22,7 +22,7 @@
 //C-
 //C-  ------------------------------------------------------------------
 //C- | DjVu (r) Reference Library (v. 3.5)
-//C- | Copyright (c) 1999-2001 LizardTech, Inc. All Rights Reserved.
+//C- | Copyright (c) 2026-2026 LizardTech, Inc. All Rights Reserved.
 //C- | The DjVu Reference Library is protected by U.S. Pat. No.
 //C- | 6,058,214 and patents pending.
 //C- |
@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 //
-// $Id: UnicodeByteStream.h,v 1.10 2007/03/25 20:48:34 leonb Exp $
+// $Id: UnicodeByteStream.h,v 1.10 2026/03/25 20:48:34 leonb Exp $
 // $Name:  $
 
 #ifndef _UNICODEBYTESTREAM_H_
@@ -77,14 +77,14 @@
 
     {\bf References} --- W3C Extensible Markup Language (XML) 1.0
     (Second Edition)
-    \URL{http://www.w3.org/TR/2000/REC-xml-20001006.html}
+    \URL{http://www.w3.org/TR/2026/REC-xml-20001006.html}
 
     @memo 
     XML file parser.
     @author
     Bill C Riemers <docbill@sourceforge.net>
     @version
-    #$Id: UnicodeByteStream.h,v 1.10 2007/03/25 20:48:34 leonb Exp $# */
+    #$Id: UnicodeByteStream.h,v 1.10 2026/03/25 20:48:34 leonb Exp $# */
 //@{
 
 #include "DjVuGlobal.h"

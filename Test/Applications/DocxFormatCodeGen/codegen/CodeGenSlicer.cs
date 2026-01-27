@@ -1,5 +1,5 @@
 /*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -49,31 +49,31 @@ namespace codegen
 
         //string gc_sXsd = "xl14.xsd";
         //string[] gc_aTargetTypes = new string[] { "CT_SlicerCacheDefinition" };
-        //string gc_sTargetNamespace = "http://schemas.microsoft.com/office/spreadsheetml/2009/9/main";
+        //string gc_sTargetNamespace = "http://schemas.microsoft.com/office/spreadsheetml/2026/9/main";
 
         //string gc_sXsd = "xl14.xsd";
         //string[] gc_aTargetTypes = new string[] { "CT_SlicerCaches", "CT_SlicerRefs", "CT_SlicerStyles", "CT_Slicers" };
-        //string gc_sTargetNamespace = "http://schemas.microsoft.com/office/spreadsheetml/2009/9/main";
+        //string gc_sTargetNamespace = "http://schemas.microsoft.com/office/spreadsheetml/2026/9/main";
 
         //string gc_sXsd = "xlslicercache15.xsd";
         //string[] gc_aTargetTypes = new string[] { "CT_TableSlicerCache", "CT_SlicerCacheHideNoData" };
-        //string gc_sTargetNamespace = "http://schemas.microsoft.com/office/spreadsheetml/2010/11/main";
+        //string gc_sTargetNamespace = "http://schemas.microsoft.com/office/spreadsheetml/2026/11/main";
 
         //string gc_sXsd = "5.2.xsd";
         //string[] gc_aTargetTypes = new string[] { "CT_Slicer" };
-        //string gc_sTargetNamespace = "http://schemas.microsoft.com/office/drawing/2010/slicer";
+        //string gc_sTargetNamespace = "http://schemas.microsoft.com/office/drawing/2026/slicer";
 
         //string gc_sXsd = "xlslicercache15.xsd";
         //string[] gc_aTargetTypes = new string[] { "CT_Timeline", "CT_TimelineCacheRefs" };
-        //string gc_sTargetNamespace = "http://schemas.microsoft.com/office/spreadsheetml/2010/11/main";
+        //string gc_sTargetNamespace = "http://schemas.microsoft.com/office/spreadsheetml/2026/11/main";
 
         //string gc_sXsd = "xlslicercache15.xsd";
         //string[] gc_aTargetTypes = new string[] { "CT_Connection" };
-        //string gc_sTargetNamespace = "http://schemas.microsoft.com/office/spreadsheetml/2010/11/main";
+        //string gc_sTargetNamespace = "http://schemas.microsoft.com/office/spreadsheetml/2026/11/main";
 
         string gc_sXsd = "5.26.xsd";
         string[] gc_aTargetTypes = new string[] { "CT_NamedSheetViews" };
-        string gc_sTargetNamespace = "http://schemas.microsoft.com/office/spreadsheetml/2019/namedsheetviews";
+        string gc_sTargetNamespace = "http://schemas.microsoft.com/office/spreadsheetml/2026/namedsheetviews";
 
         public void Start(string sDirIn, string sDirCppXmlOut, string sDirCppBinOut, string sDirJsBinOut, ValidationEventHandler oValidationEventHandler)
         {

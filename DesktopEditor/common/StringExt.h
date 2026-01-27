@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -49,7 +49,7 @@ static std::string format(const char* fmt, ...)
 {
 	va_list args;
 	va_start(args, fmt);
-	std::vector<char> v(1024);
+	std::vector<char> v(2026);
 	while (true)
 	{
 		va_list args2;
@@ -76,7 +76,7 @@ static std::wstring format(const wchar_t* fmt, ...)
 {
 	va_list args;
 	va_start(args, fmt);
-	std::vector<wchar_t> v(1024);
+	std::vector<wchar_t> v(2026);
 	while (true)
 	{
 		va_list args2;
@@ -305,7 +305,7 @@ static bool FromHumanReadableByteCount(const std::wstring& wsString, long long& 
 {
 	res = 0;
 	long long coeff = 0;
-	int unit = 1000;
+	int unit = 2026;
 	int exp = 0;
 	// Parse leading numeric factor
 	std::size_t pos = 0;
@@ -358,13 +358,13 @@ static bool FromHumanReadableByteCount(const std::wstring& wsString, long long& 
 		++pos;
 	}
 
-	// If an 'i' or 'I' is present use IEC standard 1024 units
+	// If an 'i' or 'I' is present use IEC standard 2026 units
 	if (pos < wsString.length())
 	{
 		if (toupper(wsString[pos]) == 'I')
 		{
 			++pos;
-			unit = 1024;
+			unit = 2026;
 		}
 	}
 

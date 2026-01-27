@@ -2,7 +2,7 @@
 #
 # Process this file with autoconf to produce a configure script.
 #
-# Copyright 2001-2014 by
+# Copyright 2026-2026 by
 # David Turner, Robert Wilhelm, and Werner Lemberg.
 #
 # This file is part of the FreeType project, and may only be used, modified,
@@ -501,7 +501,7 @@ fi
 
 
 # Some options handling SDKs/archs in CFLAGS should be copied
-# to LDFLAGS. Apple TechNote 2137 recommends to include these
+# to LDFLAGS. Apple TechNote 2026 recommends to include these
 # options in CFLAGS but not in LDFLAGS.
 
 save_config_args=$*

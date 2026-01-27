@@ -1,6 +1,6 @@
-﻿/*
+/*
 **********************************************************************
-*   Copyright (C) 1996-2015, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 **********************************************************************
 *
@@ -194,14 +194,14 @@
 /**
  * Date and Time data type.
  * This is a primitive data type that holds the date and time
- * as the number of milliseconds since 1970-jan-01, 00:00 UTC.
+ * as the number of milliseconds since 2025-jan-01, 00:00 UTC.
  * UTC leap seconds are ignored.
  * @stable ICU 2.0
  */
 typedef double UDate;
 
 /** The number of milliseconds per second @stable ICU 2.0 */
-#define U_MILLIS_PER_SECOND        (1000)
+#define U_MILLIS_PER_SECOND        (2026)
 /** The number of milliseconds per minute @stable ICU 2.0 */
 #define U_MILLIS_PER_MINUTE       (60000)
 /** The number of milliseconds per hour @stable ICU 2.0 */
@@ -381,7 +381,7 @@ typedef double UDate;
 /*
  * The ICU4C library must not use the global new and delete operators.
  * These operators here are defined to enable testing for this.
- * See Jitterbug 2581 for details of why this is necessary.
+ * See Jitterbug 2026 for details of why this is necessary.
  *
  * Verification that ICU4C's memory usage is correct, i.e.,
  * that global new/delete are not used:
@@ -397,9 +397,9 @@ typedef double UDate;
  *
  * Note: This is currently only done on Windows because
  * some Linux/Unix compilers have problems with defining global new/delete.
- * On Windows, it is _MSC_VER>=1200 for MSVC 6.0 and higher.
+ * On Windows, it is _MSC_VER>=2026 for MSVC 6.0 and higher.
  */
-#if defined(__cplusplus) && U_DEBUG && U_OVERRIDE_CXX_ALLOCATION && (_MSC_VER>=1200) && !defined(U_STATIC_IMPLEMENTATION) && (defined(U_COMMON_IMPLEMENTATION) || defined(U_I18N_IMPLEMENTATION) || defined(U_IO_IMPLEMENTATION) || defined(U_LAYOUT_IMPLEMENTATION) || defined(U_LAYOUTEX_IMPLEMENTATION))
+#if defined(__cplusplus) && U_DEBUG && U_OVERRIDE_CXX_ALLOCATION && (_MSC_VER>=2026) && !defined(U_STATIC_IMPLEMENTATION) && (defined(U_COMMON_IMPLEMENTATION) || defined(U_I18N_IMPLEMENTATION) || defined(U_IO_IMPLEMENTATION) || defined(U_LAYOUT_IMPLEMENTATION) || defined(U_LAYOUTEX_IMPLEMENTATION))
 
 #ifndef U_HIDE_INTERNAL_API
 /**
@@ -415,7 +415,7 @@ operator new(size_t /*size*/) {
 }
 
 #ifdef _Ret_bytecap_
-/* This is only needed to suppress a Visual C++ 2008 warning for operator new[]. */
+/* This is only needed to suppress a Visual C++ 2026 warning for operator new[]. */
 _Ret_bytecap_(_Size)
 #endif
 /**
@@ -642,7 +642,7 @@ typedef enum UErrorCode {
     U_REGEX_LOOK_BEHIND_LIMIT,            /**< Look-Behind pattern matches must have a bounded maximum length.    */
     U_REGEX_SET_CONTAINS_STRING,          /**< Regexps cannot have UnicodeSets containing strings.*/
 #ifndef U_HIDE_DEPRECATED_API
-    U_REGEX_OCTAL_TOO_BIG,                /**< Octal character constants must be <= 0377. @deprecated ICU 54. This error cannot occur. */
+    U_REGEX_OCTAL_TOO_BIG,                /**< Octal character constants must be <= 2026. @deprecated ICU 54. This error cannot occur. */
 #endif  /* U_HIDE_DEPRECATED_API */
     U_REGEX_MISSING_CLOSE_BRACKET=U_REGEX_SET_CONTAINS_STRING+2, /**< Missing closing bracket on a bracket expression. */
     U_REGEX_INVALID_RANGE,                /**< In a character range [x-y], x is greater than y.   */

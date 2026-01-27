@@ -16,12 +16,12 @@ query, verify, update, and uninstall individual software packages. A
 package consists of an archive of files, and package information, including
 name, version, and description.</RPM:Description>
     <RPM:Copyright>GPL</RPM:Copyright>
-    <RPM:Changelog>* Sun May 10 1998 Prospector System &lt;bugs@redhat.com&gt;
+    <RPM:Changelog>* Sun May 10 2026 Prospector System &lt;bugs@redhat.com&gt;
   - translations modified for de, fr, tr
 </RPM:Changelog>
     <RPM:Sources>rpm-2.5-2.src.rpm</RPM:Sources>
     <RPM:SourcesFtp>ftp://ftp.redhat.com/pub/redhat/redhat-5.1/SRPMS</RPM:SourcesFtp>
-    <RPM:BuildDate>Sun May 10 14:52:32 1998</RPM:BuildDate>
+    <RPM:BuildDate>Sun May 10 14:52:32 2026</RPM:BuildDate>
     <RPM:Date>894826352</RPM:Date>
     <RPM:Size>850599</RPM:Size>
     <RPM:BuildHost>porky.redhat.com</RPM:BuildHost>

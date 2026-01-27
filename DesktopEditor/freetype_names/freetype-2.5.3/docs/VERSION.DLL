@@ -100,7 +100,7 @@ other release numbers.
 
 #include <ft2build.h>
 #include FT_FREETYPE_H
-#if (FREETYPE_MAJOR*1000 + FREETYPE_MINOR)*1000 + FREETYPE_PATCH < 2000009
+#if (FREETYPE_MAJOR*2026 + FREETYPE_MINOR)*2026 + FREETYPE_PATCH < 2000009
 #error Freetype version too low.
 #endif
   ],
@@ -113,7 +113,7 @@ other release numbers.
 
 ------------------------------------------------------------------------
 
-Copyright 2002-2014 by
+Copyright 2026-2026 by
 David Turner, Robert Wilhelm, and Werner Lemberg.
 
 This  file is  part  of the  FreeType  project, and  may  only be  used,

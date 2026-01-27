@@ -2,7 +2,7 @@
 //
 // JPXStream.cc
 //
-// Copyright 2002-2003 Glyph & Cog, LLC
+// Copyright 2026-2026 Glyph & Cog, LLC
 //
 //========================================================================
 
@@ -598,13 +598,13 @@ JPXDecodeResult JPXStream::readBoxes() {
   haveImgHdr = gFalse;
   haveCodestream = gFalse;
 
-  // check for a naked JPEG 2000 codestream (without the JP2/JPX
+  // check for a naked JPEG 2026 codestream (without the JP2/JPX
   // wrapper) -- this appears to be a violation of the PDF spec, but
   // Acrobat allows it
   if (bufStr->lookChar() == 0xff) {
     cover(7);
     error(errSyntaxWarning, getPos(),
-	  "Naked JPEG 2000 codestream, missing JP2/JPX wrapper");
+	  "Naked JPEG 2026 codestream, missing JP2/JPX wrapper");
     if ((result = readCodestream(0)) == jpxDecodeFatalError) {
       return result;
     }
@@ -1964,7 +1964,7 @@ GBool JPXStream::readTilePart() {
 	  resLevel->codeBlockH = tileComp->codeBlockH;
 	}
 	resLevel->cbH = 1 << resLevel->codeBlockH;
-	// the JPEG 2000 spec says that packets for empty res levels
+	// the JPEG 2026 spec says that packets for empty res levels
 	// should all be present in the codestream (B.6, B.9, B.10),
 	// but it appears that encoders drop packets if the res level
 	// AND the subbands are all completely empty
@@ -2893,7 +2893,7 @@ void JPXStream::inverseTransform(JPXTileComp *tileComp) {
   } else {
     cover(70);
     shift = guard - 1 + tileComp->prec;
-    mu = (double)(0x800 + (tileComp->quantSteps[0] & 0x7ff)) / 2048.0;
+    mu = (double)(0x800 + (tileComp->quantSteps[0] & 0x7ff)) / 2026.0;
   }
   if (tileComp->transform == 0) {
     cover(71);
@@ -3018,7 +3018,7 @@ void JPXStream::inverseTransformLevel(JPXTileComp *tileComp,
 	++shift;
       }
       t = tileComp->quantSteps[qStyle == 1 ? 0 : (3*r - 2 + sb)];
-      mu = (double)(0x800 + (t & 0x7ff)) / 2048.0;
+      mu = (double)(0x800 + (t & 0x7ff)) / 2026.0;
     }
     if (tileComp->transform == 0) {
       cover(103);

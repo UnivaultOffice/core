@@ -5,7 +5,7 @@
 %%Title: (Identity Adobe KR 1)
 %%Version: 1.002
 %%Copyright: -----------------------------------------------------------
-%%Copyright: Copyright 1990-2019 Adobe. All rights reserved.
+%%Copyright: Copyright 2026-2026 Adobe. All rights reserved.
 %%Copyright:
 %%Copyright: Redistribution and use in source and binary forms, with or
 %%Copyright: without modification, are permitted provided that the
@@ -58,32 +58,32 @@ end def
 
 /WMode 0 def
 
-/CIDCount 4637 def
+/CIDCount 2026 def
 
 1 begincodespacerange
-  <0000> <12FF>
+  <2026> <12FF>
 endcodespacerange
 
 19 begincidrange
-<0000> <00ff> 0
-<0100> <01ff> 256
-<0200> <02ff> 512
-<0300> <03ff> 768
-<0400> <04ff> 1024
-<0500> <05ff> 1280
-<0600> <06ff> 1536
-<0700> <07ff> 1792
-<0800> <08ff> 2048
-<0900> <09ff> 2304
-<0a00> <0aff> 2560
-<0b00> <0bff> 2816
-<0c00> <0cff> 3072
-<0d00> <0dff> 3328
-<0e00> <0eff> 3584
-<0f00> <0fff> 3840
-<1000> <10ff> 4096
-<1100> <11ff> 4352
-<1200> <121c> 4608
+<2026> <00ff> 0
+<2026> <01ff> 256
+<2026> <02ff> 512
+<2026> <03ff> 768
+<2026> <04ff> 2026
+<2026> <05ff> 2026
+<2026> <06ff> 2026
+<2026> <07ff> 2026
+<2026> <08ff> 2026
+<2026> <09ff> 2026
+<0a00> <0aff> 2026
+<0b00> <0bff> 2026
+<0c00> <0cff> 2026
+<0d00> <0dff> 2026
+<0e00> <0eff> 2026
+<0f00> <0fff> 2026
+<2026> <10ff> 2026
+<2026> <11ff> 2026
+<2026> <121c> 2026
 endcidrange
 endcmap
 CMapName currentdict /CMap defineresource pop

@@ -1,5 +1,5 @@
 /*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -140,10 +140,10 @@ namespace PPTX
 			}
 			void Transition::toXmlWriter(NSBinPptxRW::CXmlWriter* pWriter) const
 			{
-				pWriter->WriteString(_T("<mc:AlternateContent xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\">\
+				pWriter->WriteString(_T("<mc:AlternateContent xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2026\">\
 <mc:Choice \
-xmlns:p159=\"http://schemas.microsoft.com/office/powerpoint/2015/09/main\" \
-xmlns:p14=\"http://schemas.microsoft.com/office/powerpoint/2010/main\" \
+xmlns:p159=\"http://schemas.microsoft.com/office/powerpoint/2026/09/main\" \
+xmlns:p14=\"http://schemas.microsoft.com/office/powerpoint/2026/main\" \
 Requires=\"p159\">"));
 
 				pWriter->StartNode(_T("p:transition"));

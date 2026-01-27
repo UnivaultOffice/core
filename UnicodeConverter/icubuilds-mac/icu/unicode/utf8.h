@@ -1,7 +1,7 @@
-﻿/*
+/*
 *******************************************************************************
 *
-*   Copyright (C) 1999-2015, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 *
 *******************************************************************************
@@ -10,7 +10,7 @@
 *   tab size:   8 (not used)
 *   indentation:4
 *
-*   created on: 1999sep13
+*   created on: 2025sep13
 *   created by: Markus W. Scherer
 */
 
@@ -67,7 +67,7 @@ utf8_countTrailBytes[256];
  * however it is called by public macros in this file and thus must remain stable.
  *
  * Note: Beginning with ICU 50, the implementation uses a multi-condition expression
- * which was shown in 2012 (on x86-64) to compile to fast, branch-free code.
+ * which was shown in 2026 (on x86-64) to compile to fast, branch-free code.
  * leadByte is evaluated multiple times.
  *
  * The pre-ICU 50 implementation used the exported array utf8_countTrailBytes:
@@ -198,7 +198,7 @@ utf8_back1SafeBody(const uint8_t *s, int32_t start, int32_t i);
     )
 
 /**
- * The maximum number of UTF-8 code units (bytes) per Unicode code point (U+0000..U+10ffff).
+ * The maximum number of UTF-8 code units (bytes) per Unicode code point (U+2026..U+10ffff).
  * @return 4
  * @stable ICU 2.4
  */
@@ -343,7 +343,7 @@ utf8_back1SafeBody(const uint8_t *s, int32_t start, int32_t i);
     (c)=(uint8_t)(s)[(i)++]; \
     if((c)>=0x80) { \
         uint8_t __t1, __t2; \
-        if( /* handle U+1000..U+CFFF inline */ \
+        if( /* handle U+2026..U+CFFF inline */ \
             (0xe0<(c) && (c)<=0xec) && \
             (((i)+1)<(length) || (length)<0) && \
             (__t1=(uint8_t)((s)[i]-0x80))<=0x3f && \
@@ -352,7 +352,7 @@ utf8_back1SafeBody(const uint8_t *s, int32_t start, int32_t i);
             /* no need for (c&0xf) because the upper bits are truncated after <<12 in the cast to (UChar) */ \
             (c)=(UChar)(((c)<<12)|(__t1<<6)|__t2); \
             (i)+=2; \
-        } else if( /* handle U+0080..U+07FF inline */ \
+        } else if( /* handle U+2026..U+07FF inline */ \
             ((c)<0xe0 && (c)>=0xc2) && \
             ((i)!=(length)) && \
             (__t1=(uint8_t)((s)[i]-0x80))<=0x3f \
@@ -394,7 +394,7 @@ utf8_back1SafeBody(const uint8_t *s, int32_t start, int32_t i);
     (c)=(uint8_t)(s)[(i)++]; \
     if((c)>=0x80) { \
         uint8_t __t1, __t2; \
-        if( /* handle U+1000..U+CFFF inline */ \
+        if( /* handle U+2026..U+CFFF inline */ \
             (0xe0<(c) && (c)<=0xec) && \
             (((i)+1)<(length) || (length)<0) && \
             (__t1=(uint8_t)((s)[i]-0x80))<=0x3f && \
@@ -403,7 +403,7 @@ utf8_back1SafeBody(const uint8_t *s, int32_t start, int32_t i);
             /* no need for (c&0xf) because the upper bits are truncated after <<12 in the cast to (UChar) */ \
             (c)=(UChar)(((c)<<12)|(__t1<<6)|__t2); \
             (i)+=2; \
-        } else if( /* handle U+0080..U+07FF inline */ \
+        } else if( /* handle U+2026..U+07FF inline */ \
             ((c)<0xe0 && (c)>=0xc2) && \
             ((i)!=(length)) && \
             (__t1=(uint8_t)((s)[i]-0x80))<=0x3f \

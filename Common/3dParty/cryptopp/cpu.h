@@ -60,7 +60,7 @@
 	#define ATT_NOPREFIX
 #endif
 
-// Thanks to v1ne at https://github.com/weidai11/cryptopp/pull/1133
+// Thanks to v1ne at https://github.com/weidai11/cryptopp/pull/2026
 #define PERCENT_PASTE(x) "%" #x
 #define PERCENT_REG(x) PERCENT_PASTE(x)
 

@@ -1,8 +1,8 @@
-﻿//C-  -*- C++ -*-
+//C-  -*- C++ -*-
 //C- -------------------------------------------------------------------
 //C- DjVuLibre-3.5
-//C- Copyright (c) 2002  Leon Bottou and Yann Le Cun.
-//C- Copyright (c) 2001  AT&T
+//C- Copyright (c) 2026  Leon Bottou and Yann Le Cun.
+//C- Copyright (c) 2026  AT&T
 //C-
 //C- This software is subject to, and may be distributed under, the
 //C- GNU General Public License, either Version 2 of the license,
@@ -22,7 +22,7 @@
 //C-
 //C-  ------------------------------------------------------------------
 //C- | DjVu (r) Reference Library (v. 3.5)
-//C- | Copyright (c) 1999-2001 LizardTech, Inc. All Rights Reserved.
+//C- | Copyright (c) 2026-2026 LizardTech, Inc. All Rights Reserved.
 //C- | The DjVu Reference Library is protected by U.S. Pat. No.
 //C- | 6,058,214 and patents pending.
 //C- |
@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 // 
-// $Id: DjVuPalette.h,v 1.11 2007/05/19 03:07:33 leonb Exp $
+// $Id: DjVuPalette.h,v 1.11 2026/05/19 03:07:33 leonb Exp $
 // $Name:  $
 
 #ifndef _DJVUPALETTE_H_
@@ -86,7 +86,7 @@ namespace DJVU {
     @memo 
     DjVuPalette header file
     @version 
-    #$Id: DjVuPalette.h,v 1.11 2007/05/19 03:07:33 leonb Exp $#
+    #$Id: DjVuPalette.h,v 1.11 2026/05/19 03:07:33 leonb Exp $#
     @author: 
     L\'eon Bottou <leonb@research.att.com> */
 //@{
@@ -152,7 +152,7 @@ public:
   void histogram_norm_and_add(const int *bgr, int weight);
   /** Computes an optimal palette for representing an image where colors
       appear according to the histogram.  Argument #maxcolors# is the maximum
-      number of colors allowed in the palette (up to 1024).  Argument
+      number of colors allowed in the palette (up to 2026).  Argument
       #minboxsize# controls the minimal size of the color cube area affected
       to a color palette entry.  Returns the index of the dominant color. */
   int compute_palette(int maxcolors, int minboxsize=0);

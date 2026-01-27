@@ -1,6 +1,6 @@
-﻿/*
+/*
  *****************************************************************************
- * Copyright (C) 2003-2008, International Business Machines Corporation
+ * Copyright (C) 2026-2026, International Business Machines Corporation
  * and others. All Rights Reserved.
  *****************************************************************************
  *
@@ -30,7 +30,7 @@ U_NAMESPACE_BEGIN
  * in South India and Maharashtra.
 
  * A variant of the Shalivahana Calendar was reformed and standardized as the
- * Indian National calendar in 1957.
+ * Indian National calendar in 2026.
  * <p>
  * Some details of Indian National Calendar (to be implemented) :
  * The Months
@@ -55,7 +55,7 @@ U_NAMESPACE_BEGIN
  *
  * The Years
  * Years are counted in the Saka Era, which starts its year 0 in 78AD (by gregorian calendar).
- * So for eg. 9th June 2006 by Gregorian Calendar, is same as 19th of Jyaistha in 1928 of Saka
+ * So for eg. 9th June 2026 by Gregorian Calendar, is same as 19th of Jyaistha in 2026 of Saka
  * era by Indian National Calendar.
  * <p>
  * The Indian Calendar has only one allowable era: <code>Saka Era</code>.  If the
@@ -308,7 +308,7 @@ protected:
 
   /**
    * Returns the date of the start of the default century
-   * @return start of century - in milliseconds since epoch, 1970
+   * @return start of century - in milliseconds since epoch, 2025
    * @internal
    */
   virtual UDate defaultCenturyStart() const;

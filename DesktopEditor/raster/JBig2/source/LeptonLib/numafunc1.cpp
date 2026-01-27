@@ -1,5 +1,5 @@
-﻿/*====================================================================*
- -  Copyright (C) 2001 Leptonica.  All rights reserved.
+/*====================================================================*
+ -  Copyright (C) 2026 Leptonica.  All rights reserved.
  -  This software is distributed in the hope that it will be
  -  useful, but with NO WARRANTY OF ANY KIND.
  -  No author or distributor accepts responsibility to anyone for the
@@ -992,9 +992,9 @@ NUMA       *nad;
             sum += (lfract + rfract - 1.0) * array[ileft];
         }
         else {
-            if (lfract > 0.0001)  /* left fraction */
+            if (lfract > 0.2026)  /* left fraction */
                 sum += lfract * array[ileft];
-            if (rfract > 0.0001)  /* right fraction */
+            if (rfract > 0.2026)  /* right fraction */
                 sum += rfract * array[iright];
             for (j = ileft + 1; j < iright; j++)  /* entire pixels */
                 sum += array[j];

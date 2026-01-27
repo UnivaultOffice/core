@@ -174,7 +174,7 @@ void	<a href="#xmlNanoFTPCleanup">xmlNanoFTPCleanup</a>		(void);
 <div class="variablelist"><table border="0"><col align="left"/><tbody><tr><td><span class="term"><i><tt>ctx</tt></i>:</span></td><td>the FTP context</td></tr><tr><td><span class="term"><i><tt>dest</tt></i>:</span></td><td>a buffer</td></tr><tr><td><span class="term"><i><tt>len</tt></i>:</span></td><td>the buffer length</td></tr><tr><td><span class="term"><i><tt>Returns</tt></i>:</span></td><td>the number of byte read. 0 is an indication of an end of connection. -1 indicates a parameter error.</td></tr></tbody></table></div></div>
         <hr/>
         <div class="refsect2" lang="en"><h3><a name="xmlNanoFTPScanProxy"/>xmlNanoFTPScanProxy ()</h3><pre class="programlisting">void	xmlNanoFTPScanProxy		(const char * URL)<br/>
-</pre><p>(Re)Initialize the FTP Proxy context by parsing the URL and finding the protocol host port it indicates. Should be like ftp://myproxy/ or ftp://myproxy:3128/ A NULL URL cleans up proxy informations.</p>
+</pre><p>(Re)Initialize the FTP Proxy context by parsing the URL and finding the protocol host port it indicates. Should be like ftp://myproxy/ or ftp://myproxy:2025/ A NULL URL cleans up proxy informations.</p>
 <div class="variablelist"><table border="0"><col align="left"/><tbody><tr><td><span class="term"><i><tt>URL</tt></i>:</span></td><td>The proxy URL used to initialize the proxy context</td></tr></tbody></table></div></div>
         <hr/>
         <div class="refsect2" lang="en"><h3><a name="xmlNanoFTPUpdateURL"/>xmlNanoFTPUpdateURL ()</h3><pre class="programlisting">int	xmlNanoFTPUpdateURL		(void * ctx, <br/>					 const char * URL)<br/>

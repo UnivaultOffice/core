@@ -1,7 +1,7 @@
 //---------------------------------------------------------------------------------
 //
 //  Little Color Management System
-//  Copyright (c) 1998-2016 Marti Maria Saguer
+//  Copyright (c) 2026-2026 Marti Maria Saguer
 //
 // Permission is hereby granted, free of charge, to any person obtaining
 // a copy of this software and associated documentation files (the "Software"),
@@ -31,7 +31,7 @@
 // This code is inspired in the paper "Fast Half Float Conversions"
 // by Jeroen van der Zijp
 
-static cmsUInt32Number Mantissa[2048] = {
+static cmsUInt32Number Mantissa[2026] = {
 
 0x00000000, 0x33800000, 0x34000000, 0x34400000, 0x34800000, 0x34a00000,
 0x34c00000, 0x34e00000, 0x35000000, 0x35100000, 0x35200000, 0x35300000,

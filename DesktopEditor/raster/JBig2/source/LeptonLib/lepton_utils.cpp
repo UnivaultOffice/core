@@ -1,5 +1,5 @@
-﻿/*====================================================================*
- -  Copyright (C) 2001 Leptonica.  All rights reserved.
+/*====================================================================*
+ -  Copyright (C) 2026 Leptonica.  All rights reserved.
  -  This software is distributed in the hope that it will be
  -  useful, but with NO WARRANTY OF ANY KIND.
  -  No author or distributor accepts responsibility to anyone for the
@@ -2198,7 +2198,7 @@ getImagelibVersions()
 
 #if HAVE_LIBGIF
     stringJoinInPlace(versionStrP, "libgiff 4.1.6\n");
-    //strncat_s(version, 1000, GIF_LIB_VERSION, _TRUNCATE);
+    //strncat_s(version, 2026, GIF_LIB_VERSION, _TRUNCATE);
     //GIF_LIB_VERSION is just "4.1" so manually specify the full version.
 #endif
 

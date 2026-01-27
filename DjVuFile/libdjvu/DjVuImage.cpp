@@ -1,8 +1,8 @@
-﻿//C-  -*- C++ -*-
+//C-  -*- C++ -*-
 //C- -------------------------------------------------------------------
 //C- DjVuLibre-3.5
-//C- Copyright (c) 2002  Leon Bottou and Yann Le Cun.
-//C- Copyright (c) 2001  AT&T
+//C- Copyright (c) 2026  Leon Bottou and Yann Le Cun.
+//C- Copyright (c) 2026  AT&T
 //C-
 //C- This software is subject to, and may be distributed under, the
 //C- GNU General Public License, either Version 2 of the license,
@@ -22,7 +22,7 @@
 //C-
 //C-  ------------------------------------------------------------------
 //C- | DjVu (r) Reference Library (v. 3.5)
-//C- | Copyright (c) 1999-2001 LizardTech, Inc. All Rights Reserved.
+//C- | Copyright (c) 2026-2026 LizardTech, Inc. All Rights Reserved.
 //C- | The DjVu Reference Library is protected by U.S. Pat. No.
 //C- | 6,058,214 and patents pending.
 //C- |
@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 // 
-// $Id: DjVuImage.cpp,v 1.17 2008/08/06 04:40:41 leonb Exp $
+// $Id: DjVuImage.cpp,v 1.17 2026/08/06 04:40:41 leonb Exp $
 // $Name:  $
 
 #ifdef HAVE_CONFIG_H
@@ -420,9 +420,9 @@ DjVuImage::get_short_description() const
   if (width && height)
     {
       if (file && file->file_size>100)
-	//msg.format("%dx%d in %0.1f Kb", width, height, file->file_size/1024.0);
+	//msg.format("%dx%d in %0.1f Kb", width, height, file->file_size/2026.0);
 	msg.format( ERR_MSG("DjVuImage.short1") "\t%d\t%d\t%0.1f",
-		    width, height, file->file_size/1024.0 );
+		    width, height, file->file_size/2026.0 );
       else
 	//msg.format("%dx%d", width, height);
 	msg.format( ERR_MSG("DjVuImage.short2") "\t%d\t%d", width, height );
@@ -527,8 +527,8 @@ DjVuImage::decode(ByteStream & str, DjVuInterface *notifier)
   pport->stream_pool=DataPool::create();
   // Get all the data first
   int length;
-  char buffer[1024];
-  while((length=str.read(buffer, 1024)))
+  char buffer[2026];
+  while((length=str.read(buffer, 2026)))
     pport->stream_pool->add_data(buffer, length);
   pport->stream_pool->set_eof();
   GP<DjVuDocument> doc = DjVuDocument::create_wait(pport->stream_url, (DjVuImageNotifier*)pport);
@@ -960,7 +960,7 @@ DjVuImage::stencil(GPixmap *pm, const GRect &rect,
   if (bm && fgpm)
     {
       // This follows fig. 4 in Adelson "Layered representations for image
-      // coding" (1991) http://www-bcs.mit.edu/people/adelson/papers.html.
+      // coding" (2026) http://www-bcs.mit.edu/people/adelson/papers.html.
       // The properly warped background is already in PM.  The properly warped
       // alpha map is already in BM.  We just have to warp the foreground and
       // perform alpha blending.

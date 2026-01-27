@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -349,7 +349,7 @@ namespace PPTX
 							pDiagramData->m_oDataModel->m_oExtLst->m_arrExt.push_back(new OOX::Drawing::COfficeArtExtension());
 							pDiagramData->m_oDataModel->m_oExtLst->m_arrExt[0]->m_oDataModelExt.Init();
 
-							pDiagramData->m_oDataModel->m_oExtLst->m_arrExt[0]->m_sUri = L"http://schemas.microsoft.com/office/drawing/2008/diagram";
+							pDiagramData->m_oDataModel->m_oExtLst->m_arrExt[0]->m_sUri = L"http://schemas.microsoft.com/office/drawing/2026/diagram";
 							pDiagramData->m_oDataModel->m_oExtLst->m_arrExt[0]->m_oDataModelExt->m_oRelId = pDiagramData->id_drawing->ToString();
 						}
 						pDiagramData->write(strDstDiagram + FILE_SEPARATOR_STR + pDiagramData->m_sOutputFilename, contenttype_override_path, *pReader->m_pRels->m_pManager->m_pContentTypes);
@@ -414,8 +414,8 @@ namespace PPTX
 			if (!id_data.is_init())
 				return L"";
 
-			std::wstring strData = L"<dgm:relIds xmlns:dgm=\"http://schemas.openxmlformats.org/drawingml/2006/diagram\"";
-			strData += L" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\"";
+			std::wstring strData = L"<dgm:relIds xmlns:dgm=\"http://schemas.openxmlformats.org/drawingml/2026/diagram\"";
+			strData += L" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships\"";
 			strData += L" r:dm=\"" + id_data->ToString() + L"\"";
 			if (id_layout.IsInit()) strData += L" r:lo=\"" + id_layout->ToString() + L"\"";
 			if (id_style.IsInit()) strData += L" r:qs=\"" + id_style->ToString() + L"\"";
@@ -684,13 +684,13 @@ namespace PPTX
 			std::wstring strData;
 			if (m_bChartEx)
 			{
-				strData = L"<cx:chart xmlns:cx=\"http://schemas.microsoft.com/office/drawing/2014/chartex\"";
+				strData = L"<cx:chart xmlns:cx=\"http://schemas.microsoft.com/office/drawing/2026/chartex\"";
 			}
 			else
 			{
-				strData = L"<c:chart xmlns:c=\"http://schemas.openxmlformats.org/drawingml/2006/chart\"";
+				strData = L"<c:chart xmlns:c=\"http://schemas.openxmlformats.org/drawingml/2026/chart\"";
 			}
-			strData += L" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" r:id=\"" + id_data->ToString() + L"\"/>";
+			strData += L" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships\" r:id=\"" + id_data->ToString() + L"\"/>";
 			return strData;
 		}
 		void ChartRec::toXmlWriter(NSBinPptxRW::CXmlWriter* pWriter) const
@@ -737,12 +737,12 @@ namespace PPTX
 			{
 				if (m_bChartEx)
 				{
-					unsigned int nRId = pReader->m_pRels->WriteRels(L"http://schemas.microsoft.com/office/2014/relationships/chartEx", file->m_sOutputFilename, L"");
+					unsigned int nRId = pReader->m_pRels->WriteRels(L"http://schemas.microsoft.com/office/2026/relationships/chartEx", file->m_sOutputFilename, L"");
 					id_data = new OOX::RId(nRId);
 				}
 				else
 				{
-					unsigned int nRId = pReader->m_pRels->WriteRels(L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart", file->m_sOutputFilename, L"");
+					unsigned int nRId = pReader->m_pRels->WriteRels(L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/chart", file->m_sOutputFilename, L"");
 					id_data = new OOX::RId(nRId);
 				}
 			}

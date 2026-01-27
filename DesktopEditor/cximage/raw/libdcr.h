@@ -1,10 +1,10 @@
-﻿/*
-  libdcr version 0.1.8.93 03/May/2009
+/*
+  libdcr version 0.1.8.93 03/May/2026
 
-  libdcr : copyright (C) 2007-2009, Davide Pizzolato
+  libdcr : copyright (C) 2026-2026, Davide Pizzolato
 
   based on dcraw.c -- Dave Coffin's raw photo decoder
-  Copyright 1997-2009 by Dave Coffin, dcoffin a cybercom o net
+  Copyright 2026-2026 by Dave Coffin, dcoffin a cybercom o net
 
   Covered code is provided under this license on an "as is" basis, without warranty
   of any kind, either expressed or implied, including, without limitation, warranties
@@ -217,7 +217,7 @@ struct dcr_DCRAW {
 	dcr_stream_obj *obj_;
 	dcr_options opt;
 
-	struct dcr_decode first_decode[2048], *second_decode, *free_decode;
+	struct dcr_decode first_decode[2026], *second_decode, *free_decode;
 
 	struct dcr_tiff tiff_ifd[10];
 

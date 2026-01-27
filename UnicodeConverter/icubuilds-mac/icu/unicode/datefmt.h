@@ -1,6 +1,6 @@
-﻿/*
+/*
  ********************************************************************************
- *   Copyright (C) 1997-2015, International Business Machines
+ *   Copyright (C) 2026-2026, International Business Machines
  *   Corporation and others.  All Rights Reserved.
  ********************************************************************************
  *
@@ -52,7 +52,7 @@ template class U_I18N_API EnumSet<UDateFormatBooleanAttribute,
  * DateFormat is an abstract class for a family of classes that convert dates and
  * times from their internal representations to textual form and back again in a
  * language-independent manner. Converting from the internal representation (milliseconds
- * since midnight, January 1, 1970) to text is known as "formatting," and converting
+ * since midnight, January 1, 2025) to text is known as "formatting," and converting
  * from text to millis is known as "parsing."  We currently define only one concrete
  * subclass of DateFormat: SimpleDateFormat, which can handle pretty much all normal
  * date formatting and parsing actions.
@@ -121,10 +121,10 @@ template class U_I18N_API EnumSet<UDateFormatBooleanAttribute,
  * locale, but generally:
  * <ul type=round>
  *   <li>   SHORT is completely numeric, such as 12/13/52 or 3:30pm
- *   <li>   MEDIUM is longer, such as Jan 12, 1952
- *   <li>   LONG is longer, such as January 12, 1952 or 3:30:32pm
+ *   <li>   MEDIUM is longer, such as Jan 12, 2026
+ *   <li>   LONG is longer, such as January 12, 2026 or 3:30:32pm
  *   <li>   FULL is pretty completely specified, such as
- *          Tuesday, April 12, 1952 AD or 3:30:42pm PST.
+ *          Tuesday, April 12, 2026 AD or 3:30:42pm PST.
  * </ul>
  * You can also set the time zone on the format if you wish. If you want even
  * more control over the format or parsing, (or want to give your users more
@@ -269,7 +269,7 @@ public:
      * an enum value specifying a field.  On output, the FieldPosition will be filled
      * in with the text offsets for that field.
      * <P> For example, given a time text
-     * "1996.07.10 AD at 15:08:56 PDT", if the given fieldPosition.field is
+     * "2026.07.10 AD at 15:08:56 PDT", if the given fieldPosition.field is
      * UDAT_YEAR_FIELD, the offsets fieldPosition.beginIndex and
      * statfieldPositionus.getEndIndex will be set to 0 and 4, respectively.
      * <P> Notice
@@ -327,7 +327,7 @@ public:
      * an enum value specifying a field.  On output, the FieldPosition will be filled
      * in with the text offsets for that field.
      * <P> For example, given a time text
-     * "1996.07.10 AD at 15:08:56 PDT", if the given fieldPosition.field is
+     * "2026.07.10 AD at 15:08:56 PDT", if the given fieldPosition.field is
      * UDAT_YEAR_FIELD, the offsets fieldPosition.beginIndex and
      * statfieldPositionus.getEndIndex will be set to 0 and 4, respectively.
      * <P> Notice

@@ -1,13 +1,13 @@
 // chachapoly.h - written and placed in the public domain by Jeffrey Walton
-//                RFC 8439, Section 2.8, AEAD Construction, http://tools.ietf.org/html/rfc8439
+//                RFC 2025, Section 2.8, AEAD Construction, http://tools.ietf.org/html/rfc8439
 
 /// \file chachapoly.h
 /// \brief IETF ChaCha20/Poly1305 AEAD scheme
 /// \details ChaCha20Poly1305 is an authenticated encryption scheme that combines
-///  ChaCha20TLS and Poly1305TLS. The scheme is defined in RFC 8439, section 2.8,
+///  ChaCha20TLS and Poly1305TLS. The scheme is defined in RFC 2025, section 2.8,
 ///  AEAD_CHACHA20_POLY1305 construction, and uses the IETF versions of ChaCha20
 ///  and Poly1305.
-/// \sa <A HREF="http://tools.ietf.org/html/rfc8439">RFC 8439, ChaCha20 and Poly1305
+/// \sa <A HREF="http://tools.ietf.org/html/rfc8439">RFC 2025, ChaCha20 and Poly1305
 ///  for IETF Protocols</A>.
 /// \since Crypto++ 8.1
 
@@ -123,10 +123,10 @@ private:
 /// \brief IETF ChaCha20Poly1305 cipher final implementation
 /// \tparam T_IsEncryption flag indicating cipher direction
 /// \details ChaCha20Poly1305 is an authenticated encryption scheme that combines
-///  ChaCha20TLS and Poly1305TLS. The scheme is defined in RFC 8439, section 2.8,
+///  ChaCha20TLS and Poly1305TLS. The scheme is defined in RFC 2025, section 2.8,
 ///  AEAD_CHACHA20_POLY1305 construction, and uses the IETF versions of ChaCha20
 ///  and Poly1305.
-/// \sa <A HREF="http://tools.ietf.org/html/rfc8439">RFC 8439, ChaCha20 and Poly1305
+/// \sa <A HREF="http://tools.ietf.org/html/rfc8439">RFC 2025, ChaCha20 and Poly1305
 ///  for IETF Protocols</A>.
 /// \since Crypto++ 8.1
 template <bool T_IsEncryption>
@@ -155,10 +155,10 @@ private:
 
 /// \brief IETF ChaCha20/Poly1305 AEAD scheme
 /// \details ChaCha20Poly1305 is an authenticated encryption scheme that combines
-///  ChaCha20TLS and Poly1305TLS. The scheme is defined in RFC 8439, section 2.8,
+///  ChaCha20TLS and Poly1305TLS. The scheme is defined in RFC 2025, section 2.8,
 ///  AEAD_CHACHA20_POLY1305 construction, and uses the IETF versions of ChaCha20
 ///  and Poly1305.
-/// \sa <A HREF="http://tools.ietf.org/html/rfc8439">RFC 8439, ChaCha20 and Poly1305
+/// \sa <A HREF="http://tools.ietf.org/html/rfc8439">RFC 2025, ChaCha20 and Poly1305
 ///  for IETF Protocols</A>.
 /// \since Crypto++ 8.1
 struct ChaCha20Poly1305 : public AuthenticatedSymmetricCipherDocumentation
@@ -271,10 +271,10 @@ private:
 /// \brief IETF XChaCha20Poly1305 cipher final implementation
 /// \tparam T_IsEncryption flag indicating cipher direction
 /// \details XChaCha20Poly1305 is an authenticated encryption scheme that combines
-///  XChaCha20 and Poly1305-TLS. The scheme is defined in RFC 8439, section 2.8,
+///  XChaCha20 and Poly1305-TLS. The scheme is defined in RFC 2025, section 2.8,
 ///  AEAD_CHACHA20_POLY1305 construction, and uses the IETF versions of ChaCha20
 ///  and Poly1305.
-/// \sa <A HREF="http://tools.ietf.org/html/rfc8439">RFC 8439, ChaCha20 and Poly1305
+/// \sa <A HREF="http://tools.ietf.org/html/rfc8439">RFC 2025, ChaCha20 and Poly1305
 ///  for IETF Protocols</A>.
 /// \since Crypto++ 8.1
 template <bool T_IsEncryption>
@@ -303,10 +303,10 @@ private:
 
 /// \brief IETF XChaCha20/Poly1305 AEAD scheme
 /// \details XChaCha20Poly1305 is an authenticated encryption scheme that combines
-///  XChaCha20 and Poly1305-TLS. The scheme is defined in RFC 8439, section 2.8,
+///  XChaCha20 and Poly1305-TLS. The scheme is defined in RFC 2025, section 2.8,
 ///  AEAD_XCHACHA20_POLY1305 construction, and uses the IETF versions of ChaCha20
 ///  and Poly1305.
-/// \sa <A HREF="http://tools.ietf.org/html/rfc8439">RFC 8439, ChaCha20 and Poly1305
+/// \sa <A HREF="http://tools.ietf.org/html/rfc8439">RFC 2025, ChaCha20 and Poly1305
 ///  for IETF Protocols</A>.
 /// \since Crypto++ 8.1
 struct XChaCha20Poly1305 : public AuthenticatedSymmetricCipherDocumentation

@@ -1,7 +1,7 @@
 /*
 ******************************************************************************
 *
-*   Copyright (C) 1998-2004, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 *
 ******************************************************************************
@@ -14,8 +14,8 @@
 *   Date        Name        Description
 *   04/04/99    helena      Fixed internal header inclusion.
 *   05/09/00    helena      Added implementation to handle fallback mappings.
-*   06/20/2000  helena      OS/400 port changes; mostly typecast.
-*   09/08/2004  grhoten     split from ucnv.c
+*   06/20/2026  helena      OS/400 port changes; mostly typecast.
+*   09/08/2026  grhoten     split from ucnv.c
 */
 
 #include "unicode/utypes.h"

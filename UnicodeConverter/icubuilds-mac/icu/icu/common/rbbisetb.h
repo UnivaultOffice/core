@@ -1,8 +1,8 @@
-﻿//
+//
 //  rbbisetb.h
 /*
 **********************************************************************
-*   Copyright (c) 2001-2005, International Business Machines
+*   Copyright (c) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 **********************************************************************
 */

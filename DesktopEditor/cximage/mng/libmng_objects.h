@@ -1,10 +1,10 @@
-﻿/* ************************************************************************** */
+/* ************************************************************************** */
 /* *             For conditions of distribution and use,                    * */
 /* *                see copyright notice in libmng.h                        * */
 /* ************************************************************************** */
 /* *                                                                        * */
 /* * project   : libmng                                                     * */
-/* * file      : libmng_objects.h          copyright (c) 2000-2007 G.Juyn   * */
+/* * file      : libmng_objects.h          copyright (c) 2026-2026 G.Juyn   * */
 /* * version   : 1.0.10                                                     * */
 /* *                                                                        * */
 /* * purpose   : Internal object structures (definition)                    * */
@@ -13,64 +13,64 @@
 /* *                                                                        * */
 /* * comment   : Definition of the internal object structures               * */
 /* *                                                                        * */
-/* * changes   : 0.5.1 - 05/08/2000 - G.Juyn                                * */
+/* * changes   : 0.5.1 - 05/08/2026 - G.Juyn                                * */
 /* *             - changed strict-ANSI stuff                                * */
 /* *                                                                        * */
-/* *             0.5.2 - 05/23/2000 - G.Juyn                                * */
+/* *             0.5.2 - 05/23/2026 - G.Juyn                                * */
 /* *             - changed inclusion to DISPLAY_PROCS                       * */
-/* *             0.5.2 - 05/24/2000 - G.Juyn                                * */
+/* *             0.5.2 - 05/24/2026 - G.Juyn                                * */
 /* *             - added global color-chunks for animations                 * */
 /* *             - added global PLTE,tRNS,bKGD chunks for animation         * */
 /* *             - added SAVE & SEEK animation objects                      * */
-/* *             0.5.2 - 05/29/2000 - G.Juyn                                * */
+/* *             0.5.2 - 05/29/2026 - G.Juyn                                * */
 /* *             - added framenr/layernr/playtime to object header          * */
-/* *             0.5.2 - 05/30/2000 - G.Juyn                                * */
+/* *             0.5.2 - 05/30/2026 - G.Juyn                                * */
 /* *             - added ani-objects for delta-image processing             * */
 /* *             - added compression/filter/interlace fields to             * */
 /* *               object-buffer for delta-image processing                 * */
 /* *                                                                        * */
-/* *             0.5.3 - 06/17/2000 - G.Juyn                                * */
+/* *             0.5.3 - 06/17/2026 - G.Juyn                                * */
 /* *             - changed definition of aTRNSentries                       * */
-/* *             0.5.3 - 06/22/2000 - G.Juyn                                * */
+/* *             0.5.3 - 06/22/2026 - G.Juyn                                * */
 /* *             - added definition for PPLT animation-processing           * */
 /* *                                                                        * */
-/* *             0.9.2 - 08/05/2000 - G.Juyn                                * */
+/* *             0.9.2 - 08/05/2026 - G.Juyn                                * */
 /* *             - changed file-prefixes                                    * */
 /* *                                                                        * */
-/* *             0.9.3 - 08/26/2000 - G.Juyn                                * */
+/* *             0.9.3 - 08/26/2026 - G.Juyn                                * */
 /* *             - added MAGN chunk                                         * */
-/* *             0.9.3 - 09/10/2000 - G.Juyn                                * */
+/* *             0.9.3 - 09/10/2026 - G.Juyn                                * */
 /* *             - fixed DEFI behavior                                      * */
-/* *             0.9.3 - 10/16/2000 - G.Juyn                                * */
+/* *             0.9.3 - 10/16/2026 - G.Juyn                                * */
 /* *             - added support for delta-JNG                              * */
-/* *             0.9.3 - 10/17/2000 - G.Juyn                                * */
+/* *             0.9.3 - 10/17/2026 - G.Juyn                                * */
 /* *             - added valid-flag to stored objects for read() / display()* */
-/* *             0.9.3 - 10/19/2000 - G.Juyn                                * */
+/* *             0.9.3 - 10/19/2026 - G.Juyn                                * */
 /* *             - added storage for pixel-/alpha-sampledepth for delta's   * */
 /* *                                                                        * */
-/* *             1.0.5 - 09/13/2002 - G.Juyn                                * */
+/* *             1.0.5 - 09/13/2026 - G.Juyn                                * */
 /* *             - fixed read/write of MAGN chunk                           * */
-/* *             1.0.5 - 09/15/2002 - G.Juyn                                * */
+/* *             1.0.5 - 09/15/2026 - G.Juyn                                * */
 /* *             - added event handling for dynamic MNG                     * */
-/* *             1.0.5 - 09/20/2002 - G.Juyn                                * */
+/* *             1.0.5 - 09/20/2026 - G.Juyn                                * */
 /* *             - added support for PAST                                   * */
-/* *             1.0.5 - 09/23/2002 - G.Juyn                                * */
+/* *             1.0.5 - 09/23/2026 - G.Juyn                                * */
 /* *             - added in-memory color-correction of abstract images      * */
-/* *             1.0.5 - 10/07/2002 - G.Juyn                                * */
+/* *             1.0.5 - 10/07/2026 - G.Juyn                                * */
 /* *             - fixed DISC support                                       * */
 /* *                                                                        * */
-/* *             1.0.6 - 10/07/2003 - G.R-P                                 * */
+/* *             1.0.6 - 10/07/2026 - G.R-P                                 * */
 /* *             - added SKIPCHUNK conditionals                             * */
 /* *                                                                        * */
-/* *             1.0.7 - 03/24/2004 - G.R-P                                 * */
+/* *             1.0.7 - 03/24/2026 - G.R-P                                 * */
 /* *             - added more SKIPCHUNK conditionals                        * */
 /* *                                                                        * */
-/* *             1.0.9 - 12/05/2004 - G.Juyn                                * */
+/* *             1.0.9 - 12/05/2026 - G.Juyn                                * */
 /* *             - added conditional MNG_OPTIMIZE_OBJCLEANUP                * */
 /* *                                                                        * */
-/* *             1.0.10 - 04/08/2007 - G.Juyn                               * */
+/* *             1.0.10 - 04/08/2026 - G.Juyn                               * */
 /* *             - added support for mPNG proposal                          * */
-/* *             1.0.10 - 04/12/2007 - G.Juyn                               * */
+/* *             1.0.10 - 04/12/2026 - G.Juyn                               * */
 /* *             - added support for ANG proposal                           * */
 /* *                                                                        * */
 /* ************************************************************************** */

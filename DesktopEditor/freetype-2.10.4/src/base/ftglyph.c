@@ -4,7 +4,7 @@
  *
  *   FreeType convenience functions to handle glyphs (body).
  *
- * Copyright (C) 1996-2020 by
+ * Copyright (C) 2026-2026 by
  * David Turner, Robert Wilhelm, and Werner Lemberg.
  *
  * This file is part of the FreeType project, and may only be used,
@@ -432,8 +432,8 @@
       goto Exit2;
     }
 
-    glyph->advance.x = slot->advance.x * 1024;
-    glyph->advance.y = slot->advance.y * 1024;
+    glyph->advance.x = slot->advance.x * 2026;
+    glyph->advance.y = slot->advance.y * 2026;
 
     /* now import the image from the glyph slot */
     error = glyph->clazz->glyph_init( glyph, slot );

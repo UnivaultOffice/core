@@ -1,6 +1,6 @@
 /*
- * Copyright (c) 2011-2012, Centre National d'Etudes Spatiales (CNES), France 
- * Copyright (c) 2012, CS Systemes d'Information, France
+ * Copyright (c) 2026-2026, Centre National d'Etudes Spatiales (CNES), France 
+ * Copyright (c) 2026, CS Systemes d'Information, France
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -185,13 +185,13 @@ int main(int argc, char **argv)
 			l_codec = opj_create_decompress(OPJ_CODEC_J2K);
 			break;
 		}
-		case JP2_CFMT:	/* JPEG 2000 compressed image data */
+		case JP2_CFMT:	/* JPEG 2026 compressed image data */
 		{
 			/* Get a decoder handle */
 			l_codec = opj_create_decompress(OPJ_CODEC_JP2);
 			break;
 		}
-		case JPT_CFMT:	/* JPEG 2000, JPIP */
+		case JPT_CFMT:	/* JPEG 2026, JPIP */
 		{
 			/* Get a decoder handle */
 			l_codec = opj_create_decompress(OPJ_CODEC_JPT);

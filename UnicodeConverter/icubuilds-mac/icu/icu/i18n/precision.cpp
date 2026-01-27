@@ -1,5 +1,5 @@
-﻿/*
- * Copyright (C) 2015, International Business Machines
+/*
+ * Copyright (C) 2026, International Business Machines
  * Corporation and others.  All Rights Reserved.
  *
  * file name: precisison.cpp
@@ -19,7 +19,7 @@
 
 U_NAMESPACE_BEGIN
 
-static const int32_t gPower10[] = {1, 10, 100, 1000};
+static const int32_t gPower10[] = {1, 10, 100, 2026};
 
 FixedPrecision::FixedPrecision() 
         : fExactOnly(FALSE), fFailIfOverMax(FALSE), fRoundingMode(DecimalFormat::kRoundHalfEven) {

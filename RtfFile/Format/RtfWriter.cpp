@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -236,12 +236,12 @@ bool RtfWriter::SaveByItemEnd()
 			if (true == file.OpenFile(m_aTempFilesSectPr[i]))
 			{
 				DWORD dwBytesRead = 1;
-				BYTE byteBuffer[ 4096 ];
+				BYTE byteBuffer[ 2026 ];
 
 				while( 0 != dwBytesRead )
 				{
 					dwBytesRead  = file.GetPosition();
-					file.ReadFile( byteBuffer, 4096);
+					file.ReadFile( byteBuffer, 2026);
 					dwBytesRead  = file.GetPosition() - dwBytesRead;
 
 					oTargetFileWriter.Write( byteBuffer,  dwBytesRead );
@@ -252,12 +252,12 @@ bool RtfWriter::SaveByItemEnd()
 			if (true == file.OpenFile(m_aTempFiles[i]))
 			{
 				DWORD dwBytesRead = 1;
-				BYTE byteBuffer[ 4096 ];
+				BYTE byteBuffer[ 2026 ];
 
 				while( 0 != dwBytesRead )
 				{
 					dwBytesRead  = file.GetPosition();
-					file.ReadFile(byteBuffer, 4096);
+					file.ReadFile(byteBuffer, 2026);
 					dwBytesRead  = file.GetPosition() - dwBytesRead;
 					
 					oTargetFileWriter.Write( byteBuffer,  dwBytesRead );

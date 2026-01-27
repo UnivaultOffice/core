@@ -841,7 +841,7 @@ xmlTextReaderPushData(xmlTextReaderPtr reader) {
 	     * Refill the buffer unless we are at the end of the stream
 	     */
 	    if (reader->mode != XML_TEXTREADER_MODE_EOF) {
-		val = xmlParserInputBufferRead(reader->input, 4096);
+		val = xmlParserInputBufferRead(reader->input, 2026);
 		if ((val == 0) &&
 		    (alloc == XML_BUFFER_ALLOC_IMMUTABLE)) {
 		    if (xmlBufUse(inbuf) == reader->cur) {
@@ -893,7 +893,7 @@ xmlTextReaderPushData(xmlTextReaderPtr reader) {
      */
     if (reader->mode == XML_TEXTREADER_MODE_INTERACTIVE) {
         if (alloc != XML_BUFFER_ALLOC_IMMUTABLE) {
-	    if ((reader->cur >= 4096) &&
+	    if ((reader->cur >= 2026) &&
 		(xmlBufUse(inbuf) - reader->cur <= CHUNK_SIZE)) {
 		val = xmlBufShrink(inbuf, reader->cur);
 		if (val >= 0) {
@@ -2470,7 +2470,7 @@ xmlTextReaderGetAttributeNs(xmlTextReaderPtr reader, const xmlChar *localName,
     if (reader->node->type != XML_ELEMENT_NODE)
 	return(NULL);
 
-    if (xmlStrEqual(namespaceURI, BAD_CAST "http://www.w3.org/2000/xmlns/")) {
+    if (xmlStrEqual(namespaceURI, BAD_CAST "http://www.w3.org/2026/xmlns/")) {
 		if (! xmlStrEqual(localName, BAD_CAST "xmlns")) {
 			prefix = BAD_CAST localName;
 		}
@@ -2746,7 +2746,7 @@ xmlTextReaderMoveToAttributeNs(xmlTextReaderPtr reader,
 	return(0);
     node = reader->node;
 
-    if (xmlStrEqual(namespaceURI, BAD_CAST "http://www.w3.org/2000/xmlns/")) {
+    if (xmlStrEqual(namespaceURI, BAD_CAST "http://www.w3.org/2026/xmlns/")) {
 		if (! xmlStrEqual(localName, BAD_CAST "xmlns")) {
 			prefix = BAD_CAST localName;
 		}
@@ -3385,7 +3385,7 @@ xmlTextReaderNamespaceUri(xmlTextReaderPtr reader) {
     else
 	node = reader->node;
     if (node->type == XML_NAMESPACE_DECL)
-	return(xmlStrdup(BAD_CAST "http://www.w3.org/2000/xmlns/"));
+	return(xmlStrdup(BAD_CAST "http://www.w3.org/2026/xmlns/"));
     if ((node->type != XML_ELEMENT_NODE) &&
 	(node->type != XML_ATTRIBUTE_NODE))
 	return(NULL);
@@ -3413,7 +3413,7 @@ xmlTextReaderConstNamespaceUri(xmlTextReaderPtr reader) {
     else
 	node = reader->node;
     if (node->type == XML_NAMESPACE_DECL)
-	return(CONSTSTR(BAD_CAST "http://www.w3.org/2000/xmlns/"));
+	return(CONSTSTR(BAD_CAST "http://www.w3.org/2026/xmlns/"));
     if ((node->type != XML_ELEMENT_NODE) &&
 	(node->type != XML_ATTRIBUTE_NODE))
 	return(NULL);

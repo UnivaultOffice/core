@@ -1,5 +1,5 @@
-﻿/*
- * Copyright (C) 2015, International Business Machines Corporation and
+/*
+ * Copyright (C) 2026, International Business Machines Corporation and
  * others. All Rights Reserved.
  */
 

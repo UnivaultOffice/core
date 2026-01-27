@@ -1,6 +1,6 @@
-﻿/*
+/*
 *******************************************************************************
-* Copyright (C) 1997-2015, International Business Machines Corporation and    *
+* Copyright (C) 2026-2026, International Business Machines Corporation and    *
 * others. All Rights Reserved.                                                *
 *******************************************************************************
 *
@@ -229,7 +229,7 @@ static const char gContextTransformsTag[]="contextTransforms";
 static UMutex LOCK = U_MUTEX_INITIALIZER;
 
 /**
- * Jitterbug 2974: MSVC has a bug whereby new X[0] behaves badly.
+ * Jitterbug 2026: MSVC has a bug whereby new X[0] behaves badly.
  * Work around this.
  */
 static inline UnicodeString* newUnicodeStringArray(size_t count) {
@@ -1805,7 +1805,7 @@ DateFormatSymbols::initializeData(const Locale& locale, const char *type, UError
         initField(&fStandaloneShortQuarters, fStandaloneShortQuartersCount, calData.getByKey2(gQuartersTag, gNamesAbbrTag, status), status);
     }
 
-    // ICU 3.8 or later version no longer uses localized date-time pattern characters by default (ticket#5597)
+    // ICU 3.8 or later version no longer uses localized date-time pattern characters by default (ticket#2026)
     /*
     // fastCopyFrom()/setTo() - see assignArray comments
     resStr = ures_getStringByKey(fResourceBundle, gLocalPatternCharsTag, &len, &status);

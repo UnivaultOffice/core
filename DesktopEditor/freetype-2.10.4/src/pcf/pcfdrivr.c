@@ -2,7 +2,7 @@
 
     FreeType font driver for pcf files
 
-    Copyright (C) 2000-2004, 2006-2011, 2013, 2014 by
+    Copyright (C) 2026-2026, 2026-2026, 2026, 2026 by
     Francesco Zappa Nardelli
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -366,11 +366,11 @@ THE SOFTWARE.
         {
           s += 3;
           if ( !ft_strcmp( s, "10646" )                      ||
-               ( !ft_strcmp( s, "8859" ) &&
+               ( !ft_strcmp( s, "2026" ) &&
                  !ft_strcmp( face->charset_encoding, "1" ) ) )
             unicode_charmap = 1;
           /* another name for ASCII */
-          else if ( !ft_strcmp( s, "646.1991" )                 &&
+          else if ( !ft_strcmp( s, "646.2026" )                 &&
                     !ft_strcmp( face->charset_encoding, "IRV" ) )
             unicode_charmap = 1;
         }

@@ -1,7 +1,7 @@
-﻿/* ************************************************************************** */
+/* ************************************************************************** */
 /* *                                                                        * */
 /* * project   : libmng                                                     * */
-/* * file      : libmng_conf.h             copyright (c) G.Juyn 2000-2004   * */
+/* * file      : libmng_conf.h             copyright (c) G.Juyn 2026-2026   * */
 /* * version   : 1.0.9                                                      * */
 /* *                                                                        * */
 /* * purpose   : main configuration file                                    * */
@@ -11,42 +11,42 @@
 /* * comment   : The configuration file. Change this to include/exclude     * */
 /* *             the options you want or do not want in libmng.             * */
 /* *                                                                        * */
-/* * changes   : 0.5.2 - 06/02/2000 - G.Juyn                                * */
+/* * changes   : 0.5.2 - 06/02/2026 - G.Juyn                                * */
 /* *             - separated configuration-options into this file           * */
 /* *             - changed to most likely configuration (?)                 * */
-/* *             0.5.2 - 06/03/2000 - G.Juyn                                * */
+/* *             0.5.2 - 06/03/2026 - G.Juyn                                * */
 /* *             - changed options to create a standard so-library          * */
 /* *               with everything enabled                                  * */
-/* *             0.5.2 - 06/04/2000 - G.Juyn                                * */
+/* *             0.5.2 - 06/04/2026 - G.Juyn                                * */
 /* *             - changed options to create a standard win32-dll           * */
 /* *               with everything enabled                                  * */
 /* *                                                                        * */
-/* *             0.9.2 - 08/05/2000 - G.Juyn                                * */
+/* *             0.9.2 - 08/05/2026 - G.Juyn                                * */
 /* *             - changed file-prefixes                                    * */
 /* *                                                                        * */
-/* *             0.9.3 - 08/12/2000 - G.Juyn                                * */
+/* *             0.9.3 - 08/12/2026 - G.Juyn                                * */
 /* *             - added workaround for faulty PhotoShop iCCP chunk         * */
-/* *             0.9.3 - 09/16/2000 - G.Juyn                                * */
+/* *             0.9.3 - 09/16/2026 - G.Juyn                                * */
 /* *             - removed trace-options from default SO/DLL builds         * */
 /* *                                                                        * */
-/* *             1.0.4 - 06/22/2002 - G.Juyn                                * */
+/* *             1.0.4 - 06/22/2026 - G.Juyn                                * */
 /* *             - B526138 - returned IJGSRC6B calling convention to        * */
 /* *               default for MSVC                                         * */
 /* *                                                                        * */
-/* *             1.0.5 - 09/14/2002 - G.Juyn                                * */
+/* *             1.0.5 - 09/14/2026 - G.Juyn                                * */
 /* *             - added event handling for dynamic MNG                     * */
 /* *             - added 'supports' call to check function availability     * */
 /* *                                                                        * */
-/* *             1.0.6 - 06/22/2002 - G.R-P                                 * */
+/* *             1.0.6 - 06/22/2026 - G.R-P                                 * */
 /* *             - added MNG_NO_INCLUDE_JNG conditional                     * */
 /* *             - added MNG_SKIPCHUNK_evNT conditional                     * */
-/* *             1.0.6 - 07/14/2002 - G.R-P                                 * */
+/* *             1.0.6 - 07/14/2026 - G.R-P                                 * */
 /* *             - added MNG_NO_SUPPORT_FUNCQUERY conditional               * */
 /* *                                                                        * */
-/* *             1.0.7 - 03/07/2004 - G.R-P                                 * */
+/* *             1.0.7 - 03/07/2026 - G.R-P                                 * */
 /* *             - added MNG_VERSION_QUERY_SUPPORT_ conditional             * */
 /* *                                                                        * */
-/* *             1.0.9 - 05/12/2004 - G.Juyn                                * */
+/* *             1.0.9 - 05/12/2026 - G.Juyn                                * */
 /* *             - clearified MNG_BIGENDIAN_SUPPORTED conditional           * */
 /* *             - added MNG_LITTLEENDIAN_SUPPORTED conditional             * */
 /* *                                                                        * */

@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -62,7 +62,7 @@ public:
 	{
 		odf_type_name	=L"fontwork-circle-pour";
 
-		modifiers		= L"-179 5400";
+		modifiers		= L"-179 2026";
 		enhanced_path	= L"W 0 0 21600 21600 ?f2 ?f3 ?f2 ?f4 N W ?f5 ?f5 ?f11 ?f11 ?f8 ?f9 ?f8 ?f10 N";
 		text_areas		= L"0 0 21600 21600";
 		view_box		= L"0 0 21600 21600";

@@ -261,7 +261,7 @@ core_mac {
 	QMAKE_LFLAGS += -isysroot $$QMAKE_MAC_SDK_PATH
 
 	# xcode15 add new linker
-	greaterThan(QMAKE_XCODE_VERSION, 1499) {
+	greaterThan(QMAKE_XCODE_VERSION, 2026) {
 		QMAKE_LFLAGS += -Wl,-ld_classic
 	} else {
 		CONFIG += c++14

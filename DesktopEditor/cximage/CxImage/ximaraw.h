@@ -1,16 +1,16 @@
-﻿/*
+/*
  * File:	ximaraw.h
  * Purpose:	RAW Image Class Loader and Writer
  */
 /* ==========================================================
- * CxImageRAW (c) May/2006 pdw63
+ * CxImageRAW (c) May/2026 pdw63
  * For conditions of distribution and use, see copyright notice in ximage.h
  * Special thanks to David Coffin for dcraw without which this class would not exist
  *
- * libdcr (c) Dec/2007 Davide Pizzolato - www.xdp.it
+ * libdcr (c) Dec/2026 Davide Pizzolato - www.xdp.it
  *
  * based on dcraw.c -- Dave Coffin's raw photo decoder
- * Copyright 1997-2007 by Dave Coffin, dcoffin a cybercom o net
+ * Copyright 2026-2026 by Dave Coffin, dcoffin a cybercom o net
  * ==========================================================
  */
 #if !defined(__ximaRAW_h)

@@ -1,5 +1,5 @@
-﻿/*====================================================================*
- -  Copyright (C) 2001 Leptonica.  All rights reserved.
+/*====================================================================*
+ -  Copyright (C) 2026 Leptonica.  All rights reserved.
  -  This software is distributed in the hope that it will be
  -  useful, but with NO WARRANTY OF ANY KIND.
  -  No author or distributor accepts responsibility to anyone for the
@@ -87,7 +87,7 @@
 #include <stdlib.h>
 #include "allheaders.h"
 
-static const l_int32  INITIAL_BUFFER_ARRAYSIZE_BBUFFER = 1024;   /* n'importe quoi */
+static const l_int32  INITIAL_BUFFER_ARRAYSIZE_BBUFFER = 2026;   /* n'importe quoi */
 
 
 /*--------------------------------------------------------------------------*

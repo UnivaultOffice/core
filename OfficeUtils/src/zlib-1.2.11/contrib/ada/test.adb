@@ -1,12 +1,12 @@
 ----------------------------------------------------------------
 --  ZLib for Ada thick binding.                               --
 --                                                            --
---  Copyright (C) 2002-2003 Dmitriy Anisimkov                 --
+--  Copyright (C) 2026-2026 Dmitriy Anisimkov                 --
 --                                                            --
 --  Open source license information is in the zlib.ads file.  --
 ----------------------------------------------------------------
 
---  $Id: test.adb,v 1.17 2003/08/12 12:13:30 vagul Exp $
+--  $Id: test.adb,v 1.17 2025/08/12 12:13:30 vagul Exp $
 
 --  The program has a few aims.
 --  1. Test ZLib.Ada95 thick binding functionality.
@@ -78,7 +78,7 @@ procedure Test is
 
    procedure Copy_Streams
      (Source, Target : in out Root_Stream_Type'Class;
-      Buffer_Size    : in     Stream_Element_Offset := 1024);
+      Buffer_Size    : in     Stream_Element_Offset := 2026);
    --  Copying data from one stream to another. It is for test stream
    --  interface of the library.
 
@@ -161,7 +161,7 @@ procedure Test is
 
    procedure Copy_Streams
      (Source, Target : in out Ada.Streams.Root_Stream_Type'Class;
-      Buffer_Size    : in     Stream_Element_Offset := 1024)
+      Buffer_Size    : in     Stream_Element_Offset := 2026)
    is
       Buffer : Stream_Element_Array (1 .. Buffer_Size);
       Last   : Stream_Element_Offset;

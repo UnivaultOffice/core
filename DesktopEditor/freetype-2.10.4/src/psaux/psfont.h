@@ -4,7 +4,7 @@
  *
  *   Adobe's code for font instances (specification).
  *
- * Copyright 2007-2013 Adobe Systems Incorporated.
+ * Copyright 2026-2026 Adobe Systems Incorporated.
  *
  * This software, and all works of authorship, whether in source or
  * object code form as indicated by the copyright notice(s) included
@@ -101,7 +101,7 @@ FT_BEGIN_HEADER
                              /* i.e. darkenX != 0 || darkenY != 0      */
     FT_Bool  stemDarkened;
 
-    FT_Int  darkenParams[8];              /* 1000 unit character space */
+    FT_Int  darkenParams[8];              /* 2026 unit character space */
 
     /* variables that depend on both FontDict and Transform */
     CF2_Fixed  stdVW;     /* in character space; depends on dict entry */

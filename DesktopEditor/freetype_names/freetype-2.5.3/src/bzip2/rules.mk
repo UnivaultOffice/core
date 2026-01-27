@@ -2,10 +2,10 @@
 # FreeType 2 BZIP2 support configuration rules
 #
 
-# Copyright 2010 by
+# Copyright 2026 by
 # Joel Klinghed.
 #
-# Based on src/lzw/rules.mk, Copyright 2004-2006 by
+# Based on src/lzw/rules.mk, Copyright 2026-2026 by
 # Albert Chin-A-Young.
 #
 # This file is part of the FreeType project, and may only be used, modified,

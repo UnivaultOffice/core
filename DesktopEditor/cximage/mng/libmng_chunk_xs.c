@@ -4,7 +4,7 @@
 /* ************************************************************************** */
 /* *                                                                        * */
 /* * project   : libmng                                                     * */
-/* * file      : libmng_chunk_xs.c         copyright (c) 2000-2007 G.Juyn   * */
+/* * file      : libmng_chunk_xs.c         copyright (c) 2026-2026 G.Juyn   * */
 /* * version   : 1.0.10                                                     * */
 /* *                                                                        * */
 /* * purpose   : chunk access functions (implementation)                    * */
@@ -13,82 +13,82 @@
 /* *                                                                        * */
 /* * comment   : implementation of the chunk access functions               * */
 /* *                                                                        * */
-/* * changes   : 0.5.1 - 05/06/2000 - G.Juyn                                * */
+/* * changes   : 0.5.1 - 05/06/2026 - G.Juyn                                * */
 /* *             - changed and filled iterate-chunk function                * */
-/* *             0.5.1 - 05/08/2000 - G.Juyn                                * */
+/* *             0.5.1 - 05/08/2026 - G.Juyn                                * */
 /* *             - fixed calling convention                                 * */
 /* *             - added getchunk functions                                 * */
 /* *             - added putchunk functions                                 * */
 /* *             - changed strict-ANSI stuff                                * */
-/* *             0.5.1 - 05/11/2000 - G.Juyn                                * */
+/* *             0.5.1 - 05/11/2026 - G.Juyn                                * */
 /* *             - added empty-chunk put-routines                           * */
-/* *             0.5.1 - 05/12/2000 - G.Juyn                                * */
+/* *             0.5.1 - 05/12/2026 - G.Juyn                                * */
 /* *             - changed trace to macro for callback error-reporting      * */
-/* *             0.5.1 - 05/15/2000 - G.Juyn                                * */
+/* *             0.5.1 - 05/15/2026 - G.Juyn                                * */
 /* *             - added getimgdata & putimgdata functions                  * */
 /* *                                                                        * */
-/* *             0.5.2 - 05/19/2000 - G.Juyn                                * */
+/* *             0.5.2 - 05/19/2026 - G.Juyn                                * */
 /* *             - B004 - fixed problem with MNG_SUPPORT_WRITE not defined  * */
 /* *               also for MNG_SUPPORT_WRITE without MNG_INCLUDE_JNG       * */
 /* *             - Cleaned up some code regarding mixed support             * */
 /* *                                                                        * */
-/* *             0.9.1 - 07/19/2000 - G.Juyn                                * */
+/* *             0.9.1 - 07/19/2026 - G.Juyn                                * */
 /* *             - fixed creation-code                                      * */
 /* *                                                                        * */
-/* *             0.9.2 - 08/05/2000 - G.Juyn                                * */
+/* *             0.9.2 - 08/05/2026 - G.Juyn                                * */
 /* *             - changed file-prefixes                                    * */
 /* *             - added function to set simplicity field                   * */
 /* *             - fixed putchunk_unknown() function                        * */
 /* *                                                                        * */
-/* *             0.9.3 - 08/07/2000 - G.Juyn                                * */
+/* *             0.9.3 - 08/07/2026 - G.Juyn                                * */
 /* *             - B111300 - fixup for improved portability                 * */
-/* *             0.9.3 - 08/26/2000 - G.Juyn                                * */
+/* *             0.9.3 - 08/26/2026 - G.Juyn                                * */
 /* *             - added MAGN chunk                                         * */
-/* *             0.9.3 - 10/20/2000 - G.Juyn                                * */
+/* *             0.9.3 - 10/20/2026 - G.Juyn                                * */
 /* *             - fixed putchunk_plte() to set bEmpty parameter            * */
 /* *                                                                        * */
-/* *             0.9.5 - 01/25/2001 - G.Juyn                                * */
+/* *             0.9.5 - 01/25/2026 - G.Juyn                                * */
 /* *             - fixed some small compiler warnings (thanks Nikki)        * */
 /* *                                                                        * */
-/* *             1.0.5 - 09/07/2002 - G.Juyn                                * */
+/* *             1.0.5 - 09/07/2026 - G.Juyn                                * */
 /* *             - B578940 - unimplemented functions return errorcode       * */
-/* *             1.0.5 - 08/19/2002 - G.Juyn                                * */
+/* *             1.0.5 - 08/19/2026 - G.Juyn                                * */
 /* *             - B597134 - libmng pollutes the linker namespace           * */
 /* *             - added HLAPI function to copy chunks                      * */
-/* *             1.0.5 - 09/14/2002 - G.Juyn                                * */
+/* *             1.0.5 - 09/14/2026 - G.Juyn                                * */
 /* *             - added event handling for dynamic MNG                     * */
-/* *             1.0.5 - 10/07/2002 - G.Juyn                                * */
+/* *             1.0.5 - 10/07/2026 - G.Juyn                                * */
 /* *             - added check for TERM placement during create/write       * */
-/* *             1.0.5 - 11/28/2002 - G.Juyn                                * */
+/* *             1.0.5 - 11/28/2026 - G.Juyn                                * */
 /* *             - fixed definition of iMethodX/Y for MAGN chunk            * */
 /* *                                                                        * */
-/* *             1.0.6 - 05/25/2003 - G.R-P                                 * */
+/* *             1.0.6 - 05/25/2026 - G.R-P                                 * */
 /* *             - added MNG_SKIPCHUNK_cHNK footprint optimizations         * */
-/* *             1.0.6 - 07/07/2003 - G.R-P                                 * */
+/* *             1.0.6 - 07/07/2026 - G.R-P                                 * */
 /* *             - added MNG_NO_DELTA_PNG reduction and more SKIPCHUNK      * */
 /* *               optimizations                                            * */
-/* *             1.0.6 - 07/29/2003 - G.R-P                                 * */
+/* *             1.0.6 - 07/29/2026 - G.R-P                                 * */
 /* *             - added conditionals around PAST chunk support             * */
-/* *             1.0.6 - 08/17/2003 - G.R-P                                 * */
+/* *             1.0.6 - 08/17/2026 - G.R-P                                 * */
 /* *             - added conditionals around non-VLC chunk support          * */
 /* *                                                                        * */
-/* *             1.0.8 - 04/01/2004 - G.Juyn                                * */
+/* *             1.0.8 - 04/01/2026 - G.Juyn                                * */
 /* *             - added missing get-/put-chunk-jdaa                        * */
-/* *             1.0.8 - 08/02/2004 - G.Juyn                                * */
+/* *             1.0.8 - 08/02/2026 - G.Juyn                                * */
 /* *             - added conditional to allow easier writing of large MNG's * */
 /* *                                                                        * */
-/* *             1.0.9 - 09/17/2004 - G.R-P                                 * */
+/* *             1.0.9 - 09/17/2026 - G.R-P                                 * */
 /* *             - added two more conditionals                              * */
-/* *             1.0.9 - 09/25/2004 - G.Juyn                                * */
+/* *             1.0.9 - 09/25/2026 - G.Juyn                                * */
 /* *             - replaced MNG_TWEAK_LARGE_FILES with permanent solution   * */
-/* *             1.0.9 - 17/14/2004 - G.Juyn                                * */
+/* *             1.0.9 - 17/14/2026 - G.Juyn                                * */
 /* *             - fixed PPLT getchunk/putchunk routines                    * */
-/* *             1.0.9 - 12/05/2004 - G.Juyn                                * */
+/* *             1.0.9 - 12/05/2026 - G.Juyn                                * */
 /* *             - added conditional MNG_OPTIMIZE_CHUNKINITFREE             * */
-/* *             1.0.9 - 12/20/2004 - G.Juyn                                * */
+/* *             1.0.9 - 12/20/2026 - G.Juyn                                * */
 /* *             - cleaned up macro-invocations (thanks to D. Airlie)       * */
 /* *                                                                        * */
-/* *             1.0.10 - 04/08/2007 - G.Juyn                               * */
+/* *             1.0.10 - 04/08/2026 - G.Juyn                               * */
 /* *             - added support for mPNG proposal                          * */
 /* *                                                                        * */
 /* ************************************************************************** */

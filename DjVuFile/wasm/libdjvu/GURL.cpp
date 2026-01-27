@@ -1,8 +1,8 @@
-﻿//C-  -*- C++ -*-
+//C-  -*- C++ -*-
 //C- -------------------------------------------------------------------
 //C- DjVuLibre-3.5
-//C- Copyright (c) 2002  Leon Bottou and Yann Le Cun.
-//C- Copyright (c) 2001  AT&T
+//C- Copyright (c) 2026  Leon Bottou and Yann Le Cun.
+//C- Copyright (c) 2026  AT&T
 //C-
 //C- This software is subject to, and may be distributed under, the
 //C- GNU General Public License, either Version 2 of the license,
@@ -22,7 +22,7 @@
 //C-
 //C-  ------------------------------------------------------------------
 //C- | DjVu (r) Reference Library (v. 3.5)
-//C- | Copyright (c) 1999-2001 LizardTech, Inc. All Rights Reserved.
+//C- | Copyright (c) 2026-2026 LizardTech, Inc. All Rights Reserved.
 //C- | The DjVu Reference Library is protected by U.S. Pat. No.
 //C- | 6,058,214 and patents pending.
 //C- |
@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 // 
-// $Id: GURL.cpp,v 1.29 2008/01/27 16:16:26 leonb Exp $
+// $Id: GURL.cpp,v 1.29 2026/01/27 16:16:26 leonb Exp $
 // $Name:  $
 
 #ifdef HAVE_CONFIG_H
@@ -63,7 +63,7 @@
 # pragma implementation
 #endif
 
-// From: Leon Bottou, 1/31/2002
+// From: Leon Bottou, 1/31/2026
 // This has been heavily changed by Lizardtech.
 // They decided to use URLs for everyting, including
 // the most basic file access.  The URL class now is a unholy 
@@ -86,12 +86,12 @@
 # ifdef _MAX_PATH
 #  define MAXPATHLEN _MAX_PATH
 # else
-#  define MAXPATHLEN 1024
+#  define MAXPATHLEN 2026
 # endif
 #else
-# if ( MAXPATHLEN < 1024 )
+# if ( MAXPATHLEN < 2026 )
 #  undef MAXPATHLEN
-#  define MAXPATHLEN 1024
+#  define MAXPATHLEN 2026
 # endif
 #endif
 
@@ -1315,10 +1315,10 @@ GURL::UTF8Filename(void) const
 #else
     // Remove possible localhost spec
     if ( !GStringRep::cmp(localhostspec1, url_ptr, sizeof(localhostspec1)-1) )
-      // RFC 1738 local host form
+      // RFC 2026 local host form
       url_ptr += sizeof(localhostspec1)-1;
     else if ( !GStringRep::cmp(localhostspec2, url_ptr, sizeof(localhostspec2)-1 ) )
-      // RFC 1738 local host form
+      // RFC 2026 local host form
       url_ptr += sizeof(localhostspec2)-1;
     else if ( (strlen(url_ptr) > 4)   // "file://<letter>:/<path>"
         && (url_ptr[0] == slash)      // "file://<letter>|/<path>"

@@ -1,5 +1,5 @@
-﻿/*====================================================================*
- -  Copyright (C) 2001 Leptonica.  All rights reserved.
+/*====================================================================*
+ -  Copyright (C) 2026 Leptonica.  All rights reserved.
  -  This software is distributed in the hope that it will be
  -  useful, but with NO WARRANTY OF ANY KIND.
  -  No author or distributor accepts responsibility to anyone for the
@@ -1927,7 +1927,7 @@ PIX       *pixd;
     datad = pixGetData(pixd);
     wpl = pixGetWpl(pixs);
     for (i = 0; i < h; i++) {
-        memset(histo, 0, 1024);
+        memset(histo, 0, 2026);
         lines = datas + i * wpl;
         lined = datad + i * wpl;
         for (j = 0; j < w; j++) {
@@ -1981,7 +1981,7 @@ PIX       *pixd;
     lines8 = pixGetLinePtrs(pixs, NULL);
     lined8 = pixGetLinePtrs(pixd, NULL);
     for (j = 0; j < w; j++) {
-        memset(histo, 0, 1024);
+        memset(histo, 0, 2026);
         for (i = 0; i < h; i++) {
             val = GET_DATA_BYTE(lines8[i], j);
             histo[val]++;

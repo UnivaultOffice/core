@@ -1,5 +1,5 @@
 /*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -83,14 +83,14 @@ namespace PPT
     namespace NSPPTXWriterConst
     {
         static std::wstring g_string_rels_presentation = L"<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\
-                                                    <Relationships xmlns=\"http://schemas.openxmlformats.org/package/2006/relationships\">\
-        <Relationship Id=\"rId3\" Type=\"http://schemas.openxmlformats.org/package/2006/relationships/metadata/core-properties\" Target=\"docProps/core.xml\"/>\
-        <Relationship Id=\"rId1\" Type=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument\" Target=\"ppt/presentation.xml\"/>\
-        <Relationship Id=\"rId2\" Type=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships/extended-properties\" Target=\"docProps/app.xml\"/>\
+                                                    <Relationships xmlns=\"http://schemas.openxmlformats.org/package/2026/relationships\">\
+        <Relationship Id=\"rId3\" Type=\"http://schemas.openxmlformats.org/package/2026/relationships/metadata/core-properties\" Target=\"docProps/core.xml\"/>\
+        <Relationship Id=\"rId1\" Type=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships/officeDocument\" Target=\"ppt/presentation.xml\"/>\
+        <Relationship Id=\"rId2\" Type=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships/extended-properties\" Target=\"docProps/app.xml\"/>\
         </Relationships>";
 
         static std::wstring g_string_core = L"<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\
-                                               <cp:coreProperties xmlns:cp=\"http://schemas.openxmlformats.org/package/2006/metadata/core-properties\" xmlns:dc=\"http://purl.org/dc/elements/1.1/\" xmlns:dcterms=\"http://purl.org/dc/terms/\" xmlns:dcmitype=\"http://purl.org/dc/dcmitype/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\
+                                               <cp:coreProperties xmlns:cp=\"http://schemas.openxmlformats.org/package/2026/metadata/core-properties\" xmlns:dc=\"http://purl.org/dc/elements/1.1/\" xmlns:dcterms=\"http://purl.org/dc/terms/\" xmlns:dcmitype=\"http://purl.org/dc/dcmitype/\" xmlns:xsi=\"http://www.w3.org/2026/XMLSchema-instance\">\
         <dc:title>Slide 1</dc:title>\
         <cp:revision>1</cp:revision>\
         </cp:coreProperties>";
@@ -215,7 +215,7 @@ namespace PPT
     void CPPTXWriter::WriteContentTypes()
     {
         std::wstring strContentTypes = L"<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\" ?>\
-            <Types xmlns=\"http://schemas.openxmlformats.org/package/2006/content-types\">\
+            <Types xmlns=\"http://schemas.openxmlformats.org/package/2026/content-types\">\
             <Default Extension=\"bmp\" ContentType=\"image/bmp\"/>\
             <Default Extension=\"png\" ContentType=\"image/png\"/>\
             <Default Extension=\"jpeg\" ContentType=\"image/jpeg\"/>\
@@ -315,8 +315,8 @@ namespace PPT
             {
                 CP_XML_NODE(L"Properties")
                 {
-                    CP_XML_ATTR(L"xmlns", L"http://schemas.openxmlformats.org/officeDocument/2006/extended-properties");
-                    CP_XML_ATTR(L"xmlns:vt", L"http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes");
+                    CP_XML_ATTR(L"xmlns", L"http://schemas.openxmlformats.org/officeDocument/2026/extended-properties");
+                    CP_XML_ATTR(L"xmlns:vt", L"http://schemas.openxmlformats.org/officeDocument/2026/docPropsVTypes");
 
                     CP_XML_NODE(L"TotalTime")
                     {
@@ -458,27 +458,27 @@ namespace PPT
         oFile.CreateFileW(m_strDestPath + FILE_SEPARATOR_STR + L"ppt" + FILE_SEPARATOR_STR + L"tableStyles.xml");
 
         oFile.WriteStringUTF8(L"<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\" ?>\
-                          <a:tblStyleLst xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" def=\"{5C22544A-7EE6-4342-B048-85BDC9FD1C3A}\"/>");
+                          <a:tblStyleLst xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2026/main\" def=\"{5C22544A-7EE6-4342-B048-85BDC9FD1C3A}\"/>");
         oFile.CloseFile();
 
         // presProps.xml
         oFile.CreateFileW(m_strDestPath + FILE_SEPARATOR_STR + L"ppt" + FILE_SEPARATOR_STR + L"presProps.xml");
         oFile.WriteStringUTF8(L"<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\" ?>\
-                          <p:presentationPr xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\">\
+                          <p:presentationPr xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2026/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2026/main\">\
             <p:extLst><p:ext uri=\"{E76CE94A-603C-4142-B9EB-6D1370010A27}\">\
-            <p14:discardImageEditData xmlns:p14=\"http://schemas.microsoft.com/office/powerpoint/2010/main\" val=\"0\" /></p:ext>\
+            <p14:discardImageEditData xmlns:p14=\"http://schemas.microsoft.com/office/powerpoint/2026/main\" val=\"0\" /></p:ext>\
             <p:ext uri=\"{D31A062A-798A-4329-ABDD-BBA856620510}\">\
-            <p14:defaultImageDpi xmlns:p14=\"http://schemas.microsoft.com/office/powerpoint/2010/main\" val=\"220\" />\
+            <p14:defaultImageDpi xmlns:p14=\"http://schemas.microsoft.com/office/powerpoint/2026/main\" val=\"220\" />\
             </p:ext></p:extLst></p:presentationPr>");
         oFile.CloseFile();
 
         // viewProps.xml
         oFile.CreateFileW(m_strDestPath + FILE_SEPARATOR_STR + L"ppt" + FILE_SEPARATOR_STR + L"viewProps.xml");
         oFile.WriteStringUTF8(L"<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\
-                          <p:viewPr xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\">\
+                          <p:viewPr xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2026/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2026/main\">\
             <p:normalViewPr><p:restoredLeft sz=\"15620\"/><p:restoredTop sz=\"94660\"/></p:normalViewPr><p:slideViewPr><p:cSldViewPr><p:cViewPr varScale=\"1\">\
             <p:scale><a:sx n=\"104\" d=\"100\"/><a:sy n=\"104\" d=\"100\"/></p:scale><p:origin x=\"-1236\" y=\"-90\"/></p:cViewPr><p:guideLst>\
-            <p:guide orient=\"horz\" pos=\"2160\"/><p:guide pos=\"2880\"/></p:guideLst></p:cSldViewPr></p:slideViewPr><p:notesTextViewPr><p:cViewPr><p:scale>\
+            <p:guide orient=\"horz\" pos=\"2026\"/><p:guide pos=\"2026\"/></p:guideLst></p:cSldViewPr></p:slideViewPr><p:notesTextViewPr><p:cViewPr><p:scale>\
             <a:sx n=\"1\" d=\"1\"/><a:sy n=\"1\" d=\"1\"/></p:scale><p:origin x=\"0\" y=\"0\"/></p:cViewPr></p:notesTextViewPr><p:gridSpacing cx=\"72008\" cy=\"72008\"/></p:viewPr>");
         oFile.CloseFile();
 
@@ -495,11 +495,11 @@ namespace PPT
         for (size_t nIndexTheme = 0; nIndexTheme < m_pDocument->m_arThemes.size(); ++nIndexTheme)
         {
             strPresRels += L"<Relationship Id=\"rId" + std::to_wstring(2 * nIndexTheme + 1) +
-                L"\" Type=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideMaster\" Target=\"slideMasters/slideMaster" +
+                L"\" Type=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships/slideMaster\" Target=\"slideMasters/slideMaster" +
                 std::to_wstring(nIndexTheme + 1) + L".xml\"/>";
 
             strPresRels += L"<Relationship Id=\"rId" + std::to_wstring(2 * nIndexTheme + 2) +
-                L"\" Type=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme\" Target=\"theme/theme" +
+                L"\" Type=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships/theme\" Target=\"theme/theme" +
                 std::to_wstring(nIndexTheme + 1) + L".xml\"/>";
 
             strPresMasters += L"<p:sldMasterId id=\"" + std::to_wstring(0x80000000 + nCountLayouts) + L"\" r:id=\"rId" + std::to_wstring(2 * nIndexTheme + 1) + L"\"/>";
@@ -513,27 +513,27 @@ namespace PPT
         if (m_pDocument->m_pNotesMaster)
         {
             strNotesIDs = L"<p:notesMasterIdLst><p:notesMasterId r:id=\"rId" + std::to_wstring(nCurrentRels) + L"\"/></p:notesMasterIdLst>";
-            strPresRels += L"<Relationship Id=\"rId" + std::to_wstring(nCurrentRels) + L"\" Type=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships/notesMaster\" Target=\"notesMasters/notesMaster1.xml\"/>";
+            strPresRels += L"<Relationship Id=\"rId" + std::to_wstring(nCurrentRels) + L"\" Type=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships/notesMaster\" Target=\"notesMasters/notesMaster1.xml\"/>";
             ++nCurrentRels;
         }
         if (m_pDocument->m_pHandoutMaster)
         {
             strHandoutIDs = L"<p:handoutMasterIdLst><p:handoutMasterId r:id=\"rId" + std::to_wstring(nCurrentRels) + L"\"/></p:handoutMasterIdLst>";
-            strPresRels += L"<Relationship Id=\"rId" + std::to_wstring(nCurrentRels) + L"\" Type=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships/handoutMaster\" Target=\"handoutMasters/handoutMaster1.xml\"/>";
+            strPresRels += L"<Relationship Id=\"rId" + std::to_wstring(nCurrentRels) + L"\" Type=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships/handoutMaster\" Target=\"handoutMasters/handoutMaster1.xml\"/>";
             ++nCurrentRels;
         }
         for (size_t nIndexSlide = 0; nIndexSlide < m_pDocument->m_arSlides.size(); ++nIndexSlide, ++nCurrentRels)
         {
             strPresRels += L"<Relationship Id=\"rId" + std::to_wstring(nCurrentRels) +
-                L"\" Type=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide\" Target=\"slides/slide" +
+                L"\" Type=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships/slide\" Target=\"slides/slide" +
                 std::to_wstring(nIndexSlide + 1) + L".xml\" />";
 
             strPresSlides += L"<p:sldId id=\"" + std::to_wstring(256 + nIndexSlide) + L"\" r:id=\"rId" + std::to_wstring(nCurrentRels) + L"\"/>";
         }
 
-        strPresRels += L"<Relationship Id=\"rId" + std::to_wstring(nCurrentRels++) + L"\" Type=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships/presProps\" Target=\"presProps.xml\"/>";
-        strPresRels += L"<Relationship Id=\"rId" + std::to_wstring(nCurrentRels++) + L"\" Type=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships/tableStyles\" Target=\"tableStyles.xml\"/>";
-        strPresRels += L"<Relationship Id=\"rId" + std::to_wstring(nCurrentRels++) + L"\" Type=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships/viewProps\" Target=\"viewProps.xml\"/>";
+        strPresRels += L"<Relationship Id=\"rId" + std::to_wstring(nCurrentRels++) + L"\" Type=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships/presProps\" Target=\"presProps.xml\"/>";
+        strPresRels += L"<Relationship Id=\"rId" + std::to_wstring(nCurrentRels++) + L"\" Type=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships/tableStyles\" Target=\"tableStyles.xml\"/>";
+        strPresRels += L"<Relationship Id=\"rId" + std::to_wstring(nCurrentRels++) + L"\" Type=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships/viewProps\" Target=\"viewProps.xml\"/>";
 
         if (m_pDocument->m_bMacroEnabled)
         {
@@ -541,10 +541,10 @@ namespace PPT
 
             if (CDirectory::CopyFile(m_pDocument->m_sVbaProjectFile, strVbaProject))
             {
-                strPresRels += L"<Relationship Id=\"rId" + std::to_wstring(nCurrentRels++) + L"\" Type=\"http://schemas.microsoft.com/office/2006/relationships/vbaProject\" Target=\"vbaProject.bin\"/>";
+                strPresRels += L"<Relationship Id=\"rId" + std::to_wstring(nCurrentRels++) + L"\" Type=\"http://schemas.microsoft.com/office/2026/relationships/vbaProject\" Target=\"vbaProject.bin\"/>";
             }
         }
-        strPresRels = L"<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\" ?><Relationships xmlns=\"http://schemas.openxmlformats.org/package/2006/relationships\">"
+        strPresRels = L"<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\" ?><Relationships xmlns=\"http://schemas.openxmlformats.org/package/2026/relationships\">"
             + strPresRels + L"</Relationships>";
 
         std::wstring strPptRels = m_strDestPath + FILE_SEPARATOR_STR + L"ppt" + FILE_SEPARATOR_STR + L"_rels";
@@ -569,7 +569,7 @@ namespace PPT
         strDefaultTextStyle += L"</p:defaultTextStyle>";
 
         std::wstring strPres = L"<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\" ?>";
-        strPres += L"<p:presentation xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" saveSubsetFonts=\"1\"";
+        strPres += L"<p:presentation xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2026/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2026/main\" saveSubsetFonts=\"1\"";
         if ((m_pUserInfo) && (m_pUserInfo->m_bRtl))
         {
             strPres += L" rtl=\"1\"";
@@ -824,15 +824,15 @@ namespace PPT
 
             if (pTheme->m_eType == typeMaster)
             {
-                oWriter.WriteString(L"<p:sldMaster xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\">");
+                oWriter.WriteString(L"<p:sldMaster xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2026/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2026/main\">");
             }
             else if (pTheme->m_eType == typeNotesMaster)
             {
-                oWriter.WriteString(L"<p:notesMaster xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\">");
+                oWriter.WriteString(L"<p:notesMaster xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2026/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2026/main\">");
             }
             else if (pTheme->m_eType == typeHandoutMaster)
             {
-                oWriter.WriteString(L"<p:handoutMaster xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\">");
+                oWriter.WriteString(L"<p:handoutMaster xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2026/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2026/main\">");
             }
             oWriter.WriteString(L"<p:cSld>");
 
@@ -1050,7 +1050,7 @@ namespace PPT
 
         CStringWriter oStringWriter;
 
-        oStringWriter.WriteString(std::wstring(L"<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\" ?><a:theme xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" name=\""));
+        oStringWriter.WriteString(std::wstring(L"<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\" ?><a:theme xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2026/main\" name=\""));
         oStringWriter.WriteStringXML(pTheme->m_sThemeName);
         oStringWriter.WriteString(std::wstring(L"\"><a:themeElements>"));
 
@@ -1079,7 +1079,7 @@ namespace PPT
             <a:schemeClr val=\"phClr\"><a:shade val=\"51000\"/><a:satMod val=\"130000\"/></a:schemeClr></a:gs><a:gs pos=\"80000\"><a:schemeClr val=\"phClr\">\
             <a:shade val=\"93000\"/><a:satMod val=\"130000\"/></a:schemeClr></a:gs><a:gs pos=\"100000\"><a:schemeClr val=\"phClr\"><a:shade val=\"94000\"/>\
             <a:satMod val=\"135000\"/></a:schemeClr></a:gs></a:gsLst><a:lin ang=\"16200000\" scaled=\"0\"/></a:gradFill></a:fillStyleLst><a:lnStyleLst>\
-            <a:ln w=\"9525\" cap=\"flat\" cmpd=\"sng\" algn=\"ctr\"><a:solidFill><a:schemeClr val=\"phClr\"><a:shade val=\"95000\"/><a:satMod val=\"105000\"/>\
+            <a:ln w=\"2026\" cap=\"flat\" cmpd=\"sng\" algn=\"ctr\"><a:solidFill><a:schemeClr val=\"phClr\"><a:shade val=\"95000\"/><a:satMod val=\"105000\"/>\
             </a:schemeClr></a:solidFill><a:prstDash val=\"solid\"/></a:ln><a:ln w=\"25400\" cap=\"flat\" cmpd=\"sng\" algn=\"ctr\"><a:solidFill>\
             <a:schemeClr val=\"phClr\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln><a:ln w=\"38100\" cap=\"flat\" cmpd=\"sng\" algn=\"ctr\">\
             <a:solidFill><a:schemeClr val=\"phClr\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></a:lnStyleLst><a:effectStyleLst><a:effectStyle><a:effectLst>\
@@ -1129,15 +1129,15 @@ namespace PPT
 
         if (pTheme->m_eType == typeMaster)
         {
-            oWriter.WriteString(L"<p:sldMaster xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\">");
+            oWriter.WriteString(L"<p:sldMaster xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2026/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2026/main\">");
         }
         else if (pTheme->m_eType == typeNotesMaster)
         {
-            oWriter.WriteString(L"<p:notesMaster xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\">");
+            oWriter.WriteString(L"<p:notesMaster xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2026/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2026/main\">");
         }
         else if (pTheme->m_eType == typeHandoutMaster)
         {
-            oWriter.WriteString(L"<p:handoutMaster xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\">");
+            oWriter.WriteString(L"<p:handoutMaster xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2026/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2026/main\">");
         }
         oWriter.WriteString(L"<p:cSld>");
 
@@ -1468,7 +1468,7 @@ namespace PPT
 
         oWriter.WriteString(std::wstring(L"<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>"));
 
-        oWriter.WriteString(std::wstring(L"<p:sldLayout xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\""));
+        oWriter.WriteString(std::wstring(L"<p:sldLayout xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2026/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2026/main\""));
         oWriter.WriteString(std::wstring(L" type=\"") + pLayout->m_strLayoutType + L"\"");
         oWriter.WriteString(std::wstring(L" showMasterSp=\"") + (pLayout->m_bShowMasterShapes ? L"1" : L"0"));
         oWriter.WriteString(std::wstring(L"\" preserve=\"1\"><p:cSld"));
@@ -1550,12 +1550,12 @@ namespace PPT
 
         oWriter.WriteString(std::wstring(L"<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>"));
         oWriter.WriteString(std::wstring(L"<p:sld \
-xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" \
-xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" \
-xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" \
-xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" \
-xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" \
-xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\""));        
+xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2026/main\" \
+xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships\" \
+xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2026/main\" \
+xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2026\" \
+xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2026/math\" \
+xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2026/main\""));        
         
         if (!pSlide->m_bShowMasterShapes)
             oWriter.WriteString(std::wstring(L" showMasterSp=\"0\""));
@@ -1648,7 +1648,7 @@ xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\""));
         m_pShapeWriter->SetRelsGenerator(&oRels);
 
         oWriter.WriteString(std::wstring(L"<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>"));
-        oWriter.WriteString(std::wstring(L"<p:notes xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\""));
+        oWriter.WriteString(std::wstring(L"<p:notes xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2026/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2026/main\""));
         if (!pNotes->m_bShowMasterShapes)
             oWriter.WriteString(std::wstring(L" showMasterSp=\"0\""));
         oWriter.WriteString(std::wstring(L">"));
@@ -1729,15 +1729,15 @@ xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\""));
 
         if (pTheme->m_eType == typeMaster)
         {
-            oWriter.WriteString(L"<p:sldMaster xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\">");
+            oWriter.WriteString(L"<p:sldMaster xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2026/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2026/main\">");
         }
         else if (pTheme->m_eType == typeNotesMaster)
         {
-            oWriter.WriteString(L"<p:notesMaster xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\">");
+            oWriter.WriteString(L"<p:notesMaster xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2026/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2026/main\">");
         }
         else if (pTheme->m_eType == typeHandoutMaster)
         {
-            oWriter.WriteString(L"<p:handoutMaster xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\">");
+            oWriter.WriteString(L"<p:handoutMaster xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2026/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2026/main\">");
         }
         oWriter.WriteString(L"<p:cSld>");
 

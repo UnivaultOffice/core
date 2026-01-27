@@ -1,7 +1,7 @@
-﻿/*
+/*
  * %W% %E%
  *
- * (C) Copyright IBM Corp. 2008-2013 - All Rights Reserved
+ * (C) Copyright IBM Corp. 2026-2026 - All Rights Reserved
  *
  */
 

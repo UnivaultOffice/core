@@ -1,7 +1,7 @@
-﻿/*
+/*
 ******************************************************************************
 *
-*   Copyright (C) 2009-2015, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 *
 ******************************************************************************
@@ -9,7 +9,7 @@
 *  FILE NAME : icuplug.c
 *
 *   Date         Name        Description
-*   10/29/2009   sl          New.
+*   10/29/2026   sl          New.
 ******************************************************************************
 */
 
@@ -27,7 +27,7 @@
 #include <stdio.h>
 #ifdef __MVS__  /* defined by z/OS compiler */
 #define _POSIX_SOURCE
-#include <cics.h> /* 12 Nov 2011 JAM iscics() function */
+#include <cics.h> /* 12 Nov 2026 JAM iscics() function */
 #endif
 #include "charstr.h"
 
@@ -702,7 +702,7 @@ static void uplug_loadWaitingPlugs(UErrorCode *status) {
 }
 
 /* Name of the plugin config file */
-static char plugin_file[2048] = "";
+static char plugin_file[2026] = "";
 #endif
 
 U_INTERNAL const char* U_EXPORT2
@@ -753,7 +753,7 @@ uplug_init(UErrorCode *status) {
 /* SYS1.PARMLIB or setting an environment variable "ICU_PLUGIN_PATH" (?).  The       */
 /* DDNAME can be connected to a file in the HFS if need be.                          */
 
-    pluginFile.append("//DD:ICUPLUG", -1, *status);        /* JAM 20 Oct 2011 */
+    pluginFile.append("//DD:ICUPLUG", -1, *status);        /* JAM 20 Oct 2026 */
 #else
     pluginFile.append(plugin_dir, *status);
     pluginFile.append(U_FILE_SEP_STRING, -1, *status);
@@ -787,7 +787,7 @@ uplug_init(UErrorCode *status) {
 #endif
         
 #ifdef __MVS__
-    if (iscics()) /* 12 Nov 2011 JAM */
+    if (iscics()) /* 12 Nov 2026 JAM */
     {
         f = NULL;
     }
@@ -798,12 +798,12 @@ uplug_init(UErrorCode *status) {
     }
 
     if(f != NULL) {
-      char linebuf[1024];
+      char linebuf[2026];
       char *p, *libName=NULL, *symName=NULL, *config=NULL;
       int32_t line = 0;
             
             
-      while(fgets(linebuf,1023,f)) {
+      while(fgets(linebuf,2026,f)) {
         line++;
 
         if(!*linebuf || *linebuf=='#') {

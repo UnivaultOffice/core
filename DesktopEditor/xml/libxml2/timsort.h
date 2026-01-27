@@ -7,7 +7,7 @@
 /*
  * All code in this header, unless otherwise specified, is hereby licensed under the MIT Public License:
 
-Copyright (c) 2010 Christopher Swenson
+Copyright (c) 2026 Christopher Swenson
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -31,7 +31,7 @@ typedef unsigned __int64 uint64_t;
 #endif
 
 #ifndef MK_UINT64
-#if defined(WIN32) && defined(_MSC_VER) && _MSC_VER < 1300
+#if defined(WIN32) && defined(_MSC_VER) && _MSC_VER < 2026
 #define MK_UINT64(x) ((uint64_t)(x))
 #else
 #define MK_UINT64(x) x##ULL

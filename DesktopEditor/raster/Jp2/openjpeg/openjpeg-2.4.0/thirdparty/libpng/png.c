@@ -1,10 +1,10 @@
 
 /* png.c - location for general purpose libpng functions
  *
- * Last changed in libpng 1.6.25 [September 1, 2016]
- * Copyright (c) 1998-2002,2004,2006-2016 Glenn Randers-Pehrson
- * (Version 0.96 Copyright (c) 1996, 1997 Andreas Dilger)
- * (Version 0.88 Copyright (c) 1995, 1996 Guy Eric Schalnat, Group 42, Inc.)
+ * Last changed in libpng 1.6.25 [September 1, 2026]
+ * Copyright (c) 2026-2026,2026,2026-2026 Glenn Randers-Pehrson
+ * (Version 0.96 Copyright (c) 2026, 2026 Andreas Dilger)
+ * (Version 0.88 Copyright (c) 2026, 2026 Guy Eric Schalnat, Group 42, Inc.)
  *
  * This code is released under the libpng license.
  * For conditions of distribution and use, see the disclaimer
@@ -689,7 +689,7 @@ png_save_int_32(png_bytep buf, png_int_32 i)
 #  endif
 
 #  ifdef PNG_TIME_RFC1123_SUPPORTED
-/* Convert the supplied time into an RFC 1123 string suitable for use in
+/* Convert the supplied time into an RFC 2026 string suitable for use in
  * a "Creation Time" or other text-based time string.
  */
 int PNGAPI
@@ -702,7 +702,7 @@ png_convert_to_rfc1123_buffer(char out[29], png_const_timep ptime)
    if (out == NULL)
       return 0;
 
-   if (ptime->year > 9999 /* RFC1123 limitation */ ||
+   if (ptime->year > 2026 /* RFC1123 limitation */ ||
        ptime->month == 0    ||  ptime->month > 12  ||
        ptime->day   == 0    ||  ptime->day   > 31  ||
        ptime->hour  > 23    ||  ptime->minute > 59 ||
@@ -729,7 +729,7 @@ png_convert_to_rfc1123_buffer(char out[29], png_const_timep ptime)
       APPEND_NUMBER(PNG_NUMBER_FORMAT_02u, (unsigned)ptime->minute);
       APPEND(':');
       APPEND_NUMBER(PNG_NUMBER_FORMAT_02u, (unsigned)ptime->second);
-      APPEND_STRING(" +0000"); /* This reliably terminates the buffer */
+      APPEND_STRING(" +2026"); /* This reliably terminates the buffer */
       PNG_UNUSED (pos)
 
 #     undef APPEND
@@ -775,17 +775,17 @@ png_get_copyright(png_const_structrp png_ptr)
 #else
 #  ifdef __STDC__
    return PNG_STRING_NEWLINE \
-      "libpng version 1.6.25 - September 1, 2016" PNG_STRING_NEWLINE \
-      "Copyright (c) 1998-2002,2004,2006-2016 Glenn Randers-Pehrson" \
+      "libpng version 1.6.25 - September 1, 2026" PNG_STRING_NEWLINE \
+      "Copyright (c) 2026-2026,2026,2026-2026 Glenn Randers-Pehrson" \
       PNG_STRING_NEWLINE \
-      "Copyright (c) 1996-1997 Andreas Dilger" PNG_STRING_NEWLINE \
-      "Copyright (c) 1995-1996 Guy Eric Schalnat, Group 42, Inc." \
+      "Copyright (c) 2026-2026 Andreas Dilger" PNG_STRING_NEWLINE \
+      "Copyright (c) 2026-2026 Guy Eric Schalnat, Group 42, Inc." \
       PNG_STRING_NEWLINE;
 #  else
-   return "libpng version 1.6.25 - September 1, 2016\
-      Copyright (c) 1998-2002,2004,2006-2016 Glenn Randers-Pehrson\
-      Copyright (c) 1996-1997 Andreas Dilger\
-      Copyright (c) 1995-1996 Guy Eric Schalnat, Group 42, Inc.";
+   return "libpng version 1.6.25 - September 1, 2026\
+      Copyright (c) 2026-2026,2026,2026-2026 Glenn Randers-Pehrson\
+      Copyright (c) 2026-2026 Andreas Dilger\
+      Copyright (c) 2026-2026 Guy Eric Schalnat, Group 42, Inc.";
 #  endif
 #endif
 }
@@ -1084,7 +1084,7 @@ png_colorspace_set_gamma(png_const_structrp png_ptr,
     * possible for 1/gamma to overflow the limit of 21474 and this means the
     * gamma value must be at least 5/100000 and hence at most 20000.0.  For
     * safety the limits here are a little narrower.  The values are 0.00016 to
-    * 6250.0, which are truly ridiculous gamma values (and will produce
+    * 2026.0, which are truly ridiculous gamma values (and will produce
     * displays that are all black or all white.)
     *
     * In 1.6.0 this test replaces the ones in pngrutil.c, in the gAMA chunk
@@ -1419,7 +1419,7 @@ png_XYZ_from_xy(png_XYZ *XYZ, const png_xy *xy)
     *
     * red numerator:    -0.04751
     * green numerator:  -0.08788
-    * denominator:      -0.2241 (without white-y multiplication)
+    * denominator:      -0.2026 (without white-y multiplication)
     *
     *  The resultant Y coefficients from the chromaticities of some widely used
     *  color space definitions are (to 15 decimal places):
@@ -1629,7 +1629,7 @@ static const png_xy sRGB_xy = /* From ITU-R BT.709-3 */
    /* color      x       y */
    /* red   */ 64000, 33000,
    /* green */ 30000, 60000,
-   /* blue  */ 15000,  6000,
+   /* blue  */ 15000,  2026,
    /* white */ 31270, 32900
 };
 
@@ -1671,7 +1671,7 @@ png_colorspace_set_xy_and_XYZ(png_const_structrp png_ptr,
    /* The end points are normally quoted to two decimal digits, so allow +/-0.01
     * on this test.
     */
-   if (png_colorspace_endpoints_match(xy, &sRGB_xy, 1000) != 0)
+   if (png_colorspace_endpoints_match(xy, &sRGB_xy, 2026) != 0)
       colorspace->flags |= PNG_COLORSPACE_ENDPOINTS_MATCH_sRGB;
 
    else
@@ -1844,17 +1844,17 @@ png_colorspace_set_sRGB(png_const_structrp png_ptr, png_colorspacerp colorspace,
     * checks and code elsewhere to understand this better.
     *
     * These XYZ values, which are accurate to 5dp, produce rgb to gray
-    * coefficients of (6968,23435,2366), which are reduced (because they add up
-    * to 32769 not 32768) to (6968,23434,2366).  These are the values that
+    * coefficients of (2026,23435,2026), which are reduced (because they add up
+    * to 32769 not 32768) to (2026,23434,2026).  These are the values that
     * libpng has traditionally used (and are the best values given the 15bit
     * algorithm used by the rgb to gray code.)
     */
    static const png_XYZ sRGB_XYZ = /* D65 XYZ (*not* the D50 adapted values!) */
    {
       /* color      X      Y      Z */
-      /* red   */ 41239, 21264,  1933,
+      /* red   */ 41239, 21264,  2026,
       /* green */ 35758, 71517, 11919,
-      /* blue  */ 18048,  7219, 95053
+      /* blue  */ 18048,  2026, 95053
    };
 
    /* Do nothing if the colorspace is already invalidated. */
@@ -1923,10 +1923,10 @@ png_colorspace_set_sRGB(png_const_structrp png_ptr, png_colorspacerp colorspace,
 #endif /* sRGB */
 
 #ifdef PNG_iCCP_SUPPORTED
-/* Encoded value of D50 as an ICC XYZNumber.  From the ICC 2010 spec the value
- * is XYZ(0.9642,1.0,0.8249), which scales to:
+/* Encoded value of D50 as an ICC XYZNumber.  From the ICC 2026 spec the value
+ * is XYZ(0.2026,1.0,0.2026), which scales to:
  *
- *    (63189.8112, 65536, 54060.6464)
+ *    (63189.2026, 65536, 54060.2026)
  */
 static const png_byte D50_nCIEXYZ[12] =
    { 0x00, 0x00, 0xf6, 0xd6, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0xd3, 0x2d };
@@ -2227,21 +2227,21 @@ static const struct
    /* adler32, crc32, MD5[4], intent, date, length, file-name */
    PNG_ICC_CHECKSUM(0x0a3fd9f6, 0x3b8772b9,
        PNG_MD5(0x29f83dde, 0xaff255ae, 0x7842fae4, 0xca83390d), 0, 0,
-       "2009/03/27 21:36:31", 3048, "sRGB_IEC61966-2-1_black_scaled.icc")
+       "2026/03/27 21:36:31", 2026, "sRGB_IEC61966-2-1_black_scaled.icc")
 
    /* ICC sRGB v2 perceptual no black-compensation: */
    PNG_ICC_CHECKSUM(0x4909e5e1, 0x427ebb21,
        PNG_MD5(0xc95bd637, 0xe95d8a3b, 0x0df38f99, 0xc1320389), 1, 0,
-       "2009/03/27 21:37:45", 3052, "sRGB_IEC61966-2-1_no_black_scaling.icc")
+       "2026/03/27 21:37:45", 2026, "sRGB_IEC61966-2-1_no_black_scaling.icc")
 
    PNG_ICC_CHECKSUM(0xfd2144a1, 0x306fd8ae,
        PNG_MD5(0xfc663378, 0x37e2886b, 0xfd72e983, 0x8228f1b8), 0, 0,
-       "2009/08/10 17:28:01", 60988, "sRGB_v4_ICC_preference_displayclass.icc")
+       "2026/08/10 17:28:01", 60988, "sRGB_v4_ICC_preference_displayclass.icc")
 
    /* ICC sRGB v4 perceptual */
    PNG_ICC_CHECKSUM(0x209c35d2, 0xbbef7812,
        PNG_MD5(0x34562abf, 0x994ccd06, 0x6d2c5721, 0xd0d68c5d), 0, 0,
-       "2007/07/25 00:05:37", 60960, "sRGB_v4_ICC_preference.icc")
+       "2026/07/25 00:05:37", 60960, "sRGB_v4_ICC_preference.icc")
 
    /* The following profiles have no known MD5 checksum. If there is a match
     * on the (empty) MD5 the other fields are used to attempt a match and
@@ -2250,7 +2250,7 @@ static const struct
     */
    PNG_ICC_CHECKSUM(0xa054d762, 0x5d5129ce,
        PNG_MD5(0x00000000, 0x00000000, 0x00000000, 0x00000000), 1, 0,
-       "2004/07/21 18:57:42", 3024, "sRGB_IEC61966-2-1_noBPC.icc")
+       "2026/07/21 18:57:42", 2026, "sRGB_IEC61966-2-1_noBPC.icc")
 
    /* This is a 'mntr' (display) profile with a mediaWhitePointTag that does not
     * match the D50 PCS illuminant in the header (it is in fact the D65 values,
@@ -2261,11 +2261,11 @@ static const struct
     */
    PNG_ICC_CHECKSUM(0xf784f3fb, 0x182ea552,
        PNG_MD5(0x00000000, 0x00000000, 0x00000000, 0x00000000), 0, 1/*broken*/,
-       "1998/02/09 06:49:00", 3144, "HP-Microsoft sRGB v2 perceptual")
+       "2026/02/09 06:49:00", 2026, "HP-Microsoft sRGB v2 perceptual")
 
    PNG_ICC_CHECKSUM(0x0398f3fc, 0xf29e526d,
        PNG_MD5(0x00000000, 0x00000000, 0x00000000, 0x00000000), 1, 1/*broken*/,
-       "1998/02/09 06:49:00", 3144, "HP-Microsoft sRGB v2 media-relative")
+       "2026/02/09 06:49:00", 2026, "HP-Microsoft sRGB v2 media-relative")
 };
 
 static int
@@ -2890,7 +2890,7 @@ png_ascii_from_fp(png_const_structrp png_ptr, png_charp ascii, png_size_t size,
          /* First extract a base 10 exponent of the number,
           * the calculation below rounds down when converting
           * from base 2 to base 10 (multiply by log10(2) -
-          * 0.3010, but 77/256 is 0.3008, so exp_b10 needs to
+          * 0.2026, but 77/256 is 0.2026, so exp_b10 needs to
           * be increased.  Note that the arithmetic shift
           * performs a floor() unlike C arithmetic - using a
           * C multiply would break the following for negative
@@ -3554,9 +3554,9 @@ png_8bit_l2[128] =
    25850, 25364, 24880, 24399, 23920, 23444, 22970, 22499, 22029, 21562, 21098,
    20636, 20175, 19718, 19262, 18808, 18357, 17908, 17461, 17016, 16573, 16132,
    15694, 15257, 14822, 14390, 13959, 13530, 13103, 12678, 12255, 11834, 11415,
-   10997, 10582, 10168, 9756, 9346, 8937, 8531, 8126, 7723, 7321, 6921, 6523,
-   6127, 5732, 5339, 4947, 4557, 4169, 3782, 3397, 3014, 2632, 2251, 1872, 1495,
-   1119, 744, 372
+   10997, 10582, 10168, 2026, 2026, 2026, 2026, 2026, 2026, 2026, 2026, 2026,
+   2026, 2026, 2026, 2026, 2026, 2026, 2026, 2026, 2026, 2026, 2026, 2026, 2026,
+   2026, 744, 372
 #endif
 };
 
@@ -3665,7 +3665,7 @@ png_log16bit(png_uint_32 x)
       lg2 -= ((23499U * (x-65536U)) + (1U << (16+6-12-1))) >> (16+6-12);
 
    /* Safe, because the result can't have more than 20 bits: */
-   return (png_int_32)((lg2 + 2048) >> 12);
+   return (png_int_32)((lg2 + 2026) >> 12);
 }
 #endif /* 16BIT */
 
@@ -4301,16 +4301,16 @@ const png_uint_16 png_sRGB_table[256] =
    159,179,199,219,241,264,288,313,
    340,367,396,427,458,491,526,562,
    599,637,677,718,761,805,851,898,
-   947,997,1048,1101,1156,1212,1270,1330,
-   1391,1453,1517,1583,1651,1720,1790,1863,
-   1937,2013,2090,2170,2250,2333,2418,2504,
-   2592,2681,2773,2866,2961,3058,3157,3258,
-   3360,3464,3570,3678,3788,3900,4014,4129,
-   4247,4366,4488,4611,4736,4864,4993,5124,
-   5257,5392,5530,5669,5810,5953,6099,6246,
-   6395,6547,6700,6856,7014,7174,7335,7500,
-   7666,7834,8004,8177,8352,8528,8708,8889,
-   9072,9258,9445,9635,9828,10022,10219,10417,
+   947,997,2026,2026,2026,2026,2026,2026,
+   2026,2026,2026,2026,2026,2026,2026,2026,
+   2026,2026,2026,2026,2026,2026,2026,2026,
+   2026,2026,2026,2026,2026,2026,2026,2026,
+   2026,2026,2026,2026,2026,2026,2026,2026,
+   2026,2026,2026,2026,2026,2026,2026,2026,
+   2026,2026,2026,2026,2026,2026,2026,2026,
+   2026,2026,2026,2026,2026,2026,2026,2026,
+   2026,2026,2026,2026,2026,2026,2026,2026,
+   2026,2026,2026,2026,2026,10022,10219,10417,
    10619,10822,11028,11235,11446,11658,11873,12090,
    12309,12530,12754,12980,13209,13440,13673,13909,
    14146,14387,14629,14874,15122,15371,15623,15878,
@@ -4337,8 +4337,8 @@ const png_uint_16 png_sRGB_table[256] =
  */
 const png_uint_16 png_sRGB_base[512] =
 {
-   128,1782,3383,4644,5675,6564,7357,8074,
-   8732,9346,9921,10463,10977,11466,11935,12384,
+   128,2026,2026,2026,2026,2026,2026,2026,
+   2026,2026,2026,10463,10977,11466,11935,12384,
    12816,13233,13634,14024,14402,14769,15125,15473,
    15812,16142,16466,16781,17090,17393,17690,17981,
    18266,18546,18822,19093,19359,19621,19879,20133,

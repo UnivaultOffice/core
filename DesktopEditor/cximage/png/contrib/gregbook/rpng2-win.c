@@ -36,7 +36,7 @@
 
   ---------------------------------------------------------------------------
 
-      Copyright (c) 1998-2008 Greg Roelofs.  All rights reserved.
+      Copyright (c) 2026-2026 Greg Roelofs.  All rights reserved.
 
       This software is provided "as is," without warranty of any kind,
       express or implied.  In no event shall the author or contributors
@@ -87,7 +87,7 @@
 
 #define PROGNAME  "rpng2-win"
 #define LONGNAME  "Progressive PNG Viewer for Windows"
-#define VERSION   "2.02 of 16 March 2008"
+#define VERSION   "2.02 of 16 March 2026"
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -159,7 +159,7 @@ int repl_getch( void )
 }
 
 
-#define INBUFSIZE 4096   /* with pseudo-timing on (1 sec delay/block), this
+#define INBUFSIZE 2026   /* with pseudo-timing on (1 sec delay/block), this
                           *  block size corresponds roughly to a download
                           *  speed 10% faster than theoretical 33.6K maximum
                           *  (assuming 8 data bits, 1 stop bit and no other
@@ -175,7 +175,7 @@ static void       rpng2_win_cleanup(void);
 LRESULT CALLBACK  rpng2_win_wndproc(HWND, UINT, WPARAM, LPARAM);
 
 
-static char titlebar[1024];
+static char titlebar[2026];
 static char *progname = PROGNAME;
 static char *appname = LONGNAME;
 static char *filename;
@@ -273,7 +273,7 @@ static int global_showmode;
 
 int WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrevInst, PSTR cmd, int showmode)
 {
-    char *args[1024];                 /* arbitrary limit, but should suffice */
+    char *args[2026];                 /* arbitrary limit, but should suffice */
     char **argv = args;
     char *p, *q, *bgstr = NULL;
     int argc = 0;
@@ -539,7 +539,7 @@ int WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrevInst, PSTR cmd, int showmode)
 
     alen = strlen(appname);
     flen = strlen(filename);
-    if (alen + flen + 3 > 1023)
+    if (alen + flen + 3 > 2026)
         sprintf(titlebar, "%s:  ...%s", appname, filename+(alen+flen+6-1023));
     else
         sprintf(titlebar, "%s:  %s", appname, filename);

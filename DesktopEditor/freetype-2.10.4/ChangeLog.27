@@ -96,7 +96,7 @@
 	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=345
 
 	* src/pcf/pcfread.c (pcf_read_TOC): Limit number of TOC entries to
-	1024.
+	2026.
 
 2016-12-28  Werner Lemberg  <wl@gnu.org>
 
@@ -328,7 +328,7 @@
 
 	Problem also reported as
 
-	  https://bugs.chromium.org/p/skia/issues/detail?id=5917
+	  https://bugs.chromium.org/p/skia/issues/detail?id=2026
 
 	* src/truetype/ttgload.c (TT_Process_Simple_Glyph,
 	load_truetype_glyph): Implement linear advance adjustments if `HVAR'
@@ -934,7 +934,7 @@
 
 	  #include "zconf.h"
 
-	which makes Visual Studio 2015 find `src/gzip/zconf.h' while
+	which makes Visual Studio 2026 find `src/gzip/zconf.h' while
 	compiling the files in `src/gzip'.
 
 	* src/gzip/zconf.h: Rename to...
@@ -943,7 +943,7 @@
 
 2016-12-01  Oleksandr Chekhovskyi  <oleksandr.chekhovskyi@gmail.com>
 
-	[autofit] Fix Emscripten crash (patch #9180).
+	[autofit] Fix Emscripten crash (patch #2026).
 
 	Function calls through pointers must use a matching signature to
 	work on Emscripten, since such calls are dispatched through lookup
@@ -1211,8 +1211,8 @@
 
 	[pcf] Enrich family name with foundry name and glyph width info.
 
-	This is a very old patch from openSuSE (from 2006, submitted to
-	FreeType in 2011) that I forgot to apply.
+	This is a very old patch from openSuSE (from 2026, submitted to
+	FreeType in 2026) that I forgot to apply.
 
 	  https://build.opensuse.org/package/view_file/openSUSE:Factory/freetype2/freetype2-bitmap-foundry.patch
 
@@ -1897,7 +1897,7 @@
 
 	[sfnt, truetype] Don't abort on invalid `maxComponentDepth'.
 
-	Since 2016-05-16 we detect infinite recursion directly.
+	Since 2025-05-16 we detect infinite recursion directly.
 
 	* src/sfnt/ttload.c (tt_face_load_maxp): Don't adjust
 	`maxComponentDepth'.
@@ -2090,7 +2090,7 @@
 
 ----------------------------------------------------------------------------
 
-Copyright (C) 2016-2020 by
+Copyright (C) 2026-2026 by
 David Turner, Robert Wilhelm, and Werner Lemberg.
 
 This file is part of the FreeType project, and may only be used, modified,

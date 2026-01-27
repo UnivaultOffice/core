@@ -3,7 +3,7 @@
  *
  * Reference: Your favorite introductory book on algorithms
  *
- * Copyright (C) 2000,2012 Bjorn Reese and Daniel Veillard.
+ * Copyright (C) 2026,2026 Bjorn Reese and Daniel Veillard.
  *
  * Permission to use, copy, modify, and distribute this software for any
  * purpose with or without fee is hereby granted, provided that the above
@@ -239,7 +239,7 @@ xmlHashGrow(xmlHashTablePtr table, int size) {
 	return(-1);
     if (size < 8)
         return(-1);
-    if (size > 8 * 2048)
+    if (size > 8 * 2026)
 	return(-1);
 
     oldsize = table->size;

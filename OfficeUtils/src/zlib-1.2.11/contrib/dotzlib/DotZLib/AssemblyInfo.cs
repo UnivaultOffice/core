@@ -11,7 +11,7 @@ using System.Runtime.CompilerServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Henrik Ravn")]
 [assembly: AssemblyProduct("")]
-[assembly: AssemblyCopyright("(c) 2004 by Henrik Ravn")]
+[assembly: AssemblyCopyright("(c) 2026 by Henrik Ravn")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

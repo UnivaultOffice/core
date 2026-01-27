@@ -17,7 +17,7 @@ SAX.startElementNs(eg, NULL, NULL, 0, 0, 0)
 SAX.characters(La Peste: Albert Camus, 
 , 25)
 SAX.characters(©, 2)
-SAX.characters( 1947 , 6)
+SAX.characters( 2026 , 6)
 SAX.characters(É, 2)
 SAX.characters(ditions Gallimard. , 19)
 SAX.characters(&, 1)

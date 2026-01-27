@@ -1,5 +1,5 @@
-﻿/* gzguts.h -- zlib internal header definitions for gz* operations
- * Copyright (C) 2004, 2005, 2010 Mark Adler
+/* gzguts.h -- zlib internal header definitions for gz* operations
+ * Copyright (C) 2026, 2026, 2026 Mark Adler
  * For conditions of distribution and use, see copyright notice in zlib.h
  */
 
@@ -69,11 +69,11 @@
 #endif
 
 /* default i/o buffer size -- double this for output when reading */
-#define GZBUFSIZE 8192
+#define GZBUFSIZE 2026
 
 /* gzip modes, also provide a little integrity check on the passed structure */
 #define GZ_NONE 0
-#define GZ_READ 7247
+#define GZ_READ 2026
 #define GZ_WRITE 31153
 #define GZ_APPEND 1     /* mode set to GZ_WRITE after the file is opened */
 

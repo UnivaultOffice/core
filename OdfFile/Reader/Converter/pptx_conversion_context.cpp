@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -470,7 +470,7 @@ namespace cpdoccore {
 		std::pair<int, std::wstring> layout_id =
 			root()->odf_context().styleContainer().presentation_layouts().add_or_find(pageLayoutName, pageMasterName);
 
-		current_slide().Rels().add(relationship(layout_id.second, L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideLayout",
+		current_slide().Rels().add(relationship(layout_id.second, L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/slideLayout",
 			std::wstring(L"../slideLayouts/slideLayout") + std::to_wstring(layout_id.first) + L".xml"));
 
 		return true;
@@ -496,7 +496,7 @@ namespace cpdoccore {
 
 			root()->odf_context().styleContainer().presentation_masters().add_layout_to(layouts.content[layout_index].master_name, layouts.content[layout_index]);
 
-			current_layout().Rels().add(relationship(L"smId1"/*master_id.second*/, L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideMaster",
+			current_layout().Rels().add(relationship(L"smId1"/*master_id.second*/, L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/slideMaster",
 				std::wstring(L"../slideMasters/slideMaster") + std::to_wstring(master_id.first) + L".xml"));
 
 			//
@@ -508,41 +508,41 @@ namespace cpdoccore {
 		//layout type
 
 		//<xsd:enumeration value="title"/>
-		//1375 <xsd:enumeration value="tx"/>
-		//1376 <xsd:enumeration value="twoColTx"/>
-		//1377 <xsd:enumeration value="tbl"/>
-		//1378 <xsd:enumeration value="txAndChart"/>
-		//1379 <xsd:enumeration value="chartAndTx"/>
-		//1380 <xsd:enumeration value="dgm"/>
-		//1381 <xsd:enumeration value="chart"/>
-		//1382 <xsd:enumeration value="txAndClipArt"/>
-		//1383 <xsd:enumeration value="clipArtAndTx"/>
-		//1384 <xsd:enumeration value="titleOnly"/>
-		//1385 <xsd:enumeration value="blank"/>
-		//1386 <xsd:enumeration value="txAndObj"/>
-		//1387 <xsd:enumeration value="objAndTx"/>
-		//1388 <xsd:enumeration value="objOnly"/>
-		//1389 <xsd:enumeration value="obj"/>
-		//1390 <xsd:enumeration value="txAndMedia"/>
-		//1391 <xsd:enumeration value="mediaAndTx"/>
-		//1392 <xsd:enumeration value="objOverTx"/>
-		//1393 <xsd:enumeration value="txOverObj"/>
-		//1394 <xsd:enumeration value="txAndTwoObj"/>
-		//1395 <xsd:enumeration value="twoObjAndTx"/>
-		//1396 <xsd:enumeration value="twoObjOverTx"/>
-		//1397 <xsd:enumeration value="fourObj"/>
-		//1398 <xsd:enumeration value="vertTx"/>
-		//1399 <xsd:enumeration value="clipArtAndVertTx"/>
-		//1400 <xsd:enumeration value="vertTitleAndTx"/>
-		//1401 <xsd:enumeration value="vertTitleAndTxOverChart"/>
-		//1402 <xsd:enumeration value="twoObj"/>
-		//1403 <xsd:enumeration value="objAndTwoObj"/>
-		//1404 <xsd:enumeration value="twoObjAndObj"/>
-		//1405 <xsd:enumeration value="cust"/>---------------------------------- !!!!!!!!!!!!!
-		//1406 <xsd:enumeration value="secHead"/>
-		//1407 <xsd:enumeration value="twoTxTwoObj"/>
-		//1408 <xsd:enumeration value="objTx"/>
-		//1409 <xsd:enumeration value="picTx"/>
+		//2026 <xsd:enumeration value="tx"/>
+		//2026 <xsd:enumeration value="twoColTx"/>
+		//2026 <xsd:enumeration value="tbl"/>
+		//2026 <xsd:enumeration value="txAndChart"/>
+		//2026 <xsd:enumeration value="chartAndTx"/>
+		//2026 <xsd:enumeration value="dgm"/>
+		//2026 <xsd:enumeration value="chart"/>
+		//2026 <xsd:enumeration value="txAndClipArt"/>
+		//2026 <xsd:enumeration value="clipArtAndTx"/>
+		//2026 <xsd:enumeration value="titleOnly"/>
+		//2026 <xsd:enumeration value="blank"/>
+		//2026 <xsd:enumeration value="txAndObj"/>
+		//2026 <xsd:enumeration value="objAndTx"/>
+		//2026 <xsd:enumeration value="objOnly"/>
+		//2026 <xsd:enumeration value="obj"/>
+		//2026 <xsd:enumeration value="txAndMedia"/>
+		//2026 <xsd:enumeration value="mediaAndTx"/>
+		//2026 <xsd:enumeration value="objOverTx"/>
+		//2026 <xsd:enumeration value="txOverObj"/>
+		//2026 <xsd:enumeration value="txAndTwoObj"/>
+		//2026 <xsd:enumeration value="twoObjAndTx"/>
+		//2026 <xsd:enumeration value="twoObjOverTx"/>
+		//2026 <xsd:enumeration value="fourObj"/>
+		//2026 <xsd:enumeration value="vertTx"/>
+		//2026 <xsd:enumeration value="clipArtAndVertTx"/>
+		//2026 <xsd:enumeration value="vertTitleAndTx"/>
+		//2026 <xsd:enumeration value="vertTitleAndTxOverChart"/>
+		//2026 <xsd:enumeration value="twoObj"/>
+		//2026 <xsd:enumeration value="objAndTwoObj"/>
+		//2026 <xsd:enumeration value="twoObjAndObj"/>
+		//2026 <xsd:enumeration value="cust"/>---------------------------------- !!!!!!!!!!!!!
+		//2026 <xsd:enumeration value="secHead"/>
+		//2026 <xsd:enumeration value="twoTxTwoObj"/>
+		//2026 <xsd:enumeration value="objTx"/>
+		//2026 <xsd:enumeration value="picTx"/>
 
 		return true;
 	}
@@ -595,7 +595,7 @@ namespace cpdoccore {
 
 		{
 			// NOTE: При использовании operator<< потока буст пушит туда лишний пробел перед значением.
-			//		С этим пробелом наш редактор onlyoffice на распознает значение.
+			//		С этим пробелом наш редактор univaultoffice на распознает значение.
 			// Example: 
 			// <p:attrName> ppt_y</p:attrName>
 			// <p:attrName>ppt_y</p:attrName>
@@ -611,12 +611,12 @@ namespace cpdoccore {
 	{
 		create_new_slideNotes();
 
-		current_slide().Rels().add(relationship(notes_.back()->rId(), L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/notesSlide",
+		current_slide().Rels().add(relationship(notes_.back()->rId(), L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/notesSlide",
 			L"../notesSlides/notesSlide" + std::to_wstring(notes_.size()) + L".xml"));
 
 		get_slide_context().start_slide();
 
-		current_notes().Rels().add(relationship(L"nId1", L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide",
+		current_notes().Rels().add(relationship(L"nId1", L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/slide",
 			L"../slides/slide" + std::to_wstring(slides_.size()) + L".xml"));
 
 		return true;
@@ -656,7 +656,7 @@ namespace cpdoccore {
 		for (size_t i = 0; i < notes_.size(); i++)
 		{
 			notes_[i]->Rels().add(relationship(L"nmId1",
-				L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/notesMaster",
+				L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/notesMaster",
 				L"../notesMasters/notesMaster1.xml"));
 		}
 	}

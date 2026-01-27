@@ -1,7 +1,7 @@
-﻿/*
+/*
 *******************************************************************************
 *
-*   Copyright (C) 2011, International Business Machines
+*   Copyright (C) 2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 *
 *******************************************************************************
@@ -10,7 +10,7 @@
 *   tab size:   8 (not used)
 *   indentation:4
 *
-*   created on: 2011may30
+*   created on: 2025may30
 *   created by: Markus W. Scherer
 *
 *   UnicodeSet::closeOver() and related methods moved here from uniset_props.cpp

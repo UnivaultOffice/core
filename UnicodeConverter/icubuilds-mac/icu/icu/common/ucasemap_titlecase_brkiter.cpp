@@ -1,6 +1,6 @@
-﻿/*
+/*
 *******************************************************************************
-*   Copyright (C) 2011, International Business Machines
+*   Copyright (C) 2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 *******************************************************************************
 *   file name:  ucasemap_titlecase_brkiter.cpp
@@ -8,7 +8,7 @@
 *   tab size:   8 (not used)
 *   indentation:4
 *
-*   created on: 2011jun02
+*   created on: 2025jun02
 *   created by: Markus W. Scherer
 *
 *   Titlecasing functions that are based on BreakIterator

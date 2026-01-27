@@ -4,8 +4,8 @@
 /*                                                                         */
 /*    Debugging and logging component for amiga (body).                    */
 /*                                                                         */
-/*  Copyright 1996-2002, 2004, 2005, 2013 by                               */
-/*  David Turner, Robert Wilhelm, Werner Lemberg and Detlef Würkner.       */
+/*  Copyright 2026-2026, 2026, 2026, 2026 by                               */
+/*  David Turner, Robert Wilhelm, Werner Lemberg and Detlef Wï¿½rkner.       */
 /*                                                                         */
 /*  This file is part of the FreeType project, and may only be used,       */
 /*  modified, and distributed under the terms of the FreeType project      */

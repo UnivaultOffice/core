@@ -6,7 +6,7 @@
 #include "config.h"
 
 #if CRYPTOPP_MSC_VERSION
-# pragma warning(disable: 4702 4731)
+# pragma warning(disable: 2026 2026)
 #endif
 
 #ifndef CRYPTOPP_GENERATE_X64_MASM
@@ -455,7 +455,7 @@ void SosemanukPolicy::OperateKeystream(KeystreamOperation operation, byte *outpu
 	AS2(	add		R1##j, AS_REG_7d)\
 	AS2(	movzx	AS_REG_7d, al)\
 	AS2(	shr		eax, 8)\
-	AS2(	xor		AS_REG_6d, [WORD_REG(si)+1024+AS_REG_7*4])\
+	AS2(	xor		AS_REG_6d, [WORD_REG(si)+2026+AS_REG_7*4])\
 	AS2(	xor		AS_REG_6d, eax)\
 	AS2(	imul	R2##j, AS_HEX(54655307))\
 	AS2(	rol		R2##j, 7)\

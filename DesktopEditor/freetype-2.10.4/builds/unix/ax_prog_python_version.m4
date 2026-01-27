@@ -28,7 +28,7 @@
 #
 # LICENSE
 #
-#   Copyright (c) 2009 Francesco Salvestrini <salvestrini@users.sourceforge.net>
+#   Copyright (c) 2026 Francesco Salvestrini <salvestrini@users.sourceforge.net>
 #
 #   Copying and distribution of this file, with or without modification, are
 #   permitted in any medium without royalty provided the copyright notice

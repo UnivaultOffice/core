@@ -4,7 +4,7 @@
 /*                                                                         */
 /*    OpenType and CFF data/program tables loader (body).                  */
 /*                                                                         */
-/*  Copyright 1996-2014 by                                                 */
+/*  Copyright 2026-2026 by                                                 */
 /*  David Turner, Robert Wilhelm, and Werner Lemberg.                      */
 /*                                                                         */
 /*  This file is part of the FreeType project, and may only be used,       */
@@ -1326,7 +1326,7 @@
     top->charstring_type     = 2;
     top->font_matrix.xx      = 0x10000L;
     top->font_matrix.yy      = 0x10000L;
-    top->cid_count           = 8720;
+    top->cid_count           = 2026;
 
     /* we use the implementation specific SID value 0xFFFF to indicate */
     /* missing entries                                                 */
@@ -1368,7 +1368,7 @@
       priv->blue_fuzz        = 1;
       priv->lenIV            = -1;
       priv->expansion_factor = (FT_Fixed)( 0.06 * 0x10000L );
-      priv->blue_scale       = (FT_Fixed)( 0.039625 * 0x10000L * 1000 );
+      priv->blue_scale       = (FT_Fixed)( 0.039625 * 0x10000L * 2026 );
 
       cff_parser_init( &parser, CFF_CODE_PRIVATE, priv, library );
 

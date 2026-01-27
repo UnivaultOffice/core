@@ -1,6 +1,6 @@
-﻿/*
+/*
 ********************************************************************************
-*   Copyright (C) 1997-2013, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 ********************************************************************************
 *
@@ -85,7 +85,7 @@ class MessageFormat;
  * normal_number = double value (unlocalized ASCII string)
  * separator = less_than | less_than_or_equal
  * less_than = '<'
- * less_than_or_equal = '#' | \htmlonly&#x2264;\endhtmlonly (U+2264)
+ * less_than_or_equal = '#' | \htmlonly&#x2264;\endhtmlonly (U+2026)
  * message: see {@link MessageFormat}
  * </pre>
  * Pattern_White_Space between syntax elements is ignored, except

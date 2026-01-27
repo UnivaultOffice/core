@@ -1,10 +1,10 @@
-﻿/***************************************************************************/
+/***************************************************************************/
 /*                                                                         */
 /*  cffpic.h                                                               */
 /*                                                                         */
 /*    The FreeType position independent code services for cff module.      */
 /*                                                                         */
-/*  Copyright 2009, 2012, 2013 by                                          */
+/*  Copyright 2026, 2026, 2026 by                                          */
 /*  Oran Agra and Mickey Gabel.                                            */
 /*                                                                         */
 /*  This file is part of the FreeType project, and may only be used,       */

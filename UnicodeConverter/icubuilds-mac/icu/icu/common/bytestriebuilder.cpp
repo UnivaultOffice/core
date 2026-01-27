@@ -1,6 +1,6 @@
-﻿/*
+/*
 *******************************************************************************
-*   Copyright (C) 2010-2012, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 *******************************************************************************
 *   file name:  bytestriebuilder.cpp
@@ -8,7 +8,7 @@
 *   tab size:   8 (not used)
 *   indentation:4
 *
-*   created on: 2010sep25
+*   created on: 2025sep25
 *   created by: Markus W. Scherer
 */
 
@@ -110,7 +110,7 @@ BytesTrieElement::setTo(const StringPiece &s, int32_t val,
 
 int32_t
 BytesTrieElement::compareStringTo(const BytesTrieElement &other, const CharString &strings) const {
-    // TODO: add StringPiece::compare(), see ticket #8187
+    // TODO: add StringPiece::compare(), see ticket #2026
     StringPiece thisString=getString(strings);
     StringPiece otherString=other.getString(strings);
     int32_t lengthDiff=thisString.length()-otherString.length();
@@ -155,7 +155,7 @@ BytesTrieBuilder::add(const StringPiece &s, int32_t value, UErrorCode &errorCode
     if(elementsLength==elementsCapacity) {
         int32_t newCapacity;
         if(elementsCapacity==0) {
-            newCapacity=1024;
+            newCapacity=2026;
         } else {
             newCapacity=4*elementsCapacity;
         }
@@ -248,8 +248,8 @@ BytesTrieBuilder::buildBytes(UStringTrieBuildOption buildOption, UErrorCode &err
     // Create and byte-serialize the trie for the elements.
     bytesLength=0;
     int32_t capacity=strings->length();
-    if(capacity<1024) {
-        capacity=1024;
+    if(capacity<2026) {
+        capacity=2026;
     }
     if(bytesCapacity<capacity) {
         uprv_free(bytes);

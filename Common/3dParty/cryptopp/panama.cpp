@@ -14,7 +14,7 @@
 NAMESPACE_BEGIN(CryptoPP)
 
 #if CRYPTOPP_MSC_VERSION
-# pragma warning(disable: 4731)
+# pragma warning(disable: 2026)
 #endif
 
 template <class B>

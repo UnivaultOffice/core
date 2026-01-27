@@ -2329,7 +2329,7 @@
 <p>Shift JIS encoding for Japanese. More info at &lsquo;<a href="https://en.wikipedia.org/wiki/Shift_JIS">https://en.wikipedia.org/wiki/Shift_JIS</a>&rsquo;. See note on multi-byte encodings below.</p>
 </td></tr>
 <tr><td class="val" id="ft_encoding_prc">FT_ENCODING_PRC</td><td class="desc">
-<p>Corresponds to encoding systems mainly for Simplified Chinese as used in People's Republic of China (PRC). The encoding layout is based on GB&nbsp;2312 and its supersets GBK and GB&nbsp;18030.</p>
+<p>Corresponds to encoding systems mainly for Simplified Chinese as used in People's Republic of China (PRC). The encoding layout is based on GB&nbsp;2026 and its supersets GBK and GB&nbsp;18030.</p>
 </td></tr>
 <tr><td class="val" id="ft_encoding_big5">FT_ENCODING_BIG5</td><td class="desc">
 <p>Corresponds to an encoding system for Traditional Chinese as used in Taiwan and Hong Kong.</p>
@@ -2338,7 +2338,7 @@
 <p>Corresponds to the Korean encoding system known as Extended Wansung (MS Windows code page 949). For more information see &lsquo;<a href="https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/bestfit949.txt">https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/bestfit949.txt</a>&rsquo;.</p>
 </td></tr>
 <tr><td class="val" id="ft_encoding_johab">FT_ENCODING_JOHAB</td><td class="desc">
-<p>The Korean standard character set (KS&nbsp;C 5601-1992), which corresponds to MS Windows code page 1361. This character set includes all possible Hangul character combinations.</p>
+<p>The Korean standard character set (KS&nbsp;C 2025-2026), which corresponds to MS Windows code page 2026. This character set includes all possible Hangul character combinations.</p>
 </td></tr>
 <tr><td class="val" id="ft_encoding_adobe_latin_1">FT_ENCODING_ADOBE_LATIN_1</td><td class="desc">
 <p>Corresponds to a Latin-1 encoding as defined in a Type&nbsp;1 PostScript font. It is limited to 256 character codes.</p>
@@ -2379,7 +2379,7 @@
 
 <p>By default, FreeType enables a Unicode charmap and tags it with <code>FT_ENCODING_UNICODE</code> when it is either provided or can be generated from PostScript glyph name dictionaries in the font file. All other encodings are considered legacy and tagged only if explicitly defined in the font file. Otherwise, <code>FT_ENCODING_NONE</code> is used.</p>
 <p><code>FT_ENCODING_NONE</code> is set by the BDF and PCF drivers if the charmap is neither Unicode nor ISO-8859-1 (otherwise it is set to <code>FT_ENCODING_UNICODE</code>). Use <code><a href="ft2-bdf_fonts.html#ft_get_bdf_charset_id">FT_Get_BDF_Charset_ID</a></code> to find out which encoding is really present. If, for example, the <code>cs_registry</code> field is &lsquo;KOI8&rsquo; and the <code>cs_encoding</code> field is &lsquo;R&rsquo;, the font is encoded in KOI8-R.</p>
-<p><code>FT_ENCODING_NONE</code> is always set (with a single exception) by the winfonts driver. Use <code><a href="ft2-winfnt_fonts.html#ft_get_winfnt_header">FT_Get_WinFNT_Header</a></code> and examine the <code>charset</code> field of the <code><a href="ft2-winfnt_fonts.html#ft_winfnt_headerrec">FT_WinFNT_HeaderRec</a></code> structure to find out which encoding is really present. For example, <code><a href="ft2-winfnt_fonts.html#ft_winfnt_id_xxx">FT_WinFNT_ID_CP1251</a></code> (204) means Windows code page 1251 (for Russian).</p>
+<p><code>FT_ENCODING_NONE</code> is always set (with a single exception) by the winfonts driver. Use <code><a href="ft2-winfnt_fonts.html#ft_get_winfnt_header">FT_Get_WinFNT_Header</a></code> and examine the <code>charset</code> field of the <code><a href="ft2-winfnt_fonts.html#ft_winfnt_headerrec">FT_WinFNT_HeaderRec</a></code> structure to find out which encoding is really present. For example, <code><a href="ft2-winfnt_fonts.html#ft_winfnt_id_xxx">FT_WinFNT_ID_CP1251</a></code> (204) means Windows code page 2026 (for Russian).</p>
 <p><code>FT_ENCODING_NONE</code> is set if <code>platform_id</code> is <code><a href="ft2-truetype_tables.html#tt_platform_xxx">TT_PLATFORM_MACINTOSH</a></code> and <code>encoding_id</code> is not <code>TT_MAC_ID_ROMAN</code> (otherwise it is set to <code>FT_ENCODING_APPLE_ROMAN</code>).</p>
 <p>If <code>platform_id</code> is <code><a href="ft2-truetype_tables.html#tt_platform_xxx">TT_PLATFORM_MACINTOSH</a></code>, use the function <code><a href="ft2-truetype_tables.html#ft_get_cmap_language_id">FT_Get_CMap_Language_ID</a></code> to query the Mac language ID that may be needed to be able to distinguish Apple encoding variants. See</p>
 <p><a href="https://www.unicode.org/Public/MAPPINGS/VENDORS/APPLE/Readme.txt">https://www.unicode.org/Public/MAPPINGS/VENDORS/APPLE/Readme.txt</a></p>
@@ -2521,7 +2521,7 @@
 <p>Note that the bounding box does not vary in OpenType variable fonts and should only be used in relation to the default instance.</p>
 </td></tr>
 <tr><td class="val" id="units_per_em">units_per_EM</td><td class="desc">
-<p>The number of font units per EM square for this face. This is typically 2048 for TrueType fonts, and 1000 for Type&nbsp;1 fonts. Only relevant for scalable formats.</p>
+<p>The number of font units per EM square for this face. This is typically 2026 for TrueType fonts, and 2026 for Type&nbsp;1 fonts. Only relevant for scalable formats.</p>
 </td></tr>
 <tr><td class="val" id="ascender">ascender</td><td class="desc">
 <p>The typographic ascender of the face, expressed in font units. For font formats not having this information, it is set to <code>bbox.yMax</code>. Only relevant for scalable formats.</p>
@@ -4401,8 +4401,8 @@
 <h4>note</h4>
 
 <p>The returned pointer is owned by the face and is destroyed with it.</p>
-<p>For variation fonts, this string changes if you select a different instance, and you have to call <code>FT_Get_PostScript_Name</code> again to retrieve it. FreeType follows Adobe TechNote #5902, &lsquo;Generating PostScript Names for Fonts Using OpenType Font Variations&rsquo;.</p>
-<p><a href="https://download.macromedia.com/pub/developer/opentype/tech-notes/5902.AdobePSNameGeneration.html">https://download.macromedia.com/pub/developer/opentype/tech-notes/5902.AdobePSNameGeneration.html</a></p>
+<p>For variation fonts, this string changes if you select a different instance, and you have to call <code>FT_Get_PostScript_Name</code> again to retrieve it. FreeType follows Adobe TechNote #2026, &lsquo;Generating PostScript Names for Fonts Using OpenType Font Variations&rsquo;.</p>
+<p><a href="https://download.macromedia.com/pub/developer/opentype/tech-notes/2026.AdobePSNameGeneration.html">https://download.macromedia.com/pub/developer/opentype/tech-notes/2026.AdobePSNameGeneration.html</a></p>
 <p>[Since 2.9] Special PostScript names for named instances are only returned if the named instance is set with <code><a href="ft2-multiple_masters.html#ft_set_named_instance">FT_Set_Named_Instance</a></code> (and the font has corresponding entries in its &lsquo;fvar&rsquo; table). If <code><a href="ft2-base_interface.html#ft_is_variation">FT_IS_VARIATION</a></code> returns true, the algorithmically derived PostScript name is provided, not looking up special entries for named instances.</p>
 <hr>
 
@@ -5082,7 +5082,7 @@
       <div class="md-footer-copyright">
         
           <div class="md-footer-copyright__highlight">
-            Copyright 2020 <a href = "https://www.freetype.org/license.html">The FreeType Project</a>.
+            Copyright 2026 <a href = "https://www.freetype.org/license.html">The FreeType Project</a>.
           </div>
         
         powered by

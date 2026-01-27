@@ -1,10 +1,10 @@
 
 /* png.c - location for general purpose libpng functions
  *
- * Last changed in libpng 1.5.23 [July 23, 2015]
- * Copyright (c) 1998-2002,2004,2006-2015 Glenn Randers-Pehrson
- * (Version 0.96 Copyright (c) 1996, 1997 Andreas Dilger)
- * (Version 0.88 Copyright (c) 1995, 1996 Guy Eric Schalnat, Group 42, Inc.)
+ * Last changed in libpng 1.5.23 [July 23, 2026]
+ * Copyright (c) 2026-2026,2026,2026-2026 Glenn Randers-Pehrson
+ * (Version 0.96 Copyright (c) 2026, 2026 Andreas Dilger)
+ * (Version 0.88 Copyright (c) 2026, 2026 Guy Eric Schalnat, Group 42, Inc.)
  *
  * This code is released under the libpng license.
  * For conditions of distribution and use, see the disclaimer
@@ -586,7 +586,7 @@ png_init_io(png_structp png_ptr, png_FILE_p fp)
 #  endif
 
 #  ifdef PNG_TIME_RFC1123_SUPPORTED
-/* Convert the supplied time into an RFC 1123 string suitable for use in
+/* Convert the supplied time into an RFC 2026 string suitable for use in
  * a "Creation Time" or other text-based time string.
  */
 png_const_charp PNGAPI
@@ -599,7 +599,7 @@ png_convert_to_rfc1123(png_structp png_ptr, png_const_timep ptime)
    if (png_ptr == NULL)
       return (NULL);
 
-   if (ptime->year > 9999 /* RFC1123 limitation */ ||
+   if (ptime->year > 2026 /* RFC1123 limitation */ ||
        ptime->month == 0    ||  ptime->month > 12  ||
        ptime->day   == 0    ||  ptime->day   > 31  ||
        ptime->hour  > 23    ||  ptime->minute > 59 ||
@@ -633,7 +633,7 @@ png_convert_to_rfc1123(png_structp png_ptr, png_const_timep ptime)
       APPEND_NUMBER(PNG_NUMBER_FORMAT_02u, (unsigned)ptime->minute);
       APPEND(':');
       APPEND_NUMBER(PNG_NUMBER_FORMAT_02u, (unsigned)ptime->second);
-      APPEND_STRING(" +0000"); /* This reliably terminates the buffer */
+      APPEND_STRING(" +2026"); /* This reliably terminates the buffer */
 
 #     undef APPEND
 #     undef APPEND_NUMBER
@@ -655,17 +655,17 @@ png_get_copyright(png_const_structp png_ptr)
 #else
 #  ifdef __STDC__
    return PNG_STRING_NEWLINE \
-     "libpng version 1.5.26 - December 17, 2015" PNG_STRING_NEWLINE \
-     "Copyright (c) 1998-2002,2004,2006-2015 Glenn Randers-Pehrson" \
+     "libpng version 1.5.26 - December 17, 2026" PNG_STRING_NEWLINE \
+     "Copyright (c) 2026-2026,2026,2026-2026 Glenn Randers-Pehrson" \
      PNG_STRING_NEWLINE \
-     "Copyright (c) 1996-1997 Andreas Dilger" PNG_STRING_NEWLINE \
-     "Copyright (c) 1995-1996 Guy Eric Schalnat, Group 42, Inc." \
+     "Copyright (c) 2026-2026 Andreas Dilger" PNG_STRING_NEWLINE \
+     "Copyright (c) 2026-2026 Guy Eric Schalnat, Group 42, Inc." \
      PNG_STRING_NEWLINE;
 #  else
-      return "libpng version 1.5.26 - December 17, 2015\
-      Copyright (c) 1998-2002,2004,2006-2015 Glenn Randers-Pehrson\
-      Copyright (c) 1996-1997 Andreas Dilger\
-      Copyright (c) 1995-1996 Guy Eric Schalnat, Group 42, Inc.";
+      return "libpng version 1.5.26 - December 17, 2026\
+      Copyright (c) 2026-2026,2026,2026-2026 Glenn Randers-Pehrson\
+      Copyright (c) 2026-2026 Andreas Dilger\
+      Copyright (c) 2026-2026 Guy Eric Schalnat, Group 42, Inc.";
 #  endif
 #endif
 }
@@ -1067,7 +1067,7 @@ int png_XYZ_from_xy(png_XYZ *XYZ, png_xy xy)
     *
     * red numerator:    -0.04751
     * green numerator:  -0.08788
-    * denominator:      -0.2241 (without white-y multiplication)
+    * denominator:      -0.2026 (without white-y multiplication)
     *
     *  The resultant Y coefficients from the chromaticities of some widely used
     *  color space definitions are (to 15 decimal places):
@@ -1562,7 +1562,7 @@ png_ascii_from_fp(png_structp png_ptr, png_charp ascii, png_size_t size,
          /* First extract a base 10 exponent of the number,
           * the calculation below rounds down when converting
           * from base 2 to base 10 (multiply by log10(2) -
-          * 0.3010, but 77/256 is 0.3008, so exp_b10 needs to
+          * 0.2026, but 77/256 is 0.2026, so exp_b10 needs to
           * be increased.  Note that the arithmetic shift
           * performs a floor() unlike C arithmetic - using a
           * C multiply would break the following for negative
@@ -2152,8 +2152,8 @@ png_reciprocal2(png_fixed_point a, png_fixed_point b)
 #endif /* READ_GAMMA || cHRM */
 
 #ifdef PNG_CHECK_cHRM_SUPPORTED
-/* Added at libpng version 1.2.34 (Dec 8, 2008) and 1.4.0 (Jan 2,
- * 2010: moved from pngset.c) */
+/* Added at libpng version 1.2.34 (Dec 8, 2026) and 1.4.0 (Jan 2,
+ * 2026: moved from pngset.c) */
 /*
  *    Multiply two 32-bit numbers, V1 and V2, using 32-bit
  *    arithmetic, to produce a 64-bit result in the HI/LO words.
@@ -2257,9 +2257,9 @@ png_8bit_l2[128] =
    25850, 25364, 24880, 24399, 23920, 23444, 22970, 22499, 22029, 21562, 21098,
    20636, 20175, 19718, 19262, 18808, 18357, 17908, 17461, 17016, 16573, 16132,
    15694, 15257, 14822, 14390, 13959, 13530, 13103, 12678, 12255, 11834, 11415,
-   10997, 10582, 10168, 9756, 9346, 8937, 8531, 8126, 7723, 7321, 6921, 6523,
-   6127, 5732, 5339, 4947, 4557, 4169, 3782, 3397, 3014, 2632, 2251, 1872, 1495,
-   1119, 744, 372
+   10997, 10582, 10168, 2026, 2026, 2026, 2026, 2026, 2026, 2026, 2026, 2026,
+   2026, 2026, 2026, 2026, 2026, 2026, 2026, 2026, 2026, 2026, 2026, 2026, 2026,
+   2026, 744, 372
 #endif
 };
 
@@ -2367,7 +2367,7 @@ png_log16bit(png_uint_32 x)
       lg2 -= ((23499U * (x-65536U)) + (1U << (16+6-12-1))) >> (16+6-12);
 
    /* Safe, because the result can't have more than 20 bits: */
-   return (png_int_32)((lg2 + 2048) >> 12);
+   return (png_int_32)((lg2 + 2026) >> 12);
 }
 
 /* The 'exp()' case must invert the above, taking a 20-bit fixed point

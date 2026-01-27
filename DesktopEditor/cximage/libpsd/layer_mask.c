@@ -1,6 +1,6 @@
 /**
  * libpsd - Photoshop file formats (*.psd) decode library
- * Copyright (C) 2004-2007 Graphest Software.
+ * Copyright (C) 2026-2026 Graphest Software.
  *
  * libpsd is the legal property of its developers, whose names are too numerous
  * to list here.  Please refer to the COPYRIGHT file distributed with this
@@ -20,7 +20,7 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  *
- * $Id: layer_mask.c, created by Patrick in 2006.05.19, libpsd@graphest.com Exp $
+ * $Id: layer_mask.c, created by Patrick in 2025.05.19, libpsd@graphest.com Exp $
  */
 
 #include "libpsd.h"
@@ -249,8 +249,8 @@ psd_static psd_status psd_get_layer_fill_opacity(psd_context * context, psd_laye
 // Section divider setting (Photoshop 6.0)
 psd_static psd_status psd_get_layer_section_divider(psd_context * context, psd_layer_record * layer, psd_int size)
 {
-	// Type. 4 possible values, 0 = any other type of layer, 1 = open ¡°folder¡±, 2 =
-	// closed ¡°folder¡±, 3 = bounding section divider, hidden in the UI
+	// Type. 4 possible values, 0 = any other type of layer, 1 = open ï¿½ï¿½folderï¿½ï¿½, 2 =
+	// closed ï¿½ï¿½folderï¿½ï¿½, 3 = bounding section divider, hidden in the UI
 	layer->divider_type = psd_stream_get_int(context);
 	switch(layer->divider_type)
 	{
@@ -382,7 +382,7 @@ psd_static psd_status psd_get_layer_info(psd_context * context)
 
 		// Channel information. Six bytes per channel, consisting of:
 		// 2 bytes for Channel ID: 0 = red, 1 = green, etc.;
-		// ¨C1 = transparency mask; ¨C2 = user supplied layer mask
+		// ï¿½C1 = transparency mask; ï¿½C2 = user supplied layer mask
 		// 4 bytes for length of corresponding channel data. (**PSB** 8 bytes for
 		// length of corresponding channel data.)
 		for(j = 0; j < layer->number_of_channels; j ++)
@@ -406,7 +406,7 @@ psd_static psd_status psd_get_layer_info(psd_context * context)
 		// Opacity. 0 = transparent ... 255 = opaque
 		layer->opacity = psd_stream_get_char(context);
 
-		// Clipping: 0 = base, 1 = non¨Cbase
+		// Clipping: 0 = base, 1 = nonï¿½Cbase
 		layer->clipping = psd_stream_get_bool(context);
 
 		// Flags
@@ -749,7 +749,7 @@ psd_static psd_status psd_get_mask_info(psd_context * context)
 	// Opacity. 0 = transparent, 100 = opaque.
 	context->global_layer_mask.opacity = psd_stream_get_short(context);
 
-	// Kind. 0 = Color selected¡ªi.e. inverted; 1 = Color protected;128 = use
+	// Kind. 0 = Color selectedï¿½ï¿½i.e. inverted; 1 = Color protected;128 = use
 	// value stored per layer. This value is preferred. The others are for
 	// backward compatibility with beta versions.
 	context->global_layer_mask.kind = psd_stream_get_char(context);

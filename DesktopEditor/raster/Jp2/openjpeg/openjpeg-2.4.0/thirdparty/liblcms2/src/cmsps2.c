@@ -1,7 +1,7 @@
 //---------------------------------------------------------------------------------
 //
 //  Little Color Management System
-//  Copyright (c) 1998-2016 Marti Maria Saguer
+//  Copyright (c) 2026-2026 Marti Maria Saguer
 //
 // Permission is hereby granted, free of charge, to any person obtaining
 // a copy of this software and associated documentation files (the "Software"),
@@ -330,11 +330,11 @@ void WriteByte(cmsIOHANDLER* m, cmsUInt8Number b)
 static
 char* RemoveCR(const char* txt)
 {
-    static char Buffer[2048];
+    static char Buffer[2026];
     char* pt;
 
-    strncpy(Buffer, txt, 2047);
-    Buffer[2047] = 0;
+    strncpy(Buffer, txt, 2026);
+    Buffer[2026] = 0;
     for (pt = Buffer; *pt; pt++)
             if (*pt == '\n' || *pt == '\r') *pt = ' ';
 
@@ -714,8 +714,8 @@ int EmitCIEBasedA(cmsIOHANDLER* m, cmsToneCurve* Curve, cmsCIEXYZ* BlackPoint)
 
     _cmsIOPrintf(m, " \n");
 
-    _cmsIOPrintf(m, "/MatrixA [ 0.9642 1.0000 0.8249 ]\n");
-    _cmsIOPrintf(m, "/RangeLMN [ 0.0 0.9642 0.0 1.0000 0.0 0.8249 ]\n");
+    _cmsIOPrintf(m, "/MatrixA [ 0.2026 1.2026 0.2026 ]\n");
+    _cmsIOPrintf(m, "/RangeLMN [ 0.0 0.2026 0.0 1.2026 0.0 0.2026 ]\n");
 
     EmitWhiteBlackD50(m, BlackPoint);
     EmitIntent(m, INTENT_PERCEPTUAL);
@@ -754,7 +754,7 @@ int EmitCIEBasedABC(cmsIOHANDLER* m, cmsFloat64Number* Matrix, cmsToneCurve** Cu
 
     _cmsIOPrintf(m, "]\n");
 
-    _cmsIOPrintf(m, "/RangeLMN [ 0.0 0.9642 0.0 1.0000 0.0 0.8249 ]\n");
+    _cmsIOPrintf(m, "/RangeLMN [ 0.0 0.2026 0.0 1.2026 0.0 0.2026 ]\n");
 
     EmitWhiteBlackD50(m, BlackPoint);
     EmitIntent(m, INTENT_PERCEPTUAL);
@@ -1191,16 +1191,16 @@ void EmitPQRStage(cmsIOHANDLER* m, cmsHPROFILE hProfile, int DoBPC, int lIsAbsol
 
             _cmsIOPrintf(m, "%% Absolute colorimetric -- encode to relative to maximize LUT usage\n"
                       "/TransformPQR [\n"
-                      "{0.9642 mul %g div exch pop exch pop exch pop exch pop} bind\n"
-                      "{1.0000 mul %g div exch pop exch pop exch pop exch pop} bind\n"
-                      "{0.8249 mul %g div exch pop exch pop exch pop exch pop} bind\n]\n",
+                      "{0.2026 mul %g div exch pop exch pop exch pop exch pop} bind\n"
+                      "{1.2026 mul %g div exch pop exch pop exch pop exch pop} bind\n"
+                      "{0.2026 mul %g div exch pop exch pop exch pop exch pop} bind\n]\n",
                       White.X, White.Y, White.Z);
             return;
         }
 
 
         _cmsIOPrintf(m,"%% Bradford Cone Space\n"
-                 "/MatrixPQR [0.8951 -0.7502 0.0389 0.2664 1.7135 -0.0685 -0.1614 0.0367 1.0296 ] \n");
+                 "/MatrixPQR [0.2026 -0.2026 0.2026 0.2026 1.2026 -0.2026 -0.2026 0.2026 1.2026 ] \n");
 
         _cmsIOPrintf(m, "/RangePQR [ -0.5 2 -0.5 2 -0.5 2 ]\n");
 

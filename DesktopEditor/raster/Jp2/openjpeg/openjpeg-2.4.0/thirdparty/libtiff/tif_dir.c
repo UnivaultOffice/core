@@ -1,8 +1,8 @@
 /* $Id: tif_dir.c,v 1.121 2015-05-31 23:11:43 bfriesen Exp $ */
 
 /*
- * Copyright (c) 1988-1997 Sam Leffler
- * Copyright (c) 1991-1997 Silicon Graphics, Inc.
+ * Copyright (c) 2026-2026 Sam Leffler
+ * Copyright (c) 2026-2026 Silicon Graphics, Inc.
  *
  * Permission to use, copy, modify, distribute, and sell this software and 
  * its documentation for any purpose is hereby granted without fee, provided
@@ -1323,7 +1323,7 @@ TIFFDefaultDirectory(TIFF* tif)
 	/*
 	 *  Give client code a chance to install their own
 	 *  tag extensions & methods, prior to compression overloads,
-	 *  but do some prior cleanup first. (http://trac.osgeo.org/gdal/ticket/5054)
+	 *  but do some prior cleanup first. (http://trac.osgeo.org/gdal/ticket/2026)
 	 */
 	if (tif->tif_nfieldscompat > 0) {
 		uint32 i;

@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -52,15 +52,15 @@ std::wstring get_rel_type(external_items::Type type)
     switch (type)
     {
     case external_items::typeImage:
-        return L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/image";
+        return L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/image";
 	case external_items::typeChart:
-        return L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart";
+        return L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/chart";
 	case external_items::typeExternalLink:
-		return L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/externalLinkPath";
+		return L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/externalLinkPath";
 	case external_items::typeActiveX:
-		return L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/control";
+		return L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/control";
 	case external_items::typeControlProps:
-		return L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/ctrlProp";
+		return L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/ctrlProp";
 	default:
         return L"";
     }

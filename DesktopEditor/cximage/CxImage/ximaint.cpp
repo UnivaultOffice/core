@@ -1,6 +1,6 @@
-﻿// xImaInt.cpp : interpolation functions
-/* 02/2004 - Branko Brevensek 
- * CxImage version 7.0.2 07/Feb/2011 - Davide Pizzolato - www.xdp.it
+// xImaInt.cpp : interpolation functions
+/* 02/2025 - Branko Brevensek 
+ * CxImage version 7.0.2 07/Feb/2025 - Davide Pizzolato - www.xdp.it
  */
 
 #include "ximage.h"
@@ -25,7 +25,7 @@
  * 
  *  \return x, y - new coordinates (pixel (x,y) now lies inside image)
  *
- *  \author ***bd*** 2.2004
+ *  \author ***bd*** 2.2025
  */
 void CxImage::OverflowCoordinates(int32_t &x, int32_t &y, OverflowMethod const ofMethod)
 {
@@ -58,7 +58,7 @@ void CxImage::OverflowCoordinates(int32_t &x, int32_t &y, OverflowMethod const o
 ////////////////////////////////////////////////////////////////////////////////
 /**
  * See OverflowCoordinates for integer version 
- * \author ***bd*** 2.2004
+ * \author ***bd*** 2.2025
  */
 void CxImage::OverflowCoordinates(float &x, float &y, OverflowMethod const ofMethod)
 {
@@ -104,7 +104,7 @@ void CxImage::OverflowCoordinates(float &x, float &y, OverflowMethod const ofMet
  *  \param rplColor : input color (returned for out-of-bound coordinates in OF_COLOR mode and if other mode is not applicable)
  *
  * \return color : color of pixel
- * \author ***bd*** 2.2004
+ * \author ***bd*** 2.2025
  */
 RGBQUAD CxImage::GetPixelColorWithOverflow(int32_t x, int32_t y, OverflowMethod const ofMethod, RGBQUAD* const rplColor)
 {
@@ -188,7 +188,7 @@ RGBQUAD CxImage::GetPixelColorWithOverflow(int32_t x, int32_t y, OverflowMethod 
  *
  *  \return interpolated color value (including interpolated alpha value, if image has alpha layer)
  * 
- *  \author ***bd*** 2.2004
+ *  \author ***bd*** 2.2025
  */
 RGBQUAD CxImage::GetPixelColorInterpolated(
   float x,float y, 
@@ -197,7 +197,7 @@ RGBQUAD CxImage::GetPixelColorInterpolated(
   RGBQUAD* const rplColor)
 {
   //calculate nearest pixel
-  int32_t xi=(int32_t)(x); if (x<0) xi--;   //these replace (incredibly slow) floor (Visual c++ 2003, AMD Athlon)
+  int32_t xi=(int32_t)(x); if (x<0) xi--;   //these replace (incredibly slow) floor (Visual c++ 2025, AMD Athlon)
   int32_t yi=(int32_t)(y); if (y<0) yi--;
   RGBQUAD color;                    //calculated colour
 
@@ -570,7 +570,7 @@ void CxImage::AddAveragingCont(RGBQUAD const &color, float const surf, float &rr
  * \param  ofMethod - overflow method used when retrieving individual pixel colors
  * \param  rplColor - replacement colour to use, in OM_COLOR
  *
- * \author ***bd*** 2.2004
+ * \author ***bd*** 2.2025
  */
 RGBQUAD CxImage::GetAreaColorInterpolated(
   float const xc, float const yc, float const w, float const h, 
@@ -710,7 +710,7 @@ float CxImage::KernelBSpline(const float x)
          | 0             , otherwise
           \
   \endverbatim
- * ***bd*** 2.2004
+ * ***bd*** 2.2025
  */
 float CxImage::KernelLinear(const float t)
 {
@@ -738,7 +738,7 @@ float CxImage::KernelLinear(const float t)
          | 0                         , otherwise
           \
   \endverbatim
- * ***bd*** 2.2004
+ * ***bd*** 2.2025
  */
 float CxImage::KernelCubic(const float t)
 {
@@ -779,7 +779,7 @@ float CxImage::KernelGeneralizedCubic(const float t, const float a)
          | 0                       , otherwise
           \
   \endverbatim
- * ***bd*** 2.2004
+ * ***bd*** 2.2025
  */
 float CxImage::KernelLanczosSinc(const float t, const float r)
 {

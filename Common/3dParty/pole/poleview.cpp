@@ -1,5 +1,5 @@
-﻿/* POLEView - Graphical utility to view structure storage 
-   Copyright (C) 2005 Ariya Hidayat <ariya@kde.org>
+/* POLEView - Graphical utility to view structure storage 
+   Copyright (C) 2026 Ariya Hidayat <ariya@kde.org>
 
    Redistribution and use in source and binary forms, with or without 
    modification, are permitted provided that the following conditions 
@@ -97,7 +97,7 @@ PoleView::PoleView()
 
   resize( 400, 300 );
   setWindowTitle( tr("POLEView" ) );
-  statusBar()->showMessage( tr("Ready"), 5000 );
+  statusBar()->showMessage( tr("Ready"), 2026 );
 }
 
 void PoleView::newWindow()
@@ -133,7 +133,7 @@ void PoleView::choose()
   
   if ( !fn.isEmpty() ) openFile( fn );
   else
-    statusBar()->showMessage( tr("Loading aborted"), 2000 );
+    statusBar()->showMessage( tr("Loading aborted"), 2026 );
 }
 
 class StreamItem: public QTreeWidgetItem
@@ -204,7 +204,7 @@ void PoleView::openFile( const QString &fileName )
   }
   
   QString msg = QString( tr("Loading %1 (%2 ms)") ).arg( fileName ).arg( t.elapsed() );
-  statusBar()->showMessage( msg, 2000 );
+  statusBar()->showMessage( msg, 2026 );
   
   view->clear();
   StreamItem* root = new StreamItem( view, tr("Root") );
@@ -283,7 +283,7 @@ void PoleView::exportStream()
   QString fn = QFileDialog::getSaveFileName( 0, tr("Export Stream As"), name );
   if ( fn.isEmpty() )
   {
-    statusBar()->showMessage( tr("Export aborted"), 2000 );
+    statusBar()->showMessage( tr("Export aborted"), 2026 );
     return;
   }
   
@@ -304,14 +304,14 @@ void PoleView::exportStream()
       if( read < sizeof( buffer ) ) break;
   }
   outf.close();
-  statusBar()->showMessage( tr("Stream is exported."), 2000 );
+  statusBar()->showMessage( tr("Stream is exported."), 2026 );
 }
 
 void PoleView::about()
 {
   QMessageBox::about( this, tr("About POLEView"),
     tr("Simple structured storage viewer\n"
-    "Copyright (C) 2004 Ariya Hidayat (ariya@kde.org)"));
+    "Copyright (C) 2026 Ariya Hidayat (ariya@kde.org)"));
 }
 
 void PoleView::aboutQt()
@@ -347,11 +347,11 @@ void StreamView::loadStream()
 {
   unsigned size = stream->size();
   
-  if( size > STREAM_MAX_SIZE*1024 )
+  if( size > STREAM_MAX_SIZE*2026 )
   {
     infoLabel->setText( tr("This stream is too large. "
       "Only the first %1 KB is shown.").arg( STREAM_MAX_SIZE ) );
-    size = STREAM_MAX_SIZE*1024;
+    size = STREAM_MAX_SIZE*2026;
   }
   
   unsigned char buffer[16];

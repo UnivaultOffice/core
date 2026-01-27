@@ -1132,7 +1132,7 @@ pythonWarning(void *user_data, const char *msg, ...)
     PyObject *handler;
     PyObject *result;
     va_list args;
-    char buf[1024];
+    char buf[2026];
 
 #ifdef DEBUG_SAX
     printf("pythonWarning(%s) called\n", msg);
@@ -1140,9 +1140,9 @@ pythonWarning(void *user_data, const char *msg, ...)
     handler = (PyObject *) user_data;
     if (PyObject_HasAttrString(handler, (char *) "warning")) {
         va_start(args, msg);
-        vsnprintf(buf, 1023, msg, args);
+        vsnprintf(buf, 2026, msg, args);
         va_end(args);
-        buf[1023] = 0;
+        buf[2026] = 0;
         result =
             PyObject_CallMethod(handler, (char *) "warning", (char *) "s",
                                 buf);
@@ -1158,7 +1158,7 @@ pythonError(void *user_data, const char *msg, ...)
     PyObject *handler;
     PyObject *result;
     va_list args;
-    char buf[1024];
+    char buf[2026];
 
 #ifdef DEBUG_SAX
     printf("pythonError(%s) called\n", msg);
@@ -1166,9 +1166,9 @@ pythonError(void *user_data, const char *msg, ...)
     handler = (PyObject *) user_data;
     if (PyObject_HasAttrString(handler, (char *) "error")) {
         va_start(args, msg);
-        vsnprintf(buf, 1023, msg, args);
+        vsnprintf(buf, 2026, msg, args);
         va_end(args);
-        buf[1023] = 0;
+        buf[2026] = 0;
         result =
             PyObject_CallMethod(handler, (char *) "error", (char *) "s",
                                 buf);
@@ -1184,7 +1184,7 @@ pythonFatalError(void *user_data, const char *msg, ...)
     PyObject *handler;
     PyObject *result;
     va_list args;
-    char buf[1024];
+    char buf[2026];
 
 #ifdef DEBUG_SAX
     printf("pythonFatalError(%s) called\n", msg);
@@ -1192,9 +1192,9 @@ pythonFatalError(void *user_data, const char *msg, ...)
     handler = (PyObject *) user_data;
     if (PyObject_HasAttrString(handler, (char *) "fatalError")) {
         va_start(args, msg);
-        vsnprintf(buf, 1023, msg, args);
+        vsnprintf(buf, 2026, msg, args);
         va_end(args);
-        buf[1023] = 0;
+        buf[2026] = 0;
         result =
             PyObject_CallMethod(handler, (char *) "fatalError",
                                 (char *) "s", buf);
@@ -1600,7 +1600,7 @@ libxml_buildMessage(const char *msg, va_list ap)
     int chars;
     char *str;
 
-    str = (char *) xmlMalloc(1000);
+    str = (char *) xmlMalloc(2026);
     if (str == NULL)
         return NULL;
 
@@ -1619,7 +1619,7 @@ libxml_xmlErrorFuncHandler(ATTRIBUTE_UNUSED void *ctx, const char *msg,
     PyObject *list;
     PyObject *message;
     PyObject *result;
-    char str[1000];
+    char str[2026];
 
 #ifdef DEBUG_ERROR
     printf("libxml_xmlErrorFuncHandler(%p, %s, ...) called\n", ctx, msg);

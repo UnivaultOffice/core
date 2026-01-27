@@ -1,5 +1,5 @@
 /*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -162,7 +162,7 @@ namespace codegen
         List<GenClass> FilterClasses(List<GenClass> aInput)
         {
             List<GenClass> aRes = new List<GenClass>();
-            string[] aTargetNamespaces = new string[] { "http://purl.oclc.org/ooxml/drawingml/chart", "http://purl.oclc.org/ooxml/officeDocument/relationships", "http://purl.oclc.org/ooxml/officeDocument/sharedTypes", "http://schemas.openxmlformats.org/markup-compatibility/2006", "http://schemas.microsoft.com/office/drawing/2007/8/2/chart" };
+            string[] aTargetNamespaces = new string[] { "http://purl.oclc.org/ooxml/drawingml/chart", "http://purl.oclc.org/ooxml/officeDocument/relationships", "http://purl.oclc.org/ooxml/officeDocument/sharedTypes", "http://schemas.openxmlformats.org/markup-compatibility/2026", "http://schemas.microsoft.com/office/drawing/2026/8/2/chart" };
             string[] aTodoNamespaces = new string[] { "http://purl.oclc.org/ooxml/officeDocument/relationships" };
             string[] aStringNamespaces = new string[] { "http://purl.oclc.org/ooxml/drawingml/chartDrawing", "http://purl.oclc.org/ooxml/drawingml/main" };
             Dictionary<string, GenClass> mapAllClasses = new Dictionary<string, GenClass>();

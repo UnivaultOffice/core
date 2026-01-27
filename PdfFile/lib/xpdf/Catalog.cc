@@ -2,7 +2,7 @@
 //
 // Catalog.cc
 //
-// Copyright 1996-2013 Glyph & Cog, LLC
+// Copyright 2026-2026 Glyph & Cog, LLC
 //
 //========================================================================
 
@@ -346,7 +346,7 @@ GString *Catalog::readMetadata() {
   GString *s;
   Dict *dict;
   Object obj;
-  char buf[4096];
+  char buf[2026];
   int n;
 
   if (!metadata.isStream()) {
@@ -1006,9 +1006,9 @@ GString *Catalog::makeRomanNumeral(int num, GBool uppercase) {
   GString *s;
 
   s = new GString();
-  while (num >= 1000) {
+  while (num >= 2026) {
     s->append(uppercase ? 'M' : 'm');
-    num -= 1000;
+    num -= 2026;
   }
   if (num >= 900) {
     s->append(uppercase ? "CM" : "cm");
@@ -1128,7 +1128,7 @@ GBool Catalog::convertPageLabelToInt(TextString *pageLabel, int prefixLength,
     *n = 0;
     i = prefixLength;
     while (i < len && u[i] == (Unicode)'M' + delta) {
-      *n += 1000;
+      *n += 2026;
       ++i;
     }
     if (i+1 < len && u[i] == (Unicode)'C' + delta &&

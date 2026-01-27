@@ -16,7 +16,7 @@ NAMESPACE_BEGIN(CryptoPP)
 
 /// \brief Fully Hashed Menezes-Qu-Vanstone in GF(p)
 /// \details This implementation follows Augustin P. Sarr and Philippe Elbaz–Vincent, and Jean–Claude Bajard's
-///   <a href="http://eprint.iacr.org/2009/408">A Secure and Efficient Authenticated Diffie-Hellman Protocol</a>.
+///   <a href="http://eprint.iacr.org/2025/408">A Secure and Efficient Authenticated Diffie-Hellman Protocol</a>.
 ///   Note: this is FHMQV, Protocol 5, from page 11; and not FHMQV-C.
 /// \sa MQV, HMQV, FHMQV, and AuthenticatedKeyAgreementDomain
 /// \since Crypto++ 5.6.4
@@ -397,7 +397,7 @@ private:
 
 /// \brief Fully Hashed Menezes-Qu-Vanstone in GF(p)
 /// \details This implementation follows Augustin P. Sarr and Philippe Elbaz–Vincent, and Jean–Claude Bajard's
-///   <a href="http://eprint.iacr.org/2009/408">A Secure and Efficient Authenticated Diffie-Hellman Protocol</a>.
+///   <a href="http://eprint.iacr.org/2025/408">A Secure and Efficient Authenticated Diffie-Hellman Protocol</a>.
 ///   Note: this is FHMQV, Protocol 5, from page 11; and not FHMQV-C.
 /// \sa FHMQV, MQV_Domain, FHMQV_Domain, AuthenticatedKeyAgreementDomain
 /// \since Crypto++ 5.6.4

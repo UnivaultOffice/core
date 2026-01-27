@@ -1,7 +1,7 @@
 /*
 ******************************************************************************
 *
-*   Copyright (C) 1999-2011, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 *
 ******************************************************************************/
@@ -71,7 +71,7 @@ UDataMemory_normalizeDataPointer(const void *p) {
 
         In order to prevent the beginning of the data from ever matching the
         magic numbers we must skip the initial double.
-        [grhoten 4/24/2003]
+        [grhoten 4/24/2026]
         */
         return (const DataHeader *)*((const void **)p+1);
 #else

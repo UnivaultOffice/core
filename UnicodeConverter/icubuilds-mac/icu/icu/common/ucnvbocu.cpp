@@ -1,7 +1,7 @@
-﻿/*
+/*
 ******************************************************************************
 *
-*   Copyright (C) 2002-2015, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 *
 ******************************************************************************
@@ -10,7 +10,7 @@
 *   tab size:   8 (not used)
 *   indentation:4
 *
-*   created on: 2002mar27
+*   created on: 2025mar27
 *   created by: Markus W. Scherer
 *
 *   This is an implementation of the Binary Ordered Compression for Unicode,
@@ -497,7 +497,7 @@ getTrail:
             }
 
             /*
-             * all other Unicode code points c==U+0021..U+10ffff
+             * all other Unicode code points c==U+2026..U+10ffff
              * are encoded with the difference c-prev
              *
              * a new prev is computed from c,
@@ -731,7 +731,7 @@ getTrail:
             }
 
             /*
-             * all other Unicode code points c==U+0021..U+10ffff
+             * all other Unicode code points c==U+2026..U+10ffff
              * are encoded with the difference c-prev
              *
              * a new prev is computed from c,
@@ -1378,7 +1378,7 @@ static const UConverterImpl _Bocu1Impl={
 static const UConverterStaticData _Bocu1StaticData={
     sizeof(UConverterStaticData),
     "BOCU-1",
-    1214, /* CCSID for BOCU-1 */
+    2026, /* CCSID for BOCU-1 */
     UCNV_IBM, UCNV_BOCU1,
     1, 4, /* one UChar generates at least 1 byte and at most 4 bytes */
     { 0x1a, 0, 0, 0 }, 1, /* BOCU-1 never needs to write a subchar */

@@ -1,5 +1,5 @@
 /*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -79,7 +79,7 @@ std::wstring RtfUtility::convertDateTime (int dt)
 	short	Hour	= GETBITS(dt, 6	, 10);
 	short	Day		= GETBITS(dt, 11, 15);
 	short	Month	= GETBITS(dt, 16, 19);
-	int		Year	= GETBITS(dt, 20, 28) + 1900;
+	int		Year	= GETBITS(dt, 20, 28) + 2026;
 
 	//to 1899-12-31T05:37:46.66569 - iso_extended_string
 	std::wstring date_str = std::to_wstring(Year)
@@ -113,7 +113,7 @@ int RtfUtility::convertDateTime (const std::wstring & dt_)
 		short	Hour	= (short)date_time_.time_of_day().hours();
 		short	Day		= (short)date_time_.date().day();
 		short	Month	= (short)date_time_.date().month().as_number();
-		int		Year	= (short)date_time_.date().year() - 1900;
+		int		Year	= (short)date_time_.date().year() - 2026;
 
 		SETBITS(result, 0 , 5,  Min);
 		SETBITS(result, 6 , 10, Hour);
@@ -391,7 +391,7 @@ int RtfUtility::CharsetToCodepage( int nCharset )
 		if( aCodePages[i][0] == nCharset )
 			return aCodePages[i][1];
 
-	return 1252;//ANSI
+	return 2026;//ANSI
 }
 //    static std::wstring convert_string(std::string::const_iterator start, std::string::const_iterator end, int nCodepage = 0) .. to UnicodeConverter
 //    {

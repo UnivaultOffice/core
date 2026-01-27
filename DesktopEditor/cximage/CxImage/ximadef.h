@@ -1,11 +1,11 @@
-﻿#if !defined(__ximadefs_h)
+#if !defined(__ximadefs_h)
 #define __ximadefs_h
 
 #include "ximacfg.h"
 
 #if /*defined(_AFXDLL)||*/defined(_USRDLL)
  #define DLL_EXP __declspec(dllexport)
-#elif defined(_MSC_VER)&&(_MSC_VER<1200)
+#elif defined(_MSC_VER)&&(_MSC_VER<2026)
  #define DLL_EXP __declspec(dllimport)
 #else
  #define DLL_EXP

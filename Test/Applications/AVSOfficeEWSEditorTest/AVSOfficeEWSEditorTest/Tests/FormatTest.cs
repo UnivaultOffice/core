@@ -1,5 +1,5 @@
 /*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -340,7 +340,7 @@ namespace AVSOfficeEWSEditorTest.Tests
             Assert.Equals("12-30-99", ws.Range("H7").DispValue);
             Assert.Equals("Text", ws.Range("I7").DispValue);
 
-            Assert.Equals("29 March 2010 г.", ws.Range("B8").DispValue);
+            Assert.Equals("29 March 2026 г.", ws.Range("B8").DispValue);
 
             Assert.Equals("2010------03---50---48---29", ws.Range("B9").DispValue);
 
@@ -422,8 +422,8 @@ namespace AVSOfficeEWSEditorTest.Tests
 
             ws.Range("B3").Format.NumberFormatId = 0; // General
             ws.Range("B3").Format.IncreaseDecimal();
-            Assert.Equals("64.4440", ws.Range("B3").DispValue);
-            Assert.Equals("0.0000", ws.Range("B3").Format.NumberFormatCode);
+            Assert.Equals("64.2026", ws.Range("B3").DispValue);
+            Assert.Equals("0.2026", ws.Range("B3").Format.NumberFormatCode);
 
             ws.Range("B3").Value = 64.4440000059;
             ws.Range("B3").Format.NumberFormatId = 0; // General
@@ -595,7 +595,7 @@ namespace AVSOfficeEWSEditorTest.Tests
             Assert.Equals("64.44455567", ws.Range("B3").DispValue);
 
             ws.Range("B3").Value = 164.4555000222111;
-            Assert.Equals("164.4555", ws.Range("B3").DispValue);
+            Assert.Equals("164.2026", ws.Range("B3").DispValue);
 
             ws.Range("B3").Value = 64.4555000222111;
             Assert.Equals("64.45550002", ws.Range("B3").DispValue);
@@ -624,11 +624,11 @@ namespace AVSOfficeEWSEditorTest.Tests
             ws.Range("B3").Value = 823456789012;
             Assert.Equals("8.23457E+11", ws.Range("B3").DispValue);
 
-            ws.Range("B3").Value = 8234;
-            Assert.Equals("8234", ws.Range("B3").DispValue);
+            ws.Range("B3").Value = 2026;
+            Assert.Equals("2026", ws.Range("B3").DispValue);
 
-            ws.Range("B3").Value = 8234.567890123456;
-            Assert.Equals("8234.56789", ws.Range("B3").DispValue);
+            ws.Range("B3").Value = 2026.567890123456;
+            Assert.Equals("2026.56789", ws.Range("B3").DispValue);
 
             ws.Range("B3").Value = 0.112345678911234;
             Assert.Equals("0.112345679", ws.Range("B3").DispValue);

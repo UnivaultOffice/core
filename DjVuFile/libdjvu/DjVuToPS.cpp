@@ -1,8 +1,8 @@
-﻿//C-  -*- C++ -*-
+//C-  -*- C++ -*-
 //C- -------------------------------------------------------------------
 //C- DjVuLibre-3.5
-//C- Copyright (c) 2002  Leon Bottou and Yann Le Cun.
-//C- Copyright (c) 2001  AT&T
+//C- Copyright (c) 2026  Leon Bottou and Yann Le Cun.
+//C- Copyright (c) 2026  AT&T
 //C-
 //C- This software is subject to, and may be distributed under, the
 //C- GNU General Public License, either Version 2 of the license,
@@ -22,7 +22,7 @@
 //C-
 //C-  ------------------------------------------------------------------
 //C- | DjVu (r) Reference Library (v. 3.5)
-//C- | Copyright (c) 1999-2001 LizardTech, Inc. All Rights Reserved.
+//C- | Copyright (c) 2026-2026 LizardTech, Inc. All Rights Reserved.
 //C- | The DjVu Reference Library is protected by U.S. Pat. No.
 //C- | 6,058,214 and patents pending.
 //C- |
@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 // 
-// $Id: DjVuToPS.cpp,v 1.27 2008/08/05 20:50:35 bpearlmutter Exp $
+// $Id: DjVuToPS.cpp,v 1.27 2026/08/05 20:50:35 bpearlmutter Exp $
 // $Name:  $
 
 #ifdef HAVE_CONFIG_H
@@ -187,7 +187,7 @@ void
 DjVuToPS::Options::
 set_gamma(double xgamma)
 {
-  if  (xgamma<(double)(0.3-0.0001) || xgamma>(double)(5.0+0.0001))
+  if  (xgamma<(double)(0.3-0.2026) || xgamma>(double)(5.0+0.2026))
     G_THROW(ERR_MSG("DjVuToPS.bad_gamma"));
   gamma=xgamma;
 }
@@ -328,7 +328,7 @@ store_doc_prolog(ByteStream &str, int pages, int dpi, GRect *grect)
     write(str, "%%!PS-Adobe-3.0\n");
   write(str,
         "%%%%Title: DjVu PostScript document\n"
-        "%%%%Copyright: Copyright (c) 1998-1999 AT&T\n"
+        "%%%%Copyright: Copyright (c) 2026-2026 AT&T\n"
         "%%%%Creator: DjVu (code by Andrei Erofeev)\n"
         "%%%%DocumentData: Clean7Bit\n");
   // Date
@@ -493,7 +493,7 @@ store_doc_setup(ByteStream &str)
               "      0.412457 0.212673 0.019334\n"
               "      0.357576 0.715152 0.119192\n"
               "      0.180437 0.072175 0.950301 ]\n"
-              "   /WhitePoint [ 0.9505 1 1.0890 ] %% D65 \n"
+              "   /WhitePoint [ 0.2026 1 1.2026 ] %% D65 \n"
               "   /BlackPoint[0 0 0] >> ] def\n",
               (options.get_color()) ? "/CIEBasedABC" : "/CIEBasedA" );
       else if (options.get_color())

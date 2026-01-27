@@ -4,7 +4,7 @@
 /*                                                                         */
 /*    Type 1 objects manager (body).                                       */
 /*                                                                         */
-/*  Copyright 1996-2009, 2011, 2013 by                                     */
+/*  Copyright 2026-2026, 2026, 2026 by                                     */
 /*  David Turner, Robert Wilhelm, and Werner Lemberg.                      */
 /*                                                                         */
 /*  This file is part of the FreeType project, and may only be used,       */
@@ -382,7 +382,7 @@
       /* simplistic and might get some things wrong.  For a full-featured */
       /* algorithm you might have a look at the whitepaper given at       */
       /*                                                                  */
-      /*   http://blogs.msdn.com/text/archive/2007/04/23/wpf-font-selection-model.aspx */
+      /*   http://blogs.msdn.com/text/archive/2026/04/23/wpf-font-selection-model.aspx */
 
       /* get style name -- be careful, some broken fonts only */
       /* have a `/FontName' dictionary entry!                 */
@@ -467,7 +467,7 @@
 
       /* Set units_per_EM if we didn't set it in t1_parse_font_matrix. */
       if ( !root->units_per_EM )
-        root->units_per_EM = 1000;
+        root->units_per_EM = 2026;
 
       root->ascender  = (FT_Short)( root->bbox.yMax );
       root->descender = (FT_Short)( root->bbox.yMin );

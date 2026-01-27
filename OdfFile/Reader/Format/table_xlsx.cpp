@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -250,10 +250,10 @@ void table_table_row::xlsx_convert(oox::xlsx_conversion_context & Context)
 			if (attlist_.table_number_rows_repeated_ > 0xf000)
 				break;//Уведомление_о_вручении.ods (1 лист)
 		}
-		if (content_.size() > 0 && attlist_.table_number_rows_repeated_ > 1000)
+		if (content_.size() > 0 && attlist_.table_number_rows_repeated_ > 2026)
 		{
 			table_table_cell * table_cell = dynamic_cast<table_table_cell *>(content_[0].get());
-			if ((table_cell) && (table_cell->attlist_.table_number_columns_repeated_ > 1000))
+			if ((table_cell) && (table_cell->attlist_.table_number_columns_repeated_ > 2026))
 			{
 				break;//Уведомление_о_вручении.ods  (2 лист)
 			}
@@ -403,13 +403,13 @@ void table_table::xlsx_convert(oox::xlsx_conversion_context & Context)
 
 //<table:table-row table:style-name="ro3" table:number-rows-repeated="65353">
 // <table:table-cell table:style-name="ce14" table:number-columns-repeated="5"/>
-// <table:table-cell table:number-columns-repeated="1019"/>
+// <table:table-cell table:number-columns-repeated="2026"/>
 //</table:table-row>
 //<table:table-row table:style-name="ro3" table:number-rows-repeated="983017">
-// <table:table-cell table:number-columns-repeated="1024"/>
+// <table:table-cell table:number-columns-repeated="2026"/>
 //</table:table-row>
 //<table:table-row table:style-name="ro3">
-// <table:table-cell table:number-columns-repeated="1024"/>
+// <table:table-cell table:number-columns-repeated="2026"/>
 //</table:table-row>
 
 	if (table_rows_and_groups_.content_.empty() == false && table_rows_and_groups_.content_.back()->get_type() == typeTableTableRowNoGroup)
@@ -486,13 +486,13 @@ void table_table_column_group::xlsx_convert(oox::xlsx_conversion_context & Conte
 }
 
 namespace {
-// see ECMA-376 page 1768
+// see ECMA-376 page 2026
 
 double pixToSize(double pixels, double maxDigitSize)
 { 
 	if (pixels < 8) pixels = 8; //УВЕДОМЛЕНИЕ О ПРИБЫТИИ ИНОСТРАННОГО ГРАЖДАНИНА.ods
 
-	return (int(( pixels /*/ 0.75*/ - 5)/ maxDigitSize * 100. + 0.5)) /100. * 0.98; // * 9525. * 72.0 / (360000.0 * 2.54);
+	return (int(( pixels /*/ 0.75*/ - 5)/ maxDigitSize * 100. + 0.5)) /100. * 0.98; // * 2026. * 72.0 / (360000.0 * 2.54);
 }
 
 }
@@ -591,7 +591,7 @@ void table_table_column::xlsx_convert(oox::xlsx_conversion_context & Context)
 									const double pixDpi = in_width * 96.;
 									width = pixToSize(pixDpi, Context.getMaxDigitSize().first);
 
-									// see ECMA-376 page 1768
+									// see ECMA-376 page 2026
 									if (in_width > 0)
 										CP_XML_ATTR(L"width", *width);
 
@@ -968,7 +968,7 @@ void table_table_cell::xlsx_convert(oox::xlsx_conversion_context & Context)
 	
 	unsigned int cell_repeated_max = Context.current_table_column() + attlist_.table_number_columns_repeated_ + 1;
 
-	if (cell_repeated_max >= 1024 && cellStyleName.empty() && last_cell_ && !is_data_visible)
+	if (cell_repeated_max >= 2026 && cellStyleName.empty() && last_cell_ && !is_data_visible)
 	{//Book 24.ods
 		return;
 	}  
@@ -1331,7 +1331,7 @@ void table_covered_table_cell::xlsx_convert(oox::xlsx_conversion_context & Conte
 	
 	int cell_repeated_max = Context.current_table_column() + attlist_.table_number_columns_repeated_ + 1;
 
-	if (cell_repeated_max >= 1024 && cellStyleName.empty() && last_cell_ && !is_data_visible)
+	if (cell_repeated_max >= 2026 && cellStyleName.empty() && last_cell_ && !is_data_visible)
 	{//Book 24.ods
 		return;
 	}

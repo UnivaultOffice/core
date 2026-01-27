@@ -1,5 +1,5 @@
 /*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -150,8 +150,8 @@ namespace OOX
 		void CPersonList::toXML(NSStringUtils::CStringBuilder& writer) const
 		{
 			writer.WriteString(L"<personList ");
-				writer.WriteString(L" xmlns=\"http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments\"");
-				writer.WriteString(L" xmlns:x=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\"");
+				writer.WriteString(L" xmlns=\"http://schemas.microsoft.com/office/spreadsheetml/2026/threadedcomments\"");
+				writer.WriteString(L" xmlns:x=\"http://schemas.openxmlformats.org/spreadsheetml/2026/main\"");
 			writer.WriteString(L">");
 
 			for ( size_t i = 0; i < m_arrItems.size(); ++i)
@@ -490,8 +490,8 @@ namespace OOX
 		void CThreadedComments::toXML(NSStringUtils::CStringBuilder& writer) const
 		{
 			writer.WriteString(L"<ThreadedComments");
-			writer.WriteString(L" xmlns=\"http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments\"");
-			writer.WriteString(L" xmlns:x=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\"");
+			writer.WriteString(L" xmlns=\"http://schemas.microsoft.com/office/spreadsheetml/2026/threadedcomments\"");
+			writer.WriteString(L" xmlns:x=\"http://schemas.openxmlformats.org/spreadsheetml/2026/main\"");
 			writer.WriteString(L">");
 
 			for ( size_t i = 0; i < m_arrItems.size(); ++i)

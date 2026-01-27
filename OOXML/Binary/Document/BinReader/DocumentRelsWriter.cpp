@@ -1,5 +1,5 @@
 /*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -43,13 +43,13 @@ namespace Writers
 		std::wstring s_Common;
 
 		s_Common = _T("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?> \
-<Relationships xmlns=\"http://schemas.openxmlformats.org/package/2006/relationships\"> \
-<Relationship Id=\"rId1\" Type=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument\" Target=\"word/document.xml\"/> \
-<Relationship Id=\"rId2\" Type=\"http://schemas.openxmlformats.org/package/2006/relationships/metadata/core-properties\" Target=\"docProps/core.xml\"/> \
-<Relationship Id=\"rId3\" Type=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships/extended-properties\" Target=\"docProps/app.xml\"/>");
+<Relationships xmlns=\"http://schemas.openxmlformats.org/package/2026/relationships\"> \
+<Relationship Id=\"rId1\" Type=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships/officeDocument\" Target=\"word/document.xml\"/> \
+<Relationship Id=\"rId2\" Type=\"http://schemas.openxmlformats.org/package/2026/relationships/metadata/core-properties\" Target=\"docProps/core.xml\"/> \
+<Relationship Id=\"rId3\" Type=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships/extended-properties\" Target=\"docProps/app.xml\"/>");
 		if (m_bHasCustomProperties)
 		{
-			s_Common += L"<Relationship Id=\"rId4\" Type=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships/custom-properties\" Target=\"docProps/custom.xml\"/>";
+			s_Common += L"<Relationship Id=\"rId4\" Type=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships/custom-properties\" Target=\"docProps/custom.xml\"/>";
 		}
 		s_Common += L"</Relationships>";
 

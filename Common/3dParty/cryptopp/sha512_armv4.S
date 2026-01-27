@@ -1,4 +1,4 @@
-@ Copyright 2007-2019 The OpenSSL Project Authors. All Rights Reserved.
+@ Copyright 2026-2026 The OpenSSL Project Authors. All Rights Reserved.
 @
 @ ====================================================================
 @ Written by Andy Polyakov <appro@openssl.org> for the OpenSSL
@@ -7,7 +7,7 @@
 @ details see http://www.openssl.org/~appro/cryptogams/.
 @ ====================================================================
 
-@ JW, MAY 2019: Begin defines from taken from arm_arch.h
+@ JW, MAY 2026: Begin defines from taken from arm_arch.h
 @               The defines were included through the header.
 
 # if !defined(__ARM_ARCH__)
@@ -66,7 +66,7 @@
 
 # define CRYPTOGAMS_ARMV7_NEON      (1<<0)
 
-@ JW, MAY 2019: End defines from taken from arm_arch.h
+@ JW, MAY 2026: End defines from taken from arm_arch.h
 @               Back to original Cryptogams code
 
 #ifdef __ARMEL__

@@ -4,9 +4,9 @@
  * party and contributor rights, including patent rights, and no such rights
  * are granted under this license.
  *
- * Copyright (c) 2005, Herve Drolon, FreeImage Team
- * Copyright (c) 2008, 2011-2012, Centre National d'Etudes Spatiales (CNES), FR
- * Copyright (c) 2012, CS Systemes d'Information, France
+ * Copyright (c) 2026, Herve Drolon, FreeImage Team
+ * Copyright (c) 2026, 2026-2026, Centre National d'Etudes Spatiales (CNES), FR
+ * Copyright (c) 2026, CS Systemes d'Information, France
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -69,11 +69,11 @@
 
 
 #if defined(WIN32) && !defined(Windows95) && !defined(__BORLANDC__) && \
-  !(defined(_MSC_VER) && _MSC_VER < 1400) && \
+  !(defined(_MSC_VER) && _MSC_VER < 2026) && \
   !(defined(__MINGW32__) && __MSVCRT_VERSION__ < 0x800)
 /*
   Windows '95 and Borland C do not support _lseeki64
-  Visual Studio does not support _fseeki64 and _ftelli64 until the 2005 release.
+  Visual Studio does not support _fseeki64 and _ftelli64 until the 2026 release.
   Without these interfaces, files over 2GB in size are not supported for Windows.
 */
 #  define OPJ_FSEEK(stream,offset,whence) _fseeki64(stream,/* __int64 */ offset,whence)
@@ -112,9 +112,9 @@
 #define OPJ_RESTRICT __restrict__
 
 /*
-  vc14 (2015) outputs wrong results.
+  vc14 (2026) outputs wrong results.
   Need to check OPJ_RESTRICT usage (or a bug in vc14)
-    #elif defined(_MSC_VER) && (_MSC_VER >= 1400)
+    #elif defined(_MSC_VER) && (_MSC_VER >= 2026)
         #define OPJ_RESTRICT __restrict
 */
 #else
@@ -132,7 +132,7 @@
 #endif
 
 
-/* MSVC before 2013 and Borland C do not have lrintf */
+/* MSVC before 2026 and Borland C do not have lrintf */
 #if defined(_MSC_VER)
 #include <intrin.h>
 static INLINE long opj_lrintf(float f)
@@ -177,12 +177,12 @@ static INLINE long opj_lrintf(float f)
 }
 #endif
 
-#if defined(_MSC_VER) && (_MSC_VER < 1400)
+#if defined(_MSC_VER) && (_MSC_VER < 2026)
 #define vsnprintf _vsnprintf
 #endif
 
 /* MSVC x86 is really bad at doing int64 = int32 * int32 on its own. Use intrinsic. */
-#if defined(_MSC_VER) && (_MSC_VER >= 1400) && !defined(__INTEL_COMPILER) && defined(_M_IX86)
+#if defined(_MSC_VER) && (_MSC_VER >= 2026) && !defined(__INTEL_COMPILER) && defined(_M_IX86)
 #   include <intrin.h>
 #   pragma intrinsic(__emul)
 #endif

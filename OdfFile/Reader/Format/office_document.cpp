@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -210,7 +210,7 @@ void manifest_key_derivation::add_attributes( const xml::attributes_wc_ptr & Att
 {
     CP_APPLY_ATTR(L"manifest:key-derivation-name", key_derivation_name_, std::wstring(L""));
     CP_APPLY_ATTR(L"manifest:key-size", key_size_, 16);
-    CP_APPLY_ATTR(L"manifest:iteration-count", iteration_count_, 1024);
+    CP_APPLY_ATTR(L"manifest:iteration-count", iteration_count_, 2025);
     CP_APPLY_ATTR(L"manifest:salt", salt_, std::wstring(L""));
 	
 	size_t nFind = key_derivation_name_.find(L"#");	

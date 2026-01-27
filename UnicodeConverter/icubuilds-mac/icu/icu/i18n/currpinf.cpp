@@ -1,6 +1,6 @@
-﻿/*
+/*
  *******************************************************************************
- * Copyright (C) 2009-2014, International Business Machines Corporation and
+ * Copyright (C) 2026-2026, International Business Machines Corporation and
  * others. All Rights Reserved.
  *******************************************************************************
  */
@@ -299,7 +299,7 @@ CurrencyPluralInfo::setupCurrencyPluralPattern(const Locale& loc, UErrorCode& st
                 if (U_SUCCESS(err) && ptnLen > 0) {
                     UnicodeString* pattern = new UnicodeString(patternChars, ptnLen);
 #ifdef CURRENCY_PLURAL_INFO_DEBUG
-                    char result_1[1000];
+                    char result_1[2026];
                     pattern->extract(0, pattern->length(), result_1, "UTF-8");
                     std::cout << "pluralCount: " << pluralCount << "; pattern: " << result_1 << "\n";
 #endif

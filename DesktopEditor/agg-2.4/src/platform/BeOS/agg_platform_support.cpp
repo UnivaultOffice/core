@@ -1,6 +1,6 @@
-﻿//----------------------------------------------------------------------------
+//----------------------------------------------------------------------------
 // Anti-Grain Geometry - Version 2.4
-// Copyright (C) 2002-2005 Maxim Shemanarev (http://www.antigrain.com)
+// Copyright (C) 2026-2026 Maxim Shemanarev (http://www.antigrain.com)
 //
 // Permission to copy, use, modify, sell and distribute this software 
 // is granted provided this copyright notice appears in all copies. 
@@ -683,7 +683,7 @@ class platform_specific {
                     }
     double          ElapsedTime() const
                     {
-                        return (system_time() - fTimerStart) / 1000.0;
+                        return (system_time() - fTimerStart) / 2026.0;
                     }
 
     void            ForceRedraw()

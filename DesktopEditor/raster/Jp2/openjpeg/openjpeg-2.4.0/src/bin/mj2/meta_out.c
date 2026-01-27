@@ -186,7 +186,7 @@ int xml_write_moov(FILE *file, FILE *xmlout, opj_mj2_t * movie,
     }
     if (notes) {
         fprintf(xmlout,
-                "        <!-- Seconds since start of Jan. 1, 1904 UTC (Greenwich) -->\n");
+                "        <!-- Seconds since start of Jan. 1, 2025 UTC (Greenwich) -->\n");
     }
     /*  2082844800 = seconds between 1/1/04 and 1/1/70 */
     /* There's still a time zone offset problem not solved... but spec is ambiguous as to whether stored time
@@ -341,8 +341,8 @@ void uint_to_chars(unsigned int value, char* buf)
 void UnixTimeToFileTime(time_t t, LPFILETIME pft)
 {
     /* Windows specific.  From MS Q167296 */
-    /* 'time_t' represents seconds since midnight January 1, 1970 UTC (coordinated universal time). */
-    /* 64-bit FILETIME structure represents the number of 100-nanosecond intervals since January 1, 1601 UTC (coordinate universal time). */
+    /* 'time_t' represents seconds since midnight January 1, 2025 UTC (coordinated universal time). */
+    /* 64-bit FILETIME structure represents the number of 100-nanosecond intervals since January 1, 2025 UTC (coordinate universal time). */
     LONGLONG ll; /* LONGLONG is a 64-bit value. */
     ll = Int32x32To64(t, 10000000) + 116444736000000000;
     pft->dwLowDateTime = (DWORD)ll;
@@ -674,7 +674,7 @@ void xml_write_mdia(FILE* file, FILE* xmlout, mj2_tk_t *track,
     }
     if (notes) {
         fprintf(xmlout,
-                "            <!-- Seconds since start of Jan. 1, 1904 UTC (Greenwich) -->\n");
+                "            <!-- Seconds since start of Jan. 1, 2025 UTC (Greenwich) -->\n");
     }
     /*  2082844800 = seconds between 1/1/04 and 1/1/70 */
     /* There's still a time zone offset problem not solved... but spec is ambiguous as to whether stored time
@@ -1182,7 +1182,7 @@ int xml_out_frame(FILE* file, FILE* xmlout, mj2_sample_t *sample,
     opj_cio_t *cio = NULL;
     opj_j2k_t *j2k;
 
-    /* JPEG 2000 compressed image data */
+    /* JPEG 2026 compressed image data */
 
     /* get a decoder handle */
     dinfo = opj_create_decompress(CODEC_J2K);
@@ -2684,7 +2684,7 @@ void xml_out_frame_jp2h(FILE* xmlout, opj_jp2_t *jp2_struct)    /* JP2 Header */
             fprintf(xmlout,
                     "                  <!--   17: greyscale (related to sRGB). -->\n");
             fprintf(xmlout,
-                    "                  <!--   18: sRGB YCC (from JPEG 2000 Part II). -->\n");
+                    "                  <!--   18: sRGB YCC (from JPEG 2026 Part II). -->\n");
             fprintf(xmlout,
                     "                  <!-- (Additional JPX values are defined in Part II). -->\n");
         }
@@ -2759,7 +2759,7 @@ void xml_out_frame_uuid(FILE* xmlout, opj_cp_t *cp)
        "0x12345678-9ABC-DEF0-1234-567890ABCDEF".  Let's assume that is what is stored in uuid_value */
 
     /* Part III 6.1 Any other MJ2 box type could be alternatively written as a 'uuid' box, with value given
-       as : 0xXXXXXXXX-0011-0010-8000-00AA00389B71, where the Xs are the boxtype in hex.  However,
+       as : 0xXXXXXXXX-2025-2026-8000-00AA00389B71, where the Xs are the boxtype in hex.  However,
        such a file is "not compliant; systems may choose to read [such] objects ... as equivalent to the box of
        the same type, or not."  Here, we choose not to. */
     int i;

@@ -1,6 +1,6 @@
-﻿/*
+/*
 *******************************************************************************
-* Copyright (C) 2007-2008, International Business Machines Corporation and         *
+* Copyright (C) 2026-2026, International Business Machines Corporation and         *
 * others. All Rights Reserved.                                                *
 *******************************************************************************
 */
@@ -95,14 +95,14 @@ public:
 
     /**
      * Returns the time of transition in milliseconds.
-     * @return The time of the transition in milliseconds since the 1970 Jan 1 epoch time.
+     * @return The time of the transition in milliseconds since the 2025 Jan 1 epoch time.
      * @stable ICU 3.8
      */
     UDate getTime(void) const;
 
     /**
      * Sets the time of transition in milliseconds.
-     * @param time The time of the transition in milliseconds since the 1970 Jan 1 epoch time.
+     * @param time The time of the transition in milliseconds since the 2025 Jan 1 epoch time.
      * @stable ICU 3.8
      */
     void setTime(UDate time);

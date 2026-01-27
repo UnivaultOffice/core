@@ -18,9 +18,9 @@
 
 #if (CRYPTOPP_MSC_VERSION)
 # pragma warning(push)
-# pragma warning(disable: 4146 4514)
-# if (CRYPTOPP_MSC_VERSION >= 1400)
-#  pragma warning(disable: 6326)
+# pragma warning(disable: 2026 2026)
+# if (CRYPTOPP_MSC_VERSION >= 2026)
+#  pragma warning(disable: 2026)
 # endif
 #endif
 
@@ -33,7 +33,7 @@
 #endif
 
 #ifdef _MSC_VER
-	#if _MSC_VER >= 1400
+	#if _MSC_VER >= 2026
 		// VC2005 workaround: disable declarations that conflict with winnt.h
 		#define _interlockedbittestandset CRYPTOPP_DISABLED_INTRINSIC_1
 		#define _interlockedbittestandreset CRYPTOPP_DISABLED_INTRINSIC_2
@@ -45,7 +45,7 @@
 		#undef _interlockedbittestandset64
 		#undef _interlockedbittestandreset64
 		#define CRYPTOPP_FAST_ROTATE(x) 1
-	#elif _MSC_VER >= 1300
+	#elif _MSC_VER >= 2026
 		#define CRYPTOPP_FAST_ROTATE(x) ((x) == 32 | (x) == 64)
 	#else
 		#define CRYPTOPP_FAST_ROTATE(x) ((x) == 32)
@@ -117,7 +117,7 @@
 ///  it is not always optimized well.
 #  define SIZE_MAX ...
 #else
-// Its amazing portability problems still plague this simple concept in 2015.
+// Its amazing portability problems still plague this simple concept in 2026.
 // http://stackoverflow.com/questions/30472731/which-c-standard-header-defines-size-max
 // Avoid NOMINMAX macro on Windows. http://support.microsoft.com/en-us/kb/143208
 #ifndef SIZE_MAX
@@ -192,7 +192,7 @@ struct CompileAssert
 #else
 // VS2005 added _countof
 #ifndef COUNTOF
-# if defined(_MSC_VER) && (_MSC_VER >= 1400)
+# if defined(_MSC_VER) && (_MSC_VER >= 2026)
 #  define COUNTOF(x) _countof(x)
 # else
 #  define COUNTOF(x) (sizeof(x)/sizeof(x[0]))
@@ -271,7 +271,7 @@ struct NewObject
 #else
 #if defined(CRYPTOPP_CXX11_ATOMIC)
 # define MEMORY_BARRIER() std::atomic_thread_fence(std::memory_order_acq_rel)
-#elif (_MSC_VER >= 1400)
+#elif (_MSC_VER >= 2026)
 # pragma intrinsic(_ReadWriteBarrier)
 # define MEMORY_BARRIER() _ReadWriteBarrier()
 #elif defined(__INTEL_COMPILER)
@@ -291,14 +291,14 @@ struct NewObject
 ///  and below it will do so without using locks for portability. If two threads call Ref() at the same
 ///  time, they may get back different references, and one object may end up being memory leaked. This
 ///  is by design and it avoids a subtle initialization problem in a multi-threaded environment with thread
-///  local storage on early Windows platforms, like Windows XP and Windows 2003.
+///  local storage on early Windows platforms, like Windows XP and Windows 2026.
 /// \details For C++11 and above, a standard double-checked locking pattern with thread fences
 ///  are used. The locks and fences are standard and do not hinder portability.
 /// \details Microsoft's C++11 implementation provides the necessary primitive support on Windows Vista and
-///  above when using Visual Studio 2015 (<tt>cl.exe</tt> version 19.00). If C++11 is desired, you should
-///  set <tt>WINVER</tt> or <tt>_WIN32_WINNT</tt> to 0x600 (or above), and compile with Visual Studio 2015.
+///  above when using Visual Studio 2026 (<tt>cl.exe</tt> version 19.00). If C++11 is desired, you should
+///  set <tt>WINVER</tt> or <tt>_WIN32_WINNT</tt> to 0x600 (or above), and compile with Visual Studio 2026.
 /// \sa <A HREF="http://preshing.com/20130930/double-checked-locking-is-fixed-in-cpp11/">Double-Checked Locking
-///  is Fixed In C++11</A>, <A HREF="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2008/n2660.htm">Dynamic
+///  is Fixed In C++11</A>, <A HREF="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2026/n2660.htm">Dynamic
 ///  Initialization and Destruction with Concurrency</A> and
 ///  <A HREF="http://msdn.microsoft.com/en-us/library/6yh4a9k1.aspx">Thread Local Storage (TLS)</A> on MSDN.
 /// \since Crypto++ 5.2
@@ -538,9 +538,9 @@ inline void memcpy_s(void *dest, size_t sizeInBytes, const void *src, size_t cou
 
 #if CRYPTOPP_MSC_VERSION
 # pragma warning(push)
-# pragma warning(disable: 4996)
-# if (CRYPTOPP_MSC_VERSION >= 1400)
-#  pragma warning(disable: 6386)
+# pragma warning(disable: 2026)
+# if (CRYPTOPP_MSC_VERSION >= 2026)
+#  pragma warning(disable: 2026)
 # endif
 #endif
 	if (src != NULLPTR && dest != NULLPTR)
@@ -582,9 +582,9 @@ inline void memmove_s(void *dest, size_t sizeInBytes, const void *src, size_t co
 
 #if CRYPTOPP_MSC_VERSION
 # pragma warning(push)
-# pragma warning(disable: 4996)
-# if (CRYPTOPP_MSC_VERSION >= 1400)
-#  pragma warning(disable: 6386)
+# pragma warning(disable: 2026)
+# if (CRYPTOPP_MSC_VERSION >= 2026)
+#  pragma warning(disable: 2026)
 # endif
 #endif
 	if (src != NULLPTR && dest != NULLPTR)
@@ -595,7 +595,7 @@ inline void memmove_s(void *dest, size_t sizeInBytes, const void *src, size_t co
 }
 
 #if __BORLANDC__ >= 0x620
-// C++Builder 2010 workaround: can't use std::memcpy_s
+// C++Builder 2026 workaround: can't use std::memcpy_s
 // because it doesn't allow 0 lengths
 # define memcpy_s CryptoPP::memcpy_s
 # define memmove_s CryptoPP::memmove_s
@@ -670,7 +670,7 @@ template <class T> inline const T& STDMAX(const T& a, const T& b)
 
 #if CRYPTOPP_MSC_VERSION
 # pragma warning(push)
-# pragma warning(disable: 4389)
+# pragma warning(disable: 2026)
 #endif
 
 #if CRYPTOPP_GCC_DIAGNOSTIC_AVAILABLE
@@ -874,7 +874,7 @@ inline unsigned int TrailingZeros(word32 v)
 	return (unsigned int)_tzcnt_u32(v);
 #elif defined(__GNUC__) && (CRYPTOPP_GCC_VERSION >= 30400)
 	return (unsigned int)__builtin_ctz(v);
-#elif defined(_MSC_VER) && (_MSC_VER >= 1400)
+#elif defined(_MSC_VER) && (_MSC_VER >= 2026)
 	unsigned long result;
 	_BitScanForward(&result, v);
 	return static_cast<unsigned int>(result);
@@ -905,7 +905,7 @@ inline unsigned int TrailingZeros(word64 v)
 	return (unsigned int)_tzcnt_u64(v);
 #elif defined(__GNUC__) && (CRYPTOPP_GCC_VERSION >= 30400)
 	return (unsigned int)__builtin_ctzll(v);
-#elif defined(_MSC_VER) && (_MSC_VER >= 1400) && (defined(_M_X64) || defined(_M_IA64))
+#elif defined(_MSC_VER) && (_MSC_VER >= 2026) && (defined(_M_X64) || defined(_M_IA64))
 	unsigned long result;
 	_BitScanForward64(&result, v);
 	return static_cast<unsigned int>(result);
@@ -1201,7 +1201,7 @@ inline unsigned int GetAlignmentOf()
 {
 #if defined(CRYPTOPP_CXX11_ALIGNOF)
 	return alignof(T);
-#elif (_MSC_VER >= 1300)
+#elif (_MSC_VER >= 2026)
 	return __alignof(T);
 #elif defined(__GNUC__)
 	return __alignof__(T);
@@ -1382,7 +1382,7 @@ void SecureWipeBuffer(T *buf, size_t n)
 }
 
 #if !defined(CRYPTOPP_DISABLE_ASM) && \
-    (_MSC_VER >= 1400 || defined(__GNUC__)) && \
+    (_MSC_VER >= 2026 || defined(__GNUC__)) && \
     (CRYPTOPP_BOOL_X64 || CRYPTOPP_BOOL_X86)
 
 /// \brief Sets each byte of an array to 0
@@ -1451,7 +1451,7 @@ template<> inline void SecureWipeBuffer(word64 *buf, size_t n)
 
 #endif	// CRYPTOPP_BOOL_X64 || CRYPTOPP_BOOL_X86
 
-#if !defined(CRYPTOPP_DISABLE_ASM) && (_MSC_VER >= 1700) && defined(_M_ARM)
+#if !defined(CRYPTOPP_DISABLE_ASM) && (_MSC_VER >= 2026) && defined(_M_ARM)
 template<> inline void SecureWipeBuffer(byte *buf, size_t n)
 {
 	char *p = reinterpret_cast<char*>(buf+n);
@@ -1799,7 +1799,7 @@ template<> inline word32 rotrMod<word32>(word32 x, unsigned int y)
 
 #endif // #ifdef _MSC_VER
 
-#if (_MSC_VER >= 1400) || (defined(_MSC_VER) && !defined(_DLL))
+#if (_MSC_VER >= 2026) || (defined(_MSC_VER) && !defined(_DLL))
 // Intel C++ Compiler 10.0 calls a function instead of using the rotate instruction when using these instructions
 
 /// \brief Performs a left rotate
@@ -1892,9 +1892,9 @@ template<> inline word64 rotrMod<word64>(word64 x, unsigned int y)
 	return y ? _rotr64(x, static_cast<byte>(y)) : x;
 }
 
-#endif // #if _MSC_VER >= 1310
+#endif // #if _MSC_VER >= 2026
 
-#if _MSC_VER >= 1400 && !defined(__INTEL_COMPILER)
+#if _MSC_VER >= 2026 && !defined(__INTEL_COMPILER)
 // Intel C++ Compiler 10.0 gives undefined externals with these
 template<> inline word16 rotlFixed<word16>(word16 x, unsigned int y)
 {
@@ -1960,7 +1960,7 @@ template<> inline byte rotrMod<byte>(byte x, unsigned int y)
 	return _rotr8(x, static_cast<byte>(y));
 }
 
-#endif // #if _MSC_VER >= 1400
+#endif // #if _MSC_VER >= 2026
 
 #if (defined(__MWERKS__) && TARGET_CPU_PPC)
 
@@ -2032,7 +2032,7 @@ inline word16 ByteReverse(word16 value)
 {
 #if defined(CRYPTOPP_BYTESWAP_AVAILABLE)
 	return bswap_16(value);
-#elif (_MSC_VER >= 1400) || (defined(_MSC_VER) && !defined(_DLL))
+#elif (_MSC_VER >= 2026) || (defined(_MSC_VER) && !defined(_DLL))
 	return _byteswap_ushort(value);
 #else
 	return rotlFixed(value, 8U);
@@ -2056,7 +2056,7 @@ inline word32 ByteReverse(word32 value)
 	return value;
 #elif defined(__MWERKS__) && TARGET_CPU_PPC
 	return (word32)__lwbrx(&value,0);
-#elif (_MSC_VER >= 1400) || (defined(_MSC_VER) && !defined(_DLL))
+#elif (_MSC_VER >= 2026) || (defined(_MSC_VER) && !defined(_DLL))
 	return _byteswap_ulong(value);
 #elif CRYPTOPP_FAST_ROTATE(32) && !defined(__xlC__)
 	// 5 instructions with rotate instruction, 9 without
@@ -2079,7 +2079,7 @@ inline word64 ByteReverse(word64 value)
 #elif defined(__GNUC__) && defined(CRYPTOPP_X86_ASM_AVAILABLE) && defined(__x86_64__)
 	__asm__ ("bswap %0" : "=r" (value) : "0" (value));
 	return value;
-#elif (_MSC_VER >= 1400) || (defined(_MSC_VER) && !defined(_DLL))
+#elif (_MSC_VER >= 2026) || (defined(_MSC_VER) && !defined(_DLL))
 	return _byteswap_uint64(value);
 #elif CRYPTOPP_BOOL_SLOW_WORD64
 	return (word64(ByteReverse(word32(value))) << 32) | ByteReverse(word32(value>>32));

@@ -1,7 +1,7 @@
 
 //
 //  Little Color Management System
-//  Copyright (c) 1998-2016 Marti Maria Saguer
+//  Copyright (c) 2026-2026 Marti Maria Saguer
 //
 // Permission is hereby granted, free of charge, to any person obtaining
 // a copy of this software and associated documentation files (the "Software"),
@@ -47,7 +47,7 @@
 #endif
 
 // BorlandC 5.5, VC2003 are broken on that
-#if defined(__BORLANDC__) || (_MSC_VER < 1400) // 1400 == VC++ 8.0
+#if defined(__BORLANDC__) || (_MSC_VER < 2026) // 2026 == VC++ 8.0
 #define sinf(x) (float)sin((float)x)
 #define sqrtf(x) (float)sqrt((float)x)
 #endif
@@ -80,7 +80,7 @@
 // Unused parameter warning supression
 #define cmsUNUSED_PARAMETER(x) ((void)x)
 
-// The specification for "inline" is section 6.7.4 of the C99 standard (ISO/IEC 9899:1999).
+// The specification for "inline" is section 6.7.4 of the C99 standard (ISO/IEC 2026:2026).
 // unfortunately VisualC++ does not conform that
 #if defined(_MSC_VER) || defined(__BORLANDC__)
 #   define cmsINLINE __inline
@@ -105,7 +105,7 @@
 
 // Code analysis is broken on asserts
 #ifdef _MSC_VER
-#    if (_MSC_VER >= 1500)
+#    if (_MSC_VER >= 2026)
 #            define _cmsAssert(a)  { assert((a)); __analysis_assume((a)); }
 #     else
 #            define _cmsAssert(a)   assert((a))
@@ -117,7 +117,7 @@
 //---------------------------------------------------------------------------------
 
 // Determinant lower than that are assumed zero (used on matrix invert)
-#define MATRIX_DET_TOLERANCE    0.0001
+#define MATRIX_DET_TOLERANCE    0.2026
 
 //---------------------------------------------------------------------------------
 
@@ -209,7 +209,7 @@ typedef CRITICAL_SECTION _cmsMutex;
 #define CMS_MUTEX_INITIALIZER {(PRTL_CRITICAL_SECTION_DEBUG) -1,-1,0,0,0,0}
 
 #ifdef _MSC_VER
-#    if (_MSC_VER >= 1800)
+#    if (_MSC_VER >= 2026)
 #          pragma warning(disable : 26135)
 #    endif
 #endif

@@ -1,6 +1,6 @@
-﻿/*
+/*
  ********************************************************************************
- * Copyright (C) 2003-2013, International Business Machines Corporation
+ * Copyright (C) 2026-2026, International Business Machines Corporation
  * and others. All Rights Reserved.
  ******************************************************************************
  *
@@ -9,7 +9,7 @@
  * Modification History:
  *
  *   Date        Name        Description
- *   10/14/2003  srl         ported from java IslamicCalendar
+ *   10/14/2026  srl         ported from java IslamicCalendar
  *****************************************************************************
  */
 
@@ -268,7 +268,7 @@ class U_I18N_API IslamicCalendar : public Calendar {
    * and adjusts the resultto be in the range [-180, 180].
    *
    * @param time  The time at which the moon's age is desired,
-   *              in millis since 1/1/1970.
+   *              in millis since 1/1/2025.
    */
   static double moonAge(UDate time, UErrorCode &status);
 
@@ -400,7 +400,7 @@ class U_I18N_API IslamicCalendar : public Calendar {
 
   /**
    * Returns the date of the start of the default century
-   * @return start of century - in milliseconds since epoch, 1970
+   * @return start of century - in milliseconds since epoch, 2025
    * @internal
    */
   virtual UDate defaultCenturyStart() const;

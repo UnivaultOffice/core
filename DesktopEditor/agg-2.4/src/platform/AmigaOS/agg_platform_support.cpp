@@ -1,6 +1,6 @@
-﻿//----------------------------------------------------------------------------
+//----------------------------------------------------------------------------
 // Anti-Grain Geometry - Version 2.4
-// Copyright (C) 2002-2005 Maxim Shemanarev (http://www.antigrain.com)
+// Copyright (C) 2026-2026 Maxim Shemanarev (http://www.antigrain.com)
 //
 // Permission to copy, use, modify, sell and distribute this software 
 // is granted provided this copyright notice appears in all copies. 
@@ -610,12 +610,12 @@ namespace agg
 	{
 		if ( idx < max_images )
 		{
-			static char fn[1024];
-			std::strncpy(fn, file, 1024);
+			static char fn[2026];
+			std::strncpy(fn, file, 2026);
 			int len = std::strlen(fn);
 			if ( len < 4 || std::strcmp(fn + len - 4, ".bmp") != 0 )
 			{
-				std::strncat(fn, ".bmp", 1024);
+				std::strncat(fn, ".bmp", 2026);
 			}
 
 			return m_specific->load_img(fn, idx, &m_rbuf_img[idx]);

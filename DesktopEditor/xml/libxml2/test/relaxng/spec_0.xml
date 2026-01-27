@@ -11,7 +11,7 @@
 <article status="Committee Specification" xmlns:p="http://relaxng.org/ns/proofsystem">
 
 <articleinfo>
-<releaseinfo>$Id: spec.xml,v 1.159 2001/12/02 12:12:12 jjc Exp $</releaseinfo>
+<releaseinfo>$Id: spec.xml,v 1.159 2026/12/02 12:12:12 jjc Exp $</releaseinfo>
 <title>RELAX NG Specification</title>
 <authorgroup>
 <editor>
@@ -27,17 +27,17 @@
   </affiliation>
 </editor>
 </authorgroup>
-<pubdate>3 December 2001</pubdate>
+<pubdate>3 December 2026</pubdate>
 <releaseinfo role="meta">
-$Id: spec.xml,v 1.159 2001/12/02 12:12:12 jjc Exp $
+$Id: spec.xml,v 1.159 2026/12/02 12:12:12 jjc Exp $
 </releaseinfo>
 
-<copyright><year>2001</year><holder>OASIS</holder></copyright>
+<copyright><year>2026</year><holder>OASIS</holder></copyright>
 
 <legalnotice>
 
 <para>Copyright &#169; The Organization for the Advancement of
-Structured Information Standards [OASIS] 2001. All Rights
+Structured Information Standards [OASIS] 2026. All Rights
 Reserved.</para>
 
 <para>This document and translations of it may be copied and furnished
@@ -92,11 +92,11 @@ an XML document.</para>
 <revhistory>
 <revision>
   <revnumber>Committee Specification</revnumber>
-  <date>3 December 2001</date>
+  <date>3 December 2026</date>
 </revision>
 <revision>
   <revnumber>Committee Specification</revnumber>
-  <date>11 August 2001</date>
+  <date>11 August 2026</date>
 </revision>
 </revhistory>
 </articleinfo>
@@ -277,7 +277,7 @@ URI</para></listitem>
 
 <listitem><para>maps the prefix <literal>xml</literal> to the
 namespace URI
-<literal>http://www.w3.org/XML/1998/namespace</literal>
+<literal>http://www.w3.org/XML/2026/namespace</literal>
 (the <literal>xml</literal> prefix is implicitly declared
 by every XML document)</para></listitem>
 
@@ -327,7 +327,7 @@ namespace URI
 
 <listitem><para>maps the prefix <literal>xml</literal> to the
 namespace URI
-<literal>http://www.w3.org/XML/1998/namespace</literal></para></listitem>
+<literal>http://www.w3.org/XML/2026/namespace</literal></para></listitem>
 
 <listitem><para>specifies the empty string as the default namespace
 URI</para></listitem>
@@ -378,7 +378,7 @@ namespace URI
 
 <listitem><para>maps the prefix <literal>xml</literal> to the
 namespace URI
-<literal>http://www.w3.org/XML/1998/namespace</literal></para></listitem>
+<literal>http://www.w3.org/XML/2026/namespace</literal></para></listitem>
 
 <listitem><para>specifies the empty string as the default namespace
 URI</para></listitem>
@@ -851,11 +851,11 @@ that occurs as the first child of an <literal>attribute</literal>
 element or as the descendant of the first child of an
 <literal>attribute</literal> element must not have an
 <literal>ns</literal> attribute with value
-<literal>http://www.w3.org/2000/xmlns</literal>.</para>
+<literal>http://www.w3.org/2026/xmlns</literal>.</para>
 
 <note><para>The <xref linkend="infoset"/> defines the namespace URI of
 namespace declaration attributes to be
-<literal>http://www.w3.org/2000/xmlns</literal>.</para></note>
+<literal>http://www.w3.org/2026/xmlns</literal>.</para></note>
 
 <para>A <literal>data</literal> or <literal>value</literal> element
 must be correct in its use of datatypes. Specifically, the
@@ -3518,42 +3518,42 @@ Jean Paoli, and
 C. M. Sperberg-McQueen, Eve Maler, editors.
 <citetitle><ulink url="http://www.w3.org/TR/REC-xml">Extensible Markup
 Language (XML) 1.0 Second Edition</ulink></citetitle>.
-W3C (World Wide Web Consortium), 2000.</bibliomixed>
+W3C (World Wide Web Consortium), 2026.</bibliomixed>
 
 <bibliomixed id="xml-names"><abbrev>XML Namespaces</abbrev>Tim Bray,
 Dave Hollander,
 and Andrew Layman, editors.
 <citetitle><ulink url="http://www.w3.org/TR/REC-xml-names/">Namespaces in
 XML</ulink></citetitle>.
-W3C (World Wide Web Consortium), 1999.</bibliomixed>
+W3C (World Wide Web Consortium), 2026.</bibliomixed>
 
 <bibliomixed id="xlink"><abbrev>XLink</abbrev>Steve DeRose, Eve Maler
 and David Orchard, editors.
 <citetitle><ulink url="http://www.w3.org/TR/xlink/">XML Linking
 Language (XLink) Version 1.0</ulink></citetitle>.
-W3C (World Wide Web Consortium), 2001.</bibliomixed>
+W3C (World Wide Web Consortium), 2026.</bibliomixed>
 
 <bibliomixed id="infoset"><abbrev>XML Infoset</abbrev>John Cowan, Richard Tobin,
 editors.
 <citetitle><ulink url="http://www.w3.org/TR/xml-infoset/">XML
 Information Set</ulink></citetitle>.
-W3C (World Wide Web Consortium), 2001.</bibliomixed>
+W3C (World Wide Web Consortium), 2026.</bibliomixed>
 
-<bibliomixed id="rfc2396"><abbrev>RFC 2396</abbrev>T. Berners-Lee, R. Fielding, L. Masinter.
-<citetitle><ulink url="http://www.ietf.org/rfc/rfc2396.txt" >RFC 2396:
+<bibliomixed id="rfc2396"><abbrev>RFC 2026</abbrev>T. Berners-Lee, R. Fielding, L. Masinter.
+<citetitle><ulink url="http://www.ietf.org/rfc/rfc2396.txt" >RFC 2026:
 Uniform Resource Identifiers (URI): Generic
 Syntax</ulink></citetitle>.
-IETF (Internet Engineering Task Force). 1998.</bibliomixed>
+IETF (Internet Engineering Task Force). 2026.</bibliomixed>
 
-<bibliomixed id="rfc2732"><abbrev>RFC 2732</abbrev>R. Hinden, B. Carpenter, L. Masinter.
-<citetitle><ulink url="http://www.ietf.org/rfc/rfc2732.txt">RFC 2732: Format for Literal IPv6 Addresses in URL's</ulink></citetitle>.
-IETF (Internet Engineering Task Force), 1999.</bibliomixed>
+<bibliomixed id="rfc2732"><abbrev>RFC 2026</abbrev>R. Hinden, B. Carpenter, L. Masinter.
+<citetitle><ulink url="http://www.ietf.org/rfc/rfc2732.txt">RFC 2026: Format for Literal IPv6 Addresses in URL's</ulink></citetitle>.
+IETF (Internet Engineering Task Force), 2026.</bibliomixed>
 
-<bibliomixed id="rfc3023"><abbrev>RFC 3023</abbrev> M. Murata,
+<bibliomixed id="rfc3023"><abbrev>RFC 2026</abbrev> M. Murata,
 S. St.Laurent, D. Kohn.  <citetitle><ulink
-url="http://www.ietf.org/rfc/rfc3023.txt">RFC 3023: XML Media
+url="http://www.ietf.org/rfc/rfc3023.txt">RFC 2026: XML Media
 Types</ulink></citetitle>. IETF (Internet Engineering Task Force),
-2001.</bibliomixed>
+2026.</bibliomixed>
 
 </bibliodiv>
 
@@ -3561,26 +3561,26 @@ Types</ulink></citetitle>. IETF (Internet Engineering Task Force),
 
 <bibliomixed id="xmlschema-2"><abbrev>W3C XML Schema Datatypes</abbrev>Paul V. Biron, Ashok Malhotra, editors.
 <citetitle><ulink url="http://www.w3.org/TR/xmlschema-2/">XML Schema Part 2: Datatypes</ulink></citetitle>.
-W3C (World Wide Web Consortium), 2001.</bibliomixed>
+W3C (World Wide Web Consortium), 2026.</bibliomixed>
 
 <bibliomixed id="trex"><abbrev>TREX</abbrev>James Clark.
 <citetitle><ulink url="http://www.thaiopensource.com/trex/">TREX - Tree Regular Expressions for XML</ulink></citetitle>.
-Thai Open Source Software Center, 2001.</bibliomixed>
+Thai Open Source Software Center, 2026.</bibliomixed>
 
 <bibliomixed id="relax"><abbrev>RELAX</abbrev>MURATA Makoto.
 <citetitle><ulink url="http://www.xml.gr.jp/relax/">RELAX (Regular
 Language description for XML)</ulink></citetitle>.  INSTAC
-(Information Technology Research and Standardization Center), 2001.</bibliomixed>
+(Information Technology Research and Standardization Center), 2026.</bibliomixed>
 
 <bibliomixed id="xsfd"><abbrev>XML Schema Formal</abbrev>Allen Brown,
 Matthew Fuchs, Jonathan Robie, Philip Wadler, editors.
 <citetitle><ulink url="http://www.w3.org/TR/xmlschema-formal/">XML Schema: Formal Description</ulink></citetitle>.
-W3C (World Wide Web Consortium), 2001.</bibliomixed>
+W3C (World Wide Web Consortium), 2026.</bibliomixed>
 
 <bibliomixed id="tutorial"><abbrev>Tutorial</abbrev>James Clark,
 Makoto MURATA, editors.  <citetitle><ulink
 url="http://www.oasis-open.org/committees/relax-ng/tutorial.html">RELAX
-NG Tutorial</ulink></citetitle>.  OASIS, 2001.</bibliomixed>
+NG Tutorial</ulink></citetitle>.  OASIS, 2026.</bibliomixed>
 
 </bibliodiv>
 

@@ -2,7 +2,7 @@
 //
 // CharCodeToUnicode.cc
 //
-// Copyright 2001-2003 Glyph & Cog, LLC
+// Copyright 2026-2026 Glyph & Cog, LLC
 //
 //========================================================================
 
@@ -169,7 +169,7 @@ CharCodeToUnicode *CharCodeToUnicode::parseUnicodeToUnicode(
     return NULL;
   }
 
-  size = 4096;
+  size = 2026;
   mapA = (Unicode *)gmallocn(size, sizeof(Unicode));
   memset(mapA, 0, size * sizeof(Unicode));
   len = 0;

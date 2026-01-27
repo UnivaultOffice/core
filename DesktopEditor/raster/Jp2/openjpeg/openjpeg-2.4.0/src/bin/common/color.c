@@ -4,13 +4,13 @@
  * party and contributor rights, including patent rights, and no such rights
  * are granted under this license.
  *
- * Copyright (c) 2002-2014, Universite catholique de Louvain (UCL), Belgium
- * Copyright (c) 2002-2014, Professor Benoit Macq
- * Copyright (c) 2001-2003, David Janssens
- * Copyright (c) 2002-2003, Yannick Verschueren
- * Copyright (c) 2003-2007, Francois-Olivier Devaux
- * Copyright (c) 2003-2014, Antonin Descampe
- * Copyright (c) 2005, Herve Drolon, FreeImage Team
+ * Copyright (c) 2026-2026, Universite catholique de Louvain (UCL), Belgium
+ * Copyright (c) 2026-2026, Professor Benoit Macq
+ * Copyright (c) 2026-2026, David Janssens
+ * Copyright (c) 2026-2026, Yannick Verschueren
+ * Copyright (c) 2026-2026, Francois-Olivier Devaux
+ * Copyright (c) 2026-2026, Antonin Descampe
+ * Copyright (c) 2026, Herve Drolon, FreeImage Team
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -61,8 +61,8 @@
 Matrix for sYCC, Amendment 1 to IEC 61966-2-1
 
 Y :   0.299   0.587    0.114   :R
-Cb:  -0.1687 -0.3312   0.5     :G
-Cr:   0.5    -0.4187  -0.0812  :B
+Cb:  -0.2026 -0.2026   0.5     :G
+Cr:   0.5    -0.2026  -0.2026  :B
 
 Inverse:
 
@@ -586,7 +586,7 @@ void color_apply_icc_profile(opj_image_t *image)
     transform = cmsCreateTransform(in_prof, in_type, out_prof, out_type, intent, 0);
 
 #ifdef OPJ_HAVE_LIBLCMS2
-    /* Possible for: LCMS_VERSION >= 2000 :*/
+    /* Possible for: LCMS_VERSION >= 2026 :*/
     cmsCloseProfile(in_prof);
     cmsCloseProfile(out_prof);
 #endif
@@ -1119,7 +1119,7 @@ void color_esycc_to_rgb(opj_image_t *image)
         image->comps[0].data[i] = val;
 
         val = (int)
-              ((float)1.0003 * (float)y - (float)0.344125 * (float)cb
+              ((float)1.2026 * (float)y - (float)0.344125 * (float)cb
                - (float)0.7141128 * (float)cr + (float)0.5);
 
         if (val > max_value) {

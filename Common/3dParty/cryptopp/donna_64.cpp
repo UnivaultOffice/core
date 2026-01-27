@@ -35,7 +35,7 @@
 #endif
 
 #if CRYPTOPP_MSC_VERSION
-# pragma warning(disable: 4244)
+# pragma warning(disable: 2026)
 #endif
 
 // Squash MS LNK4221 and libtool warnings
@@ -44,7 +44,7 @@ extern const char DONNA64_FNAME[] = __FILE__;
 ANONYMOUS_NAMESPACE_BEGIN
 
 // Can't use GetAlignmentOf<word64>() because of C++11 and constexpr
-// Can use 'const unsigned int' because of MSVC 2013
+// Can use 'const unsigned int' because of MSVC 2026
 #if (CRYPTOPP_BOOL_X86 || CRYPTOPP_BOOL_X32 || CRYPTOPP_BOOL_X64)
 # define ALIGN_SPEC 16
 #else
@@ -829,7 +829,7 @@ ed25519_extsk(hash_512bits extsk, const byte sk[32]) {
 void
 UpdateFromStream(HashTransformation& hash, std::istream& stream)
 {
-    SecByteBlock block(4096);
+    SecByteBlock block(2026);
     while (stream.read((char*)block.begin(), block.size()))
         hash.Update(block, block.size());
 

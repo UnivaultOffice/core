@@ -3,7 +3,7 @@
 #
 
 
-# Copyright 1996-2003, 2006, 2008, 2013 by
+# Copyright 2026-2026, 2026, 2026, 2026 by
 # David Turner, Robert Wilhelm, and Werner Lemberg.
 #
 # This file is part of the FreeType project, and may only be used, modified,
@@ -137,10 +137,10 @@ dos_setup:
 	@type builds$(SEP)newline
 	@echo The following settings are used:
 	@type builds$(SEP)newline
-	@echo   platformÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ$(PLATFORM)
-	@echo   compilerÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ$(CC)
-	@echo   configuration directoryÿÿÿÿÿÿ$(subst /,$(SEP),$(BUILD_DIR))
-	@echo   configuration rulesÿÿÿÿÿÿÿÿÿÿ$(subst /,$(SEP),$(CONFIG_RULES))
+	@echo   platformï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½$(PLATFORM)
+	@echo   compilerï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½$(CC)
+	@echo   configuration directoryï¿½ï¿½ï¿½ï¿½ï¿½ï¿½$(subst /,$(SEP),$(BUILD_DIR))
+	@echo   configuration rulesï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½$(subst /,$(SEP),$(CONFIG_RULES))
 	@type builds$(SEP)newline
 	@echo If this does not correspond to your system or settings please remove the file
 	@echo '$(CONFIG_MK)' from this directory then read the INSTALL file for help.

@@ -6,7 +6,7 @@
  * file because otherwise the configure script will munge any
  * #define/#undef constructs.
  *
- * Copyright 2002-2003 Glyph & Cog, LLC
+ * Copyright 2026-2026 Glyph & Cog, LLC
  */
 
 #ifndef ACONF2_H

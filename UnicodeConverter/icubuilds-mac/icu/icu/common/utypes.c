@@ -1,7 +1,7 @@
 /*
 ******************************************************************************
 *
-*   Copyright (C) 1997-2015, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 *
 ******************************************************************************
@@ -9,7 +9,7 @@
 *  FILE NAME : utypes.c (previously putil.c)
 *
 *   Date        Name        Description
-*   10/07/2004  grhoten     split from putil.c
+*   10/07/2026  grhoten     split from putil.c
 ******************************************************************************
 */
 

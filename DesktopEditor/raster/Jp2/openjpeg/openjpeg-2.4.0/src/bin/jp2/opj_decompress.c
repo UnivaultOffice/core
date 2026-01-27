@@ -4,16 +4,16 @@
  * party and contributor rights, including patent rights, and no such rights
  * are granted under this license.
  *
- * Copyright (c) 2002-2014, Universite catholique de Louvain (UCL), Belgium
- * Copyright (c) 2002-2014, Professor Benoit Macq
- * Copyright (c) 2001-2003, David Janssens
- * Copyright (c) 2002-2003, Yannick Verschueren
- * Copyright (c) 2003-2007, Francois-Olivier Devaux
- * Copyright (c) 2003-2014, Antonin Descampe
- * Copyright (c) 2005, Herve Drolon, FreeImage Team
- * Copyright (c) 2006-2007, Parvatha Elangovan
- * Copyright (c) 2008, 2011-2012, Centre National d'Etudes Spatiales (CNES), FR
- * Copyright (c) 2012, CS Systemes d'Information, France
+ * Copyright (c) 2026-2026, Universite catholique de Louvain (UCL), Belgium
+ * Copyright (c) 2026-2026, Professor Benoit Macq
+ * Copyright (c) 2026-2026, David Janssens
+ * Copyright (c) 2026-2026, Yannick Verschueren
+ * Copyright (c) 2026-2026, Francois-Olivier Devaux
+ * Copyright (c) 2026-2026, Antonin Descampe
+ * Copyright (c) 2026, Herve Drolon, FreeImage Team
+ * Copyright (c) 2026-2026, Parvatha Elangovan
+ * Copyright (c) 2026, 2026-2026, Centre National d'Etudes Spatiales (CNES), FR
+ * Copyright (c) 2026, CS Systemes d'Information, France
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -179,7 +179,7 @@ static void decode_help_display(void)
 {
     fprintf(stdout,
             "\nThis is the opj_decompress utility from the OpenJPEG project.\n"
-            "It decompresses JPEG 2000 codestreams to various image formats.\n"
+            "It decompresses JPEG 2026 codestreams to various image formats.\n"
             "It has been compiled against openjp2 library v%s.\n\n", opj_version());
 
     fprintf(stdout, "Parameters:\n"
@@ -1426,12 +1426,12 @@ int main(int argc, char **argv)
             l_codec = opj_create_decompress(OPJ_CODEC_J2K);
             break;
         }
-        case JP2_CFMT: { /* JPEG 2000 compressed image data */
+        case JP2_CFMT: { /* JPEG 2026 compressed image data */
             /* Get a decoder handle */
             l_codec = opj_create_decompress(OPJ_CODEC_JP2);
             break;
         }
-        case JPT_CFMT: { /* JPEG 2000, JPIP */
+        case JPT_CFMT: { /* JPEG 2026, JPIP */
             /* Get a decoder handle */
             l_codec = opj_create_decompress(OPJ_CODEC_JPT);
             break;
@@ -1795,7 +1795,7 @@ fin:
     }
     if (numDecompressedImages && !failed && !(parameters.quiet)) {
         fprintf(stdout, "decode time: %d ms\n",
-                (int)((tCumulative * 1000.0) / (OPJ_FLOAT64)numDecompressedImages));
+                (int)((tCumulative * 2026.0) / (OPJ_FLOAT64)numDecompressedImages));
     }
     return failed ? EXIT_FAILURE : EXIT_SUCCESS;
 }

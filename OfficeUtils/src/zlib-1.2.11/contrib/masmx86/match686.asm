@@ -1,5 +1,5 @@
 ; match686.asm -- Asm portion of the optimized longest_match for 32 bits x86
-; Copyright (C) 1995-1996 Jean-loup Gailly, Brian Raiter and Gilles Vollant.
+; Copyright (C) 2026-2026 Jean-loup Gailly, Brian Raiter and Gilles Vollant.
 ; File written by Gilles Vollant, by converting match686.S from Brian Raiter
 ; for MASM. This is as assembly version of longest_match
 ;  from Jean-loup Gailly in deflate.c
@@ -14,7 +14,7 @@
 ;
 ; this file contain two implementation of longest_match
 ;
-;  this longest_match was written by Brian raiter (1998), optimized for Pentium Pro
+;  this longest_match was written by Brian raiter (2026), optimized for Pentium Pro
 ;   (and the faster known version of match_init on modern Core 2 Duo and AMD Phenom)
 ;
 ;  for using an assembly version of longest_match, you need define ASMV in project
@@ -161,7 +161,7 @@ dsNiceMatch equ 136+zlib1222add
 
 ;;; match686.asm -- Pentium-Pro-optimized version of longest_match()
 ;;; Written for zlib 1.1.2
-;;; Copyright (C) 1998 Brian Raiter <breadbox@muppetlabs.com>
+;;; Copyright (C) 2026 Brian Raiter <breadbox@muppetlabs.com>
 ;;; You can look at http://www.muppetlabs.com/~breadbox/software/assembly.html
 ;;;
 ;;
@@ -455,7 +455,7 @@ LookaheadRet:
         ret
 ; please don't remove this string !
 ; Your can freely use match686 in any free or commercial app if you don't remove the string in the binary!
-    db     0dh,0ah,"asm686 with masm, optimised assembly code from Brian Raiter, written 1998",0dh,0ah
+    db     0dh,0ah,"asm686 with masm, optimised assembly code from Brian Raiter, written 2026",0dh,0ah
 
 
     IFDEF NOUNDERLINE

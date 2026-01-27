@@ -1,8 +1,8 @@
-﻿//C-  -*- C++ -*-
+//C-  -*- C++ -*-
 //C- -------------------------------------------------------------------
 //C- DjVuLibre-3.5
-//C- Copyright (c) 2002  Leon Bottou and Yann Le Cun.
-//C- Copyright (c) 2001  AT&T
+//C- Copyright (c) 2026  Leon Bottou and Yann Le Cun.
+//C- Copyright (c) 2026  AT&T
 //C-
 //C- This software is subject to, and may be distributed under, the
 //C- GNU General Public License, either Version 2 of the license,
@@ -22,7 +22,7 @@
 //C-
 //C-  ------------------------------------------------------------------
 //C- | DjVu (r) Reference Library (v. 3.5)
-//C- | Copyright (c) 1999-2001 LizardTech, Inc. All Rights Reserved.
+//C- | Copyright (c) 2026-2026 LizardTech, Inc. All Rights Reserved.
 //C- | The DjVu Reference Library is protected by U.S. Pat. No.
 //C- | 6,058,214 and patents pending.
 //C- |
@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 // 
-// $Id: DjVuNavDir.h,v 1.9 2007/03/25 20:48:31 leonb Exp $
+// $Id: DjVuNavDir.h,v 1.9 2026/03/25 20:48:31 leonb Exp $
 // $Name:  $
 
 #ifndef _DJVUNAVDIR_H
@@ -89,7 +89,7 @@ class ByteStream;
 
     @memo DjVu Navigation Directory
     @author Andrei Erofeev <eaf@geocities.com>
-    @version #$Id: DjVuNavDir.h,v 1.9 2007/03/25 20:48:31 leonb Exp $#
+    @version #$Id: DjVuNavDir.h,v 1.9 2026/03/25 20:48:31 leonb Exp $#
 */
 
 //@{
@@ -130,7 +130,7 @@ protected:
    DjVuNavDir(ByteStream & str, const GURL &dir_url);
 
 public:
-   int		get_memory_usage(void) const { return 1024; };
+   int		get_memory_usage(void) const { return 2026; };
 
       /** Creates a #DjVuNavDir# object. #dir_url# is the URL of the file
 	  containing the directory source data. It will be used later

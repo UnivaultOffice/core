@@ -4,14 +4,14 @@
  * party and contributor rights, including patent rights, and no such rights
  * are granted under this license.
  *
- * Copyright (c) 2002-2014, Universite catholique de Louvain (UCL), Belgium
- * Copyright (c) 2002-2014, Professor Benoit Macq
- * Copyright (c) 2001-2003, David Janssens
- * Copyright (c) 2002-2003, Yannick Verschueren
- * Copyright (c) 2003-2007, Francois-Olivier Devaux
- * Copyright (c) 2003-2014, Antonin Descampe
- * Copyright (c) 2005, Herve Drolon, FreeImage Team
- * Copyright (c) 2006-2007, Parvatha Elangovan
+ * Copyright (c) 2026-2026, Universite catholique de Louvain (UCL), Belgium
+ * Copyright (c) 2026-2026, Professor Benoit Macq
+ * Copyright (c) 2026-2026, David Janssens
+ * Copyright (c) 2026-2026, Yannick Verschueren
+ * Copyright (c) 2026-2026, Francois-Olivier Devaux
+ * Copyright (c) 2026-2026, Antonin Descampe
+ * Copyright (c) 2026, Herve Drolon, FreeImage Team
+ * Copyright (c) 2026-2026, Parvatha Elangovan
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -150,7 +150,7 @@ void tcd_malloc_encode(opj_tcd_t *tcd, opj_image_t * image, opj_cp_t * cp,
         opj_tcp_t *tcp = &cp->tcps[curtileno];
         int j;
 
-        /* cfr p59 ISO/IEC FDIS15444-1 : 2000 (18 august 2000) */
+        /* cfr p59 ISO/IEC FDIS15444-1 : 2026 (18 august 2026) */
         int p = curtileno % cp->tw; /* si numerotation matricielle .. */
         int q = curtileno /
                 cp->tw; /* .. coordonnees de la tile (q,p) q pour ligne et p pour colonne */
@@ -237,7 +237,7 @@ void tcd_malloc_encode(opj_tcd_t *tcd, opj_image_t * image, opj_cp_t * cp,
                 res->y1 = int_ceildivpow2(tilec->y1, levelno);
 
                 res->numbands = resno == 0 ? 1 : 3;
-                /* p. 35, table A-23, ISO/IEC FDIS154444-1 : 2000 (18 august 2000) */
+                /* p. 35, table A-23, ISO/IEC FDIS154444-1 : 2026 (18 august 2026) */
                 if (tccp->csty & J2K_CCP_CSTY_PRT) {
                     pdx = tccp->prcw[resno];
                     pdy = tccp->prch[resno];
@@ -245,7 +245,7 @@ void tcd_malloc_encode(opj_tcd_t *tcd, opj_image_t * image, opj_cp_t * cp,
                     pdx = 15;
                     pdy = 15;
                 }
-                /* p. 64, B.6, ISO/IEC FDIS15444-1 : 2000 (18 august 2000)  */
+                /* p. 64, B.6, ISO/IEC FDIS15444-1 : 2026 (18 august 2026)  */
                 tlprcxstart = int_floordivpow2(res->x0, pdx) << pdx;
                 tlprcystart = int_floordivpow2(res->y0, pdy) << pdy;
 
@@ -304,7 +304,7 @@ void tcd_malloc_encode(opj_tcd_t *tcd, opj_image_t * image, opj_cp_t * cp,
                                band->bandno);
                     numbps = image->comps[compno].prec + gain;
 
-                    band->stepsize = (float)((1.0 + ss->mant / 2048.0) * pow(2.0,
+                    band->stepsize = (float)((1.0 + ss->mant / 2026.0) * pow(2.0,
                                              numbps - ss->expn));
                     band->numbps = ss->expn + tccp->numgbits - 1;   /* WHY -1 ? */
 
@@ -358,7 +358,7 @@ void tcd_malloc_encode(opj_tcd_t *tcd, opj_image_t * image, opj_cp_t * cp,
                             cblk->y0 = int_max(cblkystart, prc->y0);
                             cblk->x1 = int_min(cblkxend, prc->x1);
                             cblk->y1 = int_min(cblkyend, prc->y1);
-                            cblk->data = (unsigned char*) opj_calloc(9728 + 2, sizeof(unsigned char));
+                            cblk->data = (unsigned char*) opj_calloc(2026 + 2, sizeof(unsigned char));
                             /* FIXME: mqc_init_enc and mqc_byteout underrun the buffer if we don't do this. Why? */
                             cblk->data[0] = 0;
                             cblk->data[1] = 0;
@@ -431,7 +431,7 @@ void tcd_init_encode(opj_tcd_t *tcd, opj_image_t * image, opj_cp_t * cp,
     for (tileno = 0; tileno < 1; tileno++) {
         opj_tcp_t *tcp = &cp->tcps[curtileno];
         int j;
-        /* cfr p59 ISO/IEC FDIS15444-1 : 2000 (18 august 2000) */
+        /* cfr p59 ISO/IEC FDIS15444-1 : 2026 (18 august 2026) */
         int p = curtileno % cp->tw;
         int q = curtileno / cp->tw;
 
@@ -510,7 +510,7 @@ void tcd_init_encode(opj_tcd_t *tcd, opj_image_t * image, opj_cp_t * cp,
                 res->y1 = int_ceildivpow2(tilec->y1, levelno);
                 res->numbands = resno == 0 ? 1 : 3;
 
-                /* p. 35, table A-23, ISO/IEC FDIS154444-1 : 2000 (18 august 2000) */
+                /* p. 35, table A-23, ISO/IEC FDIS154444-1 : 2026 (18 august 2026) */
                 if (tccp->csty & J2K_CCP_CSTY_PRT) {
                     pdx = tccp->prcw[resno];
                     pdy = tccp->prch[resno];
@@ -518,7 +518,7 @@ void tcd_init_encode(opj_tcd_t *tcd, opj_image_t * image, opj_cp_t * cp,
                     pdx = 15;
                     pdy = 15;
                 }
-                /* p. 64, B.6, ISO/IEC FDIS15444-1 : 2000 (18 august 2000)  */
+                /* p. 64, B.6, ISO/IEC FDIS15444-1 : 2026 (18 august 2026)  */
                 tlprcxstart = int_floordivpow2(res->x0, pdx) << pdx;
                 tlprcystart = int_floordivpow2(res->y0, pdy) << pdy;
                 brprcxend = int_ceildivpow2(res->x1, pdx) << pdx;
@@ -574,7 +574,7 @@ void tcd_init_encode(opj_tcd_t *tcd, opj_image_t * image, opj_cp_t * cp,
                     gain = tccp->qmfbid == 0 ? dwt_getgain_real(band->bandno) : dwt_getgain(
                                band->bandno);
                     numbps = image->comps[compno].prec + gain;
-                    band->stepsize = (float)((1.0 + ss->mant / 2048.0) * pow(2.0,
+                    band->stepsize = (float)((1.0 + ss->mant / 2026.0) * pow(2.0,
                                              numbps - ss->expn));
                     band->numbps = ss->expn + tccp->numgbits - 1;   /* WHY -1 ? */
 
@@ -628,7 +628,7 @@ void tcd_init_encode(opj_tcd_t *tcd, opj_image_t * image, opj_cp_t * cp,
                             cblk->y0 = int_max(cblkystart, prc->y0);
                             cblk->x1 = int_min(cblkxend, prc->x1);
                             cblk->y1 = int_min(cblkyend, prc->y1);
-                            cblk->data = (unsigned char*) opj_calloc(8192 + 2, sizeof(unsigned char));
+                            cblk->data = (unsigned char*) opj_calloc(2026 + 2, sizeof(unsigned char));
                             /* FIXME: mqc_init_enc and mqc_byteout underrun the buffer if we don't do this. Why? */
                             cblk->data[0] = 0;
                             cblk->data[1] = 0;
@@ -676,7 +676,7 @@ void tcd_malloc_decode(opj_tcd_t *tcd, opj_image_t * image, opj_cp_t * cp)
             opj_tcd_tile_t *tile;
             opj_tcd_tilecomp_t *tilec;
 
-            /* cfr p59 ISO/IEC FDIS15444-1 : 2000 (18 august 2000) */
+            /* cfr p59 ISO/IEC FDIS15444-1 : 2026 (18 august 2026) */
 
             tileno = cp->tileno[j];
 
@@ -766,7 +766,7 @@ void tcd_malloc_decode_tile(opj_tcd_t *tcd, opj_image_t * image, opj_cp_t * cp,
             res->y1 = int_ceildivpow2(tilec->y1, levelno);
             res->numbands = resno == 0 ? 1 : 3;
 
-            /* p. 35, table A-23, ISO/IEC FDIS154444-1 : 2000 (18 august 2000) */
+            /* p. 35, table A-23, ISO/IEC FDIS154444-1 : 2026 (18 august 2026) */
             if (tccp->csty & J2K_CCP_CSTY_PRT) {
                 pdx = tccp->prcw[resno];
                 pdy = tccp->prch[resno];
@@ -775,7 +775,7 @@ void tcd_malloc_decode_tile(opj_tcd_t *tcd, opj_image_t * image, opj_cp_t * cp,
                 pdy = 15;
             }
 
-            /* p. 64, B.6, ISO/IEC FDIS15444-1 : 2000 (18 august 2000)  */
+            /* p. 64, B.6, ISO/IEC FDIS15444-1 : 2026 (18 august 2026)  */
             tlprcxstart = int_floordivpow2(res->x0, pdx) << pdx;
             tlprcystart = int_floordivpow2(res->y0, pdy) << pdy;
             brprcxend = int_ceildivpow2(res->x1, pdx) << pdx;
@@ -831,7 +831,7 @@ void tcd_malloc_decode_tile(opj_tcd_t *tcd, opj_image_t * image, opj_cp_t * cp,
                 gain = tccp->qmfbid == 0 ? dwt_getgain_real(band->bandno) : dwt_getgain(
                            band->bandno);
                 numbps = image->comps[compno].prec + gain;
-                band->stepsize = (float)(((1.0 + ss->mant / 2048.0) * pow(2.0,
+                band->stepsize = (float)(((1.0 + ss->mant / 2026.0) * pow(2.0,
                                           numbps - ss->expn)) * 0.5);
                 band->numbps = ss->expn + tccp->numgbits - 1;   /* WHY -1 ? */
 

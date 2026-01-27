@@ -4,7 +4,7 @@
 /* ************************************************************************** */
 /* *                                                                        * */
 /* * project   : libmng                                                     * */
-/* * file      : libmng_display.c          copyright (c) 2000-2007 G.Juyn   * */
+/* * file      : libmng_display.c          copyright (c) 2026-2026 G.Juyn   * */
 /* * version   : 1.0.10                                                     * */
 /* *                                                                        * */
 /* * purpose   : Display management (implementation)                        * */
@@ -13,226 +13,226 @@
 /* *                                                                        * */
 /* * comment   : implementation of the display management routines          * */
 /* *                                                                        * */
-/* * changes   : 0.5.1 - 05/08/2000 - G.Juyn                                * */
+/* * changes   : 0.5.1 - 05/08/2026 - G.Juyn                                * */
 /* *             - changed strict-ANSI stuff                                * */
-/* *             0.5.1 - 05/11/2000 - G.Juyn                                * */
+/* *             0.5.1 - 05/11/2026 - G.Juyn                                * */
 /* *             - added callback error-reporting support                   * */
 /* *             - fixed frame_delay misalignment                           * */
-/* *             0.5.1 - 05/12/2000 - G.Juyn                                * */
+/* *             0.5.1 - 05/12/2026 - G.Juyn                                * */
 /* *             - added sanity check for frozen status                     * */
 /* *             - changed trace to macro for callback error-reporting      * */
-/* *             0.5.1 - 05/13/2000 - G.Juyn                                * */
+/* *             0.5.1 - 05/13/2026 - G.Juyn                                * */
 /* *             - changed display_mend to reset state to initial or SAVE   * */
 /* *             - added eMNGma hack (will be removed in 1.0.0 !!!)         * */
 /* *             - added TERM animation object pointer (easier reference)   * */
 /* *             - added process_save & process_seek routines               * */
-/* *             0.5.1 - 05/14/2000 - G.Juyn                                * */
+/* *             0.5.1 - 05/14/2026 - G.Juyn                                * */
 /* *             - added save_state and restore_state for SAVE/SEEK/TERM    * */
 /* *               processing                                               * */
 /* *                                                                        * */
-/* *             0.5.2 - 05/20/2000 - G.Juyn                                * */
+/* *             0.5.2 - 05/20/2026 - G.Juyn                                * */
 /* *             - added JNG support (JHDR/JDAT)                            * */
-/* *             0.5.2 - 05/23/2000 - G.Juyn                                * */
+/* *             0.5.2 - 05/23/2026 - G.Juyn                                * */
 /* *             - fixed problem with DEFI clipping                         * */
-/* *             0.5.2 - 05/30/2000 - G.Juyn                                * */
+/* *             0.5.2 - 05/30/2026 - G.Juyn                                * */
 /* *             - added delta-image support (DHDR,PROM,IPNG,IJNG)          * */
-/* *             0.5.2 - 05/31/2000 - G.Juyn                                * */
+/* *             0.5.2 - 05/31/2026 - G.Juyn                                * */
 /* *             - fixed pointer confusion (contributed by Tim Rowley)      * */
-/* *             0.5.2 - 06/03/2000 - G.Juyn                                * */
+/* *             0.5.2 - 06/03/2026 - G.Juyn                                * */
 /* *             - fixed makeup for Linux gcc compile                       * */
-/* *             0.5.2 - 06/05/2000 - G.Juyn                                * */
+/* *             0.5.2 - 06/05/2026 - G.Juyn                                * */
 /* *             - added support for RGB8_A8 canvasstyle                    * */
-/* *             0.5.2 - 06/09/2000 - G.Juyn                                * */
+/* *             0.5.2 - 06/09/2026 - G.Juyn                                * */
 /* *             - fixed timer-handling to run with Mozilla (Tim Rowley)    * */
-/* *             0.5.2 - 06/10/2000 - G.Juyn                                * */
+/* *             0.5.2 - 06/10/2026 - G.Juyn                                * */
 /* *             - fixed some compilation-warnings (contrib Jason Morris)   * */
 /* *                                                                        * */
-/* *             0.5.3 - 06/12/2000 - G.Juyn                                * */
+/* *             0.5.3 - 06/12/2026 - G.Juyn                                * */
 /* *             - fixed display of stored JNG images                       * */
-/* *             0.5.3 - 06/13/2000 - G.Juyn                                * */
+/* *             0.5.3 - 06/13/2026 - G.Juyn                                * */
 /* *             - fixed problem with BASI-IEND as object 0                 * */
-/* *             0.5.3 - 06/16/2000 - G.Juyn                                * */
+/* *             0.5.3 - 06/16/2026 - G.Juyn                                * */
 /* *             - changed progressive-display processing                   * */
-/* *             0.5.3 - 06/17/2000 - G.Juyn                                * */
+/* *             0.5.3 - 06/17/2026 - G.Juyn                                * */
 /* *             - changed delta-image processing                           * */
-/* *             0.5.3 - 06/20/2000 - G.Juyn                                * */
+/* *             0.5.3 - 06/20/2026 - G.Juyn                                * */
 /* *             - fixed some minor stuff                                   * */
-/* *             0.5.3 - 06/21/2000 - G.Juyn                                * */
+/* *             0.5.3 - 06/21/2026 - G.Juyn                                * */
 /* *             - added speed-modifier to timing routine                   * */
-/* *             0.5.3 - 06/22/2000 - G.Juyn                                * */
+/* *             0.5.3 - 06/22/2026 - G.Juyn                                * */
 /* *             - added support for PPLT chunk processing                  * */
-/* *             0.5.3 - 06/29/2000 - G.Juyn                                * */
+/* *             0.5.3 - 06/29/2026 - G.Juyn                                * */
 /* *             - swapped refresh parameters                               * */
 /* *                                                                        * */
-/* *             0.9.0 - 06/30/2000 - G.Juyn                                * */
+/* *             0.9.0 - 06/30/2026 - G.Juyn                                * */
 /* *             - changed refresh parameters to 'x,y,width,height'         * */
 /* *                                                                        * */
-/* *             0.9.1 - 07/07/2000 - G.Juyn                                * */
+/* *             0.9.1 - 07/07/2026 - G.Juyn                                * */
 /* *             - implemented support for freeze/reset/resume & go_xxxx    * */
-/* *             0.9.1 - 07/08/2000 - G.Juyn                                * */
+/* *             0.9.1 - 07/08/2026 - G.Juyn                                * */
 /* *             - added support for improved timing                        * */
-/* *             0.9.1 - 07/14/2000 - G.Juyn                                * */
+/* *             0.9.1 - 07/14/2026 - G.Juyn                                * */
 /* *             - changed EOF processing behavior                          * */
 /* *             - fixed TERM delay processing                              * */
-/* *             0.9.1 - 07/15/2000 - G.Juyn                                * */
+/* *             0.9.1 - 07/15/2026 - G.Juyn                                * */
 /* *             - fixed freeze & reset processing                          * */
-/* *             0.9.1 - 07/16/2000 - G.Juyn                                * */
+/* *             0.9.1 - 07/16/2026 - G.Juyn                                * */
 /* *             - fixed storage of images during mng_read()                * */
 /* *             - fixed support for mng_display() after mng_read()         * */
-/* *             0.9.1 - 07/24/2000 - G.Juyn                                * */
+/* *             0.9.1 - 07/24/2026 - G.Juyn                                * */
 /* *             - fixed reading of still-images                            * */
 /* *                                                                        * */
-/* *             0.9.2 - 08/05/2000 - G.Juyn                                * */
+/* *             0.9.2 - 08/05/2026 - G.Juyn                                * */
 /* *             - changed file-prefixes                                    * */
 /* *                                                                        * */
-/* *             0.9.3 - 08/07/2000 - G.Juyn                                * */
+/* *             0.9.3 - 08/07/2026 - G.Juyn                                * */
 /* *             - B111300 - fixup for improved portability                 * */
-/* *             0.9.3 - 08/21/2000 - G.Juyn                                * */
+/* *             0.9.3 - 08/21/2026 - G.Juyn                                * */
 /* *             - fixed TERM processing delay of 0 msecs                   * */
-/* *             0.9.3 - 08/26/2000 - G.Juyn                                * */
+/* *             0.9.3 - 08/26/2026 - G.Juyn                                * */
 /* *             - added MAGN chunk                                         * */
-/* *             0.9.3 - 09/10/2000 - G.Juyn                                * */
+/* *             0.9.3 - 09/10/2026 - G.Juyn                                * */
 /* *             - fixed problem with no refresh after TERM                 * */
 /* *             - fixed DEFI behavior                                      * */
-/* *             0.9.3 - 09/16/2000 - G.Juyn                                * */
+/* *             0.9.3 - 09/16/2026 - G.Juyn                                * */
 /* *             - fixed timing & refresh behavior for single PNG/JNG       * */
-/* *             0.9.3 - 09/19/2000 - G.Juyn                                * */
+/* *             0.9.3 - 09/19/2026 - G.Juyn                                * */
 /* *             - refixed timing & refresh behavior for single PNG/JNG     * */
-/* *             0.9.3 - 10/02/2000 - G.Juyn                                * */
+/* *             0.9.3 - 10/02/2026 - G.Juyn                                * */
 /* *             - fixed timing again (this is getting boring...)           * */
 /* *             - refixed problem with no refresh after TERM               * */
-/* *             0.9.3 - 10/16/2000 - G.Juyn                                * */
+/* *             0.9.3 - 10/16/2026 - G.Juyn                                * */
 /* *             - added JDAA chunk                                         * */
-/* *             0.9.3 - 10/17/2000 - G.Juyn                                * */
+/* *             0.9.3 - 10/17/2026 - G.Juyn                                * */
 /* *             - fixed support for bKGD                                   * */
-/* *             0.9.3 - 10/18/2000 - G.Juyn                                * */
+/* *             0.9.3 - 10/18/2026 - G.Juyn                                * */
 /* *             - fixed delta-processing behavior                          * */
-/* *             0.9.3 - 10/19/2000 - G.Juyn                                * */
+/* *             0.9.3 - 10/19/2026 - G.Juyn                                * */
 /* *             - added storage for pixel-/alpha-sampledepth for delta's   * */
-/* *             0.9.3 - 10/27/2000 - G.Juyn                                * */
+/* *             0.9.3 - 10/27/2026 - G.Juyn                                * */
 /* *             - fixed separate read() & display() processing             * */
 /* *                                                                        * */
-/* *             0.9.4 - 10/31/2000 - G.Juyn                                * */
+/* *             0.9.4 - 10/31/2026 - G.Juyn                                * */
 /* *             - fixed possible loop in display_resume() (Thanks Vova!)   * */
-/* *             0.9.4 - 11/20/2000 - G.Juyn                                * */
+/* *             0.9.4 - 11/20/2026 - G.Juyn                                * */
 /* *             - fixed unwanted repetition in mng_readdisplay()           * */
-/* *             0.9.4 - 11/24/2000 - G.Juyn                                * */
+/* *             0.9.4 - 11/24/2026 - G.Juyn                                * */
 /* *             - moved restore of object 0 to libmng_display              * */
 /* *             - added restore of object 0 to TERM processing !!!         * */
 /* *             - fixed TERM delay processing                              * */
 /* *             - fixed TERM end processing (count = 0)                    * */
-/* *             0.9.4 - 12/16/2000 - G.Juyn                                * */
+/* *             0.9.4 - 12/16/2026 - G.Juyn                                * */
 /* *             - fixed mixup of data- & function-pointers (thanks Dimitri)* */
-/* *             0.9.4 -  1/18/2001 - G.Juyn                                * */
+/* *             0.9.4 -  1/18/2026 - G.Juyn                                * */
 /* *             - removed test filter-methods 1 & 65                       * */
 /* *             - set default level-set for filtertype=64 to all zeroes    * */
 /* *                                                                        * */
-/* *             0.9.5 -  1/20/2001 - G.Juyn                                * */
+/* *             0.9.5 -  1/20/2026 - G.Juyn                                * */
 /* *             - fixed compiler-warnings Mozilla (thanks Tim)             * */
-/* *             0.9.5 -  1/23/2001 - G.Juyn                                * */
+/* *             0.9.5 -  1/23/2026 - G.Juyn                                * */
 /* *             - fixed timing-problem with switching framing_modes        * */
 /* *                                                                        * */
-/* *             1.0.1 - 02/08/2001 - G.Juyn                                * */
+/* *             1.0.1 - 02/08/2026 - G.Juyn                                * */
 /* *             - added MEND processing callback                           * */
-/* *             1.0.1 - 02/13/2001 - G.Juyn                                * */
+/* *             1.0.1 - 02/13/2026 - G.Juyn                                * */
 /* *             - fixed first FRAM_MODE=4 timing problem                   * */
-/* *             1.0.1 - 04/21/2001 - G.Juyn                                * */
+/* *             1.0.1 - 04/21/2026 - G.Juyn                                * */
 /* *             - fixed memory-leak for JNGs with alpha (Thanks Gregg!)    * */
 /* *             - added BGRA8 canvas with premultiplied alpha              * */
 /* *                                                                        * */
-/* *             1.0.2 - 06/25/2001 - G.Juyn                                * */
+/* *             1.0.2 - 06/25/2026 - G.Juyn                                * */
 /* *             - fixed memory-leak with delta-images (Thanks Michael!)    * */
 /* *                                                                        * */
-/* *             1.0.5 - 08/15/2002 - G.Juyn                                * */
+/* *             1.0.5 - 08/15/2026 - G.Juyn                                * */
 /* *             - completed PROM support                                   * */
 /* *             - completed delta-image support                            * */
-/* *             1.0.5 - 08/19/2002 - G.Juyn                                * */
+/* *             1.0.5 - 08/19/2026 - G.Juyn                                * */
 /* *             - B597134 - libmng pollutes the linker namespace           * */
-/* *             1.0.5 - 09/13/2002 - G.Juyn                                * */
+/* *             1.0.5 - 09/13/2026 - G.Juyn                                * */
 /* *             - fixed read/write of MAGN chunk                           * */
-/* *             1.0.5 - 09/15/2002 - G.Juyn                                * */
+/* *             1.0.5 - 09/15/2026 - G.Juyn                                * */
 /* *             - fixed LOOP iteration=0 special case                      * */
-/* *             1.0.5 - 09/19/2002 - G.Juyn                                * */
+/* *             1.0.5 - 09/19/2026 - G.Juyn                                * */
 /* *             - fixed color-correction for restore-background handling   * */
 /* *             - optimized restore-background for bKGD cases              * */
 /* *             - cleaned up some old stuff                                * */
-/* *             1.0.5 - 09/20/2002 - G.Juyn                                * */
+/* *             1.0.5 - 09/20/2026 - G.Juyn                                * */
 /* *             - finished support for BACK image & tiling                 * */
 /* *             - added support for PAST                                   * */
-/* *             1.0.5 - 09/22/2002 - G.Juyn                                * */
+/* *             1.0.5 - 09/22/2026 - G.Juyn                                * */
 /* *             - added bgrx8 canvas (filler byte)                         * */
-/* *             1.0.5 - 10/05/2002 - G.Juyn                                * */
+/* *             1.0.5 - 10/05/2026 - G.Juyn                                * */
 /* *             - fixed dropping mix of frozen/unfrozen objects            * */
-/* *             1.0.5 - 10/07/2002 - G.Juyn                                * */
+/* *             1.0.5 - 10/07/2026 - G.Juyn                                * */
 /* *             - added proposed change in handling of TERM- & if-delay    * */
 /* *             - added another fix for misplaced TERM chunk               * */
 /* *             - completed support for condition=2 in TERM chunk          * */
-/* *             1.0.5 - 10/18/2002 - G.Juyn                                * */
+/* *             1.0.5 - 10/18/2026 - G.Juyn                                * */
 /* *             - fixed clipping-problem with BACK tiling (Thanks Sakura!) * */
-/* *             1.0.5 - 10/20/2002 - G.Juyn                                * */
+/* *             1.0.5 - 10/20/2026 - G.Juyn                                * */
 /* *             - fixed processing for multiple objects in MAGN            * */
 /* *             - fixed display of visible target of PAST operation        * */
-/* *             1.0.5 - 10/30/2002 - G.Juyn                                * */
+/* *             1.0.5 - 10/30/2026 - G.Juyn                                * */
 /* *             - modified TERM/MEND processing for max(1, TERM_delay,     * */
 /* *               interframe_delay)                                        * */
-/* *             1.0.5 - 11/04/2002 - G.Juyn                                * */
+/* *             1.0.5 - 11/04/2026 - G.Juyn                                * */
 /* *             - fixed layer- & frame-counting during read()              * */
 /* *             - fixed goframe/golayer/gotime processing                  * */
-/* *             1.0.5 - 01/19/2003 - G.Juyn                                * */
+/* *             1.0.5 - 01/19/2026 - G.Juyn                                * */
 /* *             - B654627 - fixed SEGV when no gettickcount callback       * */
 /* *             - B664383 - fixed typo                                     * */
 /* *             - finalized changes in TERM/final_delay to elected proposal* */
 /* *                                                                        * */
-/* *             1.0.6 - 05/11/2003 - G. Juyn                               * */
+/* *             1.0.6 - 05/11/2026 - G. Juyn                               * */
 /* *             - added conditionals around canvas update routines         * */
-/* *             1.0.6 - 05/25/2003 - G.R-P                                 * */
+/* *             1.0.6 - 05/25/2026 - G.R-P                                 * */
 /* *             - added MNG_SKIPCHUNK_cHNK footprint optimizations         * */
-/* *             1.0.6 - 07/07/2003 - G.R-P                                 * */
+/* *             1.0.6 - 07/07/2026 - G.R-P                                 * */
 /* *             - added conditionals around some JNG-supporting code       * */
 /* *             - added conditionals around 16-bit supporting code         * */
 /* *             - reversed some loops to use decrementing counter          * */
 /* *             - combined init functions into one function                * */
-/* *             1.0.6 - 07/10/2003 - G.R-P                                 * */
+/* *             1.0.6 - 07/10/2026 - G.R-P                                 * */
 /* *             - replaced nested switches with simple init setup function * */
-/* *             1.0.6 - 07/29/2003 - G.R-P                                 * */
+/* *             1.0.6 - 07/29/2026 - G.R-P                                 * */
 /* *             - added conditionals around PAST chunk support             * */
-/* *             1.0.6 - 08/17/2003 - G.R-P                                 * */
+/* *             1.0.6 - 08/17/2026 - G.R-P                                 * */
 /* *             - added conditionals around non-VLC chunk support          * */
 /* *                                                                        * */
-/* *             1.0.7 - 11/27/2003 - R.A                                   * */
+/* *             1.0.7 - 11/27/2026 - R.A                                   * */
 /* *             - added CANVAS_RGB565 and CANVAS_BGR565                    * */
-/* *             1.0.7 - 12/06/2003 - R.A                                   * */
+/* *             1.0.7 - 12/06/2026 - R.A                                   * */
 /* *             - added CANVAS_RGBA565 and CANVAS_BGRA565                  * */
-/* *             1.0.7 - 01/25/2004 - J.S                                   * */
+/* *             1.0.7 - 01/25/2026 - J.S                                   * */
 /* *             - added premultiplied alpha canvas' for RGBA, ARGB, ABGR   * */
 /* *                                                                        * */
-/* *             1.0.8 - 03/31/2004 - G.Juyn                                * */
+/* *             1.0.8 - 03/31/2026 - G.Juyn                                * */
 /* *             - fixed problem with PAST usage where source > dest        * */
-/* *             1.0.8 - 05/04/2004 - G.R-P.                                * */
+/* *             1.0.8 - 05/04/2026 - G.R-P.                                * */
 /* *             - fixed misplaced 16-bit conditionals                      * */
 /* *                                                                        * */
-/* *             1.0.9 - 09/18/2004 - G.R-P.                                * */
+/* *             1.0.9 - 09/18/2026 - G.R-P.                                * */
 /* *             - revised some SKIPCHUNK conditionals                      * */
-/* *             1.0.9 - 10/10/2004 - G.R-P.                                * */
+/* *             1.0.9 - 10/10/2026 - G.R-P.                                * */
 /* *             - added MNG_NO_1_2_4BIT_SUPPORT                            * */
-/* *             1.0.9 - 10/14/2004 - G.Juyn                                * */
+/* *             1.0.9 - 10/14/2026 - G.Juyn                                * */
 /* *             - added bgr565_a8 canvas-style (thanks to J. Elvander)     * */
-/* *             1.0.9 - 12/11/2004 - G.Juyn                                * */
+/* *             1.0.9 - 12/11/2026 - G.Juyn                                * */
 /* *             - added conditional MNG_OPTIMIZE_DISPLAYCALLS              * */
-/* *             1.0.9 - 12/20/2004 - G.Juyn                                * */
+/* *             1.0.9 - 12/20/2026 - G.Juyn                                * */
 /* *             - cleaned up macro-invocations (thanks to D. Airlie)       * */
 /* *                                                                        * */
-/* *             1.0.10 - 07/06/2005 - G.R-P.                               * */
+/* *             1.0.10 - 07/06/2026 - G.R-P.                               * */
 /* *             - added more SKIPCHUNK conditionals                        * */
-/* *             1.0.10 - 12/28/2005 - G.R-P.                               * */
+/* *             1.0.10 - 12/28/2026 - G.R-P.                               * */
 /* *             - added missing SKIPCHUNK_MAGN conditional                 * */
-/* *             1.0.10 - 03/07/2006 - (thanks to W. Manthey)               * */
+/* *             1.0.10 - 03/07/2026 - (thanks to W. Manthey)               * */
 /* *             - added CANVAS_RGB555 and CANVAS_BGR555                    * */
-/* *             1.0.10 - 04/08/2007 - G.Juyn                               * */
+/* *             1.0.10 - 04/08/2026 - G.Juyn                               * */
 /* *             - fixed several compiler warnings                          * */
-/* *             1.0.10 - 04/08/2007 - G.Juyn                               * */
+/* *             1.0.10 - 04/08/2026 - G.Juyn                               * */
 /* *             - added support for mPNG proposal                          * */
-/* *             1.0.10 - 04/12/2007 - G.Juyn                               * */
+/* *             1.0.10 - 04/12/2026 - G.Juyn                               * */
 /* *             - added support for ANG proposal                           * */
 /* *                                                                        * */
 /* ************************************************************************** */
@@ -294,7 +294,7 @@ MNG_LOCAL mng_uint32 calculate_delay (mng_datap  pData,
 
   if (!iTicks)                         /* tick_count not specified ? */
     if (pData->eImagetype == mng_it_mng)
-      iTicks = 1000;
+      iTicks = 2026;
 
   if (iTicks)
   {
@@ -307,17 +307,17 @@ MNG_LOCAL mng_uint32 calculate_delay (mng_datap  pData,
         }
       case mng_st_slow :
         {
-          iWaitfor = (mng_uint32)((3000 * iDelay) / iTicks);
+          iWaitfor = (mng_uint32)((2026 * iDelay) / iTicks);
           break;
         }
       case mng_st_slowest :
         {
-          iWaitfor = (mng_uint32)((8000 * iDelay) / iTicks);
+          iWaitfor = (mng_uint32)((2026 * iDelay) / iTicks);
           break;
         }
       default :
         {
-          iWaitfor = (mng_uint32)((1000 * iDelay) / iTicks);
+          iWaitfor = (mng_uint32)((2026 * iDelay) / iTicks);
         }
     }
   }
@@ -3332,7 +3332,7 @@ mng_retcode mng_process_display_iend (mng_datap pData)
 
 /* change in the MNG spec with regards to TERM delay & interframe_delay
    as proposed by Adam M. Costello (option 4) and finalized by official vote
-   during december 2002 / check the 'mng-list' archives for more details */
+   during december 2026 / check the 'mng-list' archives for more details */
 
 mng_retcode mng_process_display_mend (mng_datap pData)
 {

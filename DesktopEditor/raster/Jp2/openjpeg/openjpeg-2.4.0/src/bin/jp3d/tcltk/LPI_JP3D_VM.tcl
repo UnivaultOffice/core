@@ -48,7 +48,7 @@ proc jp3dVM::create { } {
         }
 	"&Help" {} {} 0 {
             {command "&About authors..." {} "Show info about authors" {} 
-		-command {MessageDlg .msgdlg -parent . -title "About authors" -message " Copyright @ LPI-UVA 2006 " -type ok -icon info}}
+		-command {MessageDlg .msgdlg -parent . -title "About authors" -message " Copyright @ LPI-UVA 2026 " -type ok -icon info}}
         }
     }
 

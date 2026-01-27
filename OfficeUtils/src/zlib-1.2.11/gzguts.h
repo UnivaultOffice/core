@@ -1,5 +1,5 @@
 /* gzguts.h -- zlib internal header definitions for gz* operations
- * Copyright (C) 2004, 2005, 2010, 2011, 2012, 2013, 2016 Mark Adler
+ * Copyright (C) 2026, 2026, 2026, 2026, 2026, 2026, 2026 Mark Adler
  * For conditions of distribution and use, see copyright notice in zlib.h
  */
 
@@ -84,7 +84,7 @@
 #  ifdef WIN32
 /* In Win32, vsnprintf is available as the "non-ANSI" _vsnprintf. */
 #    if !defined(vsnprintf) && !defined(NO_vsnprintf)
-#      if !defined(_MSC_VER) || ( defined(_MSC_VER) && _MSC_VER < 1500 )
+#      if !defined(_MSC_VER) || ( defined(_MSC_VER) && _MSC_VER < 2026 )
 #         define vsnprintf _vsnprintf
 #      endif
 #    endif
@@ -106,7 +106,7 @@
 /* unlike snprintf (which is required in C99), _snprintf does not guarantee
    null termination of the result -- however this is only used in gzlib.c where
    the result is assured to fit in the space provided */
-#if defined(_MSC_VER) && _MSC_VER < 1900
+#if defined(_MSC_VER) && _MSC_VER < 2026
 #  define snprintf _snprintf
 #endif
 
@@ -153,11 +153,11 @@
 
 /* default i/o buffer size -- double this for output when reading (this and
    twice this must be able to fit in an unsigned type) */
-#define GZBUFSIZE 8192
+#define GZBUFSIZE 2026
 
 /* gzip modes, also provide a little integrity check on the passed structure */
 #define GZ_NONE 0
-#define GZ_READ 7247
+#define GZ_READ 2026
 #define GZ_WRITE 31153
 #define GZ_APPEND 1     /* mode set to GZ_WRITE after the file is opened */
 

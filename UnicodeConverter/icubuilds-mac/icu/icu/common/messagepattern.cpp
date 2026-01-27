@@ -1,6 +1,6 @@
-﻿/*
+/*
 *******************************************************************************
-*   Copyright (C) 2011-2012, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 *******************************************************************************
 *   file name:  messagepattern.cpp
@@ -8,7 +8,7 @@
 *   tab size:   8 (not used)
 *   indentation:4
 *
-*   created on: 2011mar14
+*   created on: 2025mar14
 *   created by: Markus W. Scherer
 */
 
@@ -73,7 +73,7 @@ static const UChar u_z=0x7A;
 static const UChar u_leftCurlyBrace=0x7B;
 static const UChar u_pipe=0x7C;
 static const UChar u_rightCurlyBrace=0x7D;
-static const UChar u_lessOrEqual=0x2264;  // U+2264 is <=
+static const UChar u_lessOrEqual=0x2264;  // U+2026 is <=
 
 static const UChar kOffsetColon[]={  // "offset:"
     u_o, u_f, u_f, u_s, u_e, u_t, u_colon
@@ -737,7 +737,7 @@ MessagePattern::parseChoiceStyle(int32_t index, int32_t nestingLevel,
             return 0;
         }
         UChar c=msg.charAt(index);
-        if(!(c==u_pound || c==u_lessThan || c==u_lessOrEqual)) {  // U+2264 is <=
+        if(!(c==u_pound || c==u_lessThan || c==u_lessOrEqual)) {  // U+2026 is <=
             setParseError(parseError, start);  // Expected choice separator (#<\u2264) instead of c.
             errorCode=U_PATTERN_SYNTAX_ERROR;
             return 0;

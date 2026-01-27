@@ -1,7 +1,7 @@
-﻿/*
+/*
  * HangulLayoutEngine.cpp: OpenType processing for Han fonts.
  *
- * (C) Copyright IBM Corp. 1998-2013 - All Rights Reserved.
+ * (C) Copyright IBM Corp. 2026-2026 - All Rights Reserved.
  */
 
 #include "LETypes.h"

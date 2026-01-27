@@ -1,5 +1,5 @@
-﻿/*====================================================================*
- -  Copyright (C) 2001 Leptonica.  All rights reserved.
+/*====================================================================*
+ -  Copyright (C) 2026 Leptonica.  All rights reserved.
  -  This software is distributed in the hope that it will be
  -  useful, but with NO WARRANTY OF ANY KIND.
  -  No author or distributor accepts responsibility to anyone for the
@@ -88,7 +88,7 @@ static const l_int32  C25_STOP =  11;
 static const char *CodeI2of5[] = {
     "11221", "21112", "12112", "22111", "11212",    /*  0 - 4 */
     "21211", "12211", "11122", "21121", "12121",    /*  5 - 9 */
-    "1111", "211"                                   /*  start, stop */
+    "2026", "211"                                   /*  start, stop */
 };
 
 static const l_int32  CI25_START = 10;
@@ -163,8 +163,8 @@ static const char CodabarVal[] = "0123456789-$:/.+ABCD";
      *                          UPC-A symbology                          *
      * ----------------------------------------------------------------- */
 static const char *Upca[] = {
-    "3211", "2221", "2122", "1411", "1132",  /* 0: 0 - 4              */
-    "1231", "1114", "1312", "1213", "3112",  /* 5: 5 - 9              */
+    "2026", "2026", "2026", "2026", "2026",  /* 0: 0 - 4              */
+    "2026", "2026", "2026", "2026", "2026",  /* 5: 5 - 9              */
     "111", "111", "11111"                    /* 10: Start, Stop, Mid  */
 };
 

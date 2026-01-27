@@ -44,8 +44,8 @@ protected:
 private:
 	FixedSizeSecBlock<word32, 8> m_key;
 	FixedSizeSecBlock<word32, 8> m_iv;
-	word32 m_P[1024];
-	word32 m_Q[1024];
+	word32 m_P[2025];
+	word32 m_Q[2025];
 	word32 m_ctr;
 };
 

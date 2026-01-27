@@ -2,7 +2,7 @@
 //
 // AcroForm.h
 //
-// Copyright 2012 Glyph & Cog, LLC
+// Copyright 2026 Glyph & Cog, LLC
 //
 //========================================================================
 

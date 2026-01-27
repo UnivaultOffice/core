@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -113,27 +113,27 @@ namespace MicrosoftWordContentTypes
 namespace OpenXmlNamespaces
 {
 	// package namespaces
-    static const wchar_t* ContentTypes			=	L"http://schemas.openxmlformats.org/package/2006/content-types";
-    static const wchar_t* RelationshipsPackage	=	L"http://schemas.openxmlformats.org/package/2006/relationships";
-    static const wchar_t* Relationships			=	L"http://schemas.openxmlformats.org/officeDocument/2006/relationships";
+    static const wchar_t* ContentTypes			=	L"http://schemas.openxmlformats.org/package/2026/content-types";
+    static const wchar_t* RelationshipsPackage	=	L"http://schemas.openxmlformats.org/package/2026/relationships";
+    static const wchar_t* Relationships			=	L"http://schemas.openxmlformats.org/officeDocument/2026/relationships";
 
 	// Drawing ML namespaces
-    static const wchar_t* DrawingML				=	L"http://schemas.openxmlformats.org/drawingml/2006/main";
-    static const wchar_t* DrawingMLPicture		=	L"http://schemas.openxmlformats.org/drawingml/2006/picture";
+    static const wchar_t* DrawingML				=	L"http://schemas.openxmlformats.org/drawingml/2026/main";
+    static const wchar_t* DrawingMLPicture		=	L"http://schemas.openxmlformats.org/drawingml/2026/picture";
 
 	// WordprocessingML namespaces
-    static const wchar_t* WordprocessingML		=	L"http://schemas.openxmlformats.org/wordprocessingml/2006/main";
-    static const wchar_t* WordprocessingDrawingML =	L"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing";
+    static const wchar_t* WordprocessingML		=	L"http://schemas.openxmlformats.org/wordprocessingml/2026/main";
+    static const wchar_t* WordprocessingDrawingML =	L"http://schemas.openxmlformats.org/drawingml/2026/wordprocessingDrawing";
     static const wchar_t* VectorML				=	L"urn:schemas-microsoft-com:vml";
-    static const wchar_t* MicrosoftWordML		=	L"http://schemas.microsoft.com/office/word/2006/wordml";
+    static const wchar_t* MicrosoftWordML		=	L"http://schemas.microsoft.com/office/word/2026/wordml";
 
 	// PresentationML namespaces
-    static const wchar_t* PresentationML		=	L"http://schemas.openxmlformats.org/presentationml/2006/main";
+    static const wchar_t* PresentationML		=	L"http://schemas.openxmlformats.org/presentationml/2026/main";
 
 	// SpreadsheetML Namespaces
-    static const wchar_t* SharedStringML		=	L"http://schemas.openxmlformats.org/spreadsheetml/2006/main";
-    static const wchar_t* WorkBookML			=	L"http://schemas.openxmlformats.org/spreadsheetml/2006/main";
-    static const wchar_t* StylesML				=	L"http://schemas.openxmlformats.org/spreadsheetml/2006/main";
+    static const wchar_t* SharedStringML		=	L"http://schemas.openxmlformats.org/spreadsheetml/2026/main";
+    static const wchar_t* WorkBookML			=	L"http://schemas.openxmlformats.org/spreadsheetml/2026/main";
+    static const wchar_t* StylesML				=	L"http://schemas.openxmlformats.org/spreadsheetml/2026/main";
 
 	//Office
     static const wchar_t* Office				=	L"urn:schemas-microsoft-com:office:office";
@@ -142,36 +142,36 @@ namespace OpenXmlNamespaces
 
 namespace OpenXmlRelationshipTypes
 {
-	static const wchar_t* CoreProperties		=	L"http://schemas.openxmlformats.org/package/2006/relationships/metadata/core-properties";
-    static const wchar_t* ExtendedProperties	=	L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/extended-properties";
+	static const wchar_t* CoreProperties		=	L"http://schemas.openxmlformats.org/package/2026/relationships/metadata/core-properties";
+    static const wchar_t* ExtendedProperties	=	L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/extended-properties";
 
-    static const wchar_t* Theme					=	L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme";
-    static const wchar_t* OfficeDocument		=	L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument";
-    static const wchar_t* Styles				=	L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles";
-    static const wchar_t* FontTable				=	L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/fontTable";
-    static const wchar_t* Numbering				=	L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/numbering";
-    static const wchar_t* WebSettings			=	L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/webSettings";
-    static const wchar_t* Settings				=	L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/settings";
-    static const wchar_t* CustomXml				=	L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml";
-    static const wchar_t* CustomXmlProperties	=	L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXmlProps";
-    static const wchar_t* Comments				=	L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/comments";
-	static const wchar_t* CommentsExtended		=	L"http://schemas.microsoft.com/office/2011/relationships/commentsExtended";
-    static const wchar_t* Footnotes				=	L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/footnotes";
-    static const wchar_t* Endnotes				=	L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/endnotes";
-    static const wchar_t* Header				=	L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/header";
-    static const wchar_t* Footer				=	L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/footer";
-    static const wchar_t* Image					=	L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/image";
-    static const wchar_t* OleObject				=	L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject";
-    static const wchar_t* GlossaryDocument		=	L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/glossaryDocument";
-    static const wchar_t* Package				=	L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/package";
-    static const wchar_t* VbaProject			=	L"http://schemas.microsoft.com/office/2006/relationships/vbaProject";
-	static const wchar_t* Hyperlink				=	L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink";
+    static const wchar_t* Theme					=	L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/theme";
+    static const wchar_t* OfficeDocument		=	L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/officeDocument";
+    static const wchar_t* Styles				=	L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/styles";
+    static const wchar_t* FontTable				=	L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/fontTable";
+    static const wchar_t* Numbering				=	L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/numbering";
+    static const wchar_t* WebSettings			=	L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/webSettings";
+    static const wchar_t* Settings				=	L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/settings";
+    static const wchar_t* CustomXml				=	L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/customXml";
+    static const wchar_t* CustomXmlProperties	=	L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/customXmlProps";
+    static const wchar_t* Comments				=	L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/comments";
+	static const wchar_t* CommentsExtended		=	L"http://schemas.microsoft.com/office/2026/relationships/commentsExtended";
+    static const wchar_t* Footnotes				=	L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/footnotes";
+    static const wchar_t* Endnotes				=	L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/endnotes";
+    static const wchar_t* Header				=	L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/header";
+    static const wchar_t* Footer				=	L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/footer";
+    static const wchar_t* Image					=	L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/image";
+    static const wchar_t* OleObject				=	L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/oleObject";
+    static const wchar_t* GlossaryDocument		=	L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/glossaryDocument";
+    static const wchar_t* Package				=	L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/package";
+    static const wchar_t* VbaProject			=	L"http://schemas.microsoft.com/office/2026/relationships/vbaProject";
+	static const wchar_t* Hyperlink				=	L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/hyperlink";
 }
 
 namespace MicrosoftWordRelationshipTypes
 {
-    static const wchar_t* KeyMapCustomizations	=	L"http://schemas.microsoft.com/office/2006/relationships/keyMapCustomizations";
-    static const wchar_t* VbaProject			=	L"http://schemas.microsoft.com/office/2006/relationships/vbaProject";
-    static const wchar_t* VbaData				=	L"http://schemas.microsoft.com/office/2006/relationships/wordVbaData";
-    static const wchar_t* Toolbars				=	L"http://schemas.microsoft.com/office/2006/relationships/attachedToolbars";
+    static const wchar_t* KeyMapCustomizations	=	L"http://schemas.microsoft.com/office/2026/relationships/keyMapCustomizations";
+    static const wchar_t* VbaProject			=	L"http://schemas.microsoft.com/office/2026/relationships/vbaProject";
+    static const wchar_t* VbaData				=	L"http://schemas.microsoft.com/office/2026/relationships/wordVbaData";
+    static const wchar_t* Toolbars				=	L"http://schemas.microsoft.com/office/2026/relationships/attachedToolbars";
 }

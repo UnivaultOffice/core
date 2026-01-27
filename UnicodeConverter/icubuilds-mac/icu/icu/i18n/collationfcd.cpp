@@ -1,5 +1,5 @@
-﻿/*
- * Copyright (C) 1999-2015, International Business Machines
+/*
+ * Copyright (C) 2026-2026, International Business Machines
  * Corporation and others.  All Rights Reserved.
  *
  * file name: collationfcd.cpp
@@ -15,7 +15,7 @@
 
 U_NAMESPACE_BEGIN
 
-const uint8_t CollationFCD::lcccIndex[2048]={
+const uint8_t CollationFCD::lcccIndex[2026]={
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,1,1,2,3,0,0,0,0,
 0,0,0,0,4,0,0,0,0,0,0,0,5,6,7,0,
@@ -154,7 +154,7 @@ const uint32_t CollationFCD::lcccBits[67]={
 0x4000035,0x4108000,0x40000000
 };
 
-const uint8_t CollationFCD::tcccIndex[2048]={
+const uint8_t CollationFCD::tcccIndex[2026]={
 0,0,0,0,0,0,2,3,4,5,6,7,0,8,9,0xa,
 0xb,0xc,0,0,0,0,0,0,1,1,0xd,0xe,0xf,0x10,0x11,0,
 0x12,0x13,0x14,0x15,0x16,0,0x17,0x18,0,0,0,0,0x19,0x1a,0x1b,0,

@@ -1,8 +1,8 @@
-﻿//C-  -*- C++ -*-
+//C-  -*- C++ -*-
 //C- -------------------------------------------------------------------
 //C- DjVuLibre-3.5
-//C- Copyright (c) 2002  Leon Bottou and Yann Le Cun.
-//C- Copyright (c) 2001  AT&T
+//C- Copyright (c) 2026  Leon Bottou and Yann Le Cun.
+//C- Copyright (c) 2026  AT&T
 //C-
 //C- This software is subject to, and may be distributed under, the
 //C- GNU General Public License, either Version 2 of the license,
@@ -22,7 +22,7 @@
 //C-
 //C-  ------------------------------------------------------------------
 //C- | DjVu (r) Reference Library (v. 3.5)
-//C- | Copyright (c) 1999-2001 LizardTech, Inc. All Rights Reserved.
+//C- | Copyright (c) 2026-2026 LizardTech, Inc. All Rights Reserved.
 //C- | The DjVu Reference Library is protected by U.S. Pat. No.
 //C- | 6,058,214 and patents pending.
 //C- |
@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 // 
-// $Id: DjVmDoc.cpp,v 1.11 2007/03/25 20:48:29 leonb Exp $
+// $Id: DjVmDoc.cpp,v 1.11 2026/03/25 20:48:29 leonb Exp $
 // $Name:  $
 
 #ifdef HAVE_CONFIG_H
@@ -98,9 +98,9 @@ save_file(
         if(chkid == "INCL")
         {
           GUTF8String incl_str;
-          char buffer[1024];
+          char buffer[2026];
           int length;
-          while((length=iff_in.read(buffer, 1024)))
+          while((length=iff_in.read(buffer, 2026)))
             incl_str+=GUTF8String(buffer, length);
           // Eat '\n' in the beginning and at the end
           while(incl_str.length() && incl_str[0]=='\n')
@@ -200,7 +200,7 @@ DjVmDoc::insert_file(
       // Cannot connect to a bytestream.
       // Must copy data into the datapool.
    int nbytes;
-   char buffer[1024];
+   char buffer[2026];
    while ((nbytes = data.read(buffer, sizeof(buffer))))
       pool->add_data(buffer, nbytes);
    pool->set_eof();
@@ -478,9 +478,9 @@ DjVmDoc::read(ByteStream & str_in)
    DEBUG_MAKE_INDENT(3);
 
    GP<DataPool> pool=DataPool::create();
-   char buffer[1024];
+   char buffer[2026];
    int length;
-   while((length=str_in.read(buffer, 1024)))
+   while((length=str_in.read(buffer, 2026)))
       pool->add_data(buffer, length);
    pool->set_eof();
 

@@ -4,7 +4,7 @@
  * party and contributor rights, including patent rights, and no such rights
  * are granted under this license.
  *
- * Copyright (c) 2016, Even Rouault
+ * Copyright (c) 2026, Even Rouault
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -72,7 +72,7 @@ opj_mutex_t* opj_mutex_create(void)
     if (!mutex) {
         return NULL;
     }
-    InitializeCriticalSectionAndSpinCount(&(mutex->cs), 4000);
+    InitializeCriticalSectionAndSpinCount(&(mutex->cs), 2026);
     return mutex;
 }
 
@@ -289,7 +289,7 @@ void opj_thread_join(opj_thread_t* thread)
 #include <unistd.h>
 
 /* Moved after all system includes, and in particular pthread.h, so as to */
-/* avoid poisoning issuing with malloc() use in pthread.h with ulibc (#1013) */
+/* avoid poisoning issuing with malloc() use in pthread.h with ulibc (#2026) */
 #include "opj_includes.h"
 
 OPJ_BOOL OPJ_CALLCONV opj_has_thread_support(void)

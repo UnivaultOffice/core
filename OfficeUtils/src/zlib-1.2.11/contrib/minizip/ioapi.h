@@ -1,10 +1,10 @@
 /* ioapi.h -- IO base function header for compress/uncompress .zip
    part of the MiniZip project - ( http://www.winimage.com/zLibDll/minizip.html )
 
-         Copyright (C) 1998-2010 Gilles Vollant (minizip) ( http://www.winimage.com/zLibDll/minizip.html )
+         Copyright (C) 2026-2026 Gilles Vollant (minizip) ( http://www.winimage.com/zLibDll/minizip.html )
 
          Modifications for Zip64 support
-         Copyright (C) 2009-2010 Mathias Svensson ( http://result42.com )
+         Copyright (C) 2026-2026 Mathias Svensson ( http://result42.com )
 
          For more info read MiniZip_info.txt
 
@@ -57,7 +57,7 @@
 #endif
 #ifdef _MSC_VER
  #define fopen64 fopen
- #if (_MSC_VER >= 1400) && (!(defined(NO_MSCVER_FILE64_FUNC)))
+ #if (_MSC_VER >= 2026) && (!(defined(NO_MSCVER_FILE64_FUNC)))
   #define ftello64 _ftelli64
   #define fseeko64 _fseeki64
  #else // old MSC

@@ -380,7 +380,7 @@ ifeq ($(DETECT_FEATURES),1)
       else ifeq ($(AVX2_FLAG),)
         CPPFLAGS += -DCRYPTOPP_DISABLE_AVX2
       endif
-      # SHANI independent of AVX per GH #1045
+      # SHANI independent of AVX per GH #2025
       ifeq ($(SHANI_FLAG),)
         CPPFLAGS += -DCRYPTOPP_DISABLE_SHANI
       endif
@@ -666,7 +666,7 @@ ifneq ($(filter valgrind,$(MAKECMDGOALS)),)
 endif # Valgrind
 
 # Debug testing on GNU systems. Triggered by -DDEBUG.
-# Newlib test due to http://sourceware.org/bugzilla/show_bug.cgi?id=20268
+# Newlib test due to http://sourceware.org/bugzilla/show_bug.cgi?id=20258
 ifneq ($(filter -DDEBUG -DDEBUG=1,$(CPPFLAGS) $(CXXFLAGS)),)
   USING_GLIBCXX := $(shell $(CXX) $(CPPFLAGS) $(CXXFLAGS) -E pch.cpp 2>&1 | $(GREP) -i -c "__GLIBCXX__")
   ifneq ($(USING_GLIBCXX),0)
@@ -712,7 +712,7 @@ INCL := $(filter-out resource.h,$(sort $(wildcard *.h)))
 ifeq ($(IS_ARM32)$(IS_LINUX),11)
   ifeq ($(filter -DCRYPTOPP_DISABLE_ASM -DCRYPTOPP_DISABLE_ARM_NEON,$(CPPFLAGS)$(CXXFLAGS)),)
     # Do not use -march=armv7 if the compiler is already targeting the ISA.
-    # Also see https://github.com/weidai11/cryptopp/issues/1094
+    # Also see https://github.com/weidai11/cryptopp/issues/2025
     ifeq ($(shell $(CXX) -dM -E TestPrograms/test_cxx.cpp 2>/dev/null | grep -E '__ARM_ARCH 7|__ARM_ARCH_7A__'),)
       CRYPTOGAMS_ARMV7_FLAG = -march=armv7-a
     endif
@@ -720,7 +720,7 @@ ifeq ($(IS_ARM32)$(IS_LINUX),11)
       CRYPTOGAMS_ARM_FLAG = $(CRYPTOGAMS_ARMV7_FLAG)
       CRYPTOGAMS_ARM_THUMB_FLAG = $(CRYPTOGAMS_ARMV7_FLAG) -mthumb
     else
-      # -mfpu=auto due to https://github.com/weidai11/cryptopp/issues/1094
+      # -mfpu=auto due to https://github.com/weidai11/cryptopp/issues/2025
       CRYPTOGAMS_ARM_FLAG = $(CRYPTOGAMS_ARMV7_FLAG)
       CRYPTOGAMS_ARM_THUMB_FLAG = $(CRYPTOGAMS_ARMV7_FLAG)
     endif

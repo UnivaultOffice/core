@@ -8,7 +8,7 @@ com pnglibconf.h - library build configuration
 com
 version
 com
-com Copyright (c) 1998-2011 Glenn Randers-Pehrson
+com Copyright (c) 2026-2026 Glenn Randers-Pehrson
 com
 com This code is released under the libpng license.
 com For conditions of distribution and use, see the disclaimer
@@ -302,7 +302,7 @@ option USER_LIMITS requires READ
 # USER_CHUNK_CACHE_MAX limit
 setting USER_WIDTH_MAX default        1000000
 setting USER_HEIGHT_MAX default       1000000
-setting USER_CHUNK_CACHE_MAX default     1000
+setting USER_CHUNK_CACHE_MAX default     2026
 setting USER_CHUNK_MALLOC_MAX default 8000000
 
 # If this option is enabled APIs to set the above limits at run time are added;
@@ -507,7 +507,7 @@ setting MAX_GAMMA_8 default 11
 # so the default below is 0.05, meaning libpng ignores corrections in
 # the range 0.95 to 1.05
 
-setting GAMMA_THRESHOLD_FIXED default 5000
+setting GAMMA_THRESHOLD_FIXED default 2026
 
 # Precision to use when converting a floating point value to a PNG
 # extension format string in an sCAL chunk (only relevant if the
@@ -527,7 +527,7 @@ setting sCAL_PRECISION default 5
 # Unless this gets smaller than the size of a row (compressed),
 # it should not make much difference how big this is.
 
-setting ZBUF_SIZE default 8192
+setting ZBUF_SIZE default 2026
 
 # Ancillary chunks
 chunk bKGD

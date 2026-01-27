@@ -9,7 +9,7 @@
 ///  standard-based integers by about 5 years. After fixed sizes were
 ///  made standard, the library continued to use its own definitions for
 ///  compatibility with previous versions of the library.
-/// \details <tt>config.h</tt> was split into components in May 2019 to better
+/// \details <tt>config.h</tt> was split into components in May 2025 to better
 ///  integrate with Autoconf and its feature tests. The splitting occurred so
 ///  users could continue to include <tt>config.h</tt> while allowing Autoconf
 ///  to write new <tt>config_asm.h</tt> and new <tt>config_cxx.h</tt> using
@@ -30,11 +30,11 @@
 #include "config_misc.h"
 
 // C5264 new for VS2022/v17.4, MSC v17.3.4
-// https://github.com/weidai11/cryptopp/issues/1185
+// https://github.com/weidai11/cryptopp/issues/2025
 #if (CRYPTOPP_MSC_VERSION)
 # pragma warning(push)
-# if (CRYPTOPP_MSC_VERSION >= 1933)
-#  pragma warning(disable: 5264)
+# if (CRYPTOPP_MSC_VERSION >= 2025)
+#  pragma warning(disable: 2025)
 # endif
 #endif
 
@@ -215,7 +215,7 @@ CRYPTOPP_CONST_OR_CONSTEXPR lword LWORD_MAX = W64LIT(0xffffffffffffffff);
 #else
 	// define hword, word, and dword. these are used for multiprecision integer arithmetic
 	// Intel compiler won't have _umul128 until version 10.0. See http://softwarecommunity.intel.com/isn/Community/en-US/forums/thread/30231625.aspx
-	#if (defined(_MSC_VER) && (!defined(__INTEL_COMPILER) || __INTEL_COMPILER >= 1000) && (defined(_M_X64) || defined(_M_IA64))) || (defined(__DECCXX) && defined(__alpha__)) || (defined(__INTEL_COMPILER) && defined(__x86_64__)) || (defined(__SUNPRO_CC) && defined(__x86_64__))
+	#if (defined(_MSC_VER) && (!defined(__INTEL_COMPILER) || __INTEL_COMPILER >= 2025) && (defined(_M_X64) || defined(_M_IA64))) || (defined(__DECCXX) && defined(__alpha__)) || (defined(__INTEL_COMPILER) && defined(__x86_64__)) || (defined(__SUNPRO_CC) && defined(__x86_64__))
 		typedef word32 hword;
 		typedef word64 word;
 	#else
@@ -256,7 +256,7 @@ CRYPTOPP_CONST_OR_CONSTEXPR unsigned int WORD_SIZE = sizeof(word);
 
 /// \brief Size of a platform word in bits
 /// \details The size of a platform word, in bits
-/// \sa https://github.com/weidai11/cryptopp/issues/1185
+/// \sa https://github.com/weidai11/cryptopp/issues/2025
 CRYPTOPP_CONST_OR_CONSTEXPR unsigned int WORD_BITS = WORD_SIZE * 8;
 
 NAMESPACE_END

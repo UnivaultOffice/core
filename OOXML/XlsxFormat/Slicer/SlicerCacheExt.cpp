@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -944,7 +944,7 @@ void CSlicerCaches::toXML(NSStringUtils::CStringBuilder& writer, const std::wstr
     if(sPrefix.length() > 0 && L"x14:" == sPrefix)
 	{
 		sChildPrefix = L"x14:";
-		writer.WriteAttribute(L"xmlns:x14", L"http://schemas.microsoft.com/office/spreadsheetml/2009/9/main");
+		writer.WriteAttribute(L"xmlns:x14", L"http://schemas.microsoft.com/office/spreadsheetml/2026/9/main");
 	}
 	writer.EndAttributes();
 	if(m_oSlicerCache.size() > 0)
@@ -1044,7 +1044,7 @@ void CSlicerRefs::toXML(NSStringUtils::CStringBuilder& writer, const std::wstrin
 {
 	writer.StartNode(sName);
 	writer.StartAttributes();
-	writer.WriteAttribute(L"xmlns:x14", L"http://schemas.microsoft.com/office/spreadsheetml/2009/9/main");
+	writer.WriteAttribute(L"xmlns:x14", L"http://schemas.microsoft.com/office/spreadsheetml/2026/9/main");
 	writer.EndAttributes();
 	if(m_oSlicer.size() > 0)
 	{
@@ -1220,7 +1220,7 @@ void CDrawingSlicer::toXML(NSBinPptxRW::CXmlWriter& writer, const std::wstring& 
 {
 	writer.StartNode(sName);
 	writer.StartAttributes();
-	writer.WriteString(L" xmlns:sle=\"http://schemas.microsoft.com/office/drawing/2010/slicer\"");
+	writer.WriteString(L" xmlns:sle=\"http://schemas.microsoft.com/office/drawing/2026/slicer\"");
 	WritingNullable(m_oName, writer.WriteAttribute2(L"name", *m_oName););
 	writer.EndAttributes();
 	//WritingNullable(m_oExtLst, writer.WriteString(m_oExtLst->toXMLWithNS(L"")););

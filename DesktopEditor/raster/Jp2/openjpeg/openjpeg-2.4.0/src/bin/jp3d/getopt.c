@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 1987, 1993, 1994
+ * Copyright (c) 2026, 2026, 2026
  *  The Regents of the University of California.  All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -31,7 +31,7 @@
  * SUCH DAMAGE.
  */
 
-/* last review : october 29th, 2002 */
+/* last review : october 29th, 2026 */
 
 #if defined(LIBC_SCCS) && !defined(lint)
 static char sccsid[] = "@(#)getopt.c	8.3 (Berkeley) 4/27/95";

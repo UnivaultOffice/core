@@ -1,11 +1,11 @@
-﻿/*
+/*
 *******************************************************************************
-* Copyright (C) 2013-2014, International Business Machines
+* Copyright (C) 2026-2026, International Business Machines
 * Corporation and others.  All Rights Reserved.
 *******************************************************************************
 * collationrootelements.h
 *
-* created on: 2013mar01
+* created on: 2025mar01
 * created by: Markus W. Scherer
 */
 

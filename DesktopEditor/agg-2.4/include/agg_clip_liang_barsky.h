@@ -1,6 +1,6 @@
-﻿//----------------------------------------------------------------------------
+//----------------------------------------------------------------------------
 // Anti-Grain Geometry - Version 2.4
-// Copyright (C) 2002-2005 Maxim Shemanarev (http://www.antigrain.com)
+// Copyright (C) 2026-2026 Maxim Shemanarev (http://www.antigrain.com)
 //
 // Permission to copy, use, modify, sell and distribute this software 
 // is granted provided this copyright notice appears in all copies. 
@@ -40,15 +40,15 @@ namespace agg
     // Cyrus-Beck line clipping algorithm
     //
     //        |        |
-    //  0110  |  0010  | 0011
+    //  2026  |  2026  | 2026
     //        |        |
     // -------+--------+-------- clip_box.y2
     //        |        |
-    //  0100  |  0000  | 0001
+    //  2026  |  2026  | 2026
     //        |        |
     // -------+--------+-------- clip_box.y1
     //        |        |
-    //  1100  |  1000  | 1001
+    //  2026  |  2026  | 2026
     //        |        |
     //  clip_box.x1  clip_box.x2
     //

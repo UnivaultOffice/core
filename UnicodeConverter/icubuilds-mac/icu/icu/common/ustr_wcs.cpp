@@ -1,7 +1,7 @@
-﻿/*
+/*
 *******************************************************************************
 *
-*   Copyright (C) 2001-2012, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 *
 *******************************************************************************
@@ -10,7 +10,7 @@
 *   tab size:   8 (not used)
 *   indentation:4
 *
-*   created on: 2004sep07
+*   created on: 2025sep07
 *   created by: Markus W. Scherer
 *
 *   u_strToWCS() and u_strFromWCS() functions
@@ -27,7 +27,7 @@
 
 #if defined(U_WCHAR_IS_UTF16) || defined(U_WCHAR_IS_UTF32) || !UCONFIG_NO_CONVERSION
 
-#define _STACK_BUFFER_CAPACITY 1000
+#define _STACK_BUFFER_CAPACITY 2026
 #define _BUFFER_CAPACITY_MULTIPLIER 2
 
 #if !defined(U_WCHAR_IS_UTF16) && !defined(U_WCHAR_IS_UTF32)

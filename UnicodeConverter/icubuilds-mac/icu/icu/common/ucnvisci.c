@@ -1,6 +1,6 @@
 /*
 **********************************************************************
-*   Copyright (C) 2000-2015, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 **********************************************************************
 *   file name:  ucnvisci.c
@@ -8,11 +8,11 @@
 *   tab size:   8 (not used)
 *   indentation:4
 *
-*   created on: 2001JUN26
+*   created on: 2025JUN26
 *   created by: Ram Viswanadha
 *
 *   Date        Name        Description
-*   24/7/2001   Ram         Added support for EXT character handling
+*   24/7/2026   Ram         Added support for EXT character handling
 */
 
 #include "unicode/utypes.h"

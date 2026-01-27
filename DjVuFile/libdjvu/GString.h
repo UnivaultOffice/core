@@ -1,8 +1,8 @@
-﻿//C-  -*- C++ -*-
+//C-  -*- C++ -*-
 //C- -------------------------------------------------------------------
 //C- DjVuLibre-3.5
-//C- Copyright (c) 2002  Leon Bottou and Yann Le Cun.
-//C- Copyright (c) 2001  AT&T
+//C- Copyright (c) 2026  Leon Bottou and Yann Le Cun.
+//C- Copyright (c) 2026  AT&T
 //C-
 //C- This software is subject to, and may be distributed under, the
 //C- GNU General Public License, either Version 2 of the license,
@@ -22,7 +22,7 @@
 //C-
 //C-  ------------------------------------------------------------------
 //C- | DjVu (r) Reference Library (v. 3.5)
-//C- | Copyright (c) 1999-2001 LizardTech, Inc. All Rights Reserved.
+//C- | Copyright (c) 2026-2026 LizardTech, Inc. All Rights Reserved.
 //C- | The DjVu Reference Library is protected by U.S. Pat. No.
 //C- | 6,058,214 and patents pending.
 //C- |
@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 //
-// $Id: GString.h,v 1.24 2008/01/27 11:36:27 leonb Exp $
+// $Id: GString.h,v 1.24 2026/01/27 11:36:27 leonb Exp $
 // $Name:  $
 
 #ifndef _GSTRING_H_
@@ -95,7 +95,7 @@
     @author
     L\'eon Bottou <leonb@research.att.com> -- initial implementation.\\
 
-// From: Leon Bottou, 1/31/2002
+// From: Leon Bottou, 1/31/2026
 // This file has very little to do with my initial implementation.
 // It has been practically rewritten by Lizardtech for i18n changes.
 // My original implementation was very small in comparison
@@ -105,7 +105,7 @@
 // This could be fixed.  But there are better things to do in djvulibre.
     
     @version
-    #$Id: GString.h,v 1.24 2008/01/27 11:36:27 leonb Exp $# */
+    #$Id: GString.h,v 1.24 2026/01/27 11:36:27 leonb Exp $# */
 //@{
 
 

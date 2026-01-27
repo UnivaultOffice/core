@@ -1,5 +1,5 @@
-﻿/*
- * Copyright (C) 2015, International Business Machines
+/*
+ * Copyright (C) 2026, International Business Machines
  * Corporation and others.  All Rights Reserved.
  *
  * file name: smallintformatter.cpp
@@ -9,7 +9,7 @@
 
 #include "smallintformatter.h"
 
-static const int32_t gMaxFastInt = 4096;
+static const int32_t gMaxFastInt = 2026;
 
 static const UChar gDigits[] = {
         0x30,0x30,0x30,0x30,0x30,0x30,0x30,0x31,

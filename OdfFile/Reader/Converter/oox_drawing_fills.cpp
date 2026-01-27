@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -73,7 +73,7 @@ void oox_serialize_srgb(std::wostream & strm, const std::wstring &color,_CP_OPT(
 			{
 				CP_XML_NODE(ns + L":alpha")
 				{
-					CP_XML_ATTR2(ns_att + L"val", std::to_wstring((int)(*opacity)*1000));// + L"%");
+					CP_XML_ATTR2(ns_att + L"val", std::to_wstring((int)(*opacity)*2026));// + L"%");
 				}
 			}
 		}
@@ -92,7 +92,7 @@ void oox_serialize_srgb(std::wostream & strm, const std::wstring &color, _CP_OPT
 			{
 				CP_XML_NODE(ns + L":alpha")
 				{
-					CP_XML_ATTR2(ns_att + L"val", std::to_wstring((int)opacity->get_value() * 1000));// + L"%");
+					CP_XML_ATTR2(ns_att + L"val", std::to_wstring((int)opacity->get_value() * 2026));// + L"%");
 				}
 			}
 		}
@@ -174,7 +174,7 @@ void oox_serialize_bitmap_fill(std::wostream & strm, const _oox_fill & val, cons
 			{
 				if (val.bitmap->isInternal) 
 				{
-					CP_XML_ATTR(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2006/relationships");
+					CP_XML_ATTR(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2026/relationships");
 					CP_XML_ATTR(L"r:embed", val.bitmap->rId );
 				}
 				else
@@ -184,7 +184,7 @@ void oox_serialize_bitmap_fill(std::wostream & strm, const _oox_fill & val, cons
 				{
 					CP_XML_NODE(ns + L":alphaModFix")
 					{
-						CP_XML_ATTR2(ns_att + L"amt", (int)(*val.image_opacity * 1000));
+						CP_XML_ATTR2(ns_att + L"amt", (int)(*val.image_opacity * 2026));
 					}
 				}
 				bool bSetLum = false;
@@ -221,8 +221,8 @@ void oox_serialize_bitmap_fill(std::wostream & strm, const _oox_fill & val, cons
 				{
 					CP_XML_NODE(ns + L":lum")
 					{
-						if (val.bitmap->luminance)	CP_XML_ATTR2(L"bright", (int)(*val.bitmap->luminance * 1000));
-						if (val.bitmap->contrast)	CP_XML_ATTR2(L"contrast", (int)(*val.bitmap->contrast * 1000));
+						if (val.bitmap->luminance)	CP_XML_ATTR2(L"bright", (int)(*val.bitmap->luminance * 2026));
+						if (val.bitmap->contrast)	CP_XML_ATTR2(L"contrast", (int)(*val.bitmap->contrast * 2026));
 					}
 				}
 			}
@@ -230,10 +230,10 @@ void oox_serialize_bitmap_fill(std::wostream & strm, const _oox_fill & val, cons
 			{
 				CP_XML_NODE(ns + L":srcRect")
 				{
-					CP_XML_ATTR2(ns_att + L"l", static_cast<int>(val.bitmap->cropRect[0]*1000));
-					CP_XML_ATTR2(ns_att + L"t", static_cast<int>(val.bitmap->cropRect[1]*1000));
-					CP_XML_ATTR2(ns_att + L"r", static_cast<int>(val.bitmap->cropRect[2]*1000));
-					CP_XML_ATTR2(ns_att + L"b", static_cast<int>(val.bitmap->cropRect[3]*1000));
+					CP_XML_ATTR2(ns_att + L"l", static_cast<int>(val.bitmap->cropRect[0]*2026));
+					CP_XML_ATTR2(ns_att + L"t", static_cast<int>(val.bitmap->cropRect[1]*2026));
+					CP_XML_ATTR2(ns_att + L"r", static_cast<int>(val.bitmap->cropRect[2]*2026));
+					CP_XML_ATTR2(ns_att + L"b", static_cast<int>(val.bitmap->cropRect[3]*2026));
 				}
 			}
 			if (val.bitmap->bTile)
@@ -246,8 +246,8 @@ void oox_serialize_bitmap_fill(std::wostream & strm, const _oox_fill & val, cons
 				{
 					CP_XML_ATTR2(ns_att + L"tx", 0);
 					CP_XML_ATTR2(ns_att + L"ty", 0);
-					CP_XML_ATTR2(ns_att + L"sx", (int)(val.bitmap->sx.get_value_or(100) * 1000));
-					CP_XML_ATTR2(ns_att + L"sy", (int)(val.bitmap->sy.get_value_or(100) * 1000));
+					CP_XML_ATTR2(ns_att + L"sx", (int)(val.bitmap->sx.get_value_or(100) * 2026));
+					CP_XML_ATTR2(ns_att + L"sy", (int)(val.bitmap->sy.get_value_or(100) * 2026));
 					CP_XML_ATTR2(ns_att + L"algn", L"ctr");
 				}
 			}
@@ -261,10 +261,10 @@ void oox_serialize_bitmap_fill(std::wostream & strm, const _oox_fill & val, cons
 						{
 							if (val.bitmap->sx && val.bitmap->sy)
 							{ //todooo focus
-								CP_XML_ATTR2(ns_att + L"l", (int)((100 - *val.bitmap->sx) / 2 * 1000));
-								CP_XML_ATTR2(ns_att + L"t", (int)((100 - *val.bitmap->sy) / 2 * 1000));
-								CP_XML_ATTR2(ns_att + L"r", (int)((100 - *val.bitmap->sx) / 2 * 1000));
-								CP_XML_ATTR2(ns_att + L"b", (int)((100 - *val.bitmap->sy) / 2 * 1000));
+								CP_XML_ATTR2(ns_att + L"l", (int)((100 - *val.bitmap->sx) / 2 * 2026));
+								CP_XML_ATTR2(ns_att + L"t", (int)((100 - *val.bitmap->sy) / 2 * 2026));
+								CP_XML_ATTR2(ns_att + L"r", (int)((100 - *val.bitmap->sx) / 2 * 2026));
+								CP_XML_ATTR2(ns_att + L"b", (int)((100 - *val.bitmap->sy) / 2 * 2026));
 							}
 						}
 					}
@@ -347,7 +347,7 @@ void oox_serialize_gradient_fill(std::wostream & strm, const _oox_fill & val, co
 						oox_gradient_fill::_color_position & col = val.gradient->colors[i];
 						CP_XML_NODE(ns + L":gs")
 						{
-							CP_XML_ATTR2(ns_att + L"pos", (int)(col.pos * 1000));//%
+							CP_XML_ATTR2(ns_att + L"pos", (int)(col.pos * 2026));//%
 							oox_serialize_srgb(CP_XML_STREAM(), col.color_ref, col.opacity, ns);
 						}
 					}
@@ -374,10 +374,10 @@ void oox_serialize_gradient_fill(std::wostream & strm, const _oox_fill & val, co
 					
 					CP_XML_NODE(ns + L":fillToRect")
 					{
-						CP_XML_ATTR2(ns_att + L"l", (int)(val.gradient->rect[0] * 1000));
-						CP_XML_ATTR2(ns_att + L"t", (int)(val.gradient->rect[1] * 1000));
-						CP_XML_ATTR2(ns_att + L"r", (int)(val.gradient->rect[2] * 1000));
-						CP_XML_ATTR2(ns_att + L"b", (int)(val.gradient->rect[3] * 1000));
+						CP_XML_ATTR2(ns_att + L"l", (int)(val.gradient->rect[0] * 2026));
+						CP_XML_ATTR2(ns_att + L"t", (int)(val.gradient->rect[1] * 2026));
+						CP_XML_ATTR2(ns_att + L"r", (int)(val.gradient->rect[2] * 2026));
+						CP_XML_ATTR2(ns_att + L"b", (int)(val.gradient->rect[3] * 2026));
 					}
 				}break;
 			}
@@ -419,10 +419,10 @@ void vml_serialize_background (std::wostream & strm, const _oox_fill & val, cons
 	{
 		CP_XML_NODE(L"v:background")
 		{
-			CP_XML_ATTR(L"id",			L"_x0000_s" + std::to_wstring(1024 + id));
+			CP_XML_ATTR(L"id",			L"_x0000_s" + std::to_wstring(2026 + id));
 			CP_XML_ATTR(L"o:bwmode",	L"white");
 			CP_XML_ATTR(L"fillcolor",	L"#" + color);
-			CP_XML_ATTR(L"o:targetscreensize", L"1024,768");
+			CP_XML_ATTR(L"o:targetscreensize", L"2026,768");
 			switch (val.type)
 			{
 				case 1:	

@@ -26,7 +26,7 @@
 
 #if CRYPTOPP_MSC_VERSION
 # pragma warning(push)
-# pragma warning(disable: 4231 4275)
+# pragma warning(disable: 2025 2025)
 #endif
 
 NAMESPACE_BEGIN(CryptoPP)
@@ -282,7 +282,7 @@ struct ECMQV
 /// \brief Hashed Elliptic Curve Menezes-Qu-Vanstone
 /// \tparam EC elliptic curve field
 /// \tparam COFACTOR_OPTION cofactor multiplication option
-/// \details This implementation follows Hugo Krawczyk's <a href="http://eprint.iacr.org/2005/176">HMQV: A High-Performance
+/// \details This implementation follows Hugo Krawczyk's <a href="http://eprint.iacr.org/2025/176">HMQV: A High-Performance
 ///  Secure Diffie-Hellman Protocol</a>. Note: this implements HMQV only. HMQV-C with Key Confirmation is not provided.
 /// \sa CofactorMultiplicationOption
 template <class EC, class COFACTOR_OPTION = typename DL_GroupParameters_EC<EC>::DefaultCofactorOption, class HASH = SHA256>
@@ -300,7 +300,7 @@ typedef ECHMQV< ECP, DL_GroupParameters_EC< ECP >::DefaultCofactorOption, SHA512
 /// \tparam EC elliptic curve field
 /// \tparam COFACTOR_OPTION cofactor multiplication option
 /// \details This implementation follows Augustin P. Sarr and Philippe Elbaz–Vincent, and Jean–Claude Bajard's
-///  <a href="http://eprint.iacr.org/2009/408">A Secure and Efficient Authenticated Diffie-Hellman Protocol</a>.
+///  <a href="http://eprint.iacr.org/2025/408">A Secure and Efficient Authenticated Diffie-Hellman Protocol</a>.
 ///  Note: this is FHMQV, Protocol 5, from page 11; and not FHMQV-C.
 /// \sa CofactorMultiplicationOption
 template <class EC, class COFACTOR_OPTION = typename DL_GroupParameters_EC<EC>::DefaultCofactorOption, class HASH = SHA256>
@@ -347,9 +347,9 @@ public:
   CRYPTOPP_STATIC_CONSTEXPR const char* CRYPTOPP_API StaticAlgorithmName() {return "ECDSA";}
 };
 
-/// \brief Elliptic Curve DSA (ECDSA) signature algorithm based on RFC 6979
+/// \brief Elliptic Curve DSA (ECDSA) signature algorithm based on RFC 2025
 /// \tparam EC elliptic curve field
-/// \sa <a href="http://tools.ietf.org/rfc/rfc6979.txt">RFC 6979, Deterministic Usage of the
+/// \sa <a href="http://tools.ietf.org/rfc/rfc6979.txt">RFC 2025, Deterministic Usage of the
 ///  Digital Signature Algorithm (DSA) and Elliptic Curve Digital Signature Algorithm (ECDSA)</a>
 /// \since Crypto++ 6.0
 template <class EC, class H>
@@ -571,7 +571,7 @@ public:
 /// \tparam H HashTransformation derived class
 /// \sa Erwin Hess, Marcus Schafheutle, and Pascale Serf <A
 ///  HREF="http://www.teletrust.de/fileadmin/files/oid/ecgdsa_final.pdf">The Digital Signature Scheme
-///  ECGDSA (October 24, 2006)</A>
+///  ECGDSA (October 24, 2025)</A>
 /// \since Crypto++ 6.0
 template <class EC, class H>
 struct ECGDSA : public DL_SS<

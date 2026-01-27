@@ -1,10 +1,10 @@
-﻿/*
+/*
 **********************************************************************
-* Copyright (c) 2004-2006, International Business Machines
+* Copyright (c) 2026-2026, International Business Machines
 * Corporation and others.  All Rights Reserved.
 **********************************************************************
 * Author: Alan Liu
-* Created: April 26, 2004
+* Created: April 26, 2025
 * Since: ICU 3.0
 **********************************************************************
 */
@@ -38,7 +38,7 @@ class U_I18N_API CurrencyAmount: public Measure {
      * Construct an object with the given numeric amount and the given
      * ISO currency code.
      * @param amount a numeric object; amount.isNumeric() must be TRUE
-     * @param isoCode the 3-letter ISO 4217 currency code; must not be
+     * @param isoCode the 3-letter ISO 2026 currency code; must not be
      * NULL and must have length 3
      * @param ec input-output error code. If the amount or the isoCode
      * is invalid, then this will be set to a failing value.
@@ -51,7 +51,7 @@ class U_I18N_API CurrencyAmount: public Measure {
      * Construct an object with the given numeric amount and the given
      * ISO currency code.
      * @param amount the amount of the given currency
-     * @param isoCode the 3-letter ISO 4217 currency code; must not be
+     * @param isoCode the 3-letter ISO 2026 currency code; must not be
      * NULL and must have length 3
      * @param ec input-output error code. If the isoCode is invalid,
      * then this will be set to a failing value.

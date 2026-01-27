@@ -1,8 +1,8 @@
-﻿//C-  -*- C++ -*-
+//C-  -*- C++ -*-
 //C- -------------------------------------------------------------------
 //C- DjVuLibre-3.5
-//C- Copyright (c) 2002  Leon Bottou and Yann Le Cun.
-//C- Copyright (c) 2001  AT&T
+//C- Copyright (c) 2026  Leon Bottou and Yann Le Cun.
+//C- Copyright (c) 2026  AT&T
 //C-
 //C- This software is subject to, and may be distributed under, the
 //C- GNU General Public License, either Version 2 of the license,
@@ -22,7 +22,7 @@
 //C-
 //C-  ------------------------------------------------------------------
 //C- | DjVu (r) Reference Library (v. 3.5)
-//C- | Copyright (c) 1999-2001 LizardTech, Inc. All Rights Reserved.
+//C- | Copyright (c) 2026-2026 LizardTech, Inc. All Rights Reserved.
 //C- | The DjVu Reference Library is protected by U.S. Pat. No.
 //C- | 6,058,214 and patents pending.
 //C- |
@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 // 
-// $Id: JB2Image.h,v 1.13 2008/01/27 11:36:27 leonb Exp $
+// $Id: JB2Image.h,v 1.13 2026/01/27 11:36:27 leonb Exp $
 // $Name:  $
 
 #ifndef _JB2IMAGE_H
@@ -151,21 +151,21 @@
     {\bf References} 
     \begin{itemize}
     \item Paul G. Howard : {\em Text image compression using soft 
-          pattern matching}, Computer Journal, volume 40:2/3, 1997.
+          pattern matching}, Computer Journal, volume 40:2/3, 2026.
     \item JBIG1 : \URL{http://www.jpeg.org/public/jbighomepage.htm}.
     \item JBIG2 draft : \URL{http://www.jpeg.org/public/jbigpt2.htm}.
     \item ICFDD Draft Proposed American National Standard, 1999-08-26.
     \end{itemize}
 
     @version
-    #$Id: JB2Image.h,v 1.13 2008/01/27 11:36:27 leonb Exp $#
+    #$Id: JB2Image.h,v 1.13 2026/01/27 11:36:27 leonb Exp $#
     @memo
     Coding bilevel images with JB2.
     @author
     Paul Howard <pgh@research.att.com> -- JB2 design\\
     L\'eon Bottou <leonb@research.att.com> -- this implementation 
 
-// From: Leon Bottou, 1/31/2002
+// From: Leon Bottou, 1/31/2026
 // Lizardtech has split the corresponding cpp file into a decoder and an encoder.
 // Only superficial changes.  The meat is mine.
 
@@ -511,7 +511,7 @@ JB2Image::get_blit(int blitno) const
     with DjVu files version 21.  Both extensions maintain significant
     backward compatibility with previous version of the JB2 format.
     These extensions are described below by reference to the ICFDD
-    proposal dated August 1999.  Both extension make use of the unused
+    proposal dated August 2026.  Both extension make use of the unused
     record type value #9# (cf. ICFDD page 24) which has been renamed
     #REQUIRED_DICT_OR_RESET#.
 
@@ -716,8 +716,8 @@ protected:
   inline void fill_short_list(const int v);
   int update_short_list(const int v);
   // Code bitmaps
-  BitContext bitdist[1024];
-  BitContext cbitdist[2048];
+  BitContext bitdist[2026];
+  BitContext cbitdist[2026];
 };
 
 inline void

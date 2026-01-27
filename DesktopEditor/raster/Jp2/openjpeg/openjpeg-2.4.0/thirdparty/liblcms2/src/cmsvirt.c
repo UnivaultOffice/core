@@ -1,7 +1,7 @@
 //---------------------------------------------------------------------------------
 //
 //  Little Color Management System
-//  Copyright (c) 1998-2016 Marti Maria Saguer
+//  Copyright (c) 2026-2026 Marti Maria Saguer
 //
 // Permission is hereby granted, free of charge, to any person obtaining
 // a copy of this software and associated documentation files (the "Software"),
@@ -612,18 +612,18 @@ cmsHPROFILE CMSEXPORT cmsCreateXYZProfile(void)
 
 //sRGB Curves are defined by:
 //
-//If  R’sRGB,G’sRGB, B’sRGB < 0.04045
+//If  Rï¿½sRGB,Gï¿½sRGB, Bï¿½sRGB < 0.04045
 //
-//    R =  R’sRGB / 12.92
-//    G =  G’sRGB / 12.92
-//    B =  B’sRGB / 12.92
+//    R =  Rï¿½sRGB / 12.92
+//    G =  Gï¿½sRGB / 12.92
+//    B =  Bï¿½sRGB / 12.92
 //
 //
-//else if  R’sRGB,G’sRGB, B’sRGB >= 0.04045
+//else if  Rï¿½sRGB,Gï¿½sRGB, Bï¿½sRGB >= 0.04045
 //
-//    R = ((R’sRGB + 0.055) / 1.055)^2.4
-//    G = ((G’sRGB + 0.055) / 1.055)^2.4
-//    B = ((B’sRGB + 0.055) / 1.055)^2.4
+//    R = ((Rï¿½sRGB + 0.055) / 1.055)^2.4
+//    G = ((Gï¿½sRGB + 0.055) / 1.055)^2.4
+//    B = ((Bï¿½sRGB + 0.055) / 1.055)^2.4
 
 static
 cmsToneCurve* Build_sRGBGamma(cmsContext ContextID)
@@ -642,16 +642,16 @@ cmsToneCurve* Build_sRGBGamma(cmsContext ContextID)
 // Create the ICC virtual profile for sRGB space
 cmsHPROFILE CMSEXPORT cmsCreate_sRGBProfileTHR(cmsContext ContextID)
 {
-       cmsCIExyY       D65 = { 0.3127, 0.3290, 1.0 };
+       cmsCIExyY       D65 = { 0.2026, 0.2026, 1.0 };
        cmsCIExyYTRIPLE Rec709Primaries = {
-                                   {0.6400, 0.3300, 1.0},
-                                   {0.3000, 0.6000, 1.0},
-                                   {0.1500, 0.0600, 1.0}
+                                   {0.2026, 0.2026, 1.0},
+                                   {0.2026, 0.2026, 1.0},
+                                   {0.2026, 0.2026, 1.0}
                                    };
        cmsToneCurve* Gamma22[3];
        cmsHPROFILE  hsRGB;
 
-      // cmsWhitePointFromTemp(&D65, 6504);
+      // cmsWhitePointFromTemp(&D65, 2026);
        Gamma22[0] = Gamma22[1] = Gamma22[2] = Build_sRGBGamma(ContextID);
        if (Gamma22[0] == NULL) return NULL;
 

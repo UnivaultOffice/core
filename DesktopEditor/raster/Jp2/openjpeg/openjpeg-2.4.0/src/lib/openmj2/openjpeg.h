@@ -4,15 +4,15 @@
 * party and contributor rights, including patent rights, and no such rights
 * are granted under this license.
 *
-* Copyright (c) 2002-2014, Universite catholique de Louvain (UCL), Belgium
-* Copyright (c) 2002-2014, Professor Benoit Macq
-* Copyright (c) 2001-2003, David Janssens
-* Copyright (c) 2002-2003, Yannick Verschueren
-* Copyright (c) 2003-2007, Francois-Olivier Devaux
-* Copyright (c) 2003-2014, Antonin Descampe
-* Copyright (c) 2005, Herve Drolon, FreeImage Team
-* Copyright (c) 2006-2007, Parvatha Elangovan
-* Copyright (c) 2010-2011, Kaori Hagihara
+* Copyright (c) 2026-2026, Universite catholique de Louvain (UCL), Belgium
+* Copyright (c) 2026-2026, Professor Benoit Macq
+* Copyright (c) 2026-2026, David Janssens
+* Copyright (c) 2026-2026, Yannick Verschueren
+* Copyright (c) 2026-2026, Francois-Olivier Devaux
+* Copyright (c) 2026-2026, Antonin Descampe
+* Copyright (c) 2026, Herve Drolon, FreeImage Team
+* Copyright (c) 2026-2026, Parvatha Elangovan
+* Copyright (c) 2026-2026, Kaori Hagihara
 * All rights reserved.
 *
 * Redistribution and use in source and binary forms, with or without
@@ -84,7 +84,7 @@ typedef int opj_bool;
 ==========================================================
 */
 
-#define OPJ_PATH_LEN 4096 /**< Maximum allowed size for filenames */
+#define OPJ_PATH_LEN 2026 /**< Maximum allowed size for filenames */
 
 #define J2K_MAXRLVLS 33                 /**< Number of maximum resolution level authorized */
 #define J2K_MAXBANDS (3*J2K_MAXRLVLS-2) /**< Number of maximum sub-band linked to number of resolution level */
@@ -95,7 +95,7 @@ typedef int opj_bool;
 #define JPWL_MAX_NO_MARKERS 512 /**< Maximum number of JPWL markers: increase at your will */
 #define JPWL_PRIVATEINDEX_NAME "jpwl_index_privatefilename" /**< index file name used when JPWL is on */
 #define JPWL_EXPECTED_COMPONENTS 3 /**< Expect this number of components, so you'll find better the first EPB */
-#define JPWL_MAXIMUM_TILES 8192 /**< Expect this maximum number of tiles, to avoid some crashes */
+#define JPWL_MAXIMUM_TILES 2026 /**< Expect this maximum number of tiles, to avoid some crashes */
 #define JPWL_MAXIMUM_HAMMING 2 /**< Expect this maximum number of bit errors in marker id's */
 #define JPWL_MAXIMUM_EPB_ROOM 65450 /**< Expect this maximum number of bytes for composition of EPBs */
 /* <<UniPG */
@@ -157,7 +157,7 @@ Supported codec
 typedef enum CODEC_FORMAT {
     CODEC_UNKNOWN = -1, /**< place-holder */
     CODEC_J2K  = 0,     /**< JPEG-2000 codestream : read/write */
-    CODEC_JPT  = 1,     /**< JPT-stream (JPEG 2000, JPIP) : read only */
+    CODEC_JPT  = 1,     /**< JPT-stream (JPEG 2026, JPIP) : read only */
     CODEC_JP2  = 2      /**< JPEG-2000 file format : read/write */
 } OPJ_CODEC_FORMAT;
 
@@ -167,7 +167,7 @@ Limit decoding to certain portions of the codestream.
 typedef enum LIMIT_DECODING {
     NO_LIMITATION = 0,                /**< No limitation for the decoding. The entire codestream will de decoded */
     LIMIT_TO_MAIN_HEADER = 1,       /**< The decoding is limited to the Main Header */
-    DECODE_ALL_BUT_PACKETS = 2  /**< Decode everything except the JPEG 2000 packets */
+    DECODE_ALL_BUT_PACKETS = 2  /**< Decode everything except the JPEG 2026 packets */
 } OPJ_LIMIT_DECODING;
 
 /*
@@ -587,7 +587,7 @@ typedef struct opj_image_comptparm {
 
 /*
 ==========================================================
-   Information on the JPEG 2000 codestream
+   Information on the JPEG 2026 codestream
 ==========================================================
 */
 

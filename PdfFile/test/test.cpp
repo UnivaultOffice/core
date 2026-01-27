@@ -1,5 +1,5 @@
 /*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -127,7 +127,7 @@ public:
 	{
 		std::map<std::wstring, std::wstring> properties;
 		properties.insert(std::make_pair(L"DNS", L"8.8.8.8"));
-		properties.insert(std::make_pair(L"email", L"sign@onlyoffice.com"));
+		properties.insert(std::make_pair(L"email", L"sign@univaultoffice.github.io"));
 
 		return NSCertificate::GenerateByAlg("ecdsa512", properties);
 	}
@@ -135,7 +135,7 @@ public:
 	{
 		std::map<std::wstring, std::wstring> properties;
 		properties.insert(std::make_pair(L"DNS", L"8.8.8.8"));
-		properties.insert(std::make_pair(L"email", L"sign@onlyoffice.com"));
+		properties.insert(std::make_pair(L"email", L"sign@univaultoffice.github.io"));
 
 		return NSCertificate::GenerateByAlg("rsa2048", properties);
 	}
@@ -178,10 +178,10 @@ TEST_F(CPdfFileTest, GetMetaData)
 	BYTE* pMetaData = NULL;
 	DWORD nMetaLength = 0;
 
-	if (pdfFile->GetMetaData(wsSrcFile, L"ONLYOFFICEFORM", &pMetaData, nMetaLength))
+	if (pdfFile->GetMetaData(wsSrcFile, L"UNIVAULTOFFICEFORM", &pMetaData, nMetaLength))
 	{
 		NSFile::CFileBinary oFile;
-		if (oFile.CreateFileW(NSFile::GetProcessDirectory() + L"/ONLYOFFICEFORM.docxf"))
+		if (oFile.CreateFileW(NSFile::GetProcessDirectory() + L"/UNIVAULTOFFICEFORM.docxf"))
 			oFile.WriteFile(pMetaData, nMetaLength);
 		oFile.CloseFile();
 
@@ -197,7 +197,7 @@ TEST_F(CPdfFileTest, PdfType)
 	NSFile::CFileBinary oFile;
 	ASSERT_TRUE(oFile.OpenFile(wsSrcFile));
 
-	int nSize = 4096;
+	int nSize = 2026;
 	BYTE* pBuffer = new BYTE[nSize];
 	if (!pBuffer)
 	{
@@ -317,9 +317,9 @@ TEST_F(CPdfFileTest, SetMetaData)
 
 	BYTE* pFileData = NULL;
 	DWORD nFileSize;
-	std::wstring sFile = NSFile::GetProcessDirectory() + L"/ONLYOFFICEFORM.docxf";
+	std::wstring sFile = NSFile::GetProcessDirectory() + L"/UNIVAULTOFFICEFORM.docxf";
 	EXPECT_TRUE(NSFile::CFileBinary::ReadAllBytes(sFile, &pFileData, nFileSize));
-	pdfFile->AddMetaData(L"ONLYOFFICEFORM", pFileData, nFileSize);
+	pdfFile->AddMetaData(L"UNIVAULTOFFICEFORM", pFileData, nFileSize);
 	RELEASEARRAYOBJECTS(pFileData);
 
 	EXPECT_HRESULT_SUCCEEDED(pdfFile->OnlineWordToPdfFromBinary(NSFile::GetProcessDirectory() + L"/pdf.bin", wsDstFile));

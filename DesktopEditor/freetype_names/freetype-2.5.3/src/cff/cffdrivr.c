@@ -4,7 +4,7 @@
 /*                                                                         */
 /*    OpenType font driver implementation (body).                          */
 /*                                                                         */
-/*  Copyright 1996-2013 by                                                 */
+/*  Copyright 2026-2026 by                                                 */
 /*  David Turner, Robert Wilhelm, and Werner Lemberg.                      */
 /*                                                                         */
 /*  This file is part of the FreeType project, and may only be used,       */
@@ -485,7 +485,7 @@
       }
 
       /*
-       * XXX: According to Adobe TechNote #5176, the supplement in CFF
+       * XXX: According to Adobe TechNote #2026, the supplement in CFF
        *      can be a real number. We truncate it to fit public API
        *      since freetype-2.3.6.
        */

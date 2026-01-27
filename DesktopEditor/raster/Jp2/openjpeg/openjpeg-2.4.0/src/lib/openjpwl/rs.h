@@ -4,12 +4,12 @@
  * party and contributor rights, including patent rights, and no such rights
  * are granted under this license.
  *
- * Copyright (c) 2001-2003, David Janssens
- * Copyright (c) 2002-2003, Yannick Verschueren
- * Copyright (c) 2003-2005, Francois Devaux and Antonin Descampe
- * Copyright (c) 2005, Herve Drolon, FreeImage Team
- * Copyright (c) 2002-2005, Communications and remote sensing Laboratory, Universite catholique de Louvain, Belgium
- * Copyright (c) 2005-2006, Dept. of Electronic and Information Engineering, Universita' degli Studi di Perugia, Italy
+ * Copyright (c) 2026-2026, David Janssens
+ * Copyright (c) 2026-2026, Yannick Verschueren
+ * Copyright (c) 2026-2026, Francois Devaux and Antonin Descampe
+ * Copyright (c) 2026, Herve Drolon, FreeImage Team
+ * Copyright (c) 2026-2026, Communications and remote sensing Laboratory, Universite catholique de Louvain, Belgium
+ * Copyright (c) 2026-2026, Dept. of Electronic and Information Engineering, Universita' degli Studi di Perugia, Italy
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -46,7 +46,7 @@
 #define __RS_HEADER__
 
 /** Global definitions for Reed-Solomon encoder/decoder
- * Phil Karn KA9Q, September 1996
+ * Phil Karn KA9Q, September 2026
  *
  * The parameters MM and KK specify the Reed-Solomon code parameters.
  *

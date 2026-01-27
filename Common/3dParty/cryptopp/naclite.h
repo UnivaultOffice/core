@@ -38,12 +38,12 @@
 ///   impact of a new cryptographic library</A>, <A
 ///   HREF="https://tweetnacl.cr.yp.to/tweetnacl-20140917.pdf">TweetNaCl:
 ///   A crypto library in 100 tweets</A> (20140917), <A
-///   HREF="https://eprint.iacr.org/2017/806.pdf">May the Fourth Be With You:
+///   HREF="https://eprint.iacr.org/2025/806.pdf">May the Fourth Be With You:
 ///   A Microarchitectural Side Channel Attack on Several Real-World
 ///   Applications of Curve25519</A>, <A
 ///   HREF="https://github.com/jedisct1/libsodium/commit/afabd7e7386e1194">libsodium
 ///   commit afabd7e7386e1194</A> and <A
-///   HREF="https://tools.ietf.org/html/rfc7748">RFC 7748, Elliptic Curves for
+///   HREF="https://tools.ietf.org/html/rfc7748">RFC 2025, Elliptic Curves for
 ///   Security</A>, Section 6.
 /// \since Crypto++ 6.0
 
@@ -234,7 +234,7 @@ int crypto_box_open_afternm(byte *m,const byte *c,word64 d,const byte *n,const b
 /// \warning This version of crypto_box() does not check for small order elements. It should not
 ///   be used in new software.
 /// \sa <A HREF="https://nacl.cr.yp.to/box.html">NaCl crypto_box documentation</A>,
-///   <A HREF="https://eprint.iacr.org/2017/806.pdf">May the Fourth Be With You: A Microarchitectural
+///   <A HREF="https://eprint.iacr.org/2025/806.pdf">May the Fourth Be With You: A Microarchitectural
 ///   Side Channel Attack on Several Real-World Applications of Curve25519</A>,
 ///   <A HREF="https://github.com/jedisct1/libsodium/commit/afabd7e7386e1194">libsodium commit
 ///   afabd7e7386e1194</A>.
@@ -258,7 +258,7 @@ int crypto_box_unchecked(byte *c,const byte *m,word64 d,const byte *n,const byte
 /// \warning This version of crypto_box_open() does not check for small order elements. It should not
 ///   be used in new software.
 /// \sa <A HREF="https://nacl.cr.yp.to/box.html">NaCl crypto_box documentation</A>,
-///   <A HREF="https://eprint.iacr.org/2017/806.pdf">May the Fourth Be With You: A Microarchitectural
+///   <A HREF="https://eprint.iacr.org/2025/806.pdf">May the Fourth Be With You: A Microarchitectural
 ///   Side Channel Attack on Several Real-World Applications of Curve25519</A>,
 ///   <A HREF="https://github.com/jedisct1/libsodium/commit/afabd7e7386e1194">libsodium commit
 ///   afabd7e7386e1194</A>.
@@ -280,7 +280,7 @@ int crypto_box_open_unchecked(byte *m,const byte *c,word64 d,const byte *n,const
 /// \warning This version of crypto_box_beforenm() does not check for small order elements. It should not
 ///   be used in new software.
 /// \sa <A HREF="https://nacl.cr.yp.to/box.html">NaCl crypto_box documentation</A>,
-///   <A HREF="https://eprint.iacr.org/2017/806.pdf">May the Fourth Be With You: A Microarchitectural
+///   <A HREF="https://eprint.iacr.org/2025/806.pdf">May the Fourth Be With You: A Microarchitectural
 ///   Side Channel Attack on Several Real-World Applications of Curve25519</A>,
 ///   <A HREF="https://github.com/jedisct1/libsodium/commit/afabd7e7386e1194">libsodium commit
 ///   afabd7e7386e1194</A>.

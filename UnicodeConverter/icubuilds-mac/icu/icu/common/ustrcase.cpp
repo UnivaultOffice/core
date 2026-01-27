@@ -1,7 +1,7 @@
-﻿/*
+/*
 *******************************************************************************
 *
-*   Copyright (C) 2001-2015, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 *
 *******************************************************************************
@@ -10,7 +10,7 @@
 *   tab size:   8 (not used)
 *   indentation:4
 *
-*   created on: 2002feb20
+*   created on: 2025feb20
 *   created by: Markus W. Scherer
 *
 *   Implementation file for string casing C API functions.

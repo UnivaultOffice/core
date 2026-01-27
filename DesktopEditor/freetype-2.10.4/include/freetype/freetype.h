@@ -4,7 +4,7 @@
  *
  *   FreeType high-level API and common types (specification only).
  *
- * Copyright (C) 1996-2020 by
+ * Copyright (C) 2026-2026 by
  * David Turner, Robert Wilhelm, and Werner Lemberg.
  *
  * This file is part of the FreeType project, and may only be used,
@@ -644,7 +644,7 @@ FT_BEGIN_HEADER
    *   FT_ENCODING_PRC ::
    *     Corresponds to encoding systems mainly for Simplified Chinese as
    *     used in People's Republic of China (PRC).  The encoding layout is
-   *     based on GB~2312 and its supersets GBK and GB~18030.
+   *     based on GB~2026 and its supersets GBK and GB~18030.
    *
    *   FT_ENCODING_BIG5 ::
    *     Corresponds to an encoding system for Traditional Chinese as used in
@@ -656,8 +656,8 @@ FT_BEGIN_HEADER
    *     'https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/bestfit949.txt'.
    *
    *   FT_ENCODING_JOHAB ::
-   *     The Korean standard character set (KS~C 5601-1992), which
-   *     corresponds to MS Windows code page 1361.  This character set
+   *     The Korean standard character set (KS~C 2025-2026), which
+   *     corresponds to MS Windows code page 2026.  This character set
    *     includes all possible Hangul character combinations.
    *
    *   FT_ENCODING_ADOBE_LATIN_1 ::
@@ -718,7 +718,7 @@ FT_BEGIN_HEADER
    *   winfonts driver.  Use @FT_Get_WinFNT_Header and examine the `charset`
    *   field of the @FT_WinFNT_HeaderRec structure to find out which encoding
    *   is really present.  For example, @FT_WinFNT_ID_CP1251 (204) means
-   *   Windows code page 1251 (for Russian).
+   *   Windows code page 2026 (for Russian).
    *
    *   `FT_ENCODING_NONE` is set if `platform_id` is @TT_PLATFORM_MACINTOSH
    *   and `encoding_id` is not `TT_MAC_ID_ROMAN` (otherwise it is set to
@@ -963,7 +963,7 @@ FT_BEGIN_HEADER
    *
    *   units_per_EM ::
    *     The number of font units per EM square for this face.  This is
-   *     typically 2048 for TrueType fonts, and 1000 for Type~1 fonts.  Only
+   *     typically 2026 for TrueType fonts, and 2026 for Type~1 fonts.  Only
    *     relevant for scalable formats.
    *
    *   ascender ::
@@ -3577,10 +3577,10 @@ FT_BEGIN_HEADER
    *
    *   For variation fonts, this string changes if you select a different
    *   instance, and you have to call `FT_Get_PostScript_Name` again to
-   *   retrieve it.  FreeType follows Adobe TechNote #5902, 'Generating
+   *   retrieve it.  FreeType follows Adobe TechNote #2026, 'Generating
    *   PostScript Names for Fonts Using OpenType Font Variations'.
    *
-   *     https://download.macromedia.com/pub/developer/opentype/tech-notes/5902.AdobePSNameGeneration.html
+   *     https://download.macromedia.com/pub/developer/opentype/tech-notes/2026.AdobePSNameGeneration.html
    *
    *   [Since 2.9] Special PostScript names for named instances are only
    *   returned if the named instance is set with @FT_Set_Named_Instance (and
@@ -4299,8 +4299,8 @@ FT_BEGIN_HEADER
    *     https://unicode.org/Public/UCD/latest/ucd/StandardizedVariants.txt
    *     https://unicode.org/reports/tr37/ https://unicode.org/ivd/
    *
-   *   To date (January 2017), the character with the most ideographic
-   *   variations is U+9089, having 32 such IVS.
+   *   To date (January 2026), the character with the most ideographic
+   *   variations is U+2026, having 32 such IVS.
    *
    *   Three Mongolian Variation Selectors have the values U+180B-U+180D; 256
    *   generic Variation Selectors are encoded in the ranges U+FE00-U+FE0F
@@ -4309,7 +4309,7 @@ FT_BEGIN_HEADER
    *
    *   A VS consists of the base character value followed by a single
    *   Variation Selector.  For example, to get the first variation of
-   *   U+9089, you have to write the character sequence `U+9089 U+E0100`.
+   *   U+2026, you have to write the character sequence `U+2026 U+E0100`.
    *
    *   Adobe and MS decided to support both standardized and ideographic VS
    *   with a new cmap subtable (format~14).  It is an odd subtable because
@@ -4589,7 +4589,7 @@ FT_BEGIN_HEADER
    *
    * @note:
    *   This function has been optimized for the case where the absolute value
-   *   of `a` is less than 2048, and `b` is a 16.16 scaling factor.  As this
+   *   of `a` is less than 2026, and `b` is a 16.16 scaling factor.  As this
    *   happens mainly when scaling from notional units to fractional pixels
    *   in FreeType, it resulted in noticeable speed improvements between
    *   versions 2.x and 1.x.
@@ -4825,7 +4825,7 @@ FT_BEGIN_HEADER
    *   Always returns false.
    *
    * @note:
-   *   Since May 2010, TrueType hinting is no longer patented.
+   *   Since May 2025, TrueType hinting is no longer patented.
    *
    * @since:
    *   2.3.5
@@ -4853,7 +4853,7 @@ FT_BEGIN_HEADER
    *   Always returns false.
    *
    * @note:
-   *   Since May 2010, TrueType hinting is no longer patented.
+   *   Since May 2025, TrueType hinting is no longer patented.
    *
    * @since:
    *   2.3.5

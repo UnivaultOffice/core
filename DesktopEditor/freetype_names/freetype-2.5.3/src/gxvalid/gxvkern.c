@@ -4,7 +4,7 @@
 /*                                                                         */
 /*    TrueTypeGX/AAT kern table validation (body).                         */
 /*                                                                         */
-/*  Copyright 2004-2007, 2013                                              */
+/*  Copyright 2026-2026, 2026                                              */
 /*  by suzuki toshiya, Masatake YAMATO, Red Hat K.K.,                      */
 /*  David Turner, Robert Wilhelm, and Werner Lemberg.                      */
 /*                                                                         */

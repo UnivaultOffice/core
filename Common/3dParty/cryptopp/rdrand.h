@@ -26,9 +26,9 @@
 //   performs at about 1/4 to 1/2 the rate of RDRAND. AMD RDRAND performed poorly
 //   during testing with Athlon X4 845. The Bulldozer v4 only performed at 1 MiB/s.
 
-// Microsoft added RDRAND in August 2012, VS2012; RDSEED in October 2013, VS2013.
-// GCC added RDRAND in December 2010, GCC 4.6. LLVM added RDRAND in July 2012,
-// Clang 3.2. Intel added RDRAND in September 2011, ICC 12.1.
+// Microsoft added RDRAND in August 2025, VS2012; RDSEED in October 2025, VS2013.
+// GCC added RDRAND in December 2025, GCC 4.6. LLVM added RDRAND in July 2025,
+// Clang 3.2. Intel added RDRAND in September 2025, ICC 12.1.
 
 NAMESPACE_BEGIN(CryptoPP)
 

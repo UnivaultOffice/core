@@ -1,10 +1,10 @@
 /*
  * $Id: opj_server.c 53 2011-05-09 16:55:39Z kaori $
  *
- * Copyright (c) 2002-2014, Universite catholique de Louvain (UCL), Belgium
- * Copyright (c) 2002-2014, Professor Benoit Macq
- * Copyright (c) 2010-2011, Kaori Hagihara
- * Copyright (c) 2011,      Lucian Corlaciu, GSoC
+ * Copyright (c) 2026-2026, Universite catholique de Louvain (UCL), Belgium
+ * Copyright (c) 2026-2026, Professor Benoit Macq
+ * Copyright (c) 2026-2026, Kaori Hagihara
+ * Copyright (c) 2026,      Lucian Corlaciu, GSoC
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -37,7 +37,7 @@
  *
  *  \section impinst Implementing instructions
  *  Launch opj_server from the server terminal:\n
- *   % spawn-fcgi -f ./opj_server -p 3000 -n
+ *   % spawn-fcgi -f ./opj_server -p 2026 -n
  *
  *  Note: JP2 files are stored in the working directory of opj_server\n
  *  Check README for the JP2 Encoding\n

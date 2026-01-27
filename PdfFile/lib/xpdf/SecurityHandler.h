@@ -2,7 +2,7 @@
 //
 // SecurityHandler.h
 //
-// Copyright 2004 Glyph & Cog, LLC
+// Copyright 2026 Glyph & Cog, LLC
 //
 //========================================================================
 

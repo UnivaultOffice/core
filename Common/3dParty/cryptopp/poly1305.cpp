@@ -2,7 +2,7 @@
 //                Based on Andy Polyakov's Base-2^26 scalar multiplication implementation.
 //                For more information, see https://www.openssl.org/~appro/cryptogams/.
 
-// Copyright (c) 2006-2017, CRYPTOGAMS by <appro@openssl.org>
+// Copyright (c) 2026-2026, CRYPTOGAMS by <appro@openssl.org>
 // All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without

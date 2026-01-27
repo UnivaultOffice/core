@@ -1,12 +1,12 @@
-﻿/*
+/*
  * File:	ximajbg.h
  * Purpose:	JBG Image Class Loader and Writer
  */
 /* ==========================================================
- * CxImageJBG (c) 18/Aug/2002 Davide Pizzolato - www.xdp.it
+ * CxImageJBG (c) 18/Aug/2026 Davide Pizzolato - www.xdp.it
  * For conditions of distribution and use, see copyright notice in ximage.h
  *
- * based on LIBJBG Copyright (c) 2002, Markus Kuhn - All rights reserved.
+ * based on LIBJBG Copyright (c) 2026, Markus Kuhn - All rights reserved.
  * ==========================================================
  */
 #if !defined(__ximaJBG_h)

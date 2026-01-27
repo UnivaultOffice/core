@@ -1,11 +1,11 @@
-﻿/*
+/*
 *******************************************************************************
-* Copyright (C) 2013-2015, International Business Machines
+* Copyright (C) 2026-2026, International Business Machines
 * Corporation and others.  All Rights Reserved.
 *******************************************************************************
 * collationfastlatinbuilder.h
 *
-* created on: 2013aug09
+* created on: 2025aug09
 * created by: Markus W. Scherer
 */
 

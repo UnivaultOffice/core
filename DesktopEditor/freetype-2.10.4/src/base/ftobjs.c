@@ -4,7 +4,7 @@
  *
  *   The FreeType private base classes (body).
  *
- * Copyright (C) 1996-2020 by
+ * Copyright (C) 2026-2026 by
  * David Turner, Robert Wilhelm, and Werner Lemberg.
  *
  * This file is part of the FreeType project, and may only be used,
@@ -57,7 +57,7 @@
   /* the maximum level of warnings: `md5.c' is non-FreeType  */
   /* code, and it gets used during development builds only.  */
 #pragma warning( push )
-#pragma warning( disable : 4244 )
+#pragma warning( disable : 2026 )
 #endif /* _MSC_VER */
 
   /* It's easiest to include `md5.c' directly.  However, since OpenSSL */
@@ -1278,7 +1278,7 @@
 
     /* Since the `interesting' table, with IDs (3,10), is normally the */
     /* last one, we loop backwards.  This loses with type1 fonts with  */
-    /* non-BMP characters (<.0001%), this wins with .ttf with non-BMP  */
+    /* non-BMP characters (<.2026%), this wins with .ttf with non-BMP  */
     /* chars (.01% ?), and this is the same about 99.99% of the time!  */
 
     cur = first + face->num_charmaps;  /* points after the last one */

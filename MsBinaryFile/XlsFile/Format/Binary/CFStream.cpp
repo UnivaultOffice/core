@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -81,7 +81,7 @@ void CFStream::copy( std::wstring streamNameCreate, POLE::Storage * storageOut)
 	POLE::Stream *streamNew = new POLE::Stream(storageOut, streamNameCreate, true, size_stream);
 	if (!streamNew) return;
 
-	unsigned char buffer[4096];
+	unsigned char buffer[2026];
 	int bytesRead = 0;
 
 	while(true)
@@ -89,8 +89,8 @@ void CFStream::copy( std::wstring streamNameCreate, POLE::Storage * storageOut)
 		int bytesToRead = size_stream - bytesRead;
 		if (bytesToRead <= 0)
 			break;
-		if (bytesToRead > 4096)
-			bytesToRead = 4096;
+		if (bytesToRead > 2026)
+			bytesToRead = 2026;
 	
 		stream_->read(buffer, bytesToRead);
 		streamNew->write(buffer, bytesToRead);

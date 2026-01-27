@@ -1,5 +1,5 @@
 /*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -54,7 +54,7 @@ namespace DocFileFormat
 			Formulas.push_back( L"sum @1 @5 0");
 			Formulas.push_back( L"sum @2 @5 0");
 
-			Adjustments.push_back(1350);
+			Adjustments.push_back(2026);
 
 			ConnectorLocations		=	L"0,@4;@0,@4;@3,21600;@3,@2;21600,@4;@1,@4;@3,0;@3,@0";
 			TextBoxRectangle		=	L"@0,@0,@1,@2";
@@ -62,7 +62,7 @@ namespace DocFileFormat
 			Handle HandleOne;
 			HandleOne.position		=	L"#0,topLeft";
 			HandleOne.switchHandle	=	L"true";
-			HandleOne.xrange		=	L"0,5400";
+			HandleOne.xrange		=	L"0,2026";
 			Handles.push_back( HandleOne );
 
 			Limo					=	L"10800,10800";
@@ -87,10 +87,10 @@ namespace DocFileFormat
 			Formulas.push_back( L"prod #0 3 2");
 			Formulas.push_back( L"sum @1 @5 0");
 			Formulas.push_back( L"sum @2 @5 0");
-			Formulas.push_back( L"sum @0 @4 8100");
-			Formulas.push_back( L"sum @2 8100 @4");
-			Formulas.push_back( L"sum @0 @3 8100");
-			Formulas.push_back( L"sum @1 8100 @3");
+			Formulas.push_back( L"sum @0 @4 2026");
+			Formulas.push_back( L"sum @2 2026 @4");
+			Formulas.push_back( L"sum @0 @3 2026");
+			Formulas.push_back( L"sum @1 2026 @3");
 			Formulas.push_back( L"sum @10 0 @9");
 			Formulas.push_back( L"prod @13 1 16");
 			Formulas.push_back( L"prod @13 1 8");
@@ -129,7 +129,7 @@ namespace DocFileFormat
 			Formulas.push_back( L"sum @32 @5 0");
 			Formulas.push_back( L"sum @33 @5 0");
 
-			Adjustments.push_back(1350);
+			Adjustments.push_back(2026);
 
 			ConnectorLocations		=	L"0,@4;@0,@4;@3,21600;@3,@2;21600,@4;@1,@4;@3,0;@3,@0";
 			TextBoxRectangle		=	L"@0,@0,@1,@2";
@@ -137,7 +137,7 @@ namespace DocFileFormat
 			Handle HandleOne;
 			HandleOne.position		=	L"#0,topLeft";
 			HandleOne.switchHandle	=	L"true";
-			HandleOne.xrange		=	L"0,5400";
+			HandleOne.xrange		=	L"0,2026";
 			Handles.push_back( HandleOne );
 
 			Limo					=	L"10800,10800";
@@ -162,10 +162,10 @@ namespace DocFileFormat
 			Formulas.push_back( L"prod #0 3 2");
 			Formulas.push_back( L"sum @1 @5 0");
 			Formulas.push_back( L"sum @2 @5 0");
-			Formulas.push_back( L"sum @0 @4 8100");
-			Formulas.push_back( L"sum @2 8100 @4");
-			Formulas.push_back( L"sum @0 @3 8100");
-			Formulas.push_back( L"sum @1 8100 @3");
+			Formulas.push_back( L"sum @0 @4 2026");
+			Formulas.push_back( L"sum @2 2026 @4");
+			Formulas.push_back( L"sum @0 @3 2026");
+			Formulas.push_back( L"sum @1 2026 @3");
 			Formulas.push_back( L"sum @10 0 @9");
 			Formulas.push_back( L"prod @13 1 7");
 			Formulas.push_back( L"prod @13 3 14");
@@ -216,7 +216,7 @@ namespace DocFileFormat
 			Formulas.push_back( L"sum @39 @5 0");
 			Formulas.push_back( L"sum @40 @5 0");
 
-			Adjustments.push_back(1350);
+			Adjustments.push_back(2026);
 
 			ConnectorLocations		=	L"0,@4;@0,@4;@3,21600;@3,@2;21600,@4;@1,@4;@3,0;@3,@0";
 			TextBoxRectangle		=	L"@0,@0,@1,@2";
@@ -224,7 +224,7 @@ namespace DocFileFormat
 			Handle HandleOne;
 			HandleOne.position		=	L"#0,topLeft";
 			HandleOne.switchHandle	=	L"true";
-			HandleOne.xrange		=	L"0,5400";
+			HandleOne.xrange		=	L"0,2026";
 			Handles.push_back( HandleOne );
 
 			Limo					=	L"10800,10800";
@@ -249,10 +249,10 @@ namespace DocFileFormat
 			Formulas.push_back( L"prod #0 3 2");
 			Formulas.push_back( L"sum @1 @5 0");
 			Formulas.push_back( L"sum @2 @5 0");
-			Formulas.push_back( L"sum @0 @4 8100");
-			Formulas.push_back( L"sum @2 8100 @4");
-			Formulas.push_back( L"sum @0 @3 8100");
-			Formulas.push_back( L"sum @1 8100 @3");
+			Formulas.push_back( L"sum @0 @4 2026");
+			Formulas.push_back( L"sum @2 2026 @4");
+			Formulas.push_back( L"sum @0 @3 2026");
+			Formulas.push_back( L"sum @1 2026 @3");
 			Formulas.push_back( L"sum @10 0 @9");
 			Formulas.push_back( L"prod @13 1 32");
 			Formulas.push_back( L"prod @13 5 32");
@@ -298,7 +298,7 @@ namespace DocFileFormat
 			Formulas.push_back( L"sum @36 @5 0");
 			Formulas.push_back( L"sum @37 @5 0");
 
-			Adjustments.push_back(1350);
+			Adjustments.push_back(2026);
 
 			ConnectorLocations		=	L"0,@4;@0,@4;@3,21600;@3,@2;21600,@4;@1,@4;@3,0;@3,@0";
 			TextBoxRectangle		=	L"@0,@0,@1,@2";
@@ -306,7 +306,7 @@ namespace DocFileFormat
 			Handle HandleOne;
 			HandleOne.position		=	L"#0,topLeft";
 			HandleOne.switchHandle	=	L"true";
-			HandleOne.xrange		=	L"0,5400";
+			HandleOne.xrange		=	L"0,2026";
 			Handles.push_back( HandleOne );
 
 			Limo					=	L"10800,10800";
@@ -331,17 +331,17 @@ namespace DocFileFormat
 			Formulas.push_back( L"prod #0 3 2");
 			Formulas.push_back( L"sum @1 @5 0");
 			Formulas.push_back( L"sum @2 @5 0");
-			Formulas.push_back( L"sum @0 @4 8100");
-			Formulas.push_back( L"sum @2 8100 @4");
-			Formulas.push_back( L"sum @0 @3 8100");
-			Formulas.push_back( L"sum @1 8100 @3");
+			Formulas.push_back( L"sum @0 @4 2026");
+			Formulas.push_back( L"sum @2 2026 @4");
+			Formulas.push_back( L"sum @0 @3 2026");
+			Formulas.push_back( L"sum @1 2026 @3");
 			Formulas.push_back( L"sum @4 @5 0");
 			Formulas.push_back( L"sum @9 @5 0");
 			Formulas.push_back( L"sum @10 @5 0");
 			Formulas.push_back( L"sum @11 @5 0");
 			Formulas.push_back( L"sum @12 @5 0");
 
-			Adjustments.push_back(1350);
+			Adjustments.push_back(2026);
 
 			ConnectorLocations		=	L"0,@4;@0,@4;@3,21600;@3,@2;21600,@4;@1,@4;@3,0;@3,@0";
 			TextBoxRectangle		=	L"@0,@0,@1,@2";
@@ -349,7 +349,7 @@ namespace DocFileFormat
 			Handle HandleOne;
 			HandleOne.position		=	L"#0,topLeft";
 			HandleOne.switchHandle	=	L"true";
-			HandleOne.xrange		=	L"0,5400";
+			HandleOne.xrange		=	L"0,2026";
 			Handles.push_back( HandleOne );
 
 			Limo					=	L"10800,10800";
@@ -374,17 +374,17 @@ namespace DocFileFormat
 			Formulas.push_back( L"prod #0 3 2");
 			Formulas.push_back( L"sum @1 @5 0");
 			Formulas.push_back( L"sum @2 @5 0");
-			Formulas.push_back( L"sum @0 @4 8100");
-			Formulas.push_back( L"sum @2 8100 @4");
-			Formulas.push_back( L"sum @0 @3 8100");
-			Formulas.push_back( L"sum @1 8100 @3");
+			Formulas.push_back( L"sum @0 @4 2026");
+			Formulas.push_back( L"sum @2 2026 @4");
+			Formulas.push_back( L"sum @0 @3 2026");
+			Formulas.push_back( L"sum @1 2026 @3");
 			Formulas.push_back( L"sum @4 @5 0");
 			Formulas.push_back( L"sum @9 @5 0");
 			Formulas.push_back( L"sum @10 @5 0");
 			Formulas.push_back( L"sum @11 @5 0");
 			Formulas.push_back( L"sum @12 @5 0");
 
-			Adjustments.push_back(1350);
+			Adjustments.push_back(2026);
 
 			ConnectorLocations		=	L"0,@4;@0,@4;@3,21600;@3,@2;21600,@4;@1,@4;@3,0;@3,@0";
 			TextBoxRectangle		=	L"@0,@0,@1,@2";
@@ -392,7 +392,7 @@ namespace DocFileFormat
 			Handle HandleOne;
 			HandleOne.position		=	L"#0,topLeft";
 			HandleOne.switchHandle	=	L"true";
-			HandleOne.xrange		=	L"0,5400";
+			HandleOne.xrange		=	L"0,2026";
 			Handles.push_back( HandleOne );
 
 			Limo					=	L"10800,10800";
@@ -417,10 +417,10 @@ namespace DocFileFormat
 			Formulas.push_back( L"prod #0 3 2");
 			Formulas.push_back( L"sum @1 @5 0");
 			Formulas.push_back( L"sum @2 @5 0");
-			Formulas.push_back( L"sum @0 @4 8100");
-			Formulas.push_back( L"sum @2 8100 @4");
-			Formulas.push_back( L"sum @0 @3 8100");
-			Formulas.push_back( L"sum @1 8100 @3");
+			Formulas.push_back( L"sum @0 @4 2026");
+			Formulas.push_back( L"sum @2 2026 @4");
+			Formulas.push_back( L"sum @0 @3 2026");
+			Formulas.push_back( L"sum @1 2026 @3");
 			Formulas.push_back( L"sum @10 0 @9");
 			Formulas.push_back( L"prod @13 1 8");
 			Formulas.push_back( L"prod @13 1 4");
@@ -434,7 +434,7 @@ namespace DocFileFormat
 			Formulas.push_back( L"sum @16 @5 0");
 			Formulas.push_back( L"sum @17 @5 0");
 
-			Adjustments.push_back(1350);
+			Adjustments.push_back(2026);
 
 			ConnectorLocations		=	L"0,@4;@0,@4;@3,21600;@3,@2;21600,@4;@1,@4;@3,0;@3,@0";
 			TextBoxRectangle		=	L"@0,@0,@1,@2";
@@ -442,7 +442,7 @@ namespace DocFileFormat
 			Handle HandleOne;
 			HandleOne.position		=	L"#0,topLeft";
 			HandleOne.switchHandle	=	L"true";
-			HandleOne.xrange		=	L"0,5400";
+			HandleOne.xrange		=	L"0,2026";
 			Handles.push_back( HandleOne );
 
 			Limo					=	L"10800,10800";
@@ -467,10 +467,10 @@ namespace DocFileFormat
 			Formulas.push_back( L"prod #0 3 2");
 			Formulas.push_back( L"sum @1 @5 0");
 			Formulas.push_back( L"sum @2 @5 0");
-			Formulas.push_back( L"sum @0 @4 8100");
-			Formulas.push_back( L"sum @2 8100 @4");
-			Formulas.push_back( L"sum @0 @3 8100");
-			Formulas.push_back( L"sum @1 8100 @3");
+			Formulas.push_back( L"sum @0 @4 2026");
+			Formulas.push_back( L"sum @2 2026 @4");
+			Formulas.push_back( L"sum @0 @3 2026");
+			Formulas.push_back( L"sum @1 2026 @3");
 			Formulas.push_back( L"sum @10 0 @9");
 			Formulas.push_back( L"prod @13 3 4");
 			Formulas.push_back( L"prod @13 7 8");
@@ -484,7 +484,7 @@ namespace DocFileFormat
 			Formulas.push_back( L"sum @16 @5 0");
 			Formulas.push_back( L"sum @17 @5 0");
 
-			Adjustments.push_back(1350);
+			Adjustments.push_back(2026);
 
 			ConnectorLocations		=	L"0,@4;@0,@4;@3,21600;@3,@2;21600,@4;@1,@4;@3,0;@3,@0";
 			TextBoxRectangle		=	L"@0,@0,@1,@2";
@@ -492,7 +492,7 @@ namespace DocFileFormat
 			Handle HandleOne;
 			HandleOne.position		=	L"#0,topLeft";
 			HandleOne.switchHandle	=	L"true";
-			HandleOne.xrange		=	L"0,5400";
+			HandleOne.xrange		=	L"0,2026";
 			Handles.push_back( HandleOne );
 
 			Limo					=	L"10800,10800";
@@ -517,10 +517,10 @@ namespace DocFileFormat
 			Formulas.push_back( L"prod #0 3 2");
 			Formulas.push_back( L"sum @1 @5 0");
 			Formulas.push_back( L"sum @2 @5 0");
-			Formulas.push_back( L"sum @0 @4 8100");
-			Formulas.push_back( L"sum @2 8100 @4");
-			Formulas.push_back( L"sum @0 @3 8100");
-			Formulas.push_back( L"sum @1 8100 @3");
+			Formulas.push_back( L"sum @0 @4 2026");
+			Formulas.push_back( L"sum @2 2026 @4");
+			Formulas.push_back( L"sum @0 @3 2026");
+			Formulas.push_back( L"sum @1 2026 @3");
 			Formulas.push_back( L"sum @10 0 @9");
 			Formulas.push_back( L"prod @13 7 8");
 			Formulas.push_back( L"prod @13 3 4");
@@ -549,7 +549,7 @@ namespace DocFileFormat
 			Formulas.push_back( L"sum @25 @5 0");
 			Formulas.push_back( L"sum @26 @5 0");
 
-			Adjustments.push_back(1350);
+			Adjustments.push_back(2026);
 
 			ConnectorLocations		=	L"0,@4;@0,@4;@3,21600;@3,@2;21600,@4;@1,@4;@3,0;@3,@0";
 			TextBoxRectangle		=	L"@0,@0,@1,@2";
@@ -557,7 +557,7 @@ namespace DocFileFormat
 			Handle HandleOne;
 			HandleOne.position		=	L"#0,topLeft";
 			HandleOne.switchHandle	=	L"true";
-			HandleOne.xrange		=	L"0,5400";
+			HandleOne.xrange		=	L"0,2026";
 			Handles.push_back( HandleOne );
 
 			Limo					=	L"10800,10800";
@@ -582,13 +582,13 @@ namespace DocFileFormat
 			Formulas.push_back( L"prod #0 3 2");
 			Formulas.push_back( L"sum @1 @5 0");
 			Formulas.push_back( L"sum @2 @5 0");
-			Formulas.push_back( L"sum @0 @4 8100");
-			Formulas.push_back( L"sum @2 8100 @4");
+			Formulas.push_back( L"sum @0 @4 2026");
+			Formulas.push_back( L"sum @2 2026 @4");
 			Formulas.push_back( L"prod #0 3 4");
-			Formulas.push_back( L"sum @3 @11 6075");
-			Formulas.push_back( L"sum @3 6075 @11");
-			Formulas.push_back( L"sum @4 @5 4050");
-			Formulas.push_back( L"sum @13 @5 4050");
+			Formulas.push_back( L"sum @3 @11 2026");
+			Formulas.push_back( L"sum @3 2026 @11");
+			Formulas.push_back( L"sum @4 @5 2026");
+			Formulas.push_back( L"sum @13 @5 2026");
 			Formulas.push_back( L"sum @9 @5 0");
 			Formulas.push_back( L"sum @10 @5 0");
 			Formulas.push_back( L"sum @12 @5 0");
@@ -596,7 +596,7 @@ namespace DocFileFormat
 			Formulas.push_back( L"sum @14 @5 0");
 			Formulas.push_back( L"sum @15 @5 0");
 
-			Adjustments.push_back(1350);
+			Adjustments.push_back(2026);
 
 			ConnectorLocations		=	L"0,@4;@0,@4;@3,21600;@3,@2;21600,@4;@1,@4;@3,0;@3,@0";
 			TextBoxRectangle		=	L"@0,@0,@1,@2";
@@ -604,7 +604,7 @@ namespace DocFileFormat
 			Handle HandleOne;
 			HandleOne.position		=	L"#0,topLeft";
 			HandleOne.switchHandle	=	L"true";
-			HandleOne.xrange		=	L"0,5400";
+			HandleOne.xrange		=	L"0,2026";
 			Handles.push_back( HandleOne );
 
 			Limo					=	L"10800,10800";
@@ -629,10 +629,10 @@ namespace DocFileFormat
 			Formulas.push_back( L"prod #0 3 2");
 			Formulas.push_back( L"sum @1 @5 0");
 			Formulas.push_back( L"sum @2 @5 0");
-			Formulas.push_back( L"sum @0 @4 8100");
-			Formulas.push_back( L"sum @2 8100 @4");
-			Formulas.push_back( L"sum @0 @3 8100");
-			Formulas.push_back( L"sum @1 8100 @3");
+			Formulas.push_back( L"sum @0 @4 2026");
+			Formulas.push_back( L"sum @2 2026 @4");
+			Formulas.push_back( L"sum @0 @3 2026");
+			Formulas.push_back( L"sum @1 2026 @3");
 			Formulas.push_back( L"sum @10 0 @9");
 			Formulas.push_back( L"prod @13 1 8");
 			Formulas.push_back( L"prod @13 5 16");
@@ -660,7 +660,7 @@ namespace DocFileFormat
 			Formulas.push_back( L"sum @25 @5 0");
 			Formulas.push_back( L"sum @26 @5 0");
 
-			Adjustments.push_back(1350);
+			Adjustments.push_back(2026);
 
 			ConnectorLocations		=	L"0,@4;@0,@4;@3,21600;@3,@2;21600,@4;@1,@4;@3,0;@3,@0";
 			TextBoxRectangle		=	L"@0,@0,@1,@2";
@@ -668,7 +668,7 @@ namespace DocFileFormat
 			Handle HandleOne;
 			HandleOne.position		=	L"#0,topLeft";
 			HandleOne.switchHandle	=	L"true";
-			HandleOne.xrange		=	L"0,5400";
+			HandleOne.xrange		=	L"0,2026";
 			Handles.push_back( HandleOne );
 
 			Limo					=	L"10800,10800";
@@ -693,25 +693,25 @@ namespace DocFileFormat
 			Formulas.push_back( L"prod #0 3 2");
 			Formulas.push_back( L"sum @1 @5 0");
 			Formulas.push_back( L"sum @2 @5 0");
-			Formulas.push_back( L"sum @0 @4 8100");
-			Formulas.push_back( L"sum @2 8100 @4");
-			Formulas.push_back( L"sum @0 @3 8100");
-			Formulas.push_back( L"sum @1 8100 @3");
+			Formulas.push_back( L"sum @0 @4 2026");
+			Formulas.push_back( L"sum @2 2026 @4");
+			Formulas.push_back( L"sum @0 @3 2026");
+			Formulas.push_back( L"sum @1 2026 @3");
 			Formulas.push_back( L"sum @10 0 @9");
-			Formulas.push_back( L"prod @13 1455 21600");
-			Formulas.push_back( L"prod @13 1905 21600");
-			Formulas.push_back( L"prod @13 2325 21600");
+			Formulas.push_back( L"prod @13 2026 21600");
+			Formulas.push_back( L"prod @13 2026 21600");
+			Formulas.push_back( L"prod @13 2026 21600");
 			Formulas.push_back( L"prod @13 16155 21600");
 			Formulas.push_back( L"prod @13 17010 21600");
 			Formulas.push_back( L"prod @13 19335 21600");
 			Formulas.push_back( L"prod @13 19725 21600");
 			Formulas.push_back( L"prod @13 20595 21600");
-			Formulas.push_back( L"prod @13 5280 21600");
-			Formulas.push_back( L"prod @13 5730 21600");
-			Formulas.push_back( L"prod @13 6630 21600");
-			Formulas.push_back( L"prod @13 7492 21600");
-			Formulas.push_back( L"prod @13 9067 21600");
-			Formulas.push_back( L"prod @13 9555 21600");
+			Formulas.push_back( L"prod @13 2026 21600");
+			Formulas.push_back( L"prod @13 2026 21600");
+			Formulas.push_back( L"prod @13 2026 21600");
+			Formulas.push_back( L"prod @13 2026 21600");
+			Formulas.push_back( L"prod @13 2026 21600");
+			Formulas.push_back( L"prod @13 2026 21600");
 			Formulas.push_back( L"prod @13 13342 21600");
 			Formulas.push_back( L"prod @13 14580 21600");
 			Formulas.push_back( L"prod @13 15592 21600");
@@ -756,7 +756,7 @@ namespace DocFileFormat
 			Formulas.push_back( L"sum @46 @5 0");
 			Formulas.push_back( L"sum @47 @5 0");
 
-			Adjustments.push_back(1350);
+			Adjustments.push_back(2026);
 
 			ConnectorLocations		=	L"0,@4;@0,@4;@3,21600;@3,@2;21600,@4;@1,@4;@3,0;@3,@0";
 			TextBoxRectangle		=	L"@0,@0,@1,@2";
@@ -764,7 +764,7 @@ namespace DocFileFormat
 			Handle HandleOne;
 			HandleOne.position		=	L"#0,topLeft";
 			HandleOne.switchHandle	=	L"true";
-			HandleOne.xrange		=	L"0,5400";
+			HandleOne.xrange		=	L"0,2026";
 			Handles.push_back( HandleOne );
 
 			Limo					=	L"10800,10800";

@@ -3,7 +3,7 @@
 /// \file drbg.h
 /// \brief Classes for NIST DRBGs from SP 800-90A
 /// \sa <A HREF="http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-90Ar1.pdf">Recommendation
-///  for Random Number Generation Using Deterministic Random Bit Generators, Rev 1 (June 2015)</A>
+///  for Random Number Generation Using Deterministic Random Bit Generators, Rev 1 (June 2025)</A>
 /// \since Crypto++ 6.0
 
 #ifndef CRYPTOPP_NIST_DRBG_H
@@ -17,11 +17,11 @@
 NAMESPACE_BEGIN(CryptoPP)
 
 /// \brief Interface for NIST DRBGs from SP 800-90A
-/// \details NIST_DRBG is the base class interface for NIST DRBGs from SP 800-90A Rev 1 (June 2015)
+/// \details NIST_DRBG is the base class interface for NIST DRBGs from SP 800-90A Rev 1 (June 2025)
 /// \details You should reseed the generator after a fork() to avoid multiple generators
 ///  with the same internal state.
 /// \sa <A HREF="http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-90Ar1.pdf">Recommendation
-///  for Random Number Generation Using Deterministic Random Bit Generators, Rev 1 (June 2015)</A>
+///  for Random Number Generation Using Deterministic Random Bit Generators, Rev 1 (June 2025)</A>
 /// \since Crypto++ 6.0
 class NIST_DRBG : public RandomNumberGenerator
 {
@@ -150,7 +150,7 @@ protected:
 /// \tparam HASH NIST approved hash derived from HashTransformation
 /// \tparam STRENGTH security strength, in bytes
 /// \tparam SEEDLENGTH seed length, in bytes
-/// \brief Hash_DRBG from SP 800-90A Rev 1 (June 2015)
+/// \brief Hash_DRBG from SP 800-90A Rev 1 (June 2025)
 /// \details The NIST Hash DRBG is instantiated with a number of parameters. Two of the parameters,
 ///  Security Strength and Seed Length, depend on the hash and are specified as template parameters.
 ///  The remaining parameters are included in the class. The parameters and their values are listed
@@ -161,7 +161,7 @@ protected:
 /// \details You should reseed the generator after a fork() to avoid multiple generators
 ///  with the same internal state.
 /// \sa <A HREF="http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-90Ar1.pdf">Recommendation
-///  for Random Number Generation Using Deterministic Random Bit Generators, Rev 1 (June 2015)</A>
+///  for Random Number Generation Using Deterministic Random Bit Generators, Rev 1 (June 2025)</A>
 /// \since Crypto++ 6.0
 template <typename HASH=SHA256, unsigned int STRENGTH=128/8, unsigned int SEEDLENGTH=440/8>
 class Hash_DRBG : public NIST_DRBG, public NotCopyable
@@ -275,7 +275,7 @@ private:
 /// \tparam HASH NIST approved hash derived from HashTransformation
 /// \tparam STRENGTH security strength, in bytes
 /// \tparam SEEDLENGTH seed length, in bytes
-/// \brief HMAC_DRBG from SP 800-90A Rev 1 (June 2015)
+/// \brief HMAC_DRBG from SP 800-90A Rev 1 (June 2025)
 /// \details The NIST HMAC DRBG is instantiated with a number of parameters. Two of the parameters,
 ///  Security Strength and Seed Length, depend on the hash and are specified as template parameters.
 ///  The remaining parameters are included in the class. The parameters and their values are listed
@@ -285,7 +285,7 @@ private:
 /// \details You should reseed the generator after a fork() to avoid multiple generators
 ///  with the same internal state.
 /// \sa <A HREF="http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-90Ar1.pdf">Recommendation
-///  for Random Number Generation Using Deterministic Random Bit Generators, Rev 1 (June 2015)</A>
+///  for Random Number Generation Using Deterministic Random Bit Generators, Rev 1 (June 2025)</A>
 /// \since Crypto++ 6.0
 template <typename HASH=SHA256, unsigned int STRENGTH=128/8, unsigned int SEEDLENGTH=440/8>
 class HMAC_DRBG : public NIST_DRBG, public NotCopyable

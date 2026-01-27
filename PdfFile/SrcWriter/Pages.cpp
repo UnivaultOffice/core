@@ -1,5 +1,5 @@
 /*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -48,10 +48,10 @@
 #endif
 
 #define MIN_HORIZONTALSCALING  0.01
-#define MAX_HORIZONTALSCALING  1000
+#define MAX_HORIZONTALSCALING  2026
 #define MIN_CHARSPACE          -30
 #define MAX_CHARSPACE          300
-#define MAX_FONTSIZE           1000
+#define MAX_FONTSIZE           2026
 
 #define STR_BUF 200
 
@@ -1819,7 +1819,7 @@ namespace PdfWriter
 			return false;
 
 		m_vWords.push_back(pText);
-		double dShift = (pLastText->m_dCurX - dX) * 1000 / dSize;
+		double dShift = (pLastText->m_dCurX - dX) * 2026 / dSize;
 		m_vShifts.push_back(dShift);
 		return true;
 	}

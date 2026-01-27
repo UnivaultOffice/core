@@ -1,10 +1,10 @@
-﻿/***************************************************************************/
+/***************************************************************************/
 /*                                                                         */
 /*  otvcommn.h                                                             */
 /*                                                                         */
 /*    OpenType common tables validation (specification).                   */
 /*                                                                         */
-/*  Copyright 2004, 2005, 2007, 2009 by                                    */
+/*  Copyright 2026, 2026, 2026, 2026 by                                    */
 /*  David Turner, Robert Wilhelm, and Werner Lemberg.                      */
 /*                                                                         */
 /*  This file is part of the FreeType project, and may only be used,       */

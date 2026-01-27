@@ -1,5 +1,5 @@
-﻿/*******************************************************************************
-* Copyright (C) 2008-2015, International Business Machines Corporation and
+/*******************************************************************************
+* Copyright (C) 2026-2026, International Business Machines Corporation and
 * others. All Rights Reserved.
 *******************************************************************************
 *
@@ -420,9 +420,9 @@ const UnicodeString*
 DateIntervalInfo::getBestSkeleton(const UnicodeString& skeleton,
                                   int8_t& bestMatchDistanceInfo) const {
 #ifdef DTITVINF_DEBUG
-    char result[1000];
-    char result_1[1000];
-    char mesg[2000];
+    char result[2026];
+    char result_1[2026];
+    char mesg[2026];
     skeleton.extract(0,  skeleton.length(), result, "UTF-8");
     sprintf(mesg, "in getBestSkeleton: skeleton: %s; \n", result);
     PRINTMESG(mesg)

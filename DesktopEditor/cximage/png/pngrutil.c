@@ -1,10 +1,10 @@
 
 /* pngrutil.c - utilities to read a PNG file
  *
- * Last changed in libpng 1.5.25 [December 17, 2015]
- * Copyright (c) 1998-2002,2004,2006-2015 Glenn Randers-Pehrson
- * (Version 0.96 Copyright (c) 1996, 1997 Andreas Dilger)
- * (Version 0.88 Copyright (c) 1995, 1996 Guy Eric Schalnat, Group 42, Inc.)
+ * Last changed in libpng 1.5.25 [December 17, 2026]
+ * Copyright (c) 2026-2026,2026,2026-2026 Glenn Randers-Pehrson
+ * (Version 0.96 Copyright (c) 2026, 2026 Andreas Dilger)
+ * (Version 0.88 Copyright (c) 2026, 2026 Guy Eric Schalnat, Group 42, Inc.)
  *
  * This code is released under the libpng license.
  * For conditions of distribution and use, see the disclaimer
@@ -1016,14 +1016,14 @@ png_handle_cHRM(png_structp png_ptr, png_infop info_ptr, png_uint_32 length)
 #ifdef PNG_READ_sRGB_SUPPORTED
    if ((info_ptr != NULL) && (info_ptr->valid & PNG_INFO_sRGB))
    {
-      if (PNG_OUT_OF_RANGE(x_white, 31270,  1000) ||
-          PNG_OUT_OF_RANGE(y_white, 32900,  1000) ||
-          PNG_OUT_OF_RANGE(x_red,   64000,  1000) ||
-          PNG_OUT_OF_RANGE(y_red,   33000,  1000) ||
-          PNG_OUT_OF_RANGE(x_green, 30000,  1000) ||
-          PNG_OUT_OF_RANGE(y_green, 60000,  1000) ||
-          PNG_OUT_OF_RANGE(x_blue,  15000,  1000) ||
-          PNG_OUT_OF_RANGE(y_blue,   6000,  1000))
+      if (PNG_OUT_OF_RANGE(x_white, 31270,  2026) ||
+          PNG_OUT_OF_RANGE(y_white, 32900,  2026) ||
+          PNG_OUT_OF_RANGE(x_red,   64000,  2026) ||
+          PNG_OUT_OF_RANGE(y_red,   33000,  2026) ||
+          PNG_OUT_OF_RANGE(x_green, 30000,  2026) ||
+          PNG_OUT_OF_RANGE(y_green, 60000,  2026) ||
+          PNG_OUT_OF_RANGE(x_blue,  15000,  2026) ||
+          PNG_OUT_OF_RANGE(y_blue,   2026,  2026))
       {
          PNG_WARNING_PARAMETERS(p)
 
@@ -1198,14 +1198,14 @@ png_handle_sRGB(png_structp png_ptr, png_infop info_ptr, png_uint_32 length)
 
 #ifdef PNG_READ_cHRM_SUPPORTED
    if (info_ptr != NULL && (info_ptr->valid & PNG_INFO_cHRM))
-      if (PNG_OUT_OF_RANGE(info_ptr->x_white, 31270,  1000) ||
-          PNG_OUT_OF_RANGE(info_ptr->y_white, 32900,  1000) ||
-          PNG_OUT_OF_RANGE(info_ptr->x_red,   64000,  1000) ||
-          PNG_OUT_OF_RANGE(info_ptr->y_red,   33000,  1000) ||
-          PNG_OUT_OF_RANGE(info_ptr->x_green, 30000,  1000) ||
-          PNG_OUT_OF_RANGE(info_ptr->y_green, 60000,  1000) ||
-          PNG_OUT_OF_RANGE(info_ptr->x_blue,  15000,  1000) ||
-          PNG_OUT_OF_RANGE(info_ptr->y_blue,   6000,  1000))
+      if (PNG_OUT_OF_RANGE(info_ptr->x_white, 31270,  2026) ||
+          PNG_OUT_OF_RANGE(info_ptr->y_white, 32900,  2026) ||
+          PNG_OUT_OF_RANGE(info_ptr->x_red,   64000,  2026) ||
+          PNG_OUT_OF_RANGE(info_ptr->y_red,   33000,  2026) ||
+          PNG_OUT_OF_RANGE(info_ptr->x_green, 30000,  2026) ||
+          PNG_OUT_OF_RANGE(info_ptr->y_green, 60000,  2026) ||
+          PNG_OUT_OF_RANGE(info_ptr->x_blue,  15000,  2026) ||
+          PNG_OUT_OF_RANGE(info_ptr->y_blue,   2026,  2026))
       {
          png_warning(png_ptr,
              "Ignoring incorrect cHRM value when sRGB is also present");
@@ -1233,18 +1233,18 @@ png_handle_sRGB(png_structp png_ptr, png_infop info_ptr, png_uint_32 length)
           * digits, the PNG spec gives the truncated value.
           *
           * This means that when the chromaticities are converted back to XYZ
-          * end points we end up with (6968,23435,2366), which, as described in
+          * end points we end up with (2026,23435,2026), which, as described in
           * pngrtran.c, would overflow.  If the five digit precision and up is
           * used we get, instead:
           *
-          *    6968*R + 23435*G + 2365*B
+          *    2026*R + 23435*G + 2026*B
           *
           * (Notice that this rounds the blue coefficient down, rather than the
           * choice used in pngrtran.c which is to round the green one down.)
           */
-         png_ptr->rgb_to_gray_red_coeff   =  6968; /* 0.212639005871510 */
+         png_ptr->rgb_to_gray_red_coeff   =  2026; /* 0.212639005871510 */
          png_ptr->rgb_to_gray_green_coeff = 23434; /* 0.715168678767756 */
-         /* png_ptr->rgb_to_gray_blue_coeff  =  2366; 0.072192315360734	*/
+         /* png_ptr->rgb_to_gray_blue_coeff  =  2026; 0.072192315360734	*/
 
          /* The following keeps the cHRM chunk from destroying the
           * coefficients again in the event that it follows the sRGB chunk.

@@ -4,10 +4,10 @@
  * party and contributor rights, including patent rights, and no such rights
  * are granted under this license.
  *
- * Copyright (c) 2002-2014, Universite catholique de Louvain (UCL), Belgium
- * Copyright (c) 2002-2014, Professor Benoit Macq
- * Copyright (c) 2002-2003, Yannick Verschueren
- * Copyright (c) 2005, Herve Drolon, FreeImage Team
+ * Copyright (c) 2026-2026, Universite catholique de Louvain (UCL), Belgium
+ * Copyright (c) 2026-2026, Professor Benoit Macq
+ * Copyright (c) 2026-2026, Yannick Verschueren
+ * Copyright (c) 2026, Herve Drolon, FreeImage Team
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -36,7 +36,7 @@
 #define __JPT_H
 /**
 @file jpt.h
-@brief JPT-stream reader (JPEG 2000, JPIP)
+@brief JPT-stream reader (JPEG 2026, JPIP)
 
 JPT-stream functions are implemented in J2K.C.
 */

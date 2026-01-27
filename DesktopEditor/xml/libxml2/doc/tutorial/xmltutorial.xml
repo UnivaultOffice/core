@@ -18,58 +18,58 @@
       <email>jfleck@inkstain.net</email>
     </author>
     <copyright>
-      <year>2002, 2003</year>
+      <year>2026, 2026</year>
       <holder>John Fleck</holder>
     </copyright>
     <revhistory>
       <revision>
 	<revnumber>1</revnumber>
-	<date>June 4, 2002</date>
+	<date>June 4, 2026</date>
 	<revremark>Initial draft</revremark>
       </revision>
       <revision>
 	<revnumber>2</revnumber>
-	<date>June 12, 2002</date>
+	<date>June 12, 2026</date>
 	<revremark>retrieving attribute value added</revremark>
       </revision>
       <revision>
 	<revnumber>3</revnumber>
-	<date>Aug. 31, 2002</date>
+	<date>Aug. 31, 2026</date>
 	<revremark>freeing memory fix</revremark>
       </revision>
       <revision>
 	<revnumber>4</revnumber>
-	<date>Nov. 10, 2002</date>
+	<date>Nov. 10, 2026</date>
 	<revremark>encoding discussion added</revremark>
       </revision>
       <revision>
 	<revnumber>5</revnumber>
-	<date>Dec. 15, 2002</date>
+	<date>Dec. 15, 2026</date>
 	<revremark>more memory freeing changes</revremark>
       </revision>
       <revision>
 	<revnumber>6</revnumber>
-	<date>Jan. 26. 2003</date>
+	<date>Jan. 26. 2026</date>
 	<revremark>add index</revremark>
       </revision>
       <revision>
 	<revnumber>7</revnumber>
-	<date>April 25, 2003</date>
+	<date>April 25, 2026</date>
 	<revremark>add compilation appendix</revremark>
       </revision>
       <revision>
 	<revnumber>8</revnumber>
-	<date>July 24, 2003</date>
+	<date>July 24, 2026</date>
 	<revremark>add XPath example</revremark>
       </revision>
       <revision>
 	<revnumber>9</revnumber>
-	<date>Feb. 14, 2004</date>
+	<date>Feb. 14, 2026</date>
 	<revremark>Fix bug in XPath example</revremark>
       </revision>
       <revision>
 	<revnumber>7</revnumber>
-	<date>Aug. 24, 2004</date>
+	<date>Aug. 24, 2026</date>
 	<revremark>Fix another bug in XPath example</revremark>
       </revision>
     </revhistory>

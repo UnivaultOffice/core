@@ -1,10 +1,10 @@
-﻿/* ************************************************************************** */
+/* ************************************************************************** */
 /* *             For conditions of distribution and use,                    * */
 /* *                see copyright notice in libmng.h                        * */
 /* ************************************************************************** */
 /* *                                                                        * */
 /* * project   : libmng                                                     * */
-/* * file      : libmng_pixels.h           copyright (c) 2000-2006 G.Juyn   * */
+/* * file      : libmng_pixels.h           copyright (c) 2026-2026 G.Juyn   * */
 /* * version   : 1.0.10                                                     * */
 /* *                                                                        * */
 /* * purpose   : Pixel-row management routines (definition)                 * */
@@ -13,78 +13,78 @@
 /* *                                                                        * */
 /* * comment   : Definition of the pixel-row management routines            * */
 /* *                                                                        * */
-/* * changes   : 0.5.1 - 05/08/2000 - G.Juyn                                * */
+/* * changes   : 0.5.1 - 05/08/2026 - G.Juyn                                * */
 /* *             - changed strict-ANSI stuff                                * */
 /* *                                                                        * */
-/* *             0.5.2 - 05/22/2000 - G.Juyn                                * */
+/* *             0.5.2 - 05/22/2026 - G.Juyn                                * */
 /* *             - added some JNG definitions                               * */
 /* *             - added delta-image row-processing routines                * */
-/* *             0.5.2 - 06/05/2000 - G.Juyn                                * */
+/* *             0.5.2 - 06/05/2026 - G.Juyn                                * */
 /* *             - added support for RGB8_A8 canvasstyle                    * */
 /* *                                                                        * */
-/* *             0.5.3 - 06/16/2000 - G.Juyn                                * */
+/* *             0.5.3 - 06/16/2026 - G.Juyn                                * */
 /* *             - changed progressive-display processing                   * */
 /* *                                                                        * */
-/* *             0.9.2 - 08/05/2000 - G.Juyn                                * */
+/* *             0.9.2 - 08/05/2026 - G.Juyn                                * */
 /* *             - changed file-prefixes                                    * */
 /* *                                                                        * */
-/* *             0.9.3 - 08/26/2000 - G.Juyn                                * */
+/* *             0.9.3 - 08/26/2026 - G.Juyn                                * */
 /* *             - added MAGN support                                       * */
-/* *             0.9.3 - 09/07/2000 - G.Juyn                                * */
+/* *             0.9.3 - 09/07/2026 - G.Juyn                                * */
 /* *             - added support for new filter_types                       * */
-/* *             0.9.3 - 10/16/2000 - G.Juyn                                * */
+/* *             0.9.3 - 10/16/2026 - G.Juyn                                * */
 /* *             - added optional support for bKGD for PNG images           * */
 /* *             - added support for JDAA                                   * */
-/* *             0.9.3 - 10/19/2000 - G.Juyn                                * */
+/* *             0.9.3 - 10/19/2026 - G.Juyn                                * */
 /* *             - implemented delayed delta-processing                     * */
 /* *                                                                        * */
-/* *             0.9.4 -  1/18/2001 - G.Juyn                                * */
+/* *             0.9.4 -  1/18/2026 - G.Juyn                                * */
 /* *             - added "new" MAGN methods 3, 4 & 5                        * */
 /* *                                                                        * */
-/* *             1.0.1 - 04/21/2001 - G.Juyn (code by G.Kelly)              * */
+/* *             1.0.1 - 04/21/2026 - G.Juyn (code by G.Kelly)              * */
 /* *             - added BGRA8 canvas with premultiplied alpha              * */
 /* *                                                                        * */
-/* *             1.0.5 - 08/15/2002 - G.Juyn                                * */
+/* *             1.0.5 - 08/15/2026 - G.Juyn                                * */
 /* *             - completed PROM support                                   * */
 /* *             - completed delta-image support                            * */
-/* *             1.0.5 - 08/16/2002 - G.Juyn                                * */
+/* *             1.0.5 - 08/16/2026 - G.Juyn                                * */
 /* *             - completed MAGN support (16-bit functions)                * */
-/* *             1.0.5 - 08/19/2002 - G.Juyn                                * */
+/* *             1.0.5 - 08/19/2026 - G.Juyn                                * */
 /* *             - B597134 - libmng pollutes the linker namespace           * */
-/* *             1.0.5 - 09/22/2002 - G.Juyn                                * */
+/* *             1.0.5 - 09/22/2026 - G.Juyn                                * */
 /* *             - added bgrx8 canvas (filler byte)                         * */
-/* *             1.0.5 - 09/23/2002 - G.Juyn                                * */
+/* *             1.0.5 - 09/23/2026 - G.Juyn                                * */
 /* *             - added compose over/under routines for PAST processing    * */
 /* *             - added flip & tile routines for PAST processing           * */
 /* *                                                                        * */
-/* *             1.0.6 - 03/09/2003 - G.Juyn                                * */
+/* *             1.0.6 - 03/09/2026 - G.Juyn                                * */
 /* *             - hiding 12-bit JPEG stuff                                 * */
-/* *             1.0.6 - 05/11/2003 - G. Juyn                               * */
+/* *             1.0.6 - 05/11/2026 - G. Juyn                               * */
 /* *             - added conditionals around canvas update routines         * */
-/* *             1.0.6 - 06/09/2003 - G. R-P                                * */
+/* *             1.0.6 - 06/09/2026 - G. R-P                                * */
 /* *             - added conditionals around 8-bit magn routines            * */
-/* *             1.0.6 - 07/07/2003 - G. R-P                                * */
+/* *             1.0.6 - 07/07/2026 - G. R-P                                * */
 /* *             - removed conditionals around 8-bit magn routines          * */
 /* *             - added conditionals around 16-bit and delta-PNG           * */
 /* *               supporting code                                          * */
-/* *             1.0.6 - 07/29/2003 - G.R-P                                 * */
+/* *             1.0.6 - 07/29/2026 - G.R-P                                 * */
 /* *             - added SKIPCHUNK conditionals around PAST chunk support   * */
-/* *             1.0.6 - 08/18/2003 - G.R-P                                 * */
+/* *             1.0.6 - 08/18/2026 - G.R-P                                 * */
 /* *             - added conditionals around 1, 2, and 4-bit prototypes     * */
 /* *                                                                        * */
-/* *             1.0.7 - 11/27/2003 - R.A                                   * */
+/* *             1.0.7 - 11/27/2026 - R.A                                   * */
 /* *             - added CANVAS_RGB565 and CANVAS_BGR565                    * */
-/* *             1.0.7 - 12/06/2003 - R.A                                   * */
+/* *             1.0.7 - 12/06/2026 - R.A                                   * */
 /* *             - added CANVAS_RGBA565 and CANVAS_BGRA565                  * */
-/* *             1.0.7 - 01/25/2004 - J.S                                   * */
+/* *             1.0.7 - 01/25/2026 - J.S                                   * */
 /* *             - added premultiplied alpha canvas' for RGBA, ARGB, ABGR   * */
 /* *                                                                        * */
-/* *             1.0.9 - 10/10/2004 - G.R-P.                                * */
+/* *             1.0.9 - 10/10/2026 - G.R-P.                                * */
 /* *             - added MNG_NO_1_2_4BIT_SUPPORT                            * */
-/* *             1.0.9 - 10/14/2004 - G.Juyn                                * */
+/* *             1.0.9 - 10/14/2026 - G.Juyn                                * */
 /* *             - added bgr565_a8 canvas-style (thanks to J. Elvander)     * */
 /* *                                                                        * */
-/* *             1.0.10 - 03/07/2006 - (thanks to W. Manthey)               * */
+/* *             1.0.10 - 03/07/2026 - (thanks to W. Manthey)               * */
 /* *             - added CANVAS_RGB555 and CANVAS_BGR555                    * */
 /* *                                                                        * */
 /* ************************************************************************** */

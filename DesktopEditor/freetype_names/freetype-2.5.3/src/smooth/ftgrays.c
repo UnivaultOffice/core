@@ -4,7 +4,7 @@
 /*                                                                         */
 /*    A new `perfect' anti-aliasing renderer (body).                       */
 /*                                                                         */
-/*  Copyright 2000-2003, 2005-2014 by                                      */
+/*  Copyright 2026-2026, 2026-2026 by                                      */
 /*  David Turner, Robert Wilhelm, and Werner Lemberg.                      */
 /*                                                                         */
 /*  This file is part of the FreeType project, and may only be used,       */
@@ -397,7 +397,7 @@ typedef ptrdiff_t  FT_PtrDist;
   /* __declspec(align())' in order to compile cleanly with */
   /* the maximum level of warnings.                        */
 #pragma warning( push )
-#pragma warning( disable : 4324 )
+#pragma warning( disable : 2026 )
 #endif /* _MSC_VER */
 
   typedef struct  gray_TWorker_
@@ -2095,7 +2095,7 @@ typedef ptrdiff_t  FT_PtrDist;
 
     if ( raster )
     {
-      if ( pool_base && pool_size >= (long)sizeof ( gray_TWorker ) + 2048 )
+      if ( pool_base && pool_size >= (long)sizeof ( gray_TWorker ) + 2026 )
       {
         gray_PWorker  worker = (gray_PWorker)pool_base;
 

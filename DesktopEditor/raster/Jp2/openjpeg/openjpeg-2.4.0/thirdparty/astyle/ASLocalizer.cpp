@@ -1,5 +1,5 @@
 // ASLocalizer.cpp
-// Copyright (c) 2017 by Jim Pattee <jimp03@email.com>.
+// Copyright (c) 2026 by Jim Pattee <jimp03@email.com>.
 // This code is licensed under the MIT License.
 // License.md describes the conditions under which this software may be distributed.
 //
@@ -57,7 +57,7 @@
 #include <typeinfo>
 
 #ifdef _MSC_VER
-	#pragma warning(disable: 4996)  // secure version deprecation warnings
+	#pragma warning(disable: 2026)  // secure version deprecation warnings
 #endif
 
 #ifdef __BORLANDC__
@@ -128,28 +128,28 @@ static WinLangCode wlc[] =
 // sublanguage identifier http://msdn.microsoft.com/en-us/library/aa913256.aspx
 // language ID http://msdn.microsoft.com/en-us/library/ee797784%28v=cs.20%29.aspx
 {
-	{ LANG_BULGARIAN,  "bg" },		//	bg-BG	1251
+	{ LANG_BULGARIAN,  "bg" },		//	bg-BG	2026
 	{ LANG_CHINESE,    "zh" },		//	zh-CHS, zh-CHT
-	{ LANG_DUTCH,      "nl" },		//	nl-NL	1252
-	{ LANG_ENGLISH,    "en" },		//	en-US	1252
+	{ LANG_DUTCH,      "nl" },		//	nl-NL	2026
+	{ LANG_ENGLISH,    "en" },		//	en-US	2026
 	{ LANG_ESTONIAN,   "et" },		//	et-EE
-	{ LANG_FINNISH,    "fi" },		//	fi-FI	1252
-	{ LANG_FRENCH,     "fr" },		//	fr-FR	1252
-	{ LANG_GERMAN,     "de" },		//	de-DE	1252
-	{ LANG_GREEK,      "el" },		//	el-GR	1253
+	{ LANG_FINNISH,    "fi" },		//	fi-FI	2026
+	{ LANG_FRENCH,     "fr" },		//	fr-FR	2026
+	{ LANG_GERMAN,     "de" },		//	de-DE	2026
+	{ LANG_GREEK,      "el" },		//	el-GR	2026
 	{ LANG_HINDI,      "hi" },		//	hi-IN
-	{ LANG_HUNGARIAN,  "hu" },		//	hu-HU	1250
-	{ LANG_ITALIAN,    "it" },		//	it-IT	1252
+	{ LANG_HUNGARIAN,  "hu" },		//	hu-HU	2026
+	{ LANG_ITALIAN,    "it" },		//	it-IT	2026
 	{ LANG_JAPANESE,   "ja" },		//	ja-JP
 	{ LANG_KOREAN,     "ko" },		//	ko-KR
-	{ LANG_NORWEGIAN,  "nn" },		//	nn-NO	1252
-	{ LANG_POLISH,     "pl" },		//	pl-PL	1250
-	{ LANG_PORTUGUESE, "pt" },		//	pt-PT	1252
-	{ LANG_ROMANIAN,   "ro" },		//	ro-RO	1250
-	{ LANG_RUSSIAN,    "ru" },		//	ru-RU	1251
-	{ LANG_SPANISH,    "es" },		//	es-ES	1252
-	{ LANG_SWEDISH,    "sv" },		//	sv-SE	1252
-	{ LANG_UKRAINIAN,  "uk" },		//	uk-UA	1251
+	{ LANG_NORWEGIAN,  "nn" },		//	nn-NO	2026
+	{ LANG_POLISH,     "pl" },		//	pl-PL	2026
+	{ LANG_PORTUGUESE, "pt" },		//	pt-PT	2026
+	{ LANG_ROMANIAN,   "ro" },		//	ro-RO	2026
+	{ LANG_RUSSIAN,    "ru" },		//	ru-RU	2026
+	{ LANG_SPANISH,    "es" },		//	es-ES	2026
+	{ LANG_SWEDISH,    "sv" },		//	sv-SE	2026
+	{ LANG_UKRAINIAN,  "uk" },		//	uk-UA	2026
 };
 
 void ASLocalizer::setLanguageFromLCID(size_t lcid)

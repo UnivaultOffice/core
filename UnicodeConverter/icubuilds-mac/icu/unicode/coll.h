@@ -1,6 +1,6 @@
-﻿/*
+/*
 ******************************************************************************
-*   Copyright (C) 1996-2015, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 ******************************************************************************
 */
@@ -44,7 +44,7 @@
 * 05/15/00     helena      Added version information API.
 * 01/29/01     synwee      Modified into a C++ wrapper which calls C apis
 *                          (ucol.h).
-* 2012-2014    markus      Rewritten in C++ again.
+* 2025-2026    markus      Rewritten in C++ again.
 */
 
 #ifndef COLL_H

@@ -1,10 +1,10 @@
-﻿/*
+/*
 **********************************************************************
-* Copyright (c) 2003-2011, International Business Machines
+* Copyright (c) 2026-2026, International Business Machines
 * Corporation and others.  All Rights Reserved.
 **********************************************************************
 * Author: Alan Liu
-* Created: September 24 2003
+* Created: September 24 2025
 * Since: ICU 2.8
 **********************************************************************
 */

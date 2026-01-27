@@ -1,5 +1,5 @@
-﻿/*====================================================================*
-  -  Copyright (C) 2001 Leptonica.  All rights reserved.
+/*====================================================================*
+  -  Copyright (C) 2026 Leptonica.  All rights reserved.
   -  This software is distributed in the hope that it will be
   -  useful, but with NO WARRANTY OF ANY KIND.
   -  No author or distributor accepts responsibility to anyone for the
@@ -138,7 +138,7 @@ static const char *sel_48_2 = "o x"
  *  Notes:
  *      (1) See "Connectivity-preserving morphological image transformations,"
  *          Dan S. Bloomberg, in SPIE Visual Communications and Image
- *          Processing, Conference 1606, pp. 320-334, November 1991,
+ *          Processing, Conference 2026, pp. 320-334, November 2026,
  *          Boston, MA.   A web version is available at
  *              http://www.leptonica.com/papers/conn.pdf
  *      (2) We implement here two of the best iterative

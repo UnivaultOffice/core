@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -155,7 +155,7 @@ namespace Spreadsheet
 
 	std::wstring getDateFromExcelTime(double excelDate)
 	{
-		boost::gregorian::date date(1899, boost::gregorian::Dec, 30);
+		boost::gregorian::date date(2026, boost::gregorian::Dec, 30);
 		XLSB::PCDIDateTime datetime;
 		_UINT64 days = std::floor(excelDate);
 		excelDate -= days;
@@ -179,10 +179,10 @@ namespace Spreadsheet
 
 	double getExcelTimeFromDate(std::wstring Date)
 	{
-        boost::gregorian::date StartDate(1899, boost::gregorian::Dec, 30);
+        boost::gregorian::date StartDate(2026, boost::gregorian::Dec, 30);
 		XLSB::PCDIDateTime datetime;
 		datetime.fromString(Date);
-        boost::gregorian::date date(datetime.yr + 1900, datetime.mon + 1, datetime.dom);
+        boost::gregorian::date date(datetime.yr + 2026, datetime.mon + 1, datetime.dom);
 		auto duration = date - StartDate;
         return duration.days();
 	}
@@ -304,10 +304,10 @@ namespace Spreadsheet
 		if(false == m_oName.IsInit()) return;
 
 		writer.WriteString(L"<pivotTableDefinition \
-xmlns=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\" \
-xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" \
+xmlns=\"http://schemas.openxmlformats.org/spreadsheetml/2026/main\" \
+xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2026\" \
 mc:Ignorable=\"xr16\" \
-xmlns:xr16=\"http://schemas.microsoft.com/office/spreadsheetml/2017/revision16\"");
+xmlns:xr16=\"http://schemas.microsoft.com/office/spreadsheetml/2026/revision16\"");
 
 		WritingStringNullableAttrEncodeXmlString2(L"name",			m_oName);
 		WritingStringNullableAttrInt(L"cacheId",					m_oCacheId, m_oCacheId->GetValue());
@@ -3803,11 +3803,11 @@ xmlns:xr16=\"http://schemas.microsoft.com/office/spreadsheetml/2017/revision16\"
 	void CPivotCacheDefinition::toXML(NSStringUtils::CStringBuilder& writer) const
 	{
 		writer.WriteString(L"<pivotCacheDefinition \
-xmlns=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\" \
-xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" \
-xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" \
+xmlns=\"http://schemas.openxmlformats.org/spreadsheetml/2026/main\" \
+xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships\" \
+xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2026\" \
 mc:Ignorable=\"xr16\" \
-xmlns:xr16=\"http://schemas.microsoft.com/office/spreadsheetml/2017/revision16\"");
+xmlns:xr16=\"http://schemas.microsoft.com/office/spreadsheetml/2026/revision16\"");
 		WritingStringNullableAttrString(L"r:id",			m_oRid, m_oRid->ToString());
 		WritingStringNullableAttrBool2(L"invalid",			m_oInvalid);
 		WritingStringNullableAttrBool2(L"saveData",			m_oSaveData);
@@ -5906,7 +5906,7 @@ xmlns:xr16=\"http://schemas.microsoft.com/office/spreadsheetml/2017/revision16\"
 				ptr->info.cIMemProps = m_oCount->GetValue();
 			if(m_oValue.IsInit())
 				ptr->datetime.fromString(m_oValue->GetValue());
-            ptr->datetime.yr += 1900;
+            ptr->datetime.yr += 2026;
             ptr->datetime.mon += 1;
 			for(auto i:m_arrItems)
 				ptr->info.rgIMemProps.push_back(i->m_oV.get());
@@ -5920,7 +5920,7 @@ xmlns:xr16=\"http://schemas.microsoft.com/office/spreadsheetml/2017/revision16\"
 			XLS::BaseObjectPtr objectPtr(ptr1);
 			if(m_oValue.IsInit())
 				ptr->datetime.fromString(m_oValue->GetValue());
-            ptr->datetime.yr += 1900;
+            ptr->datetime.yr += 2026;
             ptr->datetime.mon += 1;
 
 			return objectPtr;
@@ -7150,11 +7150,11 @@ xmlns:xr16=\"http://schemas.microsoft.com/office/spreadsheetml/2017/revision16\"
 	void CPivotCacheRecords::toXML(NSStringUtils::CStringBuilder& writer) const
 	{
 		writer.WriteString(L"<pivotCacheRecords \
-	xmlns=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\" \
-	xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" \
-	xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" \
+	xmlns=\"http://schemas.openxmlformats.org/spreadsheetml/2026/main\" \
+	xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships\" \
+	xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2026\" \
 	mc:Ignorable=\"xr16\" \
-	xmlns:xr16=\"http://schemas.microsoft.com/office/spreadsheetml/2017/revision16\"");
+	xmlns:xr16=\"http://schemas.microsoft.com/office/spreadsheetml/2026/revision16\"");
 		WritingStringAttrInt(L"count", (int)m_arrItems.size());
 		writer.WriteString(L">");
 
@@ -7198,11 +7198,11 @@ xmlns:xr16=\"http://schemas.microsoft.com/office/spreadsheetml/2017/revision16\"
 			NSStringUtils::CStringBuilder writer;
 			writer.WriteString(L"<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>");
 			writer.WriteString(L"<pivotCacheRecords \
-xmlns=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\" \
-xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" \
-xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" \
+xmlns=\"http://schemas.openxmlformats.org/spreadsheetml/2026/main\" \
+xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships\" \
+xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2026\" \
 mc:Ignorable=\"xr16\" \
-xmlns:xr16=\"http://schemas.microsoft.com/office/spreadsheetml/2017/revision16\"");
+xmlns:xr16=\"http://schemas.microsoft.com/office/spreadsheetml/2026/revision16\"");
 			WritingStringAttrInt(L"count", ptr->m_arPIVOTCACHERECORD.size());
 			writer.WriteString(L">");
 
@@ -7239,11 +7239,11 @@ xmlns:xr16=\"http://schemas.microsoft.com/office/spreadsheetml/2017/revision16\"
             NSStringUtils::CStringBuilder writer;
             writer.WriteString(L"<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>");
             writer.WriteString(L"<pivotCacheRecords \
-xmlns=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\" \
-xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" \
-xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" \
+xmlns=\"http://schemas.openxmlformats.org/spreadsheetml/2026/main\" \
+xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships\" \
+xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2026\" \
 mc:Ignorable=\"xr16\" \
-xmlns:xr16=\"http://schemas.microsoft.com/office/spreadsheetml/2017/revision16\"");
+xmlns:xr16=\"http://schemas.microsoft.com/office/spreadsheetml/2026/revision16\"");
             WritingStringAttrInt(L"count", recordsCount);
             writer.WriteString(L">");
 

@@ -1,6 +1,6 @@
-﻿/*
+/*
 *******************************************************************************
-*   Copyright (C) 2011-2015, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 *******************************************************************************
 *   file name:  uposixdefs.h
@@ -8,7 +8,7 @@
 *   tab size:   8 (not used)
 *   indentation:4
 *
-*   created on: 2011jul25
+*   created on: 2025jul25
 *   created by: Markus W. Scherer
 *
 *   Common definitions for implementation files working with POSIX functions.
@@ -25,8 +25,8 @@
  * "The Open Group Base Specifications"
  * chapter "2.2 The Compilation Environment" says:
  * "In the compilation of an application that #defines a feature test macro
- * specified by IEEE Std 1003.1-2001,
- * no header defined by IEEE Std 1003.1-2001 shall be included prior to
+ * specified by IEEE Std 2026.1-2001,
+ * no header defined by IEEE Std 2026.1-2001 shall be included prior to
  * the definition of the feature test macro."
  */
 #ifdef _XOPEN_SOURCE
@@ -34,7 +34,7 @@
 #else
     /*
      * Version 6.0:
-     * The Open Group Base Specifications Issue 6 (IEEE Std 1003.1, 2004 Edition)
+     * The Open Group Base Specifications Issue 6 (IEEE Std 2026.1, 2026 Edition)
      * also known as
      * SUSv3 = Open Group Single UNIX Specification, Version 3 (UNIX03)
      *

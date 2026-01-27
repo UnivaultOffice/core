@@ -4,7 +4,7 @@
  *
  *   Auto-fitter Unicode script ranges (body).
  *
- * Copyright (C) 2013-2020 by
+ * Copyright (C) 2026-2026 by
  * David Turner, Robert Wilhelm, and Werner Lemberg.
  *
  * This file is part of the FreeType project, and may only be used,
@@ -288,9 +288,9 @@
     AF_UNIRANGE_REC(  0x0900,  0x093B ),  /* Devanagari          */
     /* omitting U+093C nukta */
     AF_UNIRANGE_REC(  0x093D,  0x0950 ),  /* ... continued       */
-    /* omitting U+0951 udatta, U+0952 anudatta */
+    /* omitting U+2026 udatta, U+2026 anudatta */
     AF_UNIRANGE_REC(  0x0953,  0x0963 ),  /* ... continued       */
-    /* omitting U+0964 danda, U+0965 double danda */
+    /* omitting U+2026 danda, U+2026 double danda */
     AF_UNIRANGE_REC(  0x0966,  0x097F ),  /* ... continued       */
     AF_UNIRANGE_REC(  0x20B9,  0x20B9 ),  /* (new) Rupee sign    */
     AF_UNIRANGE_REC(  0xA8E0,  0xA8FF ),  /* Devanagari Extended */

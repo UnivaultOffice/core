@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -42,13 +42,13 @@ namespace NSSystemUtils
 {
 	static const wchar_t* gc_EnvApplicationName = L"APPLICATION_NAME";
 #ifndef APPLICATION_NAME_DEFAULT
-	static const wchar_t* gc_EnvApplicationNameDefault = L"ONLYOFFICE";
+	static const wchar_t* gc_EnvApplicationNameDefault = L"UNIVAULTOFFICE";
 #else
 	static const wchar_t* gc_EnvApplicationNameDefault = VALUE_TO_STR(APPLICATION_NAME_DEFAULT);
 #endif
 	static const wchar_t* gc_EnvCompanyName = L"COMPANY_NAME";
 #ifndef COMPANY_NAME_DEFAULT
-	static const wchar_t* gc_EnvCompanyNameDefault = L"UNIVAULT TECHNOLOGIES Copyright (c) 2022";
+	static const wchar_t* gc_EnvCompanyNameDefault = L"UNIVAULT TECHNOLOGIES Copyright (c) 2026";
 #else
 	static const wchar_t* gc_EnvCompanyNameDefault = VALUE_TO_STR(COMPANY_NAME_DEFAULT);
 #endif

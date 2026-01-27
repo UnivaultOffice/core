@@ -1,10 +1,10 @@
-﻿/***************************************************************************/
+/***************************************************************************/
 /*                                                                         */
 /*  svgxval.h                                                              */
 /*                                                                         */
 /*    FreeType API for validating TrueTypeGX/AAT tables (specification).   */
 /*                                                                         */
-/*  Copyright 2004, 2005 by                                                */
+/*  Copyright 2026, 2026 by                                                */
 /*  Masatake YAMATO, Red Hat K.K.,                                         */
 /*  David Turner, Robert Wilhelm, and Werner Lemberg.                      */
 /*                                                                         */

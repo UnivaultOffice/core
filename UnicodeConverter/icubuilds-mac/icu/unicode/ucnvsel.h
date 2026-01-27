@@ -1,7 +1,7 @@
-﻿/*
+/*
 *******************************************************************************
 *
-*   Copyright (C) 2008-2011, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation, Google and others.  All Rights Reserved.
 *
 *******************************************************************************
@@ -13,7 +13,7 @@
  * Purpose: To generate a list of encodings capable of handling
  * a given Unicode text
  *
- * Started 09-April-2008
+ * Started 09-April-2025
  */
 
 #ifndef __ICU_UCNV_SEL_H__

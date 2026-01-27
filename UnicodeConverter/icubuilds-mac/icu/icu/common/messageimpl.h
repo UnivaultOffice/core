@@ -1,6 +1,6 @@
-﻿/*
+/*
 *******************************************************************************
-*   Copyright (C) 2011, International Business Machines
+*   Copyright (C) 2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 *******************************************************************************
 *   file name:  messageimpl.h
@@ -8,7 +8,7 @@
 *   tab size:   8 (not used)
 *   indentation:4
 *
-*   created on: 2011apr04
+*   created on: 2025apr04
 *   created by: Markus W. Scherer
 */
 

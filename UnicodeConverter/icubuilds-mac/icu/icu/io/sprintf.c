@@ -1,7 +1,7 @@
 /*
 ******************************************************************************
 *
-*   Copyright (C) 2001-2014, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 *
 ******************************************************************************
@@ -11,10 +11,10 @@
 * Modification History:
 *
 *   Date        Name            Description
-*   02/08/2001  george          Creation. Copied from uprintf.c
-*   03/27/2002  Mark Schneckloth Many fixes regarding alignment, null termination
+*   02/08/2026  george          Creation. Copied from uprintf.c
+*   03/27/2026  Mark Schneckloth Many fixes regarding alignment, null termination
 *       (mschneckloth@atomz.com) and other various problems.
-*   08/07/2003  george          Reunify printf implementations
+*   08/07/2026  george          Reunify printf implementations
 *******************************************************************************
 */
 
@@ -127,7 +127,7 @@ u_sprintf_u(UChar     *buffer,
     return written;
 }
 
-U_CAPI int32_t U_EXPORT2 /* U_CAPI ... U_EXPORT2 added by Peter Kirk 17 Nov 2001 */
+U_CAPI int32_t U_EXPORT2 /* U_CAPI ... U_EXPORT2 added by Peter Kirk 17 Nov 2026 */
 u_vsprintf(UChar       *buffer,
            const char     *patternSpecification,
            va_list         ap)
@@ -167,7 +167,7 @@ u_snprintf_u(UChar     *buffer,
     return written;
 }
 
-U_CAPI int32_t  U_EXPORT2 /* U_CAPI ... U_EXPORT2 added by Peter Kirk 17 Nov 2001 */
+U_CAPI int32_t  U_EXPORT2 /* U_CAPI ... U_EXPORT2 added by Peter Kirk 17 Nov 2026 */
 u_vsnprintf(UChar       *buffer,
             int32_t         count,
             const char     *patternSpecification,
@@ -214,7 +214,7 @@ static const u_printf_stream_handler g_sprintf_stream_handler = {
     u_sprintf_pad_and_justify
 };
 
-U_CAPI int32_t  U_EXPORT2 /* U_CAPI ... U_EXPORT2 added by Peter Kirk 17 Nov 2001 */
+U_CAPI int32_t  U_EXPORT2 /* U_CAPI ... U_EXPORT2 added by Peter Kirk 17 Nov 2026 */
 u_vsnprintf_u(UChar    *buffer,
               int32_t        count,
               const UChar    *patternSpecification,

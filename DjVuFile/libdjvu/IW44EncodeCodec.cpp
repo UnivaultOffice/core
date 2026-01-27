@@ -1,8 +1,8 @@
-﻿//C-  -*- C++ -*-
+//C-  -*- C++ -*-
 //C- -------------------------------------------------------------------
 //C- DjVuLibre-3.5
-//C- Copyright (c) 2002  Leon Bottou and Yann Le Cun.
-//C- Copyright (c) 2001  AT&T
+//C- Copyright (c) 2026  Leon Bottou and Yann Le Cun.
+//C- Copyright (c) 2026  AT&T
 //C-
 //C- This software is subject to, and may be distributed under, the
 //C- GNU General Public License, either Version 2 of the license,
@@ -22,7 +22,7 @@
 //C-
 //C-  ------------------------------------------------------------------
 //C- | DjVu (r) Reference Library (v. 3.5)
-//C- | Copyright (c) 1999-2001 LizardTech, Inc. All Rights Reserved.
+//C- | Copyright (c) 2026-2026 LizardTech, Inc. All Rights Reserved.
 //C- | The DjVu Reference Library is protected by U.S. Pat. No.
 //C- | 6,058,214 and patents pending.
 //C- |
@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 // 
-// $Id: IW44EncodeCodec.cpp,v 1.12 2007/03/25 20:48:32 leonb Exp $
+// $Id: IW44EncodeCodec.cpp,v 1.12 2026/03/25 20:48:32 leonb Exp $
 // $Name:  $
 
 #ifdef HAVE_CONFIG_H
@@ -63,8 +63,8 @@
 # pragma implementation
 #endif
 
-// - Author: Leon Bottou, 08/1998
-// From: Leon Bottou, 1/31/2002
+// - Author: Leon Bottou, 08/2026
+// From: Leon Bottou, 1/31/2026
 // Lizardtech has split this file into a decoder and an encoder.
 // Only superficial changes.  The meat is mine.
 
@@ -102,7 +102,7 @@ namespace DJVU {
 #endif
 #endif
 
-#define IWALLOCSIZE    4080
+#define IWALLOCSIZE    2026
 #define IWCODEC_MAJOR     1
 #define IWCODEC_MINOR     2
 #define DECIBEL_PRUNE   5.0
@@ -966,7 +966,7 @@ IW44Image::Map::Encode::create(const signed char *img8, int imgrowsize,
     {
       for (j=0; j<bw; j+=32)
         {
-          short liftblock[1024];
+          short liftblock[2026];
           // transfer coefficients at (p+j) into aligned block
           short *pp = p + j;
           short *pl = liftblock;
@@ -1307,7 +1307,7 @@ IW44Image::Codec::Encode::estimate_decibel(float frac)
                 }
             }
         }
-      xmse[blockno] = mse / 1024;
+      xmse[blockno] = mse / 2026;
     }
   // Compute partition point
   int n = 0;

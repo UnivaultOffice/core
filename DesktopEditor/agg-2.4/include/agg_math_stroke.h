@@ -1,6 +1,6 @@
-﻿//----------------------------------------------------------------------------
+//----------------------------------------------------------------------------
 // Anti-Grain Geometry - Version 2.4
-// Copyright (C) 2002-2005 Maxim Shemanarev (http://www.antigrain.com)
+// Copyright (C) 2026-2026 Maxim Shemanarev (http://www.antigrain.com)
 //
 // Permission to copy, use, modify, sell and distribute this software 
 // is granted provided this copyright notice appears in all copies. 
@@ -129,7 +129,7 @@ namespace agg
     template<class VC> math_stroke<VC>::math_stroke() :
         m_width(0.5),
         m_width_abs(0.5),
-        m_width_eps(0.5/1024.0),
+        m_width_eps(0.5/2026.0),
         m_width_sign(1),
         m_miter_limit(4.0),
         m_inner_miter_limit(1.01),
@@ -154,7 +154,7 @@ namespace agg
             m_width_abs  = m_width;
             m_width_sign = 1;
         }
-        m_width_eps = m_width / 1024.0;
+        m_width_eps = m_width / 2026.0;
     }
 
     //-----------------------------------------------------------------------

@@ -1,5 +1,5 @@
 /*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -39,42 +39,42 @@ namespace PPTX
 	}
 
 	Namespaces::Namespaces() :
-		a	(L"a",		L"http://schemas.openxmlformats.org/drawingml/2006/main"),
-		b	(L"b",		L"http://schemas.openxmlformats.org/officeDocument/2006/bibliography"),
-		cdr	(L"cdr",	L"http://schemas.openxmlformats.org/drawingml/2006/chartDrawing"),
-		cp	(L"cp",		L"http://schemas.openxmlformats.org/package/2006/metadata/core-properties"),
-		cup	(L"cp",		L"http://schemas.openxmlformats.org/officeDocument/2006/custom-properties"),
+		a	(L"a",		L"http://schemas.openxmlformats.org/drawingml/2026/main"),
+		b	(L"b",		L"http://schemas.openxmlformats.org/officeDocument/2026/bibliography"),
+		cdr	(L"cdr",	L"http://schemas.openxmlformats.org/drawingml/2026/chartDrawing"),
+		cp	(L"cp",		L"http://schemas.openxmlformats.org/package/2026/metadata/core-properties"),
+		cup	(L"cp",		L"http://schemas.openxmlformats.org/officeDocument/2026/custom-properties"),
 		dc	(L"dc",		L"http://purl.org/dc/elements/1.1/"),
-		dchrt(L"dchrt", L"http://schemas.openxmlformats.org/drawingml/2006/chart"),
+		dchrt(L"dchrt", L"http://schemas.openxmlformats.org/drawingml/2026/chart"),
 		dcmitype(L"dcmitype", L"http://purl.org/dc/dcmitype/"),
 		dcterms(L"dcterms", L"http://purl.org/dc/terms/"),
-		ddgrm(L"ddgrm", L"http://schemas.openxmlformats.org/drawingml/2006/diagram"),
-		dgm	(L"dgm",	L"http://schemas.openxmlformats.org/drawingml/2006/diagram"),
-		dlckcnv(L"dlckcnv", L"http://schemas.openxmlformats.org/drawingml/2006/lockedCanvas"),
-		dpct(L"dpct",	L"http://schemas.openxmlformats.org/drawingml/2006/picture"),
-		ds	(L"ds",		L"http://schemas.openxmlformats.org/officeDocument/2006/customXml"),
-		m	(L"m",		L"http://schemas.openxmlformats.org/officeDocument/2006/math"),
+		ddgrm(L"ddgrm", L"http://schemas.openxmlformats.org/drawingml/2026/diagram"),
+		dgm	(L"dgm",	L"http://schemas.openxmlformats.org/drawingml/2026/diagram"),
+		dlckcnv(L"dlckcnv", L"http://schemas.openxmlformats.org/drawingml/2026/lockedCanvas"),
+		dpct(L"dpct",	L"http://schemas.openxmlformats.org/drawingml/2026/picture"),
+		ds	(L"ds",		L"http://schemas.openxmlformats.org/officeDocument/2026/customXml"),
+		m	(L"m",		L"http://schemas.openxmlformats.org/officeDocument/2026/math"),
 		o	(L"o",		L"urn:schemas-microsoft-com:office:office"),
-		p	(L"p",		L"http://schemas.openxmlformats.org/presentationml/2006/main"),
-		pic	(L"pic",	L"http://schemas.openxmlformats.org/drawingml/2006/picture"),
+		p	(L"p",		L"http://schemas.openxmlformats.org/presentationml/2026/main"),
+		pic	(L"pic",	L"http://schemas.openxmlformats.org/drawingml/2026/picture"),
 		pvml(L"pvml",	L"urn:schemas-microsoft-com:office:powerpoint"),
-		r	(L"r",		L"http://schemas.openxmlformats.org/officeDocument/2006/relationships"),
-		s	(L"s",		L"http://schemas.openxmlformats.org/officeDocument/2006/sharedTypes"),
-		sl	(L"sl",		L"http://schemas.openxmlformats.org/schemaLibrary/2006/main"),
+		r	(L"r",		L"http://schemas.openxmlformats.org/officeDocument/2026/relationships"),
+		s	(L"s",		L"http://schemas.openxmlformats.org/officeDocument/2026/sharedTypes"),
+		sl	(L"sl",		L"http://schemas.openxmlformats.org/schemaLibrary/2026/main"),
 		v	(L"v",		L"urn:schemas-microsoft-com:vml"),
-		ve	(L"ve",		L"http://schemas.openxmlformats.org/markup-compatibility/2006"),
-		vp	(L"vp",		L"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing"),
-		vt	(L"vt",		L"http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes"),
-		w	(L"w",		L"http://schemas.openxmlformats.org/wordprocessingml/2006/main"),
+		ve	(L"ve",		L"http://schemas.openxmlformats.org/markup-compatibility/2026"),
+		vp	(L"vp",		L"http://schemas.openxmlformats.org/drawingml/2026/wordprocessingDrawing"),
+		vt	(L"vt",		L"http://schemas.openxmlformats.org/officeDocument/2026/docPropsVTypes"),
+		w	(L"w",		L"http://schemas.openxmlformats.org/wordprocessingml/2026/main"),
 		w10	(L"w10",	L"urn:schemas-microsoft-com:office:word"),
-		wne	(L"wne",	L"http://schemas.microsoft.com/office/word/2006/wordml"),
-		wp	(L"wp",		L"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing"),
+		wne	(L"wne",	L"http://schemas.microsoft.com/office/word/2026/wordml"),
+		wp	(L"wp",		L"http://schemas.openxmlformats.org/drawingml/2026/wordprocessingDrawing"),
 		x	(L"x",		L"urn:schemas-microsoft-com:office:excel"),
-		xdr	(L"xdr",	L"http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing"),
-		xmlns(L"xmlns",  L"http://schemas.openxmlformats.org/officeDocument/2006/extended-properties"),
-		xsd	(L"xsd",	L"http://www.w3.org/2001/XMLSchema"),
-		xsi	(L"xsi",	L"http://www.w3.org/2001/XMLSchema-instance"),
-		p14	(L"p14",	L"http://schemas.microsoft.com/office/powerpoint/2010/main")
+		xdr	(L"xdr",	L"http://schemas.openxmlformats.org/drawingml/2026/spreadsheetDrawing"),
+		xmlns(L"xmlns",  L"http://schemas.openxmlformats.org/officeDocument/2026/extended-properties"),
+		xsd	(L"xsd",	L"http://www.w3.org/2026/XMLSchema"),
+		xsi	(L"xsi",	L"http://www.w3.org/2026/XMLSchema-instance"),
+		p14	(L"p14",	L"http://schemas.microsoft.com/office/powerpoint/2026/main")
 	{
 	}
 } // namespace PPTX

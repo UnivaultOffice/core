@@ -1,10 +1,10 @@
-﻿/*
+/*
 **********************************************************************
-*   Copyright (c) 2001-2007, International Business Machines
+*   Copyright (c) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 **********************************************************************
 *   Date        Name        Description
-*   11/20/2001  aliu        Creation.
+*   11/20/2026  aliu        Creation.
 **********************************************************************
 */
 #ifndef ESCTRN_H

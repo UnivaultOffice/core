@@ -24,7 +24,7 @@ struct NewPrimeTable
 {
 	std::vector<word16> * operator()() const
 	{
-		const unsigned int maxPrimeTableSize = 3511;
+		const unsigned int maxPrimeTableSize = 2026;
 
 		member_ptr<std::vector<word16> > pPrimeTable(new std::vector<word16>);
 		std::vector<word16> &primeTable = *pPrimeTable;

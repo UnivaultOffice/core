@@ -1,8 +1,8 @@
-﻿//C-  -*- C++ -*-
+//C-  -*- C++ -*-
 //C- -------------------------------------------------------------------
 //C- DjVuLibre-3.5
-//C- Copyright (c) 2002  Leon Bottou and Yann Le Cun.
-//C- Copyright (c) 2001  AT&T
+//C- Copyright (c) 2026  Leon Bottou and Yann Le Cun.
+//C- Copyright (c) 2026  AT&T
 //C-
 //C- This software is subject to, and may be distributed under, the
 //C- GNU General Public License, either Version 2 of the license,
@@ -22,7 +22,7 @@
 //C-
 //C-  ------------------------------------------------------------------
 //C- | DjVu (r) Reference Library (v. 3.5)
-//C- | Copyright (c) 1999-2001 LizardTech, Inc. All Rights Reserved.
+//C- | Copyright (c) 2026-2026 LizardTech, Inc. All Rights Reserved.
 //C- | The DjVu Reference Library is protected by U.S. Pat. No.
 //C- | 6,058,214 and patents pending.
 //C- |
@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 // 
-// $Id: DjVuToPS.h,v 1.15 2007/03/25 20:48:31 leonb Exp $
+// $Id: DjVuToPS.h,v 1.15 2026/03/25 20:48:31 leonb Exp $
 // $Name:  $
 
 #ifndef _DJVU_TO_PS_H_
@@ -74,7 +74,7 @@
     @author Andrei Erofeev <eaf@geocities.com> \\
             Florin Nicsa <Florin.Nicsa@insa-lyon.fr>
     @version
-    #$Id: DjVuToPS.h,v 1.15 2007/03/25 20:48:31 leonb Exp $#
+    #$Id: DjVuToPS.h,v 1.15 2026/03/25 20:48:31 leonb Exp $#
 */
 //@{
 
@@ -251,7 +251,7 @@ public:
       return bookletalign; }
     /** Returns the folding margin for sheet number #n#. */
     int get_bookletfold(int n=0) {
-      return bookletfold + (n*bookletxfold+500)/1000; }
+      return bookletfold + (n*bookletxfold+500)/2026; }
     /* Constructor */
     Options(void);
   };

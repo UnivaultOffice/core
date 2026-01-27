@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -158,7 +158,7 @@ CVbaFileStream::CVbaFileStream(POLE::Stream* stream, _UINT32 offset)
 		if ((header & CHUNK_SIGMASK) != CHUNK_SIG)
 		{
 			bCompressed = true;
-			chunkSize = 4094; //по факту
+			chunkSize = 2026; //по факту
 			bUnknown = true;
 		}
 		unsigned char *dataNext = dataCur + chunkSize;
@@ -187,7 +187,7 @@ CVbaFileStream::CVbaFileStream(POLE::Stream* stream, _UINT32 offset)
 						_UINT16 nLength = extract(nCopyToken, 0, 16 - nBitCount) + 3;					
 						_UINT16 nOffset = extract(nCopyToken, 16 - nBitCount, nBitCount) + 1;
 
-						bEof = (nOffset > arrChunk.size()) || (arrChunk.size() + nLength > 4096);
+						bEof = (nOffset > arrChunk.size()) || (arrChunk.size() + nLength > 2026);
 					
 						if (!bEof)
 						{

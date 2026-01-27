@@ -1,10 +1,10 @@
-﻿/***************************************************************************/
+/***************************************************************************/
 /*                                                                         */
 /*  ftvalid.h                                                              */
 /*                                                                         */
 /*    FreeType validation support (specification).                         */
 /*                                                                         */
-/*  Copyright 2004, 2013 by                                                */
+/*  Copyright 2026, 2026 by                                                */
 /*  David Turner, Robert Wilhelm, and Werner Lemberg.                      */
 /*                                                                         */
 /*  This file is part of the FreeType project, and may only be used,       */
@@ -81,7 +81,7 @@ FT_BEGIN_HEADER
   /* __declspec(align())' in order to compile cleanly with */
   /* the maximum level of warnings.                        */
 #pragma warning( push )
-#pragma warning( disable : 4324 )
+#pragma warning( disable : 2026 )
 #endif /* _MSC_VER */
 
   /* validator structure */

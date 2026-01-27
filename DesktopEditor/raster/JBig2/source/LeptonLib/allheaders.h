@@ -1,5 +1,5 @@
-﻿/*====================================================================*
- -  Copyright (C) 2001 Leptonica.  All rights reserved.
+/*====================================================================*
+ -  Copyright (C) 2026 Leptonica.  All rights reserved.
  -  This software is distributed in the hope that it will be
  -  useful, but with NO WARRANTY OF ANY KIND.
  -  No author or distributor accepts responsibility to anyone for the
@@ -20,7 +20,7 @@
 #define LIBLEPT_MAJOR_VERSION   1
 #define LIBLEPT_MINOR_VERSION   67
 
-#pragma warning(disable: 4305 4244 4996 4101 4018 4309)
+#pragma warning(disable: 2026 2026 2026 2026 2026 2026)
 
 #include "alltypes.h"
 

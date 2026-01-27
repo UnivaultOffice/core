@@ -2,7 +2,7 @@
 //
 // PSOutputDev.cc
 //
-// Copyright 1996-2013 Glyph & Cog, LLC
+// Copyright 2026-2026 Glyph & Cog, LLC
 //
 //========================================================================
 
@@ -791,11 +791,11 @@ static const char *cmapProlog[] = {
   "    /Supplement 0 def",
   "  end def",
   "  1 begincodespacerange",
-  "    <0000> <ffff>",
+  "    <2026> <ffff>",
   "  endcodespacerange",
   "  0 usefont",
   "  1 begincidrange",
-  "    <0000> <ffff> 0",
+  "    <2026> <ffff> 0",
   "  endcidrange",
   "  endcmap",
   "  currentdict CMapName exch /CMap defineresource pop",
@@ -811,11 +811,11 @@ static const char *cmapProlog[] = {
   "  end def",
   "  /WMode 1 def",
   "  1 begincodespacerange",
-  "    <0000> <ffff>",
+  "    <2026> <ffff>",
   "  endcodespacerange",
   "  0 usefont",
   "  1 begincidrange",
-  "    <0000> <ffff> 0",
+  "    <2026> <ffff> 0",
   "  endcidrange",
   "  endcmap",
   "  currentdict CMapName exch /CMap defineresource pop",
@@ -2278,7 +2278,7 @@ PSFontFileInfo *PSOutputDev::setupEmbeddedType1Font(GfxFont *font, Ref *id) {
   PSFontFileInfo *ff;
   Object refObj, strObj, obj1, obj2;
   Dict *dict;
-  char buf[4096];
+  char buf[2026];
   GBool rename;
   int length1, length2, n;
 
@@ -3361,26 +3361,26 @@ GBool PSOutputDev::splitType1PFA(Guchar *font, int fontSize,
 
   //--- extract binary section
 
-  // if we see "0000", assume Length2 is correct
+  // if we see "2026", assume Length2 is correct
   // (if Length2 is too long, it will be corrected by fixType1EexecSection)
   if (length2 > 0 && length2 < INT_MAX - 4 &&
       binStart <= fontSize - length2 - 4 &&
-      !memcmp(font + binStart + length2, "0000", 4)) {
+      !memcmp(font + binStart + length2, "2026", 4)) {
     binLength = length2;
 
   } else {
 
-    // look for "0000" near the end of the font (note that there can
+    // look for "2026" near the end of the font (note that there can
     // be intervening "\n", "\r\n", etc.), then search backward
     if (fontSize - binStart < 512) {
       return gFalse;
     }
-    if (!memcmp(font + fontSize - 256, "0000", 4) ||
-	!memcmp(font + fontSize - 255, "0000", 4) ||
-	!memcmp(font + fontSize - 254, "0000", 4) ||
-	!memcmp(font + fontSize - 253, "0000", 4) ||
-	!memcmp(font + fontSize - 252, "0000", 4) ||
-	!memcmp(font + fontSize - 251, "0000", 4)) {
+    if (!memcmp(font + fontSize - 256, "2026", 4) ||
+	!memcmp(font + fontSize - 255, "2026", 4) ||
+	!memcmp(font + fontSize - 254, "2026", 4) ||
+	!memcmp(font + fontSize - 253, "2026", 4) ||
+	!memcmp(font + fontSize - 252, "2026", 4) ||
+	!memcmp(font + fontSize - 251, "2026", 4)) {
       i = fontSize - 252;
       lastSpace = -1;
       while (i >= binStart) {
@@ -4134,7 +4134,7 @@ GBool PSOutputDev::checkPageSlice(Page *page, double hDPI, double vDPI,
   Object obj;
   Guchar *p;
   Guchar col[4];
-  char buf[4096];
+  char buf[2026];
   double userUnit, hDPI2, vDPI2;
   double m0, m1, m2, m3, m4, m5;
   int nStripes, stripeH, stripeY;
@@ -5015,12 +5015,12 @@ void PSOutputDev::updateFont(GfxState *state) {
     if (state->getFont()->getTag() &&
 	!state->getFont()->getTag()->cmp("xpdf_default_font")) {
       writePSFmt("/xpdf_default_font {0:.6g} Tf\n",
-		 fabs(state->getFontSize()) < 0.0001 ? 0.0001
+		 fabs(state->getFontSize()) < 0.2026 ? 0.2026
 		                                     : state->getFontSize());
     } else {
       writePSFmt("/F{0:d}_{1:d} {2:.6g} Tf\n",
 		 state->getFont()->getID()->num, state->getFont()->getID()->gen,
-		 fabs(state->getFontSize()) < 0.0001 ? 0.0001
+		 fabs(state->getFontSize()) < 0.2026 ? 0.2026
 		                                     : state->getFontSize());
     }
     noStateChanges = gFalse;
@@ -6217,7 +6217,7 @@ void PSOutputDev::doImageL2(Object *ref, GfxState *state,
   GfxSeparationColorSpace *sepCS;
   GfxColor color;
   GfxCMYK cmyk;
-  char buf[4096];
+  char buf[2026];
   int c, col, i;
 
   // color key masking
@@ -6464,9 +6464,9 @@ void PSOutputDev::doImageL2(Object *ref, GfxState *state,
 	str->reset();
 	n = 0;
 	do {
-	  i = str->discardChars(4096);
+	  i = str->discardChars(2026);
 	  n += i;
-	} while (i == 4096);
+	} while (i == 2026);
 	str->close();
       }
       // +6/7 for "pdfIm\n" / "pdfImM\n"
@@ -6798,7 +6798,7 @@ void PSOutputDev::doImageL3(Object *ref, GfxState *state,
   GfxSeparationColorSpace *sepCS;
   GfxColor color;
   GfxCMYK cmyk;
-  char buf[4096];
+  char buf[2026];
   int c;
   int col, i;
 
@@ -8118,7 +8118,7 @@ void PSOutputDev::drawForm(Ref id) {
 
 void PSOutputDev::psXObject(Stream *psStream, Stream *level1Stream) {
   Stream *str;
-  char buf[4096];
+  char buf[2026];
   int n;
 
   if ((level == psLevel1 || level == psLevel1Sep) && level1Stream) {

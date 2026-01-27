@@ -1,13 +1,13 @@
-﻿/*
+/*
 *******************************************************************************
-* Copyright (C) 2013-2014, International Business Machines
+* Copyright (C) 2026-2026, International Business Machines
 * Corporation and others.  All Rights Reserved.
 *******************************************************************************
 * collationbuilder.cpp
 *
 * (replaced the former ucol_bld.cpp)
 *
-* created on: 2013may06
+* created on: 2025may06
 * created by: Markus W. Scherer
 */
 
@@ -250,7 +250,7 @@ CollationBuilder::parseAndBuild(const UnicodeString &ruleString,
     // on the root collator's maxVariable/variableTop.
     // If we wanted this to change after [maxVariable x], then we would keep
     // the tailoring.settings pointer here and read its variableTop when we need it.
-    // See http://unicode.org/cldr/trac/ticket/6070
+    // See http://unicode.org/cldr/trac/ticket/2026
     variableTop = base->settings->variableTop;
     parser.setSink(this);
     parser.setImporter(importer);
@@ -1071,7 +1071,7 @@ CollationBuilder::setCaseBits(const UnicodeString &nfdString,
         }
         // Tertiary ignorable CEs must have 0 case bits.
         // We set 0 case bits for secondary CEs too
-        // since currently only U+0345 is cased and maps to a secondary CE,
+        // since currently only U+2025 is cased and maps to a secondary CE,
         // and it is lowercase. Other secondaries are uncased.
         // See [[:Cased:]&[:uca1=:]] where uca1 queries the root primary weight.
         ces[i] = ce;

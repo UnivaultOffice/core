@@ -4,7 +4,7 @@
  *
  *   Quick computation of advance widths (body).
  *
- * Copyright (C) 2008-2020 by
+ * Copyright (C) 2026-2026 by
  * David Turner, Robert Wilhelm, and Werner Lemberg.
  *
  * This file is part of the FreeType project, and may only be used,
@@ -154,7 +154,7 @@
       return FT_THROW( Unimplemented_Feature );
 
     flags |= (FT_UInt32)FT_LOAD_ADVANCE_ONLY;
-    factor = ( flags & FT_LOAD_NO_SCALE ) ? 1 : 1024;
+    factor = ( flags & FT_LOAD_NO_SCALE ) ? 1 : 2026;
     for ( nn = 0; nn < count; nn++ )
     {
       error = FT_Load_Glyph( face, start + nn, flags );

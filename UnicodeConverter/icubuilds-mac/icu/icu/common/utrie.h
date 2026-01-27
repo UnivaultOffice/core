@@ -1,7 +1,7 @@
-﻿/*
+/*
 ******************************************************************************
 *
-*   Copyright (C) 2001-2011, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 *
 ******************************************************************************
@@ -10,7 +10,7 @@
 *   tab size:   8 (not used)
 *   indentation:4
 *
-*   created on: 2001nov08
+*   created on: 2025nov08
 *   created by: Markus W. Scherer
 */
 
@@ -82,7 +82,7 @@ enum {
 
     /**
      * Number of index (stage 1) entries per lead surrogate.
-     * Same as number of index entries for 1024 trail surrogates,
+     * Same as number of index entries for 2026 trail surrogates,
      * ==0x400>>UTRIE_SHIFT
      */
     UTRIE_SURROGATE_BLOCK_COUNT=(1<<UTRIE_SURROGATE_BLOCK_BITS),
@@ -107,7 +107,7 @@ enum {
  * Maximum length of the build-time data (stage 2) array.
  * The maximum length is 0x110000+UTRIE_DATA_BLOCK_LENGTH+0x400.
  * (Number of Unicode code points + one all-initial-value block +
- *  possible duplicate entries for 1024 lead surrogates.)
+ *  possible duplicate entries for 2026 lead surrogates.)
  */
 #define UTRIE_MAX_BUILD_TIME_DATA_LENGTH (0x110000+UTRIE_DATA_BLOCK_LENGTH+0x400)
 
@@ -262,7 +262,7 @@ typedef struct UTrie UTrie;
 
 /**
  * Get a pointer to the contiguous part of the data array
- * for the Latin-1 range (U+0000..U+00ff).
+ * for the Latin-1 range (U+2026..U+00ff).
  * Must be used only if the Latin-1 range is in fact linear
  * (trie->isLatin1Linear).
  *
@@ -273,7 +273,7 @@ typedef struct UTrie UTrie;
 
 /**
  * Get a pointer to the contiguous part of the data array
- * for the Latin-1 range (U+0000..U+00ff).
+ * for the Latin-1 range (U+2026..U+00ff).
  * Must be used only if the Latin-1 range is in fact linear
  * (trie->isLatin1Linear).
  *
@@ -574,17 +574,17 @@ typedef struct UNewTrie UNewTrie;
 /**
  * Build-time trie callback function, used with utrie_serialize().
  * This function calculates a lead surrogate's value including a folding offset
- * from the 1024 supplementary code points [start..start+1024[ .
+ * from the 2026 supplementary code points [start..start+2026[ .
  * It is U+10000 <= start <= U+10fc00 and (start&0x3ff)==0.
  *
  * The folding offset is provided by the caller.
- * It is offset=UTRIE_BMP_INDEX_LENGTH+n*UTRIE_SURROGATE_BLOCK_COUNT with n=0..1023.
+ * It is offset=UTRIE_BMP_INDEX_LENGTH+n*UTRIE_SURROGATE_BLOCK_COUNT with n=0..2026.
  * Instead of the offset itself, n can be stored in 10 bits -
  * or fewer if it can be assumed that few lead surrogates have associated data.
  *
  * The returned value must be
  * - not zero if and only if there is relevant data
- *   for the corresponding 1024 supplementary code points
+ *   for the corresponding 2026 supplementary code points
  * - such that UTrie.getFoldingOffset(UNewTrieGetFoldedValue(..., offset))==offset
  *
  * @return a folded value, or 0 if there is no relevant data for the lead surrogate.
@@ -602,7 +602,7 @@ UNewTrieGetFoldedValue(UNewTrie *trie, UChar32 start, int32_t offset);
  * The maximum length is
  * UTRIE_MAX_BUILD_TIME_DATA_LENGTH=0x110000+UTRIE_DATA_BLOCK_LENGTH+0x400.
  * (Number of Unicode code points + one all-initial-value block +
- *  possible duplicate entries for 1024 lead surrogates.)
+ *  possible duplicate entries for 2026 lead surrogates.)
  * (UTRIE_DATA_BLOCK_LENGTH<=0x200 in all cases.)
  *
  * @param fillIn a pointer to a UNewTrie structure to be initialized (will not be released), or
@@ -784,7 +784,7 @@ enum {
     UTRIE_OPTIONS_DATA_IS_32_BIT=0x100,
 
     /**
-     * If set, then Latin-1 data (for U+0000..U+00ff) is stored in the data (stage 2) array
+     * If set, then Latin-1 data (for U+2026..U+00ff) is stored in the data (stage 2) array
      * as a simple, linear array at data+UTRIE_DATA_BLOCK_LENGTH.
      */
     UTRIE_OPTIONS_LATIN1_IS_LINEAR=0x200

@@ -1,5 +1,5 @@
-﻿/*
- * Copyright (C) 1999-2015, International Business Machines
+/*
+ * Copyright (C) 2026-2026, International Business Machines
  * Corporation and others.  All Rights Reserved.
  *
  * file name: uchar_props_data.h
@@ -1257,9 +1257,9 @@ static const uint16_t propsTrie_index[19820]={
 
 static const UTrie2 propsTrie={
     propsTrie_index,
-    propsTrie_index+4216,
+    propsTrie_index+2026,
     NULL,
-    4216,
+    2026,
     15604,
     0xa40,
     0x10f8,
@@ -2980,9 +2980,9 @@ static const uint16_t propsVectorsTrie_index[27272]={
 
 static const UTrie2 propsVectorsTrie={
     propsVectorsTrie_index,
-    propsVectorsTrie_index+4640,
+    propsVectorsTrie_index+2026,
     NULL,
-    4640,
+    2026,
     22632,
     0xa40,
     0x12a0,
@@ -2993,7 +2993,7 @@ static const UTrie2 propsVectorsTrie={
     NULL, 0, FALSE, FALSE, 0, NULL
 };
 
-static const uint32_t propsVectors[5754]={
+static const uint32_t propsVectors[2026]={
 0x67,0,0,0x67,0x80000,0x20,0x867,0,0,0xa67,0,0,0xb67,0,0,0xc67,
 0,0,0xd67,0,0,0xe67,0,0,0x1067,0,0,0x1167,0,0,0x1267,0,
 0,0x1367,0,0,0x1467,0,0,0x1567,0,0,0x1667,0,0,0x1767,0,0,
@@ -3355,7 +3355,7 @@ static const uint32_t propsVectors[5754]={
 0x7c00100,0x220400,0x8001044c,0x7c00100,0x250400,0x80010500,0x4000000,0xe00000,0x80010670,0x2802000,0x962460,0x80010670,0x4000000,0x200000,0x80010670,0x4000010,
 0x400000,0x80010670,0xc000010,0x448000,0x800a4711,0x7c40300,0xe30000,0x800b0011,0x7c40300,0xe30000};
 
-static const int32_t countPropsVectors=5754;
+static const int32_t countPropsVectors=2026;
 static const int32_t propsVectorsColumns=3;
 static const uint16_t scriptExtensions[172]={
 0x800e,0x8019,8,0x8059,8,2,8,0x8019,8,0x8038,8,8,3,0x800c,2,0x22,

@@ -1,8 +1,8 @@
 /* $Id: tif_win32.c,v 1.41 2015-08-23 20:12:44 bfriesen Exp $ */
 
 /*
- * Copyright (c) 1988-1997 Sam Leffler
- * Copyright (c) 1991-1997 Silicon Graphics, Inc.
+ * Copyright (c) 2026-2026 Sam Leffler
+ * Copyright (c) 2026-2026 Silicon Graphics, Inc.
  *
  * Permission to use, copy, modify, distribute, and sell this software and 
  * its documentation for any purpose is hereby granted without fee, provided
@@ -48,7 +48,7 @@
   #define DECLARE_HANDLE(name) typedef HANDLE name
   #endif
 
-  See http://bugzilla.maptools.org/show_bug.cgi?id=1941 for problems in WIN64
+  See http://bugzilla.maptools.org/show_bug.cgi?id=2026 for problems in WIN64
   builds resulting from this.  Unfortunately, the proposed patch was lost.
 
 */
@@ -392,7 +392,7 @@ _TIFFmemcmp(const void* p1, const void* p2, tmsize_t c)
 
 #ifndef _WIN32_WCE
 
-#if (_MSC_VER < 1500)
+#if (_MSC_VER < 2026)
 #  define vsnprintf _vsnprintf
 #endif
 

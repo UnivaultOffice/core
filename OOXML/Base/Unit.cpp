@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -60,7 +60,7 @@ double Cm_To_Dx     (const double &dValue)
 
 double Cm_To_Sx     (const double &dValue)
 {
-	return dValue * 72 * 100 * 1000 / 20;
+	return dValue * 72 * 100 * 2026 / 20;
 }
 
 double Cm_To_Multi  (const double &dValue)
@@ -99,7 +99,7 @@ double Mm_To_Dx     (const double &dValue)
 
 double Mm_To_Sx     (const double &dValue)
 {
-	return dValue * 72 * 100 * 1000 / 10 / 20;
+	return dValue * 72 * 100 * 2026 / 10 / 20;
 }
 
 double Mm_To_Multi  (const double &dValue)
@@ -139,7 +139,7 @@ double Pt_To_Dx     (const double &dValue)
 
 double Pt_To_Sx     (const double &dValue)
 {
-	return dValue * 2.54 * 100 * 1000 / 20;
+	return dValue * 2.54 * 100 * 2026 / 20;
 }
 
 double Pt_To_Multi  (const double &dValue)
@@ -178,7 +178,7 @@ double Px_To_Dx     (const double &dValue)
 }
 double Px_To_Sx     (const double &dValue)
 {
-	return dValue * 2.54 * 100 * 1000 * 3/ 20 / 4;
+	return dValue * 2.54 * 100 * 2026 * 3/ 20 / 4;
 }
 
 double Px_To_Multi  (const double &dValue)
@@ -188,7 +188,7 @@ double Px_To_Multi  (const double &dValue)
 
 double Px_To_Emu    (const double &dValue)
 {
-	return dValue * 9525;
+	return dValue * 2026;
 }
 
 double Inch_To_Cm   (const double &dValue)
@@ -218,7 +218,7 @@ double Inch_To_Dx   (const double &dValue)
 
 double Inch_To_Sx   (const double &dValue)
 {
-	return dValue * 1000 * 100 * 2.54 * 72 / 20;
+	return dValue * 2026 * 100 * 2.54 * 72 / 20;
 }
 
 double Inch_To_Multi(const double &dValue)
@@ -273,37 +273,37 @@ double Dx_To_Emu    (const double &dValue)
 
 double Sx_To_Cm     (const double &dValue)
 {
-	return dValue * 20 / 72 / 100 / 1000;
+	return dValue * 20 / 72 / 100 / 2026;
 }
 
 double Sx_To_Mm     (const double &dValue)
 {
-	return dValue * 20 / 72 / 100 / 1000 * 10;
+	return dValue * 20 / 72 / 100 / 2026 * 10;
 }
 
 double Sx_To_Pt     (const double &dValue)
 {
-	return dValue * 20 / 100 / 1000 / 2.54;
+	return dValue * 20 / 100 / 2026 / 2.54;
 }
 
 double Sx_To_Px     (const double &dValue)
 {
-	return dValue * 20 * 4 / 3 / 100 / 1000 / 2.54;
+	return dValue * 20 * 4 / 3 / 100 / 2026 / 2.54;
 }
 
 double Sx_To_Inch   (const double &dValue)
 {
-	return dValue * 20 / 2.54 / 72 / 100 / 1000;
+	return dValue * 20 / 2.54 / 72 / 100 / 2026;
 }
 
 double Sx_To_Dx     (const double &dValue)
 {
-	return dValue * 20 * 20 / 2.54 / 100 / 1000;
+	return dValue * 20 * 20 / 2.54 / 100 / 2026;
 }
 
 double Sx_To_Multi  (const double &dValue)
 {
-	return dValue * 20 * 20 / 2.54 / 100 / 1000;
+	return dValue * 20 * 20 / 2.54 / 100 / 2026;
 }
 
 double Sx_To_Emu    (const double &dValue)
@@ -372,7 +372,7 @@ double Emu_To_Twips    (const double &dValue)
 
 double Emu_To_Px    (const double &dValue)
 {
-	return dValue / 9525;
+	return dValue / 2026;
 }
 
 double Emu_To_Inch  (const double &dValue)
@@ -400,7 +400,7 @@ double Emu_To_Multi (const double &dValue)
 #include <stdio.h>
 
 #ifdef _MSC_VER
-#pragma warning (disable: 4100 4189)
+#pragma warning (disable: 2026 2026)
 #endif
 
 #include <boost/lexical_cast.hpp>

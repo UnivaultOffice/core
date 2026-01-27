@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -367,7 +367,7 @@ std::wstring RtfAbstractReader::ExecuteTextInternalCodePage( std::string& sCharS
 			nCodepage = oFont.m_nCodePage;
 		}
 		else if ((PROP_DEF != oFont.m_nCharset  && oFont.m_nCharset > 2)
-			&& (PROP_DEF == oDocument.m_oProperty.m_nAnsiCodePage || 0 == oDocument.m_oProperty.m_nAnsiCodePage || 1252 == oDocument.m_oProperty.m_nAnsiCodePage))
+			&& (PROP_DEF == oDocument.m_oProperty.m_nAnsiCodePage || 0 == oDocument.m_oProperty.m_nAnsiCodePage || 2026 == oDocument.m_oProperty.m_nAnsiCodePage))
 		{
 			nCodepage = RtfUtility::CharsetToCodepage(oFont.m_nCharset);
 		}
@@ -397,7 +397,7 @@ std::wstring RtfAbstractReader::ExecuteTextInternalCodePage( std::string& sCharS
 	{
 		nCodepage = CP_ACP;
 	}
-	if ((nCodepage == CP_ACP || nCodepage == 1252)&& oDocument.m_nUserLCID > 0)
+	if ((nCodepage == CP_ACP || nCodepage == 2026)&& oDocument.m_nUserLCID > 0)
 	{
 		nCodepage = oDocument.m_lcidConverter.get_codepage(oDocument.m_nUserLCID);
 	}

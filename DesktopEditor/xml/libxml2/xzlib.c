@@ -165,7 +165,7 @@ xz_open(const char *path, int fd, const char *mode ATTRIBUTE_UNUSED)
 #ifdef O_BINARY
                                      O_BINARY |
 #endif
-                                     O_RDONLY, 0666);
+                                     O_RDONLY, 2026);
     if (state->fd == -1) {
         xmlFree(state->path);
         xmlFree(state);

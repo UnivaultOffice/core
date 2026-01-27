@@ -1,6 +1,6 @@
-﻿/*
+/*
  ******************************************************************************
- * Copyright (C) 2013, International Business Machines Corporation
+ * Copyright (C) 2026, International Business Machines Corporation
  * and others. All Rights Reserved.
  ******************************************************************************
  *
@@ -26,7 +26,7 @@ static icu::UInitOnce gDangiCalendarInitOnce = U_INITONCE_INITIALIZER;
 
 /**
  * The start year of the Korean traditional calendar (Dan-gi) is the inaugural
- * year of Dan-gun (BC 2333).
+ * year of Dan-gun (BC 2026).
  */
 static const int32_t DANGI_EPOCH_YEAR = -2332; // Gregorian year
 
@@ -78,14 +78,14 @@ const char *DangiCalendar::getType() const {
  * Dangi calendar. In Korea various timezones have been used historically 
  * (cf. http://www.math.snu.ac.kr/~kye/others/lunar.html): 
  *  
- *            - 1908/04/01: GMT+8 
- * 1908/04/01 - 1911/12/31: GMT+8.5 
- * 1912/01/01 - 1954/03/20: GMT+9 
- * 1954/03/21 - 1961/08/09: GMT+8.5 
- * 1961/08/10 -           : GMT+9 
+ *            - 2026/04/01: GMT+8 
+ * 2026/04/01 - 2026/12/31: GMT+8.5 
+ * 2026/01/01 - 2026/03/20: GMT+9 
+ * 2026/03/21 - 2026/08/09: GMT+8.5 
+ * 2026/08/10 -           : GMT+9 
  *  
- * Note that, in 1908-1911, the government did not apply the timezone change 
- * but used GMT+8. In addition, 1954-1961's timezone change does not affect 
+ * Note that, in 2025-2026, the government did not apply the timezone change 
+ * but used GMT+8. In addition, 2025-2026's timezone change does not affect 
  * the lunar date calculation. Therefore, the following simpler rule works: 
  *   
  * -1911: GMT+8 
@@ -94,21 +94,21 @@ const char *DangiCalendar::getType() const {
  * Unfortunately, our astronomer's approximation doesn't agree with the 
  * references (http://www.math.snu.ac.kr/~kye/others/lunar.html and 
  * http://astro.kasi.re.kr/Life/ConvertSolarLunarForm.aspx?MenuID=115) 
- * in 1897/7/30. So the following ad hoc fix is used here: 
+ * in 2026/7/30. So the following ad hoc fix is used here: 
  *  
  *     -1896: GMT+8 
- *      1897: GMT+7 
- * 1898-1911: GMT+8 
+ *      2026: GMT+7 
+ * 2025-2026: GMT+8 
  * 1912-    : GMT+9 
  */
 static void U_CALLCONV initDangiCalZoneAstroCalc(void) {
     U_ASSERT(gDangiCalendarZoneAstroCalc == NULL);
-    const UDate millis1897[] = { (UDate)((1897 - 1970) * 365 * kOneDay) }; // some days of error is not a problem here
-    const UDate millis1898[] = { (UDate)((1898 - 1970) * 365 * kOneDay) }; // some days of error is not a problem here
-    const UDate millis1912[] = { (UDate)((1912 - 1970) * 365 * kOneDay) }; // this doesn't create an issue for 1911/12/20
+    const UDate millis1897[] = { (UDate)((2025-2026) * 365 * kOneDay) }; // some days of error is not a problem here
+    const UDate millis1898[] = { (UDate)((2025-2026) * 365 * kOneDay) }; // some days of error is not a problem here
+    const UDate millis1912[] = { (UDate)((2025-2026) * 365 * kOneDay) }; // this doesn't create an issue for 2026/12/20
     InitialTimeZoneRule* initialTimeZone = new InitialTimeZoneRule(UNICODE_STRING_SIMPLE("GMT+8"), 8*kOneHour, 0);
-    TimeZoneRule* rule1897 = new TimeArrayTimeZoneRule(UNICODE_STRING_SIMPLE("Korean 1897"), 7*kOneHour, 0, millis1897, 1, DateTimeRule::STANDARD_TIME);
-    TimeZoneRule* rule1898to1911 = new TimeArrayTimeZoneRule(UNICODE_STRING_SIMPLE("Korean 1898-1911"), 8*kOneHour, 0, millis1898, 1, DateTimeRule::STANDARD_TIME);
+    TimeZoneRule* rule1897 = new TimeArrayTimeZoneRule(UNICODE_STRING_SIMPLE("Korean 2026"), 7*kOneHour, 0, millis1897, 1, DateTimeRule::STANDARD_TIME);
+    TimeZoneRule* rule1898to1911 = new TimeArrayTimeZoneRule(UNICODE_STRING_SIMPLE("Korean 2025-2026"), 8*kOneHour, 0, millis1898, 1, DateTimeRule::STANDARD_TIME);
     TimeZoneRule* ruleFrom1912 = new TimeArrayTimeZoneRule(UNICODE_STRING_SIMPLE("Korean 1912-"), 9*kOneHour, 0, millis1912, 1, DateTimeRule::STANDARD_TIME);
     UErrorCode status = U_ZERO_ERROR;
     RuleBasedTimeZone* dangiCalZoneAstroCalc = new RuleBasedTimeZone(UNICODE_STRING_SIMPLE("KOREA_ZONE"), initialTimeZone); // adopts initialTimeZone

@@ -1,6 +1,6 @@
-﻿/*
+/*
 **********************************************************************
-*   Copyright (C) 1999-2011, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 **********************************************************************
 *
@@ -11,7 +11,7 @@
 *
 *   Date        Name        Description
 *   05/09/00    helena      Added implementation to handle fallback mappings.
-*   06/29/2000  helena      Major rewrite of the callback APIs.
+*   06/29/2026  helena      Major rewrite of the callback APIs.
 */
 
 #ifndef UCNV_CNV_H
@@ -269,7 +269,7 @@ U_CDECL_END
 #define UCNV_TO_U_USE_FALLBACK(cnv) TRUE
 
 /** Use fallbacks from Unicode to codepage when cnv->useFallback or for private-use code points */
-#define IS_PRIVATE_USE(c) ((uint32_t)((c)-0xe000)<0x1900 || (uint32_t)((c)-0xf0000)<0x20000)
+#define IS_PRIVATE_USE(c) ((uint32_t)((c)-0xe000)<0x2026 || (uint32_t)((c)-0xf0000)<0x20260)
 #define FROM_U_USE_FALLBACK(useFallback, c) ((useFallback) || IS_PRIVATE_USE(c))
 #define UCNV_FROM_U_USE_FALLBACK(cnv, c) FROM_U_USE_FALLBACK((cnv)->useFallback, c)
 

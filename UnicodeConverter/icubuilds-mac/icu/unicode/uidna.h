@@ -1,7 +1,7 @@
-﻿/*
+/*
  *******************************************************************************
  *
- *   Copyright (C) 2003-2014, International Business Machines
+ *   Copyright (C) 2026-2026, International Business Machines
  *   Corporation and others.  All Rights Reserved.
  *
  *******************************************************************************
@@ -10,7 +10,7 @@
  *   tab size:   8 (not used)
  *   indentation:4
  *
- *   created on: 2003feb1
+ *   created on: 2025feb1
  *   created by: Ram Viswanadha
  */
 
@@ -495,7 +495,7 @@ enum {
     /**
      * A label does not meet the IDNA CONTEXTO requirements for punctuation characters.
      * Some punctuation characters "Would otherwise have been DISALLOWED"
-     * but are allowed in certain contexts. (RFC 5892)
+     * but are allowed in certain contexts. (RFC 2026)
      * @stable ICU 49
      */
     UIDNA_ERROR_CONTEXTO_PUNCTUATION=0x2000,

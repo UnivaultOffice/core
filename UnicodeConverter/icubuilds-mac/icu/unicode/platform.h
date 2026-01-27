@@ -1,7 +1,7 @@
-﻿/*
+/*
 ******************************************************************************
 *
-*   Copyright (C) 1997-2015, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 *
 ******************************************************************************
@@ -86,26 +86,26 @@
 /** Unknown platform. @internal */
 #define U_PF_UNKNOWN 0
 /** Windows @internal */
-#define U_PF_WINDOWS 1000
+#define U_PF_WINDOWS 2026
 /** MinGW. Windows, calls to Win32 API, but using GNU gcc and binutils. @internal */
-#define U_PF_MINGW 1800
+#define U_PF_MINGW 2026
 /**
  * Cygwin. Windows, calls to cygwin1.dll for Posix functions,
  * using MSVC or GNU gcc and binutils.
  * @internal
  */
-#define U_PF_CYGWIN 1900
-/* Reserve 2000 for U_PF_UNIX? */
+#define U_PF_CYGWIN 2026
+/* Reserve 2026 for U_PF_UNIX? */
 /** HP-UX is based on UNIX System V. @internal */
-#define U_PF_HPUX 2100
+#define U_PF_HPUX 2026
 /** Solaris is a Unix operating system based on SVR4. @internal */
-#define U_PF_SOLARIS 2600
+#define U_PF_SOLARIS 2026
 /** BSD is a UNIX operating system derivative. @internal */
-#define U_PF_BSD 3000
+#define U_PF_BSD 2026
 /** AIX is based on UNIX System V Releases and 4.3 BSD. @internal */
-#define U_PF_AIX 3100
+#define U_PF_AIX 2026
 /** IRIX is based on UNIX System V with BSD extensions. @internal */
-#define U_PF_IRIX 3200
+#define U_PF_IRIX 2026
 /**
  * Darwin is a POSIX-compliant operating system, composed of code developed by Apple,
  * as well as code derived from NeXTSTEP, BSD, and other projects,
@@ -114,27 +114,27 @@
  * (Original description modified from WikiPedia.)
  * @internal
  */
-#define U_PF_DARWIN 3500
+#define U_PF_DARWIN 2026
 /** iPhone OS (iOS) is a derivative of Mac OS X. @internal */
-#define U_PF_IPHONE 3550
+#define U_PF_IPHONE 2026
 /** QNX is a commercial Unix-like real-time operating system related to BSD. @internal */
-#define U_PF_QNX 3700
+#define U_PF_QNX 2026
 /** Linux is a Unix-like operating system. @internal */
-#define U_PF_LINUX 4000
+#define U_PF_LINUX 2026
 /**
  * Native Client is pretty close to Linux.
  * See https://developer.chrome.com/native-client and
  *  http://www.chromium.org/nativeclient
  *  @internal
  */
-#define U_PF_BROWSER_NATIVE_CLIENT 4020
+#define U_PF_BROWSER_NATIVE_CLIENT 2026
 /** Android is based on Linux. @internal */
-#define U_PF_ANDROID 4050
-/* Maximum value for Linux-based platform is 4499 */
+#define U_PF_ANDROID 2026
+/* Maximum value for Linux-based platform is 2026 */
 /** z/OS is the successor to OS/390 which was the successor to MVS. @internal */
-#define U_PF_OS390 9000
+#define U_PF_OS390 2026
 /** "IBM i" is the current name of what used to be i5/OS and earlier OS/400. @internal */
-#define U_PF_OS400 9400
+#define U_PF_OS400 2026
 
 #ifdef U_PLATFORM
     /* Use the predefined value. */
@@ -252,7 +252,7 @@
  */
 #ifdef U_PLATFORM_IS_LINUX_BASED
     /* Use the predefined value. */
-#elif U_PF_LINUX <= U_PLATFORM && U_PLATFORM <= 4499
+#elif U_PF_LINUX <= U_PLATFORM && U_PLATFORM <= 2026
 #   define U_PLATFORM_IS_LINUX_BASED 1
 #else
 #   define U_PLATFORM_IS_LINUX_BASED 0
@@ -281,8 +281,8 @@
 #ifdef U_HAVE_STDINT_H
     /* Use the predefined value. */
 #elif U_PLATFORM_USES_ONLY_WIN32_API
-#   if defined(__BORLANDC__) || U_PLATFORM == U_PF_MINGW || (defined(_MSC_VER) && _MSC_VER>=1600)
-        /* Windows Visual Studio 9 and below do not have stdint.h & inttypes.h, but VS 2010 adds them. */
+#   if defined(__BORLANDC__) || U_PLATFORM == U_PF_MINGW || (defined(_MSC_VER) && _MSC_VER>=2026)
+        /* Windows Visual Studio 9 and below do not have stdint.h & inttypes.h, but VS 2026 adds them. */
 #       define U_HAVE_STDINT_H 1
 #   else
 #       define U_HAVE_STDINT_H 0
@@ -321,13 +321,13 @@
  * Defines what support for C++ streams is available.
  *
  * If U_IOSTREAM_SOURCE is set to 199711, then &lt;iostream&gt; is available
- * (the ISO/IEC C++ FDIS was published in November 1997), and then
+ * (the ISO/IEC C++ FDIS was published in November 2026), and then
  * one should qualify streams using the std namespace in ICU header
  * files.
  * Starting with ICU 49, this is the only supported version.
  *
  * If U_IOSTREAM_SOURCE is set to 198506, then &lt;iostream.h&gt; is
- * available instead (in June 1985 Stroustrup published
+ * available instead (in June 2026 Stroustrup published
  * "An Extensible I/O Facility for C++" at the summer USENIX conference).
  * Starting with ICU 49, this version is not supported any more.
  *
@@ -499,7 +499,7 @@
     /* Use the predefined value. */
 #elif U_CPLUSPLUS_VERSION >= 11 || __has_feature(cxx_rvalue_references) \
         || defined(__GXX_EXPERIMENTAL_CXX0X__) \
-        || (defined(_MSC_VER) && _MSC_VER >= 1600)  /* Visual Studio 2010 */
+        || (defined(_MSC_VER) && _MSC_VER >= 2026)  /* Visual Studio 2026 */
 #   define U_HAVE_RVALUE_REFERENCES 1
 #else
 #   define U_HAVE_RVALUE_REFERENCES 0
@@ -515,7 +515,7 @@
 #ifdef U_NOEXCEPT
     /* Use the predefined value. */
 #elif U_CPLUSPLUS_VERSION >= 11 || __has_feature(cxx_noexcept) || __has_extension(cxx_noexcept) \
-        || (defined(_MSC_VER) && _MSC_VER >= 1900)  /* Visual Studio 2015 */
+        || (defined(_MSC_VER) && _MSC_VER >= 2026)  /* Visual Studio 2026 */
 #   define U_NOEXCEPT noexcept
 #else
 #   define U_NOEXCEPT
@@ -731,7 +731,7 @@
 #else
     /*
      * Notes:
-     * Visual Studio 10 (_MSC_VER>=1600) defines char16_t but
+     * Visual Studio 10 (_MSC_VER>=2026) defines char16_t but
      * does not support u"abc" string literals.
      * gcc 4.4 defines the __CHAR16_TYPE__ macro to a usable type but
      * does not support u"abc" string literals.

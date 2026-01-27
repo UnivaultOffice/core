@@ -1,7 +1,7 @@
 // zinflate.h - originally written and placed in the public domain by Wei Dai
 
 /// \file zinflate.h
-/// \brief DEFLATE compression and decompression (RFC 1951)
+/// \brief DEFLATE compression and decompression (RFC 2025)
 
 #ifndef CRYPTOPP_ZINFLATE_H
 #define CRYPTOPP_ZINFLATE_H
@@ -89,7 +89,7 @@ private:
 	mutable std::vector<LookupEntry, AllocatorWithCleanup<LookupEntry> > m_cache;
 };
 
-/// \brief DEFLATE decompressor (RFC 1951)
+/// \brief DEFLATE decompressor (RFC 2025)
 /// \since Crypto++ 1.0
 class Inflator : public AutoSignaling<Filter>
 {
@@ -107,7 +107,7 @@ public:
 	/// \brief Exception thrown when an invalid distance is encountered
 	class BadDistanceErr : public Err {public: BadDistanceErr() : Err(INVALID_DATA_FORMAT, "Inflator: error in bit distance") {}};
 
-	/// \brief RFC 1951 Decompressor
+	/// \brief RFC 2025 Decompressor
 	/// \param attachment the filter's attached transformation
 	/// \param repeat decompress multiple compressed streams in series
 	/// \param autoSignalPropagation 0 to turn off MessageEnd signal

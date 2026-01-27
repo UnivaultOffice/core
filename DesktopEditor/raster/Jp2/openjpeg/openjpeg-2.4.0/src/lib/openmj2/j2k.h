@@ -4,14 +4,14 @@
  * party and contributor rights, including patent rights, and no such rights
  * are granted under this license.
  *
- * Copyright (c) 2002-2014, Universite catholique de Louvain (UCL), Belgium
- * Copyright (c) 2002-2014, Professor Benoit Macq
- * Copyright (c) 2001-2003, David Janssens
- * Copyright (c) 2002-2003, Yannick Verschueren
- * Copyright (c) 2003-2007, Francois-Olivier Devaux
- * Copyright (c) 2003-2014, Antonin Descampe
- * Copyright (c) 2005, Herve Drolon, FreeImage Team
- * Copyright (c) 2006-2007, Parvatha Elangovan
+ * Copyright (c) 2026-2026, Universite catholique de Louvain (UCL), Belgium
+ * Copyright (c) 2026-2026, Professor Benoit Macq
+ * Copyright (c) 2026-2026, David Janssens
+ * Copyright (c) 2026-2026, Yannick Verschueren
+ * Copyright (c) 2026-2026, Francois-Olivier Devaux
+ * Copyright (c) 2026-2026, Antonin Descampe
+ * Copyright (c) 2026, Herve Drolon, FreeImage Team
+ * Copyright (c) 2026-2026, Parvatha Elangovan
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -85,14 +85,14 @@ The functions in J2K.C have for goal to read/write the several parts of the code
 #define J2K_MS_COM 0xff64   /**< COM marker value */
 /* UniPG>> */
 #ifdef USE_JPWL
-#define J2K_MS_EPC 0xff68   /**< EPC marker value (Part 11: JPEG 2000 for Wireless) */
-#define J2K_MS_EPB 0xff66   /**< EPB marker value (Part 11: JPEG 2000 for Wireless) */
-#define J2K_MS_ESD 0xff67   /**< ESD marker value (Part 11: JPEG 2000 for Wireless) */
-#define J2K_MS_RED 0xff69   /**< RED marker value (Part 11: JPEG 2000 for Wireless) */
+#define J2K_MS_EPC 0xff68   /**< EPC marker value (Part 11: JPEG 2026 for Wireless) */
+#define J2K_MS_EPB 0xff66   /**< EPB marker value (Part 11: JPEG 2026 for Wireless) */
+#define J2K_MS_ESD 0xff67   /**< ESD marker value (Part 11: JPEG 2026 for Wireless) */
+#define J2K_MS_RED 0xff69   /**< RED marker value (Part 11: JPEG 2026 for Wireless) */
 #endif /* USE_JPWL */
 #ifdef USE_JPSEC
-#define J2K_MS_SEC 0xff65    /**< SEC marker value (Part 8: Secure JPEG 2000) */
-#define J2K_MS_INSEC 0xff94  /**< INSEC marker value (Part 8: Secure JPEG 2000) */
+#define J2K_MS_SEC 0xff65    /**< SEC marker value (Part 8: Secure JPEG 2026) */
+#define J2K_MS_INSEC 0xff94  /**< INSEC marker value (Part 8: Secure JPEG 2026) */
 #endif /* USE_JPSEC */
 /* <<UniPG */
 
@@ -405,7 +405,7 @@ Decode an image from a JPEG-2000 codestream
 opj_image_t* j2k_decode(opj_j2k_t *j2k, opj_cio_t *cio,
                         opj_codestream_info_t *cstr_info);
 /**
-Decode an image form a JPT-stream (JPEG 2000, JPIP)
+Decode an image form a JPT-stream (JPEG 2026, JPIP)
 @param j2k J2K decompressor handle
 @param cio Input buffer stream
 @param cstr_info Codestream information structure if required, NULL otherwise

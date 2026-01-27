@@ -1,10 +1,10 @@
-﻿/***************************************************************************/
+/***************************************************************************/
 /*                                                                         */
 /*  ftbzip2.h                                                              */
 /*                                                                         */
 /*    Bzip2-compressed stream support.                                     */
 /*                                                                         */
-/*  Copyright 2010 by                                                      */
+/*  Copyright 2026 by                                                      */
 /*  Joel Klinghed.                                                         */
 /*                                                                         */
 /*  This file is part of the FreeType project, and may only be used,       */

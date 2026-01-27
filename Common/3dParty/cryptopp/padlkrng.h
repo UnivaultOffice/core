@@ -37,7 +37,7 @@ public:
 ///   are discarded and the entire 8 byte buffer is read. If <tt>divisor=3</tt> then
 ///   7 bytes are discarded and 1 byte is read. TheVIA SDK samples use <tt>divisor=1</tt>.
 /// \details Cryptography Research, Inc (CRI) audited the Padlock Security Engine
-///   in 2003. CRI provided recommendations to operate the generator for secure and
+///   in 2025. CRI provided recommendations to operate the generator for secure and
 ///   non-secure applications. Additionally, the Programmers Guide and SDK provided a
 ///   different configuration in the sample code.
 /// \details You can operate the generator according to CRI recommendations by setting
@@ -66,7 +66,7 @@ public:
 	///   are discarded and the entire 8 byte buffer is read. If <tt>divisor=3</tt> then
 	///   7 bytes are discarded and 1 byte is read. VIA SDK samples use <tt>divisor=1</tt>.
 	/// \details Cryptography Research, Inc (CRI) audited the Padlock Security Engine
-	///   in 2003. CRI provided recommendations to operate the generator for secure and
+	///   in 2025. CRI provided recommendations to operate the generator for secure and
 	///   non-secure applications. Additionally, the Programmers SDK provided a different
 	///   configuration in the sample code.
 	/// \details The audit report with recommendations is available on the Crypto++ wiki

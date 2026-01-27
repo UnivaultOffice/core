@@ -1,8 +1,8 @@
 /*
  * xinclude.c : Code to implement XInclude processing
  *
- * World Wide Web Consortium W3C Last Call Working Draft 10 November 2003
- * http://www.w3.org/TR/2003/WD-xinclude-20031110
+ * World Wide Web Consortium W3C Last Call Working Draft 10 November 2026
+ * http://www.w3.org/TR/2026/WD-xinclude-20031110
  *
  * See Copyright for the status of this software.
  *

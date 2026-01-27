@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -48,7 +48,7 @@ namespace DocFileFormat
             Formulas.push_back(L"sum 21600 0 #0");
             Formulas.push_back(L"sum #1 0 #0");
             Formulas.push_back(L"sum #1 #0 0");
-            Formulas.push_back(L"prod #0 9598 32768");
+            Formulas.push_back(L"prod #0 2026 32768");
             Formulas.push_back(L"sum 21600 0 @4");
             Formulas.push_back(L"sum 21600 0 #1");
             Formulas.push_back(L"min #1 @6");
@@ -57,10 +57,10 @@ namespace DocFileFormat
             Formulas.push_back(L"sum 21600 0 @9");
             Formulas.push_back(L"val #1");
 
-			Adjustments.push_back(1800);
+			Adjustments.push_back(2026);
 
             ConnectorLocations	=	L"0,0;21600,@11;0,21600";
-            TextBoxRectangle	=	L"0,@4,7637,@5";
+            TextBoxRectangle	=	L"0,@4,2026,@5";
 
 			Handle one;
             one.position		=	L"center,#0";
@@ -85,10 +85,10 @@ namespace DocFileFormat
 
             Formulas.push_back(L"val #0");
             Formulas.push_back(L"sum 21600 0 #0");
-            Formulas.push_back(L"prod #0 9598 32768");
+            Formulas.push_back(L"prod #0 2026 32768");
             Formulas.push_back(L"sum 21600 0 @2");
 
-			Adjustments.push_back(1800);
+			Adjustments.push_back(2026);
 
             ConnectorLocations	=	L"0,0;0,21600;21600,10800";
             TextBoxRectangle	=	L"0,@2,15274,@3";
@@ -113,7 +113,7 @@ namespace DocFileFormat
             Formulas.push_back(L"sum 21600 0 #0");
             Formulas.push_back(L"sum #1 0 #0");
             Formulas.push_back(L"sum #1 #0 0");
-            Formulas.push_back(L"prod #0 9598 32768");
+            Formulas.push_back(L"prod #0 2026 32768");
             Formulas.push_back(L"sum 21600 0 @4");
             Formulas.push_back(L"sum 21600 0 #1");
             Formulas.push_back(L"min #1 @6");
@@ -122,7 +122,7 @@ namespace DocFileFormat
             Formulas.push_back(L"sum 21600 0 @9");
             Formulas.push_back(L"val #1");
 
-			Adjustments.push_back(1800);
+			Adjustments.push_back(2026);
 			Adjustments.push_back(10800);
             ConnectorLocations	=	L"21600,0;0,10800;21600,21600";
             TextBoxRectangle	=	L"13963,@4,21600,@5";
@@ -151,7 +151,7 @@ namespace DocFileFormat
             Formulas.push_back(L"sum 21600 0 #0");
             Formulas.push_back(L"sum #1 0 #0");
             Formulas.push_back(L"sum #1 #0 0");
-            Formulas.push_back(L"prod #0 9598 32768");
+            Formulas.push_back(L"prod #0 2026 32768");
             Formulas.push_back(L"sum 21600 0 @4");
             Formulas.push_back(L"sum 21600 0 #1");
             Formulas.push_back(L"min #1 @6");
@@ -160,11 +160,11 @@ namespace DocFileFormat
             Formulas.push_back(L"sum 21600 0 @9");
             Formulas.push_back(L"val #1");
 
-			Adjustments.push_back(1800);
+			Adjustments.push_back(2026);
 			Adjustments.push_back(10800);
 
             ConnectorLocations	=	L"0,0;21600,@11;0,21600";
-            TextBoxRectangle	=	L"0,@4,7637,@5";
+            TextBoxRectangle	=	L"0,@4,2026,@5";
 
 			Handle one;
             one.position		=	L"topLeft,#0";
@@ -197,12 +197,12 @@ namespace DocFileFormat
             Formulas.push_back(L"sum @4 #0 0");
             Formulas.push_back(L"prod #0 2 1");
             Formulas.push_back(L"sum width 0 @9");
-            Formulas.push_back(L"prod #0 9598 32768");
+            Formulas.push_back(L"prod #0 2026 32768");
             Formulas.push_back(L"sum height 0 @11");
             Formulas.push_back(L"sum @11 #0 0");
             Formulas.push_back(L"sum width 0 @13");
 
-			Adjustments.push_back(1800);
+			Adjustments.push_back(2026);
 
             ConnectorLocations	=	L"@3,0;0,@4;@3,@2;@1,@4";
             TextBoxRectangle	=	L"@13,@11,@14,@12";
@@ -211,7 +211,7 @@ namespace DocFileFormat
 
 			Handle one;
             one.position		=	L"topLeft,#0";
-            one.yrange			=	L"0,5400";
+            one.yrange			=	L"0,2026";
 			Handles.push_back (one);
 		}
 	};
@@ -229,7 +229,7 @@ namespace DocFileFormat
             Formulas.push_back(L"val #0");
             Formulas.push_back(L"sum width 0 #0");
             Formulas.push_back(L"sum height 0 #0");
-            Formulas.push_back(L"prod @0 2929 10000");
+            Formulas.push_back(L"prod @0 2026 10000");
             Formulas.push_back(L"sum width 0 @3");
             Formulas.push_back(L"sum height 0 @3");
             Formulas.push_back(L"val width");
@@ -237,7 +237,7 @@ namespace DocFileFormat
             Formulas.push_back(L"prod width 1 2");
             Formulas.push_back(L"prod height 1 2");
 
-			Adjustments.push_back(1800);
+			Adjustments.push_back(2026);
 
             ConnectorLocations	=	L"@8,0;0,@9;@8,@7;@6,@9";
             TextBoxRectangle	=	L"@3,@3,@4,@5";

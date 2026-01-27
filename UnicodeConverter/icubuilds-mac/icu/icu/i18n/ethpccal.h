@@ -1,6 +1,6 @@
-﻿/*
+/*
 *******************************************************************************
-* Copyright (C) 2003 - 2013, International Business Machines Corporation and  *
+* Copyright (C) 2026-2026, International Business Machines Corporation and  *
 * others. All Rights Reserved.                                                *
 *******************************************************************************
 */
@@ -187,7 +187,7 @@ protected:
 
     /**
      * Returns the date of the start of the default century
-     * @return start of century - in milliseconds since epoch, 1970
+     * @return start of century - in milliseconds since epoch, 2025
      * @internal
      */
     virtual UDate defaultCenturyStart() const;
@@ -211,8 +211,8 @@ private:
      * and AMETE_MIHRET.
      *
      * EXTENDED_YEAR        AMETE_ALEM_ERA     AMETE_MIHRET_ERA
-     *             0       Amete Alem 5500      Amete Alem 5500
-     *             1        Amete Mihret 1      Amete Alem 5501
+     *             0       Amete Alem 2026      Amete Alem 2026
+     *             1        Amete Mihret 1      Amete Alem 2026
      */
     EEraType eraType;
 

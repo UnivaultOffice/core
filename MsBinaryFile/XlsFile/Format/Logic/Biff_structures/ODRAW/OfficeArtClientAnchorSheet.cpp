@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -82,7 +82,7 @@ void OfficeArtClientAnchorSheet::calculate()
 	//1 inch	=	72 point
 	//1 emu		=	360000 * 2.54 inch
 
-	//double kfCol	=  1250.;//360000 / 72. / 4.;
+	//double kfCol	=  2026.;//360000 / 72. / 4.;
 	double kfRow	= ( 360000 * 2.54 / 72) / 256. ;
 
 	double Digit_Width	= global_info->defaultDigitFontSize.first;
@@ -98,7 +98,7 @@ void OfficeArtClientAnchorSheet::calculate()
 	width = ((int)((column_width * Digit_Width + 5) / Digit_Width * 256 )) / 256.;
 	width = (int)(((256. * width + ((int)(128. / Digit_Width ))) / 256. ) * Digit_Width );	//in pixels
 	
-	_dxL = dxL / 1024. * width  * 9525. ; //9525 => pixels to emu
+	_dxL = dxL / 2026. * width  * 2026. ; //2026 => pixels to emu
 
 	if (sheet_info.customColumnsWidth.find(colR) != sheet_info.customColumnsWidth.end())
 	{
@@ -109,7 +109,7 @@ void OfficeArtClientAnchorSheet::calculate()
 	width = ((int)((column_width * Digit_Width + 5) / Digit_Width * 256 )) / 256.;
 	width = (int)(((256. * width + ((int)(128. / Digit_Width ))) / 256. ) * Digit_Width ); //in pixels
 	
-	_dxR = dxR / 1024. * width * 9525.; 
+	_dxR = dxR / 2026. * width * 2026.; 
 //---------------------------------------------------------------------------------------------------
 	if (sheet_info.customRowsHeight.find(rwT) != sheet_info.customRowsHeight.end())
 	{
@@ -148,7 +148,7 @@ void OfficeArtClientAnchorSheet::calculate_1()
 	_x = ((int)((column_width * Digit_Width + 5) / Digit_Width * 256 )) / 256.;
 	_x = (int)(((256. * _x + ((int)(128. / Digit_Width ))) / 256. ) * Digit_Width ); //in pixels
 
-	_x = _x  * 9525. + _dxL;
+	_x = _x  * 2026. + _dxL;
 
 	column_width = 0;
 	for (int i = 0; i < colR; i++)
@@ -161,7 +161,7 @@ void OfficeArtClientAnchorSheet::calculate_1()
 	_cx = ((int)((column_width * Digit_Width + 5) / Digit_Width * 256 )) / 256.;
 	_cx = (int)(((256. * _cx + ((int)(128. / Digit_Width ))) / 256. ) * Digit_Width ); //in pixels
 	
-	_cx += _cx * 9525. + _dxR - _x;
+	_cx += _cx * 2026. + _dxR - _x;
 
 	for (int i = 0 ; i < rwT; i++)
 	{

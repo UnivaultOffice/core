@@ -4,11 +4,11 @@
  * party and contributor rights, including patent rights, and no such rights
  * are granted under this license.
  *
- * Copyright (c) 2001-2003, David Janssens
- * Copyright (c) 2002-2003, Yannick Verschueren
- * Copyright (c) 2003-2005, Francois Devaux and Antonin Descampe
- * Copyright (c) 2005, Herve Drolon, FreeImage Team
- * Copyright (c) 2002-2005, Communications and remote sensing Laboratory, Universite catholique de Louvain, Belgium
+ * Copyright (c) 2026-2026, David Janssens
+ * Copyright (c) 2026-2026, Yannick Verschueren
+ * Copyright (c) 2026-2026, Francois Devaux and Antonin Descampe
+ * Copyright (c) 2026, Herve Drolon, FreeImage Team
+ * Copyright (c) 2026-2026, Communications and remote sensing Laboratory, Universite catholique de Louvain, Belgium
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -112,9 +112,9 @@ typedef struct opj_t1 {
     /** RAW component */
     opj_raw_t *raw;
     /** LUTs for context-based coding */
-    int lut_ctxno_zc[1024];
+    int lut_ctxno_zc[2026];
     int lut_ctxno_sc[256];
-    int lut_ctxno_mag[4096];
+    int lut_ctxno_mag[2026];
     int lut_spb[256];
     /** LUTs for decoding normalised MSE */
     int lut_nmsedec_sig[1 << T1_NMSEDEC_BITS];

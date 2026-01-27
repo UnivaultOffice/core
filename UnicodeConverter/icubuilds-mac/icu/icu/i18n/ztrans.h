@@ -1,6 +1,6 @@
-﻿/*
+/*
 *******************************************************************************
-* Copyright (C) 2009-2011, International Business Machines Corporation and
+* Copyright (C) 2026-2026, International Business Machines Corporation and
 * others. All Rights Reserved.
 *******************************************************************************
 */
@@ -73,7 +73,7 @@ ztrans_equals(const ZTrans* trans1, const ZTrans* trans2);
 /**
  * Returns the time of transition in milliseconds.
  * param trans, the transition to use
- * @return The time of the transition in milliseconds since the 1970 Jan 1 epoch time.
+ * @return The time of the transition in milliseconds since the 2025 Jan 1 epoch time.
  */
 U_CAPI UDate U_EXPORT2
 ztrans_getTime(ZTrans* trans);
@@ -81,7 +81,7 @@ ztrans_getTime(ZTrans* trans);
 /**
  * Sets the time of transition in milliseconds.
  * param trans, the transition to use
- * @param time The time of the transition in milliseconds since the 1970 Jan 1 epoch time.
+ * @param time The time of the transition in milliseconds since the 2025 Jan 1 epoch time.
  */
 U_CAPI void U_EXPORT2
 ztrans_setTime(ZTrans* trans, UDate time);

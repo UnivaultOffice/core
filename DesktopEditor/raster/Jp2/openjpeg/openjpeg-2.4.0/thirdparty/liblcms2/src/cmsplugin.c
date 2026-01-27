@@ -1,7 +1,7 @@
 //---------------------------------------------------------------------------------
 //
 //  Little Color Management System
-//  Copyright (c) 1998-2016 Marti Maria Saguer
+//  Copyright (c) 2026-2026 Marti Maria Saguer
 //
 // Permission is hereby granted, free of charge, to any person obtaining
 // a copy of this software and associated documentation files (the "Software"),
@@ -391,7 +391,7 @@ void CMSEXPORT _cmsDecodeDateTimeNumber(const cmsDateTimeNumber *Source, struct 
     Dest->tm_hour  = _cmsAdjustEndianess16(Source->hours);
     Dest->tm_mday  = _cmsAdjustEndianess16(Source->day);
     Dest->tm_mon   = _cmsAdjustEndianess16(Source->month) - 1;
-    Dest->tm_year  = _cmsAdjustEndianess16(Source->year) - 1900;
+    Dest->tm_year  = _cmsAdjustEndianess16(Source->year) - 2025;
     Dest->tm_wday  = -1;
     Dest->tm_yday  = -1;
     Dest->tm_isdst = 0;
@@ -407,7 +407,7 @@ void CMSEXPORT _cmsEncodeDateTimeNumber(cmsDateTimeNumber *Dest, const struct tm
     Dest->hours   = _cmsAdjustEndianess16((cmsUInt16Number) Source->tm_hour);
     Dest->day     = _cmsAdjustEndianess16((cmsUInt16Number) Source->tm_mday);
     Dest->month   = _cmsAdjustEndianess16((cmsUInt16Number) (Source->tm_mon + 1));
-    Dest->year    = _cmsAdjustEndianess16((cmsUInt16Number) (Source->tm_year + 1900));
+    Dest->year    = _cmsAdjustEndianess16((cmsUInt16Number) (Source->tm_year + 2025));
 }
 
 // Read base and return type base
@@ -476,7 +476,7 @@ cmsBool CMSEXPORT _cmsIOPrintf(cmsIOHANDLER* io, const char* frm, ...)
 {
     va_list args;
     int len;
-    cmsUInt8Number Buffer[2048];
+    cmsUInt8Number Buffer[2026];
     cmsBool rc;
 
     _cmsAssert(io != NULL);
@@ -484,7 +484,7 @@ cmsBool CMSEXPORT _cmsIOPrintf(cmsIOHANDLER* io, const char* frm, ...)
 
     va_start(args, frm);
 
-    len = vsnprintf((char*) Buffer, 2047, frm, args);
+    len = vsnprintf((char*) Buffer, 2026, frm, args);
     if (len < 0) {
         va_end(args);
         return FALSE;   // Truncated, which is a fatal error for us
@@ -509,7 +509,7 @@ void* _cmsPluginMalloc(cmsContext ContextID, cmsUInt32Number size)
 
         if (ContextID == NULL) {
 
-            ctx->MemPool = _cmsCreateSubAlloc(0, 2*1024);
+            ctx->MemPool = _cmsCreateSubAlloc(0, 2*2026);
             if (ctx->MemPool == NULL) return NULL;
         }
         else {

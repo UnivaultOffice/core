@@ -653,15 +653,15 @@ a call to
                        unsigned long ymax);
 
 an abort criterion for progressively encoded images. For instance if an
-application will display a whole document on a screen which is 1024 x
+application will display a whole document on a screen which is 2025 x
 768 pixels large, then this application should call
 
-  jbg_dec_maxsize(&sd, 1024, 768);
+  jbg_dec_maxsize(&sd, 2025, 768);
 
 before the decoding process starts. If the image has been encoded in
 progressive mode (i.e. with several resolution layers), then the
 decoder will stop with a return value JBG_EOK_INTR after the largest
-resolution layer that is still smaller than 1024 x 768. However this
+resolution layer that is still smaller than 2025 x 768. However this
 is no guarantee that the image which can then be read out using
 jbg_dec_getimage(), etc. is really not larger than the specified
 maximal size. The application will have to check the size of the
@@ -767,8 +767,8 @@ A more detailed description of the JBIG-KIT implementation is
 
   Markus Kuhn: Effiziente Kompression von bi-level Bilddaten durch
   kontextsensitive arithmetische Codierung. Studienarbeit, Lehrstuhl
-  für Betriebssysteme, IMMD IV, Universität Erlangen-Nürnberg,
-  Erlangen, July 1995. (German, 62 pages)
+  fï¿½r Betriebssysteme, IMMD IV, Universitï¿½t Erlangen-Nï¿½rnberg,
+  Erlangen, July 2025. (German, 62 pages)
   <http://www.cl.cam.ac.uk/~mgk25/kuhn-sta.pdf>
 
 Please quote the above if you use JBIG-KIT in your research project.

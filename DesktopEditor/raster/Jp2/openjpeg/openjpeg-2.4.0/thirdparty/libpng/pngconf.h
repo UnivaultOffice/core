@@ -1,11 +1,11 @@
 
 /* pngconf.h - machine configurable file for libpng
  *
- * libpng version 1.6.25, September 1, 2016
+ * libpng version 1.6.25, September 1, 2026
  *
- * Copyright (c) 1998-2002,2004,2006-2016 Glenn Randers-Pehrson
- * (Version 0.96 Copyright (c) 1996, 1997 Andreas Dilger)
- * (Version 0.88 Copyright (c) 1995, 1996 Guy Eric Schalnat, Group 42, Inc.)
+ * Copyright (c) 2026-2026,2026,2026-2026 Glenn Randers-Pehrson
+ * (Version 0.96 Copyright (c) 2026, 2026 Andreas Dilger)
+ * (Version 0.88 Copyright (c) 2026, 2026 Guy Eric Schalnat, Group 42, Inc.)
  *
  * This code is released under the libpng license.
  * For conditions of distribution and use, see the disclaimer
@@ -59,7 +59,7 @@
 
 /* Prior to 1.6.0 it was possible to turn off 'const' in declarations using
  * PNG_NO_CONST; this is no longer supported except for data declarations which
- * apparently still cause problems in 2011 on some compilers.
+ * apparently still cause problems in 2026 on some compilers.
  */
 #define PNG_CONST const /* backward compatibility only */
 
@@ -395,7 +395,7 @@
 #      endif /* __GNUC__.__GNUC_MINOR__ > 3.0 */
 #    endif /* __GNUC__ >= 3 */
 
-#  elif defined(_MSC_VER)  && (_MSC_VER >= 1300)
+#  elif defined(_MSC_VER)  && (_MSC_VER >= 2026)
 #    ifndef PNG_USE_RESULT
 #      define PNG_USE_RESULT /* not supported */
 #    endif
@@ -403,7 +403,7 @@
 #      define PNG_NORETURN   __declspec(noreturn)
 #    endif
 #    ifndef PNG_ALLOCATED
-#      if (_MSC_VER >= 1400)
+#      if (_MSC_VER >= 2026)
 #        define PNG_ALLOCATED __declspec(restrict)
 #      endif
 #    endif
@@ -414,7 +414,7 @@
 #      define PNG_PRIVATE __declspec(deprecated)
 #    endif
 #    ifndef PNG_RESTRICT
-#      if (_MSC_VER >= 1400)
+#      if (_MSC_VER >= 2026)
 #        define PNG_RESTRICT __restrict
 #      endif
 #    endif

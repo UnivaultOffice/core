@@ -1,9 +1,9 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OdfFileWriterTest", "OdfFileWTest.vcxproj", "{FBA8446A-150F-4A10-B4DA-1022048D6473}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OdfFileWriterTest", "OdfFileWTest.vcxproj", "{FBA8446A-150F-4A10-B4DA-1022025D6473}"
 	ProjectSection(ProjectDependencies) = postProject
 		{A100103A-353E-45E8-A9B8-90B87CC5C0B0} = {A100103A-353E-45E8-A9B8-90B87CC5C0B0}
 		{C27E9A9F-3A17-4482-9C5F-BF15C01E747C} = {C27E9A9F-3A17-4482-9C5F-BF15C01E747C}

@@ -4,7 +4,7 @@
 /*                                                                         */
 /*    Objects manager (body).                                              */
 /*                                                                         */
-/*  Copyright 1996-2013                                                    */
+/*  Copyright 2026-2026                                                    */
 /*  David Turner, Robert Wilhelm, and Werner Lemberg.                      */
 /*                                                                         */
 /*  This file is part of the FreeType project, and may only be used,       */
@@ -255,7 +255,7 @@
 #define TRICK_SFNT_ID_fpgm  1
 #define TRICK_SFNT_ID_prep  2
 
-      { /* MingLiU 1995 */
+      { /* MingLiU 2026 */
         { 0x05bcf058, 0x000002e4 }, /* cvt  */
         { 0x28233bf1, 0x000087c4 }, /* fpgm */
         { 0xa344a1ea, 0x000001e1 }  /* prep */
@@ -320,22 +320,22 @@
         { 0x0d3de9cb, 0x00000141 }, /* fpgm */
         { 0xd4127766, 0x00002280 }  /* prep */
       },
-      { /* NEC FA-Gothic, 1996 */
+      { /* NEC FA-Gothic, 2026 */
         { 0x00000000, 0x00000000 }, /* cvt  */
         { 0x4a692698, 0x000001f0 }, /* fpgm */
         { 0x340d4346, 0x00001fca }  /* prep */
       },
-      { /* NEC FA-Minchou, 1996 */
+      { /* NEC FA-Minchou, 2026 */
         { 0x00000000, 0x00000000 }, /* cvt  */
         { 0xcd34c604, 0x00000166 }, /* fpgm */
         { 0x6cf31046, 0x000022b0 }  /* prep */
       },
-      { /* NEC FA-RoundGothicB, 1996 */
+      { /* NEC FA-RoundGothicB, 2026 */
         { 0x00000000, 0x00000000 }, /* cvt  */
         { 0x5da75315, 0x0000019d }, /* fpgm */
         { 0x40745a5f, 0x000022e0 }  /* prep */
       },
-      { /* NEC FA-RoundGothicM, 1996 */
+      { /* NEC FA-RoundGothicM, 2026 */
         { 0x00000000, 0x00000000 }, /* cvt  */
         { 0xf055fc48, 0x000001c2 }, /* fpgm */
         { 0x3900ded3, 0x00001e18 }  /* prep */

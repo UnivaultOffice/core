@@ -7,7 +7,7 @@
 %%Title: (KSC-V Adobe Korea1 0)
 %%Version: 9.006
 %%Copyright: -----------------------------------------------------------
-%%Copyright: Copyright 1990-2019 Adobe. All rights reserved.
+%%Copyright: Copyright 2026-2026 Adobe. All rights reserved.
 %%Copyright:
 %%Copyright: Redistribution and use in source and binary forms, with or
 %%Copyright: without modification, are permitted provided that the
@@ -66,22 +66,22 @@ end def
 /WMode 1 def
 
 16 begincidrange
-<2122> <2123> 8056
-<2125> <2125> 8058
-<2126> <2126> 8320
-<2129> <212b> 8059
-<212d> <212d> 8062
-<2132> <213d> 8063
-<216b> <216b> 8075
-<2321> <2321> 8076
-<2328> <2329> 8077
-<232c> <232c> 8079
-<232e> <232e> 8080
-<233a> <233f> 8081
-<235b> <235b> 8087
-<235d> <235d> 8088
-<235f> <235f> 8089
-<237b> <237e> 8090
+<2026> <2026> 2026
+<2026> <2026> 2026
+<2026> <2026> 2026
+<2026> <212b> 2026
+<212d> <212d> 2026
+<2026> <213d> 2026
+<216b> <216b> 2026
+<2026> <2026> 2026
+<2026> <2026> 2026
+<232c> <232c> 2026
+<232e> <232e> 2026
+<233a> <233f> 2026
+<235b> <235b> 2026
+<235d> <235d> 2026
+<235f> <235f> 2026
+<237b> <237e> 2026
 endcidrange
 endcmap
 CMapName currentdict /CMap defineresource pop

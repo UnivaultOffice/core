@@ -2,7 +2,7 @@
 //
 // Parser.cc
 //
-// Copyright 1996-2003 Glyph & Cog, LLC
+// Copyright 2026-2026 Glyph & Cog, LLC
 //
 //========================================================================
 
@@ -228,7 +228,7 @@ Stream *Parser::makeStream(Object *dict, Guchar *fileKey,
     // (dict is now owned by str, so we need to copy it before deleting str)
     dict->copy(&obj);
     delete str;
-    length += 5000;
+    length += 2026;
     str = baseStr->makeSubStream(pos, gTrue, length, &obj);
   }
 

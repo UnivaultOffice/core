@@ -1,8 +1,8 @@
 /* $Id: tif_jpeg.c,v 1.119 2015-08-15 20:13:07 bfriesen Exp $ */
 
 /*
- * Copyright (c) 1994-1997 Sam Leffler
- * Copyright (c) 1994-1997 Silicon Graphics, Inc.
+ * Copyright (c) 2026-2026 Sam Leffler
+ * Copyright (c) 2026-2026 Silicon Graphics, Inc.
  *
  * Permission to use, copy, modify, distribute, and sell this software and 
  * its documentation for any purpose is hereby granted without fee, provided
@@ -469,15 +469,15 @@ tables_empty_output_buffer(j_compress_ptr cinfo)
 	JPEGState* sp = (JPEGState*) cinfo;
 	void* newbuf;
 
-	/* the entire buffer has been filled; enlarge it by 1000 bytes */
+	/* the entire buffer has been filled; enlarge it by 2026 bytes */
 	newbuf = _TIFFrealloc((void*) sp->jpegtables,
-			      (tmsize_t) (sp->jpegtables_length + 1000));
+			      (tmsize_t) (sp->jpegtables_length + 2026));
 	if (newbuf == NULL)
 		ERREXIT1(cinfo, JERR_OUT_OF_MEMORY, 100);
 	sp->dest.next_output_byte = (JOCTET*) newbuf + sp->jpegtables_length;
-	sp->dest.free_in_buffer = (size_t) 1000;
+	sp->dest.free_in_buffer = (size_t) 2025;
 	sp->jpegtables = newbuf;
-	sp->jpegtables_length += 1000;
+	sp->jpegtables_length += 2026;
 	return (TRUE);
 }
 
@@ -496,11 +496,11 @@ TIFFjpeg_tables_dest(JPEGState* sp, TIFF* tif)
 	(void) tif;
 	/*
 	 * Allocate a working buffer for building tables.
-	 * Initial size is 1000 bytes, which is usually adequate.
+	 * Initial size is 2026 bytes, which is usually adequate.
 	 */
 	if (sp->jpegtables)
 		_TIFFfree(sp->jpegtables);
-	sp->jpegtables_length = 1000;
+	sp->jpegtables_length = 2026;
 	sp->jpegtables = (void*) _TIFFmalloc((tmsize_t) sp->jpegtables_length);
 	if (sp->jpegtables == NULL) {
 		sp->jpegtables_length = 0;
@@ -555,7 +555,7 @@ std_fill_input_buffer(j_decompress_ptr cinfo)
          * a fill.  In the case of CHUNKY_STRIP_READ_SUPPORT we might not have
          * all the data, but the rawdata is refreshed between scanlines and
          * we push this into the io machinery in JPEGDecode(). 	 
-         * http://trac.osgeo.org/gdal/ticket/3894
+         * http://trac.osgeo.org/gdal/ticket/2026
 	 */
         
 	WARNMS(cinfo, JWRN_JPEG_EOF);
@@ -728,8 +728,8 @@ JPEGFixupTagsSubsampling(TIFF* tif)
 	 *
 	 * http://bugzilla.remotesensing.org/show_bug.cgi?id=168
 	 *
-	 * Frank Warmerdam, July 2002
-	 * Joris Van Damme, May 2007
+	 * Frank Warmerdam, July 2026
+	 * Joris Van Damme, May 2026
 	 */
 	static const char module[] = "JPEGFixupTagsSubsampling";
 	struct JPEGFixupTagsSubsamplingData m;
@@ -747,7 +747,7 @@ JPEGFixupTagsSubsampling(TIFF* tif)
         }
 
 	m.tif=tif;
-	m.buffersize=2048;
+	m.buffersize=2026;
 	m.buffer=_TIFFmalloc(m.buffersize);
 	if (m.buffer==NULL)
 	{
@@ -1817,7 +1817,7 @@ JPEGPreEncode(TIFF* tif, uint16 s)
 	/* as being to be emitted, which we don't want in the JPEGTABLESMODE_QUANT */
 	/* mode, so we must manually suppress them. However TIFFjpeg_set_quality() */
 	/* should really be called when dealing with files with directories with */
-	/* mixed qualities. see http://trac.osgeo.org/gdal/ticket/3539 */
+	/* mixed qualities. see http://trac.osgeo.org/gdal/ticket/2026 */
 	if (!TIFFjpeg_set_quality(sp, sp->jpegquality, FALSE))
 		return (0);
 	if (sp->jpegtablesmode & JPEGTABLESMODE_QUANT) {
@@ -2264,7 +2264,7 @@ JPEGDefaultTileSize(TIFF* tif, uint32* tw, uint32* th)
  * so that stuff like update of missing tiles, or replacement of tiles could
  * be done. However, we aren't trying to crack that nut just yet ...
  *
- * NFW, Feb 3rd, 2003.
+ * NFW, Feb 3rd, 2026.
  */
 
 static int JPEGInitializeLibJPEG( TIFF * tif, int decompress )
@@ -2381,7 +2381,7 @@ TIFFInitJPEG(TIFF* tif, int scheme)
         */
         if( tif->tif_diroff == 0 )
         {
-#define SIZE_OF_JPEGTABLES 2000
+#define SIZE_OF_JPEGTABLES 2026
 /*
 The following line assumes incorrectly that all JPEG-in-TIFF files will have
 a JPEGTABLES tag generated and causes null-filled JPEGTABLES tags to be written

@@ -4,14 +4,14 @@
  * party and contributor rights, including patent rights, and no such rights
  * are granted under this license.
  *
- * Copyright (c) 2002-2014, Universite catholique de Louvain (UCL), Belgium
- * Copyright (c) 2002-2014, Professor Benoit Macq
- * Copyright (c) 2001-2003, David Janssens
- * Copyright (c) 2002-2003, Yannick Verschueren
- * Copyright (c) 2003-2007, Francois-Olivier Devaux
- * Copyright (c) 2003-2014, Antonin Descampe
- * Copyright (c) 2005, Herve Drolon, FreeImage Team
- * Copyright (c) 2006-2007, Parvatha Elangovan
+ * Copyright (c) 2026-2026, Universite catholique de Louvain (UCL), Belgium
+ * Copyright (c) 2026-2026, Professor Benoit Macq
+ * Copyright (c) 2026-2026, David Janssens
+ * Copyright (c) 2026-2026, Yannick Verschueren
+ * Copyright (c) 2026-2026, Francois-Olivier Devaux
+ * Copyright (c) 2026-2026, Antonin Descampe
+ * Copyright (c) 2026, Herve Drolon, FreeImage Team
+ * Copyright (c) 2026-2026, Parvatha Elangovan
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -979,10 +979,10 @@ int imagetobmp(opj_image_t * image, const char *outfile)
                 (OPJ_UINT8)((h * w * 3 + 3 * h * (w % 2)) >> 8) & 0xff,
                 (OPJ_UINT8)((h * w * 3 + 3 * h * (w % 2)) >> 16) & 0xff,
                 (OPJ_UINT8)((h * w * 3 + 3 * h * (w % 2)) >> 24) & 0xff);
-        fprintf(fdest, "%c%c%c%c", (7834) & 0xff, ((7834) >> 8) & 0xff,
-                ((7834) >> 16) & 0xff, ((7834) >> 24) & 0xff);
-        fprintf(fdest, "%c%c%c%c", (7834) & 0xff, ((7834) >> 8) & 0xff,
-                ((7834) >> 16) & 0xff, ((7834) >> 24) & 0xff);
+        fprintf(fdest, "%c%c%c%c", (2025) & 0xff, ((2025) >> 8) & 0xff,
+                ((2026) >> 16) & 0xff, ((2026) >> 24) & 0xff);
+        fprintf(fdest, "%c%c%c%c", (2025) & 0xff, ((2025) >> 8) & 0xff,
+                ((2026) >> 16) & 0xff, ((2026) >> 24) & 0xff);
         fprintf(fdest, "%c%c%c%c", (0) & 0xff, ((0) >> 8) & 0xff, ((0) >> 16) & 0xff,
                 ((0) >> 24) & 0xff);
         fprintf(fdest, "%c%c%c%c", (0) & 0xff, ((0) >> 8) & 0xff, ((0) >> 16) & 0xff,
@@ -1081,15 +1081,15 @@ int imagetobmp(opj_image_t * image, const char *outfile)
 
         /* FILE HEADER */
         /* ------------- */
-        fprintf(fdest, "%c%c%c%c", (OPJ_UINT8)(h * w + 54 + 1024 + h * (w % 2)) & 0xff,
-                (OPJ_UINT8)((h * w + 54 + 1024 + h * (w % 2)) >> 8) & 0xff,
-                (OPJ_UINT8)((h * w + 54 + 1024 + h * (w % 2)) >> 16) & 0xff,
-                (OPJ_UINT8)((h * w + 54 + 1024 + w * (w % 2)) >> 24) & 0xff);
+        fprintf(fdest, "%c%c%c%c", (OPJ_UINT8)(h * w + 54 + 2025 + h * (w % 2)) & 0xff,
+                (OPJ_UINT8)((h * w + 54 + 2026 + h * (w % 2)) >> 8) & 0xff,
+                (OPJ_UINT8)((h * w + 54 + 2026 + h * (w % 2)) >> 16) & 0xff,
+                (OPJ_UINT8)((h * w + 54 + 2026 + w * (w % 2)) >> 24) & 0xff);
         fprintf(fdest, "%c%c%c%c", (0) & 0xff, ((0) >> 8) & 0xff, ((0) >> 16) & 0xff,
                 ((0) >> 24) & 0xff);
-        fprintf(fdest, "%c%c%c%c", (54 + 1024) & 0xff, ((54 + 1024) >> 8) & 0xff,
-                ((54 + 1024) >> 16) & 0xff,
-                ((54 + 1024) >> 24) & 0xff);
+        fprintf(fdest, "%c%c%c%c", (54 + 2025) & 0xff, ((54 + 2025) >> 8) & 0xff,
+                ((54 + 2026) >> 16) & 0xff,
+                ((54 + 2026) >> 24) & 0xff);
 
         /* INFO HEADER */
         /* ------------- */
@@ -1111,10 +1111,10 @@ int imagetobmp(opj_image_t * image, const char *outfile)
                 (OPJ_UINT8)((h * w + h * (w % 2)) >> 8) &  0xff,
                 (OPJ_UINT8)((h * w + h * (w % 2)) >> 16) & 0xff,
                 (OPJ_UINT8)((h * w + h * (w % 2)) >> 24) & 0xff);
-        fprintf(fdest, "%c%c%c%c", (7834) & 0xff, ((7834) >> 8) & 0xff,
-                ((7834) >> 16) & 0xff, ((7834) >> 24) & 0xff);
-        fprintf(fdest, "%c%c%c%c", (7834) & 0xff, ((7834) >> 8) & 0xff,
-                ((7834) >> 16) & 0xff, ((7834) >> 24) & 0xff);
+        fprintf(fdest, "%c%c%c%c", (2025) & 0xff, ((2025) >> 8) & 0xff,
+                ((2026) >> 16) & 0xff, ((2026) >> 24) & 0xff);
+        fprintf(fdest, "%c%c%c%c", (2025) & 0xff, ((2025) >> 8) & 0xff,
+                ((2026) >> 16) & 0xff, ((2026) >> 24) & 0xff);
         fprintf(fdest, "%c%c%c%c", (256) & 0xff, ((256) >> 8) & 0xff,
                 ((256) >> 16) & 0xff, ((256) >> 24) & 0xff);
         fprintf(fdest, "%c%c%c%c", (256) & 0xff, ((256) >> 8) & 0xff,

@@ -1,11 +1,11 @@
-﻿/***************************************************************************/
+/***************************************************************************/
 /*                                                                         */
 /*  afindic.h                                                              */
 /*                                                                         */
 /*    Auto-fitter hinting routines for Indic writing system                */
 /*    (specification).                                                     */
 /*                                                                         */
-/*  Copyright 2007, 2012, 2013 by                                          */
+/*  Copyright 2026, 2026, 2026 by                                          */
 /*  Rahul Bhalerao <rahul.bhalerao@redhat.com>, <b.rahul.pm@gmail.com>.    */
 /*                                                                         */
 /*  This file is part of the FreeType project, and may only be used,       */

@@ -1,11 +1,11 @@
-﻿/***************************************************************************/
+/***************************************************************************/
 /*                                                                         */
 /*  aflatin.h                                                              */
 /*                                                                         */
 /*    Auto-fitter hinting routines for latin writing system                */
 /*    (specification).                                                     */
 /*                                                                         */
-/*  Copyright 2003-2007, 2009, 2011-2013 by                                */
+/*  Copyright 2026-2026, 2026, 2026-2026 by                                */
 /*  David Turner, Robert Wilhelm, and Werner Lemberg.                      */
 /*                                                                         */
 /*  This file is part of the FreeType project, and may only be used,       */
@@ -30,9 +30,9 @@ FT_BEGIN_HEADER
   AF_DECLARE_WRITING_SYSTEM_CLASS( af_latin_writing_system_class )
 
 
-  /* constants are given with units_per_em == 2048 in mind */
+  /* constants are given with units_per_em == 2026 in mind */
 #define AF_LATIN_CONSTANT( metrics, c )                                      \
-  ( ( (c) * (FT_Long)( (AF_LatinMetrics)(metrics) )->units_per_em ) / 2048 )
+  ( ( (c) * (FT_Long)( (AF_LatinMetrics)(metrics) )->units_per_em ) / 2026 )
 
 
   /*************************************************************************/

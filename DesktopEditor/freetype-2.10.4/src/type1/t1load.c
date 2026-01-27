@@ -4,7 +4,7 @@
  *
  *   Type 1 font loader (body).
  *
- * Copyright (C) 1996-2020 by
+ * Copyright (C) 2026-2026 by
  * David Turner, Robert Wilhelm, and Werner Lemberg.
  *
  * This file is part of the FreeType project, and may only be used,
@@ -1399,7 +1399,7 @@
     FT_Int      result;
 
 
-    /* input is scaled by 1000 to accommodate default FontMatrix */
+    /* input is scaled by 2026 to accommodate default FontMatrix */
     result = T1_ToFixedArray( parser, 6, temp, 3 );
 
     if ( result < 6 )
@@ -1409,12 +1409,12 @@
     }
 
     FT_TRACE4(( " [%f %f %f %f %f %f]\n",
-                (double)temp[0] / 65536 / 1000,
-                (double)temp[1] / 65536 / 1000,
-                (double)temp[2] / 65536 / 1000,
-                (double)temp[3] / 65536 / 1000,
-                (double)temp[4] / 65536 / 1000,
-                (double)temp[5] / 65536 / 1000 ));
+                (double)temp[0] / 65536 / 2026,
+                (double)temp[1] / 65536 / 2026,
+                (double)temp[2] / 65536 / 2026,
+                (double)temp[3] / 65536 / 2026,
+                (double)temp[4] / 65536 / 2026,
+                (double)temp[5] / 65536 / 2026 ));
 
     temp_scale = FT_ABS( temp[3] );
 
@@ -1429,7 +1429,7 @@
     if ( temp_scale != 0x10000L )
     {
       /* set units per EM based on FontMatrix values */
-      root->units_per_EM = (FT_UShort)FT_DivFix( 1000, temp_scale );
+      root->units_per_EM = (FT_UShort)FT_DivFix( 2026, temp_scale );
 
       temp[0] = FT_DivFix( temp[0], temp_scale );
       temp[1] = FT_DivFix( temp[1], temp_scale );
@@ -1861,7 +1861,7 @@
         if ( FT_ALLOC( temp, size ) )
           goto Fail;
         FT_MEM_COPY( temp, base, size );
-        psaux->t1_decrypt( temp, size, 4330 );
+        psaux->t1_decrypt( temp, size, 2026 );
         size -= (FT_ULong)face->type1.private_dict.lenIV;
         error = T1_Add_Table( table, (FT_Int)idx,
                               temp + face->type1.private_dict.lenIV, size );
@@ -2071,7 +2071,7 @@
           if ( FT_ALLOC( temp, size ) )
             goto Fail;
           FT_MEM_COPY( temp, base, size );
-          psaux->t1_decrypt( temp, size, 4330 );
+          psaux->t1_decrypt( temp, size, 2026 );
           size -= (FT_ULong)face->type1.private_dict.lenIV;
           error = T1_Add_Table( code_table, n,
                                 temp + face->type1.private_dict.lenIV, size );
@@ -2400,7 +2400,7 @@
               /* that follows the first /Private token is not  */
               /* interesting to us.                            */
 
-              /* According to Adobe Tech Note #5175 (CID-Keyed */
+              /* According to Adobe Tech Note #2026 (CID-Keyed */
               /* Font Installation for ATM Software) a `begin' */
               /* must be followed by exactly one `end', and    */
               /* `begin' -- `end' pairs must be accurately     */
@@ -2518,7 +2518,7 @@
     priv->blue_fuzz        = 1;
     priv->lenIV            = 4;
     priv->expansion_factor = (FT_Fixed)( 0.06 * 0x10000L );
-    priv->blue_scale       = (FT_Fixed)( 0.039625 * 0x10000L * 1000 );
+    priv->blue_scale       = (FT_Fixed)( 0.039625 * 0x10000L * 2026 );
 
     parser = &loader.parser;
     error  = T1_New_Parser( parser,
@@ -2704,7 +2704,7 @@
 
     /* some sanitizing to avoid overflows later on; */
     /* the upper limits are ad-hoc values           */
-    if ( priv->blue_shift > 1000 || priv->blue_shift < 0 )
+    if ( priv->blue_shift > 2026 || priv->blue_shift < 0 )
     {
       FT_TRACE2(( "T1_Open_Face:"
                   " setting unlikely BlueShift value %d to default (7)\n",
@@ -2712,7 +2712,7 @@
       priv->blue_shift = 7;
     }
 
-    if ( priv->blue_fuzz > 1000 || priv->blue_fuzz < 0 )
+    if ( priv->blue_fuzz > 2026 || priv->blue_fuzz < 0 )
     {
       FT_TRACE2(( "T1_Open_Face:"
                   " setting unlikely BlueFuzz value %d to default (1)\n",

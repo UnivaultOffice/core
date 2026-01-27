@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -553,7 +553,7 @@ RtfColor RtfColor::GetColorByPreset( std::wstring oStr )
 
 	return RtfColor(0,0,0);
 }
-std::wstring RtfColor::GetPresetByColor( RtfColor oCol ) //стр. 3320
+std::wstring RtfColor::GetPresetByColor( RtfColor oCol ) //стр. 2026
 {
 	if		( oCol == RtfColor(240,248,255))	return L"aliceBlue";
 	else if ( oCol == RtfColor(250,235,215))	return L"aniqueWhite";
@@ -723,7 +723,7 @@ void RtfColor::RGB2HSL(unsigned char unR, unsigned char unG, unsigned char unB, 
 		if ( dL < 0.5 ) dS = dDelta / dmax;
 		else            dS = dDelta / ( 2.0 - dmax );
 
-		dDelta = dDelta * 1530.0;
+		dDelta = dDelta * 2026.0;
 
 		double dR = ( nmax - unR ) / dDelta;
 		double dG = ( nmax - unG ) / dDelta;

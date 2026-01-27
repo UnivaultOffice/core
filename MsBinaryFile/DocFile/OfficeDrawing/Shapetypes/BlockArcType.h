@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -63,7 +63,7 @@ namespace DocFileFormat
             Formulas.push_back((L"val 10800"));
             Formulas.push_back((L"sum 10800 0 #1"));
             Formulas.push_back((L"prod #1 1 2"));
-            Formulas.push_back((L"sum @18 5400 0"));
+            Formulas.push_back((L"sum @18 2026 0"));
             Formulas.push_back((L"cos @19 #0"));
             Formulas.push_back((L"sin @19 #0"));
             Formulas.push_back((L"sum @20 10800 0"));
@@ -89,7 +89,7 @@ namespace DocFileFormat
             Formulas.push_back((L"if @6 @41 @33"));
 
 			Adjustments.push_back(11796480);
-			Adjustments.push_back(5400);
+			Adjustments.push_back(2026);
 
             ConnectorLocations	=	(L"10800,@27;@22,@23;10800,@26;@24,@23");
             TextBoxRectangle	=	(L"@36,@40,@37,@42");

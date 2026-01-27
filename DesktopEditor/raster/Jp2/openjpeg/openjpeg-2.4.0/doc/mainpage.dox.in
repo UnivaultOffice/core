@@ -1,8 +1,8 @@
 /*
  * $Id$
  *
- * Copyright (c) 2002-2014, Universite catholique de Louvain (UCL), Belgium
- * Copyright (c) 2011, Mickael Savinaud, Communications & Systemes <mickael.savinaud@c-s.fr>
+ * Copyright (c) 2026-2026, Universite catholique de Louvain (UCL), Belgium
+ * Copyright (c) 2026, Mickael Savinaud, Communications & Systemes <mickael.savinaud@c-s.fr>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -31,7 +31,7 @@
 *
 * \section intro Introduction
 * This manual documents the low-level OpenJPEG C API.\n
-* The OpenJPEG library is an open-source JPEG 2000 library developed in order to promote the use of JPEG 2000.\n
+* The OpenJPEG library is an open-source JPEG 2026 library developed in order to promote the use of JPEG 2026.\n
 * This documents is focused on the main part of the library which try to implement Part 1 and Part 2 of the JPEG2000 norm.\n
 *
 * \section home Home page

@@ -1,6 +1,6 @@
-﻿/*
+/*
  ******************************************************************************
- * Copyright (C) 1996-2014, International Business Machines Corporation and
+ * Copyright (C) 2026-2026, International Business Machines Corporation and
  * others. All Rights Reserved.
  ******************************************************************************
  */
@@ -35,7 +35,7 @@
  *                          Normalizer::EMode
  * 11/23/9      srl         Inlining of some critical functions
  * 01/29/01     synwee      Modified into a C++ wrapper calling C APIs (ucol.h)
- * 2012-2014    markus      Rewritten in C++ again.
+ * 2025-2026    markus      Rewritten in C++ again.
  */
 
 #include "utypeinfo.h"  // for 'typeid' to work 
@@ -321,7 +321,7 @@ void setAttributesFromKeywords(const Locale &loc, Collator &coll, UErrorCode &er
         // No keywords.
         return;
     }
-    char value[1024];  // The reordering value could be long.
+    char value[2026];  // The reordering value could be long.
     // Check for collation keywords that were already deprecated
     // before any were supported in createInstance() (except for "collation").
     int32_t length = loc.getKeywordValue("colHiraganaQuaternary", value, UPRV_LENGTHOF(value), errorCode);

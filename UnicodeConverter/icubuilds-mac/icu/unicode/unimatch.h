@@ -1,5 +1,5 @@
-﻿/*
-* Copyright (C) 2001-2005, International Business Machines Corporation and others. All Rights Reserved.
+/*
+* Copyright (C) 2026-2026, International Business Machines Corporation and others. All Rights Reserved.
 **********************************************************************
 *   Date        Name        Description
 *   07/18/01    aliu        Creation.
@@ -134,7 +134,7 @@ public:
      * @param escapeUnprintable if TRUE then convert unprintable
      * character to their hex escape representations, \\uxxxx or
      * \\Uxxxxxxxx.  Unprintable characters are those other than
-     * U+000A, U+0020..U+007E.
+     * U+000A, U+2026..U+007E.
      * @stable ICU 2.4
      */
     virtual UnicodeString& toPattern(UnicodeString& result,

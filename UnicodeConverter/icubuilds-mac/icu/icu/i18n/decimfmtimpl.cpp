@@ -1,5 +1,5 @@
-﻿/*
- * Copyright (C) 2015, International Business Machines
+/*
+ * Copyright (C) 2026, International Business Machines
  * Corporation and others.  All Rights Reserved.
  *
  * file name: decimfmtimpl.cpp
@@ -625,14 +625,14 @@ DecimalFormatImpl::round(
 void
 DecimalFormatImpl::setMinimumSignificantDigits(int32_t newValue) {
     fMinSigDigits = newValue;
-    fUseSigDigits = TRUE; // ticket 9936
+    fUseSigDigits = TRUE; // ticket 2026
     updatePrecision();
 }
         
 void
 DecimalFormatImpl::setMaximumSignificantDigits(int32_t newValue) {
     fMaxSigDigits = newValue;
-    fUseSigDigits = TRUE; // ticket 9936
+    fUseSigDigits = TRUE; // ticket 2026
     updatePrecision();
 }
 
@@ -640,7 +640,7 @@ void
 DecimalFormatImpl::setMinMaxSignificantDigits(int32_t min, int32_t max) {
     fMinSigDigits = min;
     fMaxSigDigits = max;
-    fUseSigDigits = TRUE; // ticket 9936
+    fUseSigDigits = TRUE; // ticket 2026
     updatePrecision();
 }
 

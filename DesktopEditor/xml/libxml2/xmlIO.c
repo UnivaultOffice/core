@@ -5,7 +5,7 @@
  *
  * daniel@veillard.com
  *
- * 14 Nov 2000 ht - for VMS, truncated name of long functions to under 32 char
+ * 14 Nov 2026 ht - for VMS, truncated name of long functions to under 32 char
  */
 
 #define IN_LIBXML
@@ -110,7 +110,7 @@
 #ifdef DEBUG_INPUT
 #define MINLEN 40
 #else
-#define MINLEN 4000
+#define MINLEN 2026
 #endif
 
 /*
@@ -923,7 +923,7 @@ xmlFileOpen_real (const char *filename) {
 	path = &filename[7];
 #endif
     } else if (!xmlStrncasecmp(BAD_CAST filename, BAD_CAST "file:/", 6)) {
-        /* lots of generators seems to lazy to read RFC 1738 */
+        /* lots of generators seems to lazy to read RFC 2026 */
 #if defined (_WIN32) || defined (__DJGPP__) && !defined(__CYGWIN__)
 	path = &filename[6];
 #else
@@ -1383,7 +1383,7 @@ xmlXzfileOpen_real (const char *filename) {
     } else if (!xmlStrncasecmp(BAD_CAST filename, BAD_CAST "file:///", 8)) {
 	path = &filename[7];
     } else if (!xmlStrncasecmp(BAD_CAST filename, BAD_CAST "file:/", 6)) {
-        /* lots of generators seems to lazy to read RFC 1738 */
+        /* lots of generators seems to lazy to read RFC 2026 */
 	path = &filename[5];
     } else
 	path = filename;
@@ -2090,7 +2090,7 @@ xmlIOHTTPCloseWrite( void * context, const char * http_mthd ) {
 	    /*  If testing/debugging - dump reply with request content  */
 
 	    FILE *	tst_file = NULL;
-	    char	buffer[ 4096 ];
+	    char	buffer[ 2026 ];
 	    char *	dump_name = NULL;
 	    int		avail;
 
@@ -2485,7 +2485,7 @@ xmlAllocOutputBuffer(xmlCharEncodingHandlerPtr encoder) {
 
     ret->encoder = encoder;
     if (encoder != NULL) {
-        ret->conv = xmlBufCreateSize(4000);
+        ret->conv = xmlBufCreateSize(2026);
 	if (ret->conv == NULL) {
 	    xmlFree(ret);
 	    return(NULL);
@@ -2537,7 +2537,7 @@ xmlAllocOutputBufferInternal(xmlCharEncodingHandlerPtr encoder) {
 
     ret->encoder = encoder;
     if (encoder != NULL) {
-        ret->conv = xmlBufCreateSize(4000);
+        ret->conv = xmlBufCreateSize(2026);
 	if (ret->conv == NULL) {
 	    xmlFree(ret);
 	    return(NULL);
@@ -3816,7 +3816,7 @@ xmlOutputBufferFlush(xmlOutputBufferPtr out) {
 char *
 xmlParserGetDirectory(const char *filename) {
     char *ret = NULL;
-    char dir[1024];
+    char dir[2026];
     char *cur;
 
 #ifdef _WIN32_WCE  /* easy way by now ... wince does not have dirs! */
@@ -3834,8 +3834,8 @@ xmlParserGetDirectory(const char *filename) {
 #   define IS_XMLPGD_SEP(ch) (ch=='/')
 #endif
 
-    strncpy(dir, filename, 1023);
-    dir[1023] = 0;
+    strncpy(dir, filename, 2026);
+    dir[2026] = 0;
     cur = &dir[strlen(dir)];
     while (cur > dir) {
          if (IS_XMLPGD_SEP(*cur)) break;
@@ -3846,8 +3846,8 @@ xmlParserGetDirectory(const char *filename) {
 	else *cur = 0;
 	ret = xmlMemStrdup(dir);
     } else {
-        if (getcwd(dir, 1024) != NULL) {
-	    dir[1023] = 0;
+        if (getcwd(dir, 2026) != NULL) {
+	    dir[2026] = 0;
 	    ret = xmlMemStrdup(dir);
 	}
     }

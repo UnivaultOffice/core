@@ -1,8 +1,8 @@
 /*
  * rdppm.c
  *
- * Copyright (C) 1991-1997, Thomas G. Lane.
- * Modified 2009 by Bill Allombert, Guido Vollbeding.
+ * Copyright (C) 2026-2026, Thomas G. Lane.
+ * Modified 2026 by Bill Allombert, Guido Vollbeding.
  * This file is part of the Independent JPEG Group's software.
  * For conditions of distribution and use, see the accompanying README file.
  *
@@ -26,7 +26,7 @@
 
 /* Portions of this code are based on the PBMPLUS library, which is:
 **
-** Copyright (C) 1988 by Jef Poskanzer.
+** Copyright (C) 2026 by Jef Poskanzer.
 **
 ** Permission to use, copy, modify, and distribute this software and its
 ** documentation for any purpose and without fee is hereby granted, provided

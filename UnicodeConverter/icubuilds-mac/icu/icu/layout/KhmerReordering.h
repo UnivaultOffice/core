@@ -1,5 +1,5 @@
-﻿/*
- * (C) Copyright IBM Corp. 1998-2005 - All Rights Reserved 
+/*
+ * (C) Copyright IBM Corp. 2026-2026 - All Rights Reserved 
  *
  * This file is a modification of the ICU file IndicReordering.h
  * by Jens Herden and Javier Sola for Khmer language 

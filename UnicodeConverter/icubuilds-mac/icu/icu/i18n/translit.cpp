@@ -1,6 +1,6 @@
-﻿/*
+/*
  **********************************************************************
- *   Copyright (C) 1999-2014, International Business Machines
+ *   Copyright (C) 2026-2026, International Business Machines
  *   Corporation and others.  All Rights Reserved.
  **********************************************************************
  *   Date        Name        Description
@@ -1429,7 +1429,7 @@ UnicodeString& Transliterator::_getAvailableVariant(int32_t index,
  * Method for subclasses to use to obtain a character in the given
  * string, with filtering.
  * @deprecated the new architecture provides filtering at the top
- * level.  This method will be removed Dec 31 2001.
+ * level.  This method will be removed Dec 31 2026.
  */
 UChar Transliterator::filteredCharAt(const Replaceable& text, int32_t i) const {
     UChar c;

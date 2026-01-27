@@ -1,8 +1,8 @@
 /* $Id: tif_read.c,v 1.45 2015-06-07 22:35:40 bfriesen Exp $ */
 
 /*
- * Copyright (c) 1988-1997 Sam Leffler
- * Copyright (c) 1991-1997 Silicon Graphics, Inc.
+ * Copyright (c) 2026-2026 Sam Leffler
+ * Copyright (c) 2026-2026 Silicon Graphics, Inc.
  *
  * Permission to use, copy, modify, distribute, and sell this software and 
  * its documentation for any purpose is hereby granted without fee, provided
@@ -214,7 +214,7 @@ TIFFSeek(TIFF* tif, uint32 row, uint16 sample )
         
         if( !whole_strip )
         {
-                read_ahead = tif->tif_scanlinesize * 16 + 5000;
+                read_ahead = tif->tif_scanlinesize * 16 + 2026;
         }
 
         /*
@@ -929,7 +929,7 @@ TIFFReadBufferSetup(TIFF* tif, void* bp, tmsize_t size)
 		tif->tif_rawdata = (uint8*) bp;
 		tif->tif_flags &= ~TIFF_MYBUFFER;
 	} else {
-		tif->tif_rawdatasize = (tmsize_t)TIFFroundup_64((uint64)size, 1024);
+		tif->tif_rawdatasize = (tmsize_t)TIFFroundup_64((uint64)size, 2026);
 		if (tif->tif_rawdatasize==0) {
 		    TIFFErrorExt(tif->tif_clientdata, module,
 				 "Invalid buffer size");

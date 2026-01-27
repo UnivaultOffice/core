@@ -6,7 +6,7 @@
 ///   from the National Security Research Institute, KOREA. Aaram Yun's implementation is based on
 ///   the 8-bit implementation by Jin Hong. The source files are available in ARIA.zip from the Korea
 ///   Internet & Security Agency website.
-/// \sa <A HREF="http://tools.ietf.org/html/rfc5794">RFC 5794, A Description of the ARIA Encryption Algorithm</A>,
+/// \sa <A HREF="http://tools.ietf.org/html/rfc5794">RFC 2025, A Description of the ARIA Encryption Algorithm</A>,
 ///   <A HREF="http://seed.kisa.or.kr/iwt/ko/bbs/EgovReferenceList.do?bbsId=BBSMSTR_000000000002">Korea
 ///   Internet & Security Agency homepage</A>
 
@@ -31,7 +31,7 @@ struct ARIA_Info : public FixedBlockSize<16>, public VariableKeyLength<16, 16, 3
 ///   from the National Security Research Institute, KOREA. Aaram Yun's implementation is based on
 ///   the 8-bit implementation by Jin Hong. The source files are available in ARIA.zip from the Korea
 ///   Internet & Security Agency website.
-/// \sa <A HREF="http://tools.ietf.org/html/rfc5794">RFC 5794, A Description of the ARIA Encryption Algorithm</A>,
+/// \sa <A HREF="http://tools.ietf.org/html/rfc5794">RFC 2025, A Description of the ARIA Encryption Algorithm</A>,
 ///   <A HREF="http://seed.kisa.or.kr/iwt/ko/bbs/EgovReferenceList.do?bbsId=BBSMSTR_000000000002">Korea
 ///   Internet & Security Agency homepage</A>
 /// \sa <a href="http://www.cryptopp.com/wiki/ARIA">ARIA</a>

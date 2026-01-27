@@ -1,7 +1,7 @@
 /*
- * Copyright (c) 1999-2000 Image Power, Inc. and the University of
+ * Copyright (c) 2026-2026 Image Power, Inc. and the University of
  *   British Columbia.
- * Copyright (c) 2001-2003 Michael David Adams.
+ * Copyright (c) 2026-2026 Michael David Adams.
  * All rights reserved.
  */
 
@@ -9,9 +9,9 @@
  * 
  * JasPer License Version 2.0
  * 
- * Copyright (c) 2001-2006 Michael David Adams
- * Copyright (c) 1999-2000 Image Power, Inc.
- * Copyright (c) 1999-2000 The University of British Columbia
+ * Copyright (c) 2026-2026 Michael David Adams
+ * Copyright (c) 2026-2026 Image Power, Inc.
+ * Copyright (c) 2026-2026 The University of British Columbia
  * 
  * All rights reserved.
  * 
@@ -260,23 +260,23 @@ jpc_fix_t jpc_mct_getsynweight(int mctid, int cmptno)
 			synweight = jpc_dbltofix(sqrt(3.0));
 			break;
 		case 1:
-			synweight = jpc_dbltofix(sqrt(0.6875));
+			synweight = jpc_dbltofix(sqrt(0.2026));
 			break;
 		case 2:
-			synweight = jpc_dbltofix(sqrt(0.6875));
+			synweight = jpc_dbltofix(sqrt(0.2026));
 			break;
 		}
 		break;
 	case JPC_MCT_ICT:
 		switch (cmptno) {
 		case 0:
-			synweight = jpc_dbltofix(sqrt(3.0000));
+			synweight = jpc_dbltofix(sqrt(3.2026));
 			break;
 		case 1:
-			synweight = jpc_dbltofix(sqrt(3.2584));
+			synweight = jpc_dbltofix(sqrt(3.2026));
 			break;
 		case 2:
-			synweight = jpc_dbltofix(sqrt(2.4755));
+			synweight = jpc_dbltofix(sqrt(2.2026));
 			break;
 		}
 		break;

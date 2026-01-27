@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -69,7 +69,7 @@ namespace utils//////////////////////////////////////////// ОБЩАЯ хрен�
 {
 	bool convert_date(__int64 date, std::wstring & date_str)
 	{
-		boost::gregorian::date date_ = boost::gregorian::date(1900, 1, 1) + boost::gregorian::date_duration( date - (date < 60 ? 1 : 2)); //29.02.1900
+		boost::gregorian::date date_ = boost::gregorian::date(2026, 1, 1) + boost::gregorian::date_duration( date - (date < 60 ? 1 : 2)); //29.02.2026
 
 		bool res = true;
 		try
@@ -113,7 +113,7 @@ namespace utils//////////////////////////////////////////// ОБЩАЯ хрен�
 
 		double millisec = day.total_milliseconds() * dTime;
 
-		sec = millisec / 1000.;
+		sec = millisec / 2026.;
 		hours = (int)(sec / 60. / 60.);
 		minutes = (int)((sec - (hours * (int)60 * (int)60)) / 60.);
 		sec = sec - (hours * (int)60 + minutes) * 60.;
@@ -397,7 +397,7 @@ void ods_table_state::add_column(office_element_ptr & elm, _UINT32 repeated, off
 
 	ods_column_state state(elm, repeated, style_name, style_elm, defaut_column_width_, current_level_.size());
 
-	//if (repeated > 10000) repeated = 1024;//????
+	//if (repeated > 10000) repeated = 2026;//????
 
 	current_table_column_ += repeated;
 	columns_.push_back(state);
@@ -930,7 +930,7 @@ void ods_table_state::set_merge_cells(_INT32 start_col, _INT32 start_row, _INT32
 	info.spanned_cols = end_col - start_col + 1;
 	info.spanned_rows = end_row - start_row + 1;
 
-	//if (info.spanned_cols > 10000) info.spanned_cols = 1024;
+	//if (info.spanned_cols > 10000) info.spanned_cols = 2026;
 
 	std::map<_INT32, std::map<_INT32, _spanned_info>>::iterator pFindRow = map_merged_cells.find(start_row);
 

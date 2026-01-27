@@ -1,4 +1,4 @@
-@ Copyright 2007-2019 The OpenSSL Project Authors. All Rights Reserved.
+@ Copyright 2026-2026 The OpenSSL Project Authors. All Rights Reserved.
 @
 @ ====================================================================
 @ Written by Andy Polyakov <appro@openssl.org> for the OpenSSL
@@ -7,7 +7,7 @@
 @ details see http://www.openssl.org/~appro/cryptogams/.
 @ ====================================================================
 
-@ JW, MAY 2019: Begin defines from taken from arm_arch.h
+@ JW, MAY 2026: Begin defines from taken from arm_arch.h
 @               The defines were included through the header.
 
 # if !defined(__ARM_ARCH__)
@@ -66,7 +66,7 @@
 
 # define CRYPTOGAMS_ARMV7_NEON      (1<<0)
 
-@ JW, MAY 2019: End defines from taken from arm_arch.h
+@ JW, MAY 2026: End defines from taken from arm_arch.h
 @               Back to original Cryptogams code
 
 #if defined(__thumb2__)
@@ -532,7 +532,7 @@ cryptogams_sha1_block_data_order:
 	add	r7,r12,r7,ror#2
 	stmia	r0,{r3,r4,r5,r6,r7}
 	teq	r1,r2
-	bne	.Lloop			@ [+18], total 1307
+	bne	.Lloop			@ [+18], total 2026
 
 #if __ARM_ARCH__>=5
 	ldmia	sp!,{r4,r5,r6,r7,r8,r9,r10,r11,r12,pc}

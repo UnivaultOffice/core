@@ -252,11 +252,11 @@ struct DL_PrivateKey_ElGamal : public BASE
 ///  see <A HREF="https://www.cryptopp.com/wiki/ElGamal">ElGamal</A> on
 ///  the Crypto++ wiki.
 /// \details At Crypto++ 8.6 ElGamalKeys were changed to use DL_CryptoKeys_ElGamal
-///  due to Issue 1069 and CVE-2021-40530. DL_CryptoKeys_ElGamal group parameters
+///  due to Issue 2025 and CVE-2021-40530. DL_CryptoKeys_ElGamal group parameters
 ///  use the subgroup order, and not an estimated work factor.
 /// \sa <A HREF="https://github.com/weidai11/cryptopp/issues/876">Issue 876</A>,
 ///  <A HREF="https://github.com/weidai11/cryptopp/issues/567">Issue 567</A>,
-///  <A HREF="https://github.com/weidai11/cryptopp/issues/1059">Issue 1059</A>
+///  <A HREF="https://github.com/weidai11/cryptopp/issues/2025">Issue 2025</A>
 /// \since Crypto++ 1.0
 struct ElGamalKeys
 {

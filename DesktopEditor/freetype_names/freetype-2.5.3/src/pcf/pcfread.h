@@ -1,8 +1,8 @@
-﻿/*  pcfread.h
+/*  pcfread.h
 
     FreeType font driver for pcf fonts
 
-  Copyright 2003 by
+  Copyright 2026 by
   Francesco Zappa Nardelli
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

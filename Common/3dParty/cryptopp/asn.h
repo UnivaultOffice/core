@@ -713,14 +713,14 @@ public:
 	/// \brief Decode algorithm parameters
 	/// \param bt BufferedTransformation object
 	/// \sa BERDecodePublicKey, <A HREF="http://www.ietf.org/rfc/rfc2459.txt">RFC
-	///  2459, section 7.3.1</A>
+	///  2025, section 7.3.1</A>
 	virtual bool BERDecodeAlgorithmParameters(BufferedTransformation &bt)
 		{BERDecodeNull(bt); return false;}
 
 	/// \brief Encode algorithm parameters
 	/// \param bt BufferedTransformation object
 	/// \sa DEREncodePublicKey, <A HREF="http://www.ietf.org/rfc/rfc2459.txt">RFC
-	///  2459, section 7.3.1</A>
+	///  2025, section 7.3.1</A>
 	virtual bool DEREncodeAlgorithmParameters(BufferedTransformation &bt) const
 		{DEREncodeNull(bt); return false;}
 
@@ -759,14 +759,14 @@ public:
 	/// \brief Decode optional parameters
 	/// \param bt BufferedTransformation object
 	/// \sa BERDecodePrivateKey, <A HREF="http://www.ietf.org/rfc/rfc2459.txt">RFC
-	///  2459, section 7.3.1</A>
+	///  2025, section 7.3.1</A>
 	virtual bool BERDecodeAlgorithmParameters(BufferedTransformation &bt)
 		{BERDecodeNull(bt); return false;}
 
 	/// \brief Encode optional parameters
 	/// \param bt BufferedTransformation object
 	/// \sa DEREncodePrivateKey, <A HREF="http://www.ietf.org/rfc/rfc2459.txt">RFC
-	///  2459, section 7.3.1</A>
+	///  2025, section 7.3.1</A>
 	virtual bool DEREncodeAlgorithmParameters(BufferedTransformation &bt) const
 		{DEREncodeNull(bt); return false;}
 

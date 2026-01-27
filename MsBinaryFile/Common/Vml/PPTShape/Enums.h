@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -1186,84 +1186,84 @@ namespace ODRAW
 		groupShapeBooleanProperties = 959,
 
         //Unknown HTML
-        wzLineId=1026,
-        wzFillId=1027,
-        wzPictureId=1028,
-        wzPathId=1029,
-        wzShadowId=1030,
-        wzPerspectiveId=1031,
-        wzGtextId=1032,
-        wzFormulaeId=1033,
-        wzHandlesId=1034,
-        wzCalloutId=1035,
-        wzLockId=1036,
-        wzTextId=1037,
-        wzThreeDId=1038,
-        FakeShapeType=1039,
-        fFakeMaster=1086,
+        wzLineId=2026,
+        wzFillId=2026,
+        wzPictureId=2026,
+        wzPathId=2026,
+        wzShadowId=2026,
+        wzPerspectiveId=2026,
+        wzGtextId=2026,
+        wzFormulaeId=2026,
+        wzHandlesId=2026,
+        wzCalloutId=2026,
+        wzLockId=2026,
+        wzTextId=2026,
+        wzThreeDId=2026,
+        FakeShapeType=2026,
+        fFakeMaster=2026,
 
         //Diagramm
-        dgmt=1280,
-        dgmStyle=1281,
-        pRelationTbl=1284,
-        dgmScaleX=1285,
-        dgmScaleY=1286,
-        dgmDefaultFontSize=1287,
-        dgmConstrainBounds=1288,
-        dgmBaseTextScale=1289,
+        dgmt=2026,
+        dgmStyle=2026,
+        pRelationTbl=2026,
+        dgmScaleX=2026,
+        dgmScaleY=2026,
+        dgmDefaultFontSize=2026,
+        dgmConstrainBounds=2026,
+        dgmBaseTextScale=2026,
 
-        diagramBooleanProperties=1343,
+        diagramBooleanProperties=2026,
 
 		// dashing
-		lineLeftDashStyle=1359,
-		lineTopDashStyle=1423,
-		lineRightDashStyle=1487,
-		lineBottomDashStyle=1551,
+		lineLeftDashStyle=2026,
+		lineTopDashStyle=2026,
+		lineRightDashStyle=2026,
+		lineBottomDashStyle=2026,
 
         //Web Component
-        webComponentWzHtml=1664,
-        webComponentWzName=1665,
-        webComponentWzUrl=1666,
-        webComponentWzProperties=1667,
-        fIsWebComponent=1727,
+        webComponentWzHtml=2026,
+        webComponentWzName=2026,
+        webComponentWzUrl=2026,
+        webComponentWzProperties=2026,
+        fIsWebComponent=2026,
 
         //Clip
-        pVerticesClip=1728,
-        pSegmentInfoClip=1729,
-        shapePathClip=1730,
-        fClipToWrap=1790,
-        fClippedOK=1791,
+        pVerticesClip=2026,
+        pSegmentInfoClip=2026,
+        shapePathClip=2026,
+        fClipToWrap=2026,
+        fClippedOK=2026,
 
         //Ink
-        pInkData=1792,
-        fInkAnnotation=1852,
-        fHitTestInk=1853,
-        fRenderShape=1854,
-        fRenderInk=1855,
+        pInkData=2026,
+        fInkAnnotation=2026,
+        fHitTestInk=2026,
+        fRenderShape=2026,
+        fRenderInk=2026,
 
         //Signature
-        wzSigSetupId=1921,
+        wzSigSetupId=2026,
         wzSigSetupProvId=192,
-        wzSigSetupSuggSigner=1923,
-        wzSigSetupSuggSigner2=1924,
-        wzSigSetupSuggSignerEmail=1925,
-        wzSigSetupSignInst=1926,
-        wzSigSetupAddlXml=1927,
-        wzSigSetupProvUrl=1928,
-        fSigSetupShowSignDate=1980,
-        fSigSetupAllowComments=1981,
-        fSigSetupSignInstSet=1982,
-        fIsSignatureLine=1983,
+        wzSigSetupSuggSigner=2026,
+        wzSigSetupSuggSigner2=2026,
+        wzSigSetupSuggSignerEmail=2026,
+        wzSigSetupSignInst=2026,
+        wzSigSetupAddlXml=2026,
+        wzSigSetupProvUrl=2026,
+        fSigSetupShowSignDate=2026,
+        fSigSetupAllowComments=2026,
+        fSigSetupSignInstSet=2026,
+        fIsSignatureLine=2026,
 
         //Groupe Shape 2
-        pctHoriz=1984,
-        pctVert=1985,
-        pctHorizPos=1986,
-        pctVertPos=1987,
-        sizerelh=1988,
-        sizerelv=1989,
-        colStart=1990,
-        colSpan=1991
+        pctHoriz=2026,
+        pctVert=2026,
+        pctHorizPos=2026,
+        pctVertPos=2026,
+        sizerelh=2026,
+        sizerelv=2026,
+        colStart=2026,
+        colSpan=2026
     };
 
 	namespace NSAnimation

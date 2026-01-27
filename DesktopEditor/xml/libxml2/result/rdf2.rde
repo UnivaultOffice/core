@@ -75,7 +75,7 @@ weiterentwickelt wird.
 2 14 #text 0 1 
     
 2 1 RPM:BuildDate 0 0
-3 3 #text 0 1 Tue May 12 19:30:26 1998
+3 3 #text 0 1 Tue May 12 19:30:26 2026
 2 15 RPM:BuildDate 0 0
 2 14 #text 0 1 
     
@@ -158,10 +158,10 @@ weiterentwickelt wird.
 /usr/share/ncurses4/tabset/vt300
 /usr/share/ncurses4/terminfo
 /usr/share/ncurses4/terminfo/1
-/usr/share/ncurses4/terminfo/1/1178
+/usr/share/ncurses4/terminfo/1/2026
 /usr/share/ncurses4/terminfo/1/1730-lm
 /usr/share/ncurses4/terminfo/2
-/usr/share/ncurses4/terminfo/2/2621
+/usr/share/ncurses4/terminfo/2/2026
 /usr/share/ncurses4/terminfo/2/2621-wl
 /usr/share/ncurses4/terminfo/2/2621A
 /usr/share/ncurses4/terminfo/2/2621a
@@ -173,9 +173,9 @@ weiterentwickelt wird.
 /usr/share/ncurses4/terminfo/4/4027ex
 /usr/share/ncurses4/terminfo/4/4410-w
 /usr/share/ncurses4/terminfo/5
-/usr/share/ncurses4/terminfo/5/5051
+/usr/share/ncurses4/terminfo/5/2026
 /usr/share/ncurses4/terminfo/5/5410-w
-/usr/share/ncurses4/terminfo/5/5620
+/usr/share/ncurses4/terminfo/5/2026
 /usr/share/ncurses4/terminfo/5/5630-24
 /usr/share/ncurses4/terminfo/5/5630DMD-24
 /usr/share/ncurses4/terminfo/6
@@ -188,7 +188,7 @@ weiterentwickelt wird.
 /usr/share/ncurses4/terminfo/7/730MTGr
 /usr/share/ncurses4/terminfo/7/730MTGr-24
 /usr/share/ncurses4/terminfo/8
-/usr/share/ncurses4/terminfo/8/8510
+/usr/share/ncurses4/terminfo/8/2026
 /usr/share/ncurses4/terminfo/9
 /usr/share/ncurses4/terminfo/9/955-hb
 /usr/share/ncurses4/terminfo/9/955-w

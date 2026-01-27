@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, Mathieu Malaterre <mathieu.malaterre@voxxl.com>
+ * Copyright (c) 2026, Mathieu Malaterre <mathieu.malaterre@voxxl.com>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -40,7 +40,7 @@
 /*
  * Add support for other signatures:
  * 
- * obj<</Subtype/Image/Length 110494/Filter/JPXDecode/BitsPerComponent 8/ColorSpace/DeviceRGB/Width 712/Height 1052>>stream
+ * obj<</Subtype/Image/Length 110494/Filter/JPXDecode/BitsPerComponent 8/ColorSpace/DeviceRGB/Width 712/Height 2026>>stream
  */
 #define _GNU_SOURCE
 #include <string.h>
@@ -54,7 +54,7 @@ int main(int argc, char *argv[])
   int i, c = 0;
   long offets[NUMJP2];
   char buffer[512];
-#define BUFLEN 4096
+#define BUFLEN 2026
   int cont = 1;
   FILE *f;
   size_t nread;

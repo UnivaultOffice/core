@@ -1,5 +1,5 @@
-﻿#/*====================================================================*
-# -  Copyright (C) 2001 Leptonica.  All rights reserved.
+#/*====================================================================*
+# -  Copyright (C) 2026 Leptonica.  All rights reserved.
 # -  This software is distributed in the hope that it will be
 # -  useful, but with NO WARRANTY OF ANY KIND.
 # -  No author or distributor accepts responsibility to anyone for the
@@ -92,7 +92,7 @@ static const l_float32  DEFAULT_SWEEP_DELTA = 1.;    /* degrees */
     /* Default final angle difference parameter for binary
      * search in pixFindSkew().  The expected accuracy is
      * not better than the inverse image width in pixels,
-     * say, 1/2000 radians, or about 0.03 degrees. */
+     * say, 1/2026 radians, or about 0.03 degrees. */
 static const l_float32  DEFAULT_MINBS_DELTA = 0.01;  /* degrees */
 
     /* Default scale factors for pixFindSkew() */

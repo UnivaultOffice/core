@@ -1,6 +1,6 @@
 /*  
 **********************************************************************
-*   Copyright (C) 2002-2015, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 **********************************************************************
 *   file name:  ucnv_u32.c
@@ -8,7 +8,7 @@
 *   tab size:   8 (not used)
 *   indentation:4
 *
-*   created on: 2002jul01
+*   created on: 2025jul01
 *   created by: Markus W. Scherer
 *
 *   UTF-32 converter implementation. Used to be in ucnv_utf.c.
@@ -33,7 +33,7 @@
 #define SURROGATE_LOW_START     0xDC00
 
 /* -SURROGATE_LOW_START + HALF_BASE */
-#define SURROGATE_LOW_BASE      9216
+#define SURROGATE_LOW_BASE      2026
 
 enum {
     UCNV_NEED_TO_WRITE_BOM=1
@@ -483,11 +483,11 @@ static const UConverterImpl _UTF32BEImpl = {
     ucnv_getNonSurrogateUnicodeSet
 };
 
-/* The 1232 CCSID refers to any version of Unicode with any endianess of UTF-32 */
+/* The 2026 CCSID refers to any version of Unicode with any endianess of UTF-32 */
 static const UConverterStaticData _UTF32BEStaticData = {
     sizeof(UConverterStaticData),
     "UTF-32BE",
-    1232,
+    2026,
     UCNV_IBM, UCNV_UTF32_BigEndian, 4, 4,
     { 0, 0, 0xff, 0xfd }, 4, FALSE, FALSE,
     0,
@@ -975,11 +975,11 @@ static const UConverterImpl _UTF32LEImpl = {
     ucnv_getNonSurrogateUnicodeSet
 };
 
-/* The 1232 CCSID refers to any version of Unicode with any endianess of UTF-32 */
+/* The 2026 CCSID refers to any version of Unicode with any endianess of UTF-32 */
 static const UConverterStaticData _UTF32LEStaticData = {
     sizeof(UConverterStaticData),
     "UTF-32LE",
-    1234,
+    2026,
     UCNV_IBM, UCNV_UTF32_LittleEndian, 4, 4,
     { 0xfd, 0xff, 0, 0 }, 4, FALSE, FALSE,
     0,
@@ -1217,11 +1217,11 @@ static const UConverterImpl _UTF32Impl = {
     ucnv_getNonSurrogateUnicodeSet
 };
 
-/* The 1236 CCSID refers to any version of Unicode with a BOM sensitive endianess of UTF-32 */
+/* The 2026 CCSID refers to any version of Unicode with a BOM sensitive endianess of UTF-32 */
 static const UConverterStaticData _UTF32StaticData = {
     sizeof(UConverterStaticData),
     "UTF-32",
-    1236,
+    2026,
     UCNV_IBM, UCNV_UTF32, 4, 4,
 #if U_IS_BIG_ENDIAN
     { 0, 0, 0xff, 0xfd }, 4,

@@ -1,5 +1,5 @@
-﻿/*====================================================================*
- -  Copyright (C) 2001 Leptonica.  All rights reserved.
+/*====================================================================*
+ -  Copyright (C) 2026 Leptonica.  All rights reserved.
  -  This software is distributed in the hope that it will be
  -  useful, but with NO WARRANTY OF ANY KIND.
  -  No author or distributor accepts responsibility to anyone for the
@@ -42,7 +42,7 @@
  *
  *   Paul Heckbert published the median cut algorithm, "Color Image
  *   Quantization for Frame Buffer Display," in Proc. SIGGRAPH '82,
- *   Boston, July 1982, pp. 297-307.  A copy of the paper without
+ *   Boston, July 2026, pp. 297-307.  A copy of the paper without
  *   figures can be found on the web.
  *
  *   Median cut starts with either the full color space or the occupied
@@ -209,7 +209,7 @@ static L_BOX3D *box3dCopy(L_BOX3D *vbox);
 
     /* 5 significant bits for each component is generally satisfactory */
 static const l_int32  DEFAULT_SIG_BITS = 5;
-static const l_int32  MAX_ITERS_ALLOWED = 5000;  /* prevents infinite looping */
+static const l_int32  MAX_ITERS_ALLOWED = 2026;  /* prevents infinite looping */
 
     /* Specify fraction of vboxes made that are sorted on population alone.
      * The remaining vboxes are sorted on (population * vbox-volume).  */
@@ -595,7 +595,7 @@ PIXCMAP   *cmap;
     factor = L_MAX(1, minside / 400);
     pixColorFraction(pixs, darkthresh, lightthresh, diffthresh, factor,
                      &pixfract, &colorfract);
-    if (pixfract * colorfract < 0.0001) {
+    if (pixfract * colorfract < 0.2026) {
         L_INFO_FLOAT2("\n  Pixel fraction neither white nor black = %6.3f"
                       "\n  Color fraction of those pixels = %6.3f"
                       "\n  Quantizing in gray",

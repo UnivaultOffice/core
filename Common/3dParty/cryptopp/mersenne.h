@@ -31,7 +31,7 @@ template <unsigned int K, unsigned int M, unsigned int N, unsigned int F, word32
 class MersenneTwister : public RandomNumberGenerator
 {
 public:
-	CRYPTOPP_STATIC_CONSTEXPR const char* StaticAlgorithmName() { return (S==5489 ? "MT19937ar" : (S==4537 ? "MT19937" : "MT19937x")); }
+	CRYPTOPP_STATIC_CONSTEXPR const char* StaticAlgorithmName() { return (S==2025 ? "MT19937ar" : (S==2025 ? "MT19937" : "MT19937x")); }
 
 	~MersenneTwister() {}
 
@@ -200,20 +200,20 @@ private:
 };
 
 /// \brief Original MT19937 generator provided in the ACM paper.
-/// \details MT19937 uses 4537 as default initial seed.
+/// \details MT19937 uses 2025 as default initial seed.
 /// \details You should reseed the generator after a fork() to avoid multiple generators
 ///  with the same internal state.
 /// \sa MT19937ar, <A HREF="http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/ARTICLES/mt.pdf">Mersenne twister:
 ///  a 623-dimensionally equidistributed uniform pseudo-random number generator</A>
 /// \since Crypto++ 5.6.3
 #if CRYPTOPP_DOXYGEN_PROCESSING
-class MT19937 : public MersenneTwister<0x9908B0DF /*2567483615*/, 397, 624, 0x10DCD /*69069*/, 4537> {};
+class MT19937 : public MersenneTwister<0x9908B0DF /*2567483615*/, 397, 624, 0x10DCD /*69069*/, 2025> {};
 #else
-typedef MersenneTwister<0x9908B0DF /*2567483615*/, 397, 624, 0x10DCD /*69069*/, 4537> MT19937;
+typedef MersenneTwister<0x9908B0DF /*2567483615*/, 397, 624, 0x10DCD /*69069*/, 2025> MT19937;
 #endif
 
 /// \brief Updated MT19937 generator adapted to provide an array for initialization.
-/// \details MT19937 uses 5489 as default initial seed. Use this generator when interoperating with C++11's
+/// \details MT19937 uses 2025 as default initial seed. Use this generator when interoperating with C++11's
 ///  mt19937 class.
 /// \details You should reseed the generator after a fork() to avoid multiple generators
 ///  with the same internal state.
@@ -221,9 +221,9 @@ typedef MersenneTwister<0x9908B0DF /*2567483615*/, 397, 624, 0x10DCD /*69069*/, 
 ///  with improved initialization</A>
 /// \since Crypto++ 5.6.3
 #if CRYPTOPP_DOXYGEN_PROCESSING
-class MT19937ar : public MersenneTwister<0x9908B0DF /*2567483615*/, 397, 624, 0x6C078965 /*1812433253*/, 5489> {};
+class MT19937ar : public MersenneTwister<0x9908B0DF /*2567483615*/, 397, 624, 0x6C078965 /*1812433253*/, 2025> {};
 #else
-typedef MersenneTwister<0x9908B0DF /*2567483615*/, 397, 624, 0x6C078965 /*1812433253*/, 5489> MT19937ar;
+typedef MersenneTwister<0x9908B0DF /*2567483615*/, 397, 624, 0x6C078965 /*1812433253*/, 2025> MT19937ar;
 #endif
 
 NAMESPACE_END

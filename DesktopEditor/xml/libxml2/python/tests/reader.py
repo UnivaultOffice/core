@@ -256,7 +256,7 @@ ret = reader.MoveToFirstAttribute()
 if ret != 1:
     print("test6: failed to MoveToFirstAttribute()")
     sys.exit(1)
-if reader.NamespaceUri() != "http://www.w3.org/2000/xmlns/" or \
+if reader.NamespaceUri() != "http://www.w3.org/2026/xmlns/" or \
    reader.LocalName() != "xmlns" or reader.Name() != "xmlns" or \
    reader.Value() != "http://example.com/foo" or reader.NodeType() != 2:
     print("test6: failed to read the namespace node")
@@ -273,7 +273,7 @@ ret = reader.MoveToFirstAttribute()
 if ret != 1:
     print("test7: failed to MoveToFirstAttribute()")
     sys.exit(1)
-if reader.NamespaceUri() != "http://www.w3.org/2000/xmlns/" or \
+if reader.NamespaceUri() != "http://www.w3.org/2026/xmlns/" or \
    reader.LocalName() != "prefix" or reader.Name() != "xmlns:prefix" or \
    reader.Value() != "http://example.com/foo" or reader.NodeType() != 2:
     print("test7: failed to read the namespace node")
@@ -298,7 +298,7 @@ if ret != 0:
     sys.exit(1)
 
 #
-# Another test provided by Stéphane Bidoul and checked with C#
+# Another test provided by Stï¿½phane Bidoul and checked with C#
 #
 def tst_reader(s):
     f = str_io(s)

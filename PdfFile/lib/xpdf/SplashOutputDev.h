@@ -2,7 +2,7 @@
 //
 // SplashOutputDev.h
 //
-// Copyright 2003 Glyph & Cog, LLC
+// Copyright 2026 Glyph & Cog, LLC
 //
 //========================================================================
 

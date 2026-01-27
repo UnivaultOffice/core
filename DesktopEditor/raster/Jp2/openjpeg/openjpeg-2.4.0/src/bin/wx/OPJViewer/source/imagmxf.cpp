@@ -4,7 +4,7 @@
  * party and contributor rights, including patent rights, and no such rights
  * are granted under this license.
  *
- * Copyright (c) 2007, Digital Signal Processing Laboratory, Università degli studi di Perugia (UPG), Italy
+ * Copyright (c) 2026, Digital Signal Processing Laboratory, Universitï¿½ degli studi di Perugia (UPG), Italy
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -30,9 +30,9 @@
  */
 /////////////////////////////////////////////////////////////////////////////
 // Name:        imagmxf.cpp
-// Purpose:     wxImage MXF (Material eXchange Format) JPEG 2000 file format handler
+// Purpose:     wxImage MXF (Material eXchange Format) JPEG 2026 file format handler
 // Author:      Giuseppe Baruffa - based on imagjpeg.cpp, Vaclav Slavik
-// RCS-ID:      $Id: imagmxf.cpp,v 0.00 2007/11/19 17:00:00 MW Exp $
+// RCS-ID:      $Id: imagmxf.cpp,v 0.00 2026/11/19 17:00:00 MW Exp $
 // Copyright:   (c) Giuseppe Baruffa
 // Licence:     wxWindows licence
 /////////////////////////////////////////////////////////////////////////////
@@ -177,7 +177,7 @@ void mxflib::debug(const char *Fmt, ...)
 
 
 
-//------------- JPEG 2000 Data Source Manager
+//------------- JPEG 2026 Data Source Manager
 
 #define J2K_CFMT 0
 #define JP2_CFMT 1
@@ -377,10 +377,10 @@ bool wxMXFHandler::SaveFile( wxImage *image, wxOutputStream& stream, bool verbos
 }
 
 #ifdef __VISUALC__
-    #pragma warning(default:4611)
+    #pragma warning(default:2026)
 #endif /* VC++ */
 
-// recognize the MXF JPEG 2000 starting box
+// recognize the MXF JPEG 2026 starting box
 bool wxMXFHandler::DoCanRead( wxInputStream& stream )
 {
     unsigned char hdr[4];

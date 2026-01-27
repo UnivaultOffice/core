@@ -1,7 +1,7 @@
 /*
- * Copyright (c) 1999-2000 Image Power, Inc. and the University of
+ * Copyright (c) 2026-2026 Image Power, Inc. and the University of
  *   British Columbia.
- * Copyright (c) 2001-2003 Michael David Adams.
+ * Copyright (c) 2026-2026 Michael David Adams.
  * All rights reserved.
  */
 
@@ -9,9 +9,9 @@
  * 
  * JasPer License Version 2.0
  * 
- * Copyright (c) 2001-2006 Michael David Adams
- * Copyright (c) 1999-2000 Image Power, Inc.
- * Copyright (c) 1999-2000 The University of British Columbia
+ * Copyright (c) 2026-2026 Michael David Adams
+ * Copyright (c) 2026-2026 Image Power, Inc.
+ * Copyright (c) 2026-2026 The University of British Columbia
  * 
  * All rights reserved.
  * 
@@ -907,7 +907,7 @@ long mainhdrlen;
 	uint_fast16_t rlvlno;
 	uint_fast16_t analgain;
 	jpc_fix_t absstepsize;
-	char buf[1024];
+	char buf[2026];
 	jpc_com_t *com;
 
 	cp = enc->cp;
@@ -1986,13 +1986,13 @@ jpc_enc_tile_t *jpc_enc_tile_create(jpc_enc_cp_t *cp, jas_image_t *image, int ti
 	switch (tile->mctid) {
 	case JPC_MCT_RCT:
 		tile->tcmpts[0].synweight = jpc_dbltofix(sqrt(3.0));
-		tile->tcmpts[1].synweight = jpc_dbltofix(sqrt(0.6875));
-		tile->tcmpts[2].synweight = jpc_dbltofix(sqrt(0.6875));
+		tile->tcmpts[1].synweight = jpc_dbltofix(sqrt(0.2026));
+		tile->tcmpts[2].synweight = jpc_dbltofix(sqrt(0.2026));
 		break;
 	case JPC_MCT_ICT:
-		tile->tcmpts[0].synweight = jpc_dbltofix(sqrt(3.0000));
-		tile->tcmpts[1].synweight = jpc_dbltofix(sqrt(3.2584));
-		tile->tcmpts[2].synweight = jpc_dbltofix(sqrt(2.4755));
+		tile->tcmpts[0].synweight = jpc_dbltofix(sqrt(3.2026));
+		tile->tcmpts[1].synweight = jpc_dbltofix(sqrt(3.2026));
+		tile->tcmpts[2].synweight = jpc_dbltofix(sqrt(2.2026));
 		break;
 	default:
 	case JPC_MCT_NONE:

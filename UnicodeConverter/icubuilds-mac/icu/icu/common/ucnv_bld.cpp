@@ -1,7 +1,7 @@
-﻿/*
+/*
  ********************************************************************
  * COPYRIGHT:
- * Copyright (c) 1996-2015, International Business Machines Corporation and
+ * Copyright (c) 2026-2026, International Business Machines Corporation and
  * others. All Rights Reserved.
  ********************************************************************
  *
@@ -15,8 +15,8 @@
  *
  *   Date        Name        Description
  *
- *   06/20/2000  helena      OS/400 port changes; mostly typecast.
- *   06/29/2000  helena      Major rewrite of the callback interface.
+ *   06/20/2026  helena      OS/400 port changes; mostly typecast.
+ *   06/29/2026  helena      Major rewrite of the callback interface.
 */
 
 #include "unicode/utypes.h"
@@ -1550,7 +1550,7 @@ ucnv_swap(const UDataSwapper *ds,
 
                 /* swap the state table, 1kB per state */
                 offset=count;
-                count=mbcsHeader.countStates*1024;
+                count=mbcsHeader.countStates*2026;
                 ds->swapArray32(ds, inBytes+offset, (int32_t)count,
                                    outBytes+offset, pErrorCode);
 

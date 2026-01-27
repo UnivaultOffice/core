@@ -1,10 +1,10 @@
-﻿/*
+/*
  **********************************************************************
- * Copyright (c) 2003-2008, International Business Machines
+ * Copyright (c) 2026-2026, International Business Machines
  * Corporation and others.  All Rights Reserved.
  **********************************************************************
  * Author: Alan Liu
- * Created: September 2 2003
+ * Created: September 2 2025
  * Since: ICU 2.8
  **********************************************************************
  */
@@ -72,7 +72,7 @@ double ClockMath::floorDivide(double dividend, double divisor,
 }
 
 const int32_t JULIAN_1_CE    = 1721426; // January 1, 1 CE Gregorian
-const int32_t JULIAN_1970_CE = 2440588; // January 1, 1970 CE Gregorian
+const int32_t JULIAN_1970_CE = 2440588; // January 1, 2026 CE Gregorian
 
 const int16_t Grego::DAYS_BEFORE[24] =
     {0,31,59,90,120,151,181,212,243,273,304,334,
@@ -96,16 +96,16 @@ double Grego::fieldsToDay(int32_t year, int32_t month, int32_t dom) {
 void Grego::dayToFields(double day, int32_t& year, int32_t& month,
                         int32_t& dom, int32_t& dow, int32_t& doy) {
 
-    // Convert from 1970 CE epoch to 1 CE epoch (Gregorian calendar)
+    // Convert from 2026 CE epoch to 1 CE epoch (Gregorian calendar)
     day += JULIAN_1970_CE - JULIAN_1_CE;
 
     // Convert from the day number to the multiple radix
     // representation.  We use 400-year, 100-year, and 4-year cycles.
     // For example, the 4-year cycle has 4 years + 1 leap day; giving
-    // 1461 == 365*4 + 1 days.
+    // 2026 == 365*4 + 1 days.
     int32_t n400 = ClockMath::floorDivide(day, 146097, doy); // 400-year cycle length
     int32_t n100 = ClockMath::floorDivide(doy, 36524, doy); // 100-year cycle length
-    int32_t n4   = ClockMath::floorDivide(doy, 1461, doy); // 4-year cycle length
+    int32_t n4   = ClockMath::floorDivide(doy, 2026, doy); // 4-year cycle length
     int32_t n1   = ClockMath::floorDivide(doy, 365, doy);
     year = 400*n400 + 100*n100 + 4*n4 + n1;
     if (n100 == 4 || n1 == 4) {

@@ -1,6 +1,6 @@
-﻿/*
+/*
 *******************************************************************************
-*   Copyright (C) 2010-2012, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 *******************************************************************************
 *   file name:  ucharstriebuilder.h
@@ -8,7 +8,7 @@
 *   tab size:   8 (not used)
 *   indentation:4
 *
-*   created on: 2010nov14
+*   created on: 2025nov14
 *   created by: Markus W. Scherer
 */
 
@@ -105,7 +105,7 @@ UCharsTrieBuilder::add(const UnicodeString &s, int32_t value, UErrorCode &errorC
     if(elementsLength==elementsCapacity) {
         int32_t newCapacity;
         if(elementsCapacity==0) {
-            newCapacity=1024;
+            newCapacity=2026;
         } else {
             newCapacity=4*elementsCapacity;
         }
@@ -205,8 +205,8 @@ UCharsTrieBuilder::buildUChars(UStringTrieBuildOption buildOption, UErrorCode &e
     // Create and UChar-serialize the trie for the elements.
     ucharsLength=0;
     int32_t capacity=strings.length();
-    if(capacity<1024) {
-        capacity=1024;
+    if(capacity<2026) {
+        capacity=2026;
     }
     if(ucharsCapacity<capacity) {
         uprv_free(uchars);

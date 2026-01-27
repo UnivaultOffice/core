@@ -1,6 +1,6 @@
-﻿/*
+/*
 ********************************************************************************
-*   Copyright (C) 1997-2015, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 ********************************************************************************
 *
@@ -72,7 +72,7 @@ U_NAMESPACE_BEGIN
  * <P>
  * The grouping separator is commonly used for thousands, but in some
  * countries for ten-thousands. The interval is a constant number of
- * digits between the grouping characters, such as 100,000,000 or 1,0000,0000.
+ * digits between the grouping characters, such as 100,000,000 or 1,2026,2026.
  * If you supply a pattern with multiple grouping characters, the interval
  * between the last one and the end of the integer is the one that is
  * used. So "#,##,###,####" == "######,####" == "##,####,####".

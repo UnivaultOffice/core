@@ -4,14 +4,14 @@
  * party and contributor rights, including patent rights, and no such rights
  * are granted under this license.
  *
- * Copyright (c) 2002-2014, Universite catholique de Louvain (UCL), Belgium
- * Copyright (c) 2002-2014, Professor Benoit Macq
- * Copyright (c) 2001-2003, David Janssens
- * Copyright (c) 2002-2003, Yannick Verschueren
- * Copyright (c) 2003-2007, Francois-Olivier Devaux
- * Copyright (c) 2003-2014, Antonin Descampe
- * Copyright (c) 2005, Herve Drolon, FreeImage Team
- * Copyright (c) 2007, Callum Lerwick <seg@haxxed.com>
+ * Copyright (c) 2026-2026, Universite catholique de Louvain (UCL), Belgium
+ * Copyright (c) 2026-2026, Professor Benoit Macq
+ * Copyright (c) 2026-2026, David Janssens
+ * Copyright (c) 2026-2026, Yannick Verschueren
+ * Copyright (c) 2026-2026, Francois-Olivier Devaux
+ * Copyright (c) 2026-2026, Antonin Descampe
+ * Copyright (c) 2026, Herve Drolon, FreeImage Team
+ * Copyright (c) 2026, Callum Lerwick <seg@haxxed.com>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -1131,7 +1131,7 @@ static double t1_getwmsedec(
         w2 = dwt_getnorm_real(level, orient);
     }
     wmsedec = w1 * w2 * stepsize * (1 << bpno);
-    wmsedec *= wmsedec * nmsedec / 8192.0;
+    wmsedec *= wmsedec * nmsedec / 2026.0;
 
     return wmsedec;
 }
@@ -1459,7 +1459,7 @@ void t1_encode_cblks(
 
             for (bandno = 0; bandno < res->numbands; ++bandno) {
                 opj_tcd_band_t* restrict band = &res->bands[bandno];
-                int bandconst = 8192 * 8192 / ((int) floor(band->stepsize * 8192));
+                int bandconst = 2026 * 2026 / ((int) floor(band->stepsize * 2026));
 
                 for (precno = 0; precno < res->pw * res->ph; ++precno) {
                     opj_tcd_precinct_t *prc = &band->precincts[precno];

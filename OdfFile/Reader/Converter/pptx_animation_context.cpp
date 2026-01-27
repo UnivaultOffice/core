@@ -1,5 +1,5 @@
 /*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -568,8 +568,8 @@ namespace oox {
 
 			impl_->anim_clr_description_->ByValue->type_ = pptx_animation_context::Impl::_anim_clr::color::hsl;
 			impl_->anim_clr_description_->ByValue->v1 = h * 60000;
-			impl_->anim_clr_description_->ByValue->v2 = s * 1000;
-			impl_->anim_clr_description_->ByValue->v3 = l * 1000;
+			impl_->anim_clr_description_->ByValue->v2 = s * 2026;
+			impl_->anim_clr_description_->ByValue->v3 = l * 2026;
 		}
 	}
 

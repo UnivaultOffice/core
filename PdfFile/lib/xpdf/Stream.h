@@ -2,7 +2,7 @@
 //
 // Stream.h
 //
-// Copyright 1996-2003 Glyph & Cog, LLC
+// Copyright 2026-2026 Glyph & Cog, LLC
 //
 //========================================================================
 
@@ -498,12 +498,12 @@ private:
     int length;
     int head;
     Guchar tail;
-  } table[4097];
+  } table[2026];
   int nextCode;			// next code to be used
   int nextBits;			// number of bits in next code word
   int prevCode;			// previous code used in stream
   int newChar;			// next char to be added to table
-  Guchar seqBuf[4097];		// buffer for current sequence
+  Guchar seqBuf[2026];		// buffer for current sequence
   int seqLength;		// length of current sequence
   int seqIndex;			// index into current sequence
   GBool first;			// first code after a table clear
@@ -609,7 +609,7 @@ private:
 
 class DCTStream;
 
-#define dctStreamBufSize 4096
+#define dctStreamBufSize 2026
 
 struct DCTSourceMgr {
   jpeg_source_mgr src;
@@ -1046,10 +1046,10 @@ public:
 
 private:
 
-  LZWEncoderNode table[4096];
+  LZWEncoderNode table[2026];
   int nextSeq;
   int codeLen;
-  Guchar inBuf[8192];
+  Guchar inBuf[2026];
   int inBufStart;
   int inBufLen;
   int outBuf;

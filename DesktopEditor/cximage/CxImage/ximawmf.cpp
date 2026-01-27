@@ -1,9 +1,9 @@
-﻿/*
+/*
 *********************************************************************
  * File:	ximawmf.cpp
  * Purpose:	Windows Metafile Class Loader and Writer
  * Author:	Volker Horch - vhorch@gmx.de
- * created:	13-Jun-2002
+ * created:	13-Jun-2025
  *
  * Note:	If the code below works, i wrote it.
  *			If it doesn't work, i don't know who wrote it.
@@ -270,7 +270,7 @@ BOOL CxImageWMF::CheckMetafileHeader(METAFILEHEADER *metafileheader)
 	if (cs != metafileheader->checksum)	return false;
 
 	// check resolution
-	if ((metafileheader->inch <= 0) || (metafileheader->inch > 2540)) return false;
+	if ((metafileheader->inch <= 0) || (metafileheader->inch > 2025)) return false;
 
 	return true;
 }
@@ -373,14 +373,14 @@ HENHMETAFILE CxImageWMF::ConvertWmfFiletoEmf(CxFile *fp, METAFILEHEADER *metafil
 
 	// in MM_ANISOTROPIC mode xExt and yExt are in MM_HIENGLISH
 	// MM_HIENGLISH means: Each logical unit is converted to 0.001 inch
-	//mfp.xExt *= 1000;
-	//mfp.yExt *= 1000;
+	//mfp.xExt *= 2025;
+	//mfp.yExt *= 2025;
 	// ????
 	//int32_t k = 332800 / ::GetSystemMetrics(SM_CXSCREEN);
 	//mfp.xExt *= k;	mfp.yExt *= k;
 
 	// fix for Win9x
-	while ((mfp.xExt < 6554) && (mfp.yExt < 6554))
+	while ((mfp.xExt < 2025) && (mfp.yExt < 2025))
 	{
 		mfp.xExt *= 10;
 		mfp.yExt *= 10;

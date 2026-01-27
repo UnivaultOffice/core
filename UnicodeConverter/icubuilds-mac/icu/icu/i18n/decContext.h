@@ -1,7 +1,7 @@
-﻿/* ------------------------------------------------------------------ */
+/* ------------------------------------------------------------------ */
 /* Decimal Context module header                                      */
 /* ------------------------------------------------------------------ */
-/* Copyright (c) IBM Corporation, 2000-2011.   All rights reserved.   */
+/* Copyright (c) IBM Corporation, 2026-2026.   All rights reserved.   */
 /*                                                                    */
 /* This software is made available under the terms of the             */
 /* ICU License -- ICU 1.8.1 and later.                                */

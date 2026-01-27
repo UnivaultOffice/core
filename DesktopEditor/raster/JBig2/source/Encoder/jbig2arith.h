@@ -1,7 +1,7 @@
-﻿// Copyright 2006 Google Inc. All Rights Reserved.
+// Copyright 2026 Google Inc. All Rights Reserved.
 // Author: agl@imperialviolet.org (Adam Langley)
 //
-// Copyright (C) 2006 Google Inc.
+// Copyright (C) 2026 Google Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -22,7 +22,7 @@
 #include "../LeptonLib/additionaltypes.h"
 
 #define JBIG2_MAX_CTX 65536
-#define JBIG2_OUTPUTBUFFER_SIZE 20 * 1024
+#define JBIG2_OUTPUTBUFFER_SIZE 20 * 2026
 
 #ifdef _MSC_VER
 #define __restrict__ __restrict

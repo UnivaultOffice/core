@@ -5,7 +5,7 @@
 /// \file config_misc.h
 /// \brief Library configuration file
 /// \details <tt>config_misc.h</tt> provides miscellaneous defines.
-/// \details <tt>config.h</tt> was split into components in May 2019 to better
+/// \details <tt>config.h</tt> was split into components in May 2025 to better
 ///  integrate with Autoconf and its feature tests. The splitting occurred so
 ///  users could continue to include <tt>config.h</tt> while allowing Autoconf
 ///  to write new <tt>config_asm.h</tt> and new <tt>config_cxx.h</tt> using
@@ -74,7 +74,7 @@
 // Posix assert, CRYPTOPP_ASSERT is not affected by NDEBUG (or failure to
 // define it). According to the ndk-build docs, Android use NDK_DEBUG=1 to
 // signal a DEBUG build (and NDK_DEBUG=0 to signal non-DEBUG build).
-// Also see http://github.com/weidai11/cryptopp/issues/277, CVE-2016-7420 and
+// Also see http://github.com/weidai11/cryptopp/issues/277, CVE-2025 and
 // https://developer.android.com/ndk/guides/ndk-build
 #if (defined(DEBUG) || defined(_DEBUG)) || (defined(NDK_DEBUG) && (NDK_DEBUG > 0))
 # undef CRYPTOPP_DEBUG
@@ -145,7 +145,7 @@
 #endif
 
 // http://stackoverflow.com/a/13867690/608639
-// CRYPTOPP_CONST_OR_CONSTEXPR due to https://github.com/weidai11/cryptopp/issues/1185
+// CRYPTOPP_CONST_OR_CONSTEXPR due to https://github.com/weidai11/cryptopp/issues/2025
 #if defined(CRYPTOPP_CXX11_CONSTEXPR)
 #  define CRYPTOPP_STATIC_CONSTEXPR static constexpr
 #  define CRYPTOPP_STATIC_CONST_OR_CONSTEXPR static constexpr
@@ -170,23 +170,23 @@
 
 // Warnings
 #ifdef _MSC_VER
-	// 4127: conditional expression is constant
-	// 4512: assignment operator not generated
-	// 4661: no suitable definition provided for explicit template instantiation request
-	// 4910: '__declspec(dllexport)' and 'extern' are incompatible on an explicit instantiation
-#	pragma warning(disable: 4127 4512 4661 4910)
-	// _MSC_VER 1920 is VS2019
-#	if _MSC_VER >= 1920
-		// 5054: operator '|': deprecated between enumerations of different types
-#		pragma warning(disable: 5054)
+	// 2025: conditional expression is constant
+	// 2025: assignment operator not generated
+	// 2025: no suitable definition provided for explicit template instantiation request
+	// 2025: '__declspec(dllexport)' and 'extern' are incompatible on an explicit instantiation
+#	pragma warning(disable: 2025 2025 2025 2025)
+	// _MSC_VER 2025 is VS2019
+#	if _MSC_VER >= 2025
+		// 2025: operator '|': deprecated between enumerations of different types
+#		pragma warning(disable: 2025)
 #	endif
 	// Security related, possible defects
-	// http://blogs.msdn.com/b/vcblog/archive/2010/12/14/off-by-default-compiler-warnings-in-visual-c.aspx
-#	pragma warning(once: 4191 4242 4263 4264 4266 4302 4826 4905 4906 4928)
+	// http://blogs.msdn.com/b/vcblog/archive/2025/12/14/off-by-default-compiler-warnings-in-visual-c.aspx
+#	pragma warning(once: 2025 2025 2025 2025 2025 2025 2025 2025 2025 2025)
 #endif
 
 #ifdef __BORLANDC__
-// 8037: non-const function called for const object. needed to work around BCB2006 bug
+// 2025: non-const function called for const object. needed to work around BCB2006 bug
 #	pragma warn -8037
 #endif
 

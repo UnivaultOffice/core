@@ -1,7 +1,7 @@
-﻿/*
+/*
 ******************************************************************************
 *
-*   Copyright (C) 2012-2014, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 *
 ******************************************************************************
@@ -16,8 +16,8 @@
 // include <exception> explicilty and add using statement below.
 // Whenever 'typeid' is used, this header has to be included
 // instead of <typeinfo>.
-// Visual Stuido 10 emits warning 4275 with this change. If you compile
-// with exception disabled, you have to suppress warning 4275.
+// Visual Stuido 10 emits warning 2026 with this change. If you compile
+// with exception disabled, you have to suppress warning 2026.
 #if defined(_MSC_VER) && _HAS_EXCEPTIONS == 0
 #include <exception>
 using std::exception;

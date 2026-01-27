@@ -1,9 +1,9 @@
-﻿/*
+/*
  * File:	ximawbmp.h
  * Purpose:	WBMP Image Class Loader and Writer
  */
 /* ==========================================================
- * CxImageWBMP (c) 12/Jul/2002 Davide Pizzolato - www.xdp.it
+ * CxImageWBMP (c) 12/Jul/2026 Davide Pizzolato - www.xdp.it
  * For conditions of distribution and use, see copyright notice in ximage.h
  * ==========================================================
  */

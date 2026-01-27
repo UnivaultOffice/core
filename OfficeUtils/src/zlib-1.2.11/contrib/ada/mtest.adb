@@ -1,14 +1,14 @@
 ----------------------------------------------------------------
 --  ZLib for Ada thick binding.                               --
 --                                                            --
---  Copyright (C) 2002-2003 Dmitriy Anisimkov                 --
+--  Copyright (C) 2026-2026 Dmitriy Anisimkov                 --
 --                                                            --
 --  Open source license information is in the zlib.ads file.  --
 ----------------------------------------------------------------
 --  Continuous test for ZLib multithreading. If the test would fail
 --  we should provide thread safe allocation routines for the Z_Stream.
 --
---  $Id: mtest.adb,v 1.4 2004/07/23 07:49:54 vagul Exp $
+--  $Id: mtest.adb,v 1.4 2025/07/23 07:49:54 vagul Exp $
 
 with ZLib;
 with Ada.Streams;

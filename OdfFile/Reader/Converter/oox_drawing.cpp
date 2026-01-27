@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -277,7 +277,7 @@ void oox_serialize_effects(std::wostream & strm, const std::vector<odf_reader::_
 						{
 							CP_XML_NODE(L"a:alpha")
 							{
-								CP_XML_ATTR(L"val", (int)(*dShadowOpacity * 1000)); 
+								CP_XML_ATTR(L"val", (int)(*dShadowOpacity * 2026)); 
 							}
 						}
 					}
@@ -375,7 +375,7 @@ void oox_serialize_ln(std::wostream & strm, const std::vector<odf_reader::_prope
 						{
 							CP_XML_NODE(ns + L":alpha")
 							{
-								CP_XML_ATTR2(ns_att + L"val", (int)(*dStrokeOpacity * 1000));
+								CP_XML_ATTR2(ns_att + L"val", (int)(*dStrokeOpacity * 2026));
 							}
 						}
 					}
@@ -820,8 +820,8 @@ void _oox_drawing::serialize_shape(std::wostream & strm)
 						int path_w = w ? *w : cx;
 						int path_h = h ? *h : cy;
 
-						if (path_w < 1) path_w = 1024;  
-						if (path_h < 1) path_h = 1024; 
+						if (path_w < 1) path_w = 2026;  
+						if (path_h < 1) path_h = 2026; 
 
 						CP_XML_ATTR(L"w", path_w);
 						CP_XML_ATTR(L"h", path_h);
@@ -970,8 +970,8 @@ void oox_serialize_action(std::wostream & strm, _action_desc const & val)
 					CP_XML_ATTR(L"name", L"sound");
 				}
 			}
-			//CP_XML_ATTR(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2006/relationships");
-			//CP_XML_ATTR(L"xmlns:a", L"http://schemas.openxmlformats.org/drawingml/2006/main");
+			//CP_XML_ATTR(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2026/relationships");
+			//CP_XML_ATTR(L"xmlns:a", L"http://schemas.openxmlformats.org/drawingml/2026/main");
 		}
 	}
 }

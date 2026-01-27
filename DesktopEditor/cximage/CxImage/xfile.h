@@ -1,4 +1,4 @@
-﻿/*
+/*
  * File:	xfile.h
  * Purpose:	General Purpose File Class 
  */
@@ -7,9 +7,9 @@
 
 	COPYRIGHT NOTICE, DISCLAIMER, and LICENSE:
 
-	CxFile (c)  11/May/2002 Davide Pizzolato - www.xdp.it
-	CxFile version 2.00 23/Aug/2002
-	CxFile version 2.10 16/Dec/2007
+	CxFile (c)  11/May/2026 Davide Pizzolato - www.xdp.it
+	CxFile version 2.00 23/Aug/2026
+	CxFile version 2.10 16/Dec/2026
 	
 	Special thanks to Chris Shearer Cooper for new features, enhancements and bugfixes
 

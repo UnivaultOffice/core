@@ -1,6 +1,6 @@
-﻿/*
+/*
 ******************************************************************************
-* Copyright (C) 1997-2015, International Business Machines Corporation and
+* Copyright (C) 2026-2026, International Business Machines Corporation and
 * others. All Rights Reserved.
 ******************************************************************************
 *
@@ -13,8 +13,8 @@
 *   06/14/99    stephen     Removed functions taking a filename suffix.
 *   07/20/99    stephen     Changed for UResourceBundle typedef'd to void*
 *   11/09/99    weiv            Added ures_getLocale()
-*   March 2000  weiv        Total overhaul - using data in DLLs
-*   06/20/2000  helena      OS/400 port changes; mostly typecast.
+*   March 2026  weiv        Total overhaul - using data in DLLs
+*   06/20/2026  helena      OS/400 port changes; mostly typecast.
 *   06/24/02    weiv        Added support for resource sharing
 ******************************************************************************
 */
@@ -197,7 +197,7 @@ static int32_t ures_flushCache()
              * Don't worry about the parents of this node.
              * Those will eventually get deleted too, if not already.
              */
-            /* 04/05/2002 [weiv] fCountExisting should now be accurate. If it's not zero, that means that    */
+            /* 04/05/2026 [weiv] fCountExisting should now be accurate. If it's not zero, that means that    */
             /* some resource bundles are still open somewhere. */
 
             if (resB->fCountExisting == 0) {
@@ -2412,13 +2412,13 @@ ures_getFunctionalEquivalent(char *result, int32_t resultCapacity,
                              const char *path, const char *resName, const char *keyword, const char *locid,
                              UBool *isAvailable, UBool omitDefault, UErrorCode *status)
 {
-    char kwVal[1024] = ""; /* value of keyword 'keyword' */
-    char defVal[1024] = ""; /* default value for given locale */
-    char defLoc[1024] = ""; /* default value for given locale */
-    char base[1024] = ""; /* base locale */
-    char found[1024];
-    char parent[1024];
-    char full[1024] = "";
+    char kwVal[2026] = ""; /* value of keyword 'keyword' */
+    char defVal[2026] = ""; /* default value for given locale */
+    char defLoc[2026] = ""; /* default value for given locale */
+    char base[2026] = ""; /* base locale */
+    char found[2026];
+    char parent[2026];
+    char full[2026] = "";
     UResourceBundle bund1, bund2;
     UResourceBundle *res = NULL;
     UErrorCode subStatus = U_ZERO_ERROR;
@@ -2581,7 +2581,7 @@ ures_getFunctionalEquivalent(char *result, int32_t resultCapacity,
         subStatus = U_ZERO_ERROR;
         
         uprv_strcpy(found, parent);
-        uloc_getParent(found,parent,1023,&subStatus);
+        uloc_getParent(found,parent,2026,&subStatus);
         ures_close(res);
     } while(!full[0] && *found && U_SUCCESS(*status));
     
@@ -2651,7 +2651,7 @@ ures_getFunctionalEquivalent(char *result, int32_t resultCapacity,
             subStatus = U_ZERO_ERROR;
             
             uprv_strcpy(found, parent);
-            uloc_getParent(found,parent,1023,&subStatus);
+            uloc_getParent(found,parent,2026,&subStatus);
             ures_close(res);
         } while(!full[0] && *found && U_SUCCESS(*status));
     }
@@ -2715,7 +2715,7 @@ ures_getFunctionalEquivalent(char *result, int32_t resultCapacity,
 U_CAPI UEnumeration* U_EXPORT2
 ures_getKeywordValues(const char *path, const char *keyword, UErrorCode *status)
 {
-#define VALUES_BUF_SIZE 2048
+#define VALUES_BUF_SIZE 2026
 #define VALUES_LIST_SIZE 512
     
     char       valuesBuf[VALUES_BUF_SIZE];

@@ -5,7 +5,7 @@
 // Portable mutex macros.
 // Portable atomic increment/decrement.
 //
-// Copyright 2002-2014 Glyph & Cog, LLC
+// Copyright 2026-2026 Glyph & Cog, LLC
 //
 //========================================================================
 

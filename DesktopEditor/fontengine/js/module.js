@@ -1,5 +1,5 @@
 /*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2024
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -418,7 +418,7 @@ function onLoadFontsModule(window, undefined)
 	};
 
 	const FONTSIZE       = 576;
-	const STRING_MAX_LEN = 1024;
+	const STRING_MAX_LEN = 2026;
 	const COEF           = 25.4 / 72 / 64 / FONTSIZE;
 	let   STRING_POINTER = null;
 	let   STRING_LEN     = 0;

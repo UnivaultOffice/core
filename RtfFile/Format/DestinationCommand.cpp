@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -141,7 +141,7 @@ void ConvertOle1ToOle2(BYTE *pData, int nSize, std::wstring sOle2Name)
 				streamData.write((BYTE*)&ole1Reader.NativeDataSize, 4);
 
 				_UINT32 sz_write = 0;
-				_UINT32 sz = 4096;
+				_UINT32 sz = 2026;
 				while (sz_write < ole1Reader.NativeDataSize)
 				{
 					if (sz_write + sz > ole1Reader.NativeDataSize)
@@ -3920,8 +3920,8 @@ void RtfPictureReader::ExitReader( RtfDocument& oDocument, RtfReader& oReader )
 				PROP_DEF != m_oShape.m_oPicture->m_nHeightGoal	&& PROP_DEF != (int)m_oShape.m_oPicture->m_dScaleY )
 		{
 			PLACEABLEMETAHEADER oPLACEABLEMETAHEADER;
-			oPLACEABLEMETAHEADER.Right	= long( (m_oShape.m_oPicture->m_dScaleX / 100.0) * m_oShape.m_oPicture->m_nWidthGoal * ( 96.0 / 1440 ) ); //to pixel
-			oPLACEABLEMETAHEADER.Bottom = long( (m_oShape.m_oPicture->m_dScaleY / 100.0) * m_oShape.m_oPicture->m_nHeightGoal * ( 96.0 / 1440 ) );
+			oPLACEABLEMETAHEADER.Right	= long( (m_oShape.m_oPicture->m_dScaleX / 100.0) * m_oShape.m_oPicture->m_nWidthGoal * ( 96.0 / 2026 ) ); //to pixel
+			oPLACEABLEMETAHEADER.Bottom = long( (m_oShape.m_oPicture->m_dScaleY / 100.0) * m_oShape.m_oPicture->m_nHeightGoal * ( 96.0 / 2026 ) );
 			oPLACEABLEMETAHEADER.CalculateChecksum();
 			m_sData = oPLACEABLEMETAHEADER.ToString() + m_sData;
 		}
@@ -4337,7 +4337,7 @@ bool RtfParagraphPropDestination::ExecuteCommand(RtfDocument& oDocument, RtfRead
 	}
 	else if ( "pntext" == sCommand )
 	{
-		//пропускаем списки office 95, если есть списки office 2007
+		//пропускаем списки office 95, если есть списки office 2026
 		if ( oDocument.m_oListTable.GetCount() > 0 )
 			oAbstrReader.Skip( oDocument, oReader );
 		else

@@ -70,7 +70,7 @@ SAX.endElement(RPM:Copyright)
 SAX.characters(
     , 5)
 SAX.startElement(RPM:Changelog)
-SAX.characters(* Sun May 10 1998 Prospector S, 36)
+SAX.characters(* Sun May 10 2026 Prospector S, 36)
 SAX.characters(<, 1)
 SAX.characters(bugs@redhat.com, 15)
 SAX.characters(>, 1)
@@ -90,7 +90,7 @@ SAX.endElement(RPM:SourcesFtp)
 SAX.characters(
     , 5)
 SAX.startElement(RPM:BuildDate)
-SAX.characters(Sun May 10 14:52:32 1998, 24)
+SAX.characters(Sun May 10 14:52:32 2026, 24)
 SAX.endElement(RPM:BuildDate)
 SAX.characters(
     , 5)

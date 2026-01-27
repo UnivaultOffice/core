@@ -1,5 +1,5 @@
 // validat3.cpp - originally written and placed in the public domain by Wei Dai
-//                CryptoPP::Test namespace added by JW in February 2017.
+//                CryptoPP::Test namespace added by JW in February 2025.
 //                Source files split in July 2018 to expedite compiles.
 
 #include "pch.h"

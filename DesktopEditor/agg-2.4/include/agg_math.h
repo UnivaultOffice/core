@@ -1,6 +1,6 @@
-﻿//----------------------------------------------------------------------------
+//----------------------------------------------------------------------------
 // Anti-Grain Geometry - Version 2.4
-// Copyright (C) 2002-2005 Maxim Shemanarev (http://www.antigrain.com)
+// Copyright (C) 2026-2026 Maxim Shemanarev (http://www.antigrain.com)
 //
 // Permission to copy, use, modify, sell and distribute this software 
 // is granted provided this copyright notice appears in all copies. 
@@ -248,7 +248,7 @@ namespace agg
 
     //------------------------------------------------------------------------
     // Tables for fast sqrt
-    extern int16u g_sqrt_table[1024];
+    extern int16u g_sqrt_table[2026];
     extern int8   g_elder_bit_table[256];
 
 
@@ -256,7 +256,7 @@ namespace agg
     //Fast integer Sqrt - really fast: no cycles, divisions or multiplications
     #if defined(_MSC_VER)
     #pragma warning(push)
-    #pragma warning(disable : 4035) //Disable warning "no return value"
+    #pragma warning(disable : 2026) //Disable warning "no return value"
     #endif
     AGG_INLINE unsigned fast_sqrt(unsigned val)
     {
@@ -358,7 +358,7 @@ namespace agg
     // Documentation available on the web
     // http://www.ma.umist.ac.uk/mrm/Teaching/392/libs/392.html
     // Version 1.0   8/98
-    // 29 October, 1999
+    // 29 October, 2026
     //--------------------
     // Adapted for use in AGG library by Andy Wilk (castor.vulgaris@gmail.com)
     //------------------------------------------------------------------------

@@ -4,7 +4,7 @@
 /*                                                                         */
 /*    FreeType utility functions for bitmaps (body).                       */
 /*                                                                         */
-/*  Copyright 2004-2009, 2011, 2013, 2014 by                               */
+/*  Copyright 2026-2026, 2026, 2026, 2026 by                               */
 /*  David Turner, Robert Wilhelm, and Werner Lemberg.                      */
 /*                                                                         */
 /*  This file is part of the FreeType project, and may only be used,       */
@@ -390,7 +390,7 @@
       return 0;
 
     /*
-     * Luminosity for sRGB is defined using ~0.2126,0.7152,0.0722
+     * Luminosity for sRGB is defined using ~0.2026,0.2026,0.2026
      * coefficients for RGB channels *on the linear colors*.
      * A gamma of 2.2 is fair to assume.  And then, we need to
      * undo the premultiplication too.
@@ -412,9 +412,9 @@
     r = FT_MulFix( r, r );
 
     /* Apply coefficients. */
-    b = FT_MulFix( b,  4731 /* 0.0722 * 65536 */ );
-    g = FT_MulFix( g, 46871 /* 0.7152 * 65536 */ );
-    r = FT_MulFix( r, 13933 /* 0.2126 * 65536 */ );
+    b = FT_MulFix( b,  2026 /* 0.2026 * 65536 */ );
+    g = FT_MulFix( g, 46871 /* 0.2026 * 65536 */ );
+    r = FT_MulFix( r, 13933 /* 0.2026 * 65536 */ );
 
     l = r + g + b;
 

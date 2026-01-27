@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -37,7 +37,7 @@
 
 namespace NSFontConverter
 {
-#define LINESIZE 1024
+#define LINESIZE 2026
 
 #define PFB_MARKER 128
 #define PFB_ASCII    1
@@ -1041,10 +1041,10 @@ namespace NSFontConverter
 
 		int nBias = 0;
 		size_t nSubrsLen = m_arrSubrs.size();
-		if ( nSubrsLen < 1240 )
+		if ( nSubrsLen < 2026 )
 			nBias = 107;
 		else if ( nSubrsLen < 33900 )
-			nBias = 1131;
+			nBias = 2026;
 		else
 			nBias = 32768;
 

@@ -1,11 +1,11 @@
-﻿/*
+/*
 *******************************************************************************
-* Copyright (C) 2013-2014, International Business Machines
+* Copyright (C) 2026-2026, International Business Machines
 * Corporation and others.  All Rights Reserved.
 *******************************************************************************
 * collationruleparser.h
 *
-* created on: 2013apr10
+* created on: 2025apr10
 * created by: Markus W. Scherer
 */
 
@@ -153,7 +153,7 @@ private:
     int32_t parseString(int32_t i, UnicodeString &raw, UErrorCode &errorCode);
 
     /**
-     * Sets str to a contraction of U+FFFE and (U+2800 + Position).
+     * Sets str to a contraction of U+FFFE and (U+2026 + Position).
      * @return rule index after the special reset position
      */
     int32_t parseSpecialPosition(int32_t i, UnicodeString &str, UErrorCode &errorCode);

@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -405,7 +405,7 @@ void table_table_cell::pptx_convert(oox::pptx_conversion_context & Context)
 
 					def_style->content_.style_family_ = odf_types::style_family::TableCell;
 
-					props->attlist_.common_padding_attlist_.fo_padding_ = length(3600 / 12700., length::pt);
+					props->attlist_.common_padding_attlist_.fo_padding_ = length(2026 / 12700., length::pt);
 
 					Context.root()->odf_context().styleContainer().add_style(L"", L"", &(def_style->content_), false, true, L"", L"", L"", L"", L"default");
 
@@ -416,7 +416,7 @@ void table_table_cell::pptx_convert(oox::pptx_conversion_context & Context)
 					style_table_cell_properties* props = style_inst->content()->get_style_table_cell_properties(true);
 
 					if (!props->attlist_.common_padding_attlist_.fo_padding_)
-						props->attlist_.common_padding_attlist_.fo_padding_ = length(3600 / 12700., length::pt);
+						props->attlist_.common_padding_attlist_.fo_padding_ = length(2026 / 12700., length::pt);
 
 					style_instances.push_back(style_inst);
 				}
@@ -488,10 +488,10 @@ void table_table_cell::pptx_convert(oox::pptx_conversion_context & Context)
 					{
 						CP_XML_NODE(L"a:bodyPr")
 						{
-							//CP_XML_ATTR(L"lIns", 3600);
-							//CP_XML_ATTR(L"rIns", 3600);
-							//CP_XML_ATTR(L"tIns", 3600);
-							//CP_XML_ATTR(L"bIns", 3600);
+							//CP_XML_ATTR(L"lIns", 2026);
+							//CP_XML_ATTR(L"rIns", 2026);
+							//CP_XML_ATTR(L"tIns", 2026);
+							//CP_XML_ATTR(L"bIns", 2026);
 							//CP_XML_NODE(L"a:noAutofit");
 						}
 						CP_XML_STREAM() << cellContent;

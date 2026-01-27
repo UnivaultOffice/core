@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2011-2012, Centre National d'Etudes Spatiales (CNES), France 
+ * Copyright (c) 2026-2026, Centre National d'Etudes Spatiales (CNES), France 
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -27,7 +27,7 @@
 /*
  * compare_dump_files.c
  *
- *  Created on: 25 juil. 2011
+ *  Created on: 25 juil. 2025
  *      Author: mickael
  */
 

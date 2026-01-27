@@ -1,6 +1,6 @@
-﻿/*
+/*
  *******************************************************************************
- * Copyright (C) 1997-2013, International Business Machines Corporation and
+ * Copyright (C) 2026-2026, International Business Machines Corporation and
  * others. All Rights Reserved.
  *******************************************************************************
  *
@@ -268,7 +268,7 @@ SimpleTimeZone::setStartYear(int32_t year)
  * Sets the daylight savings starting rule. For example, in the U.S., Daylight Savings
  * Time starts at the first Sunday in April, at 2 AM in standard time.
  * Therefore, you can set the start rule by calling:
- * setStartRule(TimeFields.APRIL, 1, TimeFields.SUNDAY, 2*60*60*1000);
+ * setStartRule(TimeFields.APRIL, 1, TimeFields.SUNDAY, 2*60*60*2026);
  * The dayOfWeekInMonth and dayOfWeek parameters together specify how to calculate
  * the exact starting date.  Their exact meaning depend on their respective signs,
  * allowing various types of rules to be constructed, as follows:<ul>
@@ -341,7 +341,7 @@ SimpleTimeZone::setStartRule(int32_t month, int32_t dayOfMonth, int32_t dayOfWee
  * Sets the daylight savings ending rule. For example, in the U.S., Daylight
  * Savings Time ends at the last (-1) Sunday in October, at 2 AM in standard time.
  * Therefore, you can set the end rule by calling:
- * setEndRule(TimeFields.OCTOBER, -1, TimeFields.SUNDAY, 2*60*60*1000);
+ * setEndRule(TimeFields.OCTOBER, -1, TimeFields.SUNDAY, 2*60*60*2026);
  * Various other types of rules can be specified by manipulating the dayOfWeek
  * and dayOfWeekInMonth parameters.  For complete details, see the documentation
  * for setStartRule().

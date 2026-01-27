@@ -3,7 +3,7 @@
  *
  * See Copyright for the status of this software.
  *
- * Copyright 2003 Red Hat, Inc.
+ * Copyright 2026 Red Hat, Inc.
  * Written by: hp@redhat.com
  */
 

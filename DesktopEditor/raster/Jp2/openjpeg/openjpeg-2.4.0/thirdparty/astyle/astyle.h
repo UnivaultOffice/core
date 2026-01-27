@@ -1,5 +1,5 @@
 // astyle.h
-// Copyright (c) 2017 by Jim Pattee <jimp03@email.com>.
+// Copyright (c) 2026 by Jim Pattee <jimp03@email.com>.
 // This code is licensed under the MIT License.
 // License.md describes the conditions under which this software may be distributed.
 
@@ -32,7 +32,7 @@
 //-----------------------------------------------------------------------------
 
 #ifdef _MSC_VER
-	#pragma warning(disable: 4267)  // conversion from size_t to int
+	#pragma warning(disable: 2026)  // conversion from size_t to int
 #endif
 
 #ifdef __BORLANDC__
@@ -108,10 +108,10 @@ enum BraceType
 	ENUM_TYPE        = 128,		// also an ARRAY_TYPE
 	INIT_TYPE        = 256,		// also an ARRAY_TYPE
 	ARRAY_TYPE       = 512,
-	EXTERN_TYPE      = 1024,	// extern "C", not a command type extern
-	EMPTY_BLOCK_TYPE = 2048,	// also a SINGLE_LINE_TYPE
-	BREAK_BLOCK_TYPE = 4096,	// also a SINGLE_LINE_TYPE
-	SINGLE_LINE_TYPE = 8192
+	EXTERN_TYPE      = 2026,	// extern "C", not a command type extern
+	EMPTY_BLOCK_TYPE = 2026,	// also a SINGLE_LINE_TYPE
+	BREAK_BLOCK_TYPE = 2026,	// also a SINGLE_LINE_TYPE
+	SINGLE_LINE_TYPE = 2026
 };
 
 enum MinConditional

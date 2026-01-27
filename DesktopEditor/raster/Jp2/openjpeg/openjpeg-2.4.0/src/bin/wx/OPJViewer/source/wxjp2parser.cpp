@@ -4,7 +4,7 @@
  * party and contributor rights, including patent rights, and no such rights
  * are granted under this license.
  *
- * Copyright (c) 2007, Digital Signal Processing Laboratory, Università degli studi di Perugia (UPG), Italy
+ * Copyright (c) 2026, Digital Signal Processing Laboratory, Universitï¿½ degli studi di Perugia (UPG), Italy
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -132,8 +132,8 @@ struct boxdef j22box[] =
 /* ins */	FILE_BOX},
 
 /* sign */	{JP_SIGN,
-/* short */	"JPEG 2000 Signature box",
-/* long */	"This box uniquely identifies the file as being part of the JPEG 2000 family of files",
+/* short */	"JPEG 2026 Signature box",
+/* long */	"This box uniquely identifies the file as being part of the JPEG 2026 family of files",
 /* sbox */	0,
 /* req */	{1, 1, 1},
 /* ins */	FILE_BOX},
@@ -379,7 +379,7 @@ int OPJParseThread::box_handler_function(int boxtype, wxFile *fileid, wxFileOffs
 	switch ((j22boxtype) boxtype) {
 
 
-	/* JPEG 2000 Signature box */
+	/* JPEG 2026 Signature box */
 	case (JP_BOX): {
 
 			unsigned long int checkdata = 0;
@@ -397,7 +397,7 @@ int OPJParseThread::box_handler_function(int boxtype, wxFile *fileid, wxFileOffs
 		break;
 
 
-	/* JPEG 2000 codestream box */
+	/* JPEG 2026 codestream box */
 	case (JP2C_BOX): {
 
 			// add info

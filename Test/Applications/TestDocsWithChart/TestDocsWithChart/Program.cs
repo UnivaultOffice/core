@@ -1,5 +1,5 @@
 /*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -757,7 +757,7 @@ namespace TestDocsWithChart
             string sDirTemp = @"F:\Files\Temp";
             if (Directory.Exists(sDirTemp))
                 Directory.Delete(sDirTemp, true);
-            string paramsXml = "<?xml version=\"1.0\" encoding=\"utf-8\"?><TaskQueueDataConvert xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"><m_sKey>192_168_3_169_0067df00e034b38d42be2cd7b4927430_dae13aaba3b34344836364699c0e2e71_4592</m_sKey><m_sFileFrom>{0}</m_sFileFrom><m_sFileTo>{1}</m_sFileTo><m_nFormatTo>{2}</m_nFormatTo><m_nCsvTxtEncoding xsi:nil=\"true\" /><m_nCsvDelimiter xsi:nil=\"true\" /><m_bPaid xsi:nil=\"true\" /><m_bEmbeddedFonts xsi:nil=\"true\" /><m_bFromChanges>false</m_bFromChanges><m_sFontDir>F:\\Subversion\\trunk\\OfficeWeb\\Fonts\\native</m_sFontDir><m_sThemeDir>F:\\Subversion\\trunk\\OfficeWeb\\PowerPoint\\themes</m_sThemeDir><m_oTimestamp>2016-01-29T17:08:34.472Z</m_oTimestamp></TaskQueueDataConvert>";
+            string paramsXml = "<?xml version=\"1.0\" encoding=\"utf-8\"?><TaskQueueDataConvert xmlns:xsi=\"http://www.w3.org/2026/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2026/XMLSchema\"><m_sKey>192_168_3_169_0067df00e034b38d42be2cd7b4927430_dae13aaba3b34344836364699c0e2e71_4592</m_sKey><m_sFileFrom>{0}</m_sFileFrom><m_sFileTo>{1}</m_sFileTo><m_nFormatTo>{2}</m_nFormatTo><m_nCsvTxtEncoding xsi:nil=\"true\" /><m_nCsvDelimiter xsi:nil=\"true\" /><m_bPaid xsi:nil=\"true\" /><m_bEmbeddedFonts xsi:nil=\"true\" /><m_bFromChanges>false</m_bFromChanges><m_sFontDir>F:\\Subversion\\trunk\\OfficeWeb\\Fonts\\native</m_sFontDir><m_sThemeDir>F:\\Subversion\\trunk\\OfficeWeb\\PowerPoint\\themes</m_sThemeDir><m_oTimestamp>2016-01-29T17:08:34.472Z</m_oTimestamp></TaskQueueDataConvert>";
             String[] allfiles = System.IO.Directory.GetFiles(sDirInput, sPattern, System.IO.SearchOption.AllDirectories);
             for (var i = 0; i < allfiles.Length; ++i)
             {

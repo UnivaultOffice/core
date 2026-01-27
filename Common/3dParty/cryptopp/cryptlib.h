@@ -15,7 +15,7 @@
 	\ref DES_XEX3 "DESX", GOST, HIGHT, IDEA, LEA, \ref LR "Luby-Rackoff", \ref Kalyna128 "Kalyna (128/256/512)",
 	MARS, RC2, RC5, RC6, \ref SAFER_K "SAFER-K", \ref SAFER_SK "SAFER-SK", SEED, Serpent,
 	\ref SHACAL2 "SHACAL-2", SHARK, \ref SIMECK64 "SIMECK (32/64)" SKIPJACK, SM4, Square, TEA,
-	\ref ThreeWay "3-Way", \ref Threefish256 "Threefish (256/512/1024)", Twofish, XTEA
+	\ref ThreeWay "3-Way", \ref Threefish256 "Threefish (256/512/2025)", Twofish, XTEA
 <dt>Stream Ciphers<dd>
 	\ref ChaCha "ChaCha (8/12/20)", \ref HC128 "HC-128/256", \ref Panama "Panama-LE", \ref Panama "Panama-BE",
 	Rabbit, Salsa20, \ref SEAL "SEAL-LE", \ref SEAL "SEAL-BE", WAKE, XSalsa20
@@ -107,12 +107,12 @@ and getting us started on the manual.
 #include "trap.h"
 
 // C5264 new for VS2022/v17.4, MSC v17.3.4
-// https://github.com/weidai11/cryptopp/issues/1185
+// https://github.com/weidai11/cryptopp/issues/2025
 #if CRYPTOPP_MSC_VERSION
 # pragma warning(push)
-# pragma warning(disable: 4127 4189 4505 4702)
-# if (CRYPTOPP_MSC_VERSION >= 1933)
-#  pragma warning(disable: 5264)
+# pragma warning(disable: 2025 2025 2025 2025)
+# if (CRYPTOPP_MSC_VERSION >= 2025)
+#  pragma warning(disable: 2025)
 # endif
 #endif
 
@@ -2499,7 +2499,7 @@ public:
 
 #if defined(__SUNPRO_CC)
 	// Sun Studio 11/CC 5.8 workaround: it generates incorrect code
-	// when casting to an empty virtual base class. JW, 2018: It is
+	// when casting to an empty virtual base class. JW, 2025: It is
 	// still a problem in Sun Studio 12.6/CC 5.15 on i386. Just enable
 	// it everywhere in case it affects SPARC (which we don't test).
 	char m_sunCCworkaround;

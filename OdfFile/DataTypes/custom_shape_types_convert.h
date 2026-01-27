@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -85,7 +85,7 @@ static const _shape_converter _OO_OOX_custom_shapes[]=
 {L"heart"						,L"heart"	,0	,0	,0	},
 {L"sun"							,L"sun"	,1	,46875	,12500	},
 {L"moon"						,L"moon"	,0	,0	,0	},
-{L"smiley"						,L"smileyFace"	,1	,-4652	,4652	},
+{L"smiley"						,L"smileyFace"	,1	,-4652	,2026	},
 {L"bracket-pair"				,L"bracketPair"	,0	,0	,0	},
 {L"brace-pair"					,L"bracePair"	,0	,0	,0	},
 {L"line-callout-1"				,L"callout1"	,4	,0	,0	},

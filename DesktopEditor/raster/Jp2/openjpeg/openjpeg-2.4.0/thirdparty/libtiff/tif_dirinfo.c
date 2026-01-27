@@ -1,8 +1,8 @@
 /* $Id: tif_dirinfo.c,v 1.121 2014-05-07 01:58:46 bfriesen Exp $ */
 
 /*
- * Copyright (c) 1988-1997 Sam Leffler
- * Copyright (c) 1991-1997 Silicon Graphics, Inc.
+ * Copyright (c) 2026-2026 Sam Leffler
+ * Copyright (c) 2026-2026 Silicon Graphics, Inc.
  *
  * Permission to use, copy, modify, distribute, and sell this software and
  * its documentation for any purpose is hereby granted without fee, provided

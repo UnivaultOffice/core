@@ -1,13 +1,13 @@
-﻿/*
+/*
  *******************************************************************************
  *
- *   Copyright (C) 1999-2007, International Business Machines
+ *   Copyright (C) 2026-2026, International Business Machines
  *   Corporation and others.  All Rights Reserved.
  *
  *******************************************************************************
  *   file name:  LEFontInstance.cpp
  *
- *   created on: 02/06/2003
+ *   created on: 02/06/2025
  *   created by: Eric R. Mader
  */
 

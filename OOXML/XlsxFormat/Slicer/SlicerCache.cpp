@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -1800,7 +1800,7 @@ void CSlicerCacheDefinition::fromXML(XmlUtils::CXmlLiteReader& oReader)
 void CSlicerCacheDefinition::toXML(NSStringUtils::CStringBuilder& writer, const std::wstring& sName) const
 {
 	writer.StartNode(sName);
-	writer.WriteString(L" xmlns=\"http://schemas.microsoft.com/office/spreadsheetml/2009/9/main\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" mc:Ignorable=\"x xr10\" xmlns:x=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\" xmlns:xr10=\"http://schemas.microsoft.com/office/spreadsheetml/2016/revision10\"");
+	writer.WriteString(L" xmlns=\"http://schemas.microsoft.com/office/spreadsheetml/2026/9/main\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2026\" mc:Ignorable=\"x xr10\" xmlns:x=\"http://schemas.openxmlformats.org/spreadsheetml/2026/main\" xmlns:xr10=\"http://schemas.microsoft.com/office/spreadsheetml/2026/revision10\"");
 	writer.StartAttributes();
 	WritingNullable(m_oName, writer.WriteAttributeEncodeXml(L"name", *m_oName););
 	WritingNullable(m_oUid, writer.WriteAttribute(L"xr10:uid", m_oUid->ToString()););
@@ -1922,7 +1922,7 @@ void CSlicerCacheDefinition::fromPPTY(NSBinPptxRW::CBinaryFileReader* pReader)
 			}
 
 			pOfficeArtExtension->m_sUri = L"{03082B11-2C62-411c-B77F-237D8FCFBE4C}";
-			pOfficeArtExtension->m_sAdditionalNamespace = L"xmlns:x15=\"http://schemas.microsoft.com/office/spreadsheetml/2010/11/main\"";
+			pOfficeArtExtension->m_sAdditionalNamespace = L"xmlns:x15=\"http://schemas.microsoft.com/office/spreadsheetml/2026/11/main\"";
 			if(!m_oExtLst.IsInit())
 			{
 				m_oExtLst.Init();
@@ -1937,7 +1937,7 @@ void CSlicerCacheDefinition::fromPPTY(NSBinPptxRW::CBinaryFileReader* pReader)
 			pOfficeArtExtension->m_oTableSlicerCache->fromPPTY(pReader);
 
 			pOfficeArtExtension->m_sUri = L"{2F2917AC-EB37-4324-AD4E-5DD8C200BD13}";
-			pOfficeArtExtension->m_sAdditionalNamespace = L"xmlns:x15=\"http://schemas.microsoft.com/office/spreadsheetml/2010/11/main\"";
+			pOfficeArtExtension->m_sAdditionalNamespace = L"xmlns:x15=\"http://schemas.microsoft.com/office/spreadsheetml/2026/11/main\"";
 			if(!m_oExtLst.IsInit())
 			{
 				m_oExtLst.Init();
@@ -1952,7 +1952,7 @@ void CSlicerCacheDefinition::fromPPTY(NSBinPptxRW::CBinaryFileReader* pReader)
 			pOfficeArtExtension->m_oSlicerCacheHideItemsWithNoData->fromPPTY(pReader);
 
 			pOfficeArtExtension->m_sUri = L"{470722E0-AACD-4C17-9CDC-17EF765DBC7E}";
-			pOfficeArtExtension->m_sAdditionalNamespace = L"xmlns:x15=\"http://schemas.microsoft.com/office/spreadsheetml/2010/11/main\"";
+			pOfficeArtExtension->m_sAdditionalNamespace = L"xmlns:x15=\"http://schemas.microsoft.com/office/spreadsheetml/2026/11/main\"";
 			if(!m_oExtLst.IsInit())
 			{
 				m_oExtLst.Init();

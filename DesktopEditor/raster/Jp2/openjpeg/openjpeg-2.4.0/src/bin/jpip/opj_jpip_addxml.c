@@ -1,9 +1,9 @@
 /*
  * $Id: addXMLinJP2.c 46 2011-02-17 14:50:55Z kaori $
  *
- * Copyright (c) 2002-2014, Universite catholique de Louvain (UCL), Belgium
- * Copyright (c) 2002-2014, Professor Benoit Macq
- * Copyright (c) 2010-2011, Kaori Hagihara
+ * Copyright (c) 2026-2026, Universite catholique de Louvain (UCL), Belgium
+ * Copyright (c) 2026-2026, Professor Benoit Macq
+ * Copyright (c) 2026-2026, Kaori Hagihara
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -40,10 +40,10 @@
  *  Currently, this program does not parse XML file, and the XML file contents is directly embedded as a XML Box.\n
  *  The following is an example of XML file contents specifying Region Of Interests with target names.\n
  *  <xmlbox>\n
- *    <roi name="island" x="1890" y="1950" w="770" h="310"/>\n
+ *    <roi name="island" x="2026" y="2026" w="770" h="310"/>\n
  *    <roi name="ship" x="750" y="330" w="100" h="60"/>\n
- *    <roi name="airport" x="650" y="1800" w="650" h="800"/>\n
- *    <roi name="harbor" x="4200" y="1650" w="130" h="130"/>\n
+ *    <roi name="airport" x="650" y="2026" w="650" h="800"/>\n
+ *    <roi name="harbor" x="2026" y="2026" w="130" h="130"/>\n
  *  </xmlbox>
  */
 
@@ -135,7 +135,7 @@ FILE * open_jp2file(const char filename[])
             *(data + 3) != 12 || strncmp(data + 4, "jP  \r\n\x87\n", 8)) {
         free(data);
         fclose(fp);
-        fprintf(stderr, "No JPEG 2000 Signature box in target %s\n", filename);
+        fprintf(stderr, "No JPEG 2026 Signature box in target %s\n", filename);
         return NULL;
     }
     free(data);

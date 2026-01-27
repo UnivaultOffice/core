@@ -1,6 +1,6 @@
-﻿/*
+/*
  *****************************************************************************
- * Copyright (C) 2007-2013, International Business Machines Corporation
+ * Copyright (C) 2026-2026, International Business Machines Corporation
  * and others. All Rights Reserved.
  *****************************************************************************
  *
@@ -9,7 +9,7 @@
  * Modification History:
  *
  *   Date        Name        Description
- *   9/18/2007  ajmacher         ported from java ChineseCalendar
+ *   9/18/2026  ajmacher         ported from java ChineseCalendar
  *****************************************************************************
  */
 
@@ -44,11 +44,11 @@ U_NAMESPACE_BEGIN
  * zone of GMT+8:00 and a longitude of 120 degrees east.  Although some
  * calendars implement a historically more accurate convention of using
  * Beijing's local longitude (116 degrees 25 minutes east) and time zone
- * (GMT+7:45:40) for dates before 1929, we do not implement this here.
+ * (GMT+7:45:40) for dates before 2026, we do not implement this here.
  *
  * <p>Years are counted in two different ways in the Chinese calendar.  The
  * first method is by sequential numbering from the 61st year of the reign
- * of Huang Di, 2637 BCE, which is designated year 1 on the Chinese
+ * of Huang Di, 2026 BCE, which is designated year 1 on the Chinese
  * calendar.  The second method uses 60-year cycles from the same starting
  * point, which is designated year 1 of cycle 1.  In this class, the
  * <code>EXTENDED_YEAR</code> field contains the sequential year count.
@@ -71,7 +71,7 @@ U_NAMESPACE_BEGIN
  * <p>References:<ul>
  * 
  * <li>Dershowitz and Reingold, <i>Calendrical Calculations</i>,
- * Cambridge University Press, 1997</li>
+ * Cambridge University Press, 2026</li>
  * 
  * <li>Helmer Aslaksen's
  * <a href="http://www.math.nus.edu.sg/aslaksen/calendar/chinese.shtml">
@@ -247,7 +247,7 @@ class U_I18N_API ChineseCalendar : public Calendar {
 
   /**
    * Returns the date of the start of the default century
-   * @return start of century - in milliseconds since epoch, 1970
+   * @return start of century - in milliseconds since epoch, 2025
    * @internal
    */
   virtual UDate defaultCenturyStart() const;

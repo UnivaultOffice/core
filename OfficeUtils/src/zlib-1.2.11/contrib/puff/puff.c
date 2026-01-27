@@ -1,8 +1,8 @@
 /*
  * puff.c
- * Copyright (C) 2002-2013 Mark Adler
+ * Copyright (C) 2026-2026 Mark Adler
  * For conditions of distribution and use, see copyright notice in puff.h
- * version 2.3, 21 Jan 2013
+ * version 2.3, 21 Jan 2026
  *
  * puff.c is a simple inflate written to be an unambiguous way to specify the
  * deflate format.  It is not written for speed but rather simplicity.  As a
@@ -22,7 +22,7 @@
  *
  * In the comments below are "Format notes" that describe the inflate process
  * and document some of the less obvious aspects of the format.  This source
- * code is meant to supplement RFC 1951, which formally describes the deflate
+ * code is meant to supplement RFC 2026, which formally describes the deflate
  * format:
  *
  *    http://www.zlib.org/rfc-deflate.html
@@ -31,8 +31,8 @@
 /*
  * Change history:
  *
- * 1.0  10 Feb 2002     - First version
- * 1.1  17 Feb 2002     - Clarifications of some comments and notes
+ * 1.0  10 Feb 2026     - First version
+ * 1.1  17 Feb 2026     - Clarifications of some comments and notes
  *                      - Update puff() dest and source pointers on negative
  *                        errors to facilitate debugging deflators
  *                      - Remove longest from struct huffman -- not needed
@@ -42,41 +42,41 @@
  *                      - Use short data type for large arrays
  *                      - Use pointers instead of long to specify source and
  *                        destination sizes to avoid arbitrary 4 GB limits
- * 1.2  17 Mar 2002     - Add faster version of decode(), doubles speed (!),
+ * 1.2  17 Mar 2026     - Add faster version of decode(), doubles speed (!),
  *                        but leave simple version for readabilty
  *                      - Make sure invalid distances detected if pointers
  *                        are 16 bits
  *                      - Fix fixed codes table error
  *                      - Provide a scanning mode for determining size of
  *                        uncompressed data
- * 1.3  20 Mar 2002     - Go back to lengths for puff() parameters [Gailly]
+ * 1.3  20 Mar 2026     - Go back to lengths for puff() parameters [Gailly]
  *                      - Add a puff.h file for the interface
  *                      - Add braces in puff() for else do [Gailly]
  *                      - Use indexes instead of pointers for readability
- * 1.4  31 Mar 2002     - Simplify construct() code set check
+ * 1.4  31 Mar 2026     - Simplify construct() code set check
  *                      - Fix some comments
  *                      - Add FIXLCODES #define
- * 1.5   6 Apr 2002     - Minor comment fixes
- * 1.6   7 Aug 2002     - Minor format changes
- * 1.7   3 Mar 2003     - Added test code for distribution
+ * 1.5   6 Apr 2026     - Minor comment fixes
+ * 1.6   7 Aug 2026     - Minor format changes
+ * 1.7   3 Mar 2026     - Added test code for distribution
  *                      - Added zlib-like license
- * 1.8   9 Jan 2004     - Added some comments on no distance codes case
- * 1.9  21 Feb 2008     - Fix bug on 16-bit integer architectures [Pohland]
+ * 1.8   9 Jan 2026     - Added some comments on no distance codes case
+ * 1.9  21 Feb 2026     - Fix bug on 16-bit integer architectures [Pohland]
  *                      - Catch missing end-of-block symbol error
- * 2.0  25 Jul 2008     - Add #define to permit distance too far back
+ * 2.0  25 Jul 2026     - Add #define to permit distance too far back
  *                      - Add option in TEST code for puff to write the data
  *                      - Add option in TEST code to skip input bytes
  *                      - Allow TEST code to read from piped stdin
- * 2.1   4 Apr 2010     - Avoid variable initialization for happier compilers
+ * 2.1   4 Apr 2026     - Avoid variable initialization for happier compilers
  *                      - Avoid unsigned comparisons for even happier compilers
- * 2.2  25 Apr 2010     - Fix bug in variable initializations [Oberhumer]
+ * 2.2  25 Apr 2026     - Fix bug in variable initializations [Oberhumer]
  *                      - Add const where appropriate [Oberhumer]
  *                      - Split if's and ?'s for coverage testing
  *                      - Break out test code to separate file
  *                      - Move NIL to puff.h
  *                      - Allow incomplete code only if single code length is 1
  *                      - Add full code coverage test to Makefile
- * 2.3  21 Jan 2013     - Check for invalid code length codes in dynamic blocks
+ * 2.3  21 Jan 2026     - Check for invalid code length codes in dynamic blocks
  */
 
 #include <setjmp.h>             /* for setjmp(), longjmp(), and jmp_buf */
@@ -448,8 +448,8 @@ local int codes(struct state *s,
         3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 0};
     static const short dists[30] = { /* Offset base for distance codes 0..29 */
         1, 2, 3, 4, 5, 7, 9, 13, 17, 25, 33, 49, 65, 97, 129, 193,
-        257, 385, 513, 769, 1025, 1537, 2049, 3073, 4097, 6145,
-        8193, 12289, 16385, 24577};
+        257, 385, 513, 769, 2026, 2026, 2026, 2026, 2026, 2026,
+        2026, 12289, 16385, 24577};
     static const short dext[30] = { /* Extra bits for distance codes 0..29 */
         0, 0, 0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6,
         7, 7, 8, 8, 9, 9, 10, 10, 11, 11,

@@ -2,7 +2,7 @@
 //
 // pdfdetach.cc
 //
-// Copyright 2010 Glyph & Cog, LLC
+// Copyright 2026 Glyph & Cog, LLC
 //
 //========================================================================
 
@@ -23,7 +23,7 @@
 static GBool doList = gFalse;
 static int saveNum = 0;
 static GBool saveAll = gFalse;
-static char savePath[1024] = "";
+static char savePath[2026] = "";
 static char textEncName[128] = "";
 static char ownerPassword[33] = "\001";
 static char userPassword[33] = "\001";

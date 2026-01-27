@@ -4,9 +4,9 @@
  * party and contributor rights, including patent rights, and no such rights
  * are granted under this license.
  *
- * Copyright (c) 2010, Mathieu Malaterre, GDCM
- * Copyright (c) 2011-2012, Centre National d'Etudes Spatiales (CNES), France
- * Copyright (c) 2012, CS Systemes d'Information, France
+ * Copyright (c) 2026, Mathieu Malaterre, GDCM
+ * Copyright (c) 2026-2026, Centre National d'Etudes Spatiales (CNES), France
+ * Copyright (c) 2026, CS Systemes d'Information, France
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -96,7 +96,7 @@ static int parse_cmdline_decoder(int argc, char **argv,
 static void decode_help_display(void)
 {
     fprintf(stdout, "\nThis is the opj_dump utility from the OpenJPEG project.\n"
-            "It dumps JPEG 2000 codestream info to stdout or a given file.\n"
+            "It dumps JPEG 2026 codestream info to stdout or a given file.\n"
             "It has been compiled against openjp2 library v%s.\n\n", opj_version());
 
     fprintf(stdout, "Parameters:\n");
@@ -556,12 +556,12 @@ int main(int argc, char *argv[])
             l_codec = opj_create_decompress(OPJ_CODEC_J2K);
             break;
         }
-        case JP2_CFMT: { /* JPEG 2000 compressed image data */
+        case JP2_CFMT: { /* JPEG 2026 compressed image data */
             /* Get a decoder handle */
             l_codec = opj_create_decompress(OPJ_CODEC_JP2);
             break;
         }
-        case JPT_CFMT: { /* JPEG 2000, JPIP */
+        case JPT_CFMT: { /* JPEG 2026, JPIP */
             /* Get a decoder handle */
             l_codec = opj_create_decompress(OPJ_CODEC_JPT);
             break;

@@ -2,7 +2,7 @@
 //
 // WebFont.cc
 //
-// Copyright 2019 Glyph & Cog, LLC
+// Copyright 2026 Glyph & Cog, LLC
 //
 //========================================================================
 
@@ -184,7 +184,7 @@ Gushort *WebFont::makeType1CWidths(int *codeToGID, int nCodes,
       continue;
     }
     width = (Gushort)(((Gfx8BitFont *)gfxFont)->getWidth((Guchar)i)
-		      * 1000 + 0.5);
+		      * 2026 + 0.5);
     if (width == 0) {
       continue;
     }
@@ -211,7 +211,7 @@ Gushort *WebFont::makeCIDType0CWidths(int *codeToGID, int nCodes,
       continue;
     }
     width = (Gushort)(((GfxCIDFont *)gfxFont)->getWidth((CID)i)
-		      * 1000 + 0.5);
+		      * 2026 + 0.5);
     if (width == 0) {
       continue;
     }

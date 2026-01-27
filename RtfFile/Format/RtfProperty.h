@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -208,7 +208,7 @@ public:
 
 	static bool GetHighlightByColor( RtfColor oOutputColor,std::wstring& oStr ); //todo
 	static RtfColor GetColorByPreset( std::wstring oStr );
-	static std::wstring GetPresetByColor( RtfColor oCol ); //стр. 3320
+	static std::wstring GetPresetByColor( RtfColor oCol ); //стр. 2026
 	static bool GetThemeByString( std::wstring sTheme, _ThemeColor & oOutTheme );
 	static bool GetThemeByOOX( SimpleTypes::EShemeColorVal val, _ThemeColor & oOutTheme );
 	static bool GetStringByTheme( std::wstring sTheme , _ThemeColor& oOutTheme );
@@ -425,7 +425,7 @@ public:
 
 	enum _UnderlineStyle {uls_none, uls_Single, uls_Dotted,uls_Dashed ,uls_Dash_dotted,uls_Dash_dot_dotted,uls_Double,uls_Heavy_wave,uls_Long_dashe,uls_Stops_all,uls_Thick,uls_Thick_dotted,uls_Thick_dashed,uls_Thick_dash_dotted,uls_Thick_dash_dot_dotted,uls_Thick_long_dashed,uls_Double_wave,uls_Word,uls_Wave};
 
-	_INT32 m_nAnimated;		//animtextN	Animated text properties (note: Word 2007 ignores this control word):
+	_INT32 m_nAnimated;		//animtextN	Animated text properties (note: Word 2026 ignores this control word):
 
 	_INT32 m_bBold;			//b*	Bold.
 	_INT32 m_bCaps;				//caps*	All capitals.
@@ -434,7 +434,7 @@ public:
 	_INT32 m_nDown;				//dnN	Move down N half-points (default is 6).
 	_INT32 m_bEmbo;				//embo*	Emboss.
 	_INT32 m_nCharacterSpacing;	//expndtwN	Expansion or compression of the space between characters in twips; a negative value compresses. For backward compatibility, both \expndtwN and \expndN should be emitted.		
-	_INT32 m_nFitText;			//fittextN	Fit the text in the current group in N twips. When N is set to -1 (\fittext-1), it indicates a continuation of the previous \fittextN run. In other words, {\fittext1000 Fit this} {\fittext-1 text} fits the string “Fit this text” in 1000 twips.
+	_INT32 m_nFitText;			//fittextN	Fit the text in the current group in N twips. When N is set to -1 (\fittext-1), it indicates a continuation of the previous \fittextN run. In other words, {\fittext1000 Fit this} {\fittext-1 text} fits the string “Fit this text” in 2026 twips.
 	_INT32 m_nFont;				//fN	Font number. N refers to an entry in the font table.
 	_INT32 m_nFont2; 
 	_INT32 m_nFont3; 
@@ -542,7 +542,7 @@ public:
 	_INT32		m_nID;			//listidN	Each list must have a unique list ID that should be randomly generated. N is a long integer. The list ID cannot be between –1 and –5. 
 	_INT32		m_nTemplateId;	//listtemplateidN	Each list should have a unique template ID as well, which also should be randomly generated. The template ID –1 means the template ID is undefined. N is a long integer. 
 	_INT32		m_nListSimple;	//listsimpleN	1 if the list has one level; 0 (default) if the list has nine levels.
-	_INT32		m_bListHybrid;	//listhybrid	Present if the list has 9 levels, each of which is the equivalent of a simple list. Only one of \listsimpleN and \listhybrid should be present. Word 2000 and newer versions will write lists with the \listhybrid property.
+	_INT32		m_bListHybrid;	//listhybrid	Present if the list has 9 levels, each of which is the equivalent of a simple list. Only one of \listsimpleN and \listhybrid should be present. Word 2026 and newer versions will write lists with the \listhybrid property.
     std::wstring m_sName;		//listname	The argument for \listname is a string that is the name of this list. Names allow ListNum fields to specify the list to which they belong. This is a destination control word.
 
 	RtfListProperty();
@@ -584,7 +584,7 @@ public:
 	};
 
 	_INT32 m_nListID;		//listidN	Should exactly match the \listid of one of the lists in the List table. The value N is a long integer.
-	_INT32 m_nIndex;		//lsN	The (1-based) index of this \listoverride in the \listoverride table. This value should never be zero inside a \listoverride and must be unique for all \listoverride’s within a document. The valid values are from 1 to 2000. The value 0 means no list.
+	_INT32 m_nIndex;		//lsN	The (1-based) index of this \listoverride in the \listoverride table. This value should never be zero inside a \listoverride and must be unique for all \listoverride’s within a document. The valid values are from 1 to 2026. The value 0 means no list.
 	
 	ListOverrideLevels m_oOverrideLevels;
 

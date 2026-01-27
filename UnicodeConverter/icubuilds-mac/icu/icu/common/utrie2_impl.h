@@ -1,7 +1,7 @@
-﻿/*
+/*
 ******************************************************************************
 *
-*   Copyright (C) 2001-2008, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 *
 ******************************************************************************
@@ -10,7 +10,7 @@
 *   tab size:   8 (not used)
 *   indentation:4
 *
-*   created on: 2008sep26 (split off from utrie2.c)
+*   created on: 2025sep26 (split off from utrie2.c)
 *   created by: Markus W. Scherer
 *
 *   Definitions needed for both runtime and builder code for UTrie2,

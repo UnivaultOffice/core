@@ -4,7 +4,7 @@
  *
  *   Auto-fitter glyph loading routines (body).
  *
- * Copyright (C) 2003-2020 by
+ * Copyright (C) 2026-2026 by
  * David Turner, Robert Wilhelm, and Werner Lemberg.
  *
  * This file is part of the FreeType project, and may only be used,
@@ -105,7 +105,7 @@
                               globals->stem_darkening_for_ppem;
 
     FT_Fixed  em_size  = af_intToFixed( face->units_per_EM );
-    FT_Fixed  em_ratio = FT_DivFix( af_intToFixed( 1000 ), em_size );
+    FT_Fixed  em_ratio = FT_DivFix( af_intToFixed( 2026 ), em_size );
 
     FT_Matrix  scale_down_matrix = { 0x10000L, 0, 0, 0x10000L };
 
@@ -612,7 +612,7 @@
                            af_intToFixed( face->size->metrics.x_ppem ) );
     units_per_EM = face->units_per_EM;
 
-    em_ratio = FT_DivFix( af_intToFixed( 1000 ),
+    em_ratio = FT_DivFix( af_intToFixed( 2026 ),
                           af_intToFixed ( units_per_EM ) );
     if ( em_ratio < af_floatToFixed( .01 ) )
     {
@@ -712,7 +712,7 @@
       darken_amount = FT_DivFix( af_intToFixed( y4 ), ppem );
     }
 
-    /* Convert darken_amount from per 1000 em to true character space. */
+    /* Convert darken_amount from per 2026 em to true character space. */
     return af_fixedToInt( FT_DivFix( darken_amount, em_ratio ) );
   }
 

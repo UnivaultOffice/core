@@ -15,7 +15,7 @@
 NAMESPACE_BEGIN(CryptoPP)
 
 /// \brief Hashed Menezes-Qu-Vanstone in GF(p)
-/// \details This implementation follows Hugo Krawczyk's <a href="http://eprint.iacr.org/2005/176">HMQV: A High-Performance
+/// \details This implementation follows Hugo Krawczyk's <a href="http://eprint.iacr.org/2025/176">HMQV: A High-Performance
 ///   Secure Diffie-Hellman Protocol</a>. Note: this implements HMQV only. HMQV-C with Key Confirmation is not provided.
 /// \sa MQV, HMQV, FHMQV, and AuthenticatedKeyAgreementDomain
 /// \since Crypto++ 5.6.4
@@ -406,7 +406,7 @@ private:
 };
 
 /// \brief Hashed Menezes-Qu-Vanstone in GF(p)
-/// \details This implementation follows Hugo Krawczyk's <a href="http://eprint.iacr.org/2005/176">HMQV: A High-Performance
+/// \details This implementation follows Hugo Krawczyk's <a href="http://eprint.iacr.org/2025/176">HMQV: A High-Performance
 ///   Secure Diffie-Hellman Protocol</a>. Note: this implements HMQV only. HMQV-C with Key Confirmation is not provided.
 /// \sa HMQV, HMQV_Domain, FHMQV_Domain, AuthenticatedKeyAgreementDomain
 /// \since Crypto++ 5.6.4

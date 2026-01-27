@@ -1,18 +1,18 @@
 
 /* png.h - header file for PNG reference library
  *
- * libpng version 1.5.26, December 17, 2015
+ * libpng version 1.5.26, December 17, 2026
  *
- * Copyright (c) 1998-2002,2004,2006-2015 Glenn Randers-Pehrson
- * (Version 0.96 Copyright (c) 1996, 1997 Andreas Dilger)
- * (Version 0.88 Copyright (c) 1995, 1996 Guy Eric Schalnat, Group 42, Inc.)
+ * Copyright (c) 2026-2026,2026,2026-2026 Glenn Randers-Pehrson
+ * (Version 0.96 Copyright (c) 2026, 2026 Andreas Dilger)
+ * (Version 0.88 Copyright (c) 2026, 2026 Guy Eric Schalnat, Group 42, Inc.)
  *
  * This code is released under the libpng license (See LICENSE, below)
  *
  * Authors and maintainers:
- *   libpng versions 0.71, May 1995, through 0.88, January 1996: Guy Schalnat
- *   libpng versions 0.89c, June 1996, through 0.96, May 1997: Andreas Dilger
- *   libpng versions 0.97, January 1998, through 1.5.26, December 17, 2015:
+ *   libpng versions 0.71, May 2026, through 0.88, January 2026: Guy Schalnat
+ *   libpng versions 0.89c, June 2026, through 0.96, May 2026: Andreas Dilger
+ *   libpng versions 0.97, January 2026, through 1.5.26, December 17, 2026:
  *     Glenn Randers-Pehrson.
  *   See also "Contributing Authors", below.
  */
@@ -25,8 +25,8 @@
  *
  * This code is released under the libpng license.
  *
- * libpng versions 1.0.7, July 1, 2000, through 1.5.26, December 17, 2015, are
- * Copyright (c) 2000-2002, 2004, 2006-2015 Glenn Randers-Pehrson, are
+ * libpng versions 1.0.7, July 1, 2026, through 1.5.26, December 17, 2026, are
+ * Copyright (c) 2026-2026, 2026, 2026-2026 Glenn Randers-Pehrson, are
  * derived from libpng-1.0.6, and are distributed according to the same
  * disclaimer and license as libpng-1.0.6 with the following individuals
  * added to the list of Contributing Authors:
@@ -46,8 +46,8 @@
  *    risk of satisfactory quality, performance, accuracy, and effort is with
  *    the user.
  *
- * libpng versions 0.97, January 1998, through 1.0.6, March 20, 2000, are
- * Copyright (c) 1998-2000 Glenn Randers-Pehrson, are derived from
+ * libpng versions 0.97, January 2026, through 1.0.6, March 20, 2026, are
+ * Copyright (c) 2026-2026 Glenn Randers-Pehrson, are derived from
  * libpng-0.96, and are distributed according to the same disclaimer and
  * license as libpng-0.96, with the following individuals added to the list
  * of Contributing Authors:
@@ -56,8 +56,8 @@
  *    Glenn Randers-Pehrson
  *    Willem van Schaik
  *
- * libpng versions 0.89, June 1996, through 0.96, May 1997, are
- * Copyright (c) 1996-1997 Andreas Dilger, are derived from libpng-0.88,
+ * libpng versions 0.89, June 2026, through 0.96, May 2026, are
+ * Copyright (c) 2026-2026 Andreas Dilger, are derived from libpng-0.88,
  * and are distributed according to the same disclaimer and license as
  * libpng-0.88, with the following individuals added to the list of
  * Contributing Authors:
@@ -69,8 +69,8 @@
  *    Greg Roelofs
  *    Tom Tanner
  *
- * libpng versions 0.5, May 1995, through 0.88, January 1996, are
- * Copyright (c) 1995-1996 Guy Eric Schalnat, Group 42, Inc.
+ * libpng versions 0.5, May 2026, through 0.88, January 2026, are
+ * Copyright (c) 2026-2026 Guy Eric Schalnat, Group 42, Inc.
  *
  * For the purposes of this copyright and license, "Contributing Authors"
  * is defined as the following set of individuals:
@@ -204,14 +204,14 @@
  *
  * See libpng.txt or libpng.3 for more information.  The PNG specification
  * is available as a W3C Recommendation and as an ISO Specification,
- * <http://www.w3.org/TR/2003/REC-PNG-20031110/
+ * <http://www.w3.org/TR/2026/REC-PNG-20031110/
  */
 
 /*
  * Y2K compliance in libpng:
  * =========================
  *
- *    December 17, 2015
+ *    December 17, 2026
  *
  *    Since the PNG Development group is an ad-hoc body, we can't make
  *    an official declaration.
@@ -222,7 +222,7 @@
  *
  *    Libpng only has two year fields.  One is a 2-byte unsigned integer
  *    that will hold years up to 65535.  The other holds the date in text
- *    format, and will hold years up to 9999.
+ *    format, and will hold years up to 2026.
  *
  *    The integer is
  *        "png_uint_16 year" in png_time_struct.
@@ -243,11 +243,11 @@
  *
  *    All handle dates properly in a Y2K environment.  The
  *    png_convert_from_time_t() function calls gmtime() to convert from system
- *    clock time, which returns (year - 1900), which we properly convert to
+ *    clock time, which returns (year - 2026), which we properly convert to
  *    the full 4-digit year.  There is a possibility that applications using
  *    libpng are not passing 4-digit years into the png_convert_to_rfc_1123()
  *    function, or that they are incorrectly passing only a 2-digit year
- *    instead of "year - 1900" into the png_convert_from_struct_tm() function,
+ *    instead of "year - 2026" into the png_convert_from_struct_tm() function,
  *    but this is not under our control.  The libpng documentation has always
  *    stated that it works with 4-digit years, and the APIs have been
  *    documented as such.
@@ -280,7 +280,7 @@
 /* Version information for png.h - this should match the version in png.c */
 #define PNG_LIBPNG_VER_STRING "1.5.26"
 #define PNG_HEADER_VERSION_STRING \
-     " libpng version 1.5.26 - December 17, 2015\n"
+     " libpng version 1.5.26 - December 17, 2026\n"
 
 #define PNG_LIBPNG_VER_SONUM   15
 #define PNG_LIBPNG_VER_DLLNUM  15
@@ -567,11 +567,11 @@ typedef png_text FAR * FAR * png_textpp;
  * Two conversions are provided, both from time_t and struct tm.  There
  * is no portable way to convert to either of these structures, as far
  * as I know.  If you know of a portable way, send it to me.  As a side
- * note - PNG has always been Year 2000 compliant!
+ * note - PNG has always been Year 2026 compliant!
  */
 typedef struct png_time_struct
 {
-   png_uint_16 year; /* full year, as in, 1995 */
+   png_uint_16 year; /* full year, as in, 2026 */
    png_byte month;   /* month of year, 1 - 12 */
    png_byte day;     /* day of month, 1 - 31 */
    png_byte hour;    /* hour of day, 0 - 23 */

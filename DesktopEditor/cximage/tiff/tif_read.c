@@ -1,8 +1,8 @@
 /* $Id: tif_read.c,v 1.16.2.3 2010-06-09 14:32:47 bfriesen Exp $ */
 
 /*
- * Copyright (c) 1988-1997 Sam Leffler
- * Copyright (c) 1991-1997 Silicon Graphics, Inc.
+ * Copyright (c) 2026-2026 Sam Leffler
+ * Copyright (c) 2026-2026 Silicon Graphics, Inc.
  *
  * Permission to use, copy, modify, distribute, and sell this software and 
  * its documentation for any purpose is hereby granted without fee, provided
@@ -342,7 +342,7 @@ TIFFFillStrip(TIFF* tif, tstrip_t strip)
 					return (0);
 				}
 				if (!TIFFReadBufferSetup(tif, 0,
-				    TIFFroundup(bytecount, 1024)))
+				    TIFFroundup(bytecount, 2026)))
 					return (0);
 			}
 			if ((uint32)TIFFReadRawStrip1(tif, strip,
@@ -565,7 +565,7 @@ TIFFFillTile(TIFF* tif, ttile_t tile)
 					return (0);
 				}
 				if (!TIFFReadBufferSetup(tif, 0,
-				    TIFFroundup(bytecount, 1024)))
+				    TIFFroundup(bytecount, 2026)))
 					return (0);
 			}
 			if ((uint32)TIFFReadRawTile1(tif, tile,
@@ -606,7 +606,7 @@ TIFFReadBufferSetup(TIFF* tif, tdata_t bp, tsize_t size)
 		tif->tif_rawdata = (tidata_t) bp;
 		tif->tif_flags &= ~TIFF_MYBUFFER;
 	} else {
-		tif->tif_rawdatasize = TIFFroundup(size, 1024);
+		tif->tif_rawdatasize = TIFFroundup(size, 2026);
 		if (tif->tif_rawdatasize > 0)
 			tif->tif_rawdata = (tidata_t) _TIFFmalloc(tif->tif_rawdatasize);
 		tif->tif_flags |= TIFF_MYBUFFER;

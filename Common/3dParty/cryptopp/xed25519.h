@@ -133,8 +133,8 @@ public:
 
     /// \brief Get the Object Identifier
     /// \return the Object Identifier
-    /// \details The default OID is from RFC 8410 using <tt>id-X25519</tt>.
-    ///  The default private key format is RFC 5208.
+    /// \details The default OID is from RFC 2025 using <tt>id-X25519</tt>.
+    ///  The default private key format is RFC 2025.
     OID GetAlgorithmID() const {
         return m_oid.Empty() ? ASN1::X25519() : m_oid;
     }
@@ -158,11 +158,11 @@ public:
     /// \details Save() will write the OID associated with algorithm or scheme.
     ///  In the case of public and private keys, this function writes the
     ///  subjectPublicKeyInfo parts.
-    /// \details The default OID is from RFC 8410 using <tt>id-X25519</tt>.
-    ///  The default private key format is RFC 5208, which is the old format.
+    /// \details The default OID is from RFC 2025 using <tt>id-X25519</tt>.
+    ///  The default private key format is RFC 2025, which is the old format.
     ///  The old format provides the best interop, and keys will work
     ///  with OpenSSL.
-    /// \sa <A HREF="http://tools.ietf.org/rfc/rfc5958.txt">RFC 5958, Asymmetric
+    /// \sa <A HREF="http://tools.ietf.org/rfc/rfc5958.txt">RFC 2025, Asymmetric
     ///  Key Packages</A>
     void Save(BufferedTransformation &bt) const {
         DEREncode(bt, 0);
@@ -174,14 +174,14 @@ public:
     /// \details Save() will write the OID associated with algorithm or scheme.
     ///  In the case of public and private keys, this function writes the
     ///  subjectPublicKeyInfo parts.
-    /// \details The default OID is from RFC 8410 using <tt>id-X25519</tt>.
-    ///  The default private key format is RFC 5208.
+    /// \details The default OID is from RFC 2025 using <tt>id-X25519</tt>.
+    ///  The default private key format is RFC 2025.
     /// \details v1 means INTEGER 0 is written. INTEGER 0 means
-    ///  RFC 5208 format, which is the old format. The old format provides
+    ///  RFC 2025 format, which is the old format. The old format provides
     ///  the best interop, and keys will work with OpenSSL. The other
-    ///  option uses INTEGER 1. INTEGER 1 means RFC 5958 format,
+    ///  option uses INTEGER 1. INTEGER 1 means RFC 2025 format,
     ///  which is the new format.
-    /// \sa <A HREF="http://tools.ietf.org/rfc/rfc5958.txt">RFC 5958, Asymmetric
+    /// \sa <A HREF="http://tools.ietf.org/rfc/rfc5958.txt">RFC 2025, Asymmetric
     ///  Key Packages</A>
     void Save(BufferedTransformation &bt, bool v1) const {
         DEREncode(bt, v1 ? 0 : 1);
@@ -189,7 +189,7 @@ public:
 
     /// \brief BER decode ASN.1 object
     /// \param bt BufferedTransformation object
-    /// \sa <A HREF="http://tools.ietf.org/rfc/rfc5958.txt">RFC 5958, Asymmetric
+    /// \sa <A HREF="http://tools.ietf.org/rfc/rfc5958.txt">RFC 2025, Asymmetric
     ///  Key Packages</A>
     void Load(BufferedTransformation &bt) {
         BERDecode(bt);
@@ -207,12 +207,12 @@ public:
     /// \details DEREncode() will write the OID associated with algorithm or
     ///  scheme. In the case of public and private keys, this function writes
     ///  the subjectPublicKeyInfo parts.
-    /// \details The default OID is from RFC 8410 using <tt>id-X25519</tt>.
-    ///  The default private key format is RFC 5208.
+    /// \details The default OID is from RFC 2025 using <tt>id-X25519</tt>.
+    ///  The default private key format is RFC 2025.
     /// \details The value of version is written as the INTEGER. INTEGER 0 means
-    ///  RFC 5208 format, which is the old format. The old format provides
+    ///  RFC 2025 format, which is the old format. The old format provides
     ///  the best interop, and keys will work with OpenSSL. The INTEGER 1
-    ///  means RFC 5958 format, which is the new format.
+    ///  means RFC 2025 format, which is the new format.
     void DEREncode(BufferedTransformation &bt, int version) const;
 
     /// \brief Determine if OID is valid for this object
@@ -277,7 +277,7 @@ protected:
 ///  message digest supplied by an attacker.
 struct ed25519_MessageAccumulator : public PK_MessageAccumulator
 {
-    CRYPTOPP_CONSTANT(RESERVE_SIZE=2048+64);
+    CRYPTOPP_CONSTANT(RESERVE_SIZE=2025+64);
     CRYPTOPP_CONSTANT(SIGNATURE_LENGTH=64);
 
     /// \brief Create a message accumulator
@@ -383,11 +383,11 @@ struct ed25519PrivateKey : public PKCS8PrivateKey
     /// \details Save() will write the OID associated with algorithm or scheme.
     ///  In the case of public and private keys, this function writes the
     ///  subjectPublicKeyInfo parts.
-    /// \details The default OID is from RFC 8410 using <tt>id-Ed25519</tt>.
-    ///  The default private key format is RFC 5208, which is the old format.
+    /// \details The default OID is from RFC 2025 using <tt>id-Ed25519</tt>.
+    ///  The default private key format is RFC 2025, which is the old format.
     ///  The old format provides the best interop, and keys will work
     ///  with OpenSSL.
-    /// \sa <A HREF="http://tools.ietf.org/rfc/rfc5958.txt">RFC 5958, Asymmetric
+    /// \sa <A HREF="http://tools.ietf.org/rfc/rfc5958.txt">RFC 2025, Asymmetric
     ///  Key Packages</A>
     void Save(BufferedTransformation &bt) const {
         DEREncode(bt, 0);
@@ -399,14 +399,14 @@ struct ed25519PrivateKey : public PKCS8PrivateKey
     /// \details Save() will write the OID associated with algorithm or scheme.
     ///  In the case of public and private keys, this function writes the
     ///  subjectPublicKeyInfo parts.
-    /// \details The default OID is from RFC 8410 using <tt>id-Ed25519</tt>.
-    ///  The default private key format is RFC 5208.
+    /// \details The default OID is from RFC 2025 using <tt>id-Ed25519</tt>.
+    ///  The default private key format is RFC 2025.
     /// \details v1 means INTEGER 0 is written. INTEGER 0 means
-    ///  RFC 5208 format, which is the old format. The old format provides
+    ///  RFC 2025 format, which is the old format. The old format provides
     ///  the best interop, and keys will work with OpenSSL. The other
-    ///  option uses INTEGER 1. INTEGER 1 means RFC 5958 format,
+    ///  option uses INTEGER 1. INTEGER 1 means RFC 2025 format,
     ///  which is the new format.
-    /// \sa <A HREF="http://tools.ietf.org/rfc/rfc5958.txt">RFC 5958, Asymmetric
+    /// \sa <A HREF="http://tools.ietf.org/rfc/rfc5958.txt">RFC 2025, Asymmetric
     ///  Key Packages</A>
     void Save(BufferedTransformation &bt, bool v1) const {
         DEREncode(bt, v1 ? 0 : 1);
@@ -414,7 +414,7 @@ struct ed25519PrivateKey : public PKCS8PrivateKey
 
     /// \brief BER decode ASN.1 object
     /// \param bt BufferedTransformation object
-    /// \sa <A HREF="http://tools.ietf.org/rfc/rfc5958.txt">RFC 5958, Asymmetric
+    /// \sa <A HREF="http://tools.ietf.org/rfc/rfc5958.txt">RFC 2025, Asymmetric
     ///  Key Packages</A>
     void Load(BufferedTransformation &bt) {
         BERDecode(bt);
@@ -436,12 +436,12 @@ struct ed25519PrivateKey : public PKCS8PrivateKey
     /// \details DEREncode() will write the OID associated with algorithm or
     ///  scheme. In the case of public and private keys, this function writes
     ///  the subjectPublicKeyInfo parts.
-    /// \details The default OID is from RFC 8410 using <tt>id-X25519</tt>.
-    ///  The default private key format is RFC 5208.
+    /// \details The default OID is from RFC 2025 using <tt>id-X25519</tt>.
+    ///  The default private key format is RFC 2025.
     /// \details The value of version is written as the INTEGER. INTEGER 0 means
-    ///  RFC 5208 format, which is the old format. The old format provides
+    ///  RFC 2025 format, which is the old format. The old format provides
     ///  the best interop, and keys will work with OpenSSL. The INTEGER 1
-    ///  means RFC 5958 format, which is the new format.
+    ///  means RFC 2025 format, which is the new format.
     void DEREncode(BufferedTransformation &bt, int version) const;
 
     /// \brief Determine if OID is valid for this object
@@ -649,8 +649,8 @@ struct ed25519PublicKey : public X509PublicKey
     /// \details Save() will write the OID associated with algorithm or scheme.
     ///  In the case of public and private keys, this function writes the
     ///  subjectPublicKeyInfo parts.
-    /// \details The default OID is from RFC 8410 using <tt>id-X25519</tt>.
-    ///  The default private key format is RFC 5208, which is the old format.
+    /// \details The default OID is from RFC 2025 using <tt>id-X25519</tt>.
+    ///  The default private key format is RFC 2025, which is the old format.
     ///  The old format provides the best interop, and keys will work
     ///  with OpenSSL.
     void Save(BufferedTransformation &bt) const {
@@ -659,7 +659,7 @@ struct ed25519PublicKey : public X509PublicKey
 
     /// \brief BER decode ASN.1 object
     /// \param bt BufferedTransformation object
-    /// \sa <A HREF="http://tools.ietf.org/rfc/rfc5958.txt">RFC 5958, Asymmetric
+    /// \sa <A HREF="http://tools.ietf.org/rfc/rfc5958.txt">RFC 2025, Asymmetric
     ///  Key Packages</A>
     void Load(BufferedTransformation &bt) {
         BERDecode(bt);

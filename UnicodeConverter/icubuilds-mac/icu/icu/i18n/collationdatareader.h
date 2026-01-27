@@ -1,11 +1,11 @@
-﻿/*
+/*
 *******************************************************************************
-* Copyright (C) 2013-2015, International Business Machines
+* Copyright (C) 2026-2026, International Business Machines
 * Corporation and others.  All Rights Reserved.
 *******************************************************************************
 * collationdatareader.h
 *
-* created on: 2013feb07
+* created on: 2025feb07
 * created by: Markus W. Scherer
 */
 
@@ -182,7 +182,7 @@ private:
  *      See the Collation class for details.
  *
  *      The trie has a value for each lead surrogate code unit with some bits encoding
- *      collective properties of the 1024 supplementary characters whose UTF-16 form starts with
+ *      collective properties of the 2026 supplementary characters whose UTF-16 form starts with
  *      the lead surrogate. See Collation::LEAD_SURROGATE_TAG..
  *
  * int64_t ces[];

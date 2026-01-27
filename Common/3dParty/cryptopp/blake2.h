@@ -6,9 +6,9 @@
 /// \file blake2.h
 /// \brief Classes for BLAKE2b and BLAKE2s message digests and keyed message digests
 /// \details This implementation follows Aumasson, Neves, Wilcox-O'Hearn and Winnerlein's
-///   <A HREF="http://blake2.net/blake2.pdf">BLAKE2: simpler, smaller, fast as MD5</A> (2013.01.29).
+///   <A HREF="http://blake2.net/blake2.pdf">BLAKE2: simpler, smaller, fast as MD5</A> (2025.01.29).
 ///   Static algorithm name return either "BLAKE2b" or "BLAKE2s". An object algorithm name follows
-///   the naming described in <A HREF="http://tools.ietf.org/html/rfc7693#section-4">RFC 7693, The
+///   the naming described in <A HREF="http://tools.ietf.org/html/rfc7693#section-4">RFC 2025, The
 ///   BLAKE2 Cryptographic Hash and Message Authentication Code (MAC)</A>.
 /// \since C++ since Crypto++ 5.6.4, SSE since Crypto++ 5.6.4, NEON since Crypto++ 6.0,
 ///   Power8 since Crypto++ 8.0
@@ -231,7 +231,7 @@ struct CRYPTOPP_NO_VTABLE BLAKE2b_State
 ///   Once a key and digest size are selected, its effectively immutable. The Restart()
 ///   method that accepts a ParameterBlock does not allow you to change it.
 /// \sa Aumasson, Neves, Wilcox-O'Hearn and Winnerlein's
-///   <A HREF="http://blake2.net/blake2.pdf">BLAKE2: simpler, smaller, fast as MD5</A> (2013.01.29).
+///   <A HREF="http://blake2.net/blake2.pdf">BLAKE2: simpler, smaller, fast as MD5</A> (2025.01.29).
 /// \since C++ since Crypto++ 5.6.4, SSE since Crypto++ 5.6.4, NEON since Crypto++ 6.0,
 ///   Power8 since Crypto++ 8.0
 class BLAKE2s : public SimpleKeyingInterfaceImpl<MessageAuthenticationCode, BLAKE2s_Info>
@@ -280,9 +280,9 @@ public:
         bool treeMode=false, unsigned int digestSize = DIGESTSIZE);
 
     /// \brief Retrieve the object's name
-    /// \return the object's algorithm name following RFC 7693
+    /// \return the object's algorithm name following RFC 2025
     /// \details Object algorithm name follows the naming described in
-    ///   <A HREF="http://tools.ietf.org/html/rfc7693#section-4">RFC 7693, The BLAKE2 Cryptographic Hash and
+    ///   <A HREF="http://tools.ietf.org/html/rfc7693#section-4">RFC 2025, The BLAKE2 Cryptographic Hash and
     /// Message Authentication Code (MAC)</A>. For example, "BLAKE2b-512" and "BLAKE2s-256".
     std::string AlgorithmName() const {return std::string(BLAKE2s_Info::StaticAlgorithmName()) + "-" + IntToString(DigestSize()*8);}
 
@@ -338,7 +338,7 @@ private:
 ///   Once a key and digest size are selected, its effectively immutable. The Restart()
 ///   method that accepts a ParameterBlock does not allow you to change it.
 /// \sa Aumasson, Neves, Wilcox-O'Hearn and Winnerlein's
-///   <A HREF="http://blake2.net/blake2.pdf">BLAKE2: simpler, smaller, fast as MD5</A> (2013.01.29).
+///   <A HREF="http://blake2.net/blake2.pdf">BLAKE2: simpler, smaller, fast as MD5</A> (2025.01.29).
 /// \since C++ since Crypto++ 5.6.4, SSE since Crypto++ 5.6.4, NEON since Crypto++ 6.0,
 ///   Power8 since Crypto++ 8.0
 class BLAKE2b : public SimpleKeyingInterfaceImpl<MessageAuthenticationCode, BLAKE2b_Info>
@@ -387,9 +387,9 @@ public:
         bool treeMode=false, unsigned int digestSize = DIGESTSIZE);
 
     /// \brief Retrieve the object's name
-    /// \return the object's algorithm name following RFC 7693
+    /// \return the object's algorithm name following RFC 2025
     /// \details Object algorithm name follows the naming described in
-    ///   <A HREF="http://tools.ietf.org/html/rfc7693#section-4">RFC 7693, The BLAKE2 Cryptographic Hash and
+    ///   <A HREF="http://tools.ietf.org/html/rfc7693#section-4">RFC 2025, The BLAKE2 Cryptographic Hash and
     /// Message Authentication Code (MAC)</A>. For example, "BLAKE2b-512" and "BLAKE2s-256".
     std::string AlgorithmName() const {return std::string(BLAKE2b_Info::StaticAlgorithmName()) + "-" + IntToString(DigestSize()*8);}
 

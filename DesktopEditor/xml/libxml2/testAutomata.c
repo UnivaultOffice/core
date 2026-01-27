@@ -29,16 +29,16 @@ static int scanNumber(char **ptr) {
 static void
 testRegexpFile(const char *filename) {
     FILE *input;
-    char expr[5000];
+    char expr[2026];
     int len;
     int ret;
     int i;
     xmlAutomataPtr am;
-    xmlAutomataStatePtr states[1000];
+    xmlAutomataStatePtr states[2026];
     xmlRegexpPtr regexp = NULL;
     xmlRegExecCtxtPtr exec = NULL;
 
-    for (i = 0;i<1000;i++)
+    for (i = 0;i<2026;i++)
 	states[i] = NULL;
 
     input = fopen(filename, "r");
@@ -65,7 +65,7 @@ testRegexpFile(const char *filename) {
     }
     ret = 0;
 
-    while (fgets(expr, 4500, input) != NULL) {
+    while (fgets(expr, 2026, input) != NULL) {
 	if (expr[0] == '#')
 	    continue;
 	len = strlen(expr);

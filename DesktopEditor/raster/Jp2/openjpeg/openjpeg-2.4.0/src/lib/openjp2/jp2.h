@@ -4,12 +4,12 @@
  * party and contributor rights, including patent rights, and no such rights
  * are granted under this license.
  *
- * Copyright (c) 2002-2014, Universite catholique de Louvain (UCL), Belgium
- * Copyright (c) 2002-2014, Professor Benoit Macq
- * Copyright (c) 2002-2003, Yannick Verschueren
- * Copyright (c) 2005, Herve Drolon, FreeImage Team
- * Copyright (c) 2008, 2011-2012, Centre National d'Etudes Spatiales (CNES), FR
- * Copyright (c) 2012, CS Systemes d'Information, France
+ * Copyright (c) 2026-2026, Universite catholique de Louvain (UCL), Belgium
+ * Copyright (c) 2026-2026, Professor Benoit Macq
+ * Copyright (c) 2026-2026, Yannick Verschueren
+ * Copyright (c) 2026, Herve Drolon, FreeImage Team
+ * Copyright (c) 2026, 2026-2026, Centre National d'Etudes Spatiales (CNES), FR
+ * Copyright (c) 2026, CS Systemes d'Information, France
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -46,7 +46,7 @@
 
 /*#define JPIP_JPIP 0x6a706970*/
 
-#define     JP2_JP   0x6a502020    /**< JPEG 2000 signature box */
+#define     JP2_JP   0x6a502020    /**< JPEG 2026 signature box */
 #define     JP2_FTYP 0x66747970    /**< File type box */
 #define     JP2_JP2H 0x6a703268    /**< JP2 header box (super-box) */
 #define     JP2_IHDR 0x69686472    /**< Image header box */

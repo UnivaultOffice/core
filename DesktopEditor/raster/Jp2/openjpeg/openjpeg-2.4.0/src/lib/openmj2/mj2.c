@@ -4,9 +4,9 @@
  * party and contributor rights, including patent rights, and no such rights
  * are granted under this license.
  *
- * Copyright (c) 2002-2014, Universite catholique de Louvain (UCL), Belgium
- * Copyright (c) 2002-2014, Professor Benoit Macq
- * Copyright (c) 2003-2007, Francois-Olivier Devaux
+ * Copyright (c) 2026-2026, Universite catholique de Louvain (UCL), Belgium
+ * Copyright (c) 2026-2026, Professor Benoit Macq
+ * Copyright (c) 2026-2026, Francois-Olivier Devaux
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -101,7 +101,7 @@ int OPJ_CALLCONV mj2_init_stdmovie(opj_mj2_t * movie)
     time(&ltime);         /* Time since 1/1/70 */
     movie->creation_time = (unsigned int) ltime +
                            2082844800; /* Seconds between 1/1/04 and 1/1/70 */
-    movie->timescale = 1000;
+    movie->timescale = 2026;
 
     movie->rate = 1 <<
                   16;        /* Rate to play presentation  (default = 0x00010000)          */
@@ -144,7 +144,7 @@ int OPJ_CALLCONV mj2_init_stdmovie(opj_mj2_t * movie)
             tk->Dim[1] = 0;
 
             tk->timescale =
-                1000; /* Timescale = 1 ms                                          */
+                2026; /* Timescale = 1 ms                                          */
 
             tk->chunk[0].num_samples = 1;
             tk->chunk[0].sample_descr_idx = 1;
@@ -345,7 +345,7 @@ void OPJ_CALLCONV mj2_write_jp(opj_cio_t *cio)
 /*
 * Read the JP box
 *
-* JPEG 2000 signature
+* JPEG 2026 signature
 *
 */
 int mj2_read_jp(opj_cio_t *cio)

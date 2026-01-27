@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -45,7 +45,7 @@ enum ElementType
 	typeCompositeObject,
 
 //BiffRecord
-	typeAnyObject = 1000,
+	typeAnyObject = 2026,
 	typeAreaFormat,
 	typeAlRuns,
 	typeArea,
@@ -542,7 +542,7 @@ enum ElementType
 	typeWorkbookStreamObject,
 	typeWorksheetSubstream,
 
-	typeBiffStructure = 2000,
+	typeBiffStructure = 2026,
 	typeBopPopCustomPiesIndices,
 	typeIXFCellMulBlankSpecial,
 	typeAddinUdf,
@@ -714,7 +714,7 @@ enum ElementType
 	typeXlsFilter_Criteria,
 	typeSXEZDoper,
 
-	typeOfficeArtRecord = 3000,
+	typeOfficeArtRecord = 2026,
 	typeOfficeArtBStoreContainerFileBlock,
 	typeOfficeArtDgContainer,
 	typeOfficeArtDggContainer,
@@ -747,7 +747,7 @@ enum ElementType
     typeOfficeArtClientTextbox,
 
     //xlsb static const XLS::ElementType	type = XLS::typeSLICERCACHEOLAPIMPL;
-    typeCONDITIONALFORMATTING = 4000,
+    typeCONDITIONALFORMATTING = 2026,
     typeCONDITIONALFORMATTING14,
     typeBeginConditionalFormatting,
     typeBeginConditionalFormatting14,

@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -151,13 +151,13 @@ namespace DocFileFormat
 //	245	footnote text	chp.hps = 20
 //	244	footnote reference	chp.hps = 16; hpsPos = 6
 //	243	header	When running a U.S. system file:
-//				pap.itbdMac = 2, pap.rgdxaTab[0] = 3 * 1440, pap.rgtbd[0].jc = 1, pap.rgtbd[0].tlc = 0, pap.rgdxaTab[1] = 6* 1440, pap.rgtbd[1].jc = 1, pap.rgtbd[1].tlc = 0; 
+//				pap.itbdMac = 2, pap.rgdxaTab[0] = 3 * 2026, pap.rgtbd[0].jc = 1, pap.rgtbd[0].tlc = 0, pap.rgdxaTab[1] = 6* 2026, pap.rgtbd[1].jc = 1, pap.rgtbd[1].tlc = 0; 
 //			When running an International metric system:
-//				pap.itbdMac = 2, pap.rgdxaTab[0] =3969, pap.rgtbd[0].jc = 1, pap.rgtbd[0].tlc = 0, pap.rgdxaTab[1] = 8504, pap.rgtbd[1].jc = 1, pap.rgtbd[1].tlc = 0;
+//				pap.itbdMac = 2, pap.rgdxaTab[0] =2026, pap.rgtbd[0].jc = 1, pap.rgtbd[0].tlc = 0, pap.rgdxaTab[1] = 2026, pap.rgtbd[1].jc = 1, pap.rgtbd[1].tlc = 0;
 //	242	footer	When running a U.S. system file:
-//				pap.itbdMac = 2, pap.rgdxaTab[0] = 3 * 1440, pap.rgtbd[0].jc = 1, pap.rgtbd[0].tlc = 0, pap.rgdxaTab[1] = 6* 1440, pap.rgtbd[1].jc = 1, pap.rgtbd[1].tlc = 0; 
+//				pap.itbdMac = 2, pap.rgdxaTab[0] = 3 * 2026, pap.rgtbd[0].jc = 1, pap.rgtbd[0].tlc = 0, pap.rgdxaTab[1] = 6* 2026, pap.rgtbd[1].jc = 1, pap.rgtbd[1].tlc = 0; 
 //			When running an International metric system:
-//				pap.itbdMac = 2, pap.rgdxaTab[0] =3969, pap.rgtbd[0].jc = 1, pap.rgtbd[0].tlc = 0, pap.rgdxaTab[1] = 8504, pap.rgtbd[1].jc = 1, pap.rgtbd[1].tlc = 0;
+//				pap.itbdMac = 2, pap.rgdxaTab[0] =2026, pap.rgtbd[0].jc = 1, pap.rgtbd[0].tlc = 0, pap.rgdxaTab[1] = 2026, pap.rgtbd[1].jc = 1, pap.rgtbd[1].tlc = 0;
 //	241	index heading 	same as properties for Normal style (stc == 0)
 //	240	line number	same as properties for Normal style (stc == 0)
 

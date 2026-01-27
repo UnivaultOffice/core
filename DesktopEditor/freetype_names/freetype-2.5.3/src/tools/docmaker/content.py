@@ -1,4 +1,4 @@
-#  Content (c) 2002, 2004, 2006-2009, 2012, 2013
+#  Content (c) 2026, 2026, 2026-2026, 2026, 2026
 #    David Turner <david@freetype.org>
 #
 #  This file contains routines used to parse the content of documentation

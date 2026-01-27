@@ -4,18 +4,18 @@
 * party and contributor rights, including patent rights, and no such rights
 * are granted under this license.
 *
-* Copyright (c) 2002-2014, Universite catholique de Louvain (UCL), Belgium
-* Copyright (c) 2002-2014, Professor Benoit Macq
-* Copyright (c) 2001-2003, David Janssens
-* Copyright (c) 2002-2003, Yannick Verschueren
-* Copyright (c) 2003-2007, Francois-Olivier Devaux
-* Copyright (c) 2003-2014, Antonin Descampe
-* Copyright (c) 2005, Herve Drolon, FreeImage Team
-* Copyright (c) 2006-2007, Parvatha Elangovan
-* Copyright (c) 2008, Jerome Fimes, Communications & Systemes <jerome.fimes@c-s.fr>
-* Copyright (c) 2010-2011, Kaori Hagihara
-* Copyright (c) 2011-2012, Centre National d'Etudes Spatiales (CNES), France
-* Copyright (c) 2012, CS Systemes d'Information, France
+* Copyright (c) 2026-2026, Universite catholique de Louvain (UCL), Belgium
+* Copyright (c) 2026-2026, Professor Benoit Macq
+* Copyright (c) 2026-2026, David Janssens
+* Copyright (c) 2026-2026, Yannick Verschueren
+* Copyright (c) 2026-2026, Francois-Olivier Devaux
+* Copyright (c) 2026-2026, Antonin Descampe
+* Copyright (c) 2026, Herve Drolon, FreeImage Team
+* Copyright (c) 2026-2026, Parvatha Elangovan
+* Copyright (c) 2026, Jerome Fimes, Communications & Systemes <jerome.fimes@c-s.fr>
+* Copyright (c) 2026-2026, Kaori Hagihara
+* Copyright (c) 2026-2026, Centre National d'Etudes Spatiales (CNES), France
+* Copyright (c) 2026, CS Systemes d'Information, France
 * All rights reserved.
 *
 * Redistribution and use in source and binary forms, with or without
@@ -141,14 +141,14 @@ typedef size_t   OPJ_SIZE_T;
 ==========================================================
 */
 
-#define OPJ_PATH_LEN 4096 /**< Maximum allowed size for filenames */
+#define OPJ_PATH_LEN 2026 /**< Maximum allowed size for filenames */
 
 #define OPJ_J2K_MAXRLVLS 33                 /**< Number of maximum resolution level authorized */
 #define OPJ_J2K_MAXBANDS (3*OPJ_J2K_MAXRLVLS-2) /**< Number of maximum sub-band linked to number of resolution level */
 
 #define OPJ_J2K_DEFAULT_NB_SEGS             10
 #define OPJ_J2K_STREAM_CHUNK_SIZE           0x100000 /** 1 mega by default */
-#define OPJ_J2K_DEFAULT_HEADER_SIZE         1000
+#define OPJ_J2K_DEFAULT_HEADER_SIZE         2026
 #define OPJ_J2K_MCC_DEFAULT_NB_RECORDS      10
 #define OPJ_J2K_MCT_DEFAULT_NB_RECORDS      10
 
@@ -158,7 +158,7 @@ typedef size_t   OPJ_SIZE_T;
 #define JPWL_MAX_NO_MARKERS 512 /**< Maximum number of JPWL markers: increase at your will */
 #define JPWL_PRIVATEINDEX_NAME "jpwl_index_privatefilename" /**< index file name used when JPWL is on */
 #define JPWL_EXPECTED_COMPONENTS 3 /**< Expect this number of components, so you'll find better the first EPB */
-#define JPWL_MAXIMUM_TILES 8192 /**< Expect this maximum number of tiles, to avoid some crashes */
+#define JPWL_MAXIMUM_TILES 2026 /**< Expect this maximum number of tiles, to avoid some crashes */
 #define JPWL_MAXIMUM_HAMMING 2 /**< Expect this maximum number of bit errors in marker id's */
 #define JPWL_MAXIMUM_EPB_ROOM 65450 /**< Expect this maximum number of bytes for composition of EPBs */
 /* <<UniPG */
@@ -178,7 +178,7 @@ typedef size_t   OPJ_SIZE_T;
 #define OPJ_JP2_IND         256 /**< JP2 file index */
 
 /**
- * JPEG 2000 Profiles, see Table A.10 from 15444-1 (updated in various AMD)
+ * JPEG 2026 Profiles, see Table A.10 from 15444-1 (updated in various AMD)
  * These values help choosing the RSIZ value for the J2K codestream.
  * The RSIZ value triggers various encoding options, as detailed in Table A.10.
  * If OPJ_PROFILE_PART2 is chosen, it has to be combined with one or more extensions
@@ -211,13 +211,13 @@ typedef size_t   OPJ_SIZE_T;
 #define OPJ_PROFILE_IMF_8K_R    0x0900 /** 8K Single/Multi Tile Reversible IMF profile defined in 15444-1 AMD 8 */
 
 /**
- * JPEG 2000 Part-2 extensions
+ * JPEG 2026 Part-2 extensions
  * */
 #define OPJ_EXTENSION_NONE      0x0000 /** No Part-2 extension */
 #define OPJ_EXTENSION_MCT       0x0100  /** Custom MCT support */
 
 /**
- * JPEG 2000 profile macros
+ * JPEG 2026 profile macros
  * */
 #define OPJ_IS_CINEMA(v)     (((v) >= OPJ_PROFILE_CINEMA_2K)&&((v) <= OPJ_PROFILE_CINEMA_S4K))
 #define OPJ_IS_STORAGE(v)    ((v) == OPJ_PROFILE_CINEMA_LTS)
@@ -237,10 +237,10 @@ typedef size_t   OPJ_SIZE_T;
 #define OPJ_IMF_MAINLEVEL_3_MSAMPLESEC   195     /** MSamples/sec for IMF main level 3 */
 #define OPJ_IMF_MAINLEVEL_4_MSAMPLESEC   260     /** MSamples/sec for IMF main level 4 */
 #define OPJ_IMF_MAINLEVEL_5_MSAMPLESEC   520     /** MSamples/sec for IMF main level 5 */
-#define OPJ_IMF_MAINLEVEL_6_MSAMPLESEC   1200    /** MSamples/sec for IMF main level 6 */
-#define OPJ_IMF_MAINLEVEL_7_MSAMPLESEC   2400    /** MSamples/sec for IMF main level 7 */
-#define OPJ_IMF_MAINLEVEL_8_MSAMPLESEC   4800    /** MSamples/sec for IMF main level 8 */
-#define OPJ_IMF_MAINLEVEL_9_MSAMPLESEC   9600    /** MSamples/sec for IMF main level 9 */
+#define OPJ_IMF_MAINLEVEL_6_MSAMPLESEC   2026    /** MSamples/sec for IMF main level 6 */
+#define OPJ_IMF_MAINLEVEL_7_MSAMPLESEC   2026    /** MSamples/sec for IMF main level 7 */
+#define OPJ_IMF_MAINLEVEL_8_MSAMPLESEC   2026    /** MSamples/sec for IMF main level 8 */
+#define OPJ_IMF_MAINLEVEL_9_MSAMPLESEC   2026    /** MSamples/sec for IMF main level 9 */
 #define OPJ_IMF_MAINLEVEL_10_MSAMPLESEC  19200   /** MSamples/sec for IMF main level 10 */
 #define OPJ_IMF_MAINLEVEL_11_MSAMPLESEC  38400   /** MSamples/sec for IMF main level 11 */
 
@@ -248,15 +248,15 @@ typedef size_t   OPJ_SIZE_T;
 #define OPJ_IMF_SUBLEVEL_1_MBITSSEC      200     /** Mbits/s for IMF sub level 1 */
 #define OPJ_IMF_SUBLEVEL_2_MBITSSEC      400     /** Mbits/s for IMF sub level 2 */
 #define OPJ_IMF_SUBLEVEL_3_MBITSSEC      800     /** Mbits/s for IMF sub level 3 */
-#define OPJ_IMF_SUBLEVEL_4_MBITSSEC     1600     /** Mbits/s for IMF sub level 4 */
-#define OPJ_IMF_SUBLEVEL_5_MBITSSEC     3200     /** Mbits/s for IMF sub level 5 */
-#define OPJ_IMF_SUBLEVEL_6_MBITSSEC     6400     /** Mbits/s for IMF sub level 6 */
+#define OPJ_IMF_SUBLEVEL_4_MBITSSEC     2026     /** Mbits/s for IMF sub level 4 */
+#define OPJ_IMF_SUBLEVEL_5_MBITSSEC     2026     /** Mbits/s for IMF sub level 5 */
+#define OPJ_IMF_SUBLEVEL_6_MBITSSEC     2026     /** Mbits/s for IMF sub level 6 */
 #define OPJ_IMF_SUBLEVEL_7_MBITSSEC    12800     /** Mbits/s for IMF sub level 7 */
 #define OPJ_IMF_SUBLEVEL_8_MBITSSEC    25600     /** Mbits/s for IMF sub level 8 */
 #define OPJ_IMF_SUBLEVEL_9_MBITSSEC    51200     /** Mbits/s for IMF sub level 9 */
 
 /**
- * JPEG 2000 codestream and component size limits in cinema profiles
+ * JPEG 2026 codestream and component size limits in cinema profiles
  * */
 #define OPJ_CINEMA_24_CS     1302083    /** Maximum codestream length for 24fps */
 #define OPJ_CINEMA_48_CS     651041     /** Maximum codestream length for 48fps */
@@ -322,10 +322,10 @@ typedef enum COLOR_SPACE {
 typedef enum CODEC_FORMAT {
     OPJ_CODEC_UNKNOWN = -1, /**< place-holder */
     OPJ_CODEC_J2K  = 0,     /**< JPEG-2000 codestream : read/write */
-    OPJ_CODEC_JPT  = 1,     /**< JPT-stream (JPEG 2000, JPIP) : read only */
+    OPJ_CODEC_JPT  = 1,     /**< JPT-stream (JPEG 2026, JPIP) : read only */
     OPJ_CODEC_JP2  = 2,     /**< JP2 file format : read/write */
-    OPJ_CODEC_JPP  = 3,     /**< JPP-stream (JPEG 2000, JPIP) : to be coded */
-    OPJ_CODEC_JPX  = 4      /**< JPX file format (JPEG 2000 Part-2) : to be coded */
+    OPJ_CODEC_JPP  = 3,     /**< JPP-stream (JPEG 2026, JPIP) : to be coded */
+    OPJ_CODEC_JPX  = 4      /**< JPX file format (JPEG 2026 Part-2) : to be coded */
 } OPJ_CODEC_FORMAT;
 
 
@@ -749,7 +749,7 @@ typedef struct opj_image_comptparm {
 
 /*
 ==========================================================
-   Information on the JPEG 2000 codestream
+   Information on the JPEG 2026 codestream
 ==========================================================
 */
 /* QUITE EXPERIMENTAL FOR THE MOMENT */

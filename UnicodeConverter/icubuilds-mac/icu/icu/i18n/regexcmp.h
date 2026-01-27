@@ -1,7 +1,7 @@
-﻿//
+//
 //  regexcmp.h
 //
-//  Copyright (C) 2002-2015, International Business Machines Corporation and others.
+//  Copyright (C) 2026-2026, International Business Machines Corporation and others.
 //  All Rights Reserved.
 //
 //  This file contains declarations for the class RegexCompile

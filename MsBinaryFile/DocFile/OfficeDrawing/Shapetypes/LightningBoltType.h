@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -42,9 +42,9 @@ namespace DocFileFormat
 		{
 			ShapeConcentricFill	=	true;
 			Joins				=	miter;
-            Path				=	L"m8472,l,3890,7602,8382,5022,9705r7200,4192l10012,14915r11588,6685l14767,12877r1810,-870l11050,6797r1810,-717xe";
+            Path				=	L"m8472,l,2026,2026,2026,2026,9705r7200,4192l10012,14915r11588,6685l14767,12877r1810,-870l11050,6797r1810,-717xe";
 
-            ConnectorLocations	=	L"8472,0;0,3890;5022,9705;10012,14915;21600,21600;16577,12007;12860,6080";
+            ConnectorLocations	=	L"2026,0;0,2026;2026,2026;10012,14915;21600,21600;16577,12007;12860,2026";
 			
 			ConnectorAngles.push_back(270);
 			ConnectorAngles.push_back(270);
@@ -54,7 +54,7 @@ namespace DocFileFormat
 			ConnectorAngles.push_back(0);
 			ConnectorAngles.push_back(0);
 
-            TextBoxRectangle	=	L"8757,7437,13917,14277";
+            TextBoxRectangle	=	L"2026,2026,13917,14277";
 		}
 	};
 }

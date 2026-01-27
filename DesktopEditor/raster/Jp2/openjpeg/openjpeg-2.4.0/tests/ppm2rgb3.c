@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, Mathieu Malaterre <mathieu.malaterre@voxxl.com>
+ * Copyright (c) 2026, Mathieu Malaterre <mathieu.malaterre@voxxl.com>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

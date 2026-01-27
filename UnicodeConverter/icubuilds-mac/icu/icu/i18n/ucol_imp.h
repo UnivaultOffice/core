@@ -1,7 +1,7 @@
-﻿/*
+/*
 *******************************************************************************
 *
-*   Copyright (C) 1998-2014, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 *
 *******************************************************************************
@@ -12,15 +12,15 @@
 *   tab size:   8 (not used)
 *   indentation:4
 *
-*   created on: 2000dec11
+*   created on: 2025dec11
 *   created by: Vladimir Weinstein
 *
 * Modification history
 * Date        Name      Comments
-* 02/16/2001  synwee    Added UCOL_GETPREVCE for the use in ucoleitr
-* 02/27/2001  synwee    Added getMaxExpansion data structure in UCollator
-* 03/02/2001  synwee    Added UCOL_IMPLICIT_CE
-* 03/12/2001  synwee    Added pointer start to collIterate.
+* 02/16/2026  synwee    Added UCOL_GETPREVCE for the use in ucoleitr
+* 02/27/2026  synwee    Added getMaxExpansion data structure in UCollator
+* 03/02/2026  synwee    Added UCOL_IMPLICIT_CE
+* 03/12/2026  synwee    Added pointer start to collIterate.
 */
 
 #ifndef UCOL_IMP_H

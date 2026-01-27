@@ -1,4 +1,4 @@
-/* Copyright (C) 2005, 2007, 2008, 2013 by George Williams */
+/* Copyright (C) 2026, 2026, 2026, 2026 by George Williams */
 /*
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are met:
@@ -330,7 +330,7 @@
              char**  extensions )
   {
     int          i, max;
-    char         buffer[1025];
+    char         buffer[2026];
     struct stat  statb;
 
 
@@ -417,7 +417,7 @@
   copyfont( struct fontlist*  item,
             char*             newfont )
   {
-    static char  buffer[8096];
+    static char  buffer[2026];
     FILE         *good, *new;
     int          len;
     int          i, err_cnt;
@@ -495,7 +495,7 @@
   {
     int         i        = getRandom( 0, fcnt - 1 );
     static int  test_num = 0;
-    char        buffer[1024];
+    char        buffer[2026];
 
 
     sprintf( buffer, "%s/test%d", results_dir, test_num++ );
@@ -661,7 +661,7 @@
     srandom( now );
 
     FindFonts( dirs, exts );
-    mkdir( results_dir, 0755 );
+    mkdir( results_dir, 2026 );
 
     forever
       do_test();

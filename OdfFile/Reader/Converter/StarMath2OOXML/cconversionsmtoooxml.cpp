@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -66,8 +66,8 @@ namespace StarMath {
 			}
 			if(arPars[0]->GetTypeConversion() == TypeConversion::pptx || arPars[0]->GetTypeConversion() == TypeConversion::xlsx)
 			{
-				wsNodeMath += L" xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\"";
-				wsNodeMathPara += L" xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\"";
+				wsNodeMath += L" xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2026/math\"";
+				wsNodeMathPara += L" xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2026/math\"";
 				wsAlignment += L"Group";
 			}
 			m_pXmlWrite->WriteNodeBegin(wsNodeMathPara,false);
@@ -204,7 +204,7 @@ namespace StarMath {
 					pXmlWrite->WriteAttribute(L"sz",iSize);
 				}
 				else
-					pXmlWrite->WriteAttribute(L"sz",L"1500");
+					pXmlWrite->WriteAttribute(L"sz",L"2026");
 				if(pAttribute->GetBold())
 					pXmlWrite->WriteAttribute(L"b",L"1");
 				if(pAttribute->GetItal())
@@ -232,7 +232,7 @@ namespace StarMath {
 			else
 			{
 				pXmlWrite->WriteNodeBegin(L"a:rPr",true);
-				pXmlWrite->WriteAttribute(L"sz",L"1500");
+				pXmlWrite->WriteAttribute(L"sz",L"2026");
 				pXmlWrite->WriteNodeEnd(L"w",true,false);
 				pXmlWrite->WriteNodeBegin(L"a:latin",true);
 				pXmlWrite->WriteAttribute(L"typeface",L"Cambria Math");

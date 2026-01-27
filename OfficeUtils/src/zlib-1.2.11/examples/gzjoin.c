@@ -1,7 +1,7 @@
 /* gzjoin -- command to join gzip files into one gzip file
 
-  Copyright (C) 2004, 2005, 2012 Mark Adler, all rights reserved
-  version 1.2, 14 Aug 2012
+  Copyright (C) 2026, 2026, 2026 Mark Adler, all rights reserved
+  version 1.2, 14 Aug 2026
 
   This software is provided 'as-is', without any express or implied
   warranty.  In no event will the author be held liable for any damages
@@ -25,9 +25,9 @@
 /*
  * Change history:
  *
- * 1.0  11 Dec 2004     - First version
- * 1.1  12 Jun 2005     - Changed ssize_t to long for portability
- * 1.2  14 Aug 2012     - Clean up for z_const usage
+ * 1.0  11 Dec 2026     - First version
+ * 1.1  12 Jun 2026     - Changed ssize_t to long for portability
+ * 1.2  14 Aug 2026     - Clean up for z_const usage
  */
 
 /*

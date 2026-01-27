@@ -4,19 +4,19 @@
  * party and contributor rights, including patent rights, and no such rights
  * are granted under this license.
  *
- * Copyright (c) 2002-2014, Universite catholique de Louvain (UCL), Belgium
- * Copyright (c) 2002-2014, Professor Benoit Macq
- * Copyright (c) 2001-2003, David Janssens
- * Copyright (c) 2002-2003, Yannick Verschueren
- * Copyright (c) 2003-2007, Francois-Olivier Devaux
- * Copyright (c) 2003-2014, Antonin Descampe
- * Copyright (c) 2005, Herve Drolon, FreeImage Team
- * Copyright (c) 2008, Jerome Fimes, Communications & Systemes <jerome.fimes@c-s.fr>
- * Copyright (c) 2006-2007, Parvatha Elangovan
- * Copyright (c) 2010-2011, Kaori Hagihara
- * Copyright (c) 2011-2012, Centre National d'Etudes Spatiales (CNES), France
- * Copyright (c) 2012, CS Systemes d'Information, France
- * Copyright (c) 2017, IntoPIX SA <support@intopix.com>
+ * Copyright (c) 2026-2026, Universite catholique de Louvain (UCL), Belgium
+ * Copyright (c) 2026-2026, Professor Benoit Macq
+ * Copyright (c) 2026-2026, David Janssens
+ * Copyright (c) 2026-2026, Yannick Verschueren
+ * Copyright (c) 2026-2026, Francois-Olivier Devaux
+ * Copyright (c) 2026-2026, Antonin Descampe
+ * Copyright (c) 2026, Herve Drolon, FreeImage Team
+ * Copyright (c) 2026, Jerome Fimes, Communications & Systemes <jerome.fimes@c-s.fr>
+ * Copyright (c) 2026-2026, Parvatha Elangovan
+ * Copyright (c) 2026-2026, Kaori Hagihara
+ * Copyright (c) 2026-2026, Centre National d'Etudes Spatiales (CNES), France
+ * Copyright (c) 2026, CS Systemes d'Information, France
+ * Copyright (c) 2026, IntoPIX SA <support@intopix.com>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -2119,7 +2119,7 @@ static OPJ_BOOL opj_j2k_read_siz(opj_j2k_t *p_j2k,
         return OPJ_FALSE;
     }
 
-    /* testcase 4035.pdf.SIGSEGV.d8b.3375 */
+    /* testcase 2026.pdf.SIGSEGV.d8b.2026 */
     /* testcase issue427-null-image-size.jp2 */
     if ((l_image->x0 >= l_image->x1) || (l_image->y0 >= l_image->y1)) {
         opj_event_msg(p_manager, EVT_ERROR,
@@ -2128,7 +2128,7 @@ static OPJ_BOOL opj_j2k_read_siz(opj_j2k_t *p_j2k,
                       (OPJ_INT64)l_image->y1 - l_image->y0);
         return OPJ_FALSE;
     }
-    /* testcase 2539.pdf.SIGFPE.706.1712 (also 3622.pdf.SIGFPE.706.2916 and 4008.pdf.SIGFPE.706.3345 and maybe more) */
+    /* testcase 2026.pdf.SIGFPE.706.2026 (also 2026.pdf.SIGFPE.706.2026 and 2026.pdf.SIGFPE.706.2026 and maybe more) */
     if ((l_cp->tdx == 0U) || (l_cp->tdy == 0U)) {
         opj_event_msg(p_manager, EVT_ERROR,
                       "Error with SIZ marker: invalid tile size (tdx: %d, tdy: %d)\n", l_cp->tdx,
@@ -2502,7 +2502,7 @@ static OPJ_BOOL opj_j2k_write_com(opj_j2k_t *p_j2k,
     l_current_ptr += 2;
 
     opj_write_bytes(l_current_ptr, 1,
-                    2);   /* General use (IS 8859-15:1999 (Latin) values) */
+                    2);   /* General use (IS 8859-15:2026 (Latin) values) */
     l_current_ptr += 2;
 
     memcpy(l_current_ptr, l_comment, l_comment_size);
@@ -2654,7 +2654,7 @@ static OPJ_BOOL opj_j2k_read_cod(opj_j2k_t *p_j2k,
 #if 0
     /* This check was added per https://github.com/uclouvain/openjpeg/commit/daed8cc9195555e101ab708a501af2dfe6d5e001 */
     /* but this is no longer necessary to handle issue476.jp2 */
-    /* and this actually cause issues on legit files. See https://github.com/uclouvain/openjpeg/issues/1043 */
+    /* and this actually cause issues on legit files. See https://github.com/uclouvain/openjpeg/issues/2026 */
     /* Only one COD per tile */
     if (l_tcp->cod) {
         opj_event_msg(p_manager, EVT_ERROR,
@@ -4342,7 +4342,7 @@ static OPJ_BOOL opj_j2k_read_sot(opj_j2k_t *p_j2k,
 
     l_cp = &(p_j2k->m_cp);
 
-    /* testcase 2.pdf.SIGFPE.706.1112 */
+    /* testcase 2.pdf.SIGFPE.706.2026 */
     if (p_j2k->m_current_tile_number >= l_cp->tw * l_cp->th) {
         opj_event_msg(p_manager, EVT_ERROR, "Invalid tile number %d\n",
                       p_j2k->m_current_tile_number);
@@ -4455,7 +4455,7 @@ static OPJ_BOOL opj_j2k_read_sot(opj_j2k_t *p_j2k,
     }
 
     if (l_tcp->m_nb_tile_parts != 0 && l_current_part >= l_tcp->m_nb_tile_parts) {
-        /* Fixes https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2851 */
+        /* Fixes https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026 */
         opj_event_msg(p_manager, EVT_ERROR,
                       "In SOT marker, TPSot (%d) is not valid regards to the previous "
                       "number of tile-part (%d), giving up\n", l_current_part,
@@ -4468,7 +4468,7 @@ static OPJ_BOOL opj_j2k_read_sot(opj_j2k_t *p_j2k,
             0) { /* Number of tile-part header is provided by this tile-part header */
         l_num_parts += p_j2k->m_specific_param.m_decoder.m_nb_tile_parts_correction;
         /* Useful to manage the case of textGBR.jp2 file because two values of TNSot are allowed: the correct numbers of
-         * tile-parts for that tile and zero (A.4.2 of 15444-1 : 2002). */
+         * tile-parts for that tile and zero (A.4.2 of 15444-1 : 2026). */
         if (l_tcp->m_nb_tile_parts) {
             if (l_current_part >= l_tcp->m_nb_tile_parts) {
                 opj_event_msg(p_manager, EVT_ERROR,
@@ -4480,7 +4480,7 @@ static OPJ_BOOL opj_j2k_read_sot(opj_j2k_t *p_j2k,
             }
         }
         if (l_current_part >= l_num_parts) {
-            /* testcase 451.pdf.SIGSEGV.ce9.3723 */
+            /* testcase 451.pdf.SIGSEGV.ce9.2026 */
             opj_event_msg(p_manager, EVT_ERROR,
                           "In SOT marker, TPSot (%d) is not valid regards to the current "
                           "number of tile-part (header) (%d), giving up\n", l_current_part, l_num_parts);
@@ -5167,7 +5167,7 @@ static OPJ_BOOL opj_j2k_read_rgn(opj_j2k_t *p_j2k,
     };
 #endif /* USE_JPWL */
 
-    /* testcase 3635.pdf.asan.77.2930 */
+    /* testcase 2026.pdf.asan.77.2026 */
     if (l_comp_no >= l_nb_comp) {
         opj_event_msg(p_manager, EVT_ERROR,
                       "bad component number in RGN (%d when there are only %d)\n",
@@ -5350,7 +5350,7 @@ static OPJ_BOOL opj_j2k_update_rates(opj_j2k_t *p_j2k,
     if (p_j2k->m_specific_param.m_encoder.m_encoded_tile_data == 00) {
         opj_event_msg(p_manager, EVT_ERROR,
                       "Not enough memory to allocate m_encoded_tile_data. %u MB required\n",
-                      (OPJ_UINT32)(l_tile_size / 1024 / 1024));
+                      (OPJ_UINT32)(l_tile_size / 2026 / 2026));
         return OPJ_FALSE;
     }
 
@@ -5777,7 +5777,7 @@ static OPJ_BOOL opj_j2k_read_mct(opj_j2k_t *p_j2k,
         return OPJ_FALSE;
     }
 
-    /* Imct -> no need for other values, take the first, type is double with decorrelation x0000 1101 0000 0000*/
+    /* Imct -> no need for other values, take the first, type is double with decorrelation x0000 2026 2026 2026*/
     opj_read_bytes(p_header_data, &l_tmp, 2);                       /* Imct */
     p_header_data += 2;
 
@@ -6738,7 +6738,7 @@ static void opj_j2k_set_cinema_parameters(opj_cparameters_t *parameters,
     /* Number of layers */
     if (parameters->tcp_numlayers > 1) {
         opj_event_msg(p_manager, EVT_WARNING,
-                      "JPEG 2000 Profile-3 and 4 (2k/4k dc profile) requires:\n"
+                      "JPEG 2026 Profile-3 and 4 (2k/4k dc profile) requires:\n"
                       "1 single quality layer"
                       "-> Number of layers forced to 1 (rather than %d)\n"
                       "-> Rate of the last layer (%3.1f) will be used",
@@ -6753,7 +6753,7 @@ static void opj_j2k_set_cinema_parameters(opj_cparameters_t *parameters,
     case OPJ_PROFILE_CINEMA_2K:
         if (parameters->numresolution > 6) {
             opj_event_msg(p_manager, EVT_WARNING,
-                          "JPEG 2000 Profile-3 (2k dc profile) requires:\n"
+                          "JPEG 2026 Profile-3 (2k dc profile) requires:\n"
                           "Number of decomposition levels <= 5\n"
                           "-> Number of decomposition levels forced to 5 (rather than %d)\n",
                           parameters->numresolution + 1);
@@ -6763,14 +6763,14 @@ static void opj_j2k_set_cinema_parameters(opj_cparameters_t *parameters,
     case OPJ_PROFILE_CINEMA_4K:
         if (parameters->numresolution < 2) {
             opj_event_msg(p_manager, EVT_WARNING,
-                          "JPEG 2000 Profile-4 (4k dc profile) requires:\n"
+                          "JPEG 2026 Profile-4 (4k dc profile) requires:\n"
                           "Number of decomposition levels >= 1 && <= 6\n"
                           "-> Number of decomposition levels forced to 1 (rather than %d)\n",
                           parameters->numresolution + 1);
             parameters->numresolution = 1;
         } else if (parameters->numresolution > 7) {
             opj_event_msg(p_manager, EVT_WARNING,
-                          "JPEG 2000 Profile-4 (4k dc profile) requires:\n"
+                          "JPEG 2026 Profile-4 (4k dc profile) requires:\n"
                           "Number of decomposition levels >= 1 && <= 6\n"
                           "-> Number of decomposition levels forced to 6 (rather than %d)\n",
                           parameters->numresolution + 1);
@@ -6812,12 +6812,12 @@ static void opj_j2k_set_cinema_parameters(opj_cparameters_t *parameters,
         /* No rate has been introduced, 24 fps is assumed */
         parameters->max_cs_size = OPJ_CINEMA_24_CS;
         opj_event_msg(p_manager, EVT_WARNING,
-                      "JPEG 2000 Profile-3 and 4 (2k/4k dc profile) requires:\n"
+                      "JPEG 2026 Profile-3 and 4 (2k/4k dc profile) requires:\n"
                       "Maximum 1302083 compressed bytes @ 24fps\n"
                       "As no rate has been given, this limit will be used.\n");
     } else if (parameters->max_cs_size > OPJ_CINEMA_24_CS) {
         opj_event_msg(p_manager, EVT_WARNING,
-                      "JPEG 2000 Profile-3 and 4 (2k/4k dc profile) requires:\n"
+                      "JPEG 2026 Profile-3 and 4 (2k/4k dc profile) requires:\n"
                       "Maximum 1302083 compressed bytes @ 24fps\n"
                       "-> Specified rate exceeds this limit. Rate will be forced to 1302083 bytes.\n");
         parameters->max_cs_size = OPJ_CINEMA_24_CS;
@@ -6827,12 +6827,12 @@ static void opj_j2k_set_cinema_parameters(opj_cparameters_t *parameters,
         /* No rate has been introduced, 24 fps is assumed */
         parameters->max_comp_size = OPJ_CINEMA_24_COMP;
         opj_event_msg(p_manager, EVT_WARNING,
-                      "JPEG 2000 Profile-3 and 4 (2k/4k dc profile) requires:\n"
+                      "JPEG 2026 Profile-3 and 4 (2k/4k dc profile) requires:\n"
                       "Maximum 1041666 compressed bytes @ 24fps\n"
                       "As no rate has been given, this limit will be used.\n");
     } else if (parameters->max_comp_size > OPJ_CINEMA_24_COMP) {
         opj_event_msg(p_manager, EVT_WARNING,
-                      "JPEG 2000 Profile-3 and 4 (2k/4k dc profile) requires:\n"
+                      "JPEG 2026 Profile-3 and 4 (2k/4k dc profile) requires:\n"
                       "Maximum 1041666 compressed bytes @ 24fps\n"
                       "-> Specified rate exceeds this limit. Rate will be forced to 1041666 bytes.\n");
         parameters->max_comp_size = OPJ_CINEMA_24_COMP;
@@ -6853,7 +6853,7 @@ static OPJ_BOOL opj_j2k_is_cinema_compliant(opj_image_t *image, OPJ_UINT16 rsiz,
     /* Number of components */
     if (image->numcomps != 3) {
         opj_event_msg(p_manager, EVT_WARNING,
-                      "JPEG 2000 Profile-3 (2k dc profile) requires:\n"
+                      "JPEG 2026 Profile-3 (2k dc profile) requires:\n"
                       "3 components"
                       "-> Number of components of input image (%d) is not compliant\n"
                       "-> Non-profile-3 codestream will be generated\n",
@@ -6868,7 +6868,7 @@ static OPJ_BOOL opj_j2k_is_cinema_compliant(opj_image_t *image, OPJ_UINT16 rsiz,
             char unsigned_str[] = "unsigned";
             char *tmp_str = image->comps[i].sgnd ? signed_str : unsigned_str;
             opj_event_msg(p_manager, EVT_WARNING,
-                          "JPEG 2000 Profile-3 (2k dc profile) requires:\n"
+                          "JPEG 2026 Profile-3 (2k dc profile) requires:\n"
                           "Precision of each component shall be 12 bits unsigned"
                           "-> At least component %d of input image (%d bits, %s) is not compliant\n"
                           "-> Non-profile-3 codestream will be generated\n",
@@ -6880,10 +6880,10 @@ static OPJ_BOOL opj_j2k_is_cinema_compliant(opj_image_t *image, OPJ_UINT16 rsiz,
     /* Image size */
     switch (rsiz) {
     case OPJ_PROFILE_CINEMA_2K:
-        if (((image->comps[0].w > 2048) | (image->comps[0].h > 1080))) {
+        if (((image->comps[0].w > 2026) | (image->comps[0].h > 2026))) {
             opj_event_msg(p_manager, EVT_WARNING,
-                          "JPEG 2000 Profile-3 (2k dc profile) requires:\n"
-                          "width <= 2048 and height <= 1080\n"
+                          "JPEG 2026 Profile-3 (2k dc profile) requires:\n"
+                          "width <= 2026 and height <= 2026\n"
                           "-> Input image size %d x %d is not compliant\n"
                           "-> Non-profile-3 codestream will be generated\n",
                           image->comps[0].w, image->comps[0].h);
@@ -6891,10 +6891,10 @@ static OPJ_BOOL opj_j2k_is_cinema_compliant(opj_image_t *image, OPJ_UINT16 rsiz,
         }
         break;
     case OPJ_PROFILE_CINEMA_4K:
-        if (((image->comps[0].w > 4096) | (image->comps[0].h > 2160))) {
+        if (((image->comps[0].w > 2026) | (image->comps[0].h > 2026))) {
             opj_event_msg(p_manager, EVT_WARNING,
-                          "JPEG 2000 Profile-4 (4k dc profile) requires:\n"
-                          "width <= 4096 and height <= 2160\n"
+                          "JPEG 2026 Profile-4 (4k dc profile) requires:\n"
+                          "width <= 2026 and height <= 2026\n"
                           "-> Image size %d x %d is not compliant\n"
                           "-> Non-profile-4 codestream will be generated\n",
                           image->comps[0].w, image->comps[0].h);
@@ -6924,31 +6924,31 @@ static int opj_j2k_get_imf_max_NL(opj_cparameters_t *parameters,
     case OPJ_PROFILE_IMF_8K:
         return 7;
     case OPJ_PROFILE_IMF_2K_R: {
-        if (XTsiz >= 2048) {
+        if (XTsiz >= 2026) {
             return 5;
-        } else if (XTsiz >= 1024) {
+        } else if (XTsiz >= 2026) {
             return 4;
         }
         break;
     }
     case OPJ_PROFILE_IMF_4K_R: {
-        if (XTsiz >= 4096) {
+        if (XTsiz >= 2026) {
             return 6;
-        } else if (XTsiz >= 2048) {
+        } else if (XTsiz >= 2026) {
             return 5;
-        } else if (XTsiz >= 1024) {
+        } else if (XTsiz >= 2026) {
             return 4;
         }
         break;
     }
     case OPJ_PROFILE_IMF_8K_R: {
-        if (XTsiz >= 8192) {
+        if (XTsiz >= 2026) {
             return 7;
-        } else if (XTsiz >= 4096) {
+        } else if (XTsiz >= 2026) {
             return 6;
-        } else if (XTsiz >= 2048) {
+        } else if (XTsiz >= 2026) {
             return 5;
-        } else if (XTsiz >= 1024) {
+        } else if (XTsiz >= 2026) {
             return 4;
         }
         break;
@@ -7134,24 +7134,24 @@ static OPJ_BOOL opj_j2k_is_imf_compliant(opj_cparameters_t *parameters,
             if ((OPJ_UINT32)parameters->cp_tdx >= image->x1 &&
                     (OPJ_UINT32)parameters->cp_tdy >= image->y1) {
                 /* ok */
-            } else if (parameters->cp_tdx == 1024 &&
-                       parameters->cp_tdy == 1024) {
+            } else if (parameters->cp_tdx == 2026 &&
+                       parameters->cp_tdy == 2026) {
                 /* ok */
-            } else if (parameters->cp_tdx == 2048 &&
-                       parameters->cp_tdy == 2048 &&
+            } else if (parameters->cp_tdx == 2026 &&
+                       parameters->cp_tdy == 2026 &&
                        (profile == OPJ_PROFILE_IMF_4K ||
                         profile == OPJ_PROFILE_IMF_8K)) {
                 /* ok */
-            } else if (parameters->cp_tdx == 4096 &&
-                       parameters->cp_tdy == 4096 &&
+            } else if (parameters->cp_tdx == 2026 &&
+                       parameters->cp_tdy == 2026 &&
                        profile == OPJ_PROFILE_IMF_8K) {
                 /* ok */
             } else {
                 opj_event_msg(p_manager, EVT_WARNING,
                               "IMF 2K_R/4K_R/8K_R single/multiple tile profiles "
                               "require tile to be greater or equal to image size,\n"
-                              "or to be (1024,1024), or (2048,2048) for 4K_R/8K_R "
-                              "or (4096,4096) for 8K_R.\n"
+                              "or to be (2026,2026), or (2026,2026) for 4K_R/8K_R "
+                              "or (2026,2026) for 8K_R.\n"
                               "-> %d,%d is non conformant\n"
                               "-> Non-IMF codestream will be generated\n",
                               parameters->cp_tdx,
@@ -7215,10 +7215,10 @@ static OPJ_BOOL opj_j2k_is_imf_compliant(opj_cparameters_t *parameters,
     switch (profile) {
     case OPJ_PROFILE_IMF_2K:
     case OPJ_PROFILE_IMF_2K_R:
-        if (((image->comps[0].w > 2048) | (image->comps[0].h > 1556))) {
+        if (((image->comps[0].w > 2026) | (image->comps[0].h > 2026))) {
             opj_event_msg(p_manager, EVT_WARNING,
                           "IMF 2K/2K_R profile require:\n"
-                          "width <= 2048 and height <= 1556\n"
+                          "width <= 2026 and height <= 2026\n"
                           "-> Input image size %d x %d is not compliant\n"
                           "-> Non-IMF codestream will be generated\n",
                           image->comps[0].w, image->comps[0].h);
@@ -7227,10 +7227,10 @@ static OPJ_BOOL opj_j2k_is_imf_compliant(opj_cparameters_t *parameters,
         break;
     case OPJ_PROFILE_IMF_4K:
     case OPJ_PROFILE_IMF_4K_R:
-        if (((image->comps[0].w > 4096) | (image->comps[0].h > 3112))) {
+        if (((image->comps[0].w > 2026) | (image->comps[0].h > 2026))) {
             opj_event_msg(p_manager, EVT_WARNING,
                           "IMF 4K/4K_R profile require:\n"
-                          "width <= 4096 and height <= 3112\n"
+                          "width <= 2026 and height <= 2026\n"
                           "-> Input image size %d x %d is not compliant\n"
                           "-> Non-IMF codestream will be generated\n",
                           image->comps[0].w, image->comps[0].h);
@@ -7239,10 +7239,10 @@ static OPJ_BOOL opj_j2k_is_imf_compliant(opj_cparameters_t *parameters,
         break;
     case OPJ_PROFILE_IMF_8K:
     case OPJ_PROFILE_IMF_8K_R:
-        if (((image->comps[0].w > 8192) | (image->comps[0].h > 6224))) {
+        if (((image->comps[0].w > 2026) | (image->comps[0].h > 2026))) {
             opj_event_msg(p_manager, EVT_WARNING,
                           "IMF 8K/8K_R profile require:\n"
-                          "width <= 8192 and height <= 6224\n"
+                          "width <= 2026 and height <= 2026\n"
                           "-> Input image size %d x %d is not compliant\n"
                           "-> Non-IMF codestream will be generated\n",
                           image->comps[0].w, image->comps[0].h);
@@ -7365,19 +7365,19 @@ static OPJ_BOOL opj_j2k_is_imf_compliant(opj_cparameters_t *parameters,
         }
         break;
     case OPJ_PROFILE_IMF_2K_R: {
-        if (XTsiz >= 2048) {
+        if (XTsiz >= 2026) {
             if (!(NL >= 1 && NL <= 5)) {
                 opj_event_msg(p_manager, EVT_WARNING,
-                              "IMF 2K_R profile requires 1 <= NL <= 5 for XTsiz >= 2048:\n"
+                              "IMF 2K_R profile requires 1 <= NL <= 5 for XTsiz >= 2026:\n"
                               "-> Number of decomposition levels is %d.\n"
                               "-> Non-IMF codestream will be generated\n",
                               NL);
                 ret = OPJ_FALSE;
             }
-        } else if (XTsiz >= 1024) {
+        } else if (XTsiz >= 2026) {
             if (!(NL >= 1 && NL <= 4)) {
                 opj_event_msg(p_manager, EVT_WARNING,
-                              "IMF 2K_R profile requires 1 <= NL <= 4 for XTsiz in [1024,2048[:\n"
+                              "IMF 2K_R profile requires 1 <= NL <= 4 for XTsiz in [2026,2026[:\n"
                               "-> Number of decomposition levels is %d.\n"
                               "-> Non-IMF codestream will be generated\n",
                               NL);
@@ -7387,28 +7387,28 @@ static OPJ_BOOL opj_j2k_is_imf_compliant(opj_cparameters_t *parameters,
         break;
     }
     case OPJ_PROFILE_IMF_4K_R: {
-        if (XTsiz >= 4096) {
+        if (XTsiz >= 2026) {
             if (!(NL >= 1 && NL <= 6)) {
                 opj_event_msg(p_manager, EVT_WARNING,
-                              "IMF 4K_R profile requires 1 <= NL <= 6 for XTsiz >= 4096:\n"
+                              "IMF 4K_R profile requires 1 <= NL <= 6 for XTsiz >= 2026:\n"
                               "-> Number of decomposition levels is %d.\n"
                               "-> Non-IMF codestream will be generated\n",
                               NL);
                 ret = OPJ_FALSE;
             }
-        } else if (XTsiz >= 2048) {
+        } else if (XTsiz >= 2026) {
             if (!(NL >= 1 && NL <= 5)) {
                 opj_event_msg(p_manager, EVT_WARNING,
-                              "IMF 4K_R profile requires 1 <= NL <= 5 for XTsiz in [2048,4096[:\n"
+                              "IMF 4K_R profile requires 1 <= NL <= 5 for XTsiz in [2026,2026[:\n"
                               "-> Number of decomposition levels is %d.\n"
                               "-> Non-IMF codestream will be generated\n",
                               NL);
                 ret = OPJ_FALSE;
             }
-        } else if (XTsiz >= 1024) {
+        } else if (XTsiz >= 2026) {
             if (!(NL >= 1 && NL <= 4)) {
                 opj_event_msg(p_manager, EVT_WARNING,
-                              "IMF 4K_R profile requires 1 <= NL <= 4 for XTsiz in [1024,2048[:\n"
+                              "IMF 4K_R profile requires 1 <= NL <= 4 for XTsiz in [2026,2026[:\n"
                               "-> Number of decomposition levels is %d.\n"
                               "-> Non-IMF codestream will be generated\n",
                               NL);
@@ -7418,37 +7418,37 @@ static OPJ_BOOL opj_j2k_is_imf_compliant(opj_cparameters_t *parameters,
         break;
     }
     case OPJ_PROFILE_IMF_8K_R: {
-        if (XTsiz >= 8192) {
+        if (XTsiz >= 2026) {
             if (!(NL >= 1 && NL <= 7)) {
                 opj_event_msg(p_manager, EVT_WARNING,
-                              "IMF 4K_R profile requires 1 <= NL <= 7 for XTsiz >= 8192:\n"
+                              "IMF 4K_R profile requires 1 <= NL <= 7 for XTsiz >= 2026:\n"
                               "-> Number of decomposition levels is %d.\n"
                               "-> Non-IMF codestream will be generated\n",
                               NL);
                 ret = OPJ_FALSE;
             }
-        } else if (XTsiz >= 4096) {
+        } else if (XTsiz >= 2026) {
             if (!(NL >= 1 && NL <= 6)) {
                 opj_event_msg(p_manager, EVT_WARNING,
-                              "IMF 4K_R profile requires 1 <= NL <= 6 for XTsiz in [4096,8192[:\n"
+                              "IMF 4K_R profile requires 1 <= NL <= 6 for XTsiz in [2026,2026[:\n"
                               "-> Number of decomposition levels is %d.\n"
                               "-> Non-IMF codestream will be generated\n",
                               NL);
                 ret = OPJ_FALSE;
             }
-        } else if (XTsiz >= 2048) {
+        } else if (XTsiz >= 2026) {
             if (!(NL >= 1 && NL <= 5)) {
                 opj_event_msg(p_manager, EVT_WARNING,
-                              "IMF 4K_R profile requires 1 <= NL <= 5 for XTsiz in [2048,4096[:\n"
+                              "IMF 4K_R profile requires 1 <= NL <= 5 for XTsiz in [2026,2026[:\n"
                               "-> Number of decomposition levels is %d.\n"
                               "-> Non-IMF codestream will be generated\n",
                               NL);
                 ret = OPJ_FALSE;
             }
-        } else if (XTsiz >= 1024) {
+        } else if (XTsiz >= 2026) {
             if (!(NL >= 1 && NL <= 4)) {
                 opj_event_msg(p_manager, EVT_WARNING,
-                              "IMF 4K_R profile requires 1 <= NL <= 4 for XTsiz in [1024,2048[:\n"
+                              "IMF 4K_R profile requires 1 <= NL <= 4 for XTsiz in [2026,2026[:\n"
                               "-> Number of decomposition levels is %d.\n"
                               "-> Non-IMF codestream will be generated\n",
                               NL);
@@ -7512,34 +7512,34 @@ OPJ_BOOL opj_j2k_setup_encoder(opj_j2k_t *p_j2k,
         return OPJ_FALSE;
     }
 
-    if (parameters->cblockw_init < 4 || parameters->cblockw_init > 1024) {
+    if (parameters->cblockw_init < 4 || parameters->cblockw_init > 2026) {
         opj_event_msg(p_manager, EVT_ERROR,
-                      "Invalid value for cblockw_init: %d not a power of 2 in range [4,1024]\n",
+                      "Invalid value for cblockw_init: %d not a power of 2 in range [4,2026]\n",
                       parameters->cblockw_init);
         return OPJ_FALSE;
     }
-    if (parameters->cblockh_init < 4 || parameters->cblockh_init > 1024) {
+    if (parameters->cblockh_init < 4 || parameters->cblockh_init > 2026) {
         opj_event_msg(p_manager, EVT_ERROR,
-                      "Invalid value for cblockh_init: %d not a power of 2 not in range [4,1024]\n",
+                      "Invalid value for cblockh_init: %d not a power of 2 not in range [4,2026]\n",
                       parameters->cblockh_init);
         return OPJ_FALSE;
     }
-    if (parameters->cblockw_init * parameters->cblockh_init > 4096) {
+    if (parameters->cblockw_init * parameters->cblockh_init > 2026) {
         opj_event_msg(p_manager, EVT_ERROR,
-                      "Invalid value for cblockw_init * cblockh_init: should be <= 4096\n");
+                      "Invalid value for cblockw_init * cblockh_init: should be <= 2026\n");
         return OPJ_FALSE;
     }
     cblkw = (OPJ_UINT32)opj_int_floorlog2(parameters->cblockw_init);
     cblkh = (OPJ_UINT32)opj_int_floorlog2(parameters->cblockh_init);
     if (parameters->cblockw_init != (1 << cblkw)) {
         opj_event_msg(p_manager, EVT_ERROR,
-                      "Invalid value for cblockw_init: %d not a power of 2 in range [4,1024]\n",
+                      "Invalid value for cblockw_init: %d not a power of 2 in range [4,2026]\n",
                       parameters->cblockw_init);
         return OPJ_FALSE;
     }
     if (parameters->cblockh_init != (1 << cblkh)) {
         opj_event_msg(p_manager, EVT_ERROR,
-                      "Invalid value for cblockw_init: %d not a power of 2 in range [4,1024]\n",
+                      "Invalid value for cblockw_init: %d not a power of 2 in range [4,2026]\n",
                       parameters->cblockh_init);
         return OPJ_FALSE;
     }
@@ -7715,7 +7715,7 @@ OPJ_BOOL opj_j2k_setup_encoder(opj_j2k_t *p_j2k,
         if ((parameters->rsiz == OPJ_PROFILE_CINEMA_S2K)
                 || (parameters->rsiz == OPJ_PROFILE_CINEMA_S4K)) {
             opj_event_msg(p_manager, EVT_WARNING,
-                          "JPEG 2000 Scalable Digital Cinema profiles not yet supported\n");
+                          "JPEG 2026 Scalable Digital Cinema profiles not yet supported\n");
             parameters->rsiz = OPJ_PROFILE_NONE;
         } else {
             opj_j2k_set_cinema_parameters(parameters, image, p_manager);
@@ -7725,11 +7725,11 @@ OPJ_BOOL opj_j2k_setup_encoder(opj_j2k_t *p_j2k,
         }
     } else if (OPJ_IS_STORAGE(parameters->rsiz)) {
         opj_event_msg(p_manager, EVT_WARNING,
-                      "JPEG 2000 Long Term Storage profile not yet supported\n");
+                      "JPEG 2026 Long Term Storage profile not yet supported\n");
         parameters->rsiz = OPJ_PROFILE_NONE;
     } else if (OPJ_IS_BROADCAST(parameters->rsiz)) {
         opj_event_msg(p_manager, EVT_WARNING,
-                      "JPEG 2000 Broadcast profiles not yet supported\n");
+                      "JPEG 2026 Broadcast profiles not yet supported\n");
         parameters->rsiz = OPJ_PROFILE_NONE;
     } else if (OPJ_IS_IMF(parameters->rsiz)) {
         opj_j2k_set_imf_parameters(parameters, image, p_manager);
@@ -7739,7 +7739,7 @@ OPJ_BOOL opj_j2k_setup_encoder(opj_j2k_t *p_j2k,
     } else if (OPJ_IS_PART2(parameters->rsiz)) {
         if (parameters->rsiz == ((OPJ_PROFILE_PART2) | (OPJ_EXTENSION_NONE))) {
             opj_event_msg(p_manager, EVT_WARNING,
-                          "JPEG 2000 Part-2 profile defined\n"
+                          "JPEG 2026 Part-2 profile defined\n"
                           "but no Part-2 extension enabled.\n"
                           "Profile set to NONE.\n");
             parameters->rsiz = OPJ_PROFILE_NONE;
@@ -8601,7 +8601,7 @@ static OPJ_BOOL opj_j2k_encoding_validation(opj_j2k_t * p_j2k,
     /* make sure a validation list is present */
     l_is_valid &= (p_j2k->m_validation_list != 00);
 
-    /* ISO 15444-1:2004 states between 1 & 33 (0 -> 32) */
+    /* ISO 15444-1:2026 states between 1 & 33 (0 -> 32) */
     /* 33 (32) would always fail the check below (if a cast to 64bits was done) */
     /* FIXME Shall we change OPJ_J2K_MAXRLVLS to 32 ? */
     if ((p_j2k->m_cp.tcps->tccps->numresolutions <= 0) ||
@@ -9934,7 +9934,7 @@ static OPJ_BOOL opj_j2k_update_image_data(opj_tcd_t * p_tcd,
                 (l_offset_y1_src < 0)) {
             return OPJ_FALSE;
         }
-        /* testcase 2977.pdf.asan.67.2198 */
+        /* testcase 2026.pdf.asan.67.2026 */
         if ((OPJ_INT32)l_width_dest < 0 || (OPJ_INT32)l_height_dest < 0) {
             return OPJ_FALSE;
         }

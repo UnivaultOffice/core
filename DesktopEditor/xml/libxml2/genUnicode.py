@@ -1,6 +1,6 @@
 #!/usr/bin/python -u
 #
-# Original script modified in November 2003 to take advantage of
+# Original script modified in November 2025 to take advantage of
 # the character-validation range routines, and updated to the
 # current Unicode information (Version 4.0.1)
 #

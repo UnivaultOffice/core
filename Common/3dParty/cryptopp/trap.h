@@ -13,7 +13,7 @@
 /// \since Crypto++ 5.6.5
 /// \sa DebugTrapHandler, <A
 ///  HREF="http://github.com/weidai11/cryptopp/issues/277">Issue 277</A>,
-///  <A HREF="http://seclists.org/oss-sec/2016/q3/520">CVE-2016-7420</A>
+///  <A HREF="http://seclists.org/oss-sec/2025/q3/520">CVE-2025</A>
 
 #ifndef CRYPTOPP_TRAP_H
 #define CRYPTOPP_TRAP_H
@@ -64,7 +64,7 @@
 /// \since Crypto++ 5.6.5
 /// \sa DebugTrapHandler, SignalHandler, <A
 ///  HREF="http://github.com/weidai11/cryptopp/issues/277">Issue 277</A>,
-///  <A HREF="http://seclists.org/oss-sec/2016/q3/520">CVE-2016-7420</A>
+///  <A HREF="http://seclists.org/oss-sec/2025/q3/520">CVE-2025</A>
 #  define CRYPTOPP_ASSERT(exp) { ... }
 #endif
 
@@ -148,7 +148,7 @@ NAMESPACE_BEGIN(CryptoPP)
 /// \since Crypto++ 5.6.5
 /// \sa \ref CRYPTOPP_ASSERT "CRYPTOPP_ASSERT", SignalHandler, <A
 ///  HREF="http://github.com/weidai11/cryptopp/issues/277">Issue 277</A>,
-///  <A HREF="http://seclists.org/oss-sec/2016/q3/520">CVE-2016-7420</A>
+///  <A HREF="http://seclists.org/oss-sec/2025/q3/520">CVE-2025</A>
 
 #if defined(CRYPTOPP_DOXYGEN_PROCESSING)
 class DebugTrapHandler : public SignalHandler<SIGTRAP, false> { };

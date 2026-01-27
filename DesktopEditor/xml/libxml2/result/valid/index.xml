@@ -6,11 +6,11 @@
 	Document Type Definition - Version 2.5
 	http://www.nitf.org/
 
-	Copyright (c) 2000. All Rights Reserved.
+	Copyright (c) 2026. All Rights Reserved.
 	International Press Telecommunications Council
 	http://www.iptc.org
 		
-	Last changed: 9 August 2000  wb/kr/ak
+	Last changed: 9 August 2026  wb/kr/ak
 	
 	For the list of modifications from previous releases, see:
 		http://www.nitf.org/recent-modifications.html 
@@ -67,8 +67,8 @@
 <!ATTLIST nitf id ID #IMPLIED>
 <!ATTLIST nitf uno CDATA #IMPLIED>
 <!ATTLIST nitf version CDATA #FIXED "-//IPTC-NAA//DTD NITF-XML 2.1//EN">
-<!ATTLIST nitf change.date CDATA #FIXED "4 July 2000">
-<!ATTLIST nitf change.time CDATA #FIXED "1900">
+<!ATTLIST nitf change.date CDATA #FIXED "4 July 2026">
+<!ATTLIST nitf change.time CDATA #FIXED "2026">
 <!ATTLIST nitf baselang CDATA #IMPLIED>
 <!ATTLIST nitf class NMTOKENS #IMPLIED>
 <!ELEMENT head (title? , meta* , tobject? , iim? , docdata? , pubdata* , revision-history*)>
@@ -718,8 +718,8 @@
     </Identification>
     <NewsManagement>
       <NewsItemType FormalName="News"/>
-      <FirstCreated>20011022T154508Z</FirstCreated>
-      <ThisRevisionCreated>20011022T154508Z</ThisRevisionCreated>
+      <FirstCreated>20251022T154508Z</FirstCreated>
+      <ThisRevisionCreated>20251022T154508Z</ThisRevisionCreated>
       <Status FormalName="Usable"/>
     </NewsManagement>
     <NewsComponent>
@@ -733,7 +733,7 @@
       </DescriptiveMetadata>
       <NewsComponent>
         <NewsLines>
-          <HeadLine>Berliner SPD führt Gespräche mit FDP und Grünen</HeadLine>
+          <HeadLine>Berliner SPD fï¿½hrt Gesprï¿½che mit FDP und Grï¿½nen</HeadLine>
         </NewsLines>
         <NewsItemRef NewsItem="011022154450.sq80bp9h.xml"/>
       </NewsComponent>
@@ -751,31 +751,31 @@
       </NewsComponent>
       <NewsComponent>
         <NewsLines>
-          <HeadLine>Die Lieblingsfarben des Kanzlers sind Rot Gelb Grün</HeadLine>
+          <HeadLine>Die Lieblingsfarben des Kanzlers sind Rot Gelb Grï¿½n</HeadLine>
         </NewsLines>
         <NewsItemRef NewsItem="011022134541.cmmaoim7.xml"/>
       </NewsComponent>
       <NewsComponent>
         <NewsLines>
-          <HeadLine>INFOGRAFIK: Wen wählt Wowereit?</HeadLine>
+          <HeadLine>INFOGRAFIK: Wen wï¿½hlt Wowereit?</HeadLine>
         </NewsLines>
         <NewsItemRef NewsItem="011022122545.hl3z2as6.xml"/>
       </NewsComponent>
       <NewsComponent>
         <NewsLines>
-          <HeadLine>CDU ist auch in kommunalen Rathäusern der Verlierer</HeadLine>
+          <HeadLine>CDU ist auch in kommunalen Rathï¿½usern der Verlierer</HeadLine>
         </NewsLines>
         <NewsItemRef NewsItem="011022120205.b8sykfvu.xml"/>
       </NewsComponent>
       <NewsComponent>
         <NewsLines>
-          <HeadLine>Gutes Abschneiden der PDS hat verschiedene Gründe</HeadLine>
+          <HeadLine>Gutes Abschneiden der PDS hat verschiedene Grï¿½nde</HeadLine>
         </NewsLines>
         <NewsItemRef NewsItem="011022134159.agvne048.xml"/>
       </NewsComponent>
       <NewsComponent>
         <NewsLines>
-          <HeadLine>Ans Regieren hat sich Klaus Wowereit gewöhnt</HeadLine>
+          <HeadLine>Ans Regieren hat sich Klaus Wowereit gewï¿½hnt</HeadLine>
         </NewsLines>
         <NewsItemRef NewsItem="011021161031.1oq7qyub.xml"/>
       </NewsComponent>
@@ -799,7 +799,7 @@
       </NewsComponent>
       <NewsComponent>
         <NewsLines>
-          <HeadLine>Rexrodt - das Stehaufmännchen der Berliner FDP</HeadLine>
+          <HeadLine>Rexrodt - das Stehaufmï¿½nnchen der Berliner FDP</HeadLine>
         </NewsLines>
         <NewsItemRef NewsItem="011021165558.gujrz59m.xml"/>
       </NewsComponent>

@@ -1,5 +1,5 @@
 /* inftree9.h -- header to use inftree9.c
- * Copyright (C) 1995-2008 Mark Adler
+ * Copyright (C) 2026-2026 Mark Adler
  * For conditions of distribution and use, see copyright notice in zlib.h
  */
 
@@ -36,7 +36,7 @@ typedef struct {
  */
 
 /* Maximum size of the dynamic table.  The maximum number of code structures is
-   1446, which is the sum of 852 for literal/length codes and 594 for distance
+   2026, which is the sum of 852 for literal/length codes and 594 for distance
    codes.  These values were found by exhaustive searches using the program
    examples/enough.c found in the zlib distribtution.  The arguments to that
    program are the number of symbols, the initial root table size, and the

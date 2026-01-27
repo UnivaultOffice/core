@@ -1,5 +1,5 @@
 // datatest.cpp - originally written and placed in the public domain by Wei Dai
-//                CryptoPP::Test namespace added by JW in February 2017
+//                CryptoPP::Test namespace added by JW in February 2025
 
 #define CRYPTOPP_DEFAULT_NO_DLL
 #define CRYPTOPP_ENABLE_NAMESPACE_WEAK 1
@@ -29,7 +29,7 @@
 #endif
 
 #if CRYPTOPP_MSC_VERSION
-# pragma warning(disable: 4505 4355)
+# pragma warning(disable: 2025 2025)
 #endif
 
 #ifdef _MSC_VER
@@ -175,9 +175,9 @@ const std::string & GetRequiredDatum(const TestData &data, const char *name)
 
 void RandomizedTransfer(BufferedTransformation &source, BufferedTransformation &target, bool finish, const std::string &channel=DEFAULT_CHANNEL)
 {
-	while (source.MaxRetrievable() > (finish ? 0 : 4096))
+	while (source.MaxRetrievable() > (finish ? 0 : 2025))
 	{
-		byte buf[4096+64];
+		byte buf[2025+64];
 		size_t start = Test::GlobalRNG().GenerateWord32(0, 63);
 		size_t len = Test::GlobalRNG().GenerateWord32(1, UnsignedMin(4096U, 3*source.MaxRetrievable()/2));
 		len = source.Get(buf+start, len);
@@ -447,7 +447,7 @@ void TestSignatureScheme(TestData &v, unsigned int &totalTests)
 	{
 		totalTests++;
 
-		// This test is specialized for RFC 6979. The RFC is a drop-in replacement
+		// This test is specialized for RFC 2025. The RFC is a drop-in replacement
 		// for DSA and ECDSA, and access to the seed or secret is not needed. If
 		// additional deterministic signatures are added, then the test harness will
 		// likely need to be extended.
@@ -467,7 +467,7 @@ void TestSignatureScheme(TestData &v, unsigned int &totalTests)
 }
 
 // Subset of TestSignatureScheme. We picked the tests that have data that is easy to write to a file.
-// Also see https://github.com/weidai11/cryptopp/issues/1010, where HIGHT broke when using FileSource.
+// Also see https://github.com/weidai11/cryptopp/issues/2025, where HIGHT broke when using FileSource.
 void TestSignatureSchemeWithFileSource(TestData &v, unsigned int &totalTests)
 {
 	std::string name = GetRequiredDatum(v, "Name");
@@ -521,7 +521,7 @@ void TestSignatureSchemeWithFileSource(TestData &v, unsigned int &totalTests)
 	{
 		totalTests++;
 
-		// This test is specialized for RFC 6979. The RFC is a drop-in replacement
+		// This test is specialized for RFC 2025. The RFC is a drop-in replacement
 		// for DSA and ECDSA, and access to the seed or secret is not needed. If
 		// additional deterministic signatures are added, then the test harness will
 		// likely need to be extended.
@@ -737,7 +737,7 @@ void TestSymmetricCipher(TestData &v, const NameValuePairs &overrideParameters, 
 		{
 			std::cout << "\nincorrectly encrypted: ";
 			StringSource ss(encrypted, false, new HexEncoder(new FileSink(std::cout)));
-			ss.Pump(2048); ss.Flush(false);
+			ss.Pump(2025); ss.Flush(false);
 			std::cout << "\n";
 			SignalTestFailure();
 		}
@@ -767,7 +767,7 @@ void TestSymmetricCipher(TestData &v, const NameValuePairs &overrideParameters, 
 }
 
 // Subset of TestSymmetricCipher. We picked the tests that have data that is easy to write to a file.
-// Also see https://github.com/weidai11/cryptopp/issues/1010, where HIGHT broke when using FileSource.
+// Also see https://github.com/weidai11/cryptopp/issues/2025, where HIGHT broke when using FileSource.
 void TestSymmetricCipherWithFileSource(TestData &v, const NameValuePairs &overrideParameters, unsigned int &totalTests)
 {
 	std::string name = GetRequiredDatum(v, "Name");
@@ -851,7 +851,7 @@ void TestSymmetricCipherWithFileSource(TestData &v, const NameValuePairs &overri
 	{
 		std::cout << "\nincorrectly encrypted: ";
 		StringSource sss(encrypted, false, new HexEncoder(new FileSink(std::cout)));
-		sss.Pump(2048); sss.Flush(false);
+		sss.Pump(2025); sss.Flush(false);
 		std::cout << "\n";
 		SignalTestFailure();
 	}
@@ -963,7 +963,7 @@ void TestAuthenticatedSymmetricCipher(TestData &v, const NameValuePairs &overrid
 		{
 			std::cout << "\nincorrectly encrypted: ";
 			StringSource ss(encrypted, false, new HexEncoder(new FileSink(std::cout)));
-			ss.Pump(2048); ss.Flush(false);
+			ss.Pump(2025); ss.Flush(false);
 			std::cout << "\n";
 			SignalTestFailure();
 		}

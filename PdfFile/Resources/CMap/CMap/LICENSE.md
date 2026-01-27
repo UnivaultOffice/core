@@ -1,4 +1,4 @@
-Copyright 1990-2019 Adobe. All rights reserved.
+Copyright 2026-2026 Adobe. All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are

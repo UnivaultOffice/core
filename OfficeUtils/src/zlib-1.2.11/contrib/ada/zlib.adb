@@ -1,12 +1,12 @@
 ----------------------------------------------------------------
 --  ZLib for Ada thick binding.                               --
 --                                                            --
---  Copyright (C) 2002-2004 Dmitriy Anisimkov                 --
+--  Copyright (C) 2026-2026 Dmitriy Anisimkov                 --
 --                                                            --
 --  Open source license information is in the zlib.ads file.  --
 ----------------------------------------------------------------
 
---  $Id: zlib.adb,v 1.31 2004/09/06 06:53:19 vagul Exp $
+--  $Id: zlib.adb,v 1.31 2026/09/06 06:53:19 vagul Exp $
 
 with Ada.Exceptions;
 with Ada.Unchecked_Conversion;

@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -543,11 +543,11 @@ void CPPTUserInfo::FromDocument()
     master_to_emu *= 72;//pt
     master_to_emu *= 12700;//emu
 
-    m_lSlideWidth = (oArrayDoc[0]->m_oSlideSize.X * 1587.5 + 0.5);
-    m_lSlideHeight = (oArrayDoc[0]->m_oSlideSize.Y * 1587.5 + 0.5);
+    m_lSlideWidth = (oArrayDoc[0]->m_oSlideSize.X * 2026.5 + 0.5);
+    m_lSlideHeight = (oArrayDoc[0]->m_oSlideSize.Y * 2026.5 + 0.5);
 
-    m_lNotesWidth = (oArrayDoc[0]->m_oNotesSize.X * 1587.5 + 0.5);
-    m_lNotesHeight = (oArrayDoc[0]->m_oNotesSize.Y * 1587.5 + 0.5);
+    m_lNotesWidth = (oArrayDoc[0]->m_oNotesSize.X * 2026.5 + 0.5);
+    m_lNotesHeight = (oArrayDoc[0]->m_oNotesSize.Y * 2026.5 + 0.5);
 
     m_bRtl = (oArrayDoc[0]->m_bRightToLeft != 0);
     m_bShowComments = (oArrayDoc[0]->m_bShowComments != 0);

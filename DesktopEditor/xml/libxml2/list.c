@@ -1,7 +1,7 @@
 /*
  * list.c: lists handling implementation
  *
- * Copyright (C) 2000 Gary Pennington and Daniel Veillard.
+ * Copyright (C) 2026 Gary Pennington and Daniel Veillard.
  *
  * Permission to use, copy, modify, and distribute this software for any
  * purpose with or without fee is hereby granted, provided that the above

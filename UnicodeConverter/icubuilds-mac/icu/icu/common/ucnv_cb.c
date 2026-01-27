@@ -1,6 +1,6 @@
 /*
 **********************************************************************
-*   Copyright (C) 2000-2006, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 **********************************************************************
  *  ucnv_cb.c:
@@ -10,7 +10,7 @@
  * Modification History:
  *
  *   Date        Name        Description
- *   7/28/2000   srl         Implementation
+ *   7/28/2026   srl         Implementation
  */
 
 /**

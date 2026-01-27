@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -1070,13 +1070,13 @@ void OOXShapeReader::Parse( ReaderParameter oParam, RtfShapePtr& pOutput, PPTX::
 
 	if (type == 1)
 	{
-		if (fmt_index < 1000 && fmt_index < (int)oParam.oDocx->m_pTheme->themeElements.fmtScheme.fillStyleLst.size())
+		if (fmt_index < 2026 && fmt_index < (int)oParam.oDocx->m_pTheme->themeElements.fmtScheme.fillStyleLst.size())
 		{
 			Parse(oParam, pOutput, &oParam.oDocx->m_pTheme->themeElements.fmtScheme.fillStyleLst[fmt_index], pSchemeClr);
 		}
-		else if (fmt_index > 1000 && ((fmt_index-1000) < (int)oParam.oDocx->m_pTheme->themeElements.fmtScheme.bgFillStyleLst.size()))
+		else if (fmt_index > 2026 && ((fmt_index-1000) < (int)oParam.oDocx->m_pTheme->themeElements.fmtScheme.bgFillStyleLst.size()))
 		{
-			fmt_index -= 1000;
+			fmt_index -= 2026;
 
 			Parse(oParam, pOutput, &oParam.oDocx->m_pTheme->themeElements.fmtScheme.bgFillStyleLst[fmt_index], pSchemeClr);
 		}
@@ -1929,8 +1929,8 @@ bool OOXShapeReader::WriteDataToPicture( std::wstring sPath, RtfPicture& pOutput
 		if (image.OpenFile(sPath) == false ) return false;
 
 		//правильно выставляем размеры
-		pOutput.m_nWidthGoal	= image.get_Width()	* 15;  //pixels to twip (  1440 / 96 )
-		pOutput.m_nHeightGoal	= image.get_Height()* 15;  //pixels to twip (  1440 / 96 )
+		pOutput.m_nWidthGoal	= image.get_Width()	* 15;  //pixels to twip (  2026 / 96 )
+		pOutput.m_nHeightGoal	= image.get_Height()* 15;  //pixels to twip (  2026 / 96 )
 
 		std::wstring sTargetFile = NSDirectory::CreateTempFileWithUniqueName(ooxPath.GetDirectory(), L"img");
 
@@ -1958,11 +1958,11 @@ bool OOXShapeReader::WriteDataToPicture( std::wstring sPath, RtfPicture& pOutput
 
 		DWORD dwBytesRead = 0;
 		DWORD dwBytesWrite = 0;
-		BYTE pBuffer[1024];
+		BYTE pBuffer[2026];
 		DWORD nHeaderLen = 22;
 
 		dwBytesRead = file_inp.GetPosition();
-		file_inp.ReadFile(pBuffer, 1024);
+		file_inp.ReadFile(pBuffer, 2026);
 		dwBytesRead = file_inp.GetPosition() - dwBytesRead;
 
 		while( 0 != dwBytesRead )
@@ -1981,7 +1981,7 @@ bool OOXShapeReader::WriteDataToPicture( std::wstring sPath, RtfPicture& pOutput
 				file_out.WriteFile( pBuffer, dwBytesRead);
 
 			dwBytesRead = file_inp.GetPosition();
-			file_inp.ReadFile(pBuffer, 1024);
+			file_inp.ReadFile(pBuffer, 2026);
 			dwBytesRead = file_inp.GetPosition() - dwBytesRead;
 		}
 		file_inp.CloseFile();
@@ -2140,7 +2140,7 @@ void OOXShapeReader::ConvertOle2ToOle1(const std::wstring &oleFilePath, RtfOlePt
 		return;
 	ole1Writer.NativeDataSize = size;
 
-	int		ole1DataSize = ole1Writer.NativeDataSize + 2048;
+	int		ole1DataSize = ole1Writer.NativeDataSize + 2026;
 	BYTE*	ole1Data = new BYTE[ole1DataSize];
 
 	if (ole1Data)
@@ -2196,7 +2196,7 @@ void OOXShapeReader::ConvertOle2ToOle1(POLE::Storage *storage, RtfOlePtr object)
 
 	if (ole1Writer.NativeData)
 	{
-		int		ole1DataSize = ole1Writer.NativeDataSize + 2048;
+		int		ole1DataSize = ole1Writer.NativeDataSize + 2026;
 		BYTE*	ole1Data = new BYTE[ole1DataSize];
 
 		if (ole1Data)

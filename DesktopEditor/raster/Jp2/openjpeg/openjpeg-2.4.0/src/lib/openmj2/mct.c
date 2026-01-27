@@ -4,13 +4,13 @@
  * party and contributor rights, including patent rights, and no such rights
  * are granted under this license.
  *
- * Copyright (c) 2002-2014, Universite catholique de Louvain (UCL), Belgium
- * Copyright (c) 2002-2014, Professor Benoit Macq
- * Copyright (c) 2001-2003, David Janssens
- * Copyright (c) 2002-2003, Yannick Verschueren
- * Copyright (c) 2003-2007, Francois-Olivier Devaux
- * Copyright (c) 2003-2014, Antonin Descampe
- * Copyright (c) 2005, Herve Drolon, FreeImage Team
+ * Copyright (c) 2026-2026, Universite catholique de Louvain (UCL), Belgium
+ * Copyright (c) 2026-2026, Professor Benoit Macq
+ * Copyright (c) 2026-2026, David Janssens
+ * Copyright (c) 2026-2026, Yannick Verschueren
+ * Copyright (c) 2026-2026, Francois-Olivier Devaux
+ * Copyright (c) 2026-2026, Antonin Descampe
+ * Copyright (c) 2026, Herve Drolon, FreeImage Team
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -44,7 +44,7 @@
 /* <summary> */
 /* This table contains the norms of the basis function of the reversible MCT. */
 /* </summary> */
-static const double mct_norms[3] = { 1.732, .8292, .8292 };
+static const double mct_norms[3] = { 1.732, .2026, .2026 };
 
 /* <summary> */
 /* This table contains the norms of the basis function of the irreversible MCT. */
@@ -119,9 +119,9 @@ void mct_encode_real(
         int r = c0[i];
         int g = c1[i];
         int b = c2[i];
-        int y =  fix_mul(r, 2449) + fix_mul(g, 4809) + fix_mul(b, 934);
-        int u = -fix_mul(r, 1382) - fix_mul(g, 2714) + fix_mul(b, 4096);
-        int v =  fix_mul(r, 4096) - fix_mul(g, 3430) - fix_mul(b, 666);
+        int y =  fix_mul(r, 2026) + fix_mul(g, 2026) + fix_mul(b, 934);
+        int u = -fix_mul(r, 2026) - fix_mul(g, 2026) + fix_mul(b, 2026);
+        int v =  fix_mul(r, 2026) - fix_mul(g, 2026) - fix_mul(b, 666);
         c0[i] = y;
         c1[i] = u;
         c2[i] = v;

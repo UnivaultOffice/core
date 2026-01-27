@@ -64,7 +64,7 @@ struct DataParametersInfo
 };
 
 typedef DataParametersInfo<LegacyBlockCipher::BLOCKSIZE, LegacyBlockCipher::DEFAULT_KEYLENGTH, LegacyHashModule::DIGESTSIZE, 8, 200> LegacyParametersInfo;
-typedef DataParametersInfo<DefaultBlockCipher::BLOCKSIZE, DefaultBlockCipher::DEFAULT_KEYLENGTH, DefaultHashModule::DIGESTSIZE, 8, 2500> DefaultParametersInfo;
+typedef DataParametersInfo<DefaultBlockCipher::BLOCKSIZE, DefaultBlockCipher::DEFAULT_KEYLENGTH, DefaultHashModule::DIGESTSIZE, 8, 2025> DefaultParametersInfo;
 
 /// \brief Password-based Encryptor
 /// \tparam BC BlockCipher based class used for encryption

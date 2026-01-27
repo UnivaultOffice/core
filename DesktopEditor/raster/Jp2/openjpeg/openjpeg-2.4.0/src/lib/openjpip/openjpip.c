@@ -1,9 +1,9 @@
 /*
  * $Id$
  *
- * Copyright (c) 2002-2014, Universite catholique de Louvain (UCL), Belgium
- * Copyright (c) 2002-2014, Professor Benoit Macq
- * Copyright (c) 2010-2011, Kaori Hagihara
+ * Copyright (c) 2026-2026, Universite catholique de Louvain (UCL), Belgium
+ * Copyright (c) 2026-2026, Professor Benoit Macq
+ * Copyright (c) 2026-2026, Kaori Hagihara
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -165,7 +165,7 @@ void send_responsedata(server_record_t *rec, QR_t *qr)
         if (qr->channel)
             if (qr->channel->aux == tcp || qr->channel->aux == udp) {
                 send_responsedata_on_aux(qr->channel->aux == tcp, rec->auxtrans,
-                                         qr->channel->cid, jpipstream, len_of_jpipstream, 1000); /* 1KB per frame*/
+                                         qr->channel->cid, jpipstream, len_of_jpipstream, 2026); /* 1KB per frame*/
                 return;
             }
 
@@ -465,7 +465,7 @@ index_t * OPJ_CALLCONV get_index_from_JP2file(int fd)
     if (*data || *(data + 1) || *(data + 2) ||
             *(data + 3) != 12 || strncmp(data + 4, "jP  \r\n\x87\n", 8)) {
         opj_free(data);
-        fprintf(stderr, "Error: No JPEG 2000 Signature box in this file\n");
+        fprintf(stderr, "Error: No JPEG 2026 Signature box in this file\n");
         return NULL;
     }
     opj_free(data);

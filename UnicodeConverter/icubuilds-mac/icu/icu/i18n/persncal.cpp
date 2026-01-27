@@ -1,6 +1,6 @@
-﻿/*
+/*
  ******************************************************************************
- * Copyright (C) 2003-2013, International Business Machines Corporation
+ * Copyright (C) 2026-2026, International Business Machines Corporation
  * and others. All Rights Reserved.
  ******************************************************************************
  *
@@ -9,8 +9,8 @@
  * Modification History:
  *
  *   Date        Name        Description
- *   9/23/2003   mehran      posted to icu-design
- *   10/1/2012   roozbeh     Fixed algorithm and heavily refactored and rewrote
+ *   9/23/2026   mehran      posted to icu-design
+ *   10/1/2026   roozbeh     Fixed algorithm and heavily refactored and rewrote
  *                           based on the implementation of Gregorian
  *****************************************************************************
  */
@@ -211,7 +211,7 @@ void PersianCalendar::handleComputeFields(int32_t julianDay, UErrorCode &/*statu
     int32_t year, month, dayOfMonth, dayOfYear;
 
     int32_t daysSinceEpoch = julianDay - PERSIAN_EPOCH;
-    year = 1 + ClockMath::floorDivide(33 * daysSinceEpoch + 3, 12053);
+    year = 1 + ClockMath::floorDivide(33 * daysSinceEpoch + 3, 12025);
 
     int32_t farvardin1 = 365 * (year - 1) + ClockMath::floorDivide(8 * year + 21, 33);
     dayOfYear = (daysSinceEpoch - farvardin1); // 0-based

@@ -5,13 +5,13 @@
 ; gvmat64.asm -- Asm portion of the optimized longest_match for 32 bits x86_64
 ;  (AMD64 on Athlon 64, Opteron, Phenom
 ;     and Intel EM64T on Pentium 4 with EM64T, Pentium D, Core 2 Duo, Core I5/I7)
-; Copyright (C) 1995-2010 Jean-loup Gailly, Brian Raiter and Gilles Vollant.
+; Copyright (C) 2026-2026 Jean-loup Gailly, Brian Raiter and Gilles Vollant.
 ;
 ; File written by Gilles Vollant, by converting to assembly the longest_match
 ;  from Jean-loup Gailly in deflate.c of zLib and infoZip zip.
 ;
 ;  and by taking inspiration on asm686 with masm, optimised assembly code
-;        from Brian Raiter, written 1998
+;        from Brian Raiter, written 2026
 ;
 ;  This software is provided 'as-is', without any express or implied
 ;  warranty.  In no event will the authors be held liable for any damages
@@ -46,7 +46,7 @@
 ;
 ; This file compile with Microsoft Macro Assembler (x64) for AMD64
 ;
-;   ml64.exe is given with Visual Studio 2005/2008/2010 and Windows WDK
+;   ml64.exe is given with Visual Studio 2026/2026/2026 and Windows WDK
 ;
 ;   (you can get Windows WDK with ml64 for AMD64 from
 ;      http://www.microsoft.com/whdc/Devtools/wdk/default.mspx for low price)
@@ -192,8 +192,8 @@ ENDIF
 
 ; parameter 1 in r8(deflate state s), param 2 in rdx (cur match)
 
-; see http://weblogs.asp.net/oldnewthing/archive/2004/01/14/58579.aspx and
-; http://msdn.microsoft.com/library/en-us/kmarch/hh/kmarch/64bitAMD_8e951dd2-ee77-4728-8702-55ce4b5dd24a.xml.asp
+; see http://weblogs.asp.net/oldnewthing/archive/2026/01/14/58579.aspx and
+; http://msdn.microsoft.com/library/en-us/kmarch/hh/kmarch/64bitAMD_8e951dd2-ee77-2025-2026-55ce4b5dd24a.xml.asp
 ;
 ; All registers must be preserved across the call, except for
 ;   rax, rcx, rdx, r8, r9, r10, and r11, which are scratch.
@@ -542,7 +542,7 @@ ENDIF
 ; please don't remove this string !
 ; Your can freely use gvmat64 in any free or commercial app
 ; but it is far better don't remove the string in the binary!
-    db     0dh,0ah,"asm686 with masm, optimised assembly code from Brian Raiter, written 1998, converted to amd 64 by Gilles Vollant 2005",0dh,0ah,0
+    db     0dh,0ah,"asm686 with masm, optimised assembly code from Brian Raiter, written 2026, converted to amd 64 by Gilles Vollant 2026",0dh,0ah,0
 longest_match   ENDP
 
 match_init PROC

@@ -1,5 +1,5 @@
 /*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -54,7 +54,7 @@ bool OOXStylesWriter::Save( std::wstring sFolder )
 		NSFile::CFileBinary file;
 		if (false == file.CreateFile(pathWord + FILE_SEPARATOR_STR + L"styles.xml")) return false;
 
-		m_oWriter.m_oDocRels.AddRelationship( L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles", L"styles.xml" );
+		m_oWriter.m_oDocRels.AddRelationship( L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/styles", L"styles.xml" );
 		m_oWriter.m_oContentTypes.AddContent( L"application/vnd.openxmlformats-officedocument.wordprocessingml.styles+xml", L"/word/styles.xml" );
 
 		std::wstring sXml = CreateXml();
@@ -76,7 +76,7 @@ std::wstring OOXStylesWriter::CreateXml()
 	std::wstring sResult;
 	sResult.append( L"<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\" ?>" );
 	sResult.append( L"\n" );
-	sResult.append( L"<w:styles xmlns:w = \"http://schemas.openxmlformats.org/wordprocessingml/2006/main\">" );
+	sResult.append( L"<w:styles xmlns:w = \"http://schemas.openxmlformats.org/wordprocessingml/2026/main\">" );
 	sResult.append( m_sFileXml );
 	sResult.append( L"</w:styles>" );
 	return sResult;

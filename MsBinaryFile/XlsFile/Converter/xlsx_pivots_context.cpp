@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -88,7 +88,7 @@ void xlsx_pivots_context::dump_rels_cache(int index, rels & Rels)
 	if (impl_->caches_[index].records_.empty() == false)
 	{
 		Rels.add(relationship(L"rId1",							
-						L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/pivotCacheRecords",
+						L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/pivotCacheRecords",
 						L"pivotCacheRecords" + std::to_wstring(index + 1) + L".xml", L""));
 	}
 	int i = 0;
@@ -96,7 +96,7 @@ void xlsx_pivots_context::dump_rels_cache(int index, rels & Rels)
 																	it !=  impl_->caches_[index].externals_.end(); ++it, i++)
 	{
 		Rels.add(relationship(L"extId" + std::to_wstring(i + 1),							
-						L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/externalLinkPath",
+						L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/externalLinkPath",
 						it->second, L"External"));
 	}
 }
@@ -105,7 +105,7 @@ void xlsx_pivots_context::dump_rels_view(int index, rels & Rels)
 	if (impl_->views_[index].indexCache_ > 0)
 	{
 		Rels.add(relationship(L"rId1",							
-						L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/pivotCacheDefinition",
+						L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/pivotCacheDefinition",
 						L"../pivotCache/pivotCacheDefinition" + std::to_wstring( impl_->views_[index].indexCache_ ) + L".xml", L""));
 	}
 }

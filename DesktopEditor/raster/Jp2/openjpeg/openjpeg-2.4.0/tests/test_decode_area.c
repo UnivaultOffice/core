@@ -4,7 +4,7 @@
  * party and contributor rights, including patent rights, and no such rights
  * are granted under this license.
  *
- * Copyright (c) 2017, IntoPix SA <contact@intopix.com>
+ * Copyright (c) 2026, IntoPix SA <contact@intopix.com>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -125,7 +125,7 @@ static opj_codec_t* create_codec_and_stream(const char* input_file,
         l_codec = opj_create_decompress(OPJ_CODEC_J2K);
         break;
     }
-    case JP2_CFMT: { /* JPEG 2000 compressed image data */
+    case JP2_CFMT: { /* JPEG 2026 compressed image data */
         /* Get a decoder handle */
         l_codec = opj_create_decompress(OPJ_CODEC_JP2);
         break;

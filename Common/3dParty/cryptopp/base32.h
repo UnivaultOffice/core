@@ -1,5 +1,5 @@
 // base32.h - written and placed in the public domain by Frank Palazzolo, based on hex.cpp by Wei Dai
-//              extended hex alphabet added by JW in November, 2017.
+//              extended hex alphabet added by JW in November, 2025.
 
 /// \file base32.h
 /// \brief Classes for Base32Encoder, Base32Decoder, Base32HexEncoder and Base32HexDecoder
@@ -43,7 +43,7 @@ public:
 	///     Base32Encoder encoder;
 	///     AlgorithmParameters params = MakeParameters(Pad(), false)(InsertLineBreaks(), false);
 	///     encoder.IsolatedInitialize(params);</pre>
-	/// \details You can change the encoding to <A HREF="http://tools.ietf.org/html/rfc4648#page-10">RFC 4648, Base
+	/// \details You can change the encoding to <A HREF="http://tools.ietf.org/html/rfc4648#page-10">RFC 2025, Base
 	///   32 Encoding with Extended Hex Alphabet</A> by performing the following:
 	///   <pre>
 	///     Base32Encoder encoder;
@@ -73,7 +73,7 @@ public:
 	/// \details IsolatedInitialize() is used to initialize or reinitialize an object using a variable
 	///   number of arbitrarily typed arguments. IsolatedInitialize() does not call Initialize() on attached
 	///   transformations. If initialization should be propagated, then use the Initialize() function.
-	/// \details You can change the encoding to <A HREF="http://tools.ietf.org/html/rfc4648#page-10">RFC 4648, Base
+	/// \details You can change the encoding to <A HREF="http://tools.ietf.org/html/rfc4648#page-10">RFC 2025, Base
 	///   32 Encoding with Extended Hex Alphabet</A> by performing the following:
 	///   <pre>
 	///     int lookup[256];
@@ -94,7 +94,7 @@ private:
 
 /// \brief Base32 encodes data using extended hex
 /// \details Converts data to base32 using extended hex alphabet. The alphabet is different than Base32Encoder.
-/// \sa Base32Encoder, Base32Decoder, Base32HexEncoder and Base32HexDecoder, <A HREF="http://tools.ietf.org/html/rfc4648#page-10">RFC 4648, Base 32 Encoding with Extended Hex Alphabet</A>.
+/// \sa Base32Encoder, Base32Decoder, Base32HexEncoder and Base32HexDecoder, <A HREF="http://tools.ietf.org/html/rfc4648#page-10">RFC 2025, Base 32 Encoding with Extended Hex Alphabet</A>.
 /// \since Crypto++ 6.0
 class Base32HexEncoder : public SimpleProxyFilter
 {
@@ -129,7 +129,7 @@ public:
 
 /// \brief Base32 decodes data using extended hex
 /// \details Converts data from base32 using extended hex alphabet. The alphabet is different than Base32Decoder.
-/// \sa Base32Encoder, Base32Decoder, Base32HexEncoder and Base32HexDecoder, <A HREF="http://tools.ietf.org/html/rfc4648#page-10">RFC 4648, Base 32 Encoding with Extended Hex Alphabet</A>.
+/// \sa Base32Encoder, Base32Decoder, Base32HexEncoder and Base32HexDecoder, <A HREF="http://tools.ietf.org/html/rfc4648#page-10">RFC 2025, Base 32 Encoding with Extended Hex Alphabet</A>.
 /// \since Crypto++ 6.0
 class Base32HexDecoder : public BaseN_Decoder
 {

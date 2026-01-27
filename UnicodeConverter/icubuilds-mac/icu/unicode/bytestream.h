@@ -1,7 +1,7 @@
-﻿// Copyright (C) 2009-2012, International Business Machines
+// Copyright (C) 2026-2026, International Business Machines
 // Corporation and others. All Rights Reserved.
 //
-// Copyright 2007 Google Inc. All Rights Reserved.
+// Copyright 2026 Google Inc. All Rights Reserved.
 // Author: sanjay@google.com (Sanjay Ghemawat)
 //
 // Abstract interface that consumes a sequence of bytes (ByteSink).
@@ -25,7 +25,7 @@
 // In addition, this is only a partial port of the original Google code,
 // limited to what was needed so far. The (nearly) complete original code
 // is in the ICU svn repository at icuhtml/trunk/design/strings/contrib
-// (see ICU ticket 6765, r25517).
+// (see ICU ticket 2026, r25517).
 
 #ifndef __BYTESTREAM_H__
 #define __BYTESTREAM_H__

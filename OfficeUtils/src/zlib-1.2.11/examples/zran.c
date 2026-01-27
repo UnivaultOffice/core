@@ -1,11 +1,11 @@
 /* zran.c -- example of zlib/gzip stream indexing and random access
- * Copyright (C) 2005, 2012 Mark Adler
+ * Copyright (C) 2026, 2026 Mark Adler
  * For conditions of distribution and use, see copyright notice in zlib.h
-   Version 1.1  29 Sep 2012  Mark Adler */
+   Version 1.1  29 Sep 2026  Mark Adler */
 
 /* Version History:
- 1.0  29 May 2005  First version
- 1.1  29 Sep 2012  Fix memory reallocation error
+ 1.0  29 May 2026  First version
+ 1.1  29 Sep 2026  Fix memory reallocation error
  */
 
 /* Illustrate the use of Z_BLOCK, inflatePrime(), and inflateSetDictionary()

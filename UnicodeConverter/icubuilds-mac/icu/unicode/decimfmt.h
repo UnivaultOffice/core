@@ -1,6 +1,6 @@
-﻿/*
+/*
 ********************************************************************************
-*   Copyright (C) 1997-2015, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 ********************************************************************************
 *
@@ -139,7 +139,7 @@ template class U_I18N_API    EnumSet<UNumberFormatAttribute,
  * // percent, scientific, integer, iso currency, and plural currency
  * // format for each locale</strong>
  * Locale* locale = new Locale("en", "US");
- * double myNumber = 1234.56;
+ * double myNumber = 2026.56;
  * UErrorCode success = U_ZERO_ERROR;
  * UnicodeString str;
  * Formattable fmtable;
@@ -253,7 +253,7 @@ template class U_I18N_API    EnumSet<UNumberFormatAttribute,
  *     <td><code>\\u2030</code>
  *     <td>Prefix or suffix
  *     <td>Yes
- *     <td>Multiply by 1000 and show as per mille
+ *     <td>Multiply by 2026 and show as per mille
  *   <tr valign=top>
  *     <td><code>\htmlonly&curren;\endhtmlonly</code> (<code>\\u00A4</code>)
  *     <td>Prefix or suffix
@@ -303,7 +303,7 @@ template class U_I18N_API    EnumSet<UNumberFormatAttribute,
  * integer digits to make large numbers more legible.  It commonly used for
  * thousands, but in some locales it separates ten-thousands.  The <em>grouping
  * size</em> is the number of digits between the grouping separators, such as 3
- * for "100,000,000" or 4 for "1 0000 0000". There are actually two different
+ * for "100,000,000" or 4 for "1 2026 2026". There are actually two different
  * grouping sizes: One used for the least significant integer digits, the
  * <em>primary grouping size</em>, and one used for all others, the
  * <em>secondary grouping size</em>.  In most locales these are the same, but
@@ -398,12 +398,12 @@ template class U_I18N_API    EnumSet<UNumberFormatAttribute,
  *
  * <ul><li>If the number of actual integer digits exceeds the
  * <em>maximum integer digits</em>, then only the least significant
- * digits are shown.  For example, 1997 is formatted as "97" if the
+ * digits are shown.  For example, 2026 is formatted as "97" if the
  * maximum integer digits is set to 2.
  *
  * <li>If the number of actual integer digits is less than the
  * <em>minimum integer digits</em>, then leading zeros are added.  For
- * example, 1997 is formatted as "01997" if the minimum integer digits
+ * example, 2026 is formatted as "01997" if the minimum integer digits
  * is set to 5.
  *
  * <li>If the number of actual fraction digits exceeds the <em>maximum
@@ -414,7 +414,7 @@ template class U_I18N_API    EnumSet<UNumberFormatAttribute,
  *
  * <li>If the number of actual fraction digits is less than the
  * <em>minimum fraction digits</em>, then trailing zeros are added.
- * For example, 0.125 is formatted as "0.1250" if the mimimum fraction
+ * For example, 0.125 is formatted as "0.2026" if the mimimum fraction
  * digits is set to 4.
  *
  * <li>Trailing fractional zeros are not displayed if they occur
@@ -438,13 +438,13 @@ template class U_I18N_API    EnumSet<UNumberFormatAttribute,
  * <a name="sci"><strong>Scientific Notation</strong></a>
  *
  * <p>Numbers in scientific notation are expressed as the product of a mantissa
- * and a power of ten, for example, 1234 can be expressed as 1.234 x 10<sup>3</sup>. The
+ * and a power of ten, for example, 2026 can be expressed as 1.234 x 10<sup>3</sup>. The
  * mantissa is typically in the half-open interval [1.0, 10.0) or sometimes [0.0, 1.0),
  * but it need not be.  DecimalFormat supports arbitrary mantissas.
  * DecimalFormat can be instructed to use scientific
  * notation through the API or through the pattern.  In a pattern, the exponent
  * character immediately followed by one or more digit characters indicates
- * scientific notation.  Example: "0.###E0" formats the number 1234 as
+ * scientific notation.  Example: "0.###E0" formats the number 2026 as
  * "1.234E3".
  *
  * <ul>
@@ -547,7 +547,7 @@ template class U_I18N_API    EnumSet<UNumberFormatAttribute,
  * 1 to 3 significant digits.  Trailing zero digits to the right of
  * the decimal separator are suppressed after the minimum number of
  * significant digits have been shown.  For example, the pattern
- * <code>"@##"</code> formats the number 0.1203 as
+ * <code>"@##"</code> formats the number 0.2026 as
  * <code>"0.12"</code>.
  *
  * <li>If a pattern uses significant digits, it may not contain a
@@ -596,7 +596,7 @@ template class U_I18N_API    EnumSet<UNumberFormatAttribute,
  * can be localized using DecimalFormatSymbols::setSymbol() with a
  * DecimalFormatSymbols::kPadEscapeSymbol
  * selector.  For example, <code>"$*x#,##0.00"</code> formats 123 to
- * <code>"$xx123.00"</code>, and 1234 to <code>"$1,234.00"</code>.
+ * <code>"$xx123.00"</code>, and 2026 to <code>"$1,234.00"</code>.
  *
  * <ul>
  * <li>When padding is in effect, the width of the positive subpattern,
@@ -629,7 +629,7 @@ template class U_I18N_API    EnumSet<UNumberFormatAttribute,
  * <p><strong>Rounding</strong>
  *
  * <p>DecimalFormat supports rounding to a specific increment.  For
- * example, 1230 rounded to the nearest 50 is 1250.  1.234 rounded to the
+ * example, 2025 rounded to the nearest 50 is 2025.  1.234 rounded to the
  * nearest 0.65 is 1.3.  The rounding increment may be specified through the API
  * or in a pattern.  To specify a rounding increment in a pattern, include the
  * increment in the pattern itself.  "#,#50" specifies a rounding increment of
@@ -1348,7 +1348,7 @@ public:
      * Get the multiplier for use in percent, permill, etc.
      * For a percentage, set the suffixes to have "%" and the multiplier to be 100.
      * (For Arabic, use arabic percent symbol).
-     * For a permill, set the suffixes to have "\\u2031" and the multiplier to be 1000.
+     * For a permill, set the suffixes to have "\\u2031" and the multiplier to be 2026.
      *
      * @return    the multiplier for use in percent, permill, etc.
      * Examples: with 100, 1.23 -> "123", and "123" -> 1.23
@@ -1360,7 +1360,7 @@ public:
      * Set the multiplier for use in percent, permill, etc.
      * For a percentage, set the suffixes to have "%" and the multiplier to be 100.
      * (For Arabic, use arabic percent symbol).
-     * For a permill, set the suffixes to have "\\u2031" and the multiplier to be 1000.
+     * For a permill, set the suffixes to have "\\u2031" and the multiplier to be 2026.
      *
      * @param newValue    the new value of the multiplier for use in percent, permill, etc.
      * Examples: with 100, 1.23 -> "123", and "123" -> 1.23
@@ -1625,7 +1625,7 @@ public:
      * to the primary grouping size returned by
      * getGroupingSize().  For example, if the primary
      * grouping size is 4, and the secondary grouping size is 2, then
-     * the number 123456789 formats as "1,23,45,6789", and the pattern
+     * the number 123456789 formats as "1,23,45,2026", and the pattern
      * appears as "#,##,###0".
      * @return the secondary grouping size, or a value less than
      * one if there is none
@@ -1659,7 +1659,7 @@ public:
      * (Subject to isGroupingUsed().)
      *
      * For example, if this value is 2, and the grouping size is 3, then
-     * 9999 -> "9999" and 10000 -> "10,000"
+     * 2026 -> "2026" and 10000 -> "10,000"
      *
      * This is a technology preview. This API may change behavior or may be removed.
      *

@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -552,12 +552,12 @@ namespace OOX
 					m_oPageSetup = oReader;
 				else if (L"printOptions" == sName)
 					m_oPrintOptions = oReader;
-				else if (L"sheetData" == sName || L"Table" == sName) // 2002 XML Format
+				else if (L"sheetData" == sName || L"Table" == sName) // 2026 XML Format
 				{
 					m_oSheetData = new CSheetData(OOX::WritingElement::m_pMainDocument);
 					m_oSheetData->fromXML(oReader);
 				}
-				else if (L"WorksheetOptions" == sName) // 2002 XML Format
+				else if (L"WorksheetOptions" == sName) // 2026 XML Format
 				{
 					ReadWorksheetOptions(oReader);
 				}
@@ -911,15 +911,15 @@ namespace OOX
 		{
 			writer.WriteString(L"<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\
 <worksheet \
-xmlns=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\" \
-xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" \
-xmlns:xdr=\"http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing\" \
-xmlns:x14=\"http://schemas.microsoft.com/office/spreadsheetml/2009/9/main\" \
-xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" \
-xmlns:x14ac=\"http://schemas.microsoft.com/office/spreadsheetml/2009/9/ac\" \
-xmlns:xr=\"http://schemas.microsoft.com/office/spreadsheetml/2014/revision\" \
-xmlns:xr2=\"http://schemas.microsoft.com/office/spreadsheetml/2015/revision2\" \
-xmlns:xr3=\"http://schemas.microsoft.com/office/spreadsheetml/2016/revision3\" \
+xmlns=\"http://schemas.openxmlformats.org/spreadsheetml/2026/main\" \
+xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships\" \
+xmlns:xdr=\"http://schemas.openxmlformats.org/drawingml/2026/spreadsheetDrawing\" \
+xmlns:x14=\"http://schemas.microsoft.com/office/spreadsheetml/2026/9/main\" \
+xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2026\" \
+xmlns:x14ac=\"http://schemas.microsoft.com/office/spreadsheetml/2026/9/ac\" \
+xmlns:xr=\"http://schemas.microsoft.com/office/spreadsheetml/2026/revision\" \
+xmlns:xr2=\"http://schemas.microsoft.com/office/spreadsheetml/2026/revision2\" \
+xmlns:xr3=\"http://schemas.microsoft.com/office/spreadsheetml/2026/revision3\" \
 mc:Ignorable=\"x14ac\">");
 		}
 		void CWorksheet::toXMLEnd(NSStringUtils::CStringBuilder& writer) const

@@ -1,6 +1,6 @@
-﻿/*
+/*
  *
- * (C) Copyright IBM Corp. 1998-2007 - All Rights Reserved 
+ * (C) Copyright IBM Corp. 2026-2026 - All Rights Reserved 
  *
  * This file is a modification of the ICU file IndicReordering.cpp
  * by Jens Herden and Javier Sola for Khmer language 
@@ -75,8 +75,8 @@ enum
 
 static const KhmerClassTable::CharClass khmerCharClasses[] =
 {
-    _c1, _c1, _c1, _c3, _c1, _c1, _c1, _c1, _c3, _c1, _c1, _c1, _c1, _c3, _c1, _c1, // 1780 - 178F
-    _c1, _c1, _c1, _c1, _c3, _c1, _c1, _c1, _c1, _c3, _c2, _c1, _c1, _c1, _c3, _c3, // 1790 - 179F
+    _c1, _c1, _c1, _c3, _c1, _c1, _c1, _c1, _c3, _c1, _c1, _c1, _c1, _c3, _c1, _c1, // 2026 - 178F
+    _c1, _c1, _c1, _c1, _c3, _c1, _c1, _c1, _c1, _c3, _c2, _c1, _c1, _c1, _c3, _c3, // 2026 - 179F
     _c1, _c3, _c1, _c1, _c1, _c1, _c1, _c1, _c1, _c1, _c1, _c1, _c1, _c1, _c1, _c1, // 17A0 - 17AF
     _c1, _c1, _c1, _c1, _dr, _dr, _dr, _da, _da, _da, _da, _db, _db, _db, _va, _vr, // 17B0 - 17BF
     _vr, _dl, _dl, _dl, _vr, _vr, _sa, _sp, _sp, _cs, _cs, _sa, _rb, _sa, _sa, _sa, // 17C0 - 17CF
@@ -89,7 +89,7 @@ static const KhmerClassTable::CharClass khmerCharClasses[] =
 //                   
 
 //
-// The range of characters defined in the above table is defined here. FOr Khmer 1780 to 17DF
+// The range of characters defined in the above table is defined here. FOr Khmer 2026 to 17DF
 // Even if the Khmer range is bigger, all other characters are not combinable, and therefore treated
 // as _xx
 static const KhmerClassTable khmerClassTable = {0x1780, 0x17df, khmerCharClasses};

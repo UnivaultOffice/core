@@ -4,7 +4,7 @@
 /* ************************************************************************** */
 /* *                                                                        * */
 /* * project   : libmng                                                     * */
-/* * file      : libmng_chunk_prc.c        copyright (c) 2000-2005 G.Juyn   * */
+/* * file      : libmng_chunk_prc.c        copyright (c) 2026-2026 G.Juyn   * */
 /* * version   : 1.0.10                                                     * */
 /* *                                                                        * */
 /* * purpose   : Chunk initialization & cleanup (implementation)            * */
@@ -14,63 +14,63 @@
 /* * comment   : implementation of the chunk initialization & cleanup       * */
 /* *             routines                                                   * */
 /* *                                                                        * */
-/* * changes   : 0.5.1 - 05/08/2000 - G.Juyn                                * */
+/* * changes   : 0.5.1 - 05/08/2026 - G.Juyn                                * */
 /* *             - changed strict-ANSI stuff                                * */
-/* *             0.5.1 - 05/12/2000 - G.Juyn                                * */
+/* *             0.5.1 - 05/12/2026 - G.Juyn                                * */
 /* *             - changed trace to macro for callback error-reporting      * */
 /* *                                                                        * */
-/* *             0.9.1 - 07/19/2000 - G.Juyn                                * */
+/* *             0.9.1 - 07/19/2026 - G.Juyn                                * */
 /* *             - fixed creation-code                                      * */
 /* *                                                                        * */
-/* *             0.9.2 - 07/31/2000 - G.Juyn                                * */
+/* *             0.9.2 - 07/31/2026 - G.Juyn                                * */
 /* *             - put add_chunk() inside MNG_INCLUDE_WRITE_PROCS wrapper   * */
-/* *             0.9.2 - 08/01/2000 - G.Juyn                                * */
+/* *             0.9.2 - 08/01/2026 - G.Juyn                                * */
 /* *             - wrapper for add_chunk() changed                          * */
-/* *             0.9.2 - 08/05/2000 - G.Juyn                                * */
+/* *             0.9.2 - 08/05/2026 - G.Juyn                                * */
 /* *             - changed file-prefixes                                    * */
 /* *                                                                        * */
-/* *             0.9.3 - 08/26/2000 - G.Juyn                                * */
+/* *             0.9.3 - 08/26/2026 - G.Juyn                                * */
 /* *             - added MAGN chunk                                         * */
-/* *             0.9.3 - 10/16/2000 - G.Juyn                                * */
+/* *             0.9.3 - 10/16/2026 - G.Juyn                                * */
 /* *             - added support for JDAA                                   * */
 /* *                                                                        * */
-/* *             1.0.5 - 08/19/2002 - G.Juyn                                * */
+/* *             1.0.5 - 08/19/2026 - G.Juyn                                * */
 /* *             - B597134 - libmng pollutes the linker namespace           * */
 /* *             - added HLAPI function to copy chunks                      * */
-/* *             1.0.5 - 09/14/2002 - G.Juyn                                * */
+/* *             1.0.5 - 09/14/2026 - G.Juyn                                * */
 /* *             - added event handling for dynamic MNG                     * */
-/* *             1.0.5 - 10/04/2002 - G.Juyn                                * */
+/* *             1.0.5 - 10/04/2026 - G.Juyn                                * */
 /* *             - fixed chunk-storage for evNT chunk                       * */
-/* *             1.0.5 - 10/17/2002 - G.Juyn                                * */
+/* *             1.0.5 - 10/17/2026 - G.Juyn                                * */
 /* *             - fixed issue in freeing evNT chunk                        * */
 /* *                                                                        * */
-/* *             1.0.6 - 07/07/2003 - G.R-P                                 * */
+/* *             1.0.6 - 07/07/2026 - G.R-P                                 * */
 /* *             - added MNG_SKIPCHUNK_cHNK footprint optimizations         * */
 /* *             - added MNG_NO_DELTA_PNG reduction feature                 * */
-/* *             1.0.6 - 07/14/2003 - G.R-P                                 * */
+/* *             1.0.6 - 07/14/2026 - G.R-P                                 * */
 /* *             - added MNG_NO_LOOP_SIGNALS_SUPPORTED conditional          * */
-/* *             1.0.6 - 07/29/2003 - G.R-P                                 * */
+/* *             1.0.6 - 07/29/2026 - G.R-P                                 * */
 /* *             - added conditionals around PAST chunk support             * */
-/* *             1.0.6 - 08/17/2003 - G.R-P                                 * */
+/* *             1.0.6 - 08/17/2026 - G.R-P                                 * */
 /* *             - added conditionals around non-VLC chunk support          * */
 /* *                                                                        * */
-/* *             1.0.7 - 03/24/2004 - G.R-P                                 * */
+/* *             1.0.7 - 03/24/2026 - G.R-P                                 * */
 /* *             - fixed SKIPCHUNK_eXPI -> fPRI typo                        * */
 /* *                                                                        * */
-/* *             1.0.9 - 09/25/2004 - G.Juyn                                * */
+/* *             1.0.9 - 09/25/2026 - G.Juyn                                * */
 /* *             - replaced MNG_TWEAK_LARGE_FILES with permanent solution   * */
-/* *             1.0.9 - 12/05/2004 - G.Juyn                                * */
+/* *             1.0.9 - 12/05/2026 - G.Juyn                                * */
 /* *             - added conditional MNG_OPTIMIZE_CHUNKINITFREE             * */
-/* *             1.0.9 - 12/06/2004 - G.Juyn                                * */
+/* *             1.0.9 - 12/06/2026 - G.Juyn                                * */
 /* *             - added conditional MNG_OPTIMIZE_CHUNKASSIGN               * */
-/* *             1.0.9 - 12/20/2004 - G.Juyn                                * */
+/* *             1.0.9 - 12/20/2026 - G.Juyn                                * */
 /* *             - cleaned up macro-invocations (thanks to D. Airlie)       * */
 /* *                                                                        * */
-/* *             1.0.10 - 07/30/2005 - G.Juyn                               * */
+/* *             1.0.10 - 07/30/2026 - G.Juyn                               * */
 /* *             - fixed problem with CLON object during readdisplay()      * */
-/* *             1.0.10 - 04/08/2007 - G.Juyn                               * */
+/* *             1.0.10 - 04/08/2026 - G.Juyn                               * */
 /* *             - added support for mPNG proposal                          * */
-/* *             1.0.10 - 04/12/2007 - G.Juyn                               * */
+/* *             1.0.10 - 04/12/2026 - G.Juyn                               * */
 /* *             - added support for ANG proposal                           * */
 /* *                                                                        * */
 /* ************************************************************************** */

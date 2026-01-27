@@ -1,5 +1,5 @@
 /*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -50,7 +50,7 @@ bool OOXNumberingWriter::Save( std::wstring sFolder )
 
 		if (false == file.CreateFile(sFolder + FILE_SEPARATOR_STR + _T("word") + FILE_SEPARATOR_STR + _T("numbering.xml"))) return false;
 
-		m_oWriter.m_oDocRels.AddRelationship( _T("http://schemas.openxmlformats.org/officeDocument/2006/relationships/numbering"), _T("numbering.xml") );
+		m_oWriter.m_oDocRels.AddRelationship( _T("http://schemas.openxmlformats.org/officeDocument/2026/relationships/numbering"), _T("numbering.xml") );
 		m_oWriter.m_oContentTypes.AddContent( _T("application/vnd.openxmlformats-officedocument.wordprocessingml.numbering+xml"), _T("/word/numbering.xml") );
 
 		std::wstring sXml = CreateXml();
@@ -72,7 +72,7 @@ std::wstring OOXNumberingWriter::CreateXml()
 	std::wstring sResult;
 	sResult.append( _T("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\" ?>") );
 	sResult.append( _T("\n") );
-	sResult.append( _T("<w:numbering xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing\" xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:w10=\"urn:schemas-microsoft-com:office:word\">") );
+	sResult.append( _T("<w:numbering xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2026/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2026/wordprocessingDrawing\" xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2026/math\" xmlns:w10=\"urn:schemas-microsoft-com:office:word\">") );
 	sResult.append( m_sFileXml );
 	sResult.append( _T("</w:numbering>") );
 	return sResult;

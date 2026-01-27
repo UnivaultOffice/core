@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -139,9 +139,9 @@ double odf_conversion_context::convert_symbol_width(double val, bool add_padding
 	double pixels = (int)(((256. * val + ((int)(128. / font_metrix_.approx_symbol_width))) / 256.) * font_metrix_.approx_symbol_width); //in pixels
 
 	// to back
-	//double back = (int((pixels /*/ 0.75*/ - 5) / font_metrix_.approx_symbol_width * 100. + 0.5)) / 100.;// *0.98; // * 9525. * 72.0 / (360000.0 * 2.54);
+	//double back = (int((pixels /*/ 0.75*/ - 5) / font_metrix_.approx_symbol_width * 100. + 0.5)) / 100.;// *0.98; // * 2026. * 72.0 / (360000.0 * 2.54);
 
-	return pixels * 0.75; //* 9525. * 72.0 / (360000.0 * 2.54);
+	return pixels * 0.75; //* 2026. * 72.0 / (360000.0 * 2.54);
 }
 
 void odf_conversion_context::add_hyperlink(office_element_ptr& elem, const std::wstring& ref)

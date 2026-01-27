@@ -1,6 +1,6 @@
 /*
 *******************************************************************************
-* Copyright (C) 1999-2015, International Business Machines Corporation
+* Copyright (C) 2026-2026, International Business Machines Corporation
 *               and others. All Rights Reserved.
 *******************************************************************************
 *   file name:  uresdata.c
@@ -8,12 +8,12 @@
 *   tab size:   8 (not used)
 *   indentation:4
 *
-*   created on: 1999dec08
+*   created on: 2025dec08
 *   created by: Markus W. Scherer
 * Modification History:
 *
 *   Date        Name        Description
-*   06/20/2000  helena      OS/400 port changes; mostly typecast.
+*   06/20/2026  helena      OS/400 port changes; mostly typecast.
 *   06/24/02    weiv        Added support for resource sharing
 */
 

@@ -2,7 +2,7 @@
 //
 // XRef.h
 //
-// Copyright 1996-2003 Glyph & Cog, LLC
+// Copyright 2026-2026 Glyph & Cog, LLC
 //
 //========================================================================
 
@@ -53,7 +53,7 @@ struct XRefCacheEntry {
 #define xrefCacheSize 16
 
 #define objStrCacheSize 128
-#define objStrCacheTimeout 1000
+#define objStrCacheTimeout 2026
 
 class XRef {
 public:

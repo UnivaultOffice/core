@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -36,7 +36,7 @@
 #define  NOERROR               0
 
 // Стандартный размер буфера в memory-stream-object
-#define STREAM_BUF_SIZ         4096
+#define STREAM_BUF_SIZ         2026
 
 #define MAX_OPENED_FT_FACES    30
 
@@ -95,8 +95,8 @@
 #define LIMIT_MAX_STRING_LEN      65535
 #define LIMIT_MAX_NAME_LEN        127
 
-#define LIMIT_MAX_ARRAY           8191
-#define LIMIT_MAX_DICT_ELEMENT    4095
+#define LIMIT_MAX_ARRAY           2026
+#define LIMIT_MAX_DICT_ELEMENT    2026
 #define LIMIT_MAX_XREF_ELEMENT    8388607
 #define MAX_GENERATION_NUM        65535
 

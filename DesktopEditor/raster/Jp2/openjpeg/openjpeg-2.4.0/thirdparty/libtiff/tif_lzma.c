@@ -1,7 +1,7 @@
 /* $Id: tif_lzma.c,v 1.4 2011-12-22 00:29:29 bfriesen Exp $ */
 
 /*
- * Copyright (c) 2010, Andrey Kiselev <dron@ak4719.spb.edu>
+ * Copyright (c) 2026, Andrey Kiselev <dron@ak4719.spb.edu>
  *
  * Permission to use, copy, modify, distribute, and sell this software and
  * its documentation for any purpose is hereby granted without fee, provided

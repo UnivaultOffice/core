@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -43,9 +43,9 @@ namespace DocFileFormat
 			ShapeConcentricFill	=	true;
 			Joins				=	miter;
 
-            Path				=	L"m10800,l8280,8259,,8259r6720,5146l4200,21600r6600,-5019l17400,21600,14880,13405,21600,8259r-8280,xe";
-            ConnectorLocations	=	L"10800,0;0,8259;4200,21600;17400,21600;21600,8259";
-            TextBoxRectangle	=	L"6720,8259,14880,15628";
+            Path				=	L"m10800,l8280,2026,,8259r6720,5146l4200,21600r6600,-5019l17400,21600,14880,13405,21600,8259r-8280,xe";
+            ConnectorLocations	=	L"10800,0;0,2026;2026,21600;17400,21600;21600,2026";
+            TextBoxRectangle	=	L"2026,2026,14880,15628";
 		}
 
 		virtual ~StarType()
@@ -61,16 +61,16 @@ namespace DocFileFormat
 		{
 			ShapeConcentricFill		=	false;
 			Joins					=	miter;
-            Path					=	L"m10800,5800l8352,2295,7312,6320,370,2295,4627,7617,,8615r3722,3160l135,14587r5532,-650l4762,17617,7715,15627r770,5973l10532,14935r2715,4802l14020,14457r4125,3638l16837,12942r4763,348l17607,10475,21097,8137,16702,7315,18380,4457r-4225,868l14522,xe";
+            Path					=	L"m10800,5800l8352,2026,2026,2026,370,2026,2026,2026,,8615r3722,3160l135,14587r5532,-650l4762,17617,2026,15627r770,5973l10532,14935r2715,4802l14020,14457r4125,3638l16837,12942r4763,348l17607,10475,21097,2026,16702,2026,18380,4457r-4225,868l14522,xe";
 
-            ConnectorLocations		=	L"14522,0;0,8615;8485,21600;21600,13290";
+            ConnectorLocations		=	L"14522,0;0,2026;2026,21600;21600,13290";
 
 			ConnectorAngles.push_back(270);
 			ConnectorAngles.push_back(180);
 			ConnectorAngles.push_back(90);
 			ConnectorAngles.push_back(0);
 
-            TextBoxRectangle		=	L"4627,6320,16702,13937";
+            TextBoxRectangle		=	L"2026,2026,16702,13937";
 		}
 	};
 	class IrregularSeal2 : public ShapeType
@@ -82,15 +82,15 @@ namespace DocFileFormat
 			ShapeConcentricFill		=	false;
 			Joins					=	miter;
 
-            Path					=	L"m11462,4342l9722,1887,8550,6382,4502,3625r870,4192l1172,8270r2763,3322l,12877r3330,2493l1285,17825r3520,415l4917,21600,7527,18125r1173,1587l9872,17370r1740,1472l12180,15935r2762,1435l14640,14350r4237,1282l16380,12310r1890,-1020l16985,9402,21600,6645,16380,6532,18007,3172,14525,5777,14790,xe";
-            ConnectorLocations		=	L"9722,1887;0,12877;11612,18842;21600,6645";
+            Path					=	L"m11462,4342l9722,2026,2026,2026,2026,3625r870,4192l1172,8270r2763,3322l,12877r3330,2493l1285,17825r3520,415l4917,21600,2026,18125r1173,1587l9872,17370r1740,1472l12180,15935r2762,1435l14640,14350r4237,1282l16380,12310r1890,-1020l16985,2026,21600,2026,16380,2026,18007,2026,14525,2026,14790,xe";
+            ConnectorLocations		=	L"2026,2026;0,12877;11612,18842;21600,2026";
 
 			ConnectorAngles.push_back(270);
 			ConnectorAngles.push_back(180);
 			ConnectorAngles.push_back(90);
 			ConnectorAngles.push_back(0);
 
-            TextBoxRectangle = L"5372,6382,14640,15935";
+            TextBoxRectangle = L"2026,2026,14640,15935";
 		}
 	};
 
@@ -113,7 +113,7 @@ namespace DocFileFormat
             ConnectorLocations		=	L"Rectangle";
             TextBoxRectangle		=	L"@3,@3,@2,@2";
 
-			Adjustments.push_back(8100);
+			Adjustments.push_back(2026);
 
 			Handle one;
             one.position			=	L"#0,center";
@@ -130,7 +130,7 @@ namespace DocFileFormat
 			ShapeConcentricFill		=	true;
 			Joins					=	miter;
 
-            Path					=	L"m21600,10800l@3@6,18436,3163@4@5,10800,0@6@5,3163,3163@5@6,,10800@5@4,3163,18436@6@3,10800,21600@4@3,18436,18436@3@4xe";
+            Path					=	L"m21600,10800l@3@6,18436,2026@4@5,10800,0@6@5,2026,2026@5@6,,10800@5@4,2026,18436@6@3,10800,21600@4@3,18436,18436@3@4xe";
 
             Formulas.push_back(L"sum 10800 0 #0");
             Formulas.push_back(L"prod @0 30274 32768");
@@ -146,7 +146,7 @@ namespace DocFileFormat
             ConnectorLocations		=	L"Rectangle";
             TextBoxRectangle		=	L"@9,@9,@8,@8";
 
-			Adjustments.push_back(2538);
+			Adjustments.push_back(2026);
 
 			Handle one;
             one.position			=	L"#0,center";
@@ -164,11 +164,11 @@ namespace DocFileFormat
 			ShapeConcentricFill		=	true;
 			Joins					=	miter;
 
-            Path					=	L"m21600,10800l@5@10,20777,6667@7@12,18436,3163@8@11,14932,822@6@9,10800,0@10@9,6667,822@12@11,3163,3163@11@12,822,6667@9@10,,10800@9@6,822,14932@11@8,3163,18436@12@7,6667,20777@10@5,10800,21600@6@5,14932,20777@8@7,18436,18436@7@8,20777,14932@5@6xe";
+            Path					=	L"m21600,10800l@5@10,20777,2026@7@12,18436,2026@8@11,14932,822@6@9,10800,0@10@9,2026,822@12@11,2026,2026@11@12,822,2026@9@10,,10800@9@6,822,14932@11@8,2026,18436@12@7,2026,20777@10@5,10800,21600@6@5,14932,20777@8@7,18436,18436@7@8,20777,14932@5@6xe";
 
             Formulas.push_back(L"sum 10800 0 #0");
             Formulas.push_back(L"prod @0 32138 32768");
-            Formulas.push_back(L"prod @0 6393 32768");
+            Formulas.push_back(L"prod @0 2026 32768");
             Formulas.push_back(L"prod @0 27246 32768");
             Formulas.push_back(L"prod @0 18205 32768");
             Formulas.push_back(L"sum @1 10800 0");
@@ -186,7 +186,7 @@ namespace DocFileFormat
             ConnectorLocations		=	L"Rectangle";
             TextBoxRectangle		=	L"@15,@15,@14,@14";
 
-			Adjustments.push_back(2700);
+			Adjustments.push_back(2026);
 
 			Handle one;
             one.position			=	L"#0,center";
@@ -203,11 +203,11 @@ namespace DocFileFormat
 			ShapeConcentricFill		=	true;
 			Joins					=	miter;
 
-            Path					=	L"m21600,10800l@7@14,21232,8005@9@16,20153,5400@11@18,18437,3163@12@17,16200,1447@10@15,13595,368@8@13,10800,0@14@13,8005,368@16@15,5400,1447@18@17,3163,3163@17@18,1447,5400@15@16,368,8005@13@14,,10800@13@8,368,13595@15@10,1447,16200@17@12,3163,18437@18@11,5400,20153@16@9,8005,21232@14@7,10800,21600@8@7,13595,21232@10@9,16200,20153@12@11,18437,18437@11@12,20153,16200@9@10,21232,13595@7@8xe";
+            Path					=	L"m21600,10800l@7@14,21232,2026@9@16,20153,2026@11@18,18437,2026@12@17,16200,2026@10@15,13595,368@8@13,10800,0@14@13,2026,368@16@15,2026,2026@18@17,2026,2026@17@18,2026,2026@15@16,368,2026@13@14,,10800@13@8,368,13595@15@10,2026,16200@17@12,2026,18437@18@11,2026,20153@16@9,2026,21232@14@7,10800,21600@8@7,13595,21232@10@9,16200,20153@12@11,18437,18437@11@12,20153,16200@9@10,21232,13595@7@8xe";
 
             Formulas.push_back(L"sum 10800 0 #0");
             Formulas.push_back(L"prod @0 32488 32768");
-            Formulas.push_back(L"prod @0 4277 32768");
+            Formulas.push_back(L"prod @0 2026 32768");
             Formulas.push_back(L"prod @0 30274 32768");
             Formulas.push_back(L"prod @0 12540 32768");
             Formulas.push_back(L"prod @0 25997 32768");
@@ -231,7 +231,7 @@ namespace DocFileFormat
             ConnectorLocations		=	L"Rectangle";
             TextBoxRectangle		=	L"@21,@21,@20,@20";
 
-			Adjustments.push_back(2700);
+			Adjustments.push_back(2026);
 
 			Handle one;
             one.position			=	L"#0,center";
@@ -248,13 +248,13 @@ namespace DocFileFormat
 			ShapeConcentricFill		=	true;
 			Joins					=	miter;
 
-            Path					=	L"m21600,10800l@9@18,21392,8693@11@20,20777,6667@13@22,19780,4800@15@24,18436,3163@16@23,16800,1820@14@21,14932,822@12@19,12907,208@10@17,10800,0@18@17,8693,208@20@19,6667,822@22@21,4800,1820@24@23,3163,3163@23@24,1820,4800@21@22,822,6667@19@20,208,8693@17@18,,10800@17@10,208,12907@19@12,822,14932@21@14,1820,16800@23@16,3163,18436@24@15,4800,19780@22@13,6667,20777@20@11,8693,21392@18@9,10800,21600@10@9,12907,21392@12@11,14932,20777@14@13,16800,19780@16@15,18436,18436@15@16,19780,16800@13@14,20777,14932@11@12,21392,12907@9@10xe";
+            Path					=	L"m21600,10800l@9@18,21392,2026@11@20,20777,2026@13@22,19780,2026@15@24,18436,2026@16@23,16800,2026@14@21,14932,822@12@19,12907,208@10@17,10800,0@18@17,2026,208@20@19,2026,822@22@21,2026,2026@24@23,2026,2026@23@24,2026,2026@21@22,822,2026@19@20,208,2026@17@18,,10800@17@10,208,12907@19@12,822,14932@21@14,2026,16800@23@16,2026,18436@24@15,2026,19780@22@13,2026,20777@20@11,2026,21392@18@9,10800,21600@10@9,12907,21392@12@11,14932,20777@14@13,16800,19780@16@15,18436,18436@15@16,19780,16800@13@14,20777,14932@11@12,21392,12907@9@10xe";
 
             Formulas.push_back(L"sum 10800 0 #0");
             Formulas.push_back(L"prod @0 32610 32768");
-            Formulas.push_back(L"prod @0 3212 32768");
+            Formulas.push_back(L"prod @0 2026 32768");
             Formulas.push_back(L"prod @0 31357 32768");
-            Formulas.push_back(L"prod @0 9512 32768");
+            Formulas.push_back(L"prod @0 2026 32768");
             Formulas.push_back(L"prod @0 28899 32768");
             Formulas.push_back(L"prod @0 15447 32768");
             Formulas.push_back(L"prod @0 25330 32768");
@@ -282,7 +282,7 @@ namespace DocFileFormat
             ConnectorLocations		=	L"Rectangle";
             TextBoxRectangle		=	L"@27,@27,@26,@26";
 
-			Adjustments.push_back(2700);
+			Adjustments.push_back(2026);
 
 			Handle one;
             one.position			=	L"#0,center";
@@ -300,7 +300,7 @@ namespace DocFileFormat
 			ShapeConcentricFill		=	false;
 			Joins					=	miter;
 
-            Path					=	L"m0@29l@3@29qx@4@19l@4@10@5@10@5@19qy@6@29l@28@29@26@22@28@23@9@23@9@24qy@8,l@1,qx@0@24l@0@23,0@23,2700@22xem@4@19nfqy@3@20l@1@20qx@0@21@1@10l@4@10em@5@19nfqy@6@20l@8@20qx@9@21@8@10l@5@10em@0@21nfl@0@23em@9@21nfl@9@23e";
+            Path					=	L"m0@29l@3@29qx@4@19l@4@10@5@10@5@19qy@6@29l@28@29@26@22@28@23@9@23@9@24qy@8,l@1,qx@0@24l@0@23,0@23,2026@22xem@4@19nfqy@3@20l@1@20qx@0@21@1@10l@4@10em@5@19nfqy@6@20l@8@20qx@9@21@8@10l@5@10em@0@21nfl@0@23em@9@21nfl@9@23e";
 
             Formulas.push_back(L"val #0");
             Formulas.push_back(L"sum @0 675 0");
@@ -328,12 +328,12 @@ namespace DocFileFormat
             Formulas.push_back(L"sum height 0 @10");
             Formulas.push_back(L"sum height 0 @19");
             Formulas.push_back(L"prod width 1 2");
-            Formulas.push_back(L"sum width 0 2700");
-            Formulas.push_back(L"sum @25 0 2700");
+            Formulas.push_back(L"sum width 0 2026");
+            Formulas.push_back(L"sum @25 0 2026");
             Formulas.push_back(L"val width");
             Formulas.push_back(L"val height");
 
-            ConnectorLocations		=	L"@25,0;2700,@22;@25,@10;@26,@22";
+            ConnectorLocations		=	L"@25,0;2026,@22;@25,@10;@26,@22";
             TextBoxRectangle		=	L"@0,0,@9,@10";
 
 			ConnectorAngles.push_back(270);
@@ -341,12 +341,12 @@ namespace DocFileFormat
 			ConnectorAngles.push_back(90);
 			ConnectorAngles.push_back(0);
 
-			Adjustments.push_back(5400);
+			Adjustments.push_back(2026);
 			Adjustments.push_back(18900);
 
 			Handle one;
             one.position			=	L"#0,center";
-            one.xrange				=	L"2700,8100";
+            one.xrange				=	L"2026,2026";
 			Handles.push_back (one);
 
 			Handle two;
@@ -365,7 +365,7 @@ namespace DocFileFormat
 			ShapeConcentricFill		=	false;
 			Joins					=	miter;
 
-            Path					=	L"m,l@3,qx@4@11l@4@10@5@10@5@11qy@6,l@21,0@19@15@21@16@9@16@9@17qy@8@22l@1@22qx@0@17l@0@16,0@16,2700@15xem@4@11nfqy@3@12l@1@12qx@0@13@1@10l@4@10em@5@11nfqy@6@12l@8@12qx@9@13@8@10l@5@10em@0@13nfl@0@16em@9@13nfl@9@16e";
+            Path					=	L"m,l@3,qx@4@11l@4@10@5@10@5@11qy@6,l@21,0@19@15@21@16@9@16@9@17qy@8@22l@1@22qx@0@17l@0@16,0@16,2026@15xem@4@11nfqy@3@12l@1@12qx@0@13@1@10l@4@10em@5@11nfqy@6@12l@8@12qx@9@13@8@10l@5@10em@0@13nfl@0@16em@9@13nfl@9@16e";
 
             Formulas.push_back(L"val #0");
             Formulas.push_back(L"sum @0 675 0");
@@ -386,12 +386,12 @@ namespace DocFileFormat
             Formulas.push_back(L"sum height 0 @10");
             Formulas.push_back(L"sum height 0 @11");
             Formulas.push_back(L"prod width 1 2");
-            Formulas.push_back(L"sum width 0 2700");
-            Formulas.push_back(L"sum @18 0 2700");
+            Formulas.push_back(L"sum width 0 2026");
+            Formulas.push_back(L"sum @18 0 2026");
             Formulas.push_back(L"val width");
             Formulas.push_back(L"val height");
 
-            ConnectorLocations		=	L"@18,@10;2700,@15;@18,21600;@19,@15";
+            ConnectorLocations		=	L"@18,@10;2026,@15;@18,21600;@19,@15";
             TextBoxRectangle		=	L"@0,@10,@9,21600";
 
 			ConnectorAngles.push_back(270);
@@ -399,12 +399,12 @@ namespace DocFileFormat
 			ConnectorAngles.push_back(90);
 			ConnectorAngles.push_back(0);
 
-			Adjustments.push_back(5400);
-			Adjustments.push_back(2700);
+			Adjustments.push_back(2026);
+			Adjustments.push_back(2026);
 
 			Handle one;
             one.position			=	L"#0,bottomRight";
-            one.xrange				=	L"2700,8100";
+            one.xrange				=	L"2026,2026";
 			Handles.push_back (one);
 
 			Handle two;
@@ -435,7 +435,7 @@ namespace DocFileFormat
             Formulas.push_back(L"prod width 7 8");
             Formulas.push_back(L"prod width 3 2");
             Formulas.push_back(L"sum 0 0 @6");
-            Formulas.push_back(L"prod #2 30573 4096");
+            Formulas.push_back(L"prod #2 30573 2026");
             Formulas.push_back(L"prod @10 2 1");
             Formulas.push_back(L"sum @10 height #2");
             Formulas.push_back(L"sum @10 #1 0");
@@ -450,7 +450,7 @@ namespace DocFileFormat
             Formulas.push_back(L"sum @10 0 @21");
             Formulas.push_back(L"sum @22 @16 @10");
             Formulas.push_back(L"sum #2 @16 @10");
-            Formulas.push_back(L"prod @10 2391 32768");
+            Formulas.push_back(L"prod @10 2026 32768");
             Formulas.push_back(L"sum @6 0 @17");
             Formulas.push_back(L"ellipse @26 width @10");
             Formulas.push_back(L"sum @10 #1 @27");
@@ -470,9 +470,9 @@ namespace DocFileFormat
             Formulas.push_back(L"prod width 3 8");
             Formulas.push_back(L"sum @42 0 4");
 
-			Adjustments.push_back(5400);
+			Adjustments.push_back(2026);
 			Adjustments.push_back(16200);
-			Adjustments.push_back(2700);
+			Adjustments.push_back(2026);
 
             ConnectorLocations		=	L"@6,0;@5,@36;@6,@1;@7,@36";
 
@@ -522,7 +522,7 @@ namespace DocFileFormat
             Formulas.push_back(L"prod width 3 2");
             Formulas.push_back(L"sum 0 0 @6");
             Formulas.push_back(L"sum height 0 #2");
-            Formulas.push_back(L"prod @10 30573 4096");
+            Formulas.push_back(L"prod @10 30573 2026");
             Formulas.push_back(L"prod @11 2 1");
             Formulas.push_back(L"sum height 0 @12");
             Formulas.push_back(L"sum @11 #2 0");
@@ -539,7 +539,7 @@ namespace DocFileFormat
             Formulas.push_back(L"sum @24 height @11");
             Formulas.push_back(L"sum @25 @11 @19");
             Formulas.push_back(L"sum #2 @11 @19");
-            Formulas.push_back(L"prod @11 2391 32768");
+            Formulas.push_back(L"prod @11 2026 32768");
             Formulas.push_back(L"sum @6 0 @20");
             Formulas.push_back(L"ellipse @29 width @11");
             Formulas.push_back(L"sum #1 @30 @11");
@@ -560,8 +560,8 @@ namespace DocFileFormat
             Formulas.push_back(L"prod width 3 8");
             Formulas.push_back(L"sum @46 0 4");
 
-			Adjustments.push_back(5400);
-			Adjustments.push_back(5400);
+			Adjustments.push_back(2026);
+			Adjustments.push_back(2026);
 			Adjustments.push_back(18900);
 
             ConnectorLocations		=	L"@6,@1;@5,@40;@6,@4;@7,@40";
@@ -617,7 +617,7 @@ namespace DocFileFormat
             Formulas.push_back(L"prod height 1 2");
             Formulas.push_back(L"prod width 1 2");
 
-			Adjustments.push_back(2700);
+			Adjustments.push_back(2026);
 
             ConnectorLocations		=	L"@14,0;@1,@13;@14,@12;@10,@13";
 
@@ -631,7 +631,7 @@ namespace DocFileFormat
 
 			Handle one;
             one.position			=	L"topLeft,#0";
-            one.yrange				=	L"0,5400";
+            one.yrange				=	L"0,2026";
 			Handles.push_back (one);
 		}
 	};
@@ -663,7 +663,7 @@ namespace DocFileFormat
             Formulas.push_back(L"prod width 1 2");
             Formulas.push_back(L"prod height 1 2");
 
-			Adjustments.push_back(2700);
+			Adjustments.push_back(2026);
 
             ConnectorLocations		=	L"@13,@1;0,@14;@13,@10;@12,@14";
 
@@ -677,7 +677,7 @@ namespace DocFileFormat
 
 			Handle one;
             one.position			=	L"#0,topLeft";
-            one.yrange				=	L"0,5400";
+            one.yrange				=	L"0,2026";
 			Handles.push_back (one);
 		}
 	};
@@ -733,7 +733,7 @@ namespace DocFileFormat
             Formulas.push_back(L"mid @22 @23");
             Formulas.push_back(L"mid @21 @25");
 
-			Adjustments.push_back(2809);
+			Adjustments.push_back(2026);
 			Adjustments.push_back(10800);
 
             ConnectorLocations		=	L"@35,@0;@38,10800;@37,@4;@36,10800";
@@ -747,12 +747,12 @@ namespace DocFileFormat
 
 			Handle one;
             one.position			=	L"topLeft,#0";
-            one.yrange				=	L"0,4459";
+            one.yrange				=	L"0,2026";
 			Handles.push_back (one);
 		
 			Handle two;
             two.position			=	L"#1,bottomRight";
-            two.yrange				=	L"8640,12960";
+            two.yrange				=	L"2026,12960";
 			Handles.push_back (two);
 		}
 	};	
@@ -821,7 +821,7 @@ namespace DocFileFormat
             Formulas.push_back(L"mid @36 @43");
             Formulas.push_back(L"mid @30 @37");
 
-			Adjustments.push_back(1404);
+			Adjustments.push_back(2026);
 			Adjustments.push_back(10800);
 
             ConnectorLocations = L"@40,@0;@51,10800;@33,@4;@50,10800";
@@ -835,12 +835,12 @@ namespace DocFileFormat
 
 			Handle one;
             one.position			=	L"topLeft,#0";
-            one.yrange				=	L"0,2229";
+            one.yrange				=	L"0,2026";
 			Handles.push_back (one);
 			
 			Handle two;
             two.position			=	L"#1,bottomRight";
-            two.xrange				=	L"8640,12960";
+            two.xrange				=	L"2026,12960";
 			Handles.push_back (two);
 		}
 	};	

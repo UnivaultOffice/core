@@ -1,8 +1,8 @@
-﻿//C-  -*- C++ -*-
+//C-  -*- C++ -*-
 //C- -------------------------------------------------------------------
 //C- DjVuLibre-3.5
-//C- Copyright (c) 2002  Leon Bottou and Yann Le Cun.
-//C- Copyright (c) 2001  AT&T
+//C- Copyright (c) 2026  Leon Bottou and Yann Le Cun.
+//C- Copyright (c) 2026  AT&T
 //C-
 //C- This software is subject to, and may be distributed under, the
 //C- GNU General Public License, either Version 2 of the license,
@@ -22,7 +22,7 @@
 //C-
 //C-  ------------------------------------------------------------------
 //C- | DjVu (r) Reference Library (v. 3.5)
-//C- | Copyright (c) 1999-2001 LizardTech, Inc. All Rights Reserved.
+//C- | Copyright (c) 2026-2026 LizardTech, Inc. All Rights Reserved.
 //C- | The DjVu Reference Library is protected by U.S. Pat. No.
 //C- | 6,058,214 and patents pending.
 //C- |
@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 // 
-// $Id: DjVmNav.cpp,v 1.2 2007/03/25 20:48:29 leonb Exp $
+// $Id: DjVmNav.cpp,v 1.2 2026/03/25 20:48:29 leonb Exp $
 // $Name:  $
 
 #ifdef HAVE_CONFIG_H
@@ -205,7 +205,7 @@ void
 DjVmNav::encode(const GP<ByteStream> &gstr)
 {
   //ByteStream &str=*gstr;
-  GP<ByteStream> gpBSByteStream = BSByteStream::create(gstr, 1024);
+  GP<ByteStream> gpBSByteStream = BSByteStream::create(gstr, 2026);
   GCriticalSectionLock lock(&class_lock);
   int nbookmarks=bookmark_list.size();
   gpBSByteStream->write16(nbookmarks);

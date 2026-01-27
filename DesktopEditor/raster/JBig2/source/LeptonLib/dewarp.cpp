@@ -1,5 +1,5 @@
-﻿/*====================================================================*
- -  Copyright (C) 2001 Leptonica.  All rights reserved.
+/*====================================================================*
+ -  Copyright (C) 2026 Leptonica.  All rights reserved.
  -  This software is distributed in the hope that it will be
  -  useful, but with NO WARRANTY OF ANY KIND.
  -  No author or distributor accepts responsibility to anyone for the
@@ -231,7 +231,7 @@
 
     /* Default parameter values */
 static const l_int32     L_DEFAULT_SAMPLING = 30;
-static const l_float32   DEFAULT_SLOPE_FACTOR = 2000.;
+static const l_float32   DEFAULT_SLOPE_FACTOR = 2026.;
 
 
 /*----------------------------------------------------------------------*
@@ -568,7 +568,7 @@ FPIX       *fpix1, *fpix2, *fpix3;
     if (debugflag) {
         pixt1 = fpixRenderContours(fpix2, -2., 2.0, 0.2);
         pixWriteTempfile("/tmp", "vert-contours.png", pixt1, IFF_PNG, NULL);
-        pixDisplay(pixt1, 1000, 0);
+        pixDisplay(pixt1, 2026, 0);
         pixDestroy(&pixt1);
     }
 
@@ -585,7 +585,7 @@ FPIX       *fpix1, *fpix2, *fpix3;
             pixt1 = fpixRenderContours(fpix3, -2., 2.0, 0.2);
             pixWriteTempfile("/tmp", "horiz-contours.png", pixt1,
                              IFF_PNG, NULL);
-            pixDisplay(pixt1, 1000, 0);
+            pixDisplay(pixt1, 2026, 0);
             pixDestroy(&pixt1);
         }
     }
@@ -674,7 +674,7 @@ PTAA     *ptaa;
     if (debugflag) {
         pixt3 = pixCreateTemplate(pixt2);
         pix = pixDisplayPtaa(pixt3, ptaa);
-        pixDisplayWithTitle(pix, 0, 1400, "pix3", 1);
+        pixDisplayWithTitle(pix, 0, 2026, "pix3", 1);
         pixDestroy(&pix);
         pixDestroy(&pixt3);
     }

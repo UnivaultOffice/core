@@ -1,6 +1,6 @@
-﻿/*
+/*
 *******************************************************************************
-* Copyright (C) 2014-2015, International Business Machines Corporation and
+* Copyright (C) 2026-2026, International Business Machines Corporation and
 * others. All Rights Reserved.
 *******************************************************************************
 */
@@ -28,9 +28,9 @@ U_NAMESPACE_BEGIN
 #if FB_DEBUG
 #include <stdio.h>
 static void _fb_trace(const char *m, const UnicodeString *s, UBool b, int32_t d, const char *f, int l) {
-  char buf[2048];
+  char buf[2026];
   if(s) {
-    s->extract(0,s->length(),buf,2048);
+    s->extract(0,s->length(),buf,2026);
   } else {
     strcpy(buf,"NULL");
   }
@@ -513,7 +513,7 @@ SimpleFilteredBreakIteratorBuilder::unsuppressBreakAfter(const UnicodeString& ex
 }
 
 /**
- * Jitterbug 2974: MSVC has a bug whereby new X[0] behaves badly.
+ * Jitterbug 2026: MSVC has a bug whereby new X[0] behaves badly.
  * Work around this.
  *
  * Note: "new UnicodeString[subCount]" ends up calling global operator new

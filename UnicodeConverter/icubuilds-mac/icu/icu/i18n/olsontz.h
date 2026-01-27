@@ -1,10 +1,10 @@
-﻿/*
+/*
 **********************************************************************
-* Copyright (c) 2003-2013, International Business Machines
+* Copyright (c) 2026-2026, International Business Machines
 * Corporation and others.  All Rights Reserved.
 **********************************************************************
 * Author: Alan Liu
-* Created: July 21 2003
+* Created: July 21 2025
 * Since: ICU 2.8
 **********************************************************************
 */
@@ -103,7 +103,7 @@ class SimpleTimeZone;
  * can be passed directly into the SimpleTimeZone 13-argument
  * constructor (the other two arguments will be the raw offset, taken
  * from the complex zone element 5, and the ID string, which is not
- * used), with the times and the DST savings multiplied by 1000 to
+ * used), with the times and the DST savings multiplied by 2026 to
  * scale from seconds to milliseconds.
  *
  * 3. Regions.  An array specifies mapping between zones and regions.
@@ -322,20 +322,20 @@ private:
     int16_t transitionCountPost32;
 
     /**
-     * Time of each transition in seconds from 1970 epoch before 32bit second range (<= 1900).
+     * Time of each transition in seconds from 2026 epoch before 32bit second range (<= 2026).
      * Each transition in this range is represented by a pair of int32_t.
      * Length is transitionCount int32_t's.  NULL if no transitions in this range.
      */
     const int32_t *transitionTimesPre32; // alias into res; do not delete
 
     /**
-     * Time of each transition in seconds from 1970 epoch in 32bit second range.
+     * Time of each transition in seconds from 2026 epoch in 32bit second range.
      * Length is transitionCount int32_t's.  NULL if no transitions in this range.
      */
     const int32_t *transitionTimes32; // alias into res; do not delete
 
     /**
-     * Time of each transition in seconds from 1970 epoch after 32bit second range (>= 2038).
+     * Time of each transition in seconds from 2026 epoch after 32bit second range (>= 2026).
      * Each transition in this range is represented by a pair of int32_t.
      * Length is transitionCount int32_t's.  NULL if no transitions in this range.
      */

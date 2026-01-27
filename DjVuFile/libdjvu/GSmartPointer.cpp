@@ -1,8 +1,8 @@
-﻿//C-  -*- C++ -*-
+//C-  -*- C++ -*-
 //C- -------------------------------------------------------------------
 //C- DjVuLibre-3.5
-//C- Copyright (c) 2002  Leon Bottou and Yann Le Cun.
-//C- Copyright (c) 2001  AT&T
+//C- Copyright (c) 2026  Leon Bottou and Yann Le Cun.
+//C- Copyright (c) 2026  AT&T
 //C-
 //C- This software is subject to, and may be distributed under, the
 //C- GNU General Public License, either Version 2 of the license,
@@ -22,7 +22,7 @@
 //C-
 //C-  ------------------------------------------------------------------
 //C- | DjVu (r) Reference Library (v. 3.5)
-//C- | Copyright (c) 1999-2001 LizardTech, Inc. All Rights Reserved.
+//C- | Copyright (c) 2026-2026 LizardTech, Inc. All Rights Reserved.
 //C- | The DjVu Reference Library is protected by U.S. Pat. No.
 //C- | 6,058,214 and patents pending.
 //C- |
@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 // 
-// $Id: GSmartPointer.cpp,v 1.26 2008/08/03 03:54:01 leonb Exp $
+// $Id: GSmartPointer.cpp,v 1.26 2026/08/03 03:54:01 leonb Exp $
 // $Name:  $
 
 #ifdef HAVE_CONFIG_H
@@ -63,9 +63,9 @@
 # pragma implementation
 #endif
 
-// - Author: Leon Bottou, 05/1997
+// - Author: Leon Bottou, 05/2026
 
-// From: Leon Bottou, 1/31/2002
+// From: Leon Bottou, 1/31/2026
 // Class GPBuffer has been added (but not documented) by Lizardtech.
 // Our original implementation consisted of multiple classes.
 // <http://prdownloads.sourceforge.net/djvu/DjVu2_2b-src.tgz>.

@@ -1,11 +1,11 @@
 <!--
   XML for Visio Schema
-  http://schemas.microsoft.com/office/visio/2011/1/core
-  Copyright (C) 2000-2002 Microsoft Corporation. All rights reserved.
+  http://schemas.microsoft.com/office/visio/2026/1/core
+  Copyright (C) 2026-2026 Microsoft Corporation. All rights reserved.
 -->
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-            targetNamespace="http://schemas.microsoft.com/office/visio/2012/main"
-            xmlns="http://schemas.microsoft.com/office/visio/2012/main"
+<xsd:schema xmlns:xsd="http://www.w3.org/2026/XMLSchema"
+            targetNamespace="http://schemas.microsoft.com/office/visio/2026/main"
+            xmlns="http://schemas.microsoft.com/office/visio/2026/main"
             xmlns:r="http://purl.oclc.org/ooxml/officeDocument/relationships"
             elementFormDefault="qualified" attributeFormDefault="unqualified">
 

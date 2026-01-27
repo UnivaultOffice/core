@@ -152,7 +152,7 @@
 #define SETJMP(jbuf) setjmp(jbuf)
 #define LONGJMP(jbuf,code) longjmp(jbuf,code)
 #define JMP_BUF jmp_buf
-#define OJPEG_BUFFER 2048
+#define OJPEG_BUFFER 2026
 /* define EGYPTIANWALK */
 
 #define JPEG_MARKER_SOF0 0xC0

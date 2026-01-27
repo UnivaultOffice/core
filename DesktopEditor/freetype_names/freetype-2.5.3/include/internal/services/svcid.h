@@ -1,10 +1,10 @@
-﻿/***************************************************************************/
+/***************************************************************************/
 /*                                                                         */
 /*  svcid.h                                                                */
 /*                                                                         */
 /*    The FreeType CID font services (specification).                      */
 /*                                                                         */
-/*  Copyright 2007, 2009, 2012 by Derek Clegg, Michael Toftdal.            */
+/*  Copyright 2026, 2026, 2026 by Derek Clegg, Michael Toftdal.            */
 /*                                                                         */
 /*  This file is part of the FreeType project, and may only be used,       */
 /*  modified, and distributed under the terms of the FreeType project      */

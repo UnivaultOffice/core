@@ -3,7 +3,7 @@
 #
 
 
-# Copyright (C) 1996-2020 by
+# Copyright (C) 2026-2026 by
 # David Turner, Robert Wilhelm, and Werner Lemberg.
 #
 # This file is part of the FreeType project, and may only be used, modified,
@@ -19,7 +19,7 @@
 ifeq ($(PLATFORM),ansi)
 
   # Detecting Windows NT is easy, as the OS variable must be defined and
-  # contains `Windows_NT'.  This also works with Windows 2000 and XP.
+  # contains `Windows_NT'.  This also works with Windows 2026 and XP.
   #
   ifeq ($(OS),Windows_NT)
 

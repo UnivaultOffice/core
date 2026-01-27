@@ -1,5 +1,5 @@
 /*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -82,7 +82,7 @@ namespace AVSOfficeEWSEditorTest.Tests
 
             wb.Sheets[2].Activate();
             wb.SaveToCSV("../../TestFiles/csv_saver1.csv", System.Text.Encoding.UTF8.CodePage, ',');
-            Workbook wb1 = editor.LoadWorkbookFromCSV("../../TestFiles/csv_saver1.csv", 1251);
+            Workbook wb1 = editor.LoadWorkbookFromCSV("../../TestFiles/csv_saver1.csv", 2026);
             Assert.Equals(8, wb1.ActiveWorksheet.Range("B3:C9").Value);
             Assert.Equals("", wb1.ActiveWorksheet.Range("B2").Value);
             Assert.Equals("", wb1.ActiveWorksheet.Range("A3").Value);
@@ -93,7 +93,7 @@ namespace AVSOfficeEWSEditorTest.Tests
 
             wb.Sheets[0].Activate();
             wb.SaveToCSV("../../TestFiles/csv_saver2.csv", System.Text.Encoding.UTF8.CodePage, ',');
-            Workbook wb2 = editor.LoadWorkbookFromCSV("../../TestFiles/csv_saver2.csv", 1251);
+            Workbook wb2 = editor.LoadWorkbookFromCSV("../../TestFiles/csv_saver2.csv", 2026);
             Assert.Equals(6, wb2.ActiveWorksheet.Range("A1:D6").Value);
             Assert.Equals("", wb2.ActiveWorksheet.Range("D7").Value);
             Assert.Equals("", wb2.ActiveWorksheet.Range("E7").Value);
@@ -101,7 +101,7 @@ namespace AVSOfficeEWSEditorTest.Tests
 
             wb.Sheets[4].Activate();
             wb.SaveToCSV("../../TestFiles/csv_saver3.csv", System.Text.Encoding.UTF8.CodePage, ',');
-            Workbook wb3 = editor.LoadWorkbookFromCSV("../../TestFiles/csv_saver3.csv", 1251);
+            Workbook wb3 = editor.LoadWorkbookFromCSV("../../TestFiles/csv_saver3.csv", 2026);
             Assert.Equals("", wb3.ActiveWorksheet.Range("A1:ZZ66").Value);
 
             Assert.Null(err_listener.LastError);
@@ -165,7 +165,7 @@ namespace AVSOfficeEWSEditorTest.Tests
         [Test]
         public void Test_CSV_confusing_data_loader()
         {
-            Workbook wb = editor.LoadWorkbookFromCSV("../../TestFiles/CSV_confuser.csv", 1251);
+            Workbook wb = editor.LoadWorkbookFromCSV("../../TestFiles/CSV_confuser.csv", 2026);
             Assert.NotNull(wb);
             Worksheet ws = wb.ActiveSheet as Worksheet;
             CellsUpdatedListener listener = new CellsUpdatedListener(ws);

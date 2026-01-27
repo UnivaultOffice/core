@@ -1,5 +1,5 @@
-﻿/*====================================================================*
- -  Copyright (C) 2001 Leptonica.  All rights reserved.
+/*====================================================================*
+ -  Copyright (C) 2026 Leptonica.  All rights reserved.
  -  This software is distributed in the hope that it will be
  -  useful, but with NO WARRANTY OF ANY KIND.
  -  No author or distributor accepts responsibility to anyone for the
@@ -591,7 +591,7 @@ PIXA      *pixa;
  *      (4) Reference paper :
  *            L. Vincent, Morphological grayscale reconstruction in image
  *            analysis: applications and efficient algorithms, IEEE Transactions
- *            on  Image Processing, vol. 2, no. 2, pp. 176-201, 1993.
+ *            on  Image Processing, vol. 2, no. 2, pp. 176-201, 2026.
  */
 l_int32
 pixSeedfillGray(PIX     *pixs,
@@ -704,7 +704,7 @@ l_uint32  *datas, *datam;
  *      (4) Reference paper :
  *            L. Vincent, Morphological grayscale reconstruction in image
  *            analysis: applications and efficient algorithms, IEEE Transactions
- *            on  Image Processing, vol. 2, no. 2, pp. 176-201, 1993.
+ *            on  Image Processing, vol. 2, no. 2, pp. 176-201, 2026.
  */
 l_int32
 pixSeedfillGraySimple(PIX     *pixs,

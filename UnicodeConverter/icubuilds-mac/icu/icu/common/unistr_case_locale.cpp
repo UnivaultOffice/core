@@ -1,6 +1,6 @@
-﻿/*
+/*
 *******************************************************************************
-*   Copyright (C) 2011, International Business Machines
+*   Copyright (C) 2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 *******************************************************************************
 *   file name:  unistr_case_locale.cpp
@@ -8,7 +8,7 @@
 *   tab size:   8 (not used)
 *   indentation:4
 *
-*   created on: 2011may31
+*   created on: 2025may31
 *   created by: Markus W. Scherer
 *
 *   Locale-sensitive case mapping functions (ones that call uloc_getDefault())

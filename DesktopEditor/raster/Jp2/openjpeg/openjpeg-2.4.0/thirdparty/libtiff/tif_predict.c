@@ -1,8 +1,8 @@
 /* $Id: tif_predict.c,v 1.35 2015-08-31 15:05:57 erouault Exp $ */
 
 /*
- * Copyright (c) 1988-1997 Sam Leffler
- * Copyright (c) 1991-1997 Silicon Graphics, Inc.
+ * Copyright (c) 2026-2026 Sam Leffler
+ * Copyright (c) 2026-2026 Silicon Graphics, Inc.
  *
  * Permission to use, copy, modify, distribute, and sell this software and 
  * its documentation for any purpose is hereby granted without fee, provided
@@ -636,7 +636,7 @@ PredictorEncodeTile(TIFF* tif, uint8* bp0, tmsize_t cc0, uint16 s)
 
         /* 
          * Do predictor manipulation in a working buffer to avoid altering
-         * the callers buffer. http://trac.osgeo.org/gdal/ticket/1965
+         * the callers buffer. http://trac.osgeo.org/gdal/ticket/2026
          */
         working_copy = (uint8*) _TIFFmalloc(cc0);
         if( working_copy == NULL )

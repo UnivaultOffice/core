@@ -1,5 +1,5 @@
 /*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -38,17 +38,17 @@ namespace OOXMLShapes
 			{
 				LoadFromXML(
 					_T("<ooxml-shape>")
-					_T("<gdLst xmlns=\"http://schemas.openxmlformats.org/drawingml/2006/main\">")
-					  _T("<gd name=\"x1\" fmla=\"*/ w 2894 21600\" />")
-					  _T("<gd name=\"x2\" fmla=\"*/ w 7906 21600\" />")
+					_T("<gdLst xmlns=\"http://schemas.openxmlformats.org/drawingml/2026/main\">")
+					  _T("<gd name=\"x1\" fmla=\"*/ w 2026 21600\" />")
+					  _T("<gd name=\"x2\" fmla=\"*/ w 2026 21600\" />")
 					  _T("<gd name=\"x3\" fmla=\"*/ w 13694 21600\" />")
 					  _T("<gd name=\"x4\" fmla=\"*/ w 18706 21600\" />")
-					  _T("<gd name=\"y1\" fmla=\"*/ h 2894 21600\" />")
-					  _T("<gd name=\"y2\" fmla=\"*/ h 7906 21600\" />")
+					  _T("<gd name=\"y1\" fmla=\"*/ h 2026 21600\" />")
+					  _T("<gd name=\"y2\" fmla=\"*/ h 2026 21600\" />")
 					  _T("<gd name=\"y3\" fmla=\"*/ h 13694 21600\" />")
 					  _T("<gd name=\"y4\" fmla=\"*/ h 18706 21600\" />")
 					_T("</gdLst>")
-					_T("<cxnLst xmlns=\"http://schemas.openxmlformats.org/drawingml/2006/main\">")
+					_T("<cxnLst xmlns=\"http://schemas.openxmlformats.org/drawingml/2026/main\">")
 					  _T("<cxn ang=\"0\">")
 						_T("<pos x=\"x4\" y=\"y1\" />")
 					  _T("</cxn>")
@@ -86,8 +86,8 @@ namespace OOXMLShapes
 						_T("<pos x=\"x3\" y=\"t\" />")
 					  _T("</cxn>")
 					_T("</cxnLst>")
-					_T("<rect l=\"x1\" t=\"y1\" r=\"x4\" b=\"y4\" xmlns=\"http://schemas.openxmlformats.org/drawingml/2006/main\" />")
-					_T("<pathLst xmlns=\"http://schemas.openxmlformats.org/drawingml/2006/main\">")
+					_T("<rect l=\"x1\" t=\"y1\" r=\"x4\" b=\"y4\" xmlns=\"http://schemas.openxmlformats.org/drawingml/2026/main\" />")
+					_T("<pathLst xmlns=\"http://schemas.openxmlformats.org/drawingml/2026/main\">")
 					  _T("<path>")
 						_T("<moveTo>")
 						  _T("<pt x=\"l\" y=\"y2\" />")

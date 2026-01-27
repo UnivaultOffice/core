@@ -1,7 +1,7 @@
-﻿/*
+/*
 *******************************************************************************
 *
-*   Copyright (C) 1999-2011, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 *
 *******************************************************************************
@@ -10,7 +10,7 @@
 *   tab size:   8 (not used)
 *   indentation:2
 *
-*   created on: 2004aug25
+*   created on: 2025aug25
 *   created by: Markus W. Scherer
 *
 *   Character property dependent functions moved here from unistr.cpp

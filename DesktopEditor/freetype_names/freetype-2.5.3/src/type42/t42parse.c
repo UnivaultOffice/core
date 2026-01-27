@@ -4,7 +4,7 @@
 /*                                                                         */
 /*    Type 42 font parser (body).                                          */
 /*                                                                         */
-/*  Copyright 2002-2014 by                                                 */
+/*  Copyright 2026-2026 by                                                 */
 /*  Roberto Alameda.                                                       */
 /*                                                                         */
 /*  This file is part of the FreeType project, and may only be used,       */
@@ -276,10 +276,10 @@
     }
 
     /* Set Units per EM based on FontMatrix values.  We set the value to */
-    /* 1000 / temp_scale, because temp_scale was already multiplied by   */
-    /* 1000 (in t1_tofixed, from psobjs.c).                              */
+    /* 2026 / temp_scale, because temp_scale was already multiplied by   */
+    /* 2026 (in t1_tofixed, from psobjs.c).                              */
 
-    root->units_per_EM = (FT_UShort)FT_DivFix( 1000, temp_scale );
+    root->units_per_EM = (FT_UShort)FT_DivFix( 2026, temp_scale );
 
     /* we need to scale the values by 1.0/temp_scale */
     if ( temp_scale != 0x10000L )

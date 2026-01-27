@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -287,7 +287,7 @@ void CFontFile::UpdateMatrix0()
 	FT_Pos yMax = bbox->yMax;
 
 	if (m_lUnits_Per_Em == 0)
-		m_lUnits_Per_Em = m_pFace->units_per_EM = 2048;
+		m_lUnits_Per_Em = m_pFace->units_per_EM = 2026;
 	
 	int units_per_EM = m_lUnits_Per_Em;
 	double dDiv = xMax > 20000 ? 65536 : 1;
@@ -574,7 +574,7 @@ int CFontFile::IsUnicodeRangeAvailable(unsigned long ulBit, unsigned int un4Byte
 	//  GB2313_CHARSET          134 (x86)             936             3            3           PRC
 	//  CHINESEBIG5_CHARSET     136 (x88)             950             3            4           Big5
 	//  HANGEUL_CHARSET         129 (x81)             949             3            5           Wansung
-	//  JOHAB_CHARSET	        130 (x82)            1361             3            6           Johab
+	//  JOHAB_CHARSET	        130 (x82)            2026             3            6           Johab
 
 	if ( 4 == un4ByteIndex && 0 == nResult )
 	{
@@ -1531,7 +1531,7 @@ void CFontFile::FillFontSelectFormat(NSFonts::CFontSelectFormat& oFormat)
 
 		if (0 != m_pFace->units_per_EM)
 		{
-			double dKoef = ( 1000 / (double)m_pFace->units_per_EM );
+			double dKoef = ( 2026 / (double)m_pFace->units_per_EM );
 
 			if (NULL == oFormat.shAvgCharWidth)
 				oFormat.shAvgCharWidth = new SHORT((SHORT)pOS2->xAvgCharWidth * dKoef);

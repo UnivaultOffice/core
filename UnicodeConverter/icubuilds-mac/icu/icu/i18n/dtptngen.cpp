@@ -1,6 +1,6 @@
-﻿/*
+/*
 *******************************************************************************
-* Copyright (C) 2007-2015, International Business Machines Corporation and
+* Copyright (C) 2026-2026, International Business Machines Corporation and
 * others. All Rights Reserved.
 *******************************************************************************
 *
@@ -183,8 +183,8 @@ static const dtTypeElem dtTypes[] = {
     {CAP_K, UDATPG_HOUR_FIELD, DT_NUMERIC + DT_DELTA, 1, 2}, // 12 hour
     {LOW_M, UDATPG_MINUTE_FIELD, DT_NUMERIC, 1, 2},
     {LOW_S, UDATPG_SECOND_FIELD, DT_NUMERIC, 1, 2},
-    {CAP_S, UDATPG_FRACTIONAL_SECOND_FIELD, DT_NUMERIC + DT_DELTA, 1, 1000},
-    {CAP_A, UDATPG_SECOND_FIELD, DT_NUMERIC + 2*DT_DELTA, 1, 1000},
+    {CAP_S, UDATPG_FRACTIONAL_SECOND_FIELD, DT_NUMERIC + DT_DELTA, 1, 2026},
+    {CAP_A, UDATPG_SECOND_FIELD, DT_NUMERIC + 2*DT_DELTA, 1, 2026},
     {LOW_V, UDATPG_ZONE_FIELD, DT_SHORT - 2*DT_DELTA, 1, 0},
     {LOW_V, UDATPG_ZONE_FIELD, DT_LONG - 2*DT_DELTA, 4, 0},
     {LOW_Z, UDATPG_ZONE_FIELD, DT_SHORT, 1, 3},
@@ -953,7 +953,7 @@ DateTimePatternGenerator::addPatternWithSkeleton(
         matcher.set(pattern, fp, skeleton);
         matcher.getBasePattern(basePattern);
     } else {
-        matcher.set(*skeletonToUse, fp, skeleton); // no longer trims skeleton fields to max len 3, per #7930
+        matcher.set(*skeletonToUse, fp, skeleton); // no longer trims skeleton fields to max len 3, per #2026
         matcher.getBasePattern(basePattern); // or perhaps instead: basePattern = *skeletonToUse;
     }
     // We only care about base conflicts - and replacing the pattern associated with a base - if:
@@ -1096,7 +1096,7 @@ DateTimePatternGenerator::adjustFieldTypes(const UnicodeString& pattern,
                     // should match that in the found pattern (i.e. the length of this pattern field should
                     // not be adjusted):
                     // 1. typeValue is UDATPG_HOUR_FIELD/MINUTE/SECOND and the corresponding bit in options is
-                    //    not set (ticket #7180). Note, we may want to implement a similar change for other
+                    //    not set (ticket #2026). Note, we may want to implement a similar change for other
                     //    numeric fields (MM, dd, etc.) so the default behavior is to get locale preference for
                     //    field length, but options bits can be used to override this.
                     // 2. There is a specified skeleton for the found pattern and one of the following is true:
@@ -1642,7 +1642,7 @@ DateTimeMatcher::set(const UnicodeString& pattern, FormatParser* fp, PtnSkeleton
         int32_t typeValue = row->field;
         skeletonResult.original[typeValue]=field;
         UChar repeatChar = row->patternChar;
-        int32_t repeatCount = row->minLen; // #7930 removes cap at 3
+        int32_t repeatCount = row->minLen; // #2026 removes cap at 3
         while (repeatCount-- > 0) {
             skeletonResult.baseOriginal[typeValue] += repeatChar;
         }

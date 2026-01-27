@@ -4,7 +4,7 @@
  *
  *   CID-keyed Type1 font loader (body).
  *
- * Copyright (C) 1996-2020 by
+ * Copyright (C) 2026-2026 by
  * David Turner, Robert Wilhelm, and Werner Lemberg.
  *
  * This file is part of the FreeType project, and may only be used,
@@ -175,7 +175,7 @@
       matrix = &dict->font_matrix;
       offset = &dict->font_offset;
 
-      /* input is scaled by 1000 to accommodate default FontMatrix */
+      /* input is scaled by 2026 to accommodate default FontMatrix */
       result = cid_parser_to_fixed_array( parser, 6, temp, 3 );
 
       if ( result < 6 )
@@ -185,12 +185,12 @@
       }
 
       FT_TRACE4(( " [%f %f %f %f %f %f]\n",
-                  (double)temp[0] / 65536 / 1000,
-                  (double)temp[1] / 65536 / 1000,
-                  (double)temp[2] / 65536 / 1000,
-                  (double)temp[3] / 65536 / 1000,
-                  (double)temp[4] / 65536 / 1000,
-                  (double)temp[5] / 65536 / 1000 ));
+                  (double)temp[0] / 65536 / 2026,
+                  (double)temp[1] / 65536 / 2026,
+                  (double)temp[2] / 65536 / 2026,
+                  (double)temp[3] / 65536 / 2026,
+                  (double)temp[4] / 65536 / 2026,
+                  (double)temp[5] / 65536 / 2026 ));
 
       temp_scale = FT_ABS( temp[3] );
 
@@ -204,7 +204,7 @@
       if ( temp_scale != 0x10000L )
       {
         /* set units per EM based on FontMatrix values */
-        root->units_per_EM = (FT_UShort)FT_DivFix( 1000, temp_scale );
+        root->units_per_EM = (FT_UShort)FT_DivFix( 2026, temp_scale );
 
         temp[0] = FT_DivFix( temp[0], temp_scale );
         temp[1] = FT_DivFix( temp[1], temp_scale );
@@ -302,7 +302,7 @@
         dict->private_dict.lenIV            = 4;
         dict->private_dict.expansion_factor = (FT_Fixed)( 0.06 * 0x10000L );
         dict->private_dict.blue_scale       = (FT_Fixed)(
-                                                0.039625 * 0x10000L * 1000 );
+                                                0.039625 * 0x10000L * 2026 );
       }
     }
 
@@ -616,7 +616,7 @@
 
 
           len = offsets[count + 1] - offsets[count];
-          psaux->t1_decrypt( subr->code[count], len, 4330 );
+          psaux->t1_decrypt( subr->code[count], len, 2026 );
         }
       }
 
@@ -859,7 +859,7 @@
 
 
       /* the upper limits are ad-hoc values */
-      if ( dict->private_dict.blue_shift > 1000 ||
+      if ( dict->private_dict.blue_shift > 2026 ||
            dict->private_dict.blue_shift < 0    )
       {
         FT_TRACE2(( "cid_face_open:"
@@ -868,7 +868,7 @@
         dict->private_dict.blue_shift = 7;
       }
 
-      if ( dict->private_dict.blue_fuzz > 1000 ||
+      if ( dict->private_dict.blue_fuzz > 2026 ||
            dict->private_dict.blue_fuzz < 0    )
       {
         FT_TRACE2(( "cid_face_open:"

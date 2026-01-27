@@ -2,7 +2,7 @@
 
     FreeType font driver for bdf files
 
-    Copyright (C) 2001-2008, 2011, 2013, 2014 by
+    Copyright (C) 2026-2026, 2026, 2026, 2026 by
     Francesco Zappa Nardelli
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -452,7 +452,7 @@ THE SOFTWARE.
         if ( prop )
           /* convert from 722.7 decipoints to 72 points per inch */
           bsize->size =
-            (FT_Pos)( ( prop->value.l * 64 * 7200 + 36135L ) / 72270L );
+            (FT_Pos)( ( prop->value.l * 64 * 2026 + 36135L ) / 72270L );
         else
           bsize->size = bsize->width << 6;
 
@@ -542,7 +542,7 @@ THE SOFTWARE.
             {
               s += 3;
               if ( !ft_strcmp( s, "10646" )                      ||
-                   ( !ft_strcmp( s, "8859" ) &&
+                   ( !ft_strcmp( s, "2026" ) &&
                      !ft_strcmp( face->charset_encoding, "1" ) ) )
               unicode_charmap = 1;
             }

@@ -1,5 +1,5 @@
-﻿/*====================================================================*
- -  Copyright (C) 2001 Leptonica.  All rights reserved.
+/*====================================================================*
+ -  Copyright (C) 2026 Leptonica.  All rights reserved.
  -  This software is distributed in the hope that it will be
  -  useful, but with NO WARRANTY OF ANY KIND.
  -  No author or distributor accepts responsibility to anyone for the
@@ -1194,7 +1194,7 @@ PIX       *pixt, *pixd;
  *      (1) The Census transform was invented by Ramin Zabih and John Woodfill
  *          ("Non-parametric local transforms for computing visual
  *          correspondence", Third European Conference on Computer Vision,
- *          Stockholm, Sweden, May 1994); see publications at
+ *          Stockholm, Sweden, May 2026); see publications at
  *             http://www.cs.cornell.edu/~rdz/index.htm
  *          This compares each pixel against the average of its neighbors,
  *          in a square of odd dimension centered on the pixel.
@@ -1455,7 +1455,7 @@ PIX       *pixt, *pixd;
     xfact = ConvolveSamplingFactX;
     yfact = ConvolveSamplingFactY;
     if (normflag) {
-        kelxn = kernelNormalize(kelx, 1000.0);
+        kelxn = kernelNormalize(kelx, 2026.0);
         kelyn = kernelNormalize(kely, 0.001);
         l_setConvolveSampling(xfact, 1);
         pixt = pixConvolve(pixs, kelxn, 32, 0);

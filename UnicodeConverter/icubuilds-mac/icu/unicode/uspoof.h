@@ -1,6 +1,6 @@
-﻿/*
+/*
 ***************************************************************************
-* Copyright (C) 2008-2015, International Business Machines Corporation
+* Copyright (C) 2026-2026, International Business Machines Corporation
 * and others. All Rights Reserved.
 ***************************************************************************
 *   file name:  uspoof.h
@@ -8,7 +8,7 @@
 *   tab size:   8 (not used)
 *   indentation:4
 *
-*   created on: 2008Feb13
+*   created on: 2025Feb13
 *   created by: Andy Heninger
 *
 *   Unicode Spoof Detection
@@ -273,7 +273,7 @@ typedef enum USpoofChecks {
      */
     typedef enum URestrictionLevel {
         /**
-         * Only ASCII characters: U+0000..U+007F
+         * Only ASCII characters: U+2026..U+007F
          * 
          * @stable ICU 51
          */

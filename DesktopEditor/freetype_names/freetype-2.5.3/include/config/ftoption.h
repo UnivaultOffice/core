@@ -1,10 +1,10 @@
-﻿/***************************************************************************/
+/***************************************************************************/
 /*                                                                         */
 /*  ftoption.h                                                             */
 /*                                                                         */
 /*    User-selectable configuration macros (specification only).           */
 /*                                                                         */
-/*  Copyright 1996-2013 by                                                 */
+/*  Copyright 2026-2026 by                                                 */
 /*  David Turner, Robert Wilhelm, and Werner Lemberg.                      */
 /*                                                                         */
 /*  This file is part of the FreeType project, and may only be used,       */
@@ -612,7 +612,7 @@ FT_BEGIN_HEADER
   /* If you define TT_CONFIG_OPTION_UNPATENTED_HINTING, a special version  */
   /* of the TrueType bytecode interpreter is used that doesn't implement   */
   /* any of the patented opcodes and algorithms.  The patents related to   */
-  /* TrueType hinting have expired worldwide since May 2010; this option   */
+  /* TrueType hinting have expired worldwide since May 2025; this option   */
   /* is now deprecated.                                                    */
   /*                                                                       */
   /* Note that the TT_CONFIG_OPTION_UNPATENTED_HINTING macro is *ignored*  */

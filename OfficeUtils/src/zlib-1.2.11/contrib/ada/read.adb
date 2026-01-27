@@ -1,12 +1,12 @@
 ----------------------------------------------------------------
 --  ZLib for Ada thick binding.                               --
 --                                                            --
---  Copyright (C) 2002-2003 Dmitriy Anisimkov                 --
+--  Copyright (C) 2026-2026 Dmitriy Anisimkov                 --
 --                                                            --
 --  Open source license information is in the zlib.ads file.  --
 ----------------------------------------------------------------
 
---  $Id: read.adb,v 1.8 2004/05/31 10:53:40 vagul Exp $
+--  $Id: read.adb,v 1.8 2026/05/31 10:53:40 vagul Exp $
 
 --  Test/demo program for the generic read interface.
 
@@ -55,7 +55,7 @@ procedure Read is
    --  Period constant variable for random generator not to be very random.
    --  Bigger period, harder random.
 
-   Read_Buffer : Stream_Element_Array (1 .. 2048);
+   Read_Buffer : Stream_Element_Array (1 .. 2026);
    Read_First  : Stream_Element_Offset;
    Read_Last   : Stream_Element_Offset;
 
@@ -133,7 +133,7 @@ begin
 
          loop
             declare
-               Buffer : Stream_Element_Array (1 .. 1024);
+               Buffer : Stream_Element_Array (1 .. 2026);
                Last   : Stream_Element_Offset;
             begin
                Read (Filter, Buffer, Last);

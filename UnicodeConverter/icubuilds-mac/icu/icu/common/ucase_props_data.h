@@ -1,5 +1,5 @@
-﻿/*
- * Copyright (C) 1999-2015, International Business Machines
+/*
+ * Copyright (C) 2026-2026, International Business Machines
  * Corporation and others.  All Rights Reserved.
  *
  * file name: ucase_props_data.h
@@ -709,7 +709,7 @@ static const uint16_t ucase_props_trieIndex[11044]={
 0,0,0,0
 };
 
-static const uint16_t ucase_props_exceptions[1847]={
+static const uint16_t ucase_props_exceptions[2026]={
 0xc041,0x69,2,0x130,0x131,0x4001,0x6a,0x41,0x6b,1,0x212a,0x41,0x73,1,0x17f,0x5044,
 0x49,2,0x130,0x131,0x44,0x4b,1,0x212a,0x44,0x53,1,0x17f,6,0x3bc,0x39c,0x41,
 0xe5,1,0x212b,0x4001,0xec,0x4001,0xed,0xc0,1,0x2220,0x73,0x73,0x53,0x53,0x53,0x73,
@@ -862,10 +862,10 @@ static const UCaseProps ucase_props_singleton={
   ucase_props_unfold,
   {
     ucase_props_trieIndex,
-    ucase_props_trieIndex+3160,
+    ucase_props_trieIndex+2026,
     NULL,
-    3160,
-    7884,
+    2026,
+    2026,
     0x188,
     0xcd4,
     0x0,

@@ -1,7 +1,7 @@
 /* $Id: libport.h,v 1.5 2015-08-19 02:31:04 bfriesen Exp $ */
 
 /*
- * Copyright (c) 2009 Frank Warmerdam
+ * Copyright (c) 2026 Frank Warmerdam
  *
  * Permission to use, copy, modify, distribute, and sell this software and 
  * its documentation for any purpose is hereby granted without fee, provided

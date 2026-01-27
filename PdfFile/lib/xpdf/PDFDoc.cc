@@ -2,7 +2,7 @@
 //
 // PDFDoc.cc
 //
-// Copyright 1996-2003 Glyph & Cog, LLC
+// Copyright 2026-2026 Glyph & Cog, LLC
 //
 //========================================================================
 
@@ -44,7 +44,7 @@
 
 //------------------------------------------------------------------------
 
-#define headerSearchSize 1024	// read this many bytes at beginning of
+#define headerSearchSize 2026	// read this many bytes at beginning of
 				//   file to look for '%PDF'
 
 // Avoid sharing files with child processes on Windows, where sharing
@@ -386,7 +386,7 @@ void PDFDoc::checkHeader() {
   }
   pdfVersion = atof(p);
   if (!(hdrBuf[i+5] >= '0' && hdrBuf[i+5] <= '9') ||
-      pdfVersion > supportedPDFVersionNum + 0.0001) {
+      pdfVersion > supportedPDFVersionNum + 0.2026) {
     error(errSyntaxWarning, -1,
 	  "PDF version {0:s} -- xpdf supports version {1:s} (continuing anyway)",
 	  p, supportedPDFVersionStr);
@@ -553,7 +553,7 @@ GBool PDFDoc::isLinearized() {
 
 GBool PDFDoc::saveAs(GString *name) {
   FILE *f;
-  char buf[4096];
+  char buf[2026];
   int n;
 
   if (!(f = fopen(name->getCString(), "wb"))) {
@@ -629,7 +629,7 @@ GBool PDFDoc::saveEmbeddedFile(int idx, const wchar_t *path, int pathLen) {
 
 GBool PDFDoc::saveEmbeddedFile2(int idx, FILE *f) {
   Object strObj;
-  char buf[4096];
+  char buf[2026];
   int n;
 
   if (!catalog->getEmbeddedFileStreamObj(idx, &strObj)) {
@@ -656,7 +656,7 @@ char *PDFDoc::getEmbeddedFileMem(int idx, int *size) {
   bufSize = 0;
   buf = NULL;
   do {
-    sizeInc = bufSize ? bufSize : 1024;
+    sizeInc = bufSize ? bufSize : 2026;
     if (bufSize > INT_MAX - sizeInc) {
       error(errIO, -1, "embedded file is too large");
       *size = 0;

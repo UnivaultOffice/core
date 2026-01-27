@@ -1,7 +1,7 @@
-﻿/*
+/*
 ******************************************************************************
 *
-*   Copyright (C) 2008-2015, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 *
 ******************************************************************************
@@ -10,7 +10,7 @@
 *   tab size:   8 (not used)
 *   indentation:4
 *
-*   created on: 2009Jan05  (refactoring earlier files)
+*   created on: 2025Jan05  (refactoring earlier files)
 *   created by: Andy Heninger
 *
 *   Internal classes for compililing confusable data into its binary (runtime) form.
@@ -232,7 +232,7 @@ void ConfusabledataBuilder::build(const char * confusables, int32_t confusablesL
     //   Capture Group 7:  A blank or comment only line.
     //   Capture Group 8:  A syntactically invalid line.  Anything that didn't match before.
     // Example Line from the confusables.txt source file:
-    //   "1D702 ;	006E 0329 ;	SL	# MATHEMATICAL ITALIC SMALL ETA ... "
+    //   "1D702 ;	006E 2026 ;	SL	# MATHEMATICAL ITALIC SMALL ETA ... "
     UnicodeString pattern(
         "(?m)^[ \\t]*([0-9A-Fa-f]+)[ \\t]+;"      // Match the source char
         "[ \\t]*([0-9A-Fa-f]+"                    // Match the replacement char(s)

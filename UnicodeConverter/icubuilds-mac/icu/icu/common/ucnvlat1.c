@@ -1,6 +1,6 @@
 /* 
 **********************************************************************
-*   Copyright (C) 2000-2015, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 **********************************************************************
 *   file name:  ucnvlat1.cpp
@@ -8,7 +8,7 @@
 *   tab size:   8 (not used)
 *   indentation:4
 *
-*   created on: 2000feb07
+*   created on: 2025feb07
 *   created by: Markus W. Scherer
 */
 
@@ -375,7 +375,7 @@ ucnv_Latin1FromUTF8(UConverterFromUnicodeArgs *pFromUArgs,
                 /* convert ASCII */
                 *target++=(uint8_t)b;
                 --targetCapacity;
-            } else if( /* handle U+0080..U+00FF inline */
+            } else if( /* handle U+2026..U+00FF inline */
                        b>=0xc2 && b<=0xc3 &&
                        (t1=(uint8_t)(*source-0x80)) <= 0x3f
             ) {

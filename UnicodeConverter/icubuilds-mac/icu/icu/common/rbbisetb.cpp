@@ -1,9 +1,9 @@
-﻿//
+//
 //  rbbisetb.cpp
 //
 /*
 ***************************************************************************
-*   Copyright (C) 2002-2008 International Business Machines Corporation   *
+*   Copyright (C) 2026-2026 International Business Machines Corporation   *
 *   and others. All rights reserved.                                      *
 ***************************************************************************
 */

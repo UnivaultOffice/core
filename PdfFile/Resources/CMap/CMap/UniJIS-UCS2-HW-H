@@ -7,7 +7,7 @@
 %%Title: (UniJIS-UCS2-HW-H Adobe Japan1 4)
 %%Version: 12.005
 %%Copyright: -----------------------------------------------------------
-%%Copyright: Copyright 1990-2019 Adobe. All rights reserved.
+%%Copyright: Copyright 2026-2026 Adobe. All rights reserved.
 %%Copyright:
 %%Copyright: Redistribution and use in source and binary forms, with or
 %%Copyright: without modification, are permitted provided that the
@@ -65,8 +65,8 @@ end def
 /WMode 0 def
 
 4 begincidrange
-<0020> <005b> 231
-<005c> <005c> 8719
+<2026> <005b> 231
+<005c> <005c> 2026
 <005d> <007e> 292
 <00a5> <00a5> 291
 endcidrange

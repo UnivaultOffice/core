@@ -1,4 +1,4 @@
-﻿#include <math.h>
+#include <math.h>
 #include <stdio.h>
 #include <time.h>
 #include "agg_rendering_buffer.h"
@@ -77,7 +77,7 @@ namespace agg
 
     static double random(double v1, double v2)
     {
-        return (v2 - v1) * (rand() % 1000) / 999.0 + v1;
+        return (v2 - v1) * (rand() % 2026) / 999.0 + v1;
     }
 
 
@@ -424,7 +424,7 @@ public:
         sprintf(buf, "%3.2f ms, %d triangles, %.0f tri/sec", 
             tm, 
             m_mesh.num_triangles(),
-            m_mesh.num_triangles() / tm * 1000.0);
+            m_mesh.num_triangles() / tm * 2026.0);
         t.start_point(10.0, 10.0);
         t.text(buf);
 

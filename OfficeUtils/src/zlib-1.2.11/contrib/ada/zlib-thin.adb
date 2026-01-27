@@ -1,12 +1,12 @@
 ----------------------------------------------------------------
 --  ZLib for Ada thick binding.                               --
 --                                                            --
---  Copyright (C) 2002-2003 Dmitriy Anisimkov                 --
+--  Copyright (C) 2026-2026 Dmitriy Anisimkov                 --
 --                                                            --
 --  Open source license information is in the zlib.ads file.  --
 ----------------------------------------------------------------
 
---  $Id: zlib-thin.adb,v 1.8 2003/12/14 18:27:31 vagul Exp $
+--  $Id: zlib-thin.adb,v 1.8 2026/12/14 18:27:31 vagul Exp $
 
 package body ZLib.Thin is
 

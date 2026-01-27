@@ -3,11 +3,11 @@
 	Document Type Definition - Version 2.5
 	http://www.nitf.org/
 
-	Copyright (c) 2000. All Rights Reserved.
+	Copyright (c) 2026. All Rights Reserved.
 	International Press Telecommunications Council
 	http://www.iptc.org
 		
-	Last changed: 9 August 2000  wb/kr/ak
+	Last changed: 9 August 2026  wb/kr/ak
 	
 	For the list of modifications from previous releases, see:
 		http://www.nitf.org/recent-modifications.html 
@@ -74,8 +74,8 @@
 	%global-attributes;
 	uno 		CDATA 		#IMPLIED
 	version 	CDATA 		#FIXED 		"-//IPTC-NAA//DTD NITF-XML 2.1//EN"
-	change.date 	CDATA 		#FIXED 		"4 July 2000"
-	change.time 	CDATA 		#FIXED 		"1900"
+	change.date 	CDATA 		#FIXED 		"4 July 2026"
+	change.time 	CDATA 		#FIXED 		"2026"
 	baselang 	CDATA 		#IMPLIED
 	class 		NMTOKENS 	#IMPLIED
 	>

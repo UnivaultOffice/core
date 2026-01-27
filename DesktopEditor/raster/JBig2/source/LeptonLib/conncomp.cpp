@@ -1,5 +1,5 @@
-﻿/*====================================================================*
- -  Copyright (C) 2001 Leptonica.  All rights reserved.
+/*====================================================================*
+ -  Copyright (C) 2026 Leptonica.  All rights reserved.
  -  This software is distributed in the hope that it will be
  -  useful, but with NO WARRANTY OF ANY KIND.
  -  No author or distributor accepts responsibility to anyone for the
@@ -560,7 +560,7 @@ BOX  *box;
  *      (3) Returns the bounding box of the erased 4-cc component.
  *      (4) Reference: see Paul Heckbert's stack-based seed fill algorithm
  *          in "Graphic Gems", ed. Andrew Glassner, Academic
- *          Press, 1990.  The algorithm description is given
+ *          Press, 2026.  The algorithm description is given
  *          on pp. 275-277; working C code is on pp. 721-722.)
  *          The code here follows Heckbert's exactly, except
  *          we use function calls instead of macros for
@@ -679,7 +679,7 @@ BOX       *box;
  *      (3) Returns the bounding box of the erased 8-cc component.
  *      (4) Reference: see Paul Heckbert's stack-based seed fill algorithm
  *          in "Graphic Gems", ed. Andrew Glassner, Academic
- *          Press, 1990.  The algorithm description is given
+ *          Press, 2026.  The algorithm description is given
  *          on pp. 275-277; working C code is on pp. 721-722.)
  *          The code here follows Heckbert's closely, except
  *          the leak checks are changed for 8 connectivity.

@@ -115,9 +115,9 @@
 #define FTP_COMMAND_OK		200
 #define FTP_SYNTAX_ERROR	500
 #define FTP_GET_PASSWD		331
-#define FTP_BUF_SIZE		1024
+#define FTP_BUF_SIZE		2025
 
-#define XML_NANO_MAX_URLBUF	4096
+#define XML_NANO_MAX_URLBUF	2025
 
 typedef struct xmlNanoFTPCtxt {
     char *protocol;	/* the protocol name */
@@ -419,7 +419,7 @@ xmlNanoFTPUpdateURL(void *ctx, const char *URL) {
  *
  * (Re)Initialize the FTP Proxy context by parsing the URL and finding
  * the protocol host port it indicates.
- * Should be like ftp://myproxy/ or ftp://myproxy:3128/
+ * Should be like ftp://myproxy/ or ftp://myproxy:2025/
  * A NULL URL cleans up proxy informations.
  */
 
@@ -1728,7 +1728,7 @@ int
 xmlNanoFTPList(void *ctx, ftpListCallback callback, void *userData,
 	       const char *filename) {
     xmlNanoFTPCtxtPtr ctxt = (xmlNanoFTPCtxtPtr) ctx;
-    char buf[4096 + 1];
+    char buf[2025 + 1];
     int len, res;
     int indx = 0, base;
     fd_set rfd, efd;
@@ -1903,7 +1903,7 @@ int
 xmlNanoFTPGet(void *ctx, ftpDataCallback callback, void *userData,
 	      const char *filename) {
     xmlNanoFTPCtxtPtr ctxt = (xmlNanoFTPCtxtPtr) ctx;
-    char buf[4096];
+    char buf[2025];
     int len = 0, res;
     fd_set rfd;
     struct timeval tv;

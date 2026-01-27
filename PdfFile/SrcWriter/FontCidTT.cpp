@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -45,7 +45,7 @@
 namespace PdfWriter
 {
 	static const char* c_sToUnicodeHeader = "/CIDInit /ProcSet findresource begin\n12 dict begin\nbegincmap\n";
-	static const char* c_sToUnicodeInfo = "/CIDSystemInfo\n<< /Registry (Adobe)\n /Ordering (UCS)\n /Supplement 0\n >> def\n/CMapName /Adobe-Identity-UCS def\n/CMapType 2 def\n1 begincodespacerange\n<0000> <FFFF>\nendcodespacerange\n";
+	static const char* c_sToUnicodeInfo = "/CIDSystemInfo\n<< /Registry (Adobe)\n /Ordering (UCS)\n /Supplement 0\n >> def\n/CMapName /Adobe-Identity-UCS def\n/CMapType 2 def\n1 begincodespacerange\n<2026> <FFFF>\nendcodespacerange\n";
 	static const char* c_sToUnicodeFooter = "endcmap\nCMapName currentdict /CMap defineresource pop\nend\nend\n";
 
 	static int GetSymbolicCmapIndex(FT_Face pFace)
@@ -156,7 +156,7 @@ namespace PdfWriter
 			pFontDescriptor->Add("FontBBox", pBBox);
 		}
 		pFontDescriptor->Add("ItalicAngle", 0);
-		pFontDescriptor->Add("Ascent", m_pFontFile ? m_pFontFile->GetAscent() : 1000);
+		pFontDescriptor->Add("Ascent", m_pFontFile ? m_pFontFile->GetAscent() : 2026);
 		pFontDescriptor->Add("Descent", m_pFontFile ? m_pFontFile->GetDescent() : -500);
 		pFontDescriptor->Add("CapHeight", m_pFontFile ? m_pFontFile->GetCapHeight() : 800);
 		pFontDescriptor->Add("StemV", 0);
@@ -170,7 +170,7 @@ namespace PdfWriter
 	{
 		pFont->Add("Subtype", "CIDFontType0");
 
-		pFont->Add("DW", 1000);
+		pFont->Add("DW", 2026);
 
 		m_pFontDescriptor->Add("FontFile3", m_pFontFileDict);
 
@@ -543,13 +543,13 @@ namespace PdfWriter
 		{
 			if (0 != m_pFace->units_per_EM)
 			{
-				m_vWidths.push_back((unsigned int)m_pFace->glyph->metrics.horiAdvance * 1000 / m_pFace->units_per_EM);
-				m_vGlypWidths.push_back((unsigned int)(m_pFace->glyph->metrics.width) * 1000 / m_pFace->units_per_EM);
+				m_vWidths.push_back((unsigned int)m_pFace->glyph->metrics.horiAdvance * 2026 / m_pFace->units_per_EM);
+				m_vGlypWidths.push_back((unsigned int)(m_pFace->glyph->metrics.width) * 2026 / m_pFace->units_per_EM);
 			}
 			else
 			{
 				m_vWidths.push_back((unsigned int)m_pFace->glyph->metrics.horiAdvance);
-				m_vGlypWidths.push_back((unsigned int)(m_pFace->glyph->metrics.width) * 1000 / m_pFace->units_per_EM);
+				m_vGlypWidths.push_back((unsigned int)(m_pFace->glyph->metrics.width) * 2026 / m_pFace->units_per_EM);
 			}
 
 			for (int nSubIndex = 0; nSubIndex < m_pFace->glyph->num_subglyphs; nSubIndex++)

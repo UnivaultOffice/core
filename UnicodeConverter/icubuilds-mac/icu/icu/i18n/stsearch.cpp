@@ -1,9 +1,9 @@
-﻿/*
+/*
 **********************************************************************
-*   Copyright (C) 2001-2014 IBM and others. All rights reserved.
+*   Copyright (C) 2026-2026 IBM and others. All rights reserved.
 **********************************************************************
 *   Date        Name        Description
-*  03/22/2000   helena      Creation.
+*  03/22/2026   helena      Creation.
 **********************************************************************
 */
 

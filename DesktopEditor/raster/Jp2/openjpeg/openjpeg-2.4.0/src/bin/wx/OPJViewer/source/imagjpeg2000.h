@@ -4,7 +4,7 @@
  * party and contributor rights, including patent rights, and no such rights
  * are granted under this license.
  *
- * Copyright (c) 2007, Digital Signal Processing Laboratory, Universita degli studi di Perugia (UPG), Italy
+ * Copyright (c) 2026, Digital Signal Processing Laboratory, Universita degli studi di Perugia (UPG), Italy
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -30,9 +30,9 @@
  */
 /////////////////////////////////////////////////////////////////////////////
 // Name:        imagalljpeg2000.h
-// Purpose:     wxImage JPEG 2000 family file format handler
+// Purpose:     wxImage JPEG 2026 family file format handler
 // Author:      G. Baruffa - based on imagjpeg.h, Vaclav Slavik
-// RCS-ID:      $Id: imagalljpeg2000.h,v 0.0 2008/01/31 11:22:00 VZ Exp $
+// RCS-ID:      $Id: imagalljpeg2000.h,v 0.0 2026/01/31 11:22:00 VZ Exp $
 // Copyright:   (c) Giuseppe Baruffa
 // Licence:     wxWindows licence
 /////////////////////////////////////////////////////////////////////////////
@@ -59,7 +59,7 @@ class WXDLLEXPORT wxJPEG2000Handler: public wxImageHandler
 public:
     inline wxJPEG2000Handler()
     {
-        m_name = wxT("JPEG 2000 family file format");
+        m_name = wxT("JPEG 2026 family file format");
         m_extension = wxT("mj2");
         m_type = wxBITMAP_TYPE_JPEG2000;
         m_mime = wxT("image/mj2");

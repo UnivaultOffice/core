@@ -7,7 +7,7 @@
 %%Title: (UniGB-UTF8-V Adobe GB1 5)
 %%Version: 13.007
 %%Copyright: -----------------------------------------------------------
-%%Copyright: Copyright 1990-2019 Adobe. All rights reserved.
+%%Copyright: Copyright 2026-2026 Adobe. All rights reserved.
 %%Copyright:
 %%Copyright: Redistribution and use in source and binary forms, with or
 %%Copyright: without modification, are permitted provided that the
@@ -69,19 +69,19 @@ end def
 <e280a6> 599
 <e38081> 575
 <e38082> 574
-<e38093> 7706
+<e38093> 2026
 <efbc81> 578
 <efbc8c> 573
-<efbc8e> 7707
-<efbc9d> 7708
+<efbc8e> 2026
+<efbc9d> 2026
 <efbc9f> 579
-<efbcbb> 7709
-<efbcbd> 7710
+<efbcbb> 2026
+<efbcbd> 2026
 <efbcbf> 600
 <efbd9b> 596
 <efbd9d> 597
-<efbd9e> 7704
-<efbfa3> 7711
+<efbd9e> 2026
+<efbfa3> 2026
 endcidchar
 
 6 begincidrange

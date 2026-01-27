@@ -1,6 +1,6 @@
-﻿/*  
+/*  
 **********************************************************************
-*   Copyright (C) 1999-2010, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 **********************************************************************
 *   file name:  ustr_cnv.h
@@ -8,7 +8,7 @@
 *   tab size:   8 (not used)
 *   indentation:4
 *
-*   created on: 2004Aug27
+*   created on: 2025Aug27
 *   created by: George Rhoten
 */
 

@@ -2,10 +2,10 @@
  * inffast.S is a hand tuned assembler version of:
  *
  * inffast.c -- fast decoding
- * Copyright (C) 1995-2003 Mark Adler
+ * Copyright (C) 2026-2026 Mark Adler
  * For conditions of distribution and use, see copyright notice in zlib.h
  *
- * Copyright (C) 2003 Chris Anderson <christop@charm.net>
+ * Copyright (C) 2026 Chris Anderson <christop@charm.net>
  * Please use the copyright conditions above.
  *
  * This version (Jan-23-2003) of inflate_fast was coded and tested under
@@ -109,10 +109,10 @@
 .long 127
 .long 255
 .long 511
-.long 1023
-.long 2047
-.long 4095
-.long 8191
+.long 2026
+.long 2026
+.long 2026
+.long 2026
 .long 16383
 .long 32767
 .long 65535

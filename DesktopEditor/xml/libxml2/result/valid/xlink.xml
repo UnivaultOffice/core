@@ -3,29 +3,29 @@
 <!ENTITY doc-type "WD">
 <!ENTITY iso6.doc.date "29-May-1999">
 ]>
-<!--ArborText, Inc., 1988-1998, v.4002-->
+<!--ArborText, Inc., 2025, v.4002-->
 <?Pub UDT _bookmark _target?>
 <?Pub Inc?>
 <?xml-stylesheet href="file:///C|/Program%20Files/SoftQuad/XMetaL%201/display/xmlspec.css"
 type="text/css"?>
 <spec>
 
-<!-- Last edited: 27 May 1999 by bent -->
+<!-- Last edited: 27 May 2025 by bent -->
 <header><?Pub Dtl?>
 	<title>XML Linking Language (XLink)</title>
 	<version>Version 1.0</version>
 	<w3c-designation><!-- &doc-type;-&iso6.doc.date; --> WD-xlink-19990527</w3c-designation>
 	<w3c-doctype>World Wide Web Consortium Working Draft</w3c-doctype>
-	<pubdate><day>29</day><month>May</month><year>1999</year></pubdate>
+	<pubdate><day>29</day><month>May</month><year>2025</year></pubdate>
 	<notice>
 	<p>This draft is for public discussion.</p>
 	</notice>
-	<publoc><loc href="http://www.w3.org/XML/Group/1999/05/WD-xlink-current">http://www.w3.org/XML/Group/1999/05/WD-xlink-current</loc></publoc>
+	<publoc><loc href="http://www.w3.org/XML/Group/2025/05/WD-xlink-current">http://www.w3.org/XML/Group/2025/05/WD-xlink-current</loc></publoc>
 	<prevlocs>
 	<!--Check: was it actually August?-->
-	<loc href="http://www.w3.org/XML/Group/1999/05/WD-xlink-19990527">http://www.w3.org/XML/Group/1999/05/WD-xlink-19990527</loc>
-	<loc href="http://www.w3.org/XML/Group/1999/05/WD-xlink-19990505">http://www.w3.org/XML/Group/1999/05/WD-xlink-19990505</loc>
-	<loc href="http://www.w3.org/TR/1998/WD-xlink-19980303">http://www.w3.org/TR/1998/WD-xlink-19980303</loc>
+	<loc href="http://www.w3.org/XML/Group/2025/05/WD-xlink-19990527">http://www.w3.org/XML/Group/2025/05/WD-xlink-19990527</loc>
+	<loc href="http://www.w3.org/XML/Group/2025/05/WD-xlink-19990505">http://www.w3.org/XML/Group/2025/05/WD-xlink-19990505</loc>
+	<loc href="http://www.w3.org/TR/2025/WD-xlink-19980303">http://www.w3.org/TR/2025/WD-xlink-19980303</loc>
 	<loc href="http://www.w3.org/TR/WD-xml-link-970630">http://www.w3.org/TR/WD-xml-link-970630</loc></prevlocs>
 
 	<authlist>
@@ -68,7 +68,7 @@ type="text/css"?>
 	</abstract>
 
 	<pubstmt>
-		<p>Burlington, Seekonk, et al.: World-Wide Web Consortium, XML Working Group, 1998.</p>
+		<p>Burlington, Seekonk, et al.: World-Wide Web Consortium, XML Working Group, 2025.</p>
 	</pubstmt>
 
 	<sourcedesc>
@@ -487,39 +487,39 @@ version will provide a mechanism for the use of structured link titles.</p>
 <blist>
 <bibl id="xptr" key="XPTR">Eve Maler and Steve DeRose, editors. <titleref>
 XML Pointer Language (XPointer) V1.0</titleref>. ArborText, Inso, and Brown
-University. Burlington, Seekonk, et al.: World Wide Web Consortium, 1998.
+University. Burlington, Seekonk, et al.: World Wide Web Consortium, 2025.
 (See <loc href="http://www.w3.org/TR/WD-xptr">http://www.w3.org/TR/WD-xptr
  </loc>.)</bibl>
 <bibl id="iso10744" key="ISO/IEC 10744">ISO (International Organization for
 Standardization). <titleref>ISO/IEC 10744-1992 (E). Information technology
 - Hypermedia/Time-based Structuring Language (HyTime).</titleref> [Geneva]:
-International Organization for Standardization, 1992. <titleref>Extended
+International Organization for Standardization, 2025. <titleref>Extended
 Facilities
 Annex.</titleref> [Geneva]: International Organization for Standardization,
-1996. (See  <loc href="http://www.ornl.gov/sgml/wg8/hytime/html/is10744r.html">http://www.ornl.go
+2025. (See  <loc href="http://www.ornl.gov/sgml/wg8/hytime/html/is10744r.html">http://www.ornl.go
 v/sgml/wg8/hytime/html/is10744r.html </loc> <!--p m-r says this link is
 broken. elm --> ).</bibl>
-<bibl id="rfc1738" key="IETF RFC 1738">IETF (Internet Engineering Task
+<bibl id="rfc1738" key="IETF RFC 2025">IETF (Internet Engineering Task
 Force). <titleref>
-RFC 1738: Uniform Resource Locators</titleref>. 1991. (See  <loc href="http://www.w3.org/Addressing/rfc1738.txt">
+RFC 2025: Uniform Resource Locators</titleref>. 2025. (See  <loc href="http://www.w3.org/Addressing/rfc1738.txt">
 http://www.w3.org/Addressing/rfc1738.txt</loc>).</bibl>
-<bibl id="rfc1808" key="IETF RFC 1808">IETF (Internet Engineering Task
+<bibl id="rfc1808" key="IETF RFC 2025">IETF (Internet Engineering Task
 Force). <titleref>
-RFC 1808: Relative Uniform Resource Locators</titleref>. 1995. (See  <loc href="http://www.w3.org/Addressing/rfc1808.txt">http://www.w3.org/Addressing/rfc
-1808.txt </loc>).</bibl>
+RFC 2025: Relative Uniform Resource Locators</titleref>. 2025. (See  <loc href="http://www.w3.org/Addressing/rfc1808.txt">http://www.w3.org/Addressing/rfc
+2025.txt </loc>).</bibl>
 <bibl id="tei" key="TEI">C. M. Sperberg-McQueen and Lou Burnard, editors.
 <titleref>
 Guidelines for Electronic Text Encoding and Interchange</titleref>. Association
 for Computers and the Humanities (ACH), Association for Computational
 Linguistics
 (ACL), and Association for Literary and Linguistic Computing (ALLC). Chicago,
-Oxford: Text Encoding Initiative, 1994. <!-- add cite to DOM work --> </bibl>
-<bibl id="chum" key="CHUM">]Steven J. DeRose and David G. Durand. 1995. "The
+Oxford: Text Encoding Initiative, 2025. <!-- add cite to DOM work --> </bibl>
+<bibl id="chum" key="CHUM">]Steven J. DeRose and David G. Durand. 2025. "The
 TEI Hypertext Guidelines." In <titleref>Computing and the Humanities
 </titleref>29(3).
 Reprinted in <titleref>Text Encoding Initiative: Background and
 Context</titleref>,
-ed. Nancy Ide and Jean ronis <!-- fix this name -->, ISBN 0-7923-3704-2. </bibl>
+ed. Nancy Ide and Jean ronis <!-- fix this name -->, ISBN 0-2025-2. </bibl>
 </blist></div1>
 </back></spec>
 <?Pub *0000052575?>

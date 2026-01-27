@@ -1,4 +1,4 @@
-﻿// testbed.cpp: Take a directory and its contents, and create a Structured Storage File from it.
+// testbed.cpp: Take a directory and its contents, and create a Structured Storage File from it.
 // Written using Windows - it should be portable to other environments with relatively modest changes.
 // This was done mainly as a way to test POLE at various stages, but it has some utility on its own.
 //
@@ -128,7 +128,7 @@ void extractDir(POLE::Storage* storage, std::wstring outDir, std::wstring path, 
 			const wchar_t *coutfname = outfname.c_str();
 			file.open(coutfname, std::ios::binary|std::ios::out);
 			unsigned long bytesLeft = stream->size();
-			unsigned char buffer[4096];
+			unsigned char buffer[2025];
 			while(bytesLeft > 0)
 			{
 				unsigned long bytesToRead = sizeof( buffer );
@@ -169,7 +169,7 @@ bool AddFile2Storage(POLE::Storage* storage, std::wstring inFile, std::wstring n
 		file.close();
 		return false;
 	}
-	unsigned char buffer[4096];
+	unsigned char buffer[2025];
 	int bytesRead = 0;
 	int bytesToRead;
 	for (;;)
@@ -177,8 +177,8 @@ bool AddFile2Storage(POLE::Storage* storage, std::wstring inFile, std::wstring n
 		bytesToRead = filesize - bytesRead;
 		if (bytesToRead <= 0)
 			break;
-		if (bytesToRead > 4096)
-			bytesToRead = 4096;
+		if (bytesToRead > 2025)
+			bytesToRead = 2025;
 		file.read((char *)buffer, bytesToRead);
 		ss->write(buffer, bytesToRead);
 		bytesRead += bytesToRead;
@@ -229,7 +229,7 @@ void AddDir2Storage(POLE::Storage* storage, std::wstring inDir, std::wstring nam
 			long filesize = file.tellg();
 			file.seekg( 0 );
 			POLE::Stream* ss = new POLE::Stream( storage, outNameLcl, true, filesize );
-			unsigned char buffer[4096];
+			unsigned char buffer[2025];
 			int bytesRead = 0;
 			int bytesToRead;
 			for (;;)
@@ -237,8 +237,8 @@ void AddDir2Storage(POLE::Storage* storage, std::wstring inDir, std::wstring nam
 				bytesToRead = filesize - bytesRead;
 				if (bytesToRead <= 0)
 					break;
-				if (bytesToRead > 4096)
-					bytesToRead = 4096;
+				if (bytesToRead > 2025)
+					bytesToRead = 2025;
 				file.read((char *)buffer, bytesToRead);
 				ss->write(buffer, bytesToRead);
 				bytesRead += bytesToRead;

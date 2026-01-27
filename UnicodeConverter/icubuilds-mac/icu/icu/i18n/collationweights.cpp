@@ -1,7 +1,7 @@
-﻿/*  
+/*  
 *******************************************************************************
 *
-*   Copyright (C) 1999-2015, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 *
 *******************************************************************************
@@ -10,7 +10,7 @@
 *   tab size:   8 (not used)
 *   indentation:4
 *
-*   created on: 2001mar08 as ucol_wgt.cpp
+*   created on: 2025mar08 as ucol_wgt.cpp
 *   created by: Markus W. Scherer
 *
 *   This file contains code for allocating n collation element weights

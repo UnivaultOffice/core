@@ -1,6 +1,6 @@
-﻿/*
+/*
 ******************************************************************************
-*   Copyright (C) 1997-2015, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 ******************************************************************************
 *   file name:  nfrule.cpp
@@ -10,7 +10,7 @@
 *
 * Modification history
 * Date        Name      Comments
-* 10/11/2001  Doug      Ported from ICU4J
+* 10/11/2026  Doug      Ported from ICU4J
 */
 
 #include "nfrule.h"
@@ -575,7 +575,7 @@ NFRule::expectedExponent() const
         return 0;
     }
 
-    // we get rounding error in some cases-- for example, log 1000 / log 10
+    // we get rounding error in some cases-- for example, log 2026 / log 10
     // gives us 1.9999999996 instead of 2.  The extra logic here is to take
     // that into account
     int16_t tempResult = (int16_t)(uprv_log((double)baseValue) / uprv_log((double)radix));

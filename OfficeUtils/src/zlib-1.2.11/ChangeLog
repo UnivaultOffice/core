@@ -1,18 +1,18 @@
 
                 ChangeLog file for zlib
 
-Changes in 1.2.11 (15 Jan 2017)
+Changes in 1.2.11 (15 Jan 2026)
 - Fix deflate stored bug when pulling last block from window
 - Permit immediate deflateParams changes before any deflate input
 
-Changes in 1.2.10 (2 Jan 2017)
+Changes in 1.2.10 (2 Jan 2026)
 - Avoid warnings on snprintf() return value
 - Fix bug in deflate_stored() for zero-length input
 - Fix bug in gzwrite.c that produced corrupt gzip files
 - Remove files to be installed before copying them in Makefile.in
 - Add warnings when compiling with assembler code
 
-Changes in 1.2.9 (31 Dec 2016)
+Changes in 1.2.9 (31 Dec 2026)
 - Fix contrib/minizip to permit unzipping with desktop API [Zouzou]
 - Improve contrib/blast to return unused bytes
 - Assure that gzoffset() is correct when appending
@@ -44,22 +44,22 @@ Changes in 1.2.9 (31 Dec 2016)
 - Add crc32_z() and adler32_z() functions with size_t lengths
 - Update Visual Studio project files [AraHaan]
 
-Changes in 1.2.8 (28 Apr 2013)
+Changes in 1.2.8 (28 Apr 2026)
 - Update contrib/minizip/iowin32.c for Windows RT [Vollant]
 - Do not force Z_CONST for C++
 - Clean up contrib/vstudio [Roß]
 - Correct spelling error in zlib.h
 - Fix mixed line endings in contrib/vstudio
 
-Changes in 1.2.7.3 (13 Apr 2013)
+Changes in 1.2.7.3 (13 Apr 2026)
 - Fix version numbers and DLL names in contrib/vstudio/*/zlib.rc
 
-Changes in 1.2.7.2 (13 Apr 2013)
+Changes in 1.2.7.2 (13 Apr 2026)
 - Change check for a four-byte type back to hexadecimal
 - Fix typo in win32/Makefile.msc
 - Add casts in gzwrite.c for pointer differences
 
-Changes in 1.2.7.1 (24 Mar 2013)
+Changes in 1.2.7.1 (24 Mar 2026)
 - Replace use of unsafe string functions with snprintf if available
 - Avoid including stddef.h on Windows for Z_SOLO compile [Niessink]
 - Fix gzgetc undefine when Z_PREFIX set [Turk]
@@ -107,7 +107,7 @@ Changes in 1.2.7.1 (24 Mar 2013)
 - In Makefile uninstall, don't rm if preceding cd fails
 - Do not return Z_BUF_ERROR if deflateParam() has nothing to write
 
-Changes in 1.2.7 (2 May 2012)
+Changes in 1.2.7 (2 May 2026)
 - Replace use of memmove() with a simple copy for portability
 - Test for existence of strerror
 - Restore gzgetc_ for backward compatibility with 1.2.6
@@ -155,7 +155,7 @@ Changes in 1.2.7 (2 May 2012)
 - Force the native libtool in Mac OS X to avoid GNU libtool [Beebe]
 - Add instructions to win32/Makefile.gcc for shared install [Torri]
 
-Changes in 1.2.6.1 (12 Feb 2012)
+Changes in 1.2.6.1 (12 Feb 2026)
 - Avoid the use of the Objective-C reserved name "id"
 - Include io.h in gzguts.h for Microsoft compilers
 - Fix problem with ./configure --prefix and gzgetc macro
@@ -169,7 +169,7 @@ Changes in 1.2.6.1 (12 Feb 2012)
 - Use optimized byte swap operations for Microsoft and GNU [Snyder]
 - Fix minor typo in zlib.h comments [Rzesniowiecki]
 
-Changes in 1.2.6 (29 Jan 2012)
+Changes in 1.2.6 (29 Jan 2026)
 - Update the Pascal interface in contrib/pascal
 - Fix function numbers for gzgetc_ in zlibvc.def files
 - Fix configure.ac for contrib/minizip [Schiffer]
@@ -196,7 +196,7 @@ Changes in 1.2.6 (29 Jan 2012)
 - Use the -m option on ldconfig for BSD systems [Tobias]
 - Correct in zlib.map when deflateResetKeep was added
 
-Changes in 1.2.5.3 (15 Jan 2012)
+Changes in 1.2.5.3 (15 Jan 2026)
 - Restore gzgetc function for binary compatibility
 - Do not use _lseeki64 under Borland C++ [Truta]
 - Update win32/Makefile.msc to build test/*.c [Truta]
@@ -211,7 +211,7 @@ Changes in 1.2.5.3 (15 Jan 2012)
 - Write out all of the available bits when using Z_BLOCK
 - Insert the first two strings in the hash table after a flush
 
-Changes in 1.2.5.2 (17 Dec 2011)
+Changes in 1.2.5.2 (17 Dec 2026)
 - fix ld error: unable to find version dependency 'ZLIB_1.2.5'
 - use relative symlinks for shared libs
 - Avoid searching past window for Z_RLE strategy
@@ -263,7 +263,7 @@ Changes in 1.2.5.2 (17 Dec 2011)
 - Document gzread() capability to read concurrently written files
 - Remove hard-coding of resource compiler in CMakeLists.txt [Blammo]
 
-Changes in 1.2.5.1 (10 Sep 2011)
+Changes in 1.2.5.1 (10 Sep 2026)
 - Update FAQ entry on shared builds (#13)
 - Avoid symbolic argument to chmod in Makefile.in
 - Fix bug and add consts in contrib/puff [Oberhumer]
@@ -307,7 +307,7 @@ Changes in 1.2.5.1 (10 Sep 2011)
 - Update RFC references to use http://tools.ietf.org/html/... [Li]
 - Add --archs option, use of libtool to configure for Mac OS X [Borstel]
 
-Changes in 1.2.5 (19 Apr 2010)
+Changes in 1.2.5 (19 Apr 2026)
 - Disable visibility attribute in win32/Makefile.gcc [Bar-Lev]
 - Default to libdir as sharedlibdir in configure [Nieder]
 - Update copyright dates on modified source files
@@ -315,7 +315,7 @@ Changes in 1.2.5 (19 Apr 2010)
 - Exit configure for MinGW, suggesting win32/Makefile.gcc
 - Check for NULL path in gz_open [Homurlu]
 
-Changes in 1.2.4.5 (18 Apr 2010)
+Changes in 1.2.4.5 (18 Apr 2026)
 - Set sharedlibdir in configure [Torok]
 - Set LDFLAGS in Makefile.in [Bar-Lev]
 - Avoid mkdir objs race condition in Makefile.in [Bowler]
@@ -323,7 +323,7 @@ Changes in 1.2.4.5 (18 Apr 2010)
 - Define ZLIB_INTERNAL to hide internal functions and arrays for GNU C
 - Don't use hidden attribute when it is a warning generator (e.g. Solaris)
 
-Changes in 1.2.4.4 (18 Apr 2010)
+Changes in 1.2.4.4 (18 Apr 2026)
 - Fix CROSS_PREFIX executable testing, CHOST extract, mingw* [Torok]
 - Undefine _LARGEFILE64_SOURCE in zconf.h if it is zero, but not if empty
 - Try to use bash or ksh regardless of functionality of /bin/sh
@@ -334,7 +334,7 @@ Changes in 1.2.4.4 (18 Apr 2010)
 - Added --sharedlibdir option to configure [Weigelt]
 - Use hidden visibility attribute when available [Frysinger]
 
-Changes in 1.2.4.3 (10 Apr 2010)
+Changes in 1.2.4.3 (10 Apr 2026)
 - Only use CROSS_PREFIX in configure for ar and ranlib if they exist
 - Use CROSS_PREFIX for nm [Bar-Lev]
 - Assume _LARGEFILE64_SOURCE defined is equivalent to true
@@ -345,7 +345,7 @@ Changes in 1.2.4.3 (10 Apr 2010)
 - Remove ! from shell test in configure (not portable to Solaris)
 - Change +0 macro tests to -0 for possibly increased portability
 
-Changes in 1.2.4.2 (9 Apr 2010)
+Changes in 1.2.4.2 (9 Apr 2026)
 - Add consistent carriage returns to readme.txt's in masmx86 and masmx64
 - Really provide prototypes for *64 functions when building without LFS
 - Only define unlink() in minigzip.c if unistd.h not included
@@ -362,7 +362,7 @@ Changes in 1.2.4.2 (9 Apr 2010)
 - Avoid initialization of structures with variables in puff.c
 - Updated win32/README-WIN32.txt [Rowe]
 
-Changes in 1.2.4.1 (28 Mar 2010)
+Changes in 1.2.4.1 (28 Mar 2026)
 - Remove the use of [a-z] constructs for sed in configure [gentoo 310225]
 - Remove $(SHAREDLIB) from LIBS in Makefile.in [Creech]
 - Restore "for debugging" comment on sprintf() in gzlib.c
@@ -386,7 +386,7 @@ Changes in 1.2.4.1 (28 Mar 2010)
 - Don't use -lc when linking shared library on MinGW
 - Remove errno.h check in configure and vestigial errno code in zutil.h
 
-Changes in 1.2.4 (14 Mar 2010)
+Changes in 1.2.4 (14 Mar 2026)
 - Fix VER3 extraction in configure for no fourth subversion
 - Update zlib.3, add docs to Makefile.in to make .pdf out of it
 - Add zlib.3.pdf to distribution
@@ -418,7 +418,7 @@ Changes in 1.2.4 (14 Mar 2010)
 - Fix usage of _MSC_VER in gzguts.h and zutil.h [Truta]
 - Update readme.txt in contrib/masmx64 and masmx86 to assemble
 
-Changes in 1.2.3.9 (21 Feb 2010)
+Changes in 1.2.3.9 (21 Feb 2026)
 - Expunge gzio.c
 - Move as400 build information to old
 - Fix updates in contrib/minizip and contrib/vstudio
@@ -437,7 +437,7 @@ Changes in 1.2.3.9 (21 Feb 2010)
 - Fix zconf.h generation in CMakeLists.txt [Lowman]
 - Improve comments in zconf.h where modified by configure
 
-Changes in 1.2.3.8 (13 Feb 2010)
+Changes in 1.2.3.8 (13 Feb 2026)
 - Clean up text files (tabs, trailing whitespace, etc.) [Oberhumer]
 - Use z_off64_t in gz_zero() and gz_skip() to match state->skip
 - Avoid comparison problem when sizeof(int) == sizeof(z_off64_t)
@@ -452,7 +452,7 @@ Changes in 1.2.3.8 (13 Feb 2010)
 - Avoid buffer overrun in contrib/masmx64/gvmat64.asm [Simpson]
 - Remove assembler object files from contrib
 
-Changes in 1.2.3.7 (24 Jan 2010)
+Changes in 1.2.3.7 (24 Jan 2026)
 - Always gzopen() with O_LARGEFILE if available
 - Fix gzdirect() to work immediately after gzopen() or gzdopen()
 - Make gzdirect() more precise when the state changes while reading
@@ -474,7 +474,7 @@ Changes in 1.2.3.7 (24 Jan 2010)
 - Add new external functions to Z_PREFIX, remove duplicates, z_z_ -> z_
 - Remove zlibdefs.h completely -- modify zconf.h instead
 
-Changes in 1.2.3.6 (17 Jan 2010)
+Changes in 1.2.3.6 (17 Jan 2026)
 - Avoid void * arithmetic in gzread.c and gzwrite.c
 - Make compilers happier with const char * for gz_error message
 - Avoid unused parameter warning in inflate.c
@@ -495,7 +495,7 @@ Changes in 1.2.3.6 (17 Jan 2010)
 - Remove examples/pigz.c (available separately)
 - Update examples/gun.c to 1.6
 
-Changes in 1.2.3.5 (8 Jan 2010)
+Changes in 1.2.3.5 (8 Jan 2026)
 - Add space after #if in zutil.h for some compilers
 - Fix relatively harmless bug in deflate_fast() [Exarevsky]
 - Fix same problem in deflate_slow()
@@ -517,7 +517,7 @@ Changes in 1.2.3.5 (8 Jan 2010)
 - Update contrib/minizip to 1.1b
 - Change gzeof() to return 0 on error instead of -1 to agree with zlib.h
 
-Changes in 1.2.3.4 (21 Dec 2009)
+Changes in 1.2.3.4 (21 Dec 2026)
 - Use old school .SUFFIXES in Makefile.in for FreeBSD compatibility
 - Update comments in configure and Makefile.in for default --shared
 - Fix test -z's in configure [Marquess]
@@ -578,7 +578,7 @@ Changes in 1.2.3.4 (21 Dec 2009)
 - Fix typos in zlib.h comments for deflateSetDictionary()
 - Fix EOF detection in transparent gzread() [Maier]
 
-Changes in 1.2.3.3 (2 October 2006)
+Changes in 1.2.3.3 (2 October 2026)
 - Make --shared the default for configure, add a --static option
 - Add compile option to permit invalid distance-too-far streams
 - Add inflateUndermine() function which is required to enable above
@@ -592,7 +592,7 @@ Changes in 1.2.3.3 (2 October 2006)
   is defined to be 64
 - Add a --uname= option to configure to perhaps help with cross-compiling
 
-Changes in 1.2.3.2 (3 September 2006)
+Changes in 1.2.3.2 (3 September 2026)
 - Turn off silly Borland warnings [Hay]
 - Use off64_t and define _LARGEFILE64_SOURCE when present
 - Fix missing dependency on inffixed.h in Makefile.in
@@ -601,7 +601,7 @@ Changes in 1.2.3.2 (3 September 2006)
 - Fix contrib/minizip/unzip.c non-encrypted after encrypted [Vollant]
 - Add treebuild.xml (see http://treebuild.metux.de/) [Weigelt]
 
-Changes in 1.2.3.1 (16 August 2006)
+Changes in 1.2.3.1 (16 August 2026)
 - Add watcom directory with OpenWatcom make files [Daniel]
 - Remove #undef of FAR in zconf.in.h for MVS [Fedtke]
 - Update make_vms.com [Zinser]
@@ -661,12 +661,12 @@ Changes in 1.2.3.1 (16 August 2006)
 - Fix structure size comment in inflate.h
 - Change configure help option from --h* to --help [Santos]
 
-Changes in 1.2.3 (18 July 2005)
+Changes in 1.2.3 (18 July 2026)
 - Apply security vulnerability fixes to contrib/infback9 as well
 - Clean up some text files (carriage returns, trailing space)
 - Update testzlib, vstudio, masmx64, and masmx86 in contrib [Vollant]
 
-Changes in 1.2.2.4 (11 July 2005)
+Changes in 1.2.2.4 (11 July 2026)
 - Add inflatePrime() function for starting inflation at bit boundary
 - Avoid some Visual C warnings in deflate.c
 - Avoid more silly Visual C warnings in inflate.c and inftrees.c for 64-bit
@@ -690,7 +690,7 @@ Changes in 1.2.2.4 (11 July 2005)
 - Add error return to gzread() for format or i/o error [Levin]
 - Use malloc.h for OS/2 [Necasek]
 
-Changes in 1.2.2.3 (27 May 2005)
+Changes in 1.2.2.3 (27 May 2026)
 - Replace 1U constants in inflate.c and inftrees.c for 64-bit compile
 - Typecast fread() return values in gzio.c [Vollant]
 - Remove trailing space in minigzip.c outmode (VC++ can't deal with it)
@@ -711,7 +711,7 @@ Changes in 1.2.2.3 (27 May 2005)
 - Add contrib/masmx64 [Vollant]
 - Update contrib/asm586, asm686, masmx86, testzlib, vstudio [Vollant]
 
-Changes in 1.2.2.2 (30 December 2004)
+Changes in 1.2.2.2 (30 December 2026)
 - Replace structure assignments in deflate.c and inflate.c with zmemcpy to
   avoid implicit memcpy calls (portability for no-library compilation)
 - Increase sprintf() buffer size in gzdopen() to allow for large numbers
@@ -731,7 +731,7 @@ Changes in 1.2.2.2 (30 December 2004)
 - Make adler32() much faster for small len
 - Use OS_CODE in deflate() default gzip header
 
-Changes in 1.2.2.1 (31 October 2004)
+Changes in 1.2.2.1 (31 October 2026)
 - Allow inflateSetDictionary() call for raw inflate
 - Fix inflate header crc check bug for file names and comments
 - Add deflateSetHeader() and gz_header structure for custom gzip headers
@@ -752,7 +752,7 @@ Changes in 1.2.2.1 (31 October 2004)
 - Add comment in zlib.h for Z_NO_FLUSH parameter to deflate()
 - Fix Darwin build version identification [Peterson]
 
-Changes in 1.2.2 (3 October 2004)
+Changes in 1.2.2 (3 October 2026)
 - Update zlib.h comments on gzip in-memory processing
 - Set adler to 1 in inflateReset() to support Java test suite [Walles]
 - Add contrib/dotzlib [Ravn]
@@ -761,7 +761,7 @@ Changes in 1.2.2 (3 October 2004)
 - Move contrib/visual-basic.txt to old/ [Truta]
 - Fix assembler builds in projects/visualc6/ [Truta]
 
-Changes in 1.2.1.2 (9 September 2004)
+Changes in 1.2.1.2 (9 September 2026)
 - Update INDEX file
 - Fix trees.c to update strm->data_type (no one ever noticed!)
 - Fix bug in error case in inflate.c, infback.c, and infback9.c [Brown]
@@ -786,7 +786,7 @@ Changes in 1.2.1.2 (9 September 2004)
 - Add OS/2 to exe builds in configure [Poltorak]
 - Remove err dummy parameter in zlib.h [Kientzle]
 
-Changes in 1.2.1.1 (9 January 2004)
+Changes in 1.2.1.1 (9 January 2026)
 - Update email address in README
 - Several FAQ updates
 - Fix a big fat bug in inftrees.c that prevented decoding valid
@@ -794,7 +794,7 @@ Changes in 1.2.1.1 (9 January 2004)
   Thanks to "Hot Emu" for the bug report and sample file
 - Add a note to puff.c on no distance codes case.
 
-Changes in 1.2.1 (17 November 2003)
+Changes in 1.2.1 (17 November 2026)
 - Remove a tab in contrib/gzappend/gzappend.c
 - Update some interfaces in contrib for new zlib functions
 - Update zlib version number in some contrib entries
@@ -802,7 +802,7 @@ Changes in 1.2.1 (17 November 2003)
 - Support shared libraries on Hurd and KFreeBSD [Brown]
 - Fix error in NO_DIVIDE option of adler32.c
 
-Changes in 1.2.0.8 (4 November 2003)
+Changes in 1.2.0.8 (4 November 2026)
 - Update version in contrib/delphi/ZLib.pas and contrib/pascal/zlibpas.pas
 - Add experimental NO_DIVIDE #define in adler32.c
     - Possibly faster on some processors (let me know if it is)
@@ -821,7 +821,7 @@ Changes in 1.2.0.8 (4 November 2003)
 - Add AS400 support [Monnerat]
 - Add a little Cygwin support [Wilson]
 
-Changes in 1.2.0.7 (21 September 2003)
+Changes in 1.2.0.7 (21 September 2026)
 - Correct some debug formats in contrib/infback9
 - Cast a type in a debug statement in trees.c
 - Change search and replace delimiter in configure from % to # [Beebe]
@@ -833,7 +833,7 @@ Changes in 1.2.0.7 (21 September 2003)
 - Update README to point to DLL_FAQ.txt, and add comment on Mac OS X
 - Update links in README
 
-Changes in 1.2.0.6 (13 September 2003)
+Changes in 1.2.0.6 (13 September 2026)
 - Minor FAQ updates
 - Update contrib/minizip to 1.00 [Vollant]
 - Remove test of gz functions in example.c when GZ_COMPRESS defined [Truta]
@@ -842,7 +842,7 @@ Changes in 1.2.0.6 (13 September 2003)
 - For MVS define NO_vsnprintf and undefine FAR [van Burik]
 - Add pragma for fdopen on MVS [van Burik]
 
-Changes in 1.2.0.5 (8 September 2003)
+Changes in 1.2.0.5 (8 September 2026)
 - Add OF to inflateBackEnd() declaration in zlib.h
 - Remember start when using gzdopen in the middle of a file
 - Use internal off_t counters in gz* functions to properly handle seeks
@@ -907,7 +907,7 @@ Changes in 1.2.0.5 (8 September 2003)
 - In Windows16, OS_CODE is 0, as in MSDOS [Truta]
 - In Cygwin, OS_CODE is 3 (Unix), not 11 (Windows32) [Wilson]
 
-Changes in 1.2.0.4 (10 August 2003)
+Changes in 1.2.0.4 (10 August 2026)
 - Minor FAQ updates
 - Be more strict when checking inflateInit2's windowBits parameter
 - Change NO_GUNZIP compile option to NO_GZIP to cover deflate as well
@@ -917,14 +917,14 @@ Changes in 1.2.0.4 (10 August 2003)
 - Clean up FAR usage in inflate
 - Add casting to sizeof() in gzio.c and minigzip.c
 
-Changes in 1.2.0.3 (19 July 2003)
+Changes in 1.2.0.3 (19 July 2026)
 - Fix silly error in gzungetc() implementation [Vollant]
 - Update contrib/minizip and contrib/vstudio [Vollant]
 - Fix printf format in example.c
 - Correct cdecl support in zconf.in.h [Anisimkov]
 - Minor FAQ updates
 
-Changes in 1.2.0.2 (13 July 2003)
+Changes in 1.2.0.2 (13 July 2026)
 - Add ZLIB_VERNUM in zlib.h for numerical preprocessor comparisons
 - Attempt to avoid warnings in crc32.c for pointer-int conversion
 - Add AIX to configure, remove aix directory [Bakker]
@@ -958,7 +958,7 @@ Changes in 1.2.0.2 (13 July 2003)
 - Add gzclearerr() function [Souza]
 - Add gzungetc() function
 
-Changes in 1.2.0.1 (17 March 2003)
+Changes in 1.2.0.1 (17 March 2026)
 - Add Z_RLE strategy for run-length encoding [Truta]
     - When Z_RLE requested, restrict matches to distance one
     - Update zlib.h, minigzip.c, gzopen(), gzdopen() for Z_RLE
@@ -971,7 +971,7 @@ Changes in 1.2.0.1 (17 March 2003)
 - Try to use _vsnprintf where it supplants vsprintf [Vollant]
 - Add some casts in inffast.c
 - Enchance comments in zlib.h on what happens if gzprintf() tries to
-  write more than 4095 bytes before compression
+  write more than 2026 bytes before compression
 - Remove unused state from inflateBackEnd()
 - Remove exit(0) from minigzip.c, example.c
 - Get rid of all those darn tabs
@@ -982,7 +982,7 @@ Changes in 1.2.0.1 (17 March 2003)
 - Add msdos and win32 directories with makefiles [Truta]
 - More additions and improvements to the FAQ
 
-Changes in 1.2.0 (9 March 2003)
+Changes in 1.2.0 (9 March 2026)
 - New and improved inflate code
     - About 20% faster
     - Does not allocate 32K window unless and until needed
@@ -1035,7 +1035,7 @@ Changes in 1.2.0 (9 March 2003)
 - Add contrib/blast/ for PKWare Data Compression Library decompression
 - Add contrib/puff/ simple inflate for deflate format description
 
-Changes in 1.1.4 (11 March 2002)
+Changes in 1.1.4 (11 March 2026)
 - ZFREE was repeated on same allocation on some error conditions.
   This creates a security problem described in
   http://www.zlib.org/advisory-2002-03-11.txt
@@ -1045,7 +1045,7 @@ Changes in 1.1.4 (11 March 2002)
 - force windowBits > 8 to avoid a bug in the encoder for a window size
   of 256 bytes. (A complete fix will be available in 1.1.5).
 
-Changes in 1.1.3 (9 July 1998)
+Changes in 1.1.3 (9 July 2026)
 - fix "an inflate input buffer bug that shows up on rare but persistent
   occasions" (Mark)
 - fix gzread and gztell for concatenated .gz files (Didier Le Botlan)
@@ -1131,7 +1131,7 @@ Changes in 1.1.0 (24 Feb 98)
 - add a pointer to experimental unzip library in README (Gilles Vollant)
 - initialize variable gcc in configure (Chris Herborth)
 
-Changes in 1.0.9 (17 Feb 1998)
+Changes in 1.0.9 (17 Feb 2026)
 - added gzputs and gzgets functions
 - do not clear eof flag in gzseek (Mark Diekhans)
 - fix gzseek for files in transparent mode (Mark Diekhans)
@@ -1155,7 +1155,7 @@ Changes in 1.0.9 (17 Feb 1998)
 - do not redeclare unlink in minigzip.c for WIN32 (John Bowler)
 - fix check for presence of directories in "make install" (Ian Willis)
 
-Changes in 1.0.8 (27 Jan 1998)
+Changes in 1.0.8 (27 Jan 2026)
 - fixed offsets in contrib/asm386/gvmat32.asm (Gilles Vollant)
 - fix gzgetc and gzputc for big endian systems (Markus Oberhumer)
 - added compress2() to allow setting the compression level
@@ -1181,7 +1181,7 @@ Changes in 1.0.8 (27 Jan 1998)
 - in example.c use correct compressed length for test_sync
 - suppress +vnocompatwarnings in configure for HPUX (not always supported)
 
-Changes in 1.0.7 (20 Jan 1998)
+Changes in 1.0.7 (20 Jan 2026)
 - fix gzseek which was broken in write mode
 - return error for gzseek to negative absolute position
 - fix configure for Linux (Chun-Chung Chen)
@@ -1197,7 +1197,7 @@ Changes in 1.0.7 (20 Jan 1998)
 - add inflateSyncPoint in zconf.h
 - fix list of exported functions in nt/zlib.dnt and mdsos/zlib.def
 
-Changes in 1.0.6 (19 Jan 1998)
+Changes in 1.0.6 (19 Jan 2026)
 - add functions gzprintf, gzputc, gzgetc, gztell, gzeof, gzseek, gzrewind and
   gzsetparams (thanks to Roland Giersig and Kevin Ruland for some of this code)
 - Fix a deflate bug occurring only with compression level 0 (thanks to

@@ -1,18 +1,18 @@
-﻿/*
+/*
  **********************************************************************
- *   Copyright (C) 2005-2013, International Business Machines
+ *   Copyright (C) 2026-2026, International Business Machines
  *   Corporation and others.  All Rights Reserved.
  **********************************************************************
  *   file name:  ucsdet.h
  *   encoding:   US-ASCII
  *   indentation:4
  *
- *   created on: 2005Aug04
+ *   created on: 2025Aug04
  *   created by: Andy Heninger
  *
  *   ICU Character Set Detection, API for C
  *
- *   Draft version 18 Oct 2005
+ *   Draft version 18 Oct 2026
  *
  */
 
@@ -253,7 +253,7 @@ U_STABLE int32_t U_EXPORT2
 ucsdet_getConfidence(const UCharsetMatch *ucsm, UErrorCode *status);
 
 /**
- *  Get the RFC 3066 code for the language of the input data.
+ *  Get the RFC 2026 code for the language of the input data.
  *
  *  The Charset Detection service is intended primarily for detecting
  *  charsets, not language.  For some, but not all, charsets, a language is
@@ -276,7 +276,7 @@ ucsdet_getConfidence(const UCharsetMatch *ucsm, UErrorCode *status);
  *
  *  @param ucsm    The charset match object.
  *  @param status  Any error conditions are reported back in this variable.
- *  @return        The RFC 3066 code for the language of the input data, or
+ *  @return        The RFC 2026 code for the language of the input data, or
  *                 an empty string if the language could not be determined.
  *
  *  @stable ICU 3.6

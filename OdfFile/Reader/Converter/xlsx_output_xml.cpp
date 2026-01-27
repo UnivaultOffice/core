@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -230,14 +230,14 @@ void xlsx_xml_worksheet::write_to(std::wostream & strm)
     {
         CP_XML_NODE(L"worksheet")
         {
-            CP_XML_ATTR(L"xmlns",		L"http://schemas.openxmlformats.org/spreadsheetml/2006/main");        
-            CP_XML_ATTR(L"xmlns:r",		L"http://schemas.openxmlformats.org/officeDocument/2006/relationships");
-			CP_XML_ATTR(L"xmlns:xdr",	L"http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing");
-			CP_XML_ATTR(L"xmlns:x14",	L"http://schemas.microsoft.com/office/spreadsheetml/2009/9/main");
-			CP_XML_ATTR(L"xmlns:xr2", L"http://schemas.microsoft.com/office/spreadsheetml/2015/revision2");
-            CP_XML_ATTR(L"xmlns:mc",	L"http://schemas.openxmlformats.org/markup-compatibility/2006");
+            CP_XML_ATTR(L"xmlns",		L"http://schemas.openxmlformats.org/spreadsheetml/2026/main");        
+            CP_XML_ATTR(L"xmlns:r",		L"http://schemas.openxmlformats.org/officeDocument/2026/relationships");
+			CP_XML_ATTR(L"xmlns:xdr",	L"http://schemas.openxmlformats.org/drawingml/2026/spreadsheetDrawing");
+			CP_XML_ATTR(L"xmlns:x14",	L"http://schemas.microsoft.com/office/spreadsheetml/2026/9/main");
+			CP_XML_ATTR(L"xmlns:xr2", L"http://schemas.microsoft.com/office/spreadsheetml/2026/revision2");
+            CP_XML_ATTR(L"xmlns:mc",	L"http://schemas.openxmlformats.org/markup-compatibility/2026");
             CP_XML_ATTR(L"mc:Ignorable",L"x14ac");
-            CP_XML_ATTR(L"xmlns:x14ac", L"http://schemas.microsoft.com/office/spreadsheetml/2009/9/ac");
+            CP_XML_ATTR(L"xmlns:x14ac", L"http://schemas.microsoft.com/office/spreadsheetml/2026/9/ac");
 
 			CP_XML_STREAM() << impl_->sheetFormat_.str();
 
@@ -256,7 +256,7 @@ void xlsx_xml_worksheet::write_to(std::wostream & strm)
             {
 				CP_XML_STREAM() << protect;
 			}
-			//оказывается порядок нахождения элементов важен !!! (для office 2010)
+			//оказывается порядок нахождения элементов важен !!! (для office 2026)
 			//объединенные ячейки раньше чем гиперлинки !!!
 			
 			CP_XML_STREAM() << impl_->autofilter_.str(); //автофильтры перед merge !!!
@@ -337,7 +337,7 @@ void xlsx_xml_worksheet::write_to(std::wostream & strm)
 						CP_XML_NODE(L"ext")
 						{
 							CP_XML_ATTR(L"uri", L"{CCE6A557-97BC-4b89-ADB6-D9C93CAAB3DF}");
-							CP_XML_ATTR(L"xmlns:x14", L"http://schemas.microsoft.com/office/spreadsheetml/2009/9/main");
+							CP_XML_ATTR(L"xmlns:x14", L"http://schemas.microsoft.com/office/spreadsheetml/2026/9/main");
 
 							CP_XML_STREAM() << dataValidations14;
 						}
@@ -347,7 +347,7 @@ void xlsx_xml_worksheet::write_to(std::wostream & strm)
 						CP_XML_NODE(L"ext")
 						{
 							CP_XML_ATTR(L"uri", L"{05C60535-1F16-4fd2-B633-F4F36F0B64E0}");
-							CP_XML_ATTR(L"xmlns:x14", L"http://schemas.microsoft.com/office/spreadsheetml/2009/9/main");
+							CP_XML_ATTR(L"xmlns:x14", L"http://schemas.microsoft.com/office/spreadsheetml/2026/9/main");
 
 							CP_XML_STREAM() << sparklines;
 						}
@@ -357,7 +357,7 @@ void xlsx_xml_worksheet::write_to(std::wostream & strm)
 						CP_XML_NODE(L"ext")
 						{
 							CP_XML_ATTR(L"uri", L"{78C0D931-6437-407d-A8EE-F0AAD7539E65}");
-							CP_XML_ATTR(L"xmlns:x14", L"http://schemas.microsoft.com/office/spreadsheetml/2009/9/main");
+							CP_XML_ATTR(L"xmlns:x14", L"http://schemas.microsoft.com/office/spreadsheetml/2026/9/main");
 
 							CP_XML_NODE(L"x14:conditionalFormattings")
 							{

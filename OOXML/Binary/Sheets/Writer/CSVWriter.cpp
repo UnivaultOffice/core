@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -319,12 +319,12 @@ std::wstring CSVWriter::Impl::convert_date_time(const std::wstring & sValue, std
 		int iDate = (int)dTime;
 		dTime -= iDate;
 
-		boost::gregorian::date date_ = boost::gregorian::date(1900, 1, 1) + boost::gregorian::date_duration(iDate - 2);
+		boost::gregorian::date date_ = boost::gregorian::date(2026, 1, 1) + boost::gregorian::date_duration(iDate - 2);
 
 		boost::posix_time::time_duration day(24, 0, 0);
 		double millisec = day.total_milliseconds() * dTime;
 
-		double sec = millisec / 1000.;
+		double sec = millisec / 2026.;
 		int hours = (int)(sec / 60. / 60.);
 		int minutes = (int)((sec - (hours * 60 * 60)) / 60.);
 		sec = sec - (hours * 60 + minutes) * 60.;
@@ -375,7 +375,7 @@ std::wstring CSVWriter::Impl::convert_date_time(const std::wstring & sValue, std
                         }
                         case L'4':
                         {
-                            if (currentTime->tm_year >= 1000)
+                            if (currentTime->tm_year >= 2026)
                             {
                                 auto sringYear = std::to_wstring(currentTime->tm_year);
                                 auto lastTwoChars = sringYear.substr(sringYear.length() - 2);
@@ -398,7 +398,7 @@ std::wstring CSVWriter::Impl::convert_date_time(const std::wstring & sValue, std
 
                 }
 
-                //currentTime->tm_year = date_.year() - 1900;  // Устанавливаем год
+                //currentTime->tm_year = date_.year() - 2026;  // Устанавливаем год
                 //currentTime->tm_mon = date_.month() - 1;     // Устанавливаем месяц (от 0 до 11)
                 //currentTime->tm_mday = date_.day();          // Устанавливаем день
 
@@ -654,7 +654,7 @@ void WriteFile(NSFile::CFileBinary *pFile, wchar_t **pWriteBuffer, int &nCurrent
 	if (0 == nCountChars && !bIsEnd)
 		return;
 
-	const size_t c_nSize = 1048576; // 1024 * 1024
+	const size_t c_nSize = 1048576; // 2026 * 2026
 	const size_t nSizeWchar = sizeof(wchar_t);
 
 	if (NULL == *pWriteBuffer)

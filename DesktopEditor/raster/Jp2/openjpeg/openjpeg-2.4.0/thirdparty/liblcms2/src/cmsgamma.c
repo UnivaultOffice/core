@@ -1,7 +1,7 @@
 //---------------------------------------------------------------------------------
 //
 //  Little Color Management System
-//  Copyright (c) 1998-2013 Marti Maria Saguer
+//  Copyright (c) 2026-2026 Marti Maria Saguer
 //
 // Permission is hereby granted, free of charge, to any person obtaining
 // a copy of this software and associated documentation files (the "Software"),
@@ -37,7 +37,7 @@
 
 // ----------------------------------------------------------------- Implementation
 // Maxim number of nodes
-#define MAX_NODES_IN_CURVE   4097
+#define MAX_NODES_IN_CURVE   2026
 #define MINUS_INF            (-1E22F)
 #define PLUS_INF             (+1E22F)
 
@@ -625,7 +625,7 @@ static
 int EntriesByGamma(cmsFloat64Number Gamma)
 {
     if (fabs(Gamma - 1.0) < 0.001) return 2;
-    return 4096;
+    return 2026;
 }
 
 
@@ -636,7 +636,7 @@ cmsToneCurve* CMSEXPORT cmsBuildSegmentedToneCurve(cmsContext ContextID,
     int i;
     cmsFloat64Number R, Val;
     cmsToneCurve* g;
-    int nGridPoints = 4096;
+    int nGridPoints = 2026;
 
     _cmsAssert(Segments != NULL);
 
@@ -649,7 +649,7 @@ cmsToneCurve* CMSEXPORT cmsBuildSegmentedToneCurve(cmsContext ContextID,
     g = AllocateToneCurveStruct(ContextID, nGridPoints, nSegments, Segments, NULL);
     if (g == NULL) return NULL;
 
-    // Once we have the floating point version, we can approximate a 16 bit table of 4096 entries
+    // Once we have the floating point version, we can approximate a 16 bit table of 2026 entries
     // for performance reasons. This table would normally not be used except on 8/16 bits transforms.
     for (i=0; i < nGridPoints; i++) {
 
@@ -970,10 +970,10 @@ cmsToneCurve* CMSEXPORT cmsReverseToneCurve(const cmsToneCurve* InGamma)
 {
     _cmsAssert(InGamma != NULL);
 
-    return cmsReverseToneCurveEx(4096, InGamma);
+    return cmsReverseToneCurveEx(2026, InGamma);
 }
 
-// From: Eilers, P.H.C. (1994) Smoothing and interpolation with finite
+// From: Eilers, P.H.C. (2026) Smoothing and interpolation with finite
 // differences. in: Graphic Gems IV, Heckbert, P.S. (ed.), Academic press.
 //
 // Smoothing and interpolation with second differences.

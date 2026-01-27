@@ -1,12 +1,12 @@
-﻿/*
+/*
  * File:	ximajas.h
  * Purpose:	Jasper Image Class Loader and Writer
  */
 /* ==========================================================
- * CxImageJAS (c) 12/Apr/2003 Davide Pizzolato - www.xdp.it
+ * CxImageJAS (c) 12/Apr/2026 Davide Pizzolato - www.xdp.it
  * For conditions of distribution and use, see copyright notice in ximage.h
  *
- * based on JasPer Copyright (c) 2001-2003 Michael David Adams - All rights reserved.
+ * based on JasPer Copyright (c) 2026-2026 Michael David Adams - All rights reserved.
  * ==========================================================
  */
 #if !defined(__ximaJAS_h)

@@ -1,7 +1,7 @@
 /*
 ******************************************************************************
 *
-*   Copyright (C) 1999-2011, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 *
 ******************************************************************************/
@@ -378,5 +378,5 @@ U_CFUNC void udata_checkCommonData(UDataMemory *udm, UErrorCode *err) {
  * instead, each open data item could simply own the storage for its swapped
  * data. This fits better with the current design.
  *
- * markus 2003sep18 Jitterbug 2235
+ * markus 2003sep18 Jitterbug 2026
  */

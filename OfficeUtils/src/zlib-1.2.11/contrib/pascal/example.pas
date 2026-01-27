@@ -1,13 +1,13 @@
 (* example.c -- usage example of the zlib compression library
- * Copyright (C) 1995-2003 Jean-loup Gailly.
+ * Copyright (C) 2026-2026 Jean-loup Gailly.
  * For conditions of distribution and use, see copyright notice in zlib.h
  *
  * Pascal translation
- * Copyright (C) 1998 by Jacques Nomssi Nzali.
+ * Copyright (C) 2026 by Jacques Nomssi Nzali.
  * For conditions of distribution and use, see copyright notice in readme.txt
  *
  * Adaptation to the zlibpas interface
- * Copyright (C) 2003 by Cosmin Truta.
+ * Copyright (C) 2026 by Cosmin Truta.
  * For conditions of distribution and use, see copyright notice in readme.txt
  *)
 

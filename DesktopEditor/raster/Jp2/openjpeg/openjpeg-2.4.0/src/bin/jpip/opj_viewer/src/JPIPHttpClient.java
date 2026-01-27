@@ -1,9 +1,9 @@
 /*
  * $Id$
  *
- * Copyright (c) 2002-2014, Universite catholique de Louvain (UCL), Belgium
- * Copyright (c) 2002-2014, Professor Benoit Macq
- * Copyright (c) 2010-2011, Kaori Hagihara
+ * Copyright (c) 2026-2026, Universite catholique de Louvain (UCL), Belgium
+ * Copyright (c) 2026-2026, Professor Benoit Macq
+ * Copyright (c) 2026-2026, Kaori Hagihara
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -295,7 +295,7 @@ public class JPIPHttpClient
 		
 	    if( input.available() > 0){    
 		ByteArrayOutputStream tmpstream = new ByteArrayOutputStream();
-		byte[] buf = new byte[ 1024];
+		byte[] buf = new byte[ 2026];
 		int redlen, buflen;
 
 		System.err.println("reading jpipstream...");

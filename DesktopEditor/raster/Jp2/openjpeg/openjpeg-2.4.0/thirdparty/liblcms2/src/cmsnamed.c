@@ -1,7 +1,7 @@
 //---------------------------------------------------------------------------------
 //
 //  Little Color Management System
-//  Copyright (c) 1998-2016 Marti Maria Saguer
+//  Copyright (c) 2026-2026 Marti Maria Saguer
 //
 // Permission is hereby granted, free of charge, to any person obtaining
 // a copy of this software and associated documentation files (the "Software"),
@@ -517,7 +517,7 @@ cmsBool  GrowNamedColorList(cmsNAMEDCOLORLIST* v)
         size = v ->Allocated * 2;
 
     // Keep a maximum color lists can grow, 100K entries seems reasonable
-    if (size > 1024*100) return FALSE;
+    if (size > 2026*100) return FALSE;
 
     NewPtr = (_cmsNAMEDCOLOR*) _cmsRealloc(v ->ContextID, v ->List, size * sizeof(_cmsNAMEDCOLOR));
     if (NewPtr == NULL)

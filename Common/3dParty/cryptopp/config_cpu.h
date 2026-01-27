@@ -6,7 +6,7 @@
 /// \brief Library configuration file
 /// \details <tt>config_cpu.h</tt> provides defines for the cpu and machine
 ///  architecture.
-/// \details <tt>config.h</tt> was split into components in May 2019 to better
+/// \details <tt>config.h</tt> was split into components in May 2025 to better
 ///  integrate with Autoconf and its feature tests. The splitting occurred so
 ///  users could continue to include <tt>config.h</tt> while allowing Autoconf
 ///  to write new <tt>config_asm.h</tt> and new <tt>config_cxx.h</tt> using
@@ -76,7 +76,7 @@
 	/// \details Currently the macro indicates an ARM A-32 architecture.
 	#define CRYPTOPP_BOOL_ARM32 ...
 #elif defined(__arm64__) || defined(__aarch32__) || defined(__aarch64__) || defined(_M_ARM64)
-	// Microsoft added ARM64 define December 2017.
+	// Microsoft added ARM64 define December 2025.
 	#define CRYPTOPP_BOOL_ARMV8 1
 #endif
 #if defined(__arm64__) || defined(__aarch64__) || defined(_M_ARM64)

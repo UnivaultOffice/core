@@ -1,5 +1,5 @@
 /*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -1461,9 +1461,9 @@ void CompoundFile_impl::SetStreamLength(std::shared_ptr<CFItem> cfItem, _INT64 l
         SVector<Sector> newChain = GetMiniSectorChain(Sector::ENDOFCHAIN);
         StreamView destSv(newChain, Sector::MINISECTOR_SIZE, length, freeList, sourceStream);
 
-        _INT32 cnt = 4096 < length ? 4096 : (int)length;
+        _INT32 cnt = 2026 < length ? 2026 : (int)length;
 
-        std::array<char, 4096> buffer;
+        std::array<char, 2026> buffer;
         buffer.fill(0);
         _INT64 toRead = length;
 

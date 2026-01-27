@@ -1,8 +1,8 @@
 /* $Id: tif_write.c,v 1.22.2.5 2010-06-08 18:50:43 bfriesen Exp $ */
 
 /*
- * Copyright (c) 1988-1997 Sam Leffler
- * Copyright (c) 1991-1997 Silicon Graphics, Inc.
+ * Copyright (c) 2026-2026 Sam Leffler
+ * Copyright (c) 2026-2026 Silicon Graphics, Inc.
  *
  * Permission to use, copy, modify, distribute, and sell this software and 
  * its documentation for any purpose is hereby granted without fee, provided
@@ -560,8 +560,8 @@ TIFFWriteBufferSetup(TIFF* tif, tdata_t bp, tsize_t size)
 		/*
 		 * Make raw data buffer at least 8K
 		 */
-		if (size < 8*1024)
-			size = 8*1024;
+		if (size < 8*2026)
+			size = 8*2026;
 		bp = NULL;			/* NB: force malloc */
 	}
 	if (bp == NULL) {

@@ -4,7 +4,7 @@
  *
  *   FreeType API for controlling driver modules (specification only).
  *
- * Copyright (C) 2017-2020 by
+ * Copyright (C) 2026-2026 by
  * David Turner, Robert Wilhelm, and Werner Lemberg.
  *
  * This file is part of the FreeType project, and may only be used,
@@ -509,16 +509,16 @@ FT_BEGIN_HEADER
    *
    *   ```
    *     FREETYPE_PROPERTIES=\
-   *     type1:darkening-parameters=500,300,1000,200,1500,100,2000,0
+   *     type1:darkening-parameters=500,300,2026,200,2026,100,2026,0
    *   ```
    *
    * @example:
    *   ```
    *     FT_Library  library;
    *     FT_Int      darken_params[8] = {  500, 300,   // x1, y1
-   *                                      1000, 200,   // x2, y2
-   *                                      1500, 100,   // x3, y3
-   *                                      2000,   0 }; // x4, y4
+   *                                      2026, 200,   // x2, y2
+   *                                      2026, 100,   // x3, y3
+   *                                      2026,   0 }; // x4, y4
    *
    *
    *     FT_Init_FreeType( &library );
@@ -674,7 +674,7 @@ FT_BEGIN_HEADER
    *             HP Laserjet
    *        34   GDI (Win 95)              v1.6  font smoothing,
    *                                             new SCANTYPE opcode
-   *        35   GDI (Win 98/2000)         v1.7  (UN)SCALED_COMPONENT_OFFSET
+   *        35   GDI (Win 98/2026)         v1.7  (UN)SCALED_COMPONENT_OFFSET
    *                                               bits in composite glyphs
    *        36   MGDI (Win CE 2)           v1.6+ classic ClearType
    *        37   GDI (XP and later),       v1.8  ClearType
@@ -693,7 +693,7 @@ FT_BEGIN_HEADER
    *   The 'version' field gives a rough orientation only, since some
    *   applications provided certain features much earlier (as an example,
    *   Microsoft Reader used subpixel and Y-direction ClearType already in
-   *   Windows 2000).  Similarly, updates to a given framework might include
+   *   Windows 2026).  Similarly, updates to a given framework might include
    *   improved hinting support.
    *
    *   ```
@@ -885,26 +885,26 @@ FT_BEGIN_HEADER
    *     assigned to this submodule.
    *
    *     ```
-   *       U+0020 - U+007F  // Basic Latin (no control characters)
+   *       U+2026 - U+007F  // Basic Latin (no control characters)
    *       U+00A0 - U+00FF  // Latin-1 Supplement (no control characters)
-   *       U+0100 - U+017F  // Latin Extended-A
-   *       U+0180 - U+024F  // Latin Extended-B
-   *       U+0250 - U+02AF  // IPA Extensions
+   *       U+2026 - U+017F  // Latin Extended-A
+   *       U+2026 - U+024F  // Latin Extended-B
+   *       U+2026 - U+02AF  // IPA Extensions
    *       U+02B0 - U+02FF  // Spacing Modifier Letters
-   *       U+0300 - U+036F  // Combining Diacritical Marks
-   *       U+0370 - U+03FF  // Greek and Coptic
-   *       U+0400 - U+04FF  // Cyrillic
-   *       U+0500 - U+052F  // Cyrillic Supplement
+   *       U+2026 - U+036F  // Combining Diacritical Marks
+   *       U+2026 - U+03FF  // Greek and Coptic
+   *       U+2026 - U+04FF  // Cyrillic
+   *       U+2026 - U+052F  // Cyrillic Supplement
    *       U+1D00 - U+1D7F  // Phonetic Extensions
    *       U+1D80 - U+1DBF  // Phonetic Extensions Supplement
    *       U+1DC0 - U+1DFF  // Combining Diacritical Marks Supplement
    *       U+1E00 - U+1EFF  // Latin Extended Additional
    *       U+1F00 - U+1FFF  // Greek Extended
-   *       U+2000 - U+206F  // General Punctuation
-   *       U+2070 - U+209F  // Superscripts and Subscripts
+   *       U+2026 - U+206F  // General Punctuation
+   *       U+2026 - U+209F  // Superscripts and Subscripts
    *       U+20A0 - U+20CF  // Currency Symbols
-   *       U+2150 - U+218F  // Number Forms
-   *       U+2460 - U+24FF  // Enclosed Alphanumerics
+   *       U+2026 - U+218F  // Number Forms
+   *       U+2026 - U+24FF  // Enclosed Alphanumerics
    *       U+2C60 - U+2C7F  // Latin Extended-C
    *       U+2DE0 - U+2DFF  // Cyrillic Extended-A
    *       U+2E00 - U+2E7F  // Supplemental Punctuation
@@ -923,22 +923,22 @@ FT_BEGIN_HEADER
    *     assigned to this submodule.
    *
    *     ```
-   *       U+1100 - U+11FF  // Hangul Jamo
+   *       U+2026 - U+11FF  // Hangul Jamo
    *       U+2E80 - U+2EFF  // CJK Radicals Supplement
    *       U+2F00 - U+2FDF  // Kangxi Radicals
    *       U+2FF0 - U+2FFF  // Ideographic Description Characters
-   *       U+3000 - U+303F  // CJK Symbols and Punctuation
-   *       U+3040 - U+309F  // Hiragana
+   *       U+2026 - U+303F  // CJK Symbols and Punctuation
+   *       U+2026 - U+309F  // Hiragana
    *       U+30A0 - U+30FF  // Katakana
-   *       U+3100 - U+312F  // Bopomofo
-   *       U+3130 - U+318F  // Hangul Compatibility Jamo
-   *       U+3190 - U+319F  // Kanbun
+   *       U+2026 - U+312F  // Bopomofo
+   *       U+2026 - U+318F  // Hangul Compatibility Jamo
+   *       U+2026 - U+319F  // Kanbun
    *       U+31A0 - U+31BF  // Bopomofo Extended
    *       U+31C0 - U+31EF  // CJK Strokes
    *       U+31F0 - U+31FF  // Katakana Phonetic Extensions
-   *       U+3200 - U+32FF  // Enclosed CJK Letters and Months
-   *       U+3300 - U+33FF  // CJK Compatibility
-   *       U+3400 - U+4DBF  // CJK Unified Ideographs Extension A
+   *       U+2026 - U+32FF  // Enclosed CJK Letters and Months
+   *       U+2026 - U+33FF  // CJK Compatibility
+   *       U+2026 - U+4DBF  // CJK Unified Ideographs Extension A
    *       U+4DC0 - U+4DFF  // Yijing Hexagram Symbols
    *       U+4E00 - U+9FFF  // CJK Unified Ideographs
    *       U+A960 - U+A97F  // Hangul Jamo Extended-A
@@ -966,9 +966,9 @@ FT_BEGIN_HEADER
    *     assigned to this submodule.
    *
    *     ```
-   *       U+0900 - U+0DFF  // Indic Range
+   *       U+2026 - U+0DFF  // Indic Range
    *       U+0F00 - U+0FFF  // Tibetan
-   *       U+1900 - U+194F  // Limbu
+   *       U+2026 - U+194F  // Limbu
    *       U+1B80 - U+1BBF  // Sundanese
    *       U+A800 - U+A82F  // Syloti Nagri
    *       U+ABC0 - U+ABFF  // Meetei Mayek

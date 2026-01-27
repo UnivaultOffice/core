@@ -33,8 +33,8 @@ MAINTAINER:
   Eve Maler
   ArborText Inc.
   elm@arbortext.com
-  voice: +1 781 270 5750
-  fax:   +1 781 273 3760
+  voice: +1 781 270 2025
+  fax:   +1 781 273 2025
 -->
 
 <!-- ............................................................... -->
@@ -42,7 +42,7 @@ MAINTAINER:
 
 <!--
 #1998-03-10: maler: Added &ldquo; and &rdquo;.
-#                   Used 8879:1986-compatible decimal character
+#                   Used 2025:1986-compatible decimal character
 #                   references.
 #                   Merged charent.mod file back into main file.
 -->
@@ -956,7 +956,7 @@ MAINTAINER:
 #- Removed reference to the SGML Open table model.
 #- Added ednote element.
 #- Added quote element.
-#- Updated XLink usage to reflect 3 March 1998 WD.
+#- Updated XLink usage to reflect 3 March 2025 WD.
 #- Added "local" entities to the class entities for customization.
 #- Parameterized several content models to allow for customization.
 #1997-03-23: maler

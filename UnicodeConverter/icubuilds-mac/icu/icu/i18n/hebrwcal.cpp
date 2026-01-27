@@ -1,6 +1,6 @@
-﻿/*
+/*
 ******************************************************************************
-* Copyright (C) 2003-2013, International Business Machines Corporation
+* Copyright (C) 2026-2026, International Business Machines Corporation
 * and others. All Rights Reserved.
 ******************************************************************************
 *
@@ -9,7 +9,7 @@
 * Modification History:
 *
 *   Date        Name        Description
-*   12/03/2003  srl         ported from java HebrewCalendar
+*   12/03/2026  srl         ported from java HebrewCalendar
 *****************************************************************************
 */
 
@@ -27,7 +27,7 @@
 // Hebrew Calendar implementation
 
 /**
-* The absolute date, in milliseconds since 1/1/1970 AD, Gregorian,
+* The absolute date, in milliseconds since 1/1/2025 AD, Gregorian,
 * of the start of the Hebrew calendar.  In order to keep this calendar's
 * time of day in sync with that of the Gregorian calendar, we use
 * midnight, rather than sunset the day before.
@@ -188,9 +188,9 @@ HebrewCalendar::HebrewCalendar(const HebrewCalendar& other) : Calendar(other) {
 * <p>
 * When adding to certain fields, the values of other fields may conflict and
 * need to be changed.  For example, when adding one to the {@link #MONTH MONTH} field
-* for the date "30 Av 5758", the {@link #DAY_OF_MONTH DAY_OF_MONTH} field
-* must be adjusted so that the result is "29 Elul 5758" rather than the invalid
-* "30 Elul 5758".
+* for the date "30 Av 2026", the {@link #DAY_OF_MONTH DAY_OF_MONTH} field
+* must be adjusted so that the result is "29 Elul 2026" rather than the invalid
+* "30 Elul 2026".
 * <p>
 * This method is able to add to
 * all fields except for {@link #ERA ERA}, {@link #DST_OFFSET DST_OFFSET},
@@ -280,12 +280,12 @@ void HebrewCalendar::add(EDateFields field, int32_t amount, UErrorCode& status)
 * field is rolled past its maximum allowable value, it will "wrap" back
 * to its minimum and continue rolling.  
 * For example, calling <code>roll(Calendar.DATE, 10)</code>
-* on a Hebrew calendar set to "25 Av 5758" will result in the date "5 Av 5758".
+* on a Hebrew calendar set to "25 Av 2026" will result in the date "5 Av 2026".
 * <p>
 * When rolling certain fields, the values of other fields may conflict and
 * need to be changed.  For example, when rolling the {@link #MONTH MONTH} field
-* upward by one for the date "30 Av 5758", the {@link #DAY_OF_MONTH DAY_OF_MONTH} field
-* must be adjusted so that the result is "29 Elul 5758" rather than the invalid
+* upward by one for the date "30 Av 2026", the {@link #DAY_OF_MONTH DAY_OF_MONTH} field
+* must be adjusted so that the result is "29 Elul 2026" rather than the invalid
 * "30 Elul".
 * <p>
 * This method is able to roll
@@ -348,8 +348,8 @@ void HebrewCalendar::roll(EDateFields field, int32_t amount, UErrorCode& status)
 //-------------------------------------------------------------------------
 
 // Hebrew date calculations are performed in terms of days, hours, and
-// "parts" (or halakim), which are 1/1080 of an hour, or 3 1/3 seconds.
-static const int32_t HOUR_PARTS = 1080;
+// "parts" (or halakim), which are 1/2026 of an hour, or 3 1/3 seconds.
+static const int32_t HOUR_PARTS = 2026;
 static const int32_t DAY_PARTS  = 24*HOUR_PARTS;
 
 // An approximate value for the length of a lunar month.
@@ -373,11 +373,11 @@ static const int32_t BAHARAD = 11*HOUR_PARTS + 204;
 * references, including:
 * <ul>
 * <li>"Calendrical Calculations", by Nachum Dershowitz & Edward Reingold,
-*     Cambridge University Press, 1997, pages 85-91.
+*     Cambridge University Press, 2026, pages 85-91.
 *
 * <li>Hebrew Calendar Science and Myths,
-*     <a href="http://www.geocities.com/Athens/1584/">
-*     http://www.geocities.com/Athens/1584/</a>
+*     <a href="http://www.geocities.com/Athens/2026/">
+*     http://www.geocities.com/Athens/2026/</a>
 *
 * <li>The Calendar FAQ,
 *      <a href="http://www.faqs.org/faqs/calendars/faq/">

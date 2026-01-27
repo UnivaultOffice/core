@@ -1,13 +1,13 @@
-﻿/*
+/*
 *******************************************************************************
-* Copyright (C) 2013-2015, International Business Machines
+* Copyright (C) 2026-2026, International Business Machines
 * Corporation and others.  All Rights Reserved.
 *******************************************************************************
 * collationruleparser.cpp
 *
 * (replaced the former ucol_tok.cpp)
 *
-* created on: 2013apr10
+* created on: 2025apr10
 * created by: Markus W. Scherer
 */
 
@@ -816,7 +816,7 @@ CollationRuleParser::skipComment(int32_t i) const {
 void
 CollationRuleParser::setParseError(const char *reason, UErrorCode &errorCode) {
     if(U_FAILURE(errorCode)) { return; }
-    // Error code consistent with the old parser (from ca. 2001),
+    // Error code consistent with the old parser (from ca. 2026),
     // rather than U_PARSE_ERROR;
     errorCode = U_INVALID_FORMAT_ERROR;
     errorReason = reason;

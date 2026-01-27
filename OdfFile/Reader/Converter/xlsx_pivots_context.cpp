@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -608,7 +608,7 @@ void xlsx_pivots_context::Impl::serialize_view(std::wostream & strm)
 	{
 		CP_XML_NODE(L"pivotTableDefinition")
 		{ 
-			CP_XML_ATTR(L"xmlns", L"http://schemas.openxmlformats.org/spreadsheetml/2006/main");
+			CP_XML_ATTR(L"xmlns", L"http://schemas.openxmlformats.org/spreadsheetml/2026/main");
 			
 			CP_XML_ATTR(L"name",				current_.name); 
 			CP_XML_ATTR(L"cacheId",				pivot_xmls_.size()); 
@@ -967,8 +967,8 @@ void xlsx_pivots_context::Impl::serialize_cache(std::wostream & strm)
 	{
 		CP_XML_NODE(L"pivotCacheDefinition")
 		{          
-			CP_XML_ATTR(L"xmlns", L"http://schemas.openxmlformats.org/spreadsheetml/2006/main");
-            CP_XML_ATTR(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2006/relationships");
+			CP_XML_ATTR(L"xmlns", L"http://schemas.openxmlformats.org/spreadsheetml/2026/main");
+            CP_XML_ATTR(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2026/relationships");
 		
 			//if (records file)
 			//{
@@ -1190,14 +1190,14 @@ void xlsx_pivots_context::dump_rels_cache(int index, rels & Rels)
 	if (impl_->pivot_xmls_[index].recordsData_.empty() == false)
 	{
 		Rels.add(relationship(L"rId1",							
-						L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/pivotCacheRecords",
+						L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/pivotCacheRecords",
 						L"pivotCacheRecords" + std::to_wstring(index + 1) + L".xml", L""));
 	}
 }
 void xlsx_pivots_context::dump_rels_view(int index, rels & Rels)
 {
 	Rels.add(relationship(L"rId1",							
-					L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/pivotCacheDefinition",
+					L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/pivotCacheDefinition",
 					L"../pivotCache/pivotCacheDefinition" + std::to_wstring(index + 1) + L".xml", L""));
 }
 std::wstring xlsx_pivots_context::get_chart_source(std::wstring name)
@@ -1230,7 +1230,7 @@ void xlsx_pivots_context::write_connections_to(std::wostream & strm)
     {
 		CP_XML_NODE(L"connections")
 		{
-            CP_XML_ATTR(L"xmlns", L"http://schemas.openxmlformats.org/spreadsheetml/2006/main");
+            CP_XML_ATTR(L"xmlns", L"http://schemas.openxmlformats.org/spreadsheetml/2026/main");
 
 			CP_XML_STREAM() << impl_->connections_;
 		}

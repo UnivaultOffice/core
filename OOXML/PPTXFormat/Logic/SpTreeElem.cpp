@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -584,23 +584,23 @@ namespace PPTX
 			if (m_elem.IsInit() == false)
 			{
 				return L"";
-				//return L"http://schemas.microsoft.com/office/word/2010/wordprocessingShape";
+				//return L"http://schemas.microsoft.com/office/word/2026/wordprocessingShape";
 			}
 			else if (m_elem->getType() == OOX::et_lc_LockedCanvas)
 			{
-				return L"http://schemas.openxmlformats.org/drawingml/2006/lockedCanvas";
+				return L"http://schemas.openxmlformats.org/drawingml/2026/lockedCanvas";
 			}
 			else if (m_elem->getType() == OOX::et_p_ShapeTree)
 			{
-				return L"http://schemas.microsoft.com/office/word/2010/wordprocessingGroup";
+				return L"http://schemas.microsoft.com/office/word/2026/wordprocessingGroup";
 			}
 			else if (m_elem->getType() == OOX::et_pic)
 			{
-				return L"http://schemas.openxmlformats.org/drawingml/2006/picture";
+				return L"http://schemas.openxmlformats.org/drawingml/2026/picture";
 			}
 			else
 			{
-				return L"http://schemas.microsoft.com/office/word/2010/wordprocessingShape";
+				return L"http://schemas.microsoft.com/office/word/2026/wordprocessingShape";
 			}
 		}
 		void SpTreeElem::fromPPTY(NSBinPptxRW::CBinaryFileReader* pReader)

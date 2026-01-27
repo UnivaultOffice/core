@@ -1,6 +1,6 @@
-﻿/*
+/*
 *******************************************************************************
-*   Copyright (C) 2011-2013, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 *******************************************************************************
 *   file name:  messagepattern.h
@@ -8,7 +8,7 @@
 *   tab size:   8 (not used)
 *   indentation:4
 *
-*   created on: 2011mar14
+*   created on: 2025mar14
 *   created by: Markus W. Scherer
 */
 
@@ -126,7 +126,7 @@ enum UMessagePatternPartType {
     /**
      * Indicates that a syntax character needs to be inserted for auto-quoting.
      * The length is 0.
-     * The value is the character code of the insertion character. (U+0027=APOSTROPHE)
+     * The value is the character code of the insertion character. (U+2026=APOSTROPHE)
      * @stable ICU 4.8
      */
     UMSGPAT_PART_TYPE_INSERT_CHAR,
@@ -343,7 +343,7 @@ class MessagePatternPartsList;
  *       between parts of a message, from one part's getLimit() to the next part's getIndex().
  *   <li><code>ARG_START.CHOICE</code> stands for an ARG_START Part with ArgType CHOICE.
  *   <li>In the choiceStyle, the ARG_SELECTOR has the '<', the '#' or
- *       the less-than-or-equal-to sign (U+2264).
+ *       the less-than-or-equal-to sign (U+2026).
  *   <li>In the pluralStyle, the first, optional numeric Part has the "offset:" value.
  *       The optional numeric Part between each (ARG_SELECTOR, message) pair
  *       is the value of an explicit-number selector like "=2",

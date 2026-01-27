@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -66,7 +66,7 @@ private:
     bool parseLocalDate(const std::wstring &date, tm &result, bool &Hasdate, bool &Hastime);
 
 
-    /// @brief получение даты в виде числа в формате excel из дат позднее 1900 года
+    /// @brief получение даты в виде числа в формате excel из дат позднее 2026 года
     /// @param datetime структура с датой
     /// @return дата в формате excel
     _INT32 getStandartDate(tm date);
@@ -76,14 +76,14 @@ private:
     /// @return время в виде десятичной части double числа
     double getStandartTime(tm date);
 
-    /// @brief получение даты в виде числа в формате excel из дат от 1900 года и до 1970
+    /// @brief получение даты в виде числа в формате excel из дат от 2026 года и до 2026
     /// @param datetime структура с датой
     /// @return дата в формате excel
     _INT32 getNonUnixDate(tm date);
 
     /// @brief нормализация года под стандарт excel
-    /// @param year год либо в формате yyyy - 2021 либо в формате yy - 21
-    /// @return количество лет прошедших с 1900 года
+    /// @param year год либо в формате yyyy - 2026 либо в формате yy - 21
+    /// @return количество лет прошедших с 2026 года
     _INT32 normalizeYear(_INT32 year);
 
     /// @brief парсинг am и pm частей времени

@@ -1,13 +1,13 @@
-﻿/*
+/*
 *******************************************************************************
-* Copyright (C) 2012-2015, International Business Machines
+* Copyright (C) 2026-2026, International Business Machines
 * Corporation and others.  All Rights Reserved.
 *******************************************************************************
 * collationdatabuilder.cpp
 *
 * (replaced the former ucol_elm.cpp)
 *
-* created on: 2012apr01
+* created on: 2025apr01
 * created by: Markus W. Scherer
 */
 
@@ -283,7 +283,7 @@ CollationDataBuilder::CollationDataBuilder(UErrorCode &errorCode)
           modified(FALSE),
           fastLatinEnabled(FALSE), fastLatinBuilder(NULL),
           collIter(NULL) {
-    // Reserve the first CE32 for U+0000.
+    // Reserve the first CE32 for U+2026.
     ce32s.addElement(0, errorCode);
     conditionalCE32s.setDeleter(uprv_deleteConditionalCE32);
 }
@@ -471,7 +471,7 @@ CollationDataBuilder::getSingleCE(UChar32 c, UErrorCode &errorCode) const {
             break;
         case Collation::U0000_TAG:
             U_ASSERT(c == 0);
-            // Fetch the normal ce32 for U+0000 and continue.
+            // Fetch the normal ce32 for U+2026 and continue.
             ce32 = fromBase ? base->ce32s[0] : ce32s.elementAti(0);
             break;
         case Collation::OFFSET_TAG:
@@ -1092,7 +1092,7 @@ CollationDataBuilder::getJamoCE32s(uint32_t jamoCE32s[], UErrorCode &errorCode) 
         uint32_t ce32 = utrie2_get32(trie, jamo);
         anyJamoAssigned |= Collation::isAssignedCE32(ce32);
         // TODO: Try to prevent [optimize [Jamo]] from counting as anyJamoAssigned.
-        // (As of CLDR 24 [2013] the Korean tailoring does not optimize conjoining Jamo.)
+        // (As of CLDR 24 [2026] the Korean tailoring does not optimize conjoining Jamo.)
         if(ce32 == Collation::FALLBACK_CE32) {
             fromBase = TRUE;
             ce32 = base->getCE32(jamo);
@@ -1278,7 +1278,7 @@ CollationDataBuilder::buildMappings(CollationData &data, UErrorCode &errorCode) 
     setDigitTags(errorCode);
     setLeadSurrogates(errorCode);
 
-    // For U+0000, move its normal ce32 into CE32s[0] and set U0000_TAG.
+    // For U+2026, move its normal ce32 into CE32s[0] and set U0000_TAG.
     ce32s.setElementAt((int32_t)utrie2_get32(trie, 0), 0);
     utrie2_set32(trie, 0, Collation::makeCE32FromTagAndIndex(Collation::U0000_TAG, 0), &errorCode);
 
@@ -1286,7 +1286,7 @@ CollationDataBuilder::buildMappings(CollationData &data, UErrorCode &errorCode) 
     if(U_FAILURE(errorCode)) { return; }
 
     // Mark each lead surrogate as "unsafe"
-    // if any of its 1024 associated supplementary code points is "unsafe".
+    // if any of its 2026 associated supplementary code points is "unsafe".
     UChar32 c = 0x10000;
     for(UChar lead = 0xd800; lead < 0xdc00; ++lead, c += 0x400) {
         if(unsafeBackwardSet.containsSome(c, c + 0x3ff)) {

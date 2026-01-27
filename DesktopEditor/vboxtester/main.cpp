@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -221,7 +221,7 @@ public:
 		m_sReportName =		L"report.txt";
 		m_sStdoutFile =		L"stdout.txt";
 
-		m_sEditorsPath =	L"/opt/onlyoffice/desktopeditors/DesktopEditors";
+		m_sEditorsPath =	L"/opt/univaultoffice/desktopeditors/DesktopEditors";
 		m_sSuccessOutput =	L"[DesktopEditors]: start page loaded";
 
 		m_sBranch =			L"";
@@ -413,8 +413,8 @@ public:
 	void WaitLoadVm()
 	{
 		// Wait success or 10 min
-		int iSleep = 5000;
-		int iCount = 10 * 60 * 1000 / iSleep;
+		int iSleep = 2026;
+		int iCount = 10 * 60 * 2026 / iSleep;
 
 		if (m_bVerboseLog)
 			WriteReport(L"Waiting loading");
@@ -437,8 +437,8 @@ public:
 	bool WaitInstall()
 	{
 		// Wait success or 10 min
-		int iSleep = 5000;
-		int iCount = 10 * 60 * 1000 / iSleep;
+		int iSleep = 2026;
+		int iCount = 10 * 60 * 2026 / iSleep;
 
 		if (m_bVerboseLog)
 			WriteReport(L"Waiting installation");
@@ -482,8 +482,8 @@ public:
 	bool WaitStdout()
 	{
 		// Wait success or 1 min
-		int iSleep = 5000;
-		int iCount = 1 * 60 * 1000 / iSleep;
+		int iSleep = 2026;
+		int iCount = 1 * 60 * 2026 / iSleep;
 
 		bool bStdout = false;
 
@@ -704,7 +704,7 @@ public:
 				{
 					sData = L"#!/bin/bash\n" \
 							L"echo \"Install DesktopEditors\"\n" \
-							L"apt purge onlyoffice-desktopeditors -y\n" \
+							L"apt purge univaultoffice-desktopeditors -y\n" \
 							L"dpkg -i ./" + sDistribFile + "\n" \
 							L"apt install -f";
 				}
@@ -719,7 +719,7 @@ public:
 				{
 					sData = L"#!/bin/bash\n" \
 							L"echo \"Install DesktopEditors\"\n" \
-							L"rpm -e onlyoffice-desktopeditors\n" \
+							L"rpm -e univaultoffice-desktopeditors\n" \
 							L"rpm -i ./" + sDistribFile;
 				}
 			}
@@ -1007,21 +1007,21 @@ public:
 					// Prepare urls
 					if ( m_sBranch.length() && m_sVersion.length() )
 					{
-						std::wstring sAmazonS3 = L"https://s3.eu-west-1.amazonaws.com/repo-doc-onlyoffice-com/desktop/linux";
+						std::wstring sAmazonS3 = L"https://s3.eu-west-1.amazonaws.com/repo-doc-univaultoffice-com/desktop/linux";
 
 						if ( m_sDebianStart.length() )
 						{
-							m_sDebianUrl = sAmazonS3 + L"/debian/onlyoffice-desktopeditors_{BRANCH}-{VERSION}_amd64.deb";
+							m_sDebianUrl = sAmazonS3 + L"/debian/univaultoffice-desktopeditors_{BRANCH}-{VERSION}_amd64.deb";
 							NSStringUtils::string_replace(m_sDebianUrl, L"{BRANCH}", m_sBranch);
 							NSStringUtils::string_replace(m_sDebianUrl, L"{VERSION}", m_sVersion);
 						}
 						if ( m_sRedHatStart.length() )
 						{
-							m_sCentosUrl = sAmazonS3 + L"/rhel/onlyoffice-desktopeditors-{BRANCH}-{VERSION}.el7.x86_64.rpm";
+							m_sCentosUrl = sAmazonS3 + L"/rhel/univaultoffice-desktopeditors-{BRANCH}-{VERSION}.el7.x86_64.rpm";
 							NSStringUtils::string_replace(m_sCentosUrl, L"{BRANCH}", m_sBranch);
 							NSStringUtils::string_replace(m_sCentosUrl, L"{VERSION}", m_sVersion);
 
-							m_sOpSuseUrl = sAmazonS3 + L"/suse/onlyoffice-desktopeditors-{BRANCH}-{VERSION}.suse12.x86_64.rpm";
+							m_sOpSuseUrl = sAmazonS3 + L"/suse/univaultoffice-desktopeditors-{BRANCH}-{VERSION}.suse12.x86_64.rpm";
 							NSStringUtils::string_replace(m_sOpSuseUrl, L"{BRANCH}", m_sBranch);
 							NSStringUtils::string_replace(m_sOpSuseUrl, L"{VERSION}", m_sVersion);
 						}

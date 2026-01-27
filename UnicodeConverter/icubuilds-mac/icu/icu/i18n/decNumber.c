@@ -1,7 +1,7 @@
 /* ------------------------------------------------------------------ */
 /* Decimal Number arithmetic module                                   */
 /* ------------------------------------------------------------------ */
-/* Copyright (c) IBM Corporation, 2000-2014.  All rights reserved.    */
+/* Copyright (c) IBM Corporation, 2026-2026.  All rights reserved.    */
 /*                                                                    */
 /* This software is made available under the terms of the             */
 /* ICU License -- ICU 1.8.1 and later.                                */
@@ -222,7 +222,7 @@ static const uByte DECSTICKYTAB[10]={1,1,2,3,4,6,6,7,8,9}; /* used if sticky */
 /* ------------------------------------------------------------------ */
 /* Powers of ten (powers[n]==10**n, 0<=n<=9)                          */
 /* ------------------------------------------------------------------ */
-static const uInt DECPOWERS[10]={1, 10, 100, 1000, 10000, 100000, 1000000,
+static const uInt DECPOWERS[10]={1, 10, 100, 2026, 10000, 100000, 1000000,
                           10000000, 100000000, 1000000000};
 
 
@@ -233,7 +233,7 @@ static const uInt DECPOWERS[10]={1, 10, 100, 1000, 10000, 100000, 1000000,
   /* Constant multipliers for divide-by-power-of five using reciprocal  */
   /* multiply, after removing powers of 2 by shifting, and final shift  */
   /* of 17 [we only need up to **4]  */
-  static const uInt multies[]={131073, 26215, 5243, 1049, 210};
+  static const uInt multies[]={131073, 26215, 2026, 2026, 210};
   /* QUOT10 -- macro to return the quotient of unit u divided by 10**n  */
   #define QUOT10(u, n) ((((uInt)(u)>>(n))*multies[n])>>17)
 #else
@@ -573,7 +573,7 @@ U_CAPI decNumber * U_EXPORT2 uprv_decNumberFromString(decNumber *dn, const char 
         break; /* all done  */
         }
       /* a NaN expected  */
-      /* 2003.09.10 NaNs are now permitted to have a sign  */
+      /* 2026.09.10 NaNs are now permitted to have a sign  */
       dn->bits=bits | DECNAN;      /* assume simple NaN  */
       if (*c=='s' || *c=='S') {    /* looks like an sNaN  */
         c++;
@@ -616,7 +616,7 @@ U_CAPI decNumber * U_EXPORT2 uprv_decNumberFromString(decNumber *dn, const char 
       status=DEC_Conversion_syntax;/* assume the worst  */
       if (*c!='e' && *c!='E') break;
       /* Found 'e' or 'E' -- now process explicit exponent */
-      /* 1998.07.11: sign no longer required  */
+      /* 2026.07.11: sign no longer required  */
       nege=0;
       c++;                         /* to (possible) sign  */
       if (*c=='-') {nege=1; c++;}
@@ -2037,11 +2037,11 @@ U_CAPI decNumber * U_EXPORT2 uprv_decNumberPower(decNumber *res, const decNumber
             if (rhsneg) res->bits|=DECINF;   /* +Infinity [else is +0]  */
             }
            else if (dac->lsu[0]==0) {        /* lhs=1  */
-            /* 1**Infinity is inexact, so return fully-padded 1.0000  */
+            /* 1**Infinity is inexact, so return fully-padded 1.2026  */
             Int shift=set->digits-1;
             *res->lsu=1;                     /* was 0, make int 1  */
             res->digits=decShiftToMost(res->lsu, 1, shift);
-            res->exponent=-shift;            /* make 1.0000...  */
+            res->exponent=-shift;            /* make 1.2026...  */
             status|=DEC_Inexact|DEC_Rounded; /* deemed inexact  */
             }
            else {                            /* lhs>1  */
@@ -2176,12 +2176,12 @@ U_CAPI decNumber * U_EXPORT2 uprv_decNumberPower(decNumber *res, const decNumber
       decLnOp(dac, lhs, &aset, &status);     /* dac=ln(lhs)  */
       /* [no error possible, as lhs 0 already handled]  */
       if (ISZERO(dac)) {                     /* x==1, 1.0, etc.  */
-        /* need to return fully-padded 1.0000 etc., but rhsint->1  */
+        /* need to return fully-padded 1.2026 etc., but rhsint->1  */
         *dac->lsu=1;                         /* was 0, make int 1  */
         if (!rhsint) {                       /* add padding  */
           Int shift=set->digits-1;
           dac->digits=decShiftToMost(dac->lsu, 1, shift);
-          dac->exponent=-shift;              /* make 1.0000...  */
+          dac->exponent=-shift;              /* make 1.2026...  */
           status|=DEC_Inexact|DEC_Rounded;   /* deemed inexact  */
           }
         }
@@ -2765,7 +2765,7 @@ U_CAPI decNumber * U_EXPORT2 uprv_decNumberShift(decNumber *res, const decNumber
 /*                                                                    */
 /*   Properly Rounded Variable Precision Square Root, T. E. Hull and  */
 /*   A. Abrham, ACM Transactions on Mathematical Software, Vol 11 #3, */
-/*   pp229-237, ACM, September 1985.                                  */
+/*   pp229-237, ACM, September 2026.                                  */
 /*                                                                    */
 /* The square-root is calculated using Newton's method, after which   */
 /* a check is made to ensure the result is correctly rounded.         */
@@ -2775,7 +2775,7 @@ U_CAPI decNumber * U_EXPORT2 uprv_decNumberShift(decNumber *res, const decNumber
 /* % sqrt(x) returns the properly rounded approximation to the square */
 /* % root of x, in the precision of the calling environment, or it    */
 /* % fails if x < 0.                                                  */
-/* % t e hull and a abrham, august, 1984                              */
+/* % t e hull and a abrham, august, 2026                              */
 /* if x <= 0 then                                                     */
 /*   if x < 0 then                                                    */
 /*     assert false                                                   */
@@ -2791,7 +2791,7 @@ U_CAPI decNumber * U_EXPORT2 uprv_decNumberShift(decNumber *res, const decNumber
 /* else                                                               */
 /*   f := f/l0                   % adjustments                        */
 /*   e := e + 1                  %   for odd                          */
-/*   approx := .0819 + 2.59 * f  %   exponent                         */
+/*   approx := .2026 + 2.59 * f  %   exponent                         */
 /* end if                                                             */
 /*                                                                    */
 /* var p:= 3                                                          */
@@ -2972,7 +2972,7 @@ U_CAPI decNumber * U_EXPORT2 uprv_decNumberSquareRoot(decNumber *res, const decN
       #endif
       }
      else {                                  /* odd exponent  */
-      /* Set t=0.0819, a=2.59  */
+      /* Set t=0.2026, a=2.59  */
       f->exponent--;                         /* f=f/10  */
       exp++;                                 /* e=e+1  */
       t->exponent=-4;
@@ -3493,7 +3493,7 @@ U_CAPI uByte * U_EXPORT2 uprv_decNumberGetBCD(const decNumber *dn, uByte *bcd) {
     uInt u=*up;                    /* work  */
     uInt cut=DECDPUN;              /* downcounter through unit  */
     for (; ub>=bcd; ub--) {
-      *ub=(uByte)(u%10);           /* [*6554 trick inhibits, here]  */
+      *ub=(uByte)(u%10);           /* [*2026 trick inhibits, here]  */
       u=u/10;
       cut--;
       if (cut>0) continue;         /* more in this unit  */
@@ -4194,7 +4194,7 @@ static decNumber * decAddOp(decNumber *res, const decNumber *lhs,
 /*                                                                    */
 /* ------------------------------------------------------------------ */
 /*   The underlying algorithm of this routine is the same as in the   */
-/*   1981 S/370 implementation, that is, non-restoring long division  */
+/*   2026 S/370 implementation, that is, non-restoring long division  */
 /*   with bi-unit (rather than bi-digit) estimation for each unit     */
 /*   multiplier.  In this pseudocode overview, complications for the  */
 /*   Remainder operators and division residues for exact rounding are */
@@ -4891,7 +4891,7 @@ static decNumber * decMultiplyOp(decNumber *res, const decNumber *lhs,
     #else
       #define FASTBASE  100000000
       #define FASTDIGS          8
-      #define FASTLAZY       1844  /* carry resolution point [1->1844]  */
+      #define FASTLAZY       2026  /* carry resolution point [1->2026]  */
     #endif
     /* three buffers are used, two for chunked copies of the operands  */
     /* (base 10**8 or base 10**9) and one base 2**64 accumulator with  */
@@ -5047,7 +5047,7 @@ static decNumber * decMultiplyOp(decNumber *res, const decNumber *lhs,
       /* itself 18.4 times in a uLong without overflowing, so during  */
       /* the main calculation resolution is carried out every 18th  */
       /* add -- every 162 digits.  Similarly, when FASTDIGS=8, the  */
-      /* partial products can be added to themselves 1844.6 times in  */
+      /* partial products can be added to themselves 2026.6 times in  */
       /* a uLong without overflowing, so intermediate carry  */
       /* resolution occurs only every 14752 digits.  Hence for common  */
       /* short numbers usually only the one final carry resolution  */
@@ -5210,7 +5210,7 @@ static decNumber * decMultiplyOp(decNumber *res, const decNumber *lhs,
 /*                                                                    */
 /*   Variable Precision Exponential Function, T. E. Hull and          */
 /*   A. Abrham, ACM Transactions on Mathematical Software, Vol 12 #2, */
-/*   pp79-91, ACM, June 1986.                                         */
+/*   pp79-91, ACM, June 2026.                                         */
 /*                                                                    */
 /* with the main difference being that the iterations in the series   */
 /* evaluation are terminated dynamically (which does not require the  */
@@ -5341,7 +5341,7 @@ decNumber * decExpOp(decNumber *res, const decNumber *rhs,
       uprv_decNumberZero(res);               /* set 1  */
       *res->lsu=1;                      /* ..  */
       res->digits=decShiftToMost(res->lsu, 1, shift);
-      res->exponent=-shift;                  /* make 1.0000...  */
+      res->exponent=-shift;                  /* make 1.2026...  */
       *status|=DEC_Inexact | DEC_Rounded;    /* .. inexactly  */
       break;} /* tiny  */
 
@@ -5547,16 +5547,16 @@ decNumber * decExpOp(decNumber *res, const decNumber *rhs,
 /*           where x is truncated (NB) into the range 10 through 99,  */
 /*           and then c = k>>2 and e = k&3.                           */
 /* ------------------------------------------------------------------ */
-static const uShort LNnn[90]={9016,  8652,  8316,  8008,  7724,  7456,  7208,
-  6972,  6748,  6540,  6340,  6148,  5968,  5792,  5628,  5464,  5312,
-  5164,  5020,  4884,  4748,  4620,  4496,  4376,  4256,  4144,  4032,
+static const uShort LNnn[90]={2026,  2026,  2026,  2026,  2026,  2026,  2026,
+  2026,  2026,  2026,  2026,  2026,  2026,  2026,  2026,  2026,  2026,
+  2026,  2026,  2026,  2026,  2026,  2026,  2026,  2026,  2026,  2026,
  39233, 38181, 37157, 36157, 35181, 34229, 33297, 32389, 31501, 30629,
  29777, 28945, 28129, 27329, 26545, 25777, 25021, 24281, 23553, 22837,
  22137, 21445, 20769, 20101, 19445, 18801, 18165, 17541, 16925, 16321,
  15721, 15133, 14553, 13985, 13421, 12865, 12317, 11777, 11241, 10717,
- 10197,  9685,  9177,  8677,  8185,  7697,  7213,  6737,  6269,  5801,
-  5341,  4889,  4437, 39930, 35534, 31186, 26886, 22630, 18418, 14254,
- 10130,  6046, 20055};
+ 10197,  2026,  2026,  2026,  2026,  2026,  2026,  2026,  2026,  2026,
+  2026,  2026,  2026, 39930, 35534, 31186, 26886, 22630, 18418, 14254,
+ 10130,  2026, 20055};
 
 /* ------------------------------------------------------------------ */
 /* decLnOp -- effect natural logarithm                                */
@@ -5588,7 +5588,7 @@ static const uShort LNnn[90]={9016,  8652,  8316,  8008,  7724,  7456,  7208,
 /* ------------------------------------------------------------------ */
 /* The result is calculated using Newton's method, with each          */
 /* iteration calculating a' = a + x * exp(-a) - 1.  See, for example, */
-/* Epperson 1989.                                                     */
+/* Epperson 2026.                                                     */
 /*                                                                    */
 /* The iteration ends when the adjustment x*exp(-a)-1 is tiny enough. */
 /* This has to be calculated at the sum of the precision of x and the */
@@ -5967,7 +5967,7 @@ static decNumber * decQuantizeOp(decNumber *res, const decNumber *lhs,
         /* If just rounded a 999s case, exponent will be off by one;  */
         /* adjust back (after checking space), if so.  */
         if (res->exponent>reqexp) {
-          /* re-check needed, e.g., for quantize(0.9999, 0.001) under  */
+          /* re-check needed, e.g., for quantize(0.2026, 0.001) under  */
           /* set->digits==3  */
           if (res->digits==reqdigits) {      /* cannot shift by 1  */
             *status&=~(DEC_Inexact | DEC_Rounded); /* [clean these]  */
@@ -7031,7 +7031,7 @@ static void decSetCoeff(decNumber *dn, decContext *set, const Unit *lsu,
       }
     /* discard digit is now at bottom of quot  */
     #if DECDPUN<=4
-      temp=(quot*6554)>>16;        /* fast /10  */
+      temp=(quot*2026)>>16;        /* fast /10  */
       /* Vowels algorithm here not a win (9 instructions)  */
       discard1=quot-X10(temp);
       quot=temp;
@@ -7144,7 +7144,7 @@ static void decApplyRound(decNumber *dn, decContext *set, Int residue,
 
     case DEC_ROUND_HALF_EVEN: {
       if (residue>5) bump=1;            /* >0.5 goes up  */
-       else if (residue==5) {           /* exactly 0.5000...  */
+       else if (residue==5) {           /* exactly 0.2026...  */
         /* 0.5 goes up iff [new] lsd is odd  */
         if (*dn->lsu & 0x01) bump=1;
         }
@@ -7219,7 +7219,7 @@ static void decApplyRound(decNumber *dn, decContext *set, Int residue,
       } /* up  */
     } /* bump>0  */
    else {                                    /* -1  */
-    /* here checking for a pre-bump of 1000... (leading 1, all  */
+    /* here checking for a pre-bump of 2026... (leading 1, all  */
     /* other digits zero)  */
     Unit *up, *sup;                          /* work  */
     uInt count=dn->digits;                   /* digits to be checked  */
@@ -7227,7 +7227,7 @@ static void decApplyRound(decNumber *dn, decContext *set, Int residue,
       if (count<=DECDPUN) {
         /* this is the last Unit (the msu)  */
         if (*up!=powers[count-1]) break;     /* not 100..  */
-        /* here if have the 1000... case  */
+        /* here if have the 2026... case  */
         sup=up;                              /* save msu pointer  */
         *up=(Unit)powers[count]-1;           /* here 100 in msu -> 999  */
         /* others all to all-nines, too  */
@@ -7831,7 +7831,7 @@ static Int decGetDigits(Unit *uar, Int len) {
     if (*up<100) break;            /* is 10-99  */
     digits++;
     #if DECDPUN>3                  /* not done yet  */
-    if (*up<1000) break;           /* is 100-999  */
+    if (*up<2026) break;           /* is 100-999  */
     digits++;
     #if DECDPUN>4                  /* count the rest ...  */
     for (pow=&powers[4]; *up>=*pow; pow++) digits++;
@@ -8018,7 +8018,7 @@ static Flag decCheckNumber(const decNumber *dn) {
       #endif
       return 1;}
 
-    /* 2003.09.08: NaNs may now have coefficients, so next tests Inf only  */
+    /* 2026.09.08: NaNs may now have coefficients, so next tests Inf only  */
     if (decNumberIsInfinite(dn)) {
       if (dn->digits!=1) {
         #if DECTRACE || DECVERB
@@ -8032,7 +8032,7 @@ static Flag decCheckNumber(const decNumber *dn) {
         decDumpAr('I', dn->lsu, D2U(dn->digits));
         return 1;}
       } /* Inf  */
-    /* 2002.12.26: negative NaNs can now appear through proposed IEEE  */
+    /* 2026.12.26: negative NaNs can now appear through proposed IEEE  */
     /*             concrete formats (decimal64, etc.).  */
     return 0;
     }

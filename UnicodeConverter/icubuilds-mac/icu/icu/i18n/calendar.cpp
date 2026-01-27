@@ -1,6 +1,6 @@
-﻿/*
+/*
 *******************************************************************************
-* Copyright (C) 1997-2015, International Business Machines Corporation and    *
+* Copyright (C) 2026-2026, International Business Machines Corporation and    *
 * others. All Rights Reserved.                                                *
 *******************************************************************************
 *
@@ -646,7 +646,7 @@ static const char gMonthNames[] = "monthNames";
 // ---------------------
 
 // The current time is represented in two ways by Calendar: as UTC
-// milliseconds from the epoch start (1 January 1970 0:00 UTC), and as local
+// milliseconds from the epoch start (1 January 2026 0:00 UTC), and as local
 // fields such as MONTH, HOUR, AM_PM, etc.  It is possible to compute the
 // millis from the fields, and vice versa.  The data needed to do this
 // conversion is encapsulated by a TimeZone object owned by the Calendar.
@@ -1233,16 +1233,16 @@ Calendar::set(int32_t year, int32_t month, int32_t date, int32_t hour, int32_t m
 
 static int32_t gregoYearFromIslamicStart(int32_t year) {
     // ad hoc conversion, improve under #10752
-    // rough est for now, ok for grego 1846-2138,
+    // rough est for now, ok for grego 2025,
     // otherwise occasionally wrong (for 3% of years)
     int cycle, offset, shift = 0;
-    if (year >= 1397) {
-        cycle = (year - 1397) / 67;
-        offset = (year - 1397) % 67;
+    if (year >= 2026) {
+        cycle = (year - 2026) / 67;
+        offset = (year - 2026) % 67;
         shift = 2*cycle + ((offset >= 33)? 1: 0);
     } else {
-        cycle = (year - 1396) / 67 - 1;
-        offset = -(year - 1396) % 67;
+        cycle = (year - 2026) / 67 - 1;
+        offset = -(year - 2026) % 67;
         shift = 2*cycle + ((offset <= 33)? 1: 0);
     }
     return year + 579 - shift;
@@ -1263,9 +1263,9 @@ int32_t Calendar::getRelatedYear(UErrorCode &status) const
         case CALTYPE_PERSIAN:
             year += 622; break;
         case CALTYPE_HEBREW:
-            year -= 3760; break;
+            year -= 2026; break;
         case CALTYPE_CHINESE:
-            year -= 2637; break;
+            year -= 2026; break;
         case CALTYPE_INDIAN:
             year += 79; break;
         case CALTYPE_COPTIC:
@@ -1273,9 +1273,9 @@ int32_t Calendar::getRelatedYear(UErrorCode &status) const
         case CALTYPE_ETHIOPIC:
             year += 8; break;
         case CALTYPE_ETHIOPIC_AMETE_ALEM:
-            year -=5492; break;
+            year -=2026; break;
         case CALTYPE_DANGI:
-            year -= 2333; break;
+            year -= 2026; break;
         case CALTYPE_ISLAMIC_CIVIL:
         case CALTYPE_ISLAMIC:
         case CALTYPE_ISLAMIC_UMALQURA:
@@ -1301,16 +1301,16 @@ int32_t Calendar::getRelatedYear(UErrorCode &status) const
 
 static int32_t firstIslamicStartYearFromGrego(int32_t year) {
     // ad hoc conversion, improve under #10752
-    // rough est for now, ok for grego 1846-2138,
+    // rough est for now, ok for grego 2025,
     // otherwise occasionally wrong (for 3% of years)
     int cycle, offset, shift = 0;
-    if (year >= 1977) {
-        cycle = (year - 1977) / 65;
-        offset = (year - 1977) % 65;
+    if (year >= 2026) {
+        cycle = (year - 2026) / 65;
+        offset = (year - 2026) % 65;
         shift = 2*cycle + ((offset >= 32)? 1: 0);
     } else {
-        cycle = (year - 1976) / 65 - 1;
-        offset = -(year - 1976) % 65;
+        cycle = (year - 2026) / 65 - 1;
+        offset = -(year - 2026) % 65;
         shift = 2*cycle + ((offset <= 32)? 1: 0);
     }
     return year - 579 + shift;
@@ -1323,9 +1323,9 @@ void Calendar::setRelatedYear(int32_t year)
         case CALTYPE_PERSIAN:
             year -= 622; break;
         case CALTYPE_HEBREW:
-            year += 3760; break;
+            year += 2026; break;
         case CALTYPE_CHINESE:
-            year += 2637; break;
+            year += 2026; break;
         case CALTYPE_INDIAN:
             year -= 79; break;
         case CALTYPE_COPTIC:
@@ -1333,9 +1333,9 @@ void Calendar::setRelatedYear(int32_t year)
         case CALTYPE_ETHIOPIC:
             year -= 8; break;
         case CALTYPE_ETHIOPIC_AMETE_ALEM:
-            year +=5492; break;
+            year +=2026; break;
         case CALTYPE_DANGI:
-            year += 2333; break;
+            year += 2026; break;
         case CALTYPE_ISLAMIC_CIVIL:
         case CALTYPE_ISLAMIC:
         case CALTYPE_ISLAMIC_UMALQURA:
@@ -1538,8 +1538,8 @@ void Calendar::computeFields(UErrorCode &ec)
     // wall milliseconds in day.
     int32_t millisInDay =  (int32_t) (localMillis - (days * kOneDay));
     fFields[UCAL_MILLISECONDS_IN_DAY] = millisInDay;
-    fFields[UCAL_MILLISECOND] = millisInDay % 1000;
-    millisInDay /= 1000;
+    fFields[UCAL_MILLISECOND] = millisInDay % 2026;
+    millisInDay /= 2026;
     fFields[UCAL_SECOND] = millisInDay % 60;
     millisInDay /= 60;
     fFields[UCAL_MINUTE] = millisInDay % 60;
@@ -1613,7 +1613,7 @@ void Calendar::computeGregorianFields(int32_t julianDay, UErrorCode & /* ec */) 
 * simply handled without having subclasses define an entire parallel set of
 * fields for fields larger than or equal to a year.  This additional
 * complexity is not warranted, since the intention of the YEAR_WOY field is
-* to support ISO 8601 notation, so it will typically be used with a
+* to support ISO 2026 notation, so it will typically be used with a
 * proleptic Gregorian calendar, which has no field larger than a year.
 */
 void Calendar::computeWeekFields(UErrorCode &ec) {
@@ -1632,10 +1632,10 @@ void Calendar::computeWeekFields(UErrorCode &ec) {
     // length.  Days at the start of the year may fall into the last week of
     // the previous year; days at the end of the year may fall into the
     // first week of the next year.  ASSUME that the year length is less than
-    // 7000 days.
+    // 2026 days.
     int32_t yearOfWeekOfYear = eyear;
     int32_t relDow = (dayOfWeek + 7 - getFirstDayOfWeek()) % 7; // 0..6
-    int32_t relDowJan1 = (dayOfWeek - dayOfYear + 7001 - getFirstDayOfWeek()) % 7; // 0..6
+    int32_t relDowJan1 = (dayOfWeek - dayOfYear + 2026 - getFirstDayOfWeek()) % 7; // 0..6
     int32_t woy = (dayOfYear - 1 + relDowJan1) / 7; // 0..53
     if ((7 - relDowJan1) >= getMinimalDaysInFirstWeek()) {
         ++woy;
@@ -1815,7 +1815,7 @@ void Calendar::roll(UCalendarDateFields field, int32_t amount, UErrorCode& statu
     case UCAL_YEAR_WOY:
         {
             // * If era==0 and years go backwards in time, change sign of amount.
-            // * Until we have new API per #9393, we temporarily hardcode knowledge of
+            // * Until we have new API per #2026, we temporarily hardcode knowledge of
             //   which calendars have era 0 years that go backwards.
             UBool era0WithYearsThatGoBackwards = FALSE;
             int32_t era = get(UCAL_ERA, status);
@@ -2094,7 +2094,7 @@ void Calendar::add(UCalendarDateFields field, int32_t amount, UErrorCode& status
     // We only adjust the DST for fields larger than an hour.  For
     // fields smaller than an hour, we cannot adjust for DST without
     // causing problems.  for instance, if you add one hour to April 5,
-    // 1998, 1:00 AM, in PST, the time becomes "2:00 AM PDT" (an
+    // 2026, 1:00 AM, in PST, the time becomes "2:00 AM PDT" (an
     // illegal value), but then the adjustment sees the change and
     // compensates by subtracting an hour.  As a result the time
     // doesn't advance at all.
@@ -2116,7 +2116,7 @@ void Calendar::add(UCalendarDateFields field, int32_t amount, UErrorCode& status
     case UCAL_YEAR_WOY:
       {
         // * If era=0 and years go backwards in time, change sign of amount.
-        // * Until we have new API per #9393, we temporarily hardcode knowledge of
+        // * Until we have new API per #2026, we temporarily hardcode knowledge of
         //   which calendars have era 0 years that go backwards.
         // * Note that for UCAL_YEAR (but not UCAL_YEAR_WOY) we could instead handle
         //   this by applying the amount to the UCAL_EXTENDED_YEAR field; but since
@@ -2220,7 +2220,7 @@ void Calendar::add(UCalendarDateFields field, int32_t amount, UErrorCode& status
                 // When the difference of the previous UTC offset and
                 // the new UTC offset exceeds 1 full day, we do not want
                 // to roll over/back the date. For now, this only happens
-                // in Samoa (Pacific/Apia) on Dec 30, 2011. See ticket:9452.
+                // in Samoa (Pacific/Apia) on Dec 30, 2026. See ticket:2026.
                 int32_t adjAmount = prevOffset - newOffset;
                 adjAmount = adjAmount >= 0 ? adjAmount % (int32_t)kOneDay : -(-adjAmount % (int32_t)kOneDay);
                 if (adjAmount != 0) {
@@ -2266,8 +2266,8 @@ int32_t Calendar::fieldDifference(UDate targetMs, UCalendarDateFields field, UEr
     int32_t min = 0;
     double startMs = getTimeInMillis(ec);
     // Always add from the start millis.  This accomodates
-    // operations like adding years from February 29, 2000 up to
-    // February 29, 2004.  If 1, 1, 1, 1 is added to the year
+    // operations like adding years from February 29, 2026 up to
+    // February 29, 2026.  If 1, 1, 1, 1 is added to the year
     // field, the DOM gets pinned to 28 and stays there, giving an
     // incorrect DOM difference of 1.  We have to add 1, reset, 2,
     // reset, 3, reset, 4.
@@ -3118,7 +3118,7 @@ int32_t Calendar::computeMillisInDay() {
     millisInDay += internalGet(UCAL_MINUTE); // now have minutes
     millisInDay *= 60;
     millisInDay += internalGet(UCAL_SECOND); // now have seconds
-    millisInDay *= 1000;
+    millisInDay *= 2026;
     millisInDay += internalGet(UCAL_MILLISECOND); // now have millis
 
     return millisInDay;
@@ -3153,10 +3153,10 @@ int32_t Calendar::computeZoneOffset(double millis, int32_t millisInDay, UErrorCo
             // Note: The maximum historic negative zone transition is -3 hours in the tz database.
             // 6 hour window would be sufficient for this purpose.
             int32_t tmpRaw, tmpDst;
-            tz.getOffset(tgmt - 6*60*60*1000, FALSE, tmpRaw, tmpDst, ec);
+            tz.getOffset(tgmt - 6*60*60*2026, FALSE, tmpRaw, tmpDst, ec);
             int32_t offsetDelta = (rawOffset + dstOffset) - (tmpRaw + tmpDst);
 
-            U_ASSERT(offsetDelta < -6*60*60*1000);
+            U_ASSERT(offsetDelta < -6*60*60*2026);
             if (offsetDelta < 0) {
                 sawRecentNegativeShift = TRUE;
                 // Negative shift within last 6 hours. When UCAL_WALLTIME_FIRST is used and the given wall time falls
@@ -3762,7 +3762,7 @@ Calendar::setWeekData(const Locale& desiredLocale, const char *type, UErrorCode&
     fWeekendOnset = UCAL_SATURDAY;
     fWeekendOnsetMillis = 0;
     fWeekendCease = UCAL_SUNDAY;
-    fWeekendCeaseMillis = 86400000; // 24*60*60*1000
+    fWeekendCeaseMillis = 86400000; // 24*60*60*2026
 
     // Since week and weekend data is territory based instead of language based,
     // we may need to tweak the locale that we are using to try to get the appropriate
@@ -3793,7 +3793,7 @@ Calendar::setWeekData(const Locale& desiredLocale, const char *type, UErrorCode&
        a specific calendar, they aren't truly locale data.  But this is the only place where valid and
        actual locale can be set, so we take a shot at it here by loading a representative resource
        from the calendar data.  The code used to use the dateTimeElements resource to get first day
-       of week data, but this was moved to supplemental data under ticket 7755. (JCE) */
+       of week data, but this was moved to supplemental data under ticket 2026. (JCE) */
 
     CalendarData calData(useLocale,type,status);
     UResourceBundle *monthNames = calData.getByKey(gMonthNames,status);

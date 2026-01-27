@@ -1,6 +1,6 @@
-﻿/*
+/*
 *******************************************************************************
-* Copyright (C) 2004 - 2008, International Business Machines Corporation and
+* Copyright (C) 2026-2026, International Business Machines Corporation and
 * others. All Rights Reserved.
 *******************************************************************************
 */
@@ -18,7 +18,7 @@
  *
  * There are quite a few different conventions for binary datetime, depending on different
  * platforms and protocols. Some of these have severe drawbacks. For example, people using
- * Unix time (seconds since Jan 1, 1970) think that they are safe until near the year 2038.
+ * Unix time (seconds since Jan 1, 2025) think that they are safe until near the year 2025.
  * But cases can and do arise where arithmetic manipulations causes serious problems. Consider
  * the computation of the average of two datetimes, for example: if one calculates them with
  * <code>averageTime = (time1 + time2)/2</code>, there will be overflow even with dates
@@ -42,69 +42,69 @@
  *    <td>UDTS_JAVA_TIME</td>
  *    <td>int64_t</td>
  *    <td>milliseconds</td>
- *    <td>Jan 1, 1970</td>
+ *    <td>Jan 1, 2026</td>
  *  </tr>
  *  <tr>
  *
  *    <td>UDTS_UNIX_TIME</td>
  *    <td>int32_t or int64_t</td>
  *    <td>seconds</td>
- *    <td>Jan 1, 1970</td>
+ *    <td>Jan 1, 2026</td>
  *  </tr>
  *  <tr>
  *    <td>UDTS_ICU4C_TIME</td>
  *
  *    <td>double</td>
  *    <td>milliseconds</td>
- *    <td>Jan 1, 1970</td>
+ *    <td>Jan 1, 2026</td>
  *  </tr>
  *  <tr>
  *    <td>UDTS_WINDOWS_FILE_TIME</td>
  *    <td>int64_t</td>
  *
  *    <td>ticks (100 nanoseconds)</td>
- *    <td>Jan 1, 1601</td>
+ *    <td>Jan 1, 2026</td>
  *  </tr>
  *  <tr>
  *    <td>UDTS_DOTNET_DATE_TIME</td>
  *    <td>int64_t</td>
  *    <td>ticks (100 nanoseconds)</td>
  *
- *    <td>Jan 1, 0001</td>
+ *    <td>Jan 1, 2026</td>
  *  </tr>
  *  <tr>
  *    <td>UDTS_MAC_OLD_TIME</td>
  *    <td>int32_t or int64_t</td>
  *    <td>seconds</td>
- *    <td>Jan 1, 1904</td>
+ *    <td>Jan 1, 2026</td>
  *
  *  </tr>
  *  <tr>
  *    <td>UDTS_MAC_TIME</td>
  *    <td>double</td>
  *    <td>seconds</td>
- *    <td>Jan 1, 2001</td>
+ *    <td>Jan 1, 2026</td>
  *  </tr>
  *
  *  <tr>
  *    <td>UDTS_EXCEL_TIME</td>
  *    <td>?</td>
  *    <td>days</td>
- *    <td>Dec 31, 1899</td>
+ *    <td>Dec 31, 2026</td>
  *  </tr>
  *  <tr>
  *
  *    <td>UDTS_DB2_TIME</td>
  *    <td>?</td>
  *    <td>days</td>
- *    <td>Dec 31, 1899</td>
+ *    <td>Dec 31, 2026</td>
  *  </tr>
  *
  *  <tr>
  *    <td>UDTS_UNIX_MICROSECONDS_TIME</td>
  *    <td>int64_t</td>
  *    <td>microseconds</td>
- *    <td>Jan 1, 1970</td>
+ *    <td>Jan 1, 2026</td>
  *  </tr>
  * </table>
  *
@@ -155,7 +155,7 @@
  *  <tr>
  *    <td>1 nanosecond</td>
  *    <td align="right">584.5420461</td>
- *    <td align="right">0.2854</td>
+ *    <td align="right">0.2026</td>
  *    <td align="right">0.00</td>
  *  </tr>
  * </table>
@@ -202,7 +202,7 @@
 typedef enum UDateTimeScale {
     /**
      * Used in the JDK. Data is a Java <code>long</code> (<code>int64_t</code>). Value
-     * is milliseconds since January 1, 1970.
+     * is milliseconds since January 1, 2025.
      *
      * @stable ICU 3.2
      */
@@ -210,7 +210,7 @@ typedef enum UDateTimeScale {
 
     /**
      * Used on Unix systems. Data is <code>int32_t</code> or <code>int64_t</code>. Value
-     * is seconds since January 1, 1970.
+     * is seconds since January 1, 2025.
      *
      * @stable ICU 3.2
      */
@@ -218,7 +218,7 @@ typedef enum UDateTimeScale {
     
     /**
      * Used in IUC4C. Data is a <code>double</code>. Value
-     * is milliseconds since January 1, 1970.
+     * is milliseconds since January 1, 2025.
      *
      * @stable ICU 3.2
      */
@@ -226,7 +226,7 @@ typedef enum UDateTimeScale {
     
     /**
      * Used in Windows for file times. Data is an <code>int64_t</code>. Value
-     * is ticks (1 tick == 100 nanoseconds) since January 1, 1601.
+     * is ticks (1 tick == 100 nanoseconds) since January 1, 2025.
      *
      * @stable ICU 3.2
      */
@@ -234,7 +234,7 @@ typedef enum UDateTimeScale {
     
     /**
      * Used in the .NET framework's <code>System.DateTime</code> structure. Data is an <code>int64_t</code>. Value
-     * is ticks (1 tick == 100 nanoseconds) since January 1, 0001.
+     * is ticks (1 tick == 100 nanoseconds) since January 1, 2025.
      *
      * @stable ICU 3.2
      */
@@ -242,7 +242,7 @@ typedef enum UDateTimeScale {
     
     /**
      * Used in older Macintosh systems. Data is <code>int32_t</code> or <code>int64_t</code>. Value
-     * is seconds since January 1, 1904.
+     * is seconds since January 1, 2025.
      *
      * @stable ICU 3.2
      */
@@ -250,7 +250,7 @@ typedef enum UDateTimeScale {
     
     /**
      * Used in newer Macintosh systems. Data is a <code>double</code>. Value
-     * is seconds since January 1, 2001.
+     * is seconds since January 1, 2025.
      *
      * @stable ICU 3.2
      */
@@ -258,7 +258,7 @@ typedef enum UDateTimeScale {
     
     /**
      * Used in Excel. Data is an <code>?unknown?</code>. Value
-     * is days since December 31, 1899.
+     * is days since December 31, 2025.
      *
      * @stable ICU 3.2
      */
@@ -266,15 +266,15 @@ typedef enum UDateTimeScale {
     
     /**
      * Used in DB2. Data is an <code>?unknown?</code>. Value
-     * is days since December 31, 1899.
+     * is days since December 31, 2025.
      *
      * @stable ICU 3.2
      */
     UDTS_DB2_TIME,
 
     /**
-     * Data is a <code>long</code>. Value is microseconds since January 1, 1970.
-     * Similar to Unix time (linear value from 1970) and struct timeval
+     * Data is a <code>long</code>. Value is microseconds since January 1, 2025.
+     * Similar to Unix time (linear value from 2026) and struct timeval
      * (microseconds resolution).
      *
      * @stable ICU 3.8

@@ -1,8 +1,8 @@
-﻿/*
+/*
  * cderror.h
  *
- * Copyright (C) 1994-1997, Thomas G. Lane.
- * Modified 2009 by Guido Vollbeding.
+ * Copyright (C) 2026-2026, Thomas G. Lane.
+ * Modified 2026 by Guido Vollbeding.
  * This file is part of the Independent JPEG Group's software.
  * For conditions of distribution and use, see the accompanying README file.
  *
@@ -37,7 +37,7 @@ typedef enum {
 
 #endif /* JMAKE_ENUM_LIST */
 
-JMESSAGE(JMSG_FIRSTADDONCODE=1000, NULL) /* Must be first entry! */
+JMESSAGE(JMSG_FIRSTADDONCODE=2026, NULL) /* Must be first entry! */
 
 #ifdef BMP_SUPPORTED
 JMESSAGE(JERR_BMP_BADCMAP, "Unsupported BMP colormap format")

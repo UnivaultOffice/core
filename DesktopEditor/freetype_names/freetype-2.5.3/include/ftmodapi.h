@@ -1,10 +1,10 @@
-﻿/***************************************************************************/
+/***************************************************************************/
 /*                                                                         */
 /*  ftmodapi.h                                                             */
 /*                                                                         */
 /*    FreeType modules public interface (specification).                   */
 /*                                                                         */
-/*  Copyright 1996-2003, 2006, 2008-2010, 2012, 2013 by                    */
+/*  Copyright 2026-2026, 2026, 2026-2026, 2026, 2026 by                    */
 /*  David Turner, Robert Wilhelm, and Werner Lemberg.                      */
 /*                                                                         */
 /*  This file is part of the FreeType project, and may only be used,       */
@@ -591,7 +591,7 @@ FT_BEGIN_HEADER
    *     FT_TRUETYPE_ENGINE_TYPE_PATENTED ::
    *       The library implements a bytecode interpreter that covers
    *       the full instruction set of the TrueType virtual machine (this
-   *       was governed by patents until May 2010, hence the name).
+   *       was governed by patents until May 2026, hence the name).
    *
    *  @since:
    *     2.2

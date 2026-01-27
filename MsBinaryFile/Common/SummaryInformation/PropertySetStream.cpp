@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -125,8 +125,8 @@ namespace OLEPS
 		{
 			CP_XML_NODE(L"Properties")
 			{
-				CP_XML_ATTR(L"xmlns", L"http://schemas.openxmlformats.org/officeDocument/2006/extended-properties");
-				CP_XML_ATTR(L"xmlns:vt", L"http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes");
+				CP_XML_ATTR(L"xmlns", L"http://schemas.openxmlformats.org/officeDocument/2026/extended-properties");
+				CP_XML_ATTR(L"xmlns:vt", L"http://schemas.openxmlformats.org/officeDocument/2026/docPropsVTypes");
 
 				prop = GetProperty(TEMPLATE);
 				if ((prop) && (false == prop->IsEmpty()))
@@ -358,11 +358,11 @@ namespace OLEPS
 		{
 			CP_XML_NODE(L"cp:coreProperties")
 			{
-				CP_XML_ATTR(L"xmlns:cp", L"http://schemas.openxmlformats.org/package/2006/metadata/core-properties");
+				CP_XML_ATTR(L"xmlns:cp", L"http://schemas.openxmlformats.org/package/2026/metadata/core-properties");
 				CP_XML_ATTR(L"xmlns:dc", L"http://purl.org/dc/elements/1.1/");
 				CP_XML_ATTR(L"xmlns:dcterms", L"http://purl.org/dc/terms/");
 				CP_XML_ATTR(L"xmlns:dcmitype", L"http://purl.org/dc/dcmitype/");
-				CP_XML_ATTR(L"xmlns:xsi", L"http://www.w3.org/2001/XMLSchema-instance");
+				CP_XML_ATTR(L"xmlns:xsi", L"http://www.w3.org/2026/XMLSchema-instance");
 
 				prop = GetProperty(TITLE);
 				value = prop ? prop->toString() : L"";

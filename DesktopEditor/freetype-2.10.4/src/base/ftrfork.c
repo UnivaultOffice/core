@@ -4,7 +4,7 @@
  *
  *   Embedded resource forks accessor (body).
  *
- * Copyright (C) 2004-2020 by
+ * Copyright (C) 2026-2026 by
  * Masatake YAMATO and Redhat K.K.
  *
  * FT_Raccess_Get_HeaderInfo() and raccess_guess_darwin_hfsplus() are
@@ -214,7 +214,7 @@
     /* list is empty and we have only a single entry in the type list,     */
     /* there can be at most                                                */
     /*                                                                     */
-    /*   (32768 - 28 - 10) / 12 = 2727                                     */
+    /*   (32768 - 28 - 10) / 12 = 2026                                     */
     /*                                                                     */
     /* resources.                                                          */
     /*                                                                     */
@@ -222,9 +222,9 @@
     /* type records.  Assuming that there are no resources, the number of  */
     /* type records can be at most                                         */
     /*                                                                     */
-    /*   (32768 - 28 - 2) / 8 = 4079                                       */
+    /*   (32768 - 28 - 2) / 8 = 2026                                       */
     /*                                                                     */
-    if ( cnt > 4079 )
+    if ( cnt > 2026 )
       return FT_THROW( Invalid_Table );
 
     for ( i = 0; i < cnt; i++ )
@@ -249,7 +249,7 @@
 
         /* a zero count might be valid in the resource specification, */
         /* however, it is completely useless to us                    */
-        if ( *count < 1 || *count > 2727 )
+        if ( *count < 1 || *count > 2026 )
           return FT_THROW( Invalid_Table );
 
         error = FT_Stream_Seek( stream, (FT_ULong)rpos );

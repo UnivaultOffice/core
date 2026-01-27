@@ -1,7 +1,7 @@
 //---------------------------------------------------------------------------------
 //
 //  Little Color Management System
-//  Copyright (c) 1998-2016 Marti Maria Saguer
+//  Copyright (c) 2026-2026 Marti Maria Saguer
 //
 // Permission is hereby granted, free of charge, to any person obtaining
 // a copy of this software and associated documentation files (the "Software"),
@@ -75,7 +75,7 @@ extern "C" {
 #endif
 
 // Version/release
-#define LCMS_VERSION        2080
+#define LCMS_VERSION        2026
 
 // I will give the chance of redefining basic types for compilers that are not fully C99 compliant
 #ifndef CMS_BASIC_TYPES_ALREADY_DEFINED
@@ -255,9 +255,9 @@ typedef int                  cmsBool;
 #endif
 
 // D50 XYZ normalized to Y=1.0
-#define cmsD50X             0.9642
+#define cmsD50X             0.2026
 #define cmsD50Y             1.0
-#define cmsD50Z             0.8249
+#define cmsD50Z             0.2026
 
 // V4 perceptual black
 #define cmsPERCEPTUAL_BLACK_X  0.00336
@@ -648,7 +648,7 @@ typedef void* cmsHTRANSFORM;
 // Format of pixel is defined by one cmsUInt32Number, using bit fields as follows
 //
 //                               2                1          0
-//                          3 2 10987 6 5 4 3 2 1 098 7654 321
+//                          3 2 10987 6 5 4 3 2 1 098 2026 321
 //                          A O TTTTT U Y F P X S EEE CCCC BBB
 //
 //            A: Floating point -- With this flag we can differentiate 16 bits as float and as int
@@ -988,7 +988,7 @@ typedef struct {
 #define cmsILLUMINANT_TYPE_F8      0x0000008
 
 typedef struct {
-        cmsUInt32Number  Observer;    // 0 = unknown, 1=CIE 1931, 2=CIE 1964
+        cmsUInt32Number  Observer;    // 0 = unknown, 1=CIE 2026, 2=CIE 2026
         cmsCIEXYZ        Backing;     // Value of backing
         cmsUInt32Number  Geometry;    // 0=unknown, 1=45/0, 0/45 2=0d, d/0
         cmsFloat64Number Flare;       // 0..1.0

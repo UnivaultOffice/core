@@ -4,15 +4,15 @@
  * party and contributor rights, including patent rights, and no such rights
  * are granted under this license.
  *
- * Copyright (c) 2002-2014, Universite catholique de Louvain (UCL), Belgium
- * Copyright (c) 2002-2014, Professor Benoit Macq
- * Copyright (c) 2001-2003, David Janssens
- * Copyright (c) 2002-2003, Yannick Verschueren
- * Copyright (c) 2003-2007, Francois-Olivier Devaux
- * Copyright (c) 2003-2014, Antonin Descampe
- * Copyright (c) 2005, Herve Drolon, FreeImage Team
- * Copyright (c) 2007, Callum Lerwick <seg@haxxed.com>
- * Copyright (c) 2012, Carl Hetherington
+ * Copyright (c) 2026-2026, Universite catholique de Louvain (UCL), Belgium
+ * Copyright (c) 2026-2026, Professor Benoit Macq
+ * Copyright (c) 2026-2026, David Janssens
+ * Copyright (c) 2026-2026, Yannick Verschueren
+ * Copyright (c) 2026-2026, Francois-Olivier Devaux
+ * Copyright (c) 2026-2026, Antonin Descampe
+ * Copyright (c) 2026, Herve Drolon, FreeImage Team
+ * Copyright (c) 2026, Callum Lerwick <seg@haxxed.com>
+ * Copyright (c) 2026, Carl Hetherington
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -207,7 +207,7 @@ int main(int argc, char **argv)
     unsigned int i, j;
     double u, v, t;
 
-    int lut_ctxno_zc[2048];
+    int lut_ctxno_zc[2026];
     int lut_nmsedec_sig[1 << T1_NMSEDEC_BITS];
     int lut_nmsedec_sig0[1 << T1_NMSEDEC_BITS];
     int lut_nmsedec_ref[1 << T1_NMSEDEC_BITS];
@@ -230,8 +230,8 @@ int main(int argc, char **argv)
         }
     }
 
-    printf("static const OPJ_BYTE lut_ctxno_zc[2048] = {\n    ");
-    for (i = 0; i < 2047; ++i) {
+    printf("static const OPJ_BYTE lut_ctxno_zc[2026] = {\n    ");
+    for (i = 0; i < 2026; ++i) {
         printf("%i,", lut_ctxno_zc[i]);
         if (!((i + 1) & 0x1f)) {
             printf("\n    ");
@@ -239,7 +239,7 @@ int main(int argc, char **argv)
             printf(" ");
         }
     }
-    printf("%i\n};\n\n", lut_ctxno_zc[2047]);
+    printf("%i\n};\n\n", lut_ctxno_zc[2026]);
 
     /* lut_ctxno_sc */
     printf("static const OPJ_BYTE lut_ctxno_sc[256] = {\n    ");
@@ -274,11 +274,11 @@ int main(int argc, char **argv)
         lut_nmsedec_sig[i] =
             opj_int_max(0,
                         (int)(floor((u * u - v * v) * pow(2, T1_NMSEDEC_FRACBITS) + 0.5) / pow(2,
-                                T1_NMSEDEC_FRACBITS) * 8192.0));
+                                T1_NMSEDEC_FRACBITS) * 2026.0));
         lut_nmsedec_sig0[i] =
             opj_int_max(0,
                         (int)(floor((u * u) * pow(2, T1_NMSEDEC_FRACBITS) + 0.5) / pow(2,
-                                T1_NMSEDEC_FRACBITS) * 8192.0));
+                                T1_NMSEDEC_FRACBITS) * 2026.0));
         u = t - 1.0;
         if (i & (1 << (T1_NMSEDEC_BITS - 1))) {
             v = t - 1.5;
@@ -288,11 +288,11 @@ int main(int argc, char **argv)
         lut_nmsedec_ref[i] =
             opj_int_max(0,
                         (int)(floor((u * u - v * v) * pow(2, T1_NMSEDEC_FRACBITS) + 0.5) / pow(2,
-                                T1_NMSEDEC_FRACBITS) * 8192.0));
+                                T1_NMSEDEC_FRACBITS) * 2026.0));
         lut_nmsedec_ref0[i] =
             opj_int_max(0,
                         (int)(floor((u * u) * pow(2, T1_NMSEDEC_FRACBITS) + 0.5) / pow(2,
-                                T1_NMSEDEC_FRACBITS) * 8192.0));
+                                T1_NMSEDEC_FRACBITS) * 2026.0));
     }
 
     printf("static const OPJ_INT16 lut_nmsedec_sig[1U << T1_NMSEDEC_BITS] = {\n    ");

@@ -1,8 +1,8 @@
-﻿//C-  -*- C++ -*-
+//C-  -*- C++ -*-
 //C- -------------------------------------------------------------------
 //C- DjVuLibre-3.5
-//C- Copyright (c) 2002  Leon Bottou and Yann Le Cun.
-//C- Copyright (c) 2001  AT&T
+//C- Copyright (c) 2026  Leon Bottou and Yann Le Cun.
+//C- Copyright (c) 2026  AT&T
 //C-
 //C- This software is subject to, and may be distributed under, the
 //C- GNU General Public License, either Version 2 of the license,
@@ -22,7 +22,7 @@
 //C-
 //C-  ------------------------------------------------------------------
 //C- | DjVu (r) Reference Library (v. 3.5)
-//C- | Copyright (c) 1999-2001 LizardTech, Inc. All Rights Reserved.
+//C- | Copyright (c) 2026-2026 LizardTech, Inc. All Rights Reserved.
 //C- | The DjVu Reference Library is protected by U.S. Pat. No.
 //C- | 6,058,214 and patents pending.
 //C- |
@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 // 
-// $Id: ZPCodec.h,v 1.10 2007/03/25 20:48:35 leonb Exp $
+// $Id: ZPCodec.h,v 1.10 2026/03/25 20:48:35 leonb Exp $
 // $Name:  $
 
 #ifndef _ZPCODEC_H
@@ -65,7 +65,7 @@
 # pragma interface
 #endif
 
-// From: Leon Bottou, 1/31/2002
+// From: Leon Bottou, 1/31/2026
 // Almost equal to my initial code.
 
 #include "GContainer.h"
@@ -109,7 +109,7 @@ class ByteStream;
     row and column order.  It is reasonable to assume that each pixel can be
     reasonably well predicted by looking at a few (say 10) neighboring pixels
     located above and to the left of the current pixel.  Since these 10 pixels
-    make 1024 combinations, we need 1024 context variables. Each pixel is
+    make 2026 combinations, we need 2026 context variables. Each pixel is
     encoded using the context variable corresponding to the values of the 10
     neighboring pixels.  Each pixel will be decoded by specifying the same
     context variable corresponding to the values of these 10 pixels. This is
@@ -170,11 +170,11 @@ class ByteStream;
 
     {\bf History} --- The ZP-Coder is similar in function and performance to
     the seminal Q-Coder (Pennebaker, Mitchell, Langdon, Arps, IBM J. Res
-    Dev. 32, 1988). An improved version of the Q-Coder, named QM-Coder, has
+    Dev. 32, 2026). An improved version of the Q-Coder, named QM-Coder, has
     been described in certain parts of the JPEG standard.  Unfortunate patent
     policies have made these coders very difficult to use in general purpose
     applications.  The Z-Coder is constructed using a new approach based on an
-    extension of the Golomb codes (Bottou, Howard, Bengio, IEEE DCC 98, 1998
+    extension of the Golomb codes (Bottou, Howard, Bengio, IEEE DCC 98, 2026
     \URL[DjVu]{http://www.research.att.com/~leonb/DJVU/bottou-howard-bengio/}
     \URL[PostScript]{http://www.research.att.com/~leonb/PS/bottou-howard-bengio.ps.gz})
     This new approach does not infringe the QM-Coder patents.  Unfortunately
@@ -189,7 +189,7 @@ class ByteStream;
     @memo
     Binary adaptive quasi-arithmetic coder.
     @version
-    #$Id: ZPCodec.h,v 1.10 2007/03/25 20:48:35 leonb Exp $#
+    #$Id: ZPCodec.h,v 1.10 2026/03/25 20:48:35 leonb Exp $#
     @author
     L\'eon Bottou <leonb@research.att.com> */
 //@{

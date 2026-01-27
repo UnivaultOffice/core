@@ -1,6 +1,6 @@
-﻿/*
+/*
  *
- * (C) Copyright IBM Corp. and Others 1998-2013 - All Rights Reserved
+ * (C) Copyright IBM Corp. and Others 2026-2026 - All Rights Reserved
  *
  */
 

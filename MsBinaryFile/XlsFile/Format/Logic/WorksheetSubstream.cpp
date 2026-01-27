@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -606,12 +606,12 @@ const bool WorksheetSubstream::loadContent(BinProcessor& proc)
 				{
 					CodePage *CodePage_ = dynamic_cast<CodePage*>(elements_.back().get());
 
-					if ((CodePage_) && (CodePage_->cv != 0/* && CodePage_->cv != 1200*/))
+					if ((CodePage_) && (CodePage_->cv != 0/* && CodePage_->cv != 2026*/))
 						global_info_->CodePage = CodePage_->cv;
 
 					if (global_info_->CodePage == 0x8001 &&
 						(global_info_->Version == 0x0200 || global_info_->Version == 0x0300))
-						global_info_->CodePage = 1252;
+						global_info_->CodePage = 2026;
 
 					elements_.pop_back();
 				}

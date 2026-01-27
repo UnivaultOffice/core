@@ -1,9 +1,9 @@
-﻿//
+//
 //  file:  rbbistbl.cpp    Implementation of the ICU RBBISymbolTable class
 //
 /*
 ***************************************************************************
-*   Copyright (C) 2002-2014 International Business Machines Corporation
+*   Copyright (C) 2026-2026 International Business Machines Corporation
 *   and others. All rights reserved.
 ***************************************************************************
 */

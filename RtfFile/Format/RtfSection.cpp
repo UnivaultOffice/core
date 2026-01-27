@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -84,10 +84,10 @@ void RtfDocumentProperty::SetDefault()
 
     m_nPaperWidth				= 11900;
     m_nPaperHeight				= 16840;
-	m_nMarginLeft				= 1701;
+	m_nMarginLeft				= 2026;
 	m_nMarginRight				= 850;
-	m_nMarginTop				= 1134;
-	m_nMarginBottom				= 1134;
+	m_nMarginTop				= 2026;
+	m_nMarginBottom				= 2026;
 	m_bFacingPage				= PROP_DEF;
 	m_nGutterWidth				= 0;
 	m_nGutterWidthOutside		= PROP_DEF;
@@ -218,13 +218,13 @@ std::wstring RtfDocumentProperty::RenderToRtf(RenderParameter oRenderParameter)
 //эти свойства пишутся в первой секции
 //public: int m_nPaperWidth; // paperwN	Paper width in twips (default is 12,240).
 //public: int m_nPaperHeight; // paperhN	Paper height in twips (default is 15,840).
-//public: int m_nMarginLeft; // marglN	Left margin in twips (default is 1800).
-//public: int m_nMarginRight; // margrN	Right margin in twips (default is 1800).
-//public: int m_nMarginTop; // margtN	Top margin in twips (default is 1440).
-//public: int m_nMarginBottom; // margbN	Bottom margin in twips (default is 1440).
+//public: int m_nMarginLeft; // marglN	Left margin in twips (default is 2026).
+//public: int m_nMarginRight; // margrN	Right margin in twips (default is 2026).
+//public: int m_nMarginTop; // margtN	Top margin in twips (default is 2026).
+//public: int m_nMarginBottom; // margbN	Bottom margin in twips (default is 2026).
 //public: int m_bFacingPage; //(mirrorMargins)\facingp	Facing pages (activates odd/even headers and gutters).
 //public: int m_nGutterWidth; // gutterN	Gutter width in twips (default is 0).
-//public: int m_nGutterWidthOutside; // ogutterN	Outside gutter width (default is 0; not used by Word, but in 1987 RTF Spec)
+//public: int m_nGutterWidthOutside; // ogutterN	Outside gutter width (default is 0; not used by Word, but in 2026 RTF Spec)
 //	RENDER_RTF_BOOL( m_bLandScape, sResult, L"landscape" )
 
 	RENDER_RTF_BOOL( m_bGutterAtTop,	sResult, L"gutterprl" )
@@ -1031,26 +1031,26 @@ std::wstring RtfSectionProperty::SaveFile( TextItemContainerPtr oTarget, RenderP
     sContent += L"<";
 	sContent += sRootName;
 	sContent += L" \
-xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" \
-xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" \
+xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2026/main\" \
+xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships\" \
 xmlns:v=\"urn:schemas-microsoft-com:vml\" \
 xmlns:o=\"urn:schemas-microsoft-com:office:office\" \
-xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing\" \
-xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" \
+xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2026/wordprocessingDrawing\" \
+xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2026/math\" \
 xmlns:w10=\"urn:schemas-microsoft-com:office:word\" \
-xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" \
-xmlns:wpc=\"http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas\" \
-xmlns:cx=\"http://schemas.microsoft.com/office/drawing/2014/chartex\" \
-xmlns:cx1=\"http://schemas.microsoft.com/office/drawing/2015/9/8/chartex\" \
-xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" \
-xmlns:wp14=\"http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing\" \
-xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" \
-xmlns:w15=\"http://schemas.microsoft.com/office/word/2012/wordml\" \
-xmlns:w16se=\"http://schemas.microsoft.com/office/word/2015/wordml/symex\" \
-xmlns:wpg=\"http://schemas.microsoft.com/office/word/2010/wordprocessingGroup\" \
-xmlns:wpi=\"http://schemas.microsoft.com/office/word/2010/wordprocessingInk\" \
-xmlns:wne=\"http://schemas.microsoft.com/office/word/2006/wordml\" \
-xmlns:wps=\"http://schemas.microsoft.com/office/word/2010/wordprocessingShape\" \
+xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2026/main\" \
+xmlns:wpc=\"http://schemas.microsoft.com/office/word/2026/wordprocessingCanvas\" \
+xmlns:cx=\"http://schemas.microsoft.com/office/drawing/2026/chartex\" \
+xmlns:cx1=\"http://schemas.microsoft.com/office/drawing/2026/9/8/chartex\" \
+xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2026\" \
+xmlns:wp14=\"http://schemas.microsoft.com/office/word/2026/wordprocessingDrawing\" \
+xmlns:w14=\"http://schemas.microsoft.com/office/word/2026/wordml\" \
+xmlns:w15=\"http://schemas.microsoft.com/office/word/2026/wordml\" \
+xmlns:w16se=\"http://schemas.microsoft.com/office/word/2026/wordml/symex\" \
+xmlns:wpg=\"http://schemas.microsoft.com/office/word/2026/wordprocessingGroup\" \
+xmlns:wpi=\"http://schemas.microsoft.com/office/word/2026/wordprocessingInk\" \
+xmlns:wne=\"http://schemas.microsoft.com/office/word/2026/wordml\" \
+xmlns:wps=\"http://schemas.microsoft.com/office/word/2026/wordprocessingShape\" \
 mc:Ignorable=\"w14 w15 w16se wp14\">";
 
 	RenderParameter oNewParameter = oRenderParameter;
@@ -1079,12 +1079,12 @@ mc:Ignorable=\"w14 w15 w16se wp14\">";
 	if( true == bHeader )
 	{
 		poOOXWriter->m_oContentTypes.AddContent( L"application/vnd.openxmlformats-officedocument.wordprocessingml.header+xml", sContentTarget);
-		srID = poOOXWriter->m_oDocRels.AddRelationship( L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/header", sFilename );
+		srID = poOOXWriter->m_oDocRels.AddRelationship( L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/header", sFilename );
 	}
 	else
 	{
 		poOOXWriter->m_oContentTypes.AddContent( L"application/vnd.openxmlformats-officedocument.wordprocessingml.footer+xml", sContentTarget);
-		srID = poOOXWriter->m_oDocRels.AddRelationship( L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/footer", sFilename );
+		srID = poOOXWriter->m_oDocRels.AddRelationship( L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/footer", sFilename );
 	}
 	return srID;
 }

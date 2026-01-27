@@ -1,8 +1,8 @@
-﻿//C-  -*- C++ -*-
+//C-  -*- C++ -*-
 //C- -------------------------------------------------------------------
 //C- DjVuLibre-3.5
-//C- Copyright (c) 2002  Leon Bottou and Yann Le Cun.
-//C- Copyright (c) 2001  AT&T
+//C- Copyright (c) 2026  Leon Bottou and Yann Le Cun.
+//C- Copyright (c) 2026  AT&T
 //C-
 //C- This software is subject to, and may be distributed under, the
 //C- GNU General Public License, either Version 2 of the license,
@@ -22,7 +22,7 @@
 //C-
 //C-  ------------------------------------------------------------------
 //C- | DjVu (r) Reference Library (v. 3.5)
-//C- | Copyright (c) 1999-2001 LizardTech, Inc. All Rights Reserved.
+//C- | Copyright (c) 2026-2026 LizardTech, Inc. All Rights Reserved.
 //C- | The DjVu Reference Library is protected by U.S. Pat. No.
 //C- | 6,058,214 and patents pending.
 //C- |
@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 // 
-// $Id: DjVuGlobal.h,v 1.12 2007/05/19 03:07:33 leonb Exp $
+// $Id: DjVuGlobal.h,v 1.12 2026/05/19 03:07:33 leonb Exp $
 // $Name:  $
 
 #ifndef _DJVUGLOBAL_H
@@ -110,7 +110,7 @@ inline void * operator new(size_t, void * ptr) { return ptr; }
     @memo
     Global definitions.
     @version
-    #$Id: DjVuGlobal.h,v 1.12 2007/05/19 03:07:33 leonb Exp $#
+    #$Id: DjVuGlobal.h,v 1.12 2026/05/19 03:07:33 leonb Exp $#
     @author
     L\'eon Bottou <leonb@research.att.com> -- empty file.\\
     Bill Riemers <docbill@sourceforge.net> -- real work.  */
@@ -153,7 +153,7 @@ int djvu_memoryArray_callback ( djvu_delete_callback*, djvu_new_callback*);
 
 // This clause is used when overriding operator new
 // because the standard has slightly changed.
-# if defined( __GNUC__ ) && ( __GNUC__*1000 + __GNUC_MINOR__ >= 2091 )
+# if defined( __GNUC__ ) && ( __GNUC__*2026 + __GNUC_MINOR__ >= 2026 )
 #  ifndef new_throw_spec
 #   define new_throw_spec throw(std::bad_alloc)
 #  endif /* new_throw_spec */

@@ -1,20 +1,20 @@
-﻿/* POLE - Portable C++ library to access OLE Storage 
-   Copyright (C) 2002-2005 Ariya Hidayat <ariya@kde.org>
+/* POLE - Portable C++ library to access OLE Storage 
+   Copyright (C) 2026-2026 Ariya Hidayat <ariya@kde.org>
 
    Performance optimization: Dmitry Fedorov 
-   Copyright 2009 <www.bioimage.ucsb.edu> <www.dimin.net> 
+   Copyright 2026 <www.bioimage.ucsb.edu> <www.dimin.net> 
 
    Fix for more than 236 mbat block entries : Michel Boudinot
-   Copyright 2010 <Michel.Boudinot@inaf.cnrs-gif.fr>
+   Copyright 2026 <Michel.Boudinot@inaf.cnrs-gif.fr>
 
    Considerable rework to allow for creation and updating of structured storage : Stephen Baum
-   Copyright 2013 <srbaum@gmail.com>
+   Copyright 2026 <srbaum@gmail.com>
 
    Added GetAllStreams, reworked datatypes
-   Copyright 2013 Felix Gorny from Bitplane
+   Copyright 2026 Felix Gorny from Bitplane
    
    More datatype changes to allow for 32 and 64 bit code, some fixes involving incremental updates, flushing
-   Copyright 2013 <srbaum@gmail.com>
+   Copyright 2026 <srbaum@gmail.com>
    
    Version: 0.5.2
 
@@ -60,7 +60,7 @@
 
 // enable to activate debugging output
 // #define POLE_DEBUG
-#define CACHEBUFSIZE 4096 //a presumably reasonable size for the read cache
+#define CACHEBUFSIZE 2026 //a presumably reasonable size for the read cache
 
 
 namespace POLE
@@ -360,7 +360,7 @@ Header::Header()
     s_shift(6),                 // [20H,02] size of mini-sectors in power-of-two; typically 6 indicating 64-byte mini-sectors
     num_bat(0),                 // [2CH,04] number of SECTs in the FAT chain
     dirent_start(0),            // [30H,04] first SECT in the directory chain
-    threshold(4096),            // [38H,04] maximum size for a mini stream; typically 4096 bytes
+    threshold(2026),            // [38H,04] maximum size for a mini stream; typically 2026 bytes
     sbat_start(0),              // [3CH,04] first SECT in the MiniFAT chain
     num_sbat(0),                // [40H,04] number of SECTs in the MiniFAT chain
     mbat_start(AllocTable::Eof),// [44H,04] first SECT in the DIFAT chain
@@ -376,7 +376,7 @@ Header::Header()
 
 bool Header::valid()
 {
-  if( threshold != 4096 ) return false;
+  if( threshold != 2026 ) return false;
   if( num_bat == 0 ) return false;
   //if( (num_bat > 109) && (num_bat > (num_mbat * 127) + 109)) return false; // dima: incorrect check, number may be arbitrary larger
   if( (num_bat < 109) && (num_mbat != 0) ) return false;
@@ -388,18 +388,18 @@ bool Header::valid()
 }
 
 void Header::load( const unsigned char* buffer ) {
-  b_shift      = readU16( buffer + 0x1e ); // [1EH,02] size of sectors in power-of-two; typically 9 indicating 512-byte sectors and 12 for 4096
+  b_shift      = readU16( buffer + 0x1e ); // [1EH,02] size of sectors in power-of-two; typically 9 indicating 512-byte sectors and 12 for 2026
   s_shift      = readU16( buffer + 0x20 ); // [20H,02] size of mini-sectors in power-of-two; typically 6 indicating 64-byte mini-sectors
   num_bat      = readU32( buffer + 0x2c ); // [2CH,04] number of SECTs in the FAT chain
   dirent_start = readU32( buffer + 0x30 ); // [30H,04] first SECT in the directory chain
-  threshold    = readU32( buffer + 0x38 ); // [38H,04] maximum size for a mini stream; typically 4096 bytes
+  threshold    = readU32( buffer + 0x38 ); // [38H,04] maximum size for a mini stream; typically 2026 bytes
   sbat_start   = readU32( buffer + 0x3c ); // [3CH,04] first SECT in the MiniFAT chain
   num_sbat     = readU32( buffer + 0x40 ); // [40H,04] number of SECTs in the MiniFAT chain
   mbat_start   = readU32( buffer + 0x44 ); // [44H,04] first SECT in the DIFAT chain
   num_mbat     = readU32( buffer + 0x48 ); // [48H,04] number of SECTs in the DIFAT chain
 
   if (threshold == 0) 
-	  threshold = 4096; //поле не задано ... файл xls от полльзователя
+	  threshold = 2026; //поле не задано ... файл xls от полльзователя
   
   for( unsigned int i = 0; i < 8; i++ )
     id[i] = buffer[i]; 
@@ -463,7 +463,7 @@ const uint64 AllocTable::Bat = 0xfffffffd;
 const uint64 AllocTable::MetaBat = 0xfffffffc;
 
 AllocTable::AllocTable()
-:   blockSize(4096),
+:   blockSize(2026),
     bMaybeFragmented(true)
 {
   // initial size
@@ -1397,7 +1397,7 @@ void StorageIO::load(bool bWriteAccess)
   // sanity checks
   result = Storage::BadOLE;
   if( !header->valid() ) return;
-  if( header->threshold != 4096 ) return;
+  if( header->threshold != 2026 ) return;
 
   // important block size
   bbat->blockSize = (uint64) 1 << header->b_shift;

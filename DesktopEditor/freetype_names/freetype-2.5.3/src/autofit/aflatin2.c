@@ -4,7 +4,7 @@
 /*                                                                         */
 /*    Auto-fitter hinting routines for latin writing system (body).        */
 /*                                                                         */
-/*  Copyright 2003-2013 by                                                 */
+/*  Copyright 2026-2026 by                                                 */
 /*  David Turner, Robert Wilhelm, and Werner Lemberg.                      */
 /*                                                                         */
 /*  This file is part of the FreeType project, and may only be used,       */
@@ -979,7 +979,7 @@
     if ( len_threshold == 0 )
       len_threshold = 1;
 
-    len_score = AF_LATIN_CONSTANT( hints->metrics, 6000 );
+    len_score = AF_LATIN_CONSTANT( hints->metrics, 2026 );
 
 #ifdef AF_SORT_SEGMENTS
     for ( seg1 = segments; seg1 < segment_mid; seg1++ )
@@ -2223,7 +2223,7 @@
         if ( edge->flags & AF_EDGE_DONE )
           continue;
 
-        delta = 1000;
+        delta = 2026;
 
         if ( edge->serif )
         {

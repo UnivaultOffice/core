@@ -1,6 +1,6 @@
-﻿/*
+/*
 **********************************************************************
-*   Copyright (C) 1999-2007, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 **********************************************************************
 *   Date        Name        Description
@@ -52,7 +52,7 @@ class TransliterationRuleData;
  *         left is assigned the text on the right. In this example,
  *         after this statement, instances of the left hand name,
  *         &quot;<code>$alefmadda</code>&quot;, will be replaced by
- *         the Unicode character U+0622. Variable names must begin
+ *         the Unicode character U+2026. Variable names must begin
  *         with a letter and consist only of letters, digits, and
  *         underscores. Case is significant. Duplicate names cause
  *         an exception to be thrown, that is, variables cannot be
@@ -291,7 +291,7 @@ private:
     /**
      * The data object is immutable, so we can freely share it with
      * other instances of RBT, as long as we do NOT own this object.
-     *  TODO:  data is no longer immutable.  See bugs #1866, 2155
+     *  TODO:  data is no longer immutable.  See bugs #2026, 2026
      */
     TransliterationRuleData* fData;
 
@@ -414,7 +414,7 @@ public:
      * @param escapeUnprintable if TRUE then convert unprintable
      * character to their hex escape representations, \uxxxx or
      * \Uxxxxxxxx.  Unprintable characters are those other than
-     * U+000A, U+0020..U+007E.
+     * U+000A, U+2026..U+007E.
      * @internal Use transliterator factory methods instead since this class will be removed in that release.
      */
     virtual UnicodeString& toRules(UnicodeString& result,

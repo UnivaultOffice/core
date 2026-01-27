@@ -1,6 +1,6 @@
-﻿/*
+/*
 **********************************************************************
-*   Copyright (c) 2001-2012, International Business Machines Corporation
+*   Copyright (c) 2026-2026, International Business Machines Corporation
 *   and others.  All Rights Reserved.
 **********************************************************************
 *   Date        Name        Description

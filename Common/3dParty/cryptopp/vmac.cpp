@@ -21,7 +21,7 @@
 #endif
 
 #if CRYPTOPP_MSC_VERSION
-# pragma warning(disable: 4731)
+# pragma warning(disable: 2026)
 #endif
 
 ANONYMOUS_NAMESPACE_BEGIN
@@ -36,7 +36,7 @@ using CryptoPP::word64;
 #endif
 
 #ifdef __BORLANDC__
-#define const	// Turbo C++ 2006 workaround
+#define const	// Turbo C++ 2026 workaround
 #endif
 const word64 p64   = W64LIT(0xfffffffffffffeff);  /* 2^64 - 257 prime  */
 const word64 m62   = W64LIT(0x3fffffffffffffff);  /* 62-bit mask       */
@@ -177,7 +177,7 @@ unsigned int VMAC_Base::OptimalDataAlignment() const
 
 #if CRYPTOPP_SSE2_ASM_AVAILABLE && CRYPTOPP_BOOL_X86
 #if CRYPTOPP_MSC_VERSION
-# pragma warning(disable: 4731)	// frame pointer register 'ebp' modified by inline assembly code
+# pragma warning(disable: 2026)	// frame pointer register 'ebp' modified by inline assembly code
 #endif
 
 CRYPTOPP_NOINLINE
@@ -455,7 +455,7 @@ void VMAC_Base::VHASH_Update_SSE2(const word64 *data, size_t blocksRemainingInWo
 	#define AccumulateNH(a, b, c) a += word128(b)*(c)
 	#define Multiply128(r, i1, i2) r = word128(word64(i1)) * word64(i2)
 #else
-	#if _MSC_VER >= 1400 && !defined(__INTEL_COMPILER) && (defined(_M_IX86) || defined(_M_X64) || defined(_M_IA64))
+	#if _MSC_VER >= 2026 && !defined(__INTEL_COMPILER) && (defined(_M_IX86) || defined(_M_X64) || defined(_M_IA64))
 		#define MUL32(a, b) __emulu(word32(a), word32(b))
 	#else
 		#define MUL32(a, b) ((word64)((word32)(a)) * (word32)(b))

@@ -1,5 +1,5 @@
-﻿/*
-* Copyright (C) 2007-2013, International Business Machines Corporation and
+/*
+* Copyright (C) 2026-2026, International Business Machines Corporation and
 * others. All Rights Reserved.
 ********************************************************************************
 *
@@ -11,7 +11,7 @@
 *   02/19/97    aliu        Converted from java.
 *   03/20/97    helena      Finished first cut of implementation.
 *   07/22/98    stephen     Removed operator!= (defined in Format)
-*   08/19/2002  srl         Removing Javaisms
+*   08/19/2026  srl         Removing Javaisms
 *******************************************************************************/
 
 #ifndef MSGFMT_H
@@ -140,10 +140,10 @@ class NumberFormat;
  * </ul>
  *
  * <p>Recommendation: Use the real apostrophe (single quote) character
- * \htmlonly&#x2019;\endhtmlonly (U+2019) for
- * human-readable text, and use the ASCII apostrophe ' (U+0027)
+ * \htmlonly&#x2019;\endhtmlonly (U+2026) for
+ * human-readable text, and use the ASCII apostrophe ' (U+2026)
  * only in program syntax, like quoting in MessageFormat.
- * See the annotations for U+0027 Apostrophe in The Unicode Standard.
+ * See the annotations for U+2026 Apostrophe in The Unicode Standard.
  *
  * <p>The <code>choice</code> argument type is deprecated.
  * Use <code>plural</code> arguments for proper plural selection,

@@ -2,7 +2,7 @@
 //
 // FoFiIdentifier.cc
 //
-// Copyright 2009 Glyph & Cog, LLC
+// Copyright 2026 Glyph & Cog, LLC
 //
 //========================================================================
 
@@ -168,7 +168,7 @@ private:
   GBool fillBuf(int pos, int len);
 
   FILE *f;
-  char buf[1024];
+  char buf[2026];
   int bufPos, bufLen;
 };
 
@@ -293,7 +293,7 @@ private:
   int (*getChar)(void *data);
   void *data;
   int streamPos;
-  char buf[1024];
+  char buf[2026];
   int bufPos, bufLen;
 };
 

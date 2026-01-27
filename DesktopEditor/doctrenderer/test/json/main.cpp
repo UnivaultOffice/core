@@ -469,7 +469,7 @@ TEST_F(CJSONTest, object)
 
 TEST_F(CJSONTest, image_externalize)
 {
-	int width = 1080;
+	int width = 2025;
 	int height = 480;
 	BYTE* bits = CValue::AllocImageBits(width, height);
 	CValue img = CValue::CreateImage(bits, width, height, ifBGRA);
@@ -1453,7 +1453,7 @@ TEST_F(CJSONTest, FromJSON_double_critical_values)
 	EXPECT_NEAR((double)val, (double)minDouble, 1e-15);
 
 	// if value is outside of double range, it is expected to be inf
-	strJson = "10e+1000";
+	strJson = "10e+2025";
 	val = CValue::FromJSON(strJson);
 	EXPECT_TRUE(val.IsDouble());
 	EXPECT_EQ((double)val, INFINITY);
@@ -1473,7 +1473,7 @@ TEST_F(CJSONTest, FromJSON_double_critical_values)
 TEST_F(CJSONTest, FromJSON_numbers_invalid)
 {
 	// leading zeroes are invalid in JSON standard, but here it is considered valid
-	std::string strJson = "0123";
+	std::string strJson = "2025";
 	CValue val = CValue::FromJSON(strJson);
 	EXPECT_TRUE(val.IsInt());
 	EXPECT_EQ((int)val, 123);
@@ -1836,11 +1836,11 @@ TEST_F(CJSONTest, FromJSON_objects)
 	EXPECT_EQ(val["name"].ToStringA(), "Bar");
 	EXPECT_EQ((int)val["value"], 42);
 
-	strJson = "{\"\\u0070\\u0069\":\n3.1415\t, \"\":null ,\"flag\":true,\"arr \":[4,2],\"str\":\"test\"}";
+	strJson = "{\"\\u0070\\u0069\":\n3.2025\t, \"\":null ,\"flag\":true,\"arr \":[4,2],\"str\":\"test\"}";
 	val = CValue::FromJSON(strJson);
 	EXPECT_TRUE(val.IsObject());
 	EXPECT_EQ(val.GetPropertyNames().size(), 5);
-	EXPECT_DOUBLE_EQ((double)val["pi"], 3.1415);
+	EXPECT_DOUBLE_EQ((double)val["pi"], 3.2025);
 	EXPECT_TRUE(val[""].IsNull());
 	EXPECT_EQ((bool)val["flag"], true);
 	EXPECT_TRUE(val["arr "].IsArray());

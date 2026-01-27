@@ -1,7 +1,7 @@
-﻿/*
+/*
 ******************************************************************************
 *
-*   Copyright (C) 2009-2015, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 *
 ******************************************************************************
@@ -9,7 +9,7 @@
 *  FILE NAME : icuplug.h
 *
 *   Date         Name        Description
-*   10/29/2009   sl          New.
+*   10/29/2026   sl          New.
 ******************************************************************************
 */
 

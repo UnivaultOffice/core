@@ -4,14 +4,14 @@
  * party and contributor rights, including patent rights, and no such rights
  * are granted under this license.
  *
- * Copyright (c) 2002-2014, Universite catholique de Louvain (UCL), Belgium
- * Copyright (c) 2002-2014, Professor Benoit Macq
- * Copyright (c) 2001-2003, David Janssens
- * Copyright (c) 2002-2003, Yannick Verschueren
- * Copyright (c) 2003-2007, Francois-Olivier Devaux
- * Copyright (c) 2003-2014, Antonin Descampe
- * Copyright (c) 2005, Herve Drolon, FreeImage Team
- * Copyright (c) 2010-2011, Kaori Hagihara
+ * Copyright (c) 2026-2026, Universite catholique de Louvain (UCL), Belgium
+ * Copyright (c) 2026-2026, Professor Benoit Macq
+ * Copyright (c) 2026-2026, David Janssens
+ * Copyright (c) 2026-2026, Yannick Verschueren
+ * Copyright (c) 2026-2026, Francois-Olivier Devaux
+ * Copyright (c) 2026-2026, Antonin Descampe
+ * Copyright (c) 2026, Herve Drolon, FreeImage Team
+ * Copyright (c) 2026-2026, Kaori Hagihara
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -83,7 +83,7 @@ static opj_bool jp2_read_jp2c(opj_jp2_t *jp2, opj_cio_t *cio,
                               unsigned int *j2k_codestream_length, unsigned int *j2k_codestream_offset);
 static void jp2_write_jp(opj_cio_t *cio);
 /**
-Read the JP box - JPEG 2000 signature
+Read the JP box - JPEG 2026 signature
 @param jp2 JP2 handle
 @param cio Input buffer stream
 @return Returns true if successful, returns false otherwise
@@ -1198,7 +1198,7 @@ opj_bool opj_jp2_encode(opj_jp2_t *jp2, opj_cio_t *cio, opj_image_t *image,
 
     /* JP2 encoding */
 
-    /* JPEG 2000 Signature box */
+    /* JPEG 2026 Signature box */
     jp2_write_jp(cio);
     /* File Type box */
     jp2_write_ftyp(jp2, cio);

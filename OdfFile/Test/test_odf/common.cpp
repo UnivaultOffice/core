@@ -1,5 +1,5 @@
 ///*
-// * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+// * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
 // *
 // * This program is a free software product. You can redistribute it and/or
 // * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
 // * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
 // *
 // * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
-// * street, Riga, Latvia, EU, LV-1050.
+// * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
 // *
 // * The  interactive user interfaces in modified source and object code versions
 // * of the Program must display Appropriate Legal Notices, as required under
@@ -231,18 +231,18 @@
 #include <stdio.h>
 #include <tchar.h>
 
-#include "D:\ONLYOFFICE\core\Common\OfficeFileFormatChecker.h"
-#include "D:\ONLYOFFICE\core\OfficeUtils\src\OfficeUtils.h"
-#include "D:\ONLYOFFICE\core\DesktopEditor\common\Directory.h"
-#include "D:\ONLYOFFICE\core\OdfFile\Reader\Converter\ConvertOO2OOX.h"
-#include "D:\ONLYOFFICE\core\OdfFile\Common\logging.h"
+#include "D:\UNIVAULTOFFICE\core\Common\OfficeFileFormatChecker.h"
+#include "D:\UNIVAULTOFFICE\core\OfficeUtils\src\OfficeUtils.h"
+#include "D:\UNIVAULTOFFICE\core\DesktopEditor\common\Directory.h"
+#include "D:\UNIVAULTOFFICE\core\OdfFile\Reader\Converter\ConvertOO2OOX.h"
+#include "D:\UNIVAULTOFFICE\core\OdfFile\Common\logging.h"
 
 #if defined(_WIN64)
-#pragma comment(lib, "D:/ONLYOFFICE/core/Common/3dParty/icu/win_64/build/icuuc.lib")
-#pragma comment(lib, "D:/ONLYOFFICE/core/build/lib/win_64/DEBUG/graphics.lib")
-#pragma comment(lib, "D:/ONLYOFFICE/core/build/lib/win_64/DEBUG/kernel.lib")
-#pragma comment(lib, "D:/ONLYOFFICE/core/build/lib/win_64/DEBUG/UnicodeConverter.lib")
-#pragma comment(lib, "D:/ONLYOFFICE/core/build/lib/win_64/DEBUG/CryptoPPLib.lib")
+#pragma comment(lib, "D:/UNIVAULTOFFICE/core/Common/3dParty/icu/win_64/build/icuuc.lib")
+#pragma comment(lib, "D:/UNIVAULTOFFICE/core/build/lib/win_64/DEBUG/graphics.lib")
+#pragma comment(lib, "D:/UNIVAULTOFFICE/core/build/lib/win_64/DEBUG/kernel.lib")
+#pragma comment(lib, "D:/UNIVAULTOFFICE/core/build/lib/win_64/DEBUG/UnicodeConverter.lib")
+#pragma comment(lib, "D:/UNIVAULTOFFICE/core/build/lib/win_64/DEBUG/CryptoPPLib.lib")
 
 #elif defined (_WIN32)
 

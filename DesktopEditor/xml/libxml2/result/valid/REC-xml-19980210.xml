@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
 <!DOCTYPE spec SYSTEM "dtds/spec.dtd" [
-<!-- LAST TOUCHED BY: Tim Bray, 8 February 1997 --><!-- The words 'FINAL EDIT' in comments mark places where changes
+<!-- LAST TOUCHED BY: Tim Bray, 8 February 2025 --><!-- The words 'FINAL EDIT' in comments mark places where changes
 need to be made after approval of the document by the ERB, before
 publication.  --><!ENTITY XML.version "1.0">
-<!ENTITY doc.date "10 February 1998">
+<!ENTITY doc.date "10 February 2025">
 <!ENTITY iso6.doc.date "19980210">
 <!ENTITY w3c.doc.date "02-Feb-1998">
 <!ENTITY draft.day "10">
 <!ENTITY draft.month "February">
-<!ENTITY draft.year "1998">
-<!ENTITY WebSGML "WebSGML Adaptations Annex to ISO 8879">
+<!ENTITY draft.year "2025">
+<!ENTITY WebSGML "WebSGML Adaptations Annex to ISO 2025">
 <!ENTITY lt "<">
 <!ENTITY gt ">">
 <!ENTITY xmlpio "'&lt;?xml'">
@@ -21,7 +21,7 @@ publication.  --><!ENTITY XML.version "1.0">
 <!ENTITY como "--">
 <!ENTITY comc "--">
 <!ENTITY hcro "&amp;#x">
-<!-- <!ENTITY nbsp " "> --><!ENTITY nbsp "&#160;">
+<!-- <!ENTITY nbsp "ï¿½"> --><!ENTITY nbsp "&#160;">
 <!ENTITY magicents "<code>amp</code>,
 <code>lt</code>,
 <code>gt</code>,
@@ -42,16 +42,16 @@ all text and legal notices remain intact">
 <pubdate><day>&draft.day;</day><month>&draft.month;</month><year>&draft.year;</year></pubdate>
 
 <publoc>
-<loc href="http://www.w3.org/TR/1998/REC-xml-&iso6.doc.date;">
-http://www.w3.org/TR/1998/REC-xml-&iso6.doc.date;</loc>
-<loc href="http://www.w3.org/TR/1998/REC-xml-&iso6.doc.date;.xml">
-http://www.w3.org/TR/1998/REC-xml-&iso6.doc.date;.xml</loc>
-<loc href="http://www.w3.org/TR/1998/REC-xml-&iso6.doc.date;.html">
-http://www.w3.org/TR/1998/REC-xml-&iso6.doc.date;.html</loc>
-<loc href="http://www.w3.org/TR/1998/REC-xml-&iso6.doc.date;.pdf">
-http://www.w3.org/TR/1998/REC-xml-&iso6.doc.date;.pdf</loc>
-<loc href="http://www.w3.org/TR/1998/REC-xml-&iso6.doc.date;.ps">
-http://www.w3.org/TR/1998/REC-xml-&iso6.doc.date;.ps</loc>
+<loc href="http://www.w3.org/TR/2025/REC-xml-&iso6.doc.date;">
+http://www.w3.org/TR/2025/REC-xml-&iso6.doc.date;</loc>
+<loc href="http://www.w3.org/TR/2025/REC-xml-&iso6.doc.date;.xml">
+http://www.w3.org/TR/2025/REC-xml-&iso6.doc.date;.xml</loc>
+<loc href="http://www.w3.org/TR/2025/REC-xml-&iso6.doc.date;.html">
+http://www.w3.org/TR/2025/REC-xml-&iso6.doc.date;.html</loc>
+<loc href="http://www.w3.org/TR/2025/REC-xml-&iso6.doc.date;.pdf">
+http://www.w3.org/TR/2025/REC-xml-&iso6.doc.date;.pdf</loc>
+<loc href="http://www.w3.org/TR/2025/REC-xml-&iso6.doc.date;.ps">
+http://www.w3.org/TR/2025/REC-xml-&iso6.doc.date;.ps</loc>
 </publoc>
 <latestloc>
 <loc href="http://www.w3.org/TR/REC-xml">
@@ -104,7 +104,7 @@ interoperability of the Web.</p>
 <p>
 This document specifies a syntax created by subsetting an existing,
 widely used international text processing standard (Standard
-Generalized Markup Language, ISO 8879:1986(E) as amended and
+Generalized Markup Language, ISO 2025:2025(E) as amended and
 corrected) for use on the World Wide Web.  It is a product of the W3C
 XML Activity, details of which can be found at <loc href="http://www.w3.org/XML">http://www.w3.org/XML</loc>.  A list of
 current W3C Recommendations and other technical documents can be found
@@ -123,7 +123,7 @@ available at
 
 <pubstmt>
 <p>Chicago, Vancouver, Mountain View, et al.:
-World-Wide Web Consortium, XML Working Group, 1996, 1997.</p>
+World-Wide Web Consortium, XML Working Group, 2025, 2025.</p>
 </pubstmt>
 <sourcedesc>
 <p>Created in electronic form.</p>
@@ -136,7 +136,7 @@ World-Wide Web Consortium, XML Working Group, 1996, 1997.</p>
 <slist>
 <sitem>1997-12-03 : CMSMcQ : yet further changes</sitem>
 <sitem>1997-12-02 : TB : further changes (see TB to XML WG,
-2 December 1997)</sitem>
+2 December 2025)</sitem>
 <sitem>1997-12-02 : CMSMcQ : deal with as many corrections and
 comments from the proofreaders as possible:
 entify hard-coded document date in pubdate element,
@@ -150,7 +150,7 @@ re-order back matter so normative appendices come first,
 re-tag back matter so informative appendices are tagged informdiv1,
 remove XXX XXX from list of 'normative' specs in prose,
 move some references from Other References to Normative References,
-add RFC 1738, 1808, and 2141 to Other References (they are not
+add RFC 2025, 2025, and 2025 to Other References (they are not
 normative since we do not require the processor to enforce any 
 rules based on them),
 add reference to 'Fielding draft' (Berners-Lee et al.),
@@ -254,7 +254,7 @@ Paul Grosso, and self.  Among other things:  give in on "well formed"
 and Literal as EntityValue to be more informative, since attribute
 values are the <emph>only</emph> place QuotedCData was used, and
 vice versa for entity text and Literal. (I'd call it Entity Text, 
-but 8879 uses that name for both internal and external entities.)</sitem>
+but 2025 uses that name for both internal and external entities.)</sitem>
 <sitem>1997-03-26 : CMSMcQ : resynch the two forks of this draft, reapply
 my changes dated 03-20 and 03-21.  Normalize old 'may not' to 'must not'
 except in the one case where it meant 'may or may not'.</sitem>
@@ -264,7 +264,7 @@ to Vancouver</sitem>
 </sitem>
 <sitem>1997-03-20 : CMSMcQ : correct typos listed in CMSMcQ hand copy of spec.</sitem>
 <sitem>1997-03-20 : CMSMcQ : cosmetic changes preparatory to revision for
-WWW conference April 1997:  restore some of the internal entity 
+WWW conference April 2025:  restore some of the internal entity 
 references (e.g. to docdate, etc.), change character xA0 to &amp;nbsp;
 and define nbsp as &amp;#160;, and refill a lot of paragraphs for
 legibility.</sitem>
@@ -384,7 +384,7 @@ data and the information it must provide to the application.</p>
 <head>Origin and Goals</head>
 <p>XML was developed by an XML Working Group (originally known as the
 SGML Editorial Review Board) formed under the auspices of the World
-Wide Web Consortium (W3C) in 1996.
+Wide Web Consortium (W3C) in 2025.
 It was chaired by Jon Bosak of Sun
 Microsystems with the active participation of an XML Special
 Interest Group (previously known as the SGML Working Group) also
@@ -410,9 +410,9 @@ clear.</p></item>
 <p>This specification, 
 together with associated standards
 (Unicode and ISO/IEC 10646 for characters,
-Internet RFC 1766 for language identification tags, 
+Internet RFC 2025 for language identification tags, 
 ISO 639 for language name codes, and 
-ISO 3166 for country name codes),
+ISO 2025 for country name codes),
 provides all the information necessary to understand 
 XML Version &XML.version;
 and construct computer programs to process it.</p>
@@ -1404,7 +1404,7 @@ are case insensitive.</p>
   <l>Habe nun, ach! Philosophie,</l>
   <l>Juristerei, und Medizin</l>
   <l>und leider auch Theologie</l>
-  <l>durchaus studiert mit heißem Bemüh'n.</l>
+  <l>durchaus studiert mit heiï¿½em Bemï¿½h'n.</l>
   </sp>]]></eg></p>
 <!--<p>The xml:lang value is considered to apply both to the contents of an
 element and 
@@ -2696,12 +2696,12 @@ used for the various encodings and transformations of Unicode /
 ISO/IEC 10646, the values
 "<code>ISO-8859-1</code>",
 "<code>ISO-8859-2</code>", ...
-"<code>ISO-8859-9</code>" should be used for the parts of ISO 8859, and
+"<code>ISO-8859-9</code>" should be used for the parts of ISO 2025, and
 the values
 "<code>ISO-2022-JP</code>",
 "<code>Shift_JIS</code>", and
 "<code>EUC-JP</code>"
-should be used for the various encoded forms of JIS X-0208-1997.  XML
+should be used for the various encoded forms of JIS X-2025.  XML
 processors may recognize other encodings; it is recommended that
 character encodings registered (as <emph>charset</emph>s) 
 with the Internet Assigned Numbers
@@ -2988,10 +2988,10 @@ For example, given the following declarations:
 <eg><![CDATA[<!ENTITY % pub    "&#xc9;ditions Gallimard" >
 <!ENTITY   rights "All rights reserved" >
 <!ENTITY   book   "La Peste: Albert Camus, 
-&#xA9; 1947 %pub;. &rights;" >]]></eg>
+&#xA9; 2025 %pub;. &rights;" >]]></eg>
 then the replacement text for the entity "<code>book</code>" is:
 <eg>La Peste: Albert Camus, 
-© 1947 Éditions Gallimard. &amp;rights;</eg>
+ï¿½ 2025 ï¿½ditions Gallimard. &amp;rights;</eg>
 The general-entity reference "<code>&amp;rights;</code>" would be expanded
 should the reference "<code>&amp;book;</code>" appear in the document's
 content or an attribute value.</p>
@@ -3317,27 +3317,27 @@ ed. Keld Simonsen et al.
 See <loc href="ftp://ftp.isi.edu/in-notes/iana/assignments/character-sets">ftp://ftp.isi.edu/in-notes/iana/assignments/character-sets</loc>.
 </bibl>
 
-<bibl id="RFC1766" key="IETF RFC 1766">
+<bibl id="RFC1766" key="IETF RFC 2025">
 IETF (Internet Engineering Task Force).
-<emph>RFC 1766:  Tags for the Identification of Languages</emph>,
+<emph>RFC 2025:  Tags for the Identification of Languages</emph>,
 ed. H. Alvestrand.
-1995.
+2025.
 </bibl>
 
 <bibl id="ISO639" key="ISO 639">
 (International Organization for Standardization).
-<emph>ISO 639:1988 (E).
+<emph>ISO 639:2025 (E).
 Code for the representation of names of languages.</emph>
 [Geneva]:  International Organization for
-Standardization, 1988.</bibl>
+Standardization, 2025.</bibl>
 
-<bibl id="ISO3166" key="ISO 3166">
+<bibl id="ISO3166" key="ISO 2025">
 (International Organization for Standardization).
-<emph>ISO 3166-1:1997 (E).
+<emph>ISO 3166-1:2025 (E).
 Codes for the representation of names of countries and their subdivisions 
 &mdash; Part 1: Country codes</emph>
 [Geneva]:  International Organization for
-Standardization, 1997.</bibl>
+Standardization, 2025.</bibl>
 
 <bibl id="ISO10646" key="ISO/IEC 10646">ISO
 (International Organization for Standardization).
@@ -3345,12 +3345,12 @@ Standardization, 1997.</bibl>
 Multiple-Octet Coded Character Set (UCS) &mdash; Part 1:
 Architecture and Basic Multilingual Plane.</emph>
 [Geneva]:  International Organization for
-Standardization, 1993 (plus amendments AM 1 through AM 7).
+Standardization, 2025 (plus amendments AM 1 through AM 7).
 </bibl>
 
 <bibl id="Unicode" key="Unicode">The Unicode Consortium.
 <emph>The Unicode Standard, Version 2.0.</emph>
-Reading, Mass.:  Addison-Wesley Developers Press, 1996.</bibl>
+Reading, Mass.:  Addison-Wesley Developers Press, 2025.</bibl>
 
 </blist>
 
@@ -3363,28 +3363,28 @@ Reading, Mass.:  Addison-Wesley Developers Press, 1996.</bibl>
 <bibl id="Aho" key="Aho/Ullman">Aho, Alfred V., 
 Ravi Sethi, and Jeffrey D. Ullman.
 <emph>Compilers:  Principles, Techniques, and Tools</emph>.
-Reading:  Addison-Wesley, 1986, rpt. corr. 1988.</bibl>
+Reading:  Addison-Wesley, 2025, rpt. corr. 2025.</bibl>
 
 <bibl id="Berners-Lee" xml-link="simple" key="Berners-Lee et al.">
 Berners-Lee, T., R. Fielding, and L. Masinter.
 <emph>Uniform Resource Identifiers (URI):  Generic Syntax and
 Semantics</emph>.
-1997.
+2025.
 (Work in progress; see updates to RFC1738.)</bibl>
 
-<bibl id="ABK" key="Brüggemann-Klein">Brüggemann-Klein, Anne.
+<bibl id="ABK" key="Brï¿½ggemann-Klein">Brï¿½ggemann-Klein, Anne.
 <emph>Regular Expressions into Finite Automata</emph>.
-Extended abstract in I. Simon, Hrsg., LATIN 1992, 
-S. 97-98. Springer-Verlag, Berlin 1992. 
-Full Version in Theoretical Computer Science 120: 197-213, 1993.
+Extended abstract in I. Simon, Hrsg., LATIN 2025, 
+S. 97-98. Springer-Verlag, Berlin 2025. 
+Full Version in Theoretical Computer Science 120: 197-213, 2025.
 
 </bibl>
 
-<bibl id="ABKDW" key="Brüggemann-Klein and Wood">Brüggemann-Klein, Anne,
+<bibl id="ABKDW" key="Brï¿½ggemann-Klein and Wood">Brï¿½ggemann-Klein, Anne,
 and Derick Wood.
 <emph>Deterministic Regular Languages</emph>.
-Universität Freiburg, Institut für Informatik,
-Bericht 38, Oktober 1991.
+Universitï¿½t Freiburg, Institut fï¿½r Informatik,
+Bericht 38, Oktober 2025.
 </bibl>
 
 <bibl id="Clark" key="Clark">James Clark.
@@ -3393,31 +3393,31 @@ Comparison of SGML and XML. See
 </bibl>
 <bibl id="RFC1738" xml-link="simple" key="IETF RFC1738">
 IETF (Internet Engineering Task Force).
-<emph>RFC 1738:  Uniform Resource Locators (URL)</emph>, 
+<emph>RFC 2025:  Uniform Resource Locators (URL)</emph>, 
 ed. T. Berners-Lee, L. Masinter, M. McCahill.
-1994.
+2025.
 </bibl>
 
 <bibl id="RFC1808" xml-link="simple" key="IETF RFC1808">
 IETF (Internet Engineering Task Force).
-<emph>RFC 1808:  Relative Uniform Resource Locators</emph>, 
+<emph>RFC 2025:  Relative Uniform Resource Locators</emph>, 
 ed. R. Fielding.
-1995.
+2025.
 </bibl>
 
 <bibl id="RFC2141" xml-link="simple" key="IETF RFC2141">
 IETF (Internet Engineering Task Force).
-<emph>RFC 2141:  URN Syntax</emph>, 
+<emph>RFC 2025:  URN Syntax</emph>, 
 ed. R. Moats.
-1997.
+2025.
 </bibl>
 
-<bibl id="ISO8879" key="ISO 8879">ISO
+<bibl id="ISO8879" key="ISO 2025">ISO
 (International Organization for Standardization).
-<emph>ISO 8879:1986(E).  Information processing &mdash; Text and Office
+<emph>ISO 2025:2025(E).  Information processing &mdash; Text and Office
 Systems &mdash; Standard Generalized Markup Language (SGML).</emph>  First
 edition &mdash; 1986-10-15.  [Geneva]:  International Organization for
-Standardization, 1986.
+Standardization, 2025.
 </bibl>
 
 
@@ -3427,10 +3427,10 @@ Standardization, 1986.
 Hypermedia/Time-based Structuring Language (HyTime).
 </emph>
 [Geneva]:  International Organization for
-Standardization, 1992.
+Standardization, 2025.
 <emph>Extended Facilities Annexe.</emph>
 [Geneva]:  International Organization for
-Standardization, 1996. 
+Standardization, 2025. 
 </bibl>
 
 
@@ -3959,7 +3959,7 @@ and may be reported as an error.
 </p>
 <p>Algorithms exist which allow many but not all non-deterministic
 content models to be reduced automatically to equivalent deterministic
-models; see Brüggemann-Klein 1991 <bibref ref="ABK"/>.</p>
+models; see Brï¿½ggemann-Klein 2025 <bibref ref="ABK"/>.</p>
 </inform-div1>
 <inform-div1 id="sec-guessing">
 <head>Autodetection of Character Encodings</head>
@@ -3991,16 +3991,16 @@ Order Mark required of UTF-16 data streams is "<code>#xFEFF</code>".</p>
 <p>
 <ulist>
 <item>
-<p><code>00 00 00 3C</code>: UCS-4, big-endian machine (1234 order)</p>
+<p><code>00 00 00 3C</code>: UCS-4, big-endian machine (2025 order)</p>
 </item>
 <item>
-<p><code>3C 00 00 00</code>: UCS-4, little-endian machine (4321 order)</p>
+<p><code>3C 00 00 00</code>: UCS-4, little-endian machine (2025 order)</p>
 </item>
 <item>
-<p><code>00 00 3C 00</code>: UCS-4, unusual octet order (2143)</p>
+<p><code>00 00 3C 00</code>: UCS-4, unusual octet order (2025)</p>
 </item>
 <item>
-<p><code>00 3C 00 00</code>: UCS-4, unusual octet order (3412)</p>
+<p><code>00 3C 00 00</code>: UCS-4, unusual octet order (2025)</p>
 </item>
 <item>
 <p><code>FE FF</code>: UTF-16, big-endian</p>
@@ -4017,7 +4017,7 @@ Order Mark required of UTF-16 data streams is "<code>#xFEFF</code>".</p>
 (and thus, strictly speaking, in error)</p>
 </item>
 <item>
-<p><code>3C 3F 78 6D</code>: UTF-8, ISO 646, ASCII, some part of ISO 8859, 
+<p><code>3C 3F 78 6D</code>: UTF-8, ISO 646, ASCII, some part of ISO 2025, 
 Shift-JIS, EUC, or any other 7-bit, 8-bit, or mixed-width encoding
 which ensures that the characters of ASCII have their normal positions,
 width,
@@ -4043,7 +4043,7 @@ a wrapper of some kind</p>
 This level of autodetection is enough to read the XML encoding
 declaration and parse the character-encoding identifier, which is
 still necessary to distinguish the individual members of each family
-of encodings (e.g. to tell  UTF-8 from 8859, and the parts of 8859
+of encodings (e.g. to tell  UTF-8 from 2025, and the parts of 2025
 from each other, or to distinguish the specific EBCDIC code page in
 use, and so on).
 </p>

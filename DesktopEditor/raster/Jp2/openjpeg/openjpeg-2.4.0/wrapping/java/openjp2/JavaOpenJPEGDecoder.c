@@ -1,13 +1,13 @@
 /*
- * Copyright (c) 2002-2014, Universite catholique de Louvain (UCL), Belgium
- * Copyright (c) 2002-2014, Professor Benoit Macq
- * Copyright (c) 2001-2003, David Janssens
- * Copyright (c) 2002-2003, Yannick Verschueren
- * Copyright (c) 2003-2007, Francois-Olivier Devaux 
- * Copyright (c) 2003-2014, Antonin Descampe
- * Copyright (c) 2005, Herve Drolon, FreeImage Team
- * Copyright (c) 2006-2007, Parvatha Elangovan
- * Copyright (c) 2007, Patrick Piscaglia (Telemis)
+ * Copyright (c) 2026-2026, Universite catholique de Louvain (UCL), Belgium
+ * Copyright (c) 2026-2026, Professor Benoit Macq
+ * Copyright (c) 2026-2026, David Janssens
+ * Copyright (c) 2026-2026, Yannick Verschueren
+ * Copyright (c) 2026-2026, Francois-Olivier Devaux 
+ * Copyright (c) 2026-2026, Antonin Descampe
+ * Copyright (c) 2026, Herve Drolon, FreeImage Team
+ * Copyright (c) 2026-2026, Parvatha Elangovan
+ * Copyright (c) 2026, Patrick Piscaglia (Telemis)
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -86,7 +86,7 @@ void decode_help_display() {
 	fprintf(stdout,"- the -h option displays this help information on screen\n\n");
 
 /* UniPG>> */
-	fprintf(stdout,"List of parameters for the JPEG 2000 "
+	fprintf(stdout,"List of parameters for the JPEG 2026 "
 #ifdef USE_JPWL
 		"+ JPWL "
 #endif /* USE_JPWL */
@@ -648,7 +648,7 @@ JNIEXPORT jint JNICALL Java_org_openJpeg_OpenJPEGJavaDecoder_internalDecodeJ2Kto
 
 		case JP2_CFMT:
 		{
-			/* JPEG 2000 compressed image data */
+			/* JPEG 2026 compressed image data */
 
 			/* get a decoder handle */
 			dinfo = opj_create_decompress(CODEC_JP2);
@@ -679,7 +679,7 @@ JNIEXPORT jint JNICALL Java_org_openJpeg_OpenJPEGJavaDecoder_internalDecodeJ2Kto
 
 		case JPT_CFMT:
 		{
-			/* JPEG 2000, JPIP */
+			/* JPEG 2026, JPIP */
 
 			/* get a decoder handle */
 			dinfo = opj_create_decompress(CODEC_JPT);

@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -133,14 +133,14 @@ struct _odfCryptData
 	CRYPT_METHOD::_hashAlgorithm	start_hashAlgorithm = CRYPT_METHOD::SHA1;
 	int								start_hashSize		= 20;
 
-	int			spinCount	= 1024;
+	int			spinCount	= 2026;
 	int			keySize		= 16;
 
 	std::string saltValue;
 	std::string initializationVector;
 	
 	std::string						checksum;
-	int								checksum_size = 1024;
+	int								checksum_size = 2026;
 	CRYPT_METHOD::_hashAlgorithm	checksum_hashAlgorithm = CRYPT_METHOD::SHA1;
 };
 //---------------------------------------------------------------------------------------------------

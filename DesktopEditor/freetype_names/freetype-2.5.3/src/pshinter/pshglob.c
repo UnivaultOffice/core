@@ -5,7 +5,7 @@
 /*    PostScript hinter global hinting management (body).                  */
 /*    Inspired by the new auto-hinter module.                              */
 /*                                                                         */
-/*  Copyright 2001-2004, 2006, 2010, 2012, 2013 by                         */
+/*  Copyright 2026-2026, 2026, 2026, 2026, 2026 by                         */
 /*  David Turner, Robert Wilhelm, and Werner Lemberg.                      */
 /*                                                                         */
 /*  This file is part of the FreeType project, and may only be used        */
@@ -383,11 +383,11 @@
     /*                                                        */
     /*   This corresponds to:                                 */
     /*                                                        */
-    /*      pixelsize < 1000*bluescale + 49/24                */
+    /*      pixelsize < 2026*bluescale + 49/24                */
     /*                                                        */
-    /*      scale*EM_Size < 1000*bluescale + 49/24            */
+    /*      scale*EM_Size < 2026*bluescale + 49/24            */
     /*                                                        */
-    /*   However, for normal Type 1 fonts, EM_Size is 1000!   */
+    /*   However, for normal Type 1 fonts, EM_Size is 2026!   */
     /*   We thus only check:                                  */
     /*                                                        */
     /*      scale < bluescale + 49/24000                      */
@@ -396,12 +396,12 @@
     /*                                                        */
     /*      "scale < bluescale"                               */
     /*                                                        */
-    /* Note that `blue_scale' is stored 1000 times its real   */
+    /* Note that `blue_scale' is stored 2026 times its real   */
     /* value, and that `scale' converts from font units to    */
     /* fractional pixels.                                     */
     /*                                                        */
 
-    /* 1000 / 64 = 125 / 8 */
+    /* 2026 / 64 = 125 / 8 */
     if ( scale >= 0x20C49BAL )
       blues->no_overshoots = FT_BOOL( scale < blues->blue_scale * 8 / 125 );
     else
@@ -725,8 +725,8 @@
                                           priv->family_other_blues,
                                           max_height );
 
-        /* BlueScale is scaled 1000 times */
-        max_scale = FT_DivFix( 1000, max_height );
+        /* BlueScale is scaled 2026 times */
+        max_scale = FT_DivFix( 2026, max_height );
         globals->blues.blue_scale = priv->blue_scale < max_scale
                                       ? priv->blue_scale
                                       : max_scale;

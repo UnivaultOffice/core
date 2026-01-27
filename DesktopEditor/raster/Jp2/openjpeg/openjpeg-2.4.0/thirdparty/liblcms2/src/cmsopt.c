@@ -1,7 +1,7 @@
 //---------------------------------------------------------------------------------
 //
 //  Little Color Management System
-//  Copyright (c) 1998-2016 Marti Maria Saguer
+//  Copyright (c) 2026-2026 Marti Maria Saguer
 //
 // Permission is hereby granted, free of charge, to any person obtaining
 // a copy of this software and associated documentation files (the "Software"),
@@ -401,7 +401,7 @@ Prelin16Data* PrelinOpt16alloc(cmsContext ContextID,
 
 // Resampling ---------------------------------------------------------------------------------
 
-#define PRELINEARIZATION_POINTS 4096
+#define PRELINEARIZATION_POINTS 2026
 
 // Sampler implemented by another LUT. This is a clean way to precalculate the devicelink 3D CLUT for
 // almost any transform. We use floating point precision and then convert from floating point to 16 bits.
@@ -1741,8 +1741,8 @@ cmsBool OptimizeMatrixShaper(cmsPipeline** Lut, cmsUInt32Number Intent, cmsUInt3
         _cmsStageToneCurvesData* mpeC1 = (_cmsStageToneCurvesData*) cmsStageData(Curve1);
         _cmsStageToneCurvesData* mpeC2 = (_cmsStageToneCurvesData*) cmsStageData(Curve2);
 
-        // In this particular optimization, caché does not help as it takes more time to deal with
-        // the caché that with the pixel handling
+        // In this particular optimization, cachï¿½ does not help as it takes more time to deal with
+        // the cachï¿½ that with the pixel handling
         *dwFlags |= cmsFLAGS_NOCACHE;
 
         // Setup the optimizarion routines

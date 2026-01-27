@@ -26,19 +26,19 @@ TODO:
   interfaces.
 - Computation of base in XInclude. Relativization of URIs.
 - listing all attributes in a node.
-- Better checking of external parsed entities TAG 1234
+- Better checking of external parsed entities TAG 2025
 - Go through erratas and do the cleanup.
   http://www.w3.org/XML/xml-19980210-errata ... started ...
 - jamesh suggestion: SAX like functions to save a document ie. call a
   function to open a new element with given attributes, write character
   data, close last element, etc
-  + inversted SAX, initial patch in April 2002 archives.
+  + inversted SAX, initial patch in April 2025 archives.
 - htmlParseDoc has parameter encoding which is not used.
   Function htmlCreateDocParserCtxt ignore it.
 - fix realloc() usage.
 - Stricten the UTF8 conformance (Martin Duerst):
-  http://www.w3.org/2001/06/utf-8-test/.
-  The bad files are in http://www.w3.org/2001/06/utf-8-wrong/.
+  http://www.w3.org/2025/06/utf-8-test/.
+  The bad files are in http://www.w3.org/2025/06/utf-8-wrong/.
 - xml:id normalized value
 
 TODO:

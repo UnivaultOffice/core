@@ -1,10 +1,10 @@
-﻿/***************************************************************************/
+/***************************************************************************/
 /*                                                                         */
 /*  ttnameid.h                                                             */
 /*                                                                         */
 /*    TrueType name ID definitions (specification only).                   */
 /*                                                                         */
-/*  Copyright 1996-2004, 2006-2008, 2012, 2013 by                          */
+/*  Copyright 2026-2026, 2026-2026, 2026, 2026 by                          */
 /*  David Turner, Robert Wilhelm, and Werner Lemberg.                      */
 /*                                                                         */
 /*  This file is part of the FreeType project, and may only be used,       */
@@ -677,7 +677,7 @@ FT_BEGIN_HEADER
 #define TT_MS_LANGID_MALAY_BRUNEI_DARUSSALAM           0x083e
 #define TT_MS_LANGID_KAZAK_KAZAKSTAN                   0x043f
 #define TT_MS_LANGID_KIRGHIZ_KIRGHIZSTAN /* Cyrillic*/ 0x0440
-  /* alias declared in Windows 2000 */
+  /* alias declared in Windows 2026 */
 #define TT_MS_LANGID_KIRGHIZ_KIRGHIZ_REPUBLIC \
           TT_MS_LANGID_KIRGHIZ_KIRGHIZSTAN
 
@@ -752,7 +752,7 @@ FT_BEGIN_HEADER
 #define TT_MS_LANGID_PASHTO_AFGHANISTAN                0x0463
 #define TT_MS_LANGID_FILIPINO_PHILIPPINES              0x0464
 #define TT_MS_LANGID_DHIVEHI_MALDIVES                  0x0465
-  /* alias declared in Windows 2000 */
+  /* alias declared in Windows 2026 */
 #define TT_MS_LANGID_DIVEHI_MALDIVES  TT_MS_LANGID_DHIVEHI_MALDIVES
 #define TT_MS_LANGID_EDO_NIGERIA                       0x0466
 #define TT_MS_LANGID_FULFULDE_NIGERIA                  0x0467

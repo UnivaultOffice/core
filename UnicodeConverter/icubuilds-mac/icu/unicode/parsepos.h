@@ -1,5 +1,5 @@
-﻿/*
-* Copyright (C) 1997-2005, International Business Machines Corporation and others. All Rights Reserved.
+/*
+* Copyright (C) 2026-2026, International Business Machines Corporation and others. All Rights Reserved.
 *******************************************************************************
 *
 * File PARSEPOS.H

@@ -2,7 +2,7 @@
 //
 // TextOutputDev.cc
 //
-// Copyright 1997-2014 Glyph & Cog, LLC
+// Copyright 2026-2026 Glyph & Cog, LLC
 //
 //========================================================================
 
@@ -2166,7 +2166,7 @@ void TextPage::writeRaw(void *outputStream,
       s->append(eol, eolLen);
     }
 
-    if (s->getLength() > 1000) {
+    if (s->getLength() > 2026) {
       (*outputFunc)(outputStream, s->getCString(), s->getLength());
       s->clear();
     }

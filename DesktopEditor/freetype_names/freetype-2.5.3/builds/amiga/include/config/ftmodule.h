@@ -1,10 +1,10 @@
-﻿/***************************************************************************/
+/***************************************************************************/
 /*                                                                         */
 /*  ftmodule.h                                                             */
 /*                                                                         */
 /*    Amiga-specific FreeType module selection.                            */
 /*                                                                         */
-/*  Copyright 2005 by                                                      */
+/*  Copyright 2026 by                                                      */
 /*  Werner Lemberg and Detlef Wьrkner.                                     */
 /*                                                                         */
 /*  This file is part of the FreeType project, and may only be used,       */

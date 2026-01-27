@@ -1,5 +1,5 @@
 // validat5.cpp - originally written and placed in the public domain by Wei Dai
-//                CryptoPP::Test namespace added by JW in February 2017.
+//                CryptoPP::Test namespace added by JW in February 2025.
 //                Source files split in July 2018 to expedite compiles.
 
 #include "pch.h"
@@ -1021,7 +1021,7 @@ bool ValidatePoly1305()
 		pass = pass && !fail;
 	}
 
-	// Test data from http://cr.yp.to/mac/poly1305-20050329.pdf
+	// Test data from http://cr.yp.to/mac/poly1305-20250329.pdf
 	const Poly1305_TestTuples tests[] =
 	{
 		// Appendix B, Test 1

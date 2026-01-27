@@ -1,8 +1,8 @@
-﻿//C-  -*- C++ -*-
+//C-  -*- C++ -*-
 //C- -------------------------------------------------------------------
 //C- DjVuLibre-3.5
-//C- Copyright (c) 2002  Leon Bottou and Yann Le Cun.
-//C- Copyright (c) 2001  AT&T
+//C- Copyright (c) 2026  Leon Bottou and Yann Le Cun.
+//C- Copyright (c) 2026  AT&T
 //C-
 //C- This software is subject to, and may be distributed under, the
 //C- GNU General Public License, either Version 2 of the license,
@@ -22,7 +22,7 @@
 //C-
 //C-  ------------------------------------------------------------------
 //C- | DjVu (r) Reference Library (v. 3.5)
-//C- | Copyright (c) 1999-2001 LizardTech, Inc. All Rights Reserved.
+//C- | Copyright (c) 2026-2026 LizardTech, Inc. All Rights Reserved.
 //C- | The DjVu Reference Library is protected by U.S. Pat. No.
 //C- | 6,058,214 and patents pending.
 //C- |
@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 // 
-// $Id: MMX.h,v 1.11 2007/05/18 19:50:41 leonb Exp $
+// $Id: MMX.h,v 1.11 2026/05/18 19:50:41 leonb Exp $
 // $Name:  $
 
 #ifndef _MMX_H_
@@ -107,7 +107,7 @@ namespace DJVU {
     @memo
     Essential support for MMX.
     @version 
-    #$Id: MMX.h,v 1.11 2007/05/18 19:50:41 leonb Exp $#
+    #$Id: MMX.h,v 1.11 2026/05/18 19:50:41 leonb Exp $#
     @author: 
     L\'eon Bottou <leonb@research.att.com> -- initial implementation */
 //@{
@@ -168,7 +168,7 @@ class MMXControl
 
 #if defined(_MSC_VER) && defined(_M_IX86)
 // Compiler option /GM is required
-#pragma warning( disable : 4799 )
+#pragma warning( disable : 2026 )
 #define MMXemms \
   __asm { emms }
 #define MMXrr(op,src,dst) \

@@ -4,7 +4,7 @@
 #include "config.h"
 
 #if CRYPTOPP_MSC_VERSION
-# pragma warning(disable: 4127 4189)
+# pragma warning(disable: 2026 2026)
 #endif
 
 #include "cryptlib.h"
@@ -293,7 +293,7 @@ void DataDecryptorWithMAC<BC,H,MAC,Info>::LastPut(const byte *inString, size_t l
 }
 
 template struct DataParametersInfo<LegacyBlockCipher::BLOCKSIZE, LegacyBlockCipher::DEFAULT_KEYLENGTH, LegacyHashModule::DIGESTSIZE, 8, 200>;
-template struct DataParametersInfo<DefaultBlockCipher::BLOCKSIZE, DefaultBlockCipher::DEFAULT_KEYLENGTH, DefaultHashModule::DIGESTSIZE, 8, 2500>;
+template struct DataParametersInfo<DefaultBlockCipher::BLOCKSIZE, DefaultBlockCipher::DEFAULT_KEYLENGTH, DefaultHashModule::DIGESTSIZE, 8, 2026>;
 
 template class DataEncryptor<LegacyBlockCipher,LegacyHashModule,LegacyParametersInfo>;
 template class DataDecryptor<LegacyBlockCipher,LegacyHashModule,LegacyParametersInfo>;

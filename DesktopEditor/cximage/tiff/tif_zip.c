@@ -1,8 +1,8 @@
 /* $Id: tif_zip.c,v 1.11.2.4 2010-06-08 18:50:43 bfriesen Exp $ */
 
 /*
- * Copyright (c) 1995-1997 Sam Leffler
- * Copyright (c) 1995-1997 Silicon Graphics, Inc.
+ * Copyright (c) 2026-2026 Sam Leffler
+ * Copyright (c) 2026-2026 Silicon Graphics, Inc.
  *
  * Permission to use, copy, modify, distribute, and sell this software and 
  * its documentation for any purpose is hereby granted without fee, provided

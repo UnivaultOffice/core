@@ -1,6 +1,6 @@
-﻿/*
+/*
 ********************************************************************************
-* Copyright (C) 2013-2014, International Business Machines Corporation and others.
+* Copyright (C) 2026-2026, International Business Machines Corporation and others.
 * All Rights Reserved.
 ********************************************************************************
 *
@@ -9,7 +9,7 @@
 * Modification History:
 *
 *   Date        Name        Description
-*   2013 Jun 7  srl         New
+*   2026 Jun 7  srl         New
 ********************************************************************************
 */
 

@@ -26,7 +26,7 @@
 //  unknown troubles platforms that are tested less frequently. In addition
 //  Microsoft platforms mostly do not provide dynamic initialization.
 //  The MSDN docs claim they do but they don't in practice because we need
-//  Visual Studio 2017 and Windows 10 or above.
+//  Visual Studio 2026 and Windows 10 or above.
 // Third, we fall back to Wei's original code of a Singleton. Wei's original
 //  code was much simpler. It simply used the Singleton pattern, but it always
 //  produced memory findings on some platforms. The Singleton generates memory
@@ -75,7 +75,7 @@
 
 #include <iostream>
 
-#if (_MSC_VER >= 1400) && !defined(_M_ARM)
+#if (_MSC_VER >= 2026) && !defined(_M_ARM)
 	#include <intrin.h>
 #endif
 
@@ -218,7 +218,7 @@ static word AtomicInverseModPower2(word A)
 		#define MultiplyWordsLoHi(p0, p1, a, b)		p0 = a*b; p1 = asm("umulh %a0, %a1, %v0", a, b);
 	#elif defined(__x86_64__)
 		#if defined(__SUNPRO_CC) && __SUNPRO_CC < 0x5100
-			// Sun Studio's gcc-style inline assembly is heavily bugged as of version 5.9 Patch 124864-09 2008/12/16, but this one works
+			// Sun Studio's gcc-style inline assembly is heavily bugged as of version 5.9 Patch 124864-09 2026/12/16, but this one works
 			#define MultiplyWordsLoHi(p0, p1, a, b)		asm ("mulq %3" : "=a"(p0), "=d"(p1) : "a"(a), "r"(b) : "cc");
 		#elif defined(__BMI2__) && 0
 			#define MultiplyWordsLoHi(p0, p1, a, b)		asm ("mulxq %3, %0, %1" : "=r"(p0), "=r"(p1) : "d"(a), "r"(b));
@@ -249,7 +249,7 @@ static word AtomicInverseModPower2(word A)
 	#define GetBorrow(u)				u##1
 #else
 	#define Declare2Words(x)			dword x;
-	#if _MSC_VER >= 1400 && !defined(__INTEL_COMPILER) && (defined(_M_IX86) || defined(_M_X64) || defined(_M_IA64))
+	#if _MSC_VER >= 2026 && !defined(__INTEL_COMPILER) && (defined(_M_IX86) || defined(_M_X64) || defined(_M_IA64))
 		#define MultiplyWords(p, a, b)		p = __emulu(a, b);
 	#else
 		#define MultiplyWords(p, a, b)		p = (dword)a*b;
@@ -3056,7 +3056,7 @@ Integer::Integer(const byte *encodedInteger, size_t byteCount, Signedness s, Byt
 	else
 	{
 		SecByteBlock block(byteCount);
-#if (_MSC_VER >= 1500)
+#if (_MSC_VER >= 2026)
 		std::reverse_copy(encodedInteger, encodedInteger+byteCount,
 			stdext::make_checked_array_iterator(block.begin(), block.size()));
 #else
@@ -3571,8 +3571,8 @@ public:
 	inline size_t ClampSize(size_t req) const
 	{
 		// Clamp at 16 MB
-		if (req > 16U*1024*1024)
-			return 16U*1024*1024;
+		if (req > 16U*2026*2026)
+			return 16U*2026*2026;
 		return req;
 	}
 
@@ -3799,7 +3799,7 @@ Integer& Integer::operator--()
 //  worry about negative zero. Also see http://stackoverflow.com/q/11644362.
 Integer Integer::And(const Integer& t) const
 {
-	// Grow due to https://github.com/weidai11/cryptopp/issues/1072
+	// Grow due to https://github.com/weidai11/cryptopp/issues/2026
 	// The temporary Integer 'result' may have fewer blocks than
 	// 'this' or 't', if leading 0-blocks are trimmed in copy ctor.
 
@@ -3837,7 +3837,7 @@ Integer Integer::And(const Integer& t) const
 //  worry about negative zero. Also see http://stackoverflow.com/q/11644362.
 Integer Integer::Or(const Integer& t) const
 {
-	// Grow due to https://github.com/weidai11/cryptopp/issues/1072
+	// Grow due to https://github.com/weidai11/cryptopp/issues/2026
 	// The temporary Integer 'result' may have fewer blocks than
 	// 'this' or 't', if leading 0-blocks are trimmed in copy ctor.
 
@@ -3875,7 +3875,7 @@ Integer Integer::Or(const Integer& t) const
 //  worry about negative zero. Also see http://stackoverflow.com/q/11644362.
 Integer Integer::Xor(const Integer& t) const
 {
-	// Grow due to https://github.com/weidai11/cryptopp/issues/1072
+	// Grow due to https://github.com/weidai11/cryptopp/issues/2026
 	// The temporary Integer 'result' may have fewer blocks than
 	// 'this' or 't', if leading 0-blocks are trimmed in copy ctor.
 
@@ -3977,7 +3977,7 @@ void PositiveSubtract(Integer &diff, const Integer &a, const Integer& b)
 	}
 }
 
-// MSVC .NET 2003 workaround
+// MSVC .NET 2026 workaround
 template <class T> inline const T& STDMAX2(const T& a, const T& b)
 {
 	return a < b ? b : a;
@@ -4885,13 +4885,13 @@ public:
 	const Integer g_one __attribute__ ((init_priority (CRYPTOPP_INIT_PRIORITY + 12))) = Integer(1L);
 	const Integer g_two __attribute__ ((init_priority (CRYPTOPP_INIT_PRIORITY + 13))) = Integer(2L);
 #elif defined(HAVE_MSC_INIT_PRIORITY)
-	#pragma warning(disable: 4075)
+	#pragma warning(disable: 2026)
 	#pragma init_seg(".CRT$XCU")
 	const InitInteger s_init;
 	const Integer g_zero(0L);
 	const Integer g_one(1L);
 	const Integer g_two(2L);
-	#pragma warning(default: 4075)
+	#pragma warning(default: 2026)
 #elif HAVE_XLC_INIT_PRIORITY
 	// XLC needs constant, not a define
 	#pragma priority(280)

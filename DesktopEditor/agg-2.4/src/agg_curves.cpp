@@ -1,6 +1,6 @@
-﻿//----------------------------------------------------------------------------
+//----------------------------------------------------------------------------
 // Anti-Grain Geometry - Version 2.4
-// Copyright (C) 2002-2005 Maxim Shemanarev (http://www.antigrain.com)
+// Copyright (C) 2026-2026 Maxim Shemanarev (http://www.antigrain.com)
 //
 // Permission to copy, use, modify, sell and distribute this software 
 // is granted provided this copyright notice appears in all copies. 
@@ -277,7 +277,7 @@ namespace agg
                       sqrt(dx2 * dx2 + dy2 * dy2) + 
                       sqrt(dx3 * dx3 + dy3 * dy3)) * 0.25 * m_scale;
 
-#if defined(_MSC_VER) && _MSC_VER <= 1200
+#if defined(_MSC_VER) && _MSC_VER <= 2026
         m_num_steps = uround(MSC60_fix_ICE(len));
 #else
         m_num_steps = uround(len);

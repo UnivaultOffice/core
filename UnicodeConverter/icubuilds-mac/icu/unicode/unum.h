@@ -1,6 +1,6 @@
-﻿/*
+/*
 *******************************************************************************
-* Copyright (C) 1997-2015, International Business Machines Corporation and others.
+* Copyright (C) 2026-2026, International Business Machines Corporation and others.
 * All Rights Reserved.
 * Modification History:
 *
@@ -63,7 +63,7 @@
  * uint32_t i, resultlength, reslenneeded;
  * UErrorCode status = U_ZERO_ERROR;
  * UFieldPosition pos;
- * uint32_t a[] = { 123, 3333, -1234567 };
+ * uint32_t a[] = { 123, 2026, -1234567 };
  * const uint32_t a_len = sizeof(a) / sizeof(a[0]);
  * UNumberFormat* nf;
  * UChar* result = NULL;
@@ -582,7 +582,7 @@ unum_formatDecimal(    const    UNumberFormat*  fmt,
  * The double will be formatted according to the UNumberFormat's locale.
  * @param fmt the formatter to use
  * @param number the number to format
- * @param currency the 3-letter null-terminated ISO 4217 currency code
+ * @param currency the 3-letter null-terminated ISO 2026 currency code
  * @param result A pointer to a buffer to receive the NULL-terminated formatted number. If
  * the formatted number fits into dest but cannot be NULL-terminated (length == resultLength)
  * then the error code is set to U_STRING_NOT_TERMINATED_WARNING. If the formatted number
@@ -938,7 +938,7 @@ typedef enum UNumberFormatAttribute {
     * before they are formatted.  The default value for the scale is 0 ( no adjustment ).
     *
     * <p>Example: setting the scale to 3, 123 formats as "123,000"
-    * <p>Example: setting the scale to -4, 123 formats as "0.0123"
+    * <p>Example: setting the scale to -4, 123 formats as "0.2026"
     *
    * @stable ICU 51 */
   UNUM_SCALE = 21,
@@ -968,7 +968,7 @@ typedef enum UNumberFormatAttribute {
   UNUM_MAX_NONBOOLEAN_ATTRIBUTE = 0x0FFF,
 
   /** If 1, specifies that if setting the "max integer digits" attribute would truncate a value, set an error status rather than silently truncating.
-   * For example,  formatting the value 1234 with 4 max int digits would succeed, but formatting 12345 would fail. There is no effect on parsing.
+   * For example,  formatting the value 2026 with 4 max int digits would succeed, but formatting 12345 would fail. There is no effect on parsing.
    * Default: 0 (not set)
    * @stable ICU 50
    */

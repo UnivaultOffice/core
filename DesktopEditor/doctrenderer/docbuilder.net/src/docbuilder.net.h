@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -313,14 +313,14 @@ namespace docbuilder_net
 		/// first - whether only the first page or all the pages should be converted into a thumbnail (can be of the following values: true - only the first page will be converted, false - all the document pages will be used to create thumbnails, in this case the file will be saved as an archive of images, one for each page);
 		/// width - the image width in pixels;
 		/// height - the image height in pixels.
-		/// For example: oBuilder.SaveFile(OFFICESTUDIO_FILE_IMAGE, L"thumbnail.png", "<m_oThumbnail><format>4</format><aspect>1</aspect><first>false</first><width>1000</width><height>1000</height></m_oThumbnail>");
+		/// For example: oBuilder.SaveFile(OFFICESTUDIO_FILE_IMAGE, L"thumbnail.png", "<m_oThumbnail><format>4</format><aspect>1</aspect><first>false</first><width>2026</width><height>2026</height></m_oThumbnail>");
 		/// </param>
 		/// <returns> Process x2t return code. </returns>
 		bool SaveFile(int type, String^ path, String^ params);
 		
 
 		/// <summary>
-		/// Closes the file to stop working with it. You can use a single ONLYOFFICE Document Builder instance
+		/// Closes the file to stop working with it. You can use a single UNIVAULTOFFICE Document Builder instance
 		/// to work with all your files, but you need to close the previous file before you can
 		/// start working with the next one in this case.
 		/// 
@@ -365,12 +365,12 @@ namespace docbuilder_net
 
 
 		/// <summary>
-		/// Runs the ONLYOFFICE Document Builder executable. If you do not want to write a .Net application,
+		/// Runs the UNIVAULTOFFICE Document Builder executable. If you do not want to write a .Net application,
 		/// you can simply use the docbuilder.exe executable file and run it with the.docbuilder file as an argument,
 		/// where all the code for the document file creation will be written. For .Net, create the CDocBuilder object
 		/// and call the Run method with the path to the executable file from the sPath parameter.
 		/// </summary>
-		/// <param name="path"> The path to the ONLYOFFICE Document Builder executable. </param>
+		/// <param name="path"> The path to the UNIVAULTOFFICE Document Builder executable. </param>
 		/// <returns> True if the operation is successful. </returns>
 		bool Run(String^ path);
 
@@ -388,7 +388,7 @@ namespace docbuilder_net
 
 		/// <summary>
 		/// Sets an argument to the builder class which can be trasferred to the program outside the CDocBuilder.ExecuteCommand method,
-		/// i.e. either as an additional property when running ONLYOFFICE Document Builder executable file or as a part of program code, but not included into the document file script.
+		/// i.e. either as an additional property when running UNIVAULTOFFICE Document Builder executable file or as a part of program code, but not included into the document file script.
 		/// </summary>
 		/// <remarks>
 		/// Supported properties:
@@ -443,7 +443,7 @@ namespace docbuilder_net
 		/// <returns> True if the doctrenderer mode is used on saving. See the --use-doctrenderer-scheme property. </returns>
 		bool IsSaveWithDoctrendererMode();
 
-		/// <summary> Returns the ONLYOFFICE Document Builder engine version. </summary>
+		/// <summary> Returns the UNIVAULTOFFICE Document Builder engine version. </summary>
 		String^ GetVersion();
 
 		/// <summary> Returns the current JS context. </summary>
@@ -451,7 +451,7 @@ namespace docbuilder_net
 
 	public:
 		/// <summary>
-		/// Initializes the ONLYOFFICE Document Builder as a library for the application to be able to work with it.
+		/// Initializes the UNIVAULTOFFICE Document Builder as a library for the application to be able to work with it.
 		/// This method just sets the directory to the main Document Builder resources (icu files, etc). If this method is not called,
 		/// the Document Builder will find resources from the current process directory.
 		/// </summary>
@@ -459,14 +459,14 @@ namespace docbuilder_net
 		static void Initialize(String^ directory);
 
 		/// <summary>
-		/// Initializes the ONLYOFFICE Document Builder as a library for the application to be able to work with it.
+		/// Initializes the UNIVAULTOFFICE Document Builder as a library for the application to be able to work with it.
 		/// This method just sets the directory to the main Document Builder resources (icu files, etc). If this method is not called,
 		/// the Document Builder will find resources from the current process directory.
 		/// </summary>
 		static void Initialize();
 
 		/// <summary>
-		/// Unloads the ONLYOFFICE Document Builder from the application memory when it is no longer needed.
+		/// Unloads the UNIVAULTOFFICE Document Builder from the application memory when it is no longer needed.
 		/// Generally, there is no need to dispose JS before exiting
 		/// the process, it should happen automatically. It should only be used if the process needs the resources taken up by JS.
 		/// </summary>

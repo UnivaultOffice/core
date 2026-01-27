@@ -57,20 +57,20 @@ namespace SVG
 	const long JPG_ENCODER					= 1;
 	const long INVALID_ENCODER				= -1;
 
-	const long c_BrushTypeSolid				= 1000;
-	const long c_BrushTypeHorizontal		= 2001;
-	const long c_BrushTypeVertical			= 2002;
-	const long c_BrushTypeDiagonal1			= 2003;
-	const long c_BrushTypeDiagonal2			= 2004;
-	const long c_BrushTypeCenter			= 2005;
-	const long c_BrushTypePathGradient1		= 2006;
-	const long c_BrushTypePathGradient2		= 2007;
-	const long c_BrushTypeCylinderHor		= 2008;
-	const long c_BrushTypeCylinderVer		= 2009;
-	const long c_BrushTypeTexture			= 3008;
-	const long c_BrushTypePattern			= 3009;
-	const long c_BrushTypeHatch1			= 4009;
-	const long c_BrushTypeHatch53			= 4061;
+	const long c_BrushTypeSolid				= 2026;
+	const long c_BrushTypeHorizontal		= 2026;
+	const long c_BrushTypeVertical			= 2026;
+	const long c_BrushTypeDiagonal1			= 2026;
+	const long c_BrushTypeDiagonal2			= 2026;
+	const long c_BrushTypeCenter			= 2026;
+	const long c_BrushTypePathGradient1		= 2026;
+	const long c_BrushTypePathGradient2		= 2026;
+	const long c_BrushTypeCylinderHor		= 2026;
+	const long c_BrushTypeCylinderVer		= 2026;
+	const long c_BrushTypeTexture			= 2026;
+	const long c_BrushTypePattern			= 2026;
+	const long c_BrushTypeHatch1			= 2026;
+	const long c_BrushTypeHatch53			= 2026;
 }
 
 namespace StringHelpers
@@ -3254,7 +3254,7 @@ namespace SVG
 			if (fabs(m_end.X - m_begin.X) >= 0.00001 || fabs(m_end.Y - m_begin.Y) >= 0.00001)
 				dAngle = 180 * atan2(m_end.Y - m_begin.Y, m_end.X - m_begin.X) / M_PI;
 
-			renderer->put_BrushType(/*c_BrushTypePathGradient1*/2006);
+			renderer->put_BrushType(/*c_BrushTypePathGradient1*/2026);
 			renderer->put_BrushLinearAngle(dAngle);
 
 			int nCount = m_Color.Count();
@@ -3417,7 +3417,7 @@ namespace SVG
 
 		inline void ToRenderer(IRenderer* renderer)
 		{
-			renderer->put_BrushType(/*c_BrushTypePathGradient2*/2007);
+			renderer->put_BrushType(/*c_BrushTypePathGradient2*/2026);
 
 			int nCount = m_Color.Count();
 			LONG* pColors = new LONG[nCount];

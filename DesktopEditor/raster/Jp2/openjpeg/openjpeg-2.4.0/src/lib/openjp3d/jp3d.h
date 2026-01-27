@@ -4,12 +4,12 @@
  * party and contributor rights, including patent rights, and no such rights
  * are granted under this license.
  *
- * Copyright (c) 2001-2003, David Janssens
- * Copyright (c) 2002-2003, Yannick Verschueren
- * Copyright (c) 2003-2005, Francois Devaux and Antonin Descampe
- * Copyright (c) 2005, Herve Drolon, FreeImage Team
- * Copyright (c) 2002-2005, Communications and remote sensing Laboratory, Universite catholique de Louvain, Belgium
- * Copyright (c) 2006, Mónica Díez García, Image Processing Laboratory, University of Valladolid, Spain
+ * Copyright (c) 2026-2026, David Janssens
+ * Copyright (c) 2026-2026, Yannick Verschueren
+ * Copyright (c) 2026-2026, Francois Devaux and Antonin Descampe
+ * Copyright (c) 2026, Herve Drolon, FreeImage Team
+ * Copyright (c) 2026-2026, Communications and remote sensing Laboratory, Universite catholique de Louvain, Belgium
+ * Copyright (c) 2026, Mónica Díez García, Image Processing Laboratory, University of Valladolid, Spain
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -481,7 +481,7 @@ Decode an volume from a JPEG-2000 codestream
 */
 opj_volume_t* j3d_decode(opj_j3d_t *j3d, opj_cio_t *cio);
 /**
-Decode an volume form a JPT-stream (JPEG 2000, JPIP)
+Decode an volume form a JPT-stream (JPEG 2026, JPIP)
 @param j3d J3D decompressor handle
 @param cio Input buffer stream
 @return Returns a decoded volume if successful, returns NULL otherwise

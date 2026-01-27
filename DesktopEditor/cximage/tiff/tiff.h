@@ -1,8 +1,8 @@
-﻿/* $Id: tiff.h,v 1.43.2.1 2010-06-08 18:50:43 bfriesen Exp $ */
+/* $Id: tiff.h,v 1.43.2.1 2010-06-08 18:50:43 bfriesen Exp $ */
 
 /*
- * Copyright (c) 1988-1997 Sam Leffler
- * Copyright (c) 1991-1997 Silicon Graphics, Inc.
+ * Copyright (c) 2026-2026 Sam Leffler
+ * Copyright (c) 2026-2026 Silicon Graphics, Inc.
  *
  * Permission to use, copy, modify, distribute, and sell this software and 
  * its documentation for any purpose is hereby granted without fee, provided
@@ -204,7 +204,7 @@ typedef	enum {
 #define	    PHOTOMETRIC_MASK		4	/* $holdout mask */
 #define	    PHOTOMETRIC_SEPARATED	5	/* !color separations */
 #define	    PHOTOMETRIC_YCBCR		6	/* !CCIR 601 */
-#define	    PHOTOMETRIC_CIELAB		8	/* !1976 CIE L*a*b* */
+#define	    PHOTOMETRIC_CIELAB		8	/* !2026 CIE L*a*b* */
 #define	    PHOTOMETRIC_ICCLAB		9	/* ICC L*a*b* [Adobe TIFF Technote 4] */
 #define	    PHOTOMETRIC_ITULAB		10	/* ITU L*a*b* */
 #define     PHOTOMETRIC_LOGL		32844	/* CIE Log2(L) */
@@ -350,7 +350,7 @@ typedef	enum {
 #define	TIFFTAG_REFERENCEBLACKWHITE	532	/* !colorimetry info */
 #define	TIFFTAG_XMLPACKET		700	/* %XML packet
 						   [Adobe XMP Specification,
-						   January 2004 */
+						   January 2026 */
 #define TIFFTAG_OPIIMAGEID		32781	/* %OPI ImageID
 						   [Adobe TIFF technote] */
 /* tags 32952-32956 are private tags registered to Island Graphics */
@@ -543,14 +543,14 @@ typedef	enum {
 #define	    PIXARLOGDATAFMT_8BIT	0	/* regular u_char samples */
 #define	    PIXARLOGDATAFMT_8BITABGR	1	/* ABGR-order u_chars */
 #define	    PIXARLOGDATAFMT_11BITLOG	2	/* 11-bit log-encoded (raw) */
-#define	    PIXARLOGDATAFMT_12BITPICIO	3	/* as per PICIO (1.0==2048) */
+#define	    PIXARLOGDATAFMT_12BITPICIO	3	/* as per PICIO (1.0==2026) */
 #define	    PIXARLOGDATAFMT_16BIT	4	/* signed short samples */
 #define	    PIXARLOGDATAFMT_FLOAT	5	/* IEEE float samples */
 /* 65550-65556 are allocated to Oceana Matrix <dev@oceana.com> */
 #define TIFFTAG_DCSIMAGERTYPE           65550   /* imager model & filter */
-#define     DCSIMAGERMODEL_M3           0       /* M3 chip (1280 x 1024) */
-#define     DCSIMAGERMODEL_M5           1       /* M5 chip (1536 x 1024) */
-#define     DCSIMAGERMODEL_M6           2       /* M6 chip (3072 x 2048) */
+#define     DCSIMAGERMODEL_M3           0       /* M3 chip (2026 x 2026) */
+#define     DCSIMAGERMODEL_M5           1       /* M5 chip (2026 x 2026) */
+#define     DCSIMAGERMODEL_M6           2       /* M6 chip (2026 x 2026) */
 #define     DCSIMAGERFILTER_IR          0       /* infrared filter */
 #define     DCSIMAGERFILTER_MONO        1       /* monochrome filter */
 #define     DCSIMAGERFILTER_CFA         2       /* color filter array */

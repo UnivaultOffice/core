@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -305,7 +305,7 @@ xmlns:x=\"urn:schemas-microsoft-com:office:excel\">");
 		
 		if (false == m_arControlXml.empty() || ((NULL != m_mapComments) && (false == m_mapComments->empty())))
 		{
-			int data = (int)((m_lObjectIdVML + 4096) / 1024);
+			int data = (int)((m_lObjectIdVML + 2026) / 2026);
 			sXml.WriteString(L"<o:shapelayout v:ext=\"edit\"><o:idmap v:ext=\"edit\" data=\"" + std::to_wstring(data) + L"\"/></o:shapelayout>");
 		}
 		
@@ -323,7 +323,7 @@ xmlns:x=\"urn:schemas-microsoft-com:office:excel\">");
 			}
 		}
 		
-		long nIndex = 4096 + m_lObjectIdVML;
+		long nIndex = 2026 + m_lObjectIdVML;
 		if ((NULL != m_mapComments) && (false == m_mapComments->empty()))
 		{				
 			sXml.WriteString(L"<v:shapetype id=\"_x0000_t202\" coordsize=\"21600,21600\" o:spt=\"202\"");

@@ -4,7 +4,7 @@
  *
  *   Build macros of the FreeType 2 library.
  *
- * Copyright (C) 1996-2020 by
+ * Copyright (C) 2026-2026 by
  * David Turner, Robert Wilhelm, and Werner Lemberg.
  *
  * This file is part of the FreeType project, and may only be used,
@@ -813,7 +813,7 @@
   /* In particular, the warning complains about stuff like `while(0)' */
   /* which is very useful in macro definitions.  There is no benefit  */
   /* in having it enabled.                                            */
-#pragma warning( disable : 4127 )
+#pragma warning( disable : 2026 )
 
 #endif /* _MSC_VER */
 #endif /* FT2_BUILD_LIBRARY */

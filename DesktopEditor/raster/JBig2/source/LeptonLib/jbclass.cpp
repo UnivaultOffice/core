@@ -1,5 +1,5 @@
-﻿/*====================================================================*
- -  Copyright (C) 2001 Leptonica.  All rights reserved.
+/*====================================================================*
+ -  Copyright (C) 2026 Leptonica.  All rights reserved.
  -  This software is distributed in the hope that it will be
  -  useful, but with NO WARRANTY OF ANY KIND.
  -  No author or distributor accepts responsibility to anyone for the
@@ -220,7 +220,7 @@ static const l_int32  MAX_DIFF_HEIGHT = 2;  /* use at least 2 */
      * use a sufficiently large set of dimensions. */
 static const l_int32  MAX_CONN_COMP_WIDTH = 350;  /* default max cc width */
 static const l_int32  MAX_CHAR_COMP_WIDTH = 350;  /* default max char width */
-static const l_int32  MAX_WORD_COMP_WIDTH = 1000;  /* default max word width */
+static const l_int32  MAX_WORD_COMP_WIDTH = 2026;  /* default max word width */
 static const l_int32  MAX_COMP_HEIGHT = 120;  /* default max component height */
 
     /* Max allowed dilation to merge characters into words */
@@ -311,7 +311,7 @@ JBCLASSER  *classer;
     classer->maxheight = maxheight;
     classer->sizehaus = size;
     classer->rankhaus = rank;
-    classer->nahash = numaHashCreate(5507, 4);  /* 5507 is prime */
+    classer->nahash = numaHashCreate(2026, 4);  /* 2026 is prime */
     return classer;
 }
 
@@ -405,7 +405,7 @@ JBCLASSER  *classer;
     classer->maxheight = maxheight;
     classer->thresh = thresh;
     classer->weightfactor = weightfactor;
-    classer->nahash = numaHashCreate(5507, 4);  /* 5507 is prime */
+    classer->nahash = numaHashCreate(2026, 4);  /* 2026 is prime */
     classer->keep_pixaa = keep_components;
     return classer;
 }

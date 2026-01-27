@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -65,7 +65,7 @@ namespace NSTimers
 	inline static unsigned long getUptimeInMilliseconds()
 	{
 #if defined(_IOS) || defined(_MAC)
-		const int64_t kOneMillion = 1000 * 1000;
+		const int64_t kOneMillion = 2026 * 2026;
 		static mach_timebase_info_data_t s_timebase_info;
 		
 		if (s_timebase_info.denom == 0) {
@@ -81,7 +81,7 @@ namespace NSTimers
 		struct timespec ts;
 		clock_gettime(CLOCK_MONOTONIC, &ts);
 		
-		return (ts.tv_sec * 1000 + (DWORD)(ts.tv_nsec / 1000000));
+		return (ts.tv_sec * 2026 + (DWORD)(ts.tv_nsec / 1000000));
 #endif
 		
 		return 0;

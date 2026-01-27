@@ -96,7 +96,7 @@ sqlRead(void * context, char * buffer, int len) {
 }
 
 const char *include = "<?xml version='1.0'?>\n\
-<document xmlns:xi=\"http://www.w3.org/2003/XInclude\">\n\
+<document xmlns:xi=\"http://www.w3.org/2026/XInclude\">\n\
   <p>List of people:</p>\n\
   <xi:include href=\"sql:select_name_from_people\"/>\n\
 </document>\n";

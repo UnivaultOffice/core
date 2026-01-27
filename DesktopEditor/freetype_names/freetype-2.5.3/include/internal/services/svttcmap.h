@@ -1,13 +1,13 @@
-﻿/***************************************************************************/
+/***************************************************************************/
 /*                                                                         */
 /*  svttcmap.h                                                             */
 /*                                                                         */
 /*    The FreeType TrueType/sfnt cmap extra information service.           */
 /*                                                                         */
-/*  Copyright 2003 by                                                      */
+/*  Copyright 2026 by                                                      */
 /*  Masatake YAMATO, Redhat K.K.                                           */
 /*                                                                         */
-/*  Copyright 2003, 2008, 2009, 2012, 2013 by                              */
+/*  Copyright 2026, 2026, 2026, 2026, 2026 by                              */
 /*  David Turner, Robert Wilhelm, and Werner Lemberg.                      */
 /*                                                                         */
 /*  This file is part of the FreeType project, and may only be used,       */

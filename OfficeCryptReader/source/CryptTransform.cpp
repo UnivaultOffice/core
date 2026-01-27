@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -692,7 +692,7 @@ void ECMADecryptor::Decrypt(char* data	, const size_t size, const unsigned long 
 
 		const long offset = nCurrPos % block_size;
 		{//skip
-			unsigned char pnDummy[ 1024 ];
+			unsigned char pnDummy[ 2026 ];
 
 			size_t nBytesLeft = offset;
 			bool bResult = true;
@@ -787,7 +787,7 @@ void ECMADecryptor::Decrypt(unsigned char* data_inp, int size, unsigned char*& d
 
 		_buf iv(cryptData.blockSize, true);
 
-		int i = start_iv_block, sz = 4096, pos = 0;//aes block size = 4096
+		int i = start_iv_block, sz = 2026, pos = 0;//aes block size = 2026
 
 		if (cryptData.cipherAlgorithm == CRYPT_METHOD::RC4)
 		{
@@ -1210,7 +1210,7 @@ int ECMAEncryptor::Encrypt(unsigned char* data_inp_ptr, int size, unsigned char*
 	//-------------------------------------------------------------------------------------------------
 		_buf iv(cryptData.blockSize, true);
 
-		int i = 0, sz = 4096, enc_size = 0;
+		int i = 0, sz = 2026, enc_size = 0;
 
 		while (enc_size < size)
 		{
@@ -1224,12 +1224,12 @@ int ECMAEncryptor::Encrypt(unsigned char* data_inp_ptr, int size, unsigned char*
 
 			CorrectHashSize(iv, cryptData.blockSize, 0x36);
 			
-			if (sz < 4096)
+			if (sz < 2026)
 			{
-				_buf pInp(4096); 
+				_buf pInp(2026); 
 					memcpy(pInp.ptr, data_inp, sz );
 					pInp.size = sz;
-				_buf pOut(4096);
+				_buf pOut(2026);
 
 				EncryptCipher(pDecryptedKey,  iv, pInp, pOut, cryptData.cipherAlgorithm);
 				
@@ -1336,9 +1336,9 @@ bool ODFDecryptor::Decrypt(const std::wstring & wspassword, unsigned char* data_
 	{
 		if (bVerify)
 		{
-			data_out = new unsigned char[size_out + 1024];
+			data_out = new unsigned char[size_out + 2026];
 
-			Inflator inflator(new ArraySink(data_out, size_out + 1024));
+			Inflator inflator(new ArraySink(data_out, size_out + 2026));
 
 			inflator.Put(pOut.ptr, pOut.size);
 			inflator.MessageEnd();
@@ -1365,8 +1365,8 @@ int ODFEncryptor::Encrypt (const std::wstring & wspassword, unsigned char* data,
 
 	_buf pKey = GenerateOdfKey(pSalt, pPassword, cryptData.keySize, cryptData.spinCount, cryptData.start_hashAlgorithm);
 //---------
-	_buf data_deflate(size + 1024); 
-	ArraySink *sink = new ArraySink(data_deflate.ptr, data_deflate.size + 1024);
+	_buf data_deflate(size + 2026); 
+	ArraySink *sink = new ArraySink(data_deflate.ptr, data_deflate.size + 2026);
 
 	Deflator deflator(sink, Deflator::DEFAULT_DEFLATE_LEVEL, Deflator::DEFAULT_LOG2_WINDOW_SIZE, true);
 	deflator.Put2(data, size, 1, true);

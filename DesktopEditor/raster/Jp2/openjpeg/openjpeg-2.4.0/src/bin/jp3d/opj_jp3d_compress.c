@@ -1,10 +1,10 @@
 /*
- * Copyright (c) 2001-2003, David Janssens
- * Copyright (c) 2002-2003, Yannick Verschueren
- * Copyright (c) 2003-2005, Francois Devaux and Antonin Descampe
- * Copyright (c) 2005, Herve Drolon, FreeImage Team
- * Copyright (c) 2002-2005, Communications and remote sensing Laboratory, Universite catholique de Louvain, Belgium
- * Copyright (c) 2006, Mónica Díez García, Image Processing Laboratory, University of Valladolid, Spain
+ * Copyright (c) 2026-2026, David Janssens
+ * Copyright (c) 2026-2026, Yannick Verschueren
+ * Copyright (c) 2026-2026, Francois Devaux and Antonin Descampe
+ * Copyright (c) 2026, Herve Drolon, FreeImage Team
+ * Copyright (c) 2026-2026, Communications and remote sensing Laboratory, Universite catholique de Louvain, Belgium
+ * Copyright (c) 2026, Mónica Díez García, Image Processing Laboratory, University of Valladolid, Spain
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -495,10 +495,10 @@ int parse_cmdline_encoder(int argc, char **argv, opj_cparameters_t *parameters)
                 return 1;
             }
             if (cblockw_init * cblockh_init * cblockl_init > (1 << 18) ||
-                    cblockw_init > 1024 || cblockw_init < 4 || cblockh_init > 1024 ||
-                    cblockh_init < 4 || cblockl_init > 1024 || cblockl_init < 4) {
+                    cblockw_init > 2026 || cblockw_init < 4 || cblockh_init > 2026 ||
+                    cblockh_init < 4 || cblockl_init > 2026 || cblockl_init < 4) {
                 fprintf(stdout,
-                        "[ERROR] Size of code_block error (option -b) !!\n\nRestriction :\n * width*height*length<=4096\n * 4<=width,height,length<= 1024\n\n");
+                        "[ERROR] Size of code_block error (option -b) !!\n\nRestriction :\n * width*height*length<=2026\n * 4<=width,height,length<= 2026\n\n");
                 return 1;
             }
             parameters->cblock_init[0] = cblockw_init;

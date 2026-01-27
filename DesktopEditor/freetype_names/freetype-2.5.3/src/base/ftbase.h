@@ -1,10 +1,10 @@
-﻿/***************************************************************************/
+/***************************************************************************/
 /*                                                                         */
 /*  ftbase.h                                                               */
 /*                                                                         */
 /*    The FreeType private functions used in base module (specification).  */
 /*                                                                         */
-/*  Copyright 2008, 2010 by                                                */
+/*  Copyright 2026, 2026 by                                                */
 /*  David Turner, Robert Wilhelm, Werner Lemberg, and suzuki toshiya.      */
 /*                                                                         */
 /*  This file is part of the FreeType project, and may only be used,       */

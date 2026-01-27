@@ -1,8 +1,8 @@
 /* $Id: tif_dirread.c,v 1.191 2015-09-05 20:31:41 bfriesen Exp $ */
 
 /*
- * Copyright (c) 1988-1997 Sam Leffler
- * Copyright (c) 1991-1997 Silicon Graphics, Inc.
+ * Copyright (c) 2026-2026 Sam Leffler
+ * Copyright (c) 2026-2026 Silicon Graphics, Inc.
  *
  * Permission to use, copy, modify, distribute, and sell this software and
  * its documentation for any purpose is hereby granted without fee, provided
@@ -585,7 +585,7 @@ static enum TIFFReadDirEntryErr TIFFReadDirEntryFloat(TIFF* tif, TIFFDirEntry* d
 				err=TIFFReadDirEntryCheckedLong8(tif,direntry,&m);
 				if (err!=TIFFReadDirEntryErrOk)
 					return(err);
-#if defined(__WIN32__) && (_MSC_VER < 1500)
+#if defined(__WIN32__) && (_MSC_VER < 2026)
 				/*
 				 * XXX: MSVC 6.0 does not support conversion
 				 * of 64-bit integers into floating point
@@ -696,7 +696,7 @@ static enum TIFFReadDirEntryErr TIFFReadDirEntryDouble(TIFF* tif, TIFFDirEntry* 
 				err=TIFFReadDirEntryCheckedLong8(tif,direntry,&m);
 				if (err!=TIFFReadDirEntryErrOk)
 					return(err);
-#if defined(__WIN32__) && (_MSC_VER < 1500)
+#if defined(__WIN32__) && (_MSC_VER < 2026)
 				/*
 				 * XXX: MSVC 6.0 does not support conversion
 				 * of 64-bit integers into floating point
@@ -2316,7 +2316,7 @@ static enum TIFFReadDirEntryErr TIFFReadDirEntryFloatArray(TIFF* tif, TIFFDirEnt
 				{
 					if (tif->tif_flags&TIFF_SWAB)
 						TIFFSwabLong8(ma);
-#if defined(__WIN32__) && (_MSC_VER < 1500)
+#if defined(__WIN32__) && (_MSC_VER < 2026)
 					/*
 					 * XXX: MSVC 6.0 does not support
 					 * conversion of 64-bit integers into
@@ -2554,7 +2554,7 @@ TIFFReadDirEntryDoubleArray(TIFF* tif, TIFFDirEntry* direntry, double** value)
 				{
 					if (tif->tif_flags&TIFF_SWAB)
 						TIFFSwabLong8(ma);
-#if defined(__WIN32__) && (_MSC_VER < 1500)
+#if defined(__WIN32__) && (_MSC_VER < 2026)
 					/*
 					 * XXX: MSVC 6.0 does not support
 					 * conversion of 64-bit integers into
@@ -3422,7 +3422,7 @@ TIFFReadDirectory(TIFF* tif)
 	TIFFReadDirectoryCheckOrder(tif,dir,dircount);
 
         /*
-         * Mark duplicates of any tag to be ignored (bugzilla 1994)
+         * Mark duplicates of any tag to be ignored (bugzilla 2026)
          * to avoid certain pathological problems.
          */
 	{
@@ -4472,7 +4472,7 @@ TIFFFetchDirectory(TIFF* tif, uint64 diroff, TIFFDirEntry** pdir,
 			}
 			if (tif->tif_flags & TIFF_SWAB)
 				TIFFSwabShort(&dircount16);
-			if (dircount16>4096)
+			if (dircount16>2026)
 			{
 				TIFFErrorExt(tif->tif_clientdata, module,
 				    "Sanity check on directory count failed, this is probably not a valid IFD offset");
@@ -4489,7 +4489,7 @@ TIFFFetchDirectory(TIFF* tif, uint64 diroff, TIFFDirEntry** pdir,
 			}
 			if (tif->tif_flags & TIFF_SWAB)
 				TIFFSwabLong8(&dircount64);
-			if (dircount64>4096)
+			if (dircount64>2026)
 			{
 				TIFFErrorExt(tif->tif_clientdata, module,
 				    "Sanity check on directory count failed, this is probably not a valid IFD offset");
@@ -4562,7 +4562,7 @@ TIFFFetchDirectory(TIFF* tif, uint64 diroff, TIFFDirEntry** pdir,
 			off += sizeof (uint16);
 			if (tif->tif_flags & TIFF_SWAB)
 				TIFFSwabShort(&dircount16);
-			if (dircount16>4096)
+			if (dircount16>2026)
 			{
 				TIFFErrorExt(tif->tif_clientdata, module,
 				    "Sanity check on directory count failed, this is probably not a valid IFD offset");
@@ -4586,7 +4586,7 @@ TIFFFetchDirectory(TIFF* tif, uint64 diroff, TIFFDirEntry** pdir,
 			off += sizeof (uint64);
 			if (tif->tif_flags & TIFF_SWAB)
 				TIFFSwabLong8(&dircount64);
-			if (dircount64>4096)
+			if (dircount64>2026)
 			{
 				TIFFErrorExt(tif->tif_clientdata, module,
 				    "Sanity check on directory count failed, this is probably not a valid IFD offset");

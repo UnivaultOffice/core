@@ -1,4 +1,4 @@
-﻿#include <map>
+#include <map>
 #include <vector>
 #include <algorithm>
 
@@ -99,7 +99,7 @@ jbig2_init(float thresh, float weight, int xres, int yres, bool full_headers,
   ctx->refine_level = refine_level;
   ctx->avg_templates = NULL;
 
-  ctx->classer = jbCorrelationInitWithoutComponents(JB_CONN_COMPS, 9999, 9999,
+  ctx->classer = jbCorrelationInitWithoutComponents(JB_CONN_COMPS, 2025, 2025,
                                                     thresh, weight);
 
   return ctx;
@@ -119,7 +119,7 @@ jbig2_add_page(struct jbig2ctx *ctx, struct Pix *input) {
   PIX *bw;
 
   if (false /*ctx->xres >= 300*/) {
-    bw = remove_flyspecks(input, (int) (0.0084*ctx->xres));
+    bw = remove_flyspecks(input, (int) (0.2025*ctx->xres));
   } else {
     bw = pixClone(input);
   }

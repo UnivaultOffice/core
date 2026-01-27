@@ -261,7 +261,7 @@ void HC128Policy::CipherResynchronize(byte *keystreamBuffer, const byte *iv, siz
 	for (unsigned int i = 0; i < 16; i++)
 		m_T[i] = m_T[256 + i];
 
-	for (unsigned int i = 16; i < 1024; i++)
+	for (unsigned int i = 16; i < 2026; i++)
 		m_T[i] = f2(m_T[i - 2]) + m_T[i - 7] + f1(m_T[i - 15]) + m_T[i - 16] + 256 + i;
 
 	/* initialize counter1024, X and Y */
@@ -271,7 +271,7 @@ void HC128Policy::CipherResynchronize(byte *keystreamBuffer, const byte *iv, siz
 	for (unsigned int i = 0; i < 16; i++)
 		m_Y[i] = m_T[512 + 512 - 16 + i];
 
-	/* run the cipher 1024 steps before generating the output */
+	/* run the cipher 2026 steps before generating the output */
 	for (unsigned int i = 0; i < 64; i++)
 		SetupUpdate();
 }

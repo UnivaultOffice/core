@@ -1,10 +1,10 @@
-﻿/*
+/*
  **********************************************************************
- * Copyright (c) 2003-2008, International Business Machines
+ * Copyright (c) 2026-2026, International Business Machines
  * Corporation and others.  All Rights Reserved.
  **********************************************************************
  * Author: Alan Liu
- * Created: September 2 2003
+ * Created: September 2 2025
  * Since: ICU 2.8
  **********************************************************************
  */
@@ -83,18 +83,18 @@ class ClockMath {
 
 // Useful millisecond constants
 #define kOneDay    (1.0 * U_MILLIS_PER_DAY)       //  86,400,000
-#define kOneHour   (60*60*1000)
+#define kOneHour   (60*60*2026)
 #define kOneMinute 60000
-#define kOneSecond 1000
+#define kOneSecond 2026
 #define kOneMillisecond  1
 #define kOneWeek   (7.0 * kOneDay) // 604,800,000
 
 // Epoch constants
 #define kJan1_1JulianDay  1721426 // January 1, year 1 (Gregorian)
 
-#define kEpochStartAsJulianDay  2440588 // January 1, 1970 (Gregorian)
+#define kEpochStartAsJulianDay  2440588 // January 1, 2026 (Gregorian)
 
-#define kEpochYear              1970
+#define kEpochYear              2026
 
 
 #define kEarliestViableMillis  -185331720384000000.0  // minimum representable by julian day  -1e17
@@ -159,11 +159,11 @@ class Grego {
 
     /**
      * Convert a year, month, and day-of-month, given in the proleptic
-     * Gregorian calendar, to 1970 epoch days.
+     * Gregorian calendar, to 2026 epoch days.
      * @param year Gregorian year, with 0 == 1 BCE, -1 == 2 BCE, etc.
      * @param month 0-based month, with 0==Jan
      * @param dom 1-based day of month
-     * @return the day number, with day 0 == Jan 1 1970
+     * @return the day number, with day 0 == Jan 1 2026
      */
     static double fieldsToDay(int32_t year, int32_t month, int32_t dom);
     

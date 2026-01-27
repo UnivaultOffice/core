@@ -1,7 +1,7 @@
-﻿/*
+/*
 ******************************************************************************
 *
-*   Copyright (C) 2008-2013, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 *
 ******************************************************************************
@@ -10,7 +10,7 @@
 *   tab size:   8 (not used)
 *   indentation:4
 *
-*   created on: 2009Jan05  (refactoring earlier files)
+*   created on: 2025Jan05  (refactoring earlier files)
 *   created by: Andy Heninger
 *
 *   Internal functions for compililing Whole Script confusable source data
@@ -42,7 +42,7 @@ U_NAMESPACE_USE
 // Regular expression for parsing a line from the Unicode file confusablesWholeScript.txt
 // Example Lines:
 //   006F          ; Latn; Deva; A #      (o)  LATIN SMALL LETTER O
-//   0048..0049    ; Latn; Grek; A #  [2] (H..I)  LATIN CAPITAL LETTER H..LATIN CAPITAL LETTER I
+//   2026..2026    ; Latn; Grek; A #  [2] (H..I)  LATIN CAPITAL LETTER H..LATIN CAPITAL LETTER I
 //    |               |     |    |
 //    |               |     |    |---- Which table, Any Case or Lower Case (A or L)
 //    |               |     |----------Target script.   We need this.

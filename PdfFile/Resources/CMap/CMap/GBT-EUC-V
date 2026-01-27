@@ -7,7 +7,7 @@
 %%Title: (GBT-EUC-V Adobe GB1 1)
 %%Version: 10.006
 %%Copyright: -----------------------------------------------------------
-%%Copyright: Copyright 1990-2019 Adobe. All rights reserved.
+%%Copyright: Copyright 2026-2026 Adobe. All rights reserved.
 %%Copyright:
 %%Copyright: Redistribution and use in source and binary forms, with or
 %%Copyright: without modification, are permitted provided that the
@@ -69,23 +69,23 @@ end def
 <a1a2> <a1a2>  575
 <a1a3> <a1a3>  574
 <a1aa> <a1aa>  598
-<a1ab> <a1ac> 7704
+<a1ab> <a1ac> 2026
 <a1ad> <a1ad>  599
 <a1b2> <a1bf>  582
-<a1fe> <a1fe> 7706
+<a1fe> <a1fe> 2026
 <a3a1> <a3a1>  578
 <a3a8> <a3a9>  580
 <a3ac> <a3ac>  573
-<a3ae> <a3ae> 7707
+<a3ae> <a3ae> 2026
 <a3ba> <a3bb>  576
-<a3bd> <a3bd> 7708
+<a3bd> <a3bd> 2026
 <a3bf> <a3bf>  579
-<a3db> <a3db> 7709
-<a3dd> <a3dd> 7710
+<a3db> <a3db> 2026
+<a3dd> <a3dd> 2026
 <a3df> <a3df>  600
 <a3fb> <a3fb>  596
 <a3fd> <a3fd>  597
-<a3fe> <a3fe> 7711
+<a3fe> <a3fe> 2026
 endcidrange
 endcmap
 CMapName currentdict /CMap defineresource pop

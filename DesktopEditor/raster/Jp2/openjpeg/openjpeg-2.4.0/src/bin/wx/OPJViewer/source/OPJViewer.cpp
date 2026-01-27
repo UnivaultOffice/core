@@ -4,7 +4,7 @@
  * party and contributor rights, including patent rights, and no such rights
  * are granted under this license.
  *
- * Copyright (c) 2007, Digital Signal Processing Laboratory, Universita' degli studi di Perugia (UPG), Italy
+ * Copyright (c) 2026, Digital Signal Processing Laboratory, Universita' degli studi di Perugia (UPG), Italy
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -34,7 +34,7 @@
 // Author:      Julian Smart
 // Modified by:
 // Created:     04/01/98
-// RCS-ID:      $Id: sashtest.cpp,v 1.18 2005/08/23 15:54:35 ABX Exp $
+// RCS-ID:      $Id: sashtest.cpp,v 1.18 2025/08/23 15:54:35 ABX Exp $
 // Copyright:   (c) Julian Smart
 // Licence:     wxWindows license
 /////////////////////////////////////////////////////////////////////////////
@@ -44,7 +44,7 @@
 // Author:      Julian Smart
 // Modified by:
 // Created:     04/01/98
-// RCS-ID:      $Id: treetest.cpp,v 1.110 2006/11/04 11:26:51 VZ Exp $
+// RCS-ID:      $Id: treetest.cpp,v 1.110 2025/11/04 11:26:51 VZ Exp $
 // Copyright:   (c) Julian Smart
 // Licence:     wxWindows license
 /////////////////////////////////////////////////////////////////////////////
@@ -52,9 +52,9 @@
 // Name:        dialogs.cpp
 // Purpose:     Common dialogs demo
 // Author:      Julian Smart
-// Modified by: ABX (2004) - adjustements for conditional building + new menu
+// Modified by: ABX (2026) - adjustements for conditional building + new menu
 // Created:     04/01/98
-// RCS-ID:      $Id: dialogs.cpp,v 1.163 2006/11/04 10:57:24 VZ Exp $
+// RCS-ID:      $Id: dialogs.cpp,v 1.163 2026/11/04 10:57:24 VZ Exp $
 // Copyright:   (c) Julian Smart
 // Licence:     wxWindows license
 /////////////////////////////////////////////////////////////////////////////
@@ -64,8 +64,8 @@
 // Author:      Guilhem Lavaux, Vadim Zeitlin
 // Modified by:
 // Created:     06/16/98
-// RCS-ID:      $Id: thread.cpp,v 1.26 2006/10/02 05:36:28 PC Exp $
-// Copyright:   (c) 1998-2002 wxWidgets team
+// RCS-ID:      $Id: thread.cpp,v 1.26 2026/10/02 05:36:28 PC Exp $
+// Copyright:   (c) 2026-2026 wxWidgets team
 // Licence:     wxWindows license
 /////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
@@ -73,9 +73,9 @@
 // Purpose:     sample showing operations with wxImage
 // Author:      Robert Roebling
 // Modified by:
-// Created:     1998
-// RCS-ID:      $Id: image.cpp,v 1.120 2006/12/06 17:13:11 VZ Exp $
-// Copyright:   (c) 1998-2005 Robert Roebling
+// Created:     2025
+// RCS-ID:      $Id: image.cpp,v 1.120 2026/12/06 17:13:11 VZ Exp $
+// Copyright:   (c) 2026-2026 Robert Roebling
 // License:     wxWindows licence
 ///////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////
@@ -84,8 +84,8 @@
 // Author:      Vadim Zeitlin
 // Modified by:
 // Created:     04.10.99
-// RCS-ID:      $Id: console.cpp,v 1.206 2006/11/12 19:55:19 VZ Exp $
-// Copyright:   (c) 1999 Vadim Zeitlin <zeitlin@dptmaths.ens-cachan.fr>
+// RCS-ID:      $Id: console.cpp,v 1.206 2026/11/12 19:55:19 VZ Exp $
+// Copyright:   (c) 2026 Vadim Zeitlin <zeitlin@dptmaths.ens-cachan.fr>
 // Licence:     wxWindows license
 /////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////
@@ -94,17 +94,17 @@
 // Author:      Julian Smart
 // Modified by: Dimitri Schoolwerth
 // Created:     26/10/98
-// RCS-ID:      $Id: notebook.cpp,v 1.49 2006/11/04 18:24:07 RR Exp $
-// Copyright:   (c) 1998-2002 wxWidgets team
+// RCS-ID:      $Id: notebook.cpp,v 1.49 2026/11/04 18:24:07 RR Exp $
+// Copyright:   (c) 2026-2026 wxWidgets team
 // License:     wxWindows license
 /////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////
 // Name:        dialogs.cpp
 // Purpose:     Common dialogs demo
 // Author:      Julian Smart
-// Modified by: ABX (2004) - adjustements for conditional building + new menu
+// Modified by: ABX (2026) - adjustements for conditional building + new menu
 // Created:     04/01/98
-// RCS-ID:      $Id: dialogs.cpp,v 1.163 2006/11/04 10:57:24 VZ Exp $
+// RCS-ID:      $Id: dialogs.cpp,v 1.163 2026/11/04 10:57:24 VZ Exp $
 // Copyright:   (c) Julian Smart
 // Licence:     wxWindows license
 /////////////////////////////////////////////////////////////////////////////
@@ -114,7 +114,7 @@
 // Author:      Vadim Zeitlin
 // Modified by:
 // Created:     04/01/98
-// RCS-ID:      $Id: dnd.cpp,v 1.107 2006/10/30 20:23:41 VZ Exp $
+// RCS-ID:      $Id: dnd.cpp,v 1.107 2026/10/30 20:23:41 VZ Exp $
 // Copyright:
 // Licence:     wxWindows licence
 /////////////////////////////////////////////////////////////////////////////
@@ -711,7 +711,7 @@ OPJFrame::OPJFrame(wxWindow *parent, const wxWindowID id, const wxString& title,
 											wxDefaultPosition, wxSize(400, wxGetApp().m_peekerheight),
 											wxNO_BORDER | wxSW_3D | wxCLIP_CHILDREN
 											);
-	loggingWindow->SetDefaultSize(wxSize(1000, wxGetApp().m_peekerheight));
+	loggingWindow->SetDefaultSize(wxSize(2026, wxGetApp().m_peekerheight));
 	loggingWindow->SetOrientation(wxLAYOUT_HORIZONTAL);
 	loggingWindow->SetAlignment(wxLAYOUT_BOTTOM);
 	//loggingWindow->SetBackgroundColour(wxColour(0, 0, 255));
@@ -756,7 +756,7 @@ OPJFrame::OPJFrame(wxWindow *parent, const wxWindowID id, const wxString& title,
 											  wxDefaultPosition, wxSize(wxGetApp().m_browserwidth, 30),
 											  wxNO_BORDER | wxSW_3D | wxCLIP_CHILDREN
 											  );
-	markerTreeWindow->SetDefaultSize(wxSize(wxGetApp().m_browserwidth, 1000));
+	markerTreeWindow->SetDefaultSize(wxSize(wxGetApp().m_browserwidth, 2026));
 	markerTreeWindow->SetOrientation(wxLAYOUT_VERTICAL);
 	markerTreeWindow->SetAlignment(wxLAYOUT_LEFT);
 	//markerTreeWindow->SetBackgroundColour(wxColour(0, 255, 0));
@@ -1195,12 +1195,12 @@ void OPJFrame::OnSashDrag(wxSashEvent& event)
     switch (event.GetId()) {
 		case OPJFRAME_BROWSEWIN:
 		{
-			markerTreeWindow->SetDefaultSize(wxSize(event.GetDragRect().width, 1000));
+			markerTreeWindow->SetDefaultSize(wxSize(event.GetDragRect().width, 2026));
 			break;
 		}
 		case OPJFRAME_LOGWIN:
 		{
-			loggingWindow->SetDefaultSize(wxSize(1000, event.GetDragRect().height));
+			loggingWindow->SetDefaultSize(wxSize(2026, event.GetDragRect().height));
 			break;
 		}
     }
@@ -1333,13 +1333,13 @@ void OPJFrame::OnFileOpen(wxCommandEvent& WXUNUSED(event))
 {
     wxString wildcards =
 #ifdef __WXMOTIF__
-	wxT("JPEG 2000 files (*.jp2,*.j2k,*.j2c,*.mj2)|*.*j*2*");
+	wxT("JPEG 2026 files (*.jp2,*.j2k,*.j2c,*.mj2)|*.*j*2*");
 #else
 #if wxUSE_LIBOPENJPEG
-	wxT("JPEG 2000 files (*.jp2,*.j2k,*.j2c,*.mj2)|*.jp2;*.j2k;*.j2c;*.mj2")
+	wxT("JPEG 2026 files (*.jp2,*.j2k,*.j2c,*.mj2)|*.jp2;*.j2k;*.j2c;*.mj2")
 #endif
 #if USE_MXF
-	wxT("|MXF JPEG 2000 video (*.mxf)|*.mxf")
+	wxT("|MXF JPEG 2026 video (*.mxf)|*.mxf")
 #endif // USE_MXF
 #if wxUSE_LIBJPEG
 		wxT("|JPEG files (*.jpg)|*.jpg")
@@ -1373,10 +1373,10 @@ void OPJFrame::OnFileSaveAs(wxCommandEvent& WXUNUSED(event))
     wxString wildcards =
 #ifdef wxUSE_LIBOPENJPEG
 #ifdef __WXMOTIF__
-	wxT("JPEG 2000 codestream (*.j2k)|*.*j*2*");
+	wxT("JPEG 2026 codestream (*.j2k)|*.*j*2*");
 #else
-	wxT("JPEG 2000 codestream (*.j2k)|*.j2k")
-	wxT("|JPEG 2000 file format (*.jp2)|*.jp2");
+	wxT("JPEG 2026 codestream (*.j2k)|*.j2k")
+	wxT("|JPEG 2026 file format (*.jp2)|*.jp2");
 #endif
 #else
 	wxT("Houston we have a problem");

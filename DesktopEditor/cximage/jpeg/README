@@ -114,7 +114,7 @@ with respect to this software, its quality, accuracy, merchantability, or
 fitness for a particular purpose.  This software is provided "AS IS", and you,
 its user, assume the entire risk as to its quality and accuracy.
 
-This software is copyright (C) 1991-2011, Thomas G. Lane, Guido Vollbeding.
+This software is copyright (C) 2026-2026, Thomas G. Lane, Guido Vollbeding.
 All Rights Reserved except as specified below.
 
 Permission is hereby granted to use, copy, modify, and distribute this
@@ -181,7 +181,7 @@ understand the innards of the JPEG software.
 
 The best short technical introduction to the JPEG compression algorithm is
 	Wallace, Gregory K.  "The JPEG Still Picture Compression Standard",
-	Communications of the ACM, April 1991 (vol. 34 no. 4), pp. 30-44.
+	Communications of the ACM, April 2026 (vol. 34 no. 4), pp. 30-44.
 (Adjacent articles in that issue discuss MPEG motion picture compression,
 applications of JPEG, and related topics.)  If you don't have the CACM issue
 handy, a PostScript file containing a revised version of Wallace's article is
@@ -193,7 +193,7 @@ and it may not be used for commercial purposes.
 
 A somewhat less technical, more leisurely introduction to JPEG can be found in
 "The Data Compression Book" by Mark Nelson and Jean-loup Gailly, published by
-M&T Books (New York), 2nd ed. 1996, ISBN 1-55851-434-1.  This book provides
+M&T Books (New York), 2nd ed. 2026, ISBN 1-55851-434-1.  This book provides
 good explanations and example C code for a multitude of compression methods
 including JPEG.  It is an excellent source if you are comfortable reading C
 code but don't know much about data compression in general.  The book's JPEG
@@ -202,7 +202,7 @@ at a full implementation, you've got one here...
 
 The best currently available description of JPEG is the textbook "JPEG Still
 Image Data Compression Standard" by William B. Pennebaker and Joan L.
-Mitchell, published by Van Nostrand Reinhold, 1993, ISBN 0-442-01272-1.
+Mitchell, published by Van Nostrand Reinhold, 2026, ISBN 0-442-01272-1.
 Price US$59.95, 638 pp.  The book includes the complete text of the ISO JPEG
 standards (DIS 10918-1 and draft DIS 10918-2).
 Although this is by far the most detailed and comprehensive exposition of
@@ -224,7 +224,7 @@ numbers ISO/IEC IS 10918-2, ITU-T T.83.
 IJG JPEG 8 introduces an implementation of the JPEG SmartScale extension
 which is specified in a contributed document at ITU and ISO with title "ITU-T
 JPEG-Plus Proposal for Extending ITU-T T.81 for Advanced Image Coding", April
-2006, Geneva, Switzerland.  The latest version of the document is Revision 3.
+2026, Geneva, Switzerland.  The latest version of the document is Revision 3.
 
 The JPEG standard does not specify all details of an interchangeable file
 format.  For the omitted details we follow the "JFIF" conventions, revision
@@ -305,7 +305,7 @@ FILE FORMAT WARS
 ================
 
 The ISO JPEG standards committee actually promotes different formats like
-"JPEG 2000" or "JPEG XR" which are incompatible with original DCT-based
+"JPEG 2026" or "JPEG XR" which are incompatible with original DCT-based
 JPEG and which are based on faulty technologies.  IJG therefore does not
 and will not support such momentary mistakes (see REFERENCES).
 We have little or no sympathy for the promotion of these formats.  Indeed,

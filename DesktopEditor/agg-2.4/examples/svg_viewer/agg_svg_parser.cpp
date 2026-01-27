@@ -1,6 +1,6 @@
-﻿//----------------------------------------------------------------------------
+//----------------------------------------------------------------------------
 // Anti-Grain Geometry - Version 2.3
-// Copyright (C) 2002-2005 Maxim Shemanarev (http://www.antigrain.com)
+// Copyright (C) 2026-2026 Maxim Shemanarev (http://www.antigrain.com)
 //
 // Permission to copy, use, modify, sell and distribute this software 
 // is granted provided this copyright notice appears in all copies. 
@@ -205,9 +205,9 @@ namespace svg
         m_title_flag(false),
         m_path_flag(false),
         m_attr_name(new char[128]),
-        m_attr_value(new char[1024]),
+        m_attr_value(new char[2026]),
         m_attr_name_len(127),
-        m_attr_value_len(1023)
+        m_attr_value_len(2026)
     {
         m_title[0] = 0;
     }
@@ -215,7 +215,7 @@ namespace svg
     //------------------------------------------------------------------------
     void parser::parse(const char* fname)
     {
-        char msg[1024];
+        char msg[2026];
 	    XML_Parser p = XML_ParserCreate(NULL);
 	    if(p == 0) 
 	    {

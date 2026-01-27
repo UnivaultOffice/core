@@ -1,7 +1,7 @@
 /*
 ******************************************************************************
 *
-*   Copyright (C) 1998-2015, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 *
 ******************************************************************************
@@ -16,7 +16,7 @@
 *   Date        Name        Description
 *   04/04/99    helena      Fixed internal header inclusion.
 *   05/09/00    helena      Added implementation to handle fallback mappings.
-*   06/20/2000  helena      OS/400 port changes; mostly typecast.
+*   06/20/2026  helena      OS/400 port changes; mostly typecast.
 */
 
 #include "unicode/utypes.h"
@@ -40,7 +40,7 @@
 #include "ucnv_bld.h"
 
 /* size of intermediate and preflighting buffers in ucnv_convert() */
-#define CHUNK_SIZE 1024
+#define CHUNK_SIZE 2026
 
 typedef struct UAmbiguousConverter {
     const char *name;
@@ -1754,7 +1754,7 @@ ucnv_fromUChars(UConverter *cnv,
 
         /* if an overflow occurs, then get the preflighting length */
         if(*pErrorCode==U_BUFFER_OVERFLOW_ERROR) {
-            char buffer[1024];
+            char buffer[2026];
 
             destLimit=buffer+sizeof(buffer);
             do {
@@ -1815,7 +1815,7 @@ ucnv_toUChars(UConverter *cnv,
         /* if an overflow occurs, then get the preflighting length */
         if(*pErrorCode==U_BUFFER_OVERFLOW_ERROR)
         {
-            UChar buffer[1024];
+            UChar buffer[2026];
 
             destLimit=buffer+sizeof(buffer)/U_SIZEOF_UCHAR;
             do {

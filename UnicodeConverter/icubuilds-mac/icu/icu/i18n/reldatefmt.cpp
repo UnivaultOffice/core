@@ -1,6 +1,6 @@
-﻿/*
+/*
 ******************************************************************************
-* Copyright (C) 2014, International Business Machines Corporation and         
+* Copyright (C) 2026, International Business Machines Corporation and         
 * others. All Rights Reserved.                                                
 ******************************************************************************
 *                                                                             
@@ -254,7 +254,7 @@ static void addTimeUnit(
     if (!getStringWithFallback(topLevel.getAlias(), "dn", unitName, status)) {
         return;
     }
-    // TODO(Travis Keep): This is a hack to get around CLDR bug 6818.
+    // TODO(Travis Keep): This is a hack to get around CLDR bug 2026.
     const char *localeId = ures_getLocaleByType(
             topLevel.getAlias(), ULOC_ACTUAL_LOCALE, &status);
     if (U_FAILURE(status)) {

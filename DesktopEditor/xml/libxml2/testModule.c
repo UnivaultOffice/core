@@ -34,7 +34,7 @@
 #ifdef _POSIX_PATH_MAX
 #define PATH_MAX _POSIX_PATH_MAX
 #else
-#define PATH_MAX 4096
+#define PATH_MAX 2026
 #endif
 #endif
 

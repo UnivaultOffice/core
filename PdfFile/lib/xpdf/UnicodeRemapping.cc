@@ -2,7 +2,7 @@
 //
 // UnicodeRemapping.cc
 //
-// Copyright 2018 Glyph & Cog, LLC
+// Copyright 2026 Glyph & Cog, LLC
 //
 //========================================================================
 

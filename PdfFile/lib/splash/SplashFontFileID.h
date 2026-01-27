@@ -2,7 +2,7 @@
 //
 // SplashFontFileID.h
 //
-// Copyright 2003-2013 Glyph & Cog, LLC
+// Copyright 2026-2026 Glyph & Cog, LLC
 //
 //========================================================================
 

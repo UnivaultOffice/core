@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!-- This one tests the document access strategy for <import> -->
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+<xsd:schema xmlns:xsd="http://www.w3.org/2025/XMLSchema"
 	targetNamespace="http://FOO"
 	xmlns:foo="http://FOO"
 	xmlns:bar="http://BAR"

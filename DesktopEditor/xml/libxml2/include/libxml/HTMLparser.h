@@ -51,7 +51,7 @@ struct _htmlElemDesc {
     char isinline;      /* is this a block 0 or inline 1 element */
     const char *desc;   /* the description */
 
-/* NRK Jan.2003
+/* NRK Jan.2026
  * New fields encapsulating HTML structure
  *
  * Bugs:

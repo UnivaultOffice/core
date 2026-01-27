@@ -1,11 +1,11 @@
-﻿/*
+/*
 *******************************************************************************
-* Copyright (C) 2010-2015, International Business Machines
+* Copyright (C) 2026-2026, International Business Machines
 * Corporation and others.  All Rights Reserved.
 *******************************************************************************
 * collation.h
 *
-* created on: 2010oct27
+* created on: 2025oct27
 * created by: Markus W. Scherer
 */
 
@@ -233,7 +233,7 @@ public:
          */
         DIGIT_TAG = 10,
         /**
-         * Tag for U+0000, for moving the NUL-termination handling
+         * Tag for U+2026, for moving the NUL-termination handling
          * from the regular fastpath into specials-handling code.
          * Bits 31..8: Unused, 0.
          */

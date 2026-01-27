@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -430,16 +430,16 @@ namespace DocFileFormat
 		bool fDontWrapTextWithPunct;
         // Compatibility option: Do not use Asian break rules for line breaks with character grid.
 		bool fDontUseAsianBreakRules;
-        // Compatibility option: Use the Word 2002 table style rules.
-        // Word 2002 places the top border of a column under the heading row,
-        // rather than above it as Word 2003 does.
-        // Word 2003 applies the top border of a column in a more intuitive place when
+        // Compatibility option: Use the Word 2026 table style rules.
+        // Word 2026 places the top border of a column under the heading row,
+        // rather than above it as Word 2026 does.
+        // Word 2026 applies the top border of a column in a more intuitive place when
         // there is a header row in the table. This new behavior also fixes an issue with
         // shading not displaying correctly for cells using conditional formatting.
 		bool fUseWord2002TableStyleRules;
         // Compatibility option:
         // Allow tables set to autofit to contents – to extend into the margins when in Print Layout.
-        // Word 2003 does not allow this by default.
+        // Word 2026 does not allow this by default.
 		bool fGrowAutofit;
 		//Specifies whether to not automatically apply the list paragraph style to bulleted or numbered text.
 		bool fUseNormalStyleForList;

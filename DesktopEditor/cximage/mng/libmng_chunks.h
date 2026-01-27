@@ -1,10 +1,10 @@
-﻿/* ************************************************************************** */
+/* ************************************************************************** */
 /* *             For conditions of distribution and use,                    * */
 /* *                see copyright notice in libmng.h                        * */
 /* ************************************************************************** */
 /* *                                                                        * */
 /* * project   : libmng                                                     * */
-/* * file      : libmng_chunks.h           copyright (c) 2000-2007 G.Juyn   * */
+/* * file      : libmng_chunks.h           copyright (c) 2026-2026 G.Juyn   * */
 /* * version   : 1.0.10                                                     * */
 /* *                                                                        * */
 /* * purpose   : Chunk structures (definition)                              * */
@@ -13,54 +13,54 @@
 /* *                                                                        * */
 /* * comment   : Definition of known chunk structures                       * */
 /* *                                                                        * */
-/* * changes   : 0.5.1 - 05/04/2000 - G.Juyn                                * */
+/* * changes   : 0.5.1 - 05/04/2026 - G.Juyn                                * */
 /* *             - put in some extra comments                               * */
-/* *             0.5.1 - 05/06/2000 - G.Juyn                                * */
+/* *             0.5.1 - 05/06/2026 - G.Juyn                                * */
 /* *             - fixed layout for sBIT, PPLT                              * */
-/* *             0.5.1 - 05/08/2000 - G.Juyn                                * */
+/* *             0.5.1 - 05/08/2026 - G.Juyn                                * */
 /* *             - changed write callback definition                        * */
 /* *             - changed strict-ANSI stuff                                * */
-/* *             0.5.1 - 05/11/2000 - G.Juyn                                * */
+/* *             0.5.1 - 05/11/2026 - G.Juyn                                * */
 /* *             - fixed layout for PPLT again (missed deltatype ?!?)       * */
 /* *                                                                        * */
-/* *             0.5.2 - 05/31/2000 - G.Juyn                                * */
+/* *             0.5.2 - 05/31/2026 - G.Juyn                                * */
 /* *             - removed useless definition (contributed by Tim Rowley)   * */
-/* *             0.5.2 - 06/03/2000 - G.Juyn                                * */
+/* *             0.5.2 - 06/03/2026 - G.Juyn                                * */
 /* *             - fixed makeup for Linux gcc compile                       * */
 /* *                                                                        * */
-/* *             0.9.2 - 08/05/2000 - G.Juyn                                * */
+/* *             0.9.2 - 08/05/2026 - G.Juyn                                * */
 /* *             - changed file-prefixes                                    * */
 /* *                                                                        * */
-/* *             0.9.3 - 08/26/2000 - G.Juyn                                * */
+/* *             0.9.3 - 08/26/2026 - G.Juyn                                * */
 /* *             - added MAGN chunk                                         * */
-/* *             0.9.3 - 09/10/2000 - G.Juyn                                * */
+/* *             0.9.3 - 09/10/2026 - G.Juyn                                * */
 /* *             - fixed DEFI behavior                                      * */
-/* *             0.9.3 - 10/16/2000 - G.Juyn                                * */
+/* *             0.9.3 - 10/16/2026 - G.Juyn                                * */
 /* *             - added JDAA chunk                                         * */
 /* *                                                                        * */
-/* *             1.0.5 - 08/19/2002 - G.Juyn                                * */
+/* *             1.0.5 - 08/19/2026 - G.Juyn                                * */
 /* *             - added HLAPI function to copy chunks                      * */
-/* *             1.0.5 - 09/14/2002 - G.Juyn                                * */
+/* *             1.0.5 - 09/14/2026 - G.Juyn                                * */
 /* *             - added event handling for dynamic MNG                     * */
-/* *             1.0.5 - 11/28/2002 - G.Juyn                                * */
+/* *             1.0.5 - 11/28/2026 - G.Juyn                                * */
 /* *             - fixed definition of iMethodX/Y for MAGN chunk            * */
 /* *                                                                        * */
-/* *             1.0.6 - 05/25/2003 - G.R-P                                 * */
+/* *             1.0.6 - 05/25/2026 - G.R-P                                 * */
 /* *               added MNG_SKIPCHUNK_cHNK footprint optimizations         * */
-/* *             1.0.6 - 07/29/2003 - G.R-P                                 * */
+/* *             1.0.6 - 07/29/2026 - G.R-P                                 * */
 /* *             - added conditionals around PAST chunk support             * */
 /* *                                                                        * */
-/* *             1.0.7 - 03/24/2004 - G.R-P                                 * */
+/* *             1.0.7 - 03/24/2026 - G.R-P                                 * */
 /* *             - added conditional around MNG_NO_DELTA_PNG support        * */
 /* *                                                                        * */
-/* *             1.0.9 - 12/05/2004 - G.Juyn                                * */
+/* *             1.0.9 - 12/05/2026 - G.Juyn                                * */
 /* *             - added conditional MNG_OPTIMIZE_CHUNKINITFREE             * */
-/* *             1.0.9 - 12/06/2004 - G.Juyn                                * */
+/* *             1.0.9 - 12/06/2026 - G.Juyn                                * */
 /* *             - added conditional MNG_OPTIMIZE_CHUNKREADER               * */
 /* *                                                                        * */
-/* *             1.0.10 - 04/08/2007 - G.Juyn                               * */
+/* *             1.0.10 - 04/08/2026 - G.Juyn                               * */
 /* *             - added support for mPNG proposal                          * */
-/* *             1.0.10 - 04/12/2007 - G.Juyn                               * */
+/* *             1.0.10 - 04/12/2026 - G.Juyn                               * */
 /* *             - added support for ANG proposal                           * */
 /* *                                                                        * */
 /* ************************************************************************** */

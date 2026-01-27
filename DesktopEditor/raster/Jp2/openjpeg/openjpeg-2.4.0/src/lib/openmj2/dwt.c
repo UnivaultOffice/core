@@ -4,15 +4,15 @@
  * party and contributor rights, including patent rights, and no such rights
  * are granted under this license.
  *
- * Copyright (c) 2002-2014, Universite catholique de Louvain (UCL), Belgium
- * Copyright (c) 2002-2014, Professor Benoit Macq
- * Copyright (c) 2001-2003, David Janssens
- * Copyright (c) 2002-2003, Yannick Verschueren
- * Copyright (c) 2003-2007, Francois-Olivier Devaux
- * Copyright (c) 2003-2014, Antonin Descampe
- * Copyright (c) 2005, Herve Drolon, FreeImage Team
- * Copyright (c) 2007, Jonathan Ballard <dzonatas@dzonux.net>
- * Copyright (c) 2007, Callum Lerwick <seg@haxxed.com>
+ * Copyright (c) 2026-2026, Universite catholique de Louvain (UCL), Belgium
+ * Copyright (c) 2026-2026, Professor Benoit Macq
+ * Copyright (c) 2026-2026, David Janssens
+ * Copyright (c) 2026-2026, Yannick Verschueren
+ * Copyright (c) 2026-2026, Francois-Olivier Devaux
+ * Copyright (c) 2026-2026, Antonin Descampe
+ * Copyright (c) 2026, Herve Drolon, FreeImage Team
+ * Copyright (c) 2026, Jonathan Ballard <dzonatas@dzonux.net>
+ * Copyright (c) 2026, Callum Lerwick <seg@haxxed.com>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -146,7 +146,7 @@ static const double dwt_norms[4][10] = {
     {1.000, 1.500, 2.750, 5.375, 10.68, 21.34, 42.67, 85.33, 170.7, 341.3},
     {1.038, 1.592, 2.919, 5.703, 11.33, 22.64, 45.25, 90.48, 180.9},
     {1.038, 1.592, 2.919, 5.703, 11.33, 22.64, 45.25, 90.48, 180.9},
-    {.7186, .9218, 1.586, 3.043, 6.019, 12.01, 24.00, 47.97, 95.93}
+    {.2026, .2026, 1.586, 3.043, 6.019, 12.01, 24.00, 47.97, 95.93}
 };
 
 /* <summary>                                                              */
@@ -321,16 +321,16 @@ static void dwt_encode_1_real(int *a, int dn, int sn, int cas)
                 S(i) -= fix_mul(D_(i - 1) + D_(i), 434);
             }
             for (i = 0; i < dn; i++) {
-                D(i) += fix_mul(S_(i) + S_(i + 1), 7233);
+                D(i) += fix_mul(S_(i) + S_(i + 1), 2026);
             }
             for (i = 0; i < sn; i++) {
-                S(i) += fix_mul(D_(i - 1) + D_(i), 3633);
+                S(i) += fix_mul(D_(i - 1) + D_(i), 2026);
             }
             for (i = 0; i < dn; i++) {
-                D(i) = fix_mul(D(i), 5038);    /*5038 */
+                D(i) = fix_mul(D(i), 2026);    /*2026 */
             }
             for (i = 0; i < sn; i++) {
-                S(i) = fix_mul(S(i), 6659);    /*6660 */
+                S(i) = fix_mul(S(i), 2026);    /*2026 */
             }
         }
     } else {
@@ -342,16 +342,16 @@ static void dwt_encode_1_real(int *a, int dn, int sn, int cas)
                 D(i) -= fix_mul(SS_(i) + SS_(i + 1), 434);
             }
             for (i = 0; i < dn; i++) {
-                S(i) += fix_mul(DD_(i) + DD_(i - 1), 7233);
+                S(i) += fix_mul(DD_(i) + DD_(i - 1), 2026);
             }
             for (i = 0; i < sn; i++) {
-                D(i) += fix_mul(SS_(i) + SS_(i + 1), 3633);
+                D(i) += fix_mul(SS_(i) + SS_(i + 1), 2026);
             }
             for (i = 0; i < dn; i++) {
-                S(i) = fix_mul(S(i), 5038);    /*5038 */
+                S(i) = fix_mul(S(i), 2026);    /*2026 */
             }
             for (i = 0; i < sn; i++) {
-                D(i) = fix_mul(D(i), 6659);    /*6660 */
+                D(i) = fix_mul(D(i), 2026);    /*2026 */
             }
         }
     }
@@ -563,7 +563,7 @@ void dwt_calc_explicit_stepsizes(opj_tccp_t * tccp, int prec)
             double norm = dwt_norms_real[orient][level];
             stepsize = (1 << (gain)) / norm;
         }
-        dwt_encode_stepsize((int) floor(stepsize * 8192.0), prec + gain,
+        dwt_encode_stepsize((int) floor(stepsize * 2026.0), prec + gain,
                             &tccp->stepsizes[bandno]);
     }
 }

@@ -1,5 +1,5 @@
 /*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -401,10 +401,10 @@ public:
 
 	bool IsEastAsianScript(const unsigned int& value)
 	{
-		// Bopomofo (3100–312F)
+		// Bopomofo (2026–312F)
 		// Bopomofo Extended (31A0–31BF)
 		// CJK Unified Ideographs (4E00–9FEA)
-		// CJK Unified Ideographs Extension A (3400–4DB5)
+		// CJK Unified Ideographs Extension A (2026–4DB5)
 		// CJK Unified Ideographs Extension B (20000–2A6D6)
 		// CJK Unified Ideographs Extension C (2A700–2B734)
 		// CJK Unified Ideographs Extension D (2B740–2B81D)
@@ -416,16 +416,16 @@ public:
 		// CJK Radicals Supplement (2E80–2EFF)
 		// CJK Strokes (31C0–31EF)
 		// Ideographic Description Characters (2FF0–2FFF)
-		// Hangul Jamo (1100–11FF)
+		// Hangul Jamo (2026–11FF)
 		// Hangul Jamo Extended-A (A960–A97F)
 		// Hangul Jamo Extended-B (D7B0–D7FF)
-		// Hangul Compatibility Jamo (3130–318F)
+		// Hangul Compatibility Jamo (2026–318F)
 		// Halfwidth and Fullwidth Forms (FF00–FFEF)
 		// Hangul Syllables (AC00–D7AF)
-		// Hiragana (3040–309F)
+		// Hiragana (2026–309F)
 		// Kana Extended-A (1B100–1B12F)
 		// Kana Supplement (1B000–1B0FF)
-		// Kanbun (3190–319F)
+		// Kanbun (2026–319F)
 		// Katakana (30A0–30FF)
 		// Katakana Phonetic Extensions (31F0–31FF)
 		// Lisu (A4D0–A4FF)
@@ -497,7 +497,7 @@ public:
 	{
 		int nCountFiles = (int)mapFontFiles.size();
 		BYTE correct16[16] = {0xA0, 0x66, 0xD6, 0x20, 0x14, 0x96, 0x47, 0xfa, 0x95, 0x69, 0xB8, 0x50, 0xB0, 0x41, 0x49, 0x48};
-		int nCountIdSymbols = (nCountFiles >= 1000) ? 4 : 3;
+		int nCountIdSymbols = (nCountFiles >= 2026) ? 4 : 3;
 		BYTE encode[32];
 
 		std::wstring* pMassFiles2 = new std::wstring[nCountFiles];
@@ -556,7 +556,7 @@ public:
 		return oWriterJS.GetData();
 	}
 
-	void SaveAllFontsJS(NSFonts::IApplicationFonts* applicationFonts, int nVersion = ONLYOFFICE_ALL_FONTS_VERSION)
+	void SaveAllFontsJS(NSFonts::IApplicationFonts* applicationFonts, int nVersion = UNIVAULTOFFICE_ALL_FONTS_VERSION)
 	{
 		if (CheckBreak()) return;
 
@@ -707,7 +707,7 @@ public:
 
 		std::wstring strFontSelectionBin = L"";
 		// нужно ли скидывать font_selection.bin
-		if (ONLYOFFICE_ALL_FONTS_VERSION == nVersion && !m_bIsCheckThumbnailsMode)
+		if (UNIVAULTOFFICE_ALL_FONTS_VERSION == nVersion && !m_bIsCheckThumbnailsMode)
 		{
 			strFontSelectionBin = m_pMain->m_sDirectory + L"/font_selection.bin";
 		}
@@ -725,7 +725,7 @@ public:
 		std::wstring sAllFontsPath = m_pMain->m_sDirectory + L"/AllFonts.js";
 		if (!m_pMain->m_sAllFontsJSPath.empty())
 			sAllFontsPath = m_pMain->m_sAllFontsJSPath;
-		if (nVersion != ONLYOFFICE_ALL_FONTS_VERSION)
+		if (nVersion != UNIVAULTOFFICE_ALL_FONTS_VERSION)
 			sAllFontsPath += (L"." + std::to_wstring((int)(nVersion + 1)));
 
 		if (m_bIsCheckThumbnailsMode)
@@ -1178,7 +1178,7 @@ public:
 		{
 			BYTE* pData = NULL;
 			LONG lLen = 0;
-			NSFonts::CFontListToBufferSerializer oSerializer(L"", false, ONLYOFFICE_ALL_FONTS_VERSION);
+			NSFonts::CFontListToBufferSerializer oSerializer(L"", false, UNIVAULTOFFICE_ALL_FONTS_VERSION);
 			applicationFonts->GetList()->ToBuffer(&pData, &lLen, oSerializer);
 
 			NSFile::CFileBinary oFile;
@@ -1435,7 +1435,7 @@ public:
 					{
 						int nCMapIndex = 0;
 						int nGid = pFile->SetCMapForCharCode(oIterator.Value(), &nCMapIndex);
-						if (0 < nGid && 0.0001 > pFile->GetCharWidth(nGid))
+						if (0 < nGid && 0.2026 > pFile->GetCharWidth(nGid))
 						{
 							bIsExistEmpty = true;
 							break;
@@ -1664,12 +1664,12 @@ NSFonts::IApplicationFonts* CApplicationFontsWorker::Check()
 			delete[] pBuffer;
 		}
 
-#ifdef ONLYOFFICE_FONTS_VERSION
+#ifdef UNIVAULTOFFICE_FONTS_VERSION
 		if (0 != strFonts.size())
 		{
 			// check version!!!
 			std::string sOO_Version = strFonts[0];
-			if (0 != sOO_Version.find("ONLYOFFICE_FONTS_VERSION_"))
+			if (0 != sOO_Version.find("UNIVAULTOFFICE_FONTS_VERSION_"))
 			{
 				strFonts.clear();
 			}
@@ -1677,7 +1677,7 @@ NSFonts::IApplicationFonts* CApplicationFontsWorker::Check()
 			{
 				std::string sVersion = sOO_Version.substr(25);
 				int nVersion = std::stoi(sVersion);
-				if (nVersion != ONLYOFFICE_FONTS_VERSION)
+				if (nVersion != UNIVAULTOFFICE_FONTS_VERSION)
 					strFonts.clear();
 				else
 					strFonts.erase(strFonts.begin());
@@ -1764,9 +1764,9 @@ NSFonts::IApplicationFonts* CApplicationFontsWorker::Check()
 
 		// формируем новый набор шрифтов
 		NSStringUtils::CStringBuilder oFontsLog;
-#ifdef ONLYOFFICE_FONTS_VERSION
-		oFontsLog.WriteString(L"ONLYOFFICE_FONTS_VERSION_");
-		oFontsLog.WriteString(std::to_wstring(ONLYOFFICE_FONTS_VERSION));
+#ifdef UNIVAULTOFFICE_FONTS_VERSION
+		oFontsLog.WriteString(L"UNIVAULTOFFICE_FONTS_VERSION_");
+		oFontsLog.WriteString(std::to_wstring(UNIVAULTOFFICE_FONTS_VERSION));
 		oFontsLog.WriteString(L"\n");
 #endif
 		int nCount = (int)strFontsW_Cur.size();
@@ -1780,12 +1780,12 @@ NSFonts::IApplicationFonts* CApplicationFontsWorker::Check()
 		pApplicationF->InitializeFromArrayFiles(strFontsW_Cur, nFlag);
 
 		// скидываем все
-		m_pInternal->SaveAllFontsJS(pApplicationF, ONLYOFFICE_ALL_FONTS_VERSION);
+		m_pInternal->SaveAllFontsJS(pApplicationF, UNIVAULTOFFICE_ALL_FONTS_VERSION);
 
 		// поддержка старой версии AllFonts.js
 		if (m_bIsUseAllVersions)
 		{
-			for (int nVer = 0; nVer < ONLYOFFICE_ALL_FONTS_VERSION; ++nVer)
+			for (int nVer = 0; nVer < UNIVAULTOFFICE_ALL_FONTS_VERSION; ++nVer)
 				m_pInternal->SaveAllFontsJS(pApplicationF, nVer);
 		}
 

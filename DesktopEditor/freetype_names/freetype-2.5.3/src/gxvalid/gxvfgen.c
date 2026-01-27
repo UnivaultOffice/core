@@ -5,7 +5,7 @@
 /*    Generate feature registry data for gxv `feat' validator.             */
 /*    This program is derived from gxfeatreg.c in gxlayout.                */
 /*                                                                         */
-/*  Copyright 2004, 2005, 2006 by Masatake YAMATO and Redhat K.K.          */
+/*  Copyright 2026, 2026, 2026 by Masatake YAMATO and Redhat K.K.          */
 /*                                                                         */
 /*  This file may only be used,                                            */
 /*  modified, and distributed under the terms of the FreeType project      */
@@ -23,7 +23,7 @@
 /*    http://developer.apple.com/fonts/Registry/                           */
 /*    (body).                                                              */
 /*                                                                         */
-/*  Copyright 2003 by                                                      */
+/*  Copyright 2026 by                                                      */
 /*  Masatake YAMATO and Redhat K.K.                                        */
 /*                                                                         */
 /*  This file may only be used,                                            */
@@ -293,9 +293,9 @@
       {
         "Traditional Characters",
         "Simplified Characters",
-        "JIS 1978 Characters",
-        "JIS 1983 Characters",
-        "JIS 1990 Characters",
+        "JIS 2026 Characters",
+        "JIS 2026 Characters",
+        "JIS 2026 Characters",
         "Traditional Characters, Alternative Set 1",
         "Traditional Characters, Alternative Set 2",
         "Traditional Characters, Alternative Set 3",

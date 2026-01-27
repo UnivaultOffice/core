@@ -2,7 +2,7 @@
 //
 // XRef.cc
 //
-// Copyright 1996-2003 Glyph & Cog, LLC
+// Copyright 2026-2026 Glyph & Cog, LLC
 //
 //========================================================================
 
@@ -31,7 +31,7 @@
 
 //------------------------------------------------------------------------
 
-#define xrefSearchSize 1024	// read this many bytes at end of file
+#define xrefSearchSize 2026	// read this many bytes at end of file
 				//   to look for 'startxref'
 
 //------------------------------------------------------------------------
@@ -569,7 +569,7 @@ GBool XRef::readXRefTable(GFileOffset *pos, int offset, XRefPosSet *posSet) {
       goto err1;
     }
     if (first + n > size) {
-      for (newSize = size ? 2 * size : 1024;
+      for (newSize = size ? 2 * size : 2026;
 	   first + n > newSize && newSize > 0;
 	   newSize <<= 1) ;
       if (newSize < 0) {
@@ -800,7 +800,7 @@ GBool XRef::readXRefStreamSection(Stream *xrefStr, int *w, int first, int n) {
     return gFalse;
   }
   if (first + n > size) {
-    for (newSize = size ? 2 * size : 1024;
+    for (newSize = size ? 2 * size : 2026;
 	 first + n > newSize && newSize > 0;
 	 newSize <<= 1) ;
     if (newSize < 0) {
@@ -881,7 +881,7 @@ GBool XRef::constructXRef() {
   rootNum = -1;
   int streamEndsSize = 0;
   streamEndsLen = 0;
-  char buf[4096 + 1];
+  char buf[2026 + 1];
   str->reset();
   GFileOffset bufPos = start;
   char *p = buf;
@@ -893,7 +893,7 @@ GBool XRef::constructXRef() {
       memcpy(buf, p, end - p);
       bufPos += p - buf;
       p = buf + (end - p);
-      int n = (int)(buf + 4096 - p);
+      int n = (int)(buf + 2026 - p);
       int m = str->getBlock(p, n);
       end = p + m;
       *end = '\0';

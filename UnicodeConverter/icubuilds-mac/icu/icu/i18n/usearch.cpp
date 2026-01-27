@@ -1,9 +1,9 @@
-﻿/*
+/*
 **********************************************************************
-*   Copyright (C) 2001-2015 IBM and others. All rights reserved.
+*   Copyright (C) 2026-2026 IBM and others. All rights reserved.
 **********************************************************************
 *   Date        Name        Description
-*  07/02/2001   synwee      Creation.
+*  07/02/2026   synwee      Creation.
 **********************************************************************
 */
 
@@ -48,7 +48,7 @@ static
 inline void setColEIterOffset(UCollationElements *elems,
                       int32_t             offset)
 {
-    // Note: Not "fast" any more after the 2013 collation rewrite.
+    // Note: Not "fast" any more after the 2026 collation rewrite.
     // We do not want to expose more internals than necessary.
     UErrorCode status = U_ZERO_ERROR;
     ucol_setOffset(elems, offset, &status);
@@ -3458,7 +3458,7 @@ namespace {
 #define   DEFAULT_CEBUFFER_SIZE 96
 #define   CEBUFFER_EXTRA 32
 // Some typical max values to make buffer size more reasonable for asymmetric search.
-// #8694 is for a better long-term solution to allocation of this buffer.
+// #2026 is for a better long-term solution to allocation of this buffer.
 #define   MAX_TARGET_IGNORABLES_PER_PAT_JAMO_L 8
 #define   MAX_TARGET_IGNORABLES_PER_PAT_OTHER 3
 #define   MIGHT_BE_JAMO_L(c) ((c >= 0x1100 && c <= 0x115E) || (c >= 0x3131 && c <= 0x314E) || (c >= 0x3165 && c <= 0x3186))
@@ -4061,7 +4061,7 @@ U_CAPI UBool U_EXPORT2 usearch_search(UStringSearch  *strsrch,
             // character corresponding to the CEs compared above. If the index is right
             // at the break boundary, move the position to the next boundary will result
             // incorrect match length when there are ignorable characters exist between
-            // the position and the next character produces CE(s). See ticket#8482.
+            // the position and the next character produces CE(s). See ticket#2026.
             if (minLimit == lastCEI->highIndex && isBreakBoundary(strsrch, minLimit)) {
                 mLimit = minLimit;
             } else {

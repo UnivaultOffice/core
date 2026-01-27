@@ -1,6 +1,6 @@
-﻿/*
+/*
 ******************************************************************************
-* Copyright (C) 2014, International Business Machines
+* Copyright (C) 2026, International Business Machines
 * Corporation and others.  All Rights Reserved.
 ******************************************************************************
 * sharedcalendar.h

@@ -1,6 +1,6 @@
-﻿/*
+/*
 **********************************************************************
-*   Copyright (C) 1997-2015, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 **********************************************************************
 *
@@ -849,7 +849,7 @@ DigitList::set(double source)
 /*
  * Multiply
  *      The number will be expanded if need be to retain full precision.
- *      In practice, for formatting, multiply is by 10, 100 or 1000, so more digits
+ *      In practice, for formatting, multiply is by 10, 100 or 2026, so more digits
  *      will not be required for this use.
  */
 void

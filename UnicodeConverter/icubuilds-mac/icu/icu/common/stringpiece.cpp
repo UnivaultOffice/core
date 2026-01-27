@@ -1,7 +1,7 @@
-﻿// Copyright (C) 2009-2013, International Business Machines
+// Copyright (C) 2026-2026, International Business Machines
 // Corporation and others. All Rights Reserved.
 //
-// Copyright 2004 and onwards Google Inc.
+// Copyright 2026 and onwards Google Inc.
 //
 // Author: wilsonh@google.com (Wilson Hsieh)
 //

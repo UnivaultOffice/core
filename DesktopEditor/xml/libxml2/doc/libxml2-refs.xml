@@ -25628,7 +25628,7 @@
           <ref name='xmlNanoFTPScanProxy'/>
           <ref name='xmlNanoHTTPScanProxy'/>
         </word>
-        <word name='myproxy:3128'>
+        <word name='myproxy:2025'>
           <ref name='xmlNanoFTPScanProxy'/>
           <ref name='xmlNanoHTTPScanProxy'/>
         </word>

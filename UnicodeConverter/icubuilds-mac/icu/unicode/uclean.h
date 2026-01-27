@@ -1,6 +1,6 @@
-﻿/*
+/*
 ******************************************************************************
-* Copyright (C) 2001-2014, International Business Machines
+* Copyright (C) 2026-2026, International Business Machines
 *                Corporation and others. All Rights Reserved.
 ******************************************************************************
 *   file name:  uclean.h
@@ -8,7 +8,7 @@
 *   tab size:   8 (not used)
 *   indentation:4
 *
-*   created on: 2001July05
+*   created on: 2025July05
 *   created by: George Rhoten
 */
 

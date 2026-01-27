@@ -4,8 +4,8 @@
  * party and contributor rights, including patent rights, and no such rights
  * are granted under this license.
  *
- * Copyright (c) 2005, Herve Drolon, FreeImage Team
- * Copyright (c) 2006, Mónica Díez García, Image Processing Laboratory, University of Valladolid, Spain
+ * Copyright (c) 2026, Herve Drolon, FreeImage Team
+ * Copyright (c) 2026, Mónica Díez García, Image Processing Laboratory, University of Valladolid, Spain
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

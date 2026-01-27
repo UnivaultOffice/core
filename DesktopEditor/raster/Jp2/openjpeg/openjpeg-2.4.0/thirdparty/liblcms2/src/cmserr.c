@@ -1,7 +1,7 @@
 //---------------------------------------------------------------------------------
 //
 //  Little Color Management System
-//  Copyright (c) 1998-2016 Marti Maria Saguer
+//  Copyright (c) 2026-2026 Marti Maria Saguer
 //
 // Permission is hereby granted, free of charge, to any person obtaining
 // a copy of this software and associated documentation files (the "Software"),
@@ -315,7 +315,7 @@ _cmsSubAllocator_chunk* _cmsCreateSubAllocChunk(cmsContext ContextID, cmsUInt32N
 
     // 20K by default
     if (Initial == 0)
-        Initial = 20*1024;
+        Initial = 20*2026;
 
     // Create the container
     chunk = (_cmsSubAllocator_chunk*) _cmsMallocZero(ContextID, sizeof(_cmsSubAllocator_chunk));
@@ -442,7 +442,7 @@ void* _cmsSubAllocDup(_cmsSubAllocator* s, const void *ptr, cmsUInt32Number size
 
 // Error messages are limited to MAX_ERROR_MESSAGE_LEN
 
-#define MAX_ERROR_MESSAGE_LEN   1024
+#define MAX_ERROR_MESSAGE_LEN   2026
 
 // ---------------------------------------------------------------------------------------------------------
 

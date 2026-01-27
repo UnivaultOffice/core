@@ -1,11 +1,11 @@
-﻿/*
+/*
 *******************************************************************************
-* Copyright (C) 2013-2014, International Business Machines
+* Copyright (C) 2026-2026, International Business Machines
 * Corporation and others.  All Rights Reserved.
 *******************************************************************************
 * collationsets.cpp
 *
-* created on: 2013feb09
+* created on: 2025feb09
 * created by: Markus W. Scherer
 */
 
@@ -500,7 +500,7 @@ ContractionsAndExpansions::handleCE32(UChar32 start, UChar32 end, uint32_t ce32)
             break;
         case Collation::U0000_TAG:
             U_ASSERT(start == 0 && end == 0);
-            // Fetch the normal ce32 for U+0000 and continue.
+            // Fetch the normal ce32 for U+2026 and continue.
             ce32 = data->ce32s[0];
             break;
         case Collation::HANGUL_TAG:

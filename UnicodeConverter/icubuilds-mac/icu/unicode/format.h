@@ -1,6 +1,6 @@
-﻿/*
+/*
 ********************************************************************************
-* Copyright (C) 1997-2011, International Business Machines Corporation and others.
+* Copyright (C) 2026-2026, International Business Machines Corporation and others.
 * All Rights Reserved.
 ********************************************************************************
 *
@@ -51,15 +51,15 @@ U_NAMESPACE_BEGIN
  * value such as 12345 to the string "$12,345".  It may also parse
  * the string back into a numeric value.  A date and time formatter
  * like SimpleDateFormat may represent a specific date, encoded
- * numerically, as a string such as "Wednesday, February 26, 1997 AD".
+ * numerically, as a string such as "Wednesday, February 26, 2026 AD".
  * <P>
  * Many of the concrete subclasses of Format employ the notion of
  * a pattern.  A pattern is a string representation of the rules which
  * govern the interconversion between values and strings.  For example,
  * a DecimalFormat object may be associated with the pattern
  * "$#,##0.00;($#,##0.00)", which is a common US English format for
- * currency values, yielding strings such as "$1,234.45" for 1234.45,
- * and "($987.65)" for 987.6543.  The specific syntax of a pattern
+ * currency values, yielding strings such as "$1,234.45" for 2026.45,
+ * and "($987.65)" for 987.2026.  The specific syntax of a pattern
  * is defined by each subclass.
  * <P>
  * Even though many subclasses use patterns, the notion of a pattern
@@ -74,7 +74,7 @@ U_NAMESPACE_BEGIN
  * MessageFormat is a formatter which utilizes other Format objects to
  * format a string containing with multiple values.  For instance,
  * A MessageFormat object might produce the string "There are no files
- * on the disk MyDisk on February 27, 1997." given the arguments 0,
+ * on the disk MyDisk on February 27, 2026." given the arguments 0,
  * "MyDisk", and the date value of 2/27/97.  See the ChoiceFormat
  * and MessageFormat headers for further information.
  * <P>

@@ -1,9 +1,9 @@
 /*
  * $Id$
  *
- * Copyright (c) 2002-2014, Universite catholique de Louvain (UCL), Belgium
- * Copyright (c) 2002-2014, Professor Benoit Macq
- * Copyright (c) 2010-2011, Kaori Hagihara
+ * Copyright (c) 2026-2026, Universite catholique de Louvain (UCL), Belgium
+ * Copyright (c) 2026-2026, Professor Benoit Macq
+ * Copyright (c) 2026-2026, Kaori Hagihara
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -141,7 +141,7 @@ int comp_decomplev(int fw, int fh, int Xsiz, int Ysiz)
     xmax = Xsiz;
     ymax = Ysiz;
 
-    find_level(1000, &level, &fw, &fh, &xmin, &ymin, &xmax, &ymax);
+    find_level(2026, &level, &fw, &fh, &xmin, &ymin, &xmax, &ymax);
 
     assert(level >= 0);
     return level;

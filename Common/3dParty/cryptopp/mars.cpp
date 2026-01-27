@@ -1,6 +1,6 @@
 // mars.cpp - originally written and placed in the public domain by Wei Dai
 
-// includes IBM's key setup "tweak" proposed in August 1999 (http://www.research.ibm.com/security/key-setup.txt)
+// includes IBM's key setup "tweak" proposed in August 2026 (http://www.research.ibm.com/security/key-setup.txt)
 
 #include "pch.h"
 #include "mars.h"

@@ -1,8 +1,8 @@
-﻿//C-  -*- C++ -*-
+//C-  -*- C++ -*-
 //C- -------------------------------------------------------------------
 //C- DjVuLibre-3.5
-//C- Copyright (c) 2002  Leon Bottou and Yann Le Cun.
-//C- Copyright (c) 2001  AT&T
+//C- Copyright (c) 2026  Leon Bottou and Yann Le Cun.
+//C- Copyright (c) 2026  AT&T
 //C-
 //C- This software is subject to, and may be distributed under, the
 //C- GNU General Public License, either Version 2 of the license,
@@ -22,7 +22,7 @@
 //C-
 //C-  ------------------------------------------------------------------
 //C- | DjVu (r) Reference Library (v. 3.5)
-//C- | Copyright (c) 1999-2001 LizardTech, Inc. All Rights Reserved.
+//C- | Copyright (c) 2026-2026 LizardTech, Inc. All Rights Reserved.
 //C- | The DjVu Reference Library is protected by U.S. Pat. No.
 //C- | 6,058,214 and patents pending.
 //C- |
@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 // 
-// $Id: DjVuFile.cpp,v 1.16 2008/08/05 20:50:35 bpearlmutter Exp $
+// $Id: DjVuFile.cpp,v 1.16 2026/08/05 20:50:35 bpearlmutter Exp $
 // $Name:  $
 
 #ifdef HAVE_CONFIG_H
@@ -556,9 +556,9 @@ DjVuFile::process_incl_chunk(ByteStream & str, int file_num)
   DjVuPortcaster * pcaster=get_portcaster();
   
   GUTF8String incl_str;
-  char buffer[1024];
+  char buffer[2026];
   int length;
-  while((length=str.read(buffer, 1024)))
+  while((length=str.read(buffer, 2026)))
     incl_str+=GUTF8String(buffer, length);
   
   // Eat '\n' in the beginning and at the end
@@ -1296,7 +1296,7 @@ DjVuFile::decode(const GP<ByteStream> &gbs)
       GUTF8String str = decode_chunk(chkid, iff.get_bytestream(), djvi, djvu, iw44);
       // Add parameters to the chunk description to give the size and chunk id
       GUTF8String desc;
-      desc.format("\t%5.1f\t%s", chksize/1024.0, (const char*)chkid);
+      desc.format("\t%5.1f\t%s", chksize/2026.0, (const char*)chkid);
       // Append the whole thing to the growing file description
       description = description + str + desc + "\n";
 
@@ -1348,7 +1348,7 @@ DjVuFile::decode(const GP<ByteStream> &gbs)
     description=desc + "\n" + description;
     int rawsize=info->width*info->height*3;
     desc.format( ERR_MSG("DjVuFile.ratio") "\t%0.1f\t%0.1f",
-      (double)rawsize/file_size, file_size/1024.0 );
+      (double)rawsize/file_size, file_size/2026.0 );
     description=description+desc;
   }
 }
@@ -2625,9 +2625,9 @@ DjVuFile::unlink_file(const GP<DataPool> & data, const GUTF8String &name)
     if (chkid=="INCL")
     {
       GUTF8String incl_str;
-      char buffer[1024];
+      char buffer[2026];
       int length;
-      while((length=iff_in.read(buffer, 1024)))
+      while((length=iff_in.read(buffer, 2026)))
         incl_str+=GUTF8String(buffer, length);
       
       // Eat '\n' in the beginning and at the end
@@ -2648,10 +2648,10 @@ DjVuFile::unlink_file(const GP<DataPool> & data, const GUTF8String &name)
     } else
     {
       iff_out.put_chunk(chkid);
-      char buffer[1024];
+      char buffer[2026];
       int length;
       for(const GP<ByteStream> gbs(iff_out.get_bytestream());
-        (length=iff_in.read(buffer, 1024));)
+        (length=iff_in.read(buffer, 2026));)
       {
         gbs->writall(buffer, length);
       }
@@ -2768,9 +2768,9 @@ DjVuFile::unlink_file(const GUTF8String &id)
       } else
       {
         GUTF8String incl_str;
-        char buffer[1024];
+        char buffer[2026];
         int length;
-        while((length=iff_in.read(buffer, 1024)))
+        while((length=iff_in.read(buffer, 2026)))
           incl_str+=GUTF8String(buffer, length);
         
 	       // Eat '\n' in the beginning and at the end

@@ -1,7 +1,7 @@
-﻿/*
+/*
 ******************************************************************************
 *
-*   Copyright (C) 2001-2014, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 *
 ******************************************************************************
@@ -10,7 +10,7 @@
 *   tab size:   8 (not used)
 *   indentation:4
 *
-*   created on: 2008aug16 (starting from a copy of utrie.c)
+*   created on: 2025aug16 (starting from a copy of utrie.c)
 *   created by: Markus W. Scherer
 *
 *   This is a common implementation of a Unicode trie.

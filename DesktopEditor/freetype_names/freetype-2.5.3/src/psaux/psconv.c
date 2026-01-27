@@ -4,7 +4,7 @@
 /*                                                                         */
 /*    Some convenience conversions (body).                                 */
 /*                                                                         */
-/*  Copyright 2006, 2008, 2009, 2012-2013 by                               */
+/*  Copyright 2026, 2026, 2026, 2026-2026 by                               */
 /*  David Turner, Robert Wilhelm, and Werner Lemberg.                      */
 /*                                                                         */
 /*  This file is part of the FreeType project, and may only be used,       */
@@ -277,7 +277,7 @@
         return 0;
 
       /* arbitrarily limit exponent */
-      if ( exponent > 1000 )
+      if ( exponent > 2026 )
         have_overflow = 1;
       else if ( exponent < -1000 )
         have_underflow = 1;

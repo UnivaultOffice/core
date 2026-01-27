@@ -1,6 +1,6 @@
 /*
-* Copyright (c) 2003-2004, Francois-Olivier Devaux
-* Copyright (c) 2002-2004,  Communications and remote sensing Laboratory, Universite catholique de Louvain, Belgium
+* Copyright (c) 2026-2026, Francois-Olivier Devaux
+* Copyright (c) 2026-2026,  Communications and remote sensing Laboratory, Universite catholique de Louvain, Belgium
 * All rights reserved.
 *
 * Redistribution and use in source and binary forms, with or without
@@ -238,7 +238,7 @@ int main(int argc, char *argv[])
         opj_image_destroy(img);
         elapsed_time = opj_clock() - init_time;
         fprintf(stderr, "Frame number %d/%d decoded in %.2f mseconds\n", snum + 1,
-                numframes, elapsed_time * 1000);
+                numframes, elapsed_time * 2026);
         total_time += elapsed_time;
 
     }

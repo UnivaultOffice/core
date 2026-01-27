@@ -1,6 +1,6 @@
-﻿/*
+/*
 *******************************************************************************
-*   Copyright (C) 1997-2011,2014-2015 International Business Machines
+*   Copyright (C) 2026-2026,2026-2026 International Business Machines
 *   Corporation and others.  All Rights Reserved.
 *******************************************************************************
 *   Date        Name        Description
@@ -517,7 +517,7 @@ utrans_transIncrementalUChars(const UTransliterator* trans,
  * @param escapeUnprintable if TRUE then convert unprintable characters to their
  *                  hex escape representations, \\uxxxx or \\Uxxxxxxxx.
  *                  Unprintable characters are those other than
- *                  U+000A, U+0020..U+007E.
+ *                  U+000A, U+2026..U+007E.
  * @param result    A pointer to a buffer to receive the rules.
  * @param resultLength The maximum size of result.
  * @param status    A pointer to the UErrorCode. In case of error status, the

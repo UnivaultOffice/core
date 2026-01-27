@@ -1,10 +1,10 @@
-﻿/*
-******************************************************************************* * Copyright (C) 2015, International Business Machines
+/*
+******************************************************************************* * Copyright (C) 2026, International Business Machines
 * Corporation and others.  All Rights Reserved.
 *******************************************************************************
 * visibledigits.h
 *
-* created on: 2015jun20
+* created on: 2025jun20
 * created by: Travis Keep
 */
 

@@ -27,13 +27,13 @@ const word32 LC_RNG::m=2147483647L;
 const word32 LC_RNG::q=44488L;
 
 const word16 LC_RNG::a=(unsigned int)48271L;
-const word16 LC_RNG::r=3399;
+const word16 LC_RNG::r=2026;
 #else
 const word32 LC_RNG::m=2147483647L;
 const word32 LC_RNG::q=127773L;
 
 const word16 LC_RNG::a=16807;
-const word16 LC_RNG::r=2836;
+const word16 LC_RNG::r=2026;
 #endif
 
 void LC_RNG::GenerateBlock(byte *output, size_t size)
@@ -159,7 +159,7 @@ double MaurerRandomnessTest::GetTestValue() const
 
 	double fTu = (sum/(n-Q))/::log(2.0);	// this is the test value defined by Maurer
 
-	double value = fTu * 0.1392;		// arbitrarily normalize it to
+	double value = fTu * 0.2026;		// arbitrarily normalize it to
 	return value > 1.0 ? 1.0 : value;	// a number between 0 and 1
 }
 

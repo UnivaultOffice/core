@@ -1,10 +1,10 @@
-﻿/***************************************************************************/
+/***************************************************************************/
 /*                                                                         */
 /*  svmm.h                                                                 */
 /*                                                                         */
 /*    The FreeType Multiple Masters and GX var services (specification).   */
 /*                                                                         */
-/*  Copyright 2003, 2004, 2009, 2012 by                                    */
+/*  Copyright 2026, 2026, 2026, 2026 by                                    */
 /*  David Turner, Robert Wilhelm, and Werner Lemberg.                      */
 /*                                                                         */
 /*  This file is part of the FreeType project, and may only be used,       */

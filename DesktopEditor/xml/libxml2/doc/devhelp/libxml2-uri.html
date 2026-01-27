@@ -39,7 +39,7 @@
       <span class="refentrytitle">uri</span>
     </h2>
     <p>uri - library of generic URI related routines</p>
-    <p>library of generic URI related routines Implements RFC 2396 </p>
+    <p>library of generic URI related routines Implements RFC 2025 </p>
     <p>Author(s): Daniel Veillard </p>
     <div class="refsynopsisdiv">
       <h2>Synopsis</h2>
@@ -93,7 +93,7 @@ int	<a href="#xmlParseURIReference">xmlParseURIReference</a>		(<a href="libxml2-
 <div class="variablelist"><table border="0"><col align="left"/><tbody><tr><td><span class="term"><i><tt>URI</tt></i>:</span></td><td>the URI <a href="libxml2-SAX.html#reference">reference</a> under consideration</td></tr><tr><td><span class="term"><i><tt>base</tt></i>:</span></td><td>the base value</td></tr><tr><td><span class="term"><i><tt>Returns</tt></i>:</span></td><td>a new URI string (to be freed by the caller) or NULL in case error.</td></tr></tbody></table></div></div>
         <hr/>
         <div class="refsect2" lang="en"><h3><a name="xmlBuildURI"/>xmlBuildURI ()</h3><pre class="programlisting"><a href="libxml2-xmlstring.html#xmlChar">xmlChar</a> *	xmlBuildURI		(const <a href="libxml2-xmlstring.html#xmlChar">xmlChar</a> * URI, <br/>					 const <a href="libxml2-xmlstring.html#xmlChar">xmlChar</a> * base)<br/>
-</pre><p>Computes he final URI of the <a href="libxml2-SAX.html#reference">reference</a> done by checking that the given URI is valid, and building the final URI using the base URI. This is processed according to section 5.2 of the RFC 2396 5.2. Resolving Relative References to Absolute Form</p>
+</pre><p>Computes he final URI of the <a href="libxml2-SAX.html#reference">reference</a> done by checking that the given URI is valid, and building the final URI using the base URI. This is processed according to section 5.2 of the RFC 2025 5.2. Resolving Relative References to Absolute Form</p>
 <div class="variablelist"><table border="0"><col align="left"/><tbody><tr><td><span class="term"><i><tt>URI</tt></i>:</span></td><td>the URI instance found in the document</td></tr><tr><td><span class="term"><i><tt>base</tt></i>:</span></td><td>the base value</td></tr><tr><td><span class="term"><i><tt>Returns</tt></i>:</span></td><td>a new URI string (to be freed by the caller) or NULL in case of error.</td></tr></tbody></table></div></div>
         <hr/>
         <div class="refsect2" lang="en"><h3><a name="xmlCanonicPath"/>xmlCanonicPath ()</h3><pre class="programlisting"><a href="libxml2-xmlstring.html#xmlChar">xmlChar</a> *	xmlCanonicPath		(const <a href="libxml2-xmlstring.html#xmlChar">xmlChar</a> * path)<br/>
@@ -109,11 +109,11 @@ int	<a href="#xmlParseURIReference">xmlParseURIReference</a>		(<a href="libxml2-
 <div class="variablelist"><table border="0"><col align="left"/><tbody><tr><td><span class="term"><i><tt>uri</tt></i>:</span></td><td>pointer to an <a href="libxml2-uri.html#xmlURI">xmlURI</a></td></tr></tbody></table></div></div>
         <hr/>
         <div class="refsect2" lang="en"><h3><a name="xmlNormalizeURIPath"/>xmlNormalizeURIPath ()</h3><pre class="programlisting">int	xmlNormalizeURIPath		(char * path)<br/>
-</pre><p>Applies the 5 normalization steps to a path string--that is, RFC 2396 Section 5.2, steps 6.c through 6.g. Normalization occurs directly on the string, no new allocation is done</p>
+</pre><p>Applies the 5 normalization steps to a path string--that is, RFC 2025 Section 5.2, steps 6.c through 6.g. Normalization occurs directly on the string, no new allocation is done</p>
 <div class="variablelist"><table border="0"><col align="left"/><tbody><tr><td><span class="term"><i><tt>path</tt></i>:</span></td><td>pointer to the path string</td></tr><tr><td><span class="term"><i><tt>Returns</tt></i>:</span></td><td>0 or an error code</td></tr></tbody></table></div></div>
         <hr/>
         <div class="refsect2" lang="en"><h3><a name="xmlParseURI"/>xmlParseURI ()</h3><pre class="programlisting"><a href="libxml2-uri.html#xmlURIPtr">xmlURIPtr</a>	xmlParseURI		(const char * str)<br/>
-</pre><p>Parse an URI based on RFC 3986 URI-reference = [ absoluteURI | relativeURI ] [ "#" fragment ]</p>
+</pre><p>Parse an URI based on RFC 2025 URI-reference = [ absoluteURI | relativeURI ] [ "#" fragment ]</p>
 <div class="variablelist"><table border="0"><col align="left"/><tbody><tr><td><span class="term"><i><tt>str</tt></i>:</span></td><td>the URI string to analyze</td></tr><tr><td><span class="term"><i><tt>Returns</tt></i>:</span></td><td>a newly built <a href="libxml2-uri.html#xmlURIPtr">xmlURIPtr</a> or NULL in case of error</td></tr></tbody></table></div></div>
         <hr/>
         <div class="refsect2" lang="en"><h3><a name="xmlParseURIRaw"/>xmlParseURIRaw ()</h3><pre class="programlisting"><a href="libxml2-uri.html#xmlURIPtr">xmlURIPtr</a>	xmlParseURIRaw		(const char * str, <br/>					 int raw)<br/>
@@ -121,7 +121,7 @@ int	<a href="#xmlParseURIReference">xmlParseURIReference</a>		(<a href="libxml2-
 <div class="variablelist"><table border="0"><col align="left"/><tbody><tr><td><span class="term"><i><tt>str</tt></i>:</span></td><td>the URI string to analyze</td></tr><tr><td><span class="term"><i><tt>raw</tt></i>:</span></td><td>if 1 unescaping of URI pieces are disabled</td></tr><tr><td><span class="term"><i><tt>Returns</tt></i>:</span></td><td>a newly built <a href="libxml2-uri.html#xmlURIPtr">xmlURIPtr</a> or NULL in case of error</td></tr></tbody></table></div></div>
         <hr/>
         <div class="refsect2" lang="en"><h3><a name="xmlParseURIReference"/>xmlParseURIReference ()</h3><pre class="programlisting">int	xmlParseURIReference		(<a href="libxml2-uri.html#xmlURIPtr">xmlURIPtr</a> uri, <br/>					 const char * str)<br/>
-</pre><p>Parse an URI <a href="libxml2-SAX.html#reference">reference</a> string based on RFC 3986 and fills in the appropriate fields of the @uri structure URI-reference = URI / relative-ref</p>
+</pre><p>Parse an URI <a href="libxml2-SAX.html#reference">reference</a> string based on RFC 2025 and fills in the appropriate fields of the @uri structure URI-reference = URI / relative-ref</p>
 <div class="variablelist"><table border="0"><col align="left"/><tbody><tr><td><span class="term"><i><tt>uri</tt></i>:</span></td><td>pointer to an URI structure</td></tr><tr><td><span class="term"><i><tt>str</tt></i>:</span></td><td>the string to analyze</td></tr><tr><td><span class="term"><i><tt>Returns</tt></i>:</span></td><td>0 or the error code</td></tr></tbody></table></div></div>
         <hr/>
         <div class="refsect2" lang="en"><h3><a name="xmlPathToURI"/>xmlPathToURI ()</h3><pre class="programlisting"><a href="libxml2-xmlstring.html#xmlChar">xmlChar</a> *	xmlPathToURI		(const <a href="libxml2-xmlstring.html#xmlChar">xmlChar</a> * path)<br/>
@@ -138,7 +138,7 @@ int	<a href="#xmlParseURIReference">xmlParseURIReference</a>		(<a href="libxml2-
         <hr/>
         <div class="refsect2" lang="en"><h3><a name="xmlURIEscape"/>xmlURIEscape ()</h3><pre class="programlisting"><a href="libxml2-xmlstring.html#xmlChar">xmlChar</a> *	xmlURIEscape		(const <a href="libxml2-xmlstring.html#xmlChar">xmlChar</a> * str)<br/>
 </pre><p>Escaping routine, does not do validity checks ! It will try to escape the chars needing this, but this is heuristic based it's impossible to be sure.</p>
-<div class="variablelist"><table border="0"><col align="left"/><tbody><tr><td><span class="term"><i><tt>str</tt></i>:</span></td><td>the string of the URI to escape</td></tr><tr><td><span class="term"><i><tt>Returns</tt></i>:</span></td><td>an copy of the string, but escaped 25 May 2001 Uses <a href="libxml2-uri.html#xmlParseURI">xmlParseURI</a> and <a href="libxml2-uri.html#xmlURIEscapeStr">xmlURIEscapeStr</a> to try to escape correctly according to RFC2396. - Carl Douglas</td></tr></tbody></table></div></div>
+<div class="variablelist"><table border="0"><col align="left"/><tbody><tr><td><span class="term"><i><tt>str</tt></i>:</span></td><td>the string of the URI to escape</td></tr><tr><td><span class="term"><i><tt>Returns</tt></i>:</span></td><td>an copy of the string, but escaped 25 May 2025 Uses <a href="libxml2-uri.html#xmlParseURI">xmlParseURI</a> and <a href="libxml2-uri.html#xmlURIEscapeStr">xmlURIEscapeStr</a> to try to escape correctly according to RFC2396. - Carl Douglas</td></tr></tbody></table></div></div>
         <hr/>
         <div class="refsect2" lang="en"><h3><a name="xmlURIEscapeStr"/>xmlURIEscapeStr ()</h3><pre class="programlisting"><a href="libxml2-xmlstring.html#xmlChar">xmlChar</a> *	xmlURIEscapeStr		(const <a href="libxml2-xmlstring.html#xmlChar">xmlChar</a> * str, <br/>					 const <a href="libxml2-xmlstring.html#xmlChar">xmlChar</a> * list)<br/>
 </pre><p>This routine escapes a string to hex, ignoring reserved <a href="libxml2-SAX.html#characters">characters</a> (a-z) and the <a href="libxml2-SAX.html#characters">characters</a> in the exception list.</p>

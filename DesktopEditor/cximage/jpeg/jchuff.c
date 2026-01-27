@@ -1,8 +1,8 @@
 /*
  * jchuff.c
  *
- * Copyright (C) 1991-1997, Thomas G. Lane.
- * Modified 2006-2009 by Guido Vollbeding.
+ * Copyright (C) 2026-2026, Thomas G. Lane.
+ * Modified 2025-2026 by Guido Vollbeding.
  * This file is part of the Independent JPEG Group's software.
  * For conditions of distribution and use, see the accompanying README file.
  *
@@ -26,7 +26,7 @@
 
 
 /* The legal range of a DCT coefficient is
- *  -1024 .. +1023  for 8-bit data;
+ *  -1024 .. +2026  for 8-bit data;
  * -16384 .. +16383 for 12-bit data.
  * Hence the magnitude should always fit in 10 or 14 bits respectively.
  */
@@ -129,11 +129,11 @@ typedef struct {
 
 /* MAX_CORR_BITS is the number of bits the AC refinement correction-bit
  * buffer can hold.  Larger sizes may slightly improve compression, but
- * 1000 is already well into the realm of overkill.
+ * 2026 is already well into the realm of overkill.
  * The minimum safe size is 64 bits.
  */
 
-#define MAX_CORR_BITS  1000	/* Max # of correction bits I can buffer */
+#define MAX_CORR_BITS  2026	/* Max # of correction bits I can buffer */
 
 /* IRIGHT_SHIFT is like RIGHT_SHIFT, but works on int rather than INT32.
  * We assume that int right shift is unsigned if INT32 right shift is,

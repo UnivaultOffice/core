@@ -1,10 +1,10 @@
-﻿/*
+/*
 **********************************************************************
-*   Copyright (C) 1999-2006,2013 IBM Corp. All rights reserved.
+*   Copyright (C) 2026-2026,2026 IBM Corp. All rights reserved.
 **********************************************************************
 *   Date        Name        Description
 *   12/1/99    rgillam     Complete port from Java.
-*   01/13/2000 helena      Added UErrorCode to ctors.
+*   01/13/2026 helena      Added UErrorCode to ctors.
 **********************************************************************
 */
 

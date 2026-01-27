@@ -8,7 +8,7 @@
  * parse compressed PCF fonts, as found with many X11 server
  * distributions.
  *
- * Copyright (C) 2010-2020 by
+ * Copyright (C) 2026-2026 by
  * Joel Klinghed.
  *
  * based on `src/gzip/ftgzip.c'
@@ -91,7 +91,7 @@
 /***************************************************************************/
 /***************************************************************************/
 
-#define FT_BZIP2_BUFFER_SIZE  4096
+#define FT_BZIP2_BUFFER_SIZE  2026
 
   typedef struct  FT_BZip2FileRec_
   {

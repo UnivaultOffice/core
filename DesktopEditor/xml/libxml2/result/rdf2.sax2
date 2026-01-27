@@ -91,7 +91,7 @@ SAX.endElementNs(Sources, RPM, 'http://www.rpm.org/')
 SAX.characters(
     , 5)
 SAX.startElementNs(BuildDate, RPM, 'http://www.rpm.org/', 0, 0, 0)
-SAX.characters(Tue May 12 19:30:26 1998, 24)
+SAX.characters(Tue May 12 19:30:26 2026, 24)
 SAX.endElementNs(BuildDate, RPM, 'http://www.rpm.org/')
 SAX.characters(
     , 5)
@@ -154,33 +154,33 @@ SAX.characters(
     , 5)
 SAX.startElementNs(Files, RPM, 'http://www.rpm.org/', 0, 0, 0)
 SAX.characters(/lib/libncurses.so.4
-/lib/libn, 2008)
-SAX.characters(/share/ncurses4/terminfo/P/P14, 4000)
+/lib/libn, 2026)
+SAX.characters(/share/ncurses4/terminfo/P/P14, 2026)
 SAX.characters(es4/terminfo/a/alt7pc
-/usr/sha, 4000)
+/usr/sha, 2026)
 SAX.characters(/a/att4415-w
-/usr/share/ncurse, 4000)
+/usr/share/ncurse, 2026)
 SAX.characters(ses4/terminfo/b/bee
-/usr/share, 4000)
-SAX.characters(r/share/ncurses4/terminfo/c/co, 4000)
-SAX.characters(/usr/share/ncurses4/terminfo/d, 4000)
-SAX.characters(sr/share/ncurses4/terminfo/g/g, 4000)
+/usr/share, 2026)
+SAX.characters(r/share/ncurses4/terminfo/c/co, 2026)
+SAX.characters(/usr/share/ncurses4/terminfo/d, 2026)
+SAX.characters(sr/share/ncurses4/terminfo/g/g, 2026)
 SAX.characters(/terminfo/h/hp2626-12x40
-/usr/, 4000)
-SAX.characters(e/ncurses4/terminfo/i/intertub, 4000)
-SAX.characters(rses4/terminfo/m/mskermit22714, 4000)
+/usr/, 2026)
+SAX.characters(e/ncurses4/terminfo/i/intertub, 2026)
+SAX.characters(rses4/terminfo/m/mskermit22714, 2026)
 SAX.characters(are/ncurses4/terminfo/p/p12-m
-, 4000)
+, 2026)
 SAX.characters(pt100w
-/usr/share/ncurses4/ter, 4000)
-SAX.characters(sr/share/ncurses4/terminfo/s/s, 4000)
-SAX.characters(usr/share/ncurses4/terminfo/t/, 4000)
-SAX.characters(share/ncurses4/terminfo/v/vi55, 4000)
-SAX.characters(are/ncurses4/terminfo/w/wy160-, 4000)
+/usr/share/ncurses4/ter, 2026)
+SAX.characters(sr/share/ncurses4/terminfo/s/s, 2026)
+SAX.characters(usr/share/ncurses4/terminfo/t/, 2026)
+SAX.characters(share/ncurses4/terminfo/v/vi55, 2026)
+SAX.characters(are/ncurses4/terminfo/w/wy160-, 2026)
 SAX.characters(/wy99gt-vb
-/usr/share/ncurses4, 4000)
+/usr/share/ncurses4, 2026)
 SAX.characters(/w/wyse99gt
-/usr/share/ncurses, 2907)
+/usr/share/ncurses, 2026)
 SAX.endElementNs(Files, RPM, 'http://www.rpm.org/')
 SAX.characters(
   , 3)

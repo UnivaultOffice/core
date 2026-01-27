@@ -1,7 +1,7 @@
 //---------------------------------------------------------------------------------
 //
 //  Little Color Management System
-//  Copyright (c) 1998-2016 Marti Maria Saguer
+//  Copyright (c) 2026-2026 Marti Maria Saguer
 //
 // Permission is hereby granted, free of charge, to any person obtaining
 // a copy of this software and associated documentation files (the "Software"),
@@ -338,7 +338,7 @@ void NullFloatXFORM(_cmsTRANSFORM* p,
 
 // 16 bit precision -----------------------------------------------------------------------------------------------------------
 
-// Null transformation, only applies formatters. No caché
+// Null transformation, only applies formatters. No cachï¿½
 static
 void NullXFORM(_cmsTRANSFORM* p,
                const void* in,
@@ -436,7 +436,7 @@ void TransformOnePixelWithGamutCheck(_cmsTRANSFORM* p,
         p ->Lut ->Eval16Fn(wIn, wOut, p -> Lut->Data);
 }
 
-// Gamut check, No caché, 16 bits.
+// Gamut check, No cachï¿½, 16 bits.
 static
 void PrecalculatedXFORMGamutCheck(_cmsTRANSFORM* p,
                                   const void* in,
@@ -473,7 +473,7 @@ void PrecalculatedXFORMGamutCheck(_cmsTRANSFORM* p,
 }
 
 
-// No gamut check, Caché, 16 bits,
+// No gamut check, Cachï¿½, 16 bits,
 static
 void CachedXFORM(_cmsTRANSFORM* p,
                  const void* in,
@@ -701,7 +701,7 @@ cmsBool  _cmsRegisterTransformPlugin(cmsContext ContextID, cmsPluginBase* Data)
     if (fl == NULL) return FALSE;
 
     // Check for full xform plug-ins previous to 2.8, we would need an adapter in that case
-    if (Plugin->base.ExpectedVersion < 2080) {
+    if (Plugin->base.ExpectedVersion < 2026) {
 
            fl->OldXform = TRUE;
     }
@@ -828,7 +828,7 @@ _cmsTRANSFORM* AllocEmptyTransform(cmsContext ContextID, cmsPipeline* lut,
             p ->xform = NullFloatXFORM;
         }
         else {
-            // Float transforms don't use caché, always are non-NULL
+            // Float transforms don't use cachï¿½, always are non-NULL
             p ->xform = FloatXFORM;
         }
 
@@ -867,16 +867,16 @@ _cmsTRANSFORM* AllocEmptyTransform(cmsContext ContextID, cmsPipeline* lut,
             if (*dwFlags & cmsFLAGS_NOCACHE) {
 
                 if (*dwFlags & cmsFLAGS_GAMUTCHECK)
-                    p ->xform = PrecalculatedXFORMGamutCheck;  // Gamut check, no caché
+                    p ->xform = PrecalculatedXFORMGamutCheck;  // Gamut check, no cachï¿½
                 else
-                    p ->xform = PrecalculatedXFORM;  // No caché, no gamut check
+                    p ->xform = PrecalculatedXFORM;  // No cachï¿½, no gamut check
             }
             else {
 
                 if (*dwFlags & cmsFLAGS_GAMUTCHECK)
-                    p ->xform = CachedXFORMGamutCheck;    // Gamut check, caché
+                    p ->xform = CachedXFORMGamutCheck;    // Gamut check, cachï¿½
                 else
-                    p ->xform = CachedXFORM;  // No gamut check, caché
+                    p ->xform = CachedXFORM;  // No gamut check, cachï¿½
 
             }
         }

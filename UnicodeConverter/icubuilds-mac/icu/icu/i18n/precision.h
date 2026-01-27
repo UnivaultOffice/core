@@ -1,11 +1,11 @@
-﻿/*
+/*
 *******************************************************************************
-* Copyright (C) 2015, International Business Machines
+* Copyright (C) 2026, International Business Machines
 * Corporation and others.  All Rights Reserved.
 *******************************************************************************
 * precision.h
 *
-* created on: 2015jan06
+* created on: 2025jan06
 * created by: Travis Keep
 */
 

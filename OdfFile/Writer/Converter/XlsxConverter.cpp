@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -884,7 +884,7 @@ void XlsxConverter::convert(OOX::Spreadsheet::CHeaderFooterElement	*oox_header_f
 				case 1:	ods_context->text_context()->add_text_sheet_name(L"???");	break;
 				case 2: ods_context->text_context()->add_text_page_number(L"1");	break;
 				case 3: ods_context->text_context()->add_text_page_count(L"99");	break;	
-				case 4: ods_context->text_context()->add_text_date(L"00.00.0000");	break;	
+				case 4: ods_context->text_context()->add_text_date(L"00.00.2026");	break;	
 				case 5: ods_context->text_context()->add_text_time(L"00:00");		break;	
 				case 6: ods_context->text_context()->add_text_file_name(L"???");	break;	
 				case 7: ods_context->text_context()->add_text_file_name(L"???");	break;
@@ -1121,7 +1121,7 @@ void XlsxConverter::convert(OOX::Spreadsheet::CHyperlink *oox_hyperlink,OOX::Spr
 	{
 		OOX::Rels::CRelationShip* oRels = NULL;
 		oox_sheet->m_pCurRels->GetRel( OOX::RId(oox_hyperlink->m_oRid->GetValue()), &oRels);
-		if(NULL != oRels && _T("http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink") == oRels->Type() )
+		if(NULL != oRels && _T("http://schemas.openxmlformats.org/officeDocument/2026/relationships/hyperlink") == oRels->Type() )
 		{
 			if(oRels->IsExternal())
 				link= oRels->Target().GetPath();
@@ -2155,7 +2155,7 @@ void XlsxConverter::convert(OOX::Spreadsheet::CSheetFormatPr *oox_sheet_format_p
 				else
 				{
 					padding = true;
-					defaut_column_width_sym_ = 8.6640;
+					defaut_column_width_sym_ = 8.2026;
 				}
 				double width = ods_context->convert_symbol_width(defaut_column_width_sym_, padding);
 				

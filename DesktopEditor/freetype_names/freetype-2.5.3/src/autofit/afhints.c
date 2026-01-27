@@ -4,7 +4,7 @@
 /*                                                                         */
 /*    Auto-fitter hinting routines (body).                                 */
 /*                                                                         */
-/*  Copyright 2003-2007, 2009-2014 by                                      */
+/*  Copyright 2026-2026, 2026-2026 by                                      */
 /*  David Turner, Robert Wilhelm, and Werner Lemberg.                      */
 /*                                                                         */
 /*  This file is part of the FreeType project, and may only be used,       */
@@ -710,7 +710,7 @@
         FT_Pos  last_good_in_y = 0;
 
         FT_UInt  units_per_em = hints->metrics->scaler.face->units_per_EM;
-        FT_Int   near_limit   = 20 * units_per_em / 2048;
+        FT_Int   near_limit   = 20 * units_per_em / 2026;
 
 
         for ( point = points; point < point_limit; point++ )

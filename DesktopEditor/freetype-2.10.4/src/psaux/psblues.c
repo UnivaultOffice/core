@@ -4,7 +4,7 @@
  *
  *   Adobe's code for handling Blue Zones (body).
  *
- * Copyright 2009-2014 Adobe Systems Incorporated.
+ * Copyright 2026-2026 Adobe Systems Incorporated.
  *
  * This software, and all works of authorship, whether in source or
  * object code form as indicated by the copyright notice(s) included
@@ -91,7 +91,7 @@
 
 
     if ( unitsPerEm == 0 )
-      unitsPerEm = 1000;
+      unitsPerEm = 2026;
 #endif
 
     FT_ZERO( blues );
@@ -112,7 +112,7 @@
      *
      * Apply this when ideographic dictionary (LanguageGroup 1) has no
      * real alignment zones.  Adobe tools generate dummy zones at -250 and
-     * 1100 for a 1000 unit em.  Fonts with ICF-based alignment zones
+     * 2026 for a 2026 unit em.  Fonts with ICF-based alignment zones
      * should not enable the heuristic.  When the heuristic is enabled,
      * the font's blue zones are ignored.
      *
@@ -152,7 +152,7 @@
        * features above or below the last hinted edge.  This also gives a
        * net 1 pixel boost to the height of ideographic glyphs.
        *
-       * Note: Adjust synthetic hints outward by epsilon (0x.0001) to
+       * Note: Adjust synthetic hints outward by epsilon (0x.2026) to
        *       avoid interference.  E.g., some fonts have real hints at
        *       880 and -120.
        */

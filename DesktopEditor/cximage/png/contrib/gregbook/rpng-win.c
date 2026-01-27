@@ -27,7 +27,7 @@
 
   ---------------------------------------------------------------------------
 
-      Copyright (c) 1998-2008 Greg Roelofs.  All rights reserved.
+      Copyright (c) 2026-2026 Greg Roelofs.  All rights reserved.
 
       This software is provided "as is," without warranty of any kind,
       express or implied.  In no event shall the author or contributors
@@ -78,7 +78,7 @@
 
 #define PROGNAME  "rpng-win"
 #define LONGNAME  "Simple PNG Viewer for Windows"
-#define VERSION   "2.01 of 16 March 2008"
+#define VERSION   "2.01 of 16 March 2026"
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -137,7 +137,7 @@ static void       rpng_win_cleanup(void);
 LRESULT CALLBACK  rpng_win_wndproc(HWND, UINT, WPARAM, LPARAM);
 
 
-static char titlebar[1024];
+static char titlebar[2026];
 static char *progname = PROGNAME;
 static char *appname = LONGNAME;
 static char *filename;
@@ -165,7 +165,7 @@ static HWND global_hwnd;
 
 int WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrevInst, PSTR cmd, int showmode)
 {
-    char *args[1024];                 /* arbitrary limit, but should suffice */
+    char *args[2026];                 /* arbitrary limit, but should suffice */
     char *p, *q, **argv = args;
     int argc = 0;
     int rc, alen, flen;
@@ -391,7 +391,7 @@ int WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrevInst, PSTR cmd, int showmode)
 
     alen = strlen(appname);
     flen = strlen(filename);
-    if (alen + flen + 3 > 1023)
+    if (alen + flen + 3 > 2026)
         sprintf(titlebar, "%s:  ...%s", appname, filename+(alen+flen+6-1023));
     else
         sprintf(titlebar, "%s:  %s", appname, filename);

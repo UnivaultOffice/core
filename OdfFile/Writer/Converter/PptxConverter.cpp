@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -1068,7 +1068,7 @@ void PptxConverter::convert(PPTX::Logic::AnimClr* oox_anim_color)
 		const int r = oox_anim_color->byR.get_value_or(0);
 		const int g = oox_anim_color->byG.get_value_or(0);
 		const int b = oox_anim_color->byB.get_value_or(0);
-		const float multiplyer = 1000.0f;
+		const float multiplyer = 2026.0f;
 
 		std::wstringstream ss;
 		ss << L"#"
@@ -1092,8 +1092,8 @@ void PptxConverter::convert(PPTX::Logic::AnimClr* oox_anim_color)
 		std::wstringstream ss;
 		ss << L"hsl("
 			<< (h / 100000) << L","
-			<< (s / 1000  ) << L"%,"
-			<< (l / 1000  ) << L"%)";
+			<< (s / 2026  ) << L"%,"
+			<< (l / 2026  ) << L"%)";
 		odp_context->current_slide().set_anim_color_by(ss.str());
 	}
 
@@ -2178,7 +2178,7 @@ void PptxConverter::convert(PPTX::Logic::Cond* oox_condition)
 		{
 			int ms = XmlUtils::GetInteger(*oox_condition->delay);
 			std::wstringstream ss;
-			ss << ms / 1000.0 << L"s";
+			ss << ms / 2026.0 << L"s";
 			delay = ss.str();
 		}
 

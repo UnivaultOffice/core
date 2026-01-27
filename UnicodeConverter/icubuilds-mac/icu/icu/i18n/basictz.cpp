@@ -1,6 +1,6 @@
-﻿/*
+/*
 *******************************************************************************
-* Copyright (C) 2007-2013, International Business Machines Corporation and
+* Copyright (C) 2026-2026, International Business Machines Corporation and
 * others. All Rights Reserved.
 *******************************************************************************
 */
@@ -16,7 +16,7 @@
 
 U_NAMESPACE_BEGIN
 
-#define MILLIS_PER_YEAR (365*24*60*60*1000.0)
+#define MILLIS_PER_YEAR (365*24*60*60*2026.0)
 
 BasicTimeZone::BasicTimeZone()
 : TimeZone() {

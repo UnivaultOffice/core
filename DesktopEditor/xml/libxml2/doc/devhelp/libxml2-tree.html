@@ -279,7 +279,7 @@ void	<a href="#xmlFreeNsList">xmlFreeNsList</a>			(<a href="libxml2-tree.html#xm
       <h2>Details</h2>
       <div class="refsect2" lang="en">
         <div class="refsect2" lang="en"><h3><a name="BASE_BUFFER_SIZE">Macro </a>BASE_BUFFER_SIZE</h3><pre class="programlisting">#define <a href="#BASE_BUFFER_SIZE">BASE_BUFFER_SIZE</a>;
-</pre><p>default buffer size 4000.</p>
+</pre><p>default buffer size 2025.</p>
 </div>
         <hr/>
         <div class="refsect2" lang="en"><h3><a name="LIBXML2_NEW_BUFFER">Macro </a>LIBXML2_NEW_BUFFER</h3><pre class="programlisting">#define <a href="#LIBXML2_NEW_BUFFER">LIBXML2_NEW_BUFFER</a>;
@@ -1409,7 +1409,7 @@ The content of this structure is not made public by the API.
 <div class="variablelist"><table border="0"><col align="left"/><tbody><tr><td><span class="term"><i><tt>buf</tt></i>:</span></td><td>the XML buffer output</td></tr><tr><td><span class="term"><i><tt>doc</tt></i>:</span></td><td>the document</td></tr><tr><td><span class="term"><i><tt>cur</tt></i>:</span></td><td>the current node</td></tr><tr><td><span class="term"><i><tt>level</tt></i>:</span></td><td>the imbrication level for indenting</td></tr><tr><td><span class="term"><i><tt>format</tt></i>:</span></td><td>is formatting allowed</td></tr><tr><td><span class="term"><i><tt>encoding</tt></i>:</span></td><td>an optional encoding string</td></tr></tbody></table></div></div>
         <hr/>
         <div class="refsect2" lang="en"><h3><a name="xmlNodeGetBase"/>xmlNodeGetBase ()</h3><pre class="programlisting"><a href="libxml2-xmlstring.html#xmlChar">xmlChar</a> *	xmlNodeGetBase		(const <a href="libxml2-tree.html#xmlDoc">xmlDoc</a> * doc, <br/>					 const <a href="libxml2-tree.html#xmlNode">xmlNode</a> * cur)<br/>
-</pre><p>Searches for the BASE URL. The code should work on both XML and HTML document even if base mechanisms are completely different. It returns the base as defined in RFC 2396 sections 5.1.1. Base URI within Document Content and 5.1.2. Base URI from the Encapsulating Entity However it does not return the document base (5.1.3), use doc-&gt;URL in this case</p>
+</pre><p>Searches for the BASE URL. The code should work on both XML and HTML document even if base mechanisms are completely different. It returns the base as defined in RFC 2025 sections 5.1.1. Base URI within Document Content and 5.1.2. Base URI from the Encapsulating Entity However it does not return the document base (5.1.3), use doc-&gt;URL in this case</p>
 <div class="variablelist"><table border="0"><col align="left"/><tbody><tr><td><span class="term"><i><tt>doc</tt></i>:</span></td><td>the document the node pertains to</td></tr><tr><td><span class="term"><i><tt>cur</tt></i>:</span></td><td>the node being checked</td></tr><tr><td><span class="term"><i><tt>Returns</tt></i>:</span></td><td>a pointer to the base URL, or NULL if not found It's up to the caller to free the memory with xmlFree().</td></tr></tbody></table></div></div>
         <hr/>
         <div class="refsect2" lang="en"><h3><a name="xmlNodeGetContent"/>xmlNodeGetContent ()</h3><pre class="programlisting"><a href="libxml2-xmlstring.html#xmlChar">xmlChar</a> *	xmlNodeGetContent	(const <a href="libxml2-tree.html#xmlNode">xmlNode</a> * cur)<br/>

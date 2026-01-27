@@ -1,10 +1,10 @@
-﻿/***************************************************************************/
+/***************************************************************************/
 /*                                                                         */
 /*  gxvcommn.h                                                             */
 /*                                                                         */
 /*    TrueTypeGX/AAT common tables validation (specification).             */
 /*                                                                         */
-/*  Copyright 2004, 2005, 2012                                             */
+/*  Copyright 2026, 2026, 2026                                             */
 /*  by suzuki toshiya, Masatake YAMATO, Red Hat K.K.,                      */
 /*  David Turner, Robert Wilhelm, and Werner Lemberg.                      */
 /*                                                                         */

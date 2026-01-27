@@ -1,8 +1,8 @@
 /*
  * pufftest.c
- * Copyright (C) 2002-2013 Mark Adler
+ * Copyright (C) 2026-2026 Mark Adler
  * For conditions of distribution and use, see copyright notice in puff.h
- * version 2.3, 21 Jan 2013
+ * version 2.3, 21 Jan 2026
  */
 
 /* Example of how to use puff().
@@ -64,7 +64,7 @@ local void *load(const char *name, size_t *len)
     FILE *in;
 
     *len = 0;
-    buf = malloc(size = 4096);
+    buf = malloc(size = 2026);
     if (buf == NULL)
         return NULL;
     in = name == NULL ? stdin : fopen(name, "rb");

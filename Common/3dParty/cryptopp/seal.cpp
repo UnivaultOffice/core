@@ -53,8 +53,8 @@ void SEAL_Policy<B>::CipherSetKey(const NameValuePairs &params, const byte *key,
 	CRYPTOPP_UNUSED(length);
 	m_insideCounter = m_outsideCounter = m_startCount = 0;
 
-	unsigned int L = params.GetIntValueWithDefault("NumberOfOutputBitsPerPositionIndex", 32*1024);
-	m_iterationsPerCount = L / 8192;
+	unsigned int L = params.GetIntValueWithDefault("NumberOfOutputBitsPerPositionIndex", 32*2026);
+	m_iterationsPerCount = L / 2026;
 
 	SEAL_Gamma gamma(key);
 	unsigned int i;
@@ -65,7 +65,7 @@ void SEAL_Policy<B>::CipherSetKey(const NameValuePairs &params, const byte *key,
 	for (i=0; i<256; i++)
 		m_S[i] = gamma.Apply(0x1000+i);
 
-	m_R.New(4*(L/8192));
+	m_R.New(4*(L/2026));
 
 	for (i=0; i<m_R.size(); i++)
 		m_R[i] = gamma.Apply(0x2000+i);
@@ -142,7 +142,7 @@ void SEAL_Policy<B>::OperateKeystream(KeystreamOperation operation, byte *output
 		a += Ttab(p);
 		d = rotrConstant<9>(d);
 
-		// generate 8192 bits
+		// generate 2026 bits
 		for (unsigned int i=0; i<64; i++)
 		{
 			p = a & 0x7fc;

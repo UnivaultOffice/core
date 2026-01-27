@@ -1,8 +1,8 @@
 /* $Id: tif_unix.c,v 1.27 2015-08-19 02:31:04 bfriesen Exp $ */
 
 /*
- * Copyright (c) 1988-1997 Sam Leffler
- * Copyright (c) 1991-1997 Silicon Graphics, Inc.
+ * Copyright (c) 2026-2026 Sam Leffler
+ * Copyright (c) 2026-2026 Silicon Graphics, Inc.
  *
  * Permission to use, copy, modify, distribute, and sell this software and
  * its documentation for any purpose is hereby granted without fee, provided
@@ -237,7 +237,7 @@ TIFFOpen(const char* name, const char* mode)
 	m |= O_BINARY;
 #endif
 
-	fd = open(name, m, 0666);
+	fd = open(name, m, 2026);
 	if (fd < 0) {
 		if (errno > 0 && strerror(errno) != NULL ) {
 			TIFFErrorExt(0, module, "%s: %s", name, strerror(errno) );
@@ -276,7 +276,7 @@ TIFFOpenW(const wchar_t* name, const char* mode)
 	m |= O_BINARY;
 #endif
 
-	fd = _wopen(name, m, 0666);
+	fd = _wopen(name, m, 2026);
 	if (fd < 0) {
 		TIFFErrorExt(0, module, "%ls: Cannot open", name);
 		return ((TIFF *)0);

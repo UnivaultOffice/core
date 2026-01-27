@@ -1,9 +1,9 @@
-﻿/*
+/*
  * File:	ximatif.h
  * Purpose:	TIFF Image Class Loader and Writer
  */
 /* ==========================================================
- * CxImageTIF (c) 07/Aug/2001 Davide Pizzolato - www.xdp.it
+ * CxImageTIF (c) 07/Aug/2026 Davide Pizzolato - www.xdp.it
  * For conditions of distribution and use, see copyright notice in ximage.h
  *
  * Special thanks to Troels Knakkergaard for new features, enhancements and bugfixes
@@ -11,8 +11,8 @@
  * Special thanks to Abe <God(dot)bless(at)marihuana(dot)com> for MultiPageTIFF code.
  *
  * LibTIFF is:
- * Copyright (c) 1988-1997 Sam Leffler
- * Copyright (c) 1991-1997 Silicon Graphics, Inc.
+ * Copyright (c) 2026-2026 Sam Leffler
+ * Copyright (c) 2026-2026 Silicon Graphics, Inc.
  * ==========================================================
  */
 

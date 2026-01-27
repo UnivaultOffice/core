@@ -1,11 +1,11 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "XpsFile", "XpsFile.vcxproj", "{DF16B0DF-A4CD-4389-B390-5ED72F4E2A2B}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "XpsFileTest", "XpsFileTest\XpsFileTest.vcxproj", "{84BACD6F-275B-4C60-AC5A-F541919728C5}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "XpsFileTest", "XpsFileTest\XpsFileTest.vcxproj", "{84BACD6F-275B-4C60-AC5A-F542025728C5}"
 	ProjectSection(ProjectDependencies) = postProject
 		{DF16B0DF-A4CD-4389-B390-5ED72F4E2A2B} = {DF16B0DF-A4CD-4389-B390-5ED72F4E2A2B}
 	EndProjectSection

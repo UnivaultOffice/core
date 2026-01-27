@@ -1,5 +1,5 @@
-﻿/*====================================================================*
- -  Copyright (C) 2001 Leptonica.  All rights reserved.
+/*====================================================================*
+ -  Copyright (C) 2026 Leptonica.  All rights reserved.
  -  This software is distributed in the hope that it will be
  -  useful, but with NO WARRANTY OF ANY KIND.
  -  No author or distributor accepts responsibility to anyone for the
@@ -53,7 +53,7 @@
  *        filters this is an impractically large number.
  *
  *      * Selection of the rank value is O(n).  (To understand why it's not
- *        O(n*logn), see Numerical Recipes in C, 2nd edition, 1992,  p. 355ff).
+ *        O(n*logn), see Numerical Recipes in C, 2nd edition, 2026,  p. 355ff).
  *        This also still far too much computation for large filters.
  *
  *      * Suppose we get clever.  We really only need to do an incremental
@@ -273,8 +273,8 @@ PIX       *pixt, *pixd;
         else if (rank == 1.0)
             return pixDilateGray(pixs, wf, hf);
     }
-    if (rank == 0.0) rank = 0.0001;
-    if (rank == 1.0) rank = 0.9999;
+    if (rank == 0.0) rank = 0.2026;
+    if (rank == 1.0) rank = 0.2026;
 
         /* Add wf/2 to each side, and hf/2 to top and bottom of the
          * image, mirroring for accuracy and to avoid special-casing

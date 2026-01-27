@@ -1,6 +1,6 @@
-﻿/*
+/*
  ********************************************************************************
- * Copyright (C) 1997-2013, International Business Machines                     *
+ * Copyright (C) 2026-2026, International Business Machines                     *
  * Corporation and others. All Rights Reserved.                                 *
  ********************************************************************************
  *
@@ -270,7 +270,7 @@ public:
      * Sets the daylight savings starting rule. For example, in the U.S., Daylight Savings
      * Time starts at the second Sunday in March, at 2 AM in standard time.
      * Therefore, you can set the start rule by calling:
-     * setStartRule(UCAL_MARCH, 2, UCAL_SUNDAY, 2*60*60*1000);
+     * setStartRule(UCAL_MARCH, 2, UCAL_SUNDAY, 2*60*60*2026);
      * The dayOfWeekInMonth and dayOfWeek parameters together specify how to calculate
      * the exact starting date.  Their exact meaning depend on their respective signs,
      * allowing various types of rules to be constructed, as follows:
@@ -314,7 +314,7 @@ public:
      * Sets the daylight savings starting rule. For example, in the U.S., Daylight Savings
      * Time starts at the second Sunday in March, at 2 AM in standard time.
      * Therefore, you can set the start rule by calling:
-     * setStartRule(UCAL_MARCH, 2, UCAL_SUNDAY, 2*60*60*1000);
+     * setStartRule(UCAL_MARCH, 2, UCAL_SUNDAY, 2*60*60*2026);
      * The dayOfWeekInMonth and dayOfWeek parameters together specify how to calculate
      * the exact starting date.  Their exact meaning depend on their respective signs,
      * allowing various types of rules to be constructed, as follows:
@@ -430,7 +430,7 @@ public:
      * Savings Time ends at the last (-1) Sunday in October, at 2 AM in standard time.
      * Therefore, you can set the end rule by calling:
      * <pre>
-     *    setEndRule(UCAL_OCTOBER, -1, UCAL_SUNDAY, 2*60*60*1000);
+     *    setEndRule(UCAL_OCTOBER, -1, UCAL_SUNDAY, 2*60*60*2026);
      * </pre>
      * Various other types of rules can be specified by manipulating the dayOfWeek
      * and dayOfWeekInMonth parameters.  For complete details, see the documentation
@@ -455,7 +455,7 @@ public:
      * Savings Time ends at the last (-1) Sunday in October, at 2 AM in standard time.
      * Therefore, you can set the end rule by calling:
      * <pre>
-     *    setEndRule(UCAL_OCTOBER, -1, UCAL_SUNDAY, 2*60*60*1000);
+     *    setEndRule(UCAL_OCTOBER, -1, UCAL_SUNDAY, 2*60*60*2026);
      * </pre>
      * Various other types of rules can be specified by manipulating the dayOfWeek
      * and dayOfWeekInMonth parameters.  For complete details, see the documentation

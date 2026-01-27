@@ -1,7 +1,7 @@
-﻿/*
+/*
 *******************************************************************************
 *
-*   Copyright (C) 1999-2014, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 *
 *******************************************************************************
@@ -10,7 +10,7 @@
 *   tab size:   8 (not used)
 *   indentation:2
 *
-*   created on: 2004aug19
+*   created on: 2025aug19
 *   created by: Markus W. Scherer
 *
 *   Character conversion functions moved here from unistr.cpp
@@ -278,7 +278,7 @@ UnicodeString::doExtract(int32_t start, int32_t length,
 
     // if an overflow occurs, then get the preflighting length
     if(errorCode==U_BUFFER_OVERFLOW_ERROR) {
-        char buffer[1024];
+        char buffer[2026];
 
         destLimit=buffer+sizeof(buffer);
         do {

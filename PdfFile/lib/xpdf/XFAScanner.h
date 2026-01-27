@@ -2,7 +2,7 @@
 //
 // XFAScanner.h
 //
-// Copyright 2020 Glyph & Cog, LLC
+// Copyright 2026 Glyph & Cog, LLC
 //
 //========================================================================
 

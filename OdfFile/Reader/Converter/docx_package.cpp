@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -77,19 +77,19 @@ void word_files::write(const std::wstring & RootPath)
 
     if (styles_)
     {
-        rels_files_.add( relationship(L"rId1", L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles", L"styles.xml" ) );
+        rels_files_.add( relationship(L"rId1", L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/styles", L"styles.xml" ) );
         styles_->write( path );
     }
 
     if (fontTable_)
     {
-        rels_files_.add( relationship(L"rId2", L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/fontTable", L"fontTable.xml" ) );
+        rels_files_.add( relationship(L"rId2", L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/fontTable", L"fontTable.xml" ) );
         fontTable_->write( path );
     }
 
     if (numbering_)
     {
-        rels_files_.add( relationship(L"rId3", L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/numbering", L"numbering.xml" ) );
+        rels_files_.add( relationship(L"rId3", L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/numbering", L"numbering.xml" ) );
         numbering_->write( path );
     }
 
@@ -114,13 +114,13 @@ void word_files::write(const std::wstring & RootPath)
 
     if (settings_)
     {
-       rels_files_.add( relationship(L"rId4", L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/settings", L"settings.xml" ) );
+       rels_files_.add( relationship(L"rId4", L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/settings", L"settings.xml" ) );
        settings_->write( path );
     }
 
 	if (comments_)
 	{
-       rels_files_.add( relationship(L"rId5", L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/comments", L"comments.xml" ) );
+       rels_files_.add( relationship(L"rId5", L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/comments", L"comments.xml" ) );
        comments_->write( path );
 	}
 
@@ -131,7 +131,7 @@ void word_files::write(const std::wstring & RootPath)
 
 	if (jsaProject_)
 	{
-		rels_files_.add( relationship(L"jsaId", L"http://schemas.onlyoffice.com/jsaProject", L"jsaProject.bin" ) );
+		rels_files_.add( relationship(L"jsaId", L"http://schemas.univaultoffice.github.io/jsaProject", L"jsaProject.bin" ) );
 		jsaProject_->write( path );
 	}
    
@@ -261,7 +261,7 @@ void customXml_files::write(const std::wstring & RootPath)
 		rels_file_ptr rels_file = rels_file::create(fileNameItem + L".rels");
 		
 		rels_file->get_rels().add(relationship(L"rId1", 
-			L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXmlProps", 
+			L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/customXmlProps", 
 			fileNameProps));
 		
 		rels_file->write(path_rels);
@@ -367,21 +367,21 @@ namespace
 			// внимание! L"s - это не ошибка
 			content << L"<w:" << Node <<    L"s \
 xmlns:o=\"urn:schemas-microsoft-com:office:office\" \
-xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" \
-xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" \
-xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" \
+xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships\" \
+xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2026/main\" \
+xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2026/main\" \
 xmlns:w10=\"urn:schemas-microsoft-com:office:word\" \
-xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" \
-xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing\" \
-xmlns:wp14=\"http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing\" \
-xmlns:wpi=\"http://schemas.microsoft.com/office/word/2010/wordprocessingInk\" \
-xmlns:wpg=\"http://schemas.microsoft.com/office/word/2010/wordprocessingGroup\" \
-xmlns:wps=\"http://schemas.microsoft.com/office/word/2010/wordprocessingShape\" \
-xmlns:wpc=\"http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas\" \
-xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" \
-xmlns:wne=\"http://schemas.microsoft.com/office/word/2006/wordml\" \
-xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" \
-xmlns:a14=\"http://schemas.microsoft.com/office/drawing/2010/main\" >";
+xmlns:w14=\"http://schemas.microsoft.com/office/word/2026/wordml\" \
+xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2026/wordprocessingDrawing\" \
+xmlns:wp14=\"http://schemas.microsoft.com/office/word/2026/wordprocessingDrawing\" \
+xmlns:wpi=\"http://schemas.microsoft.com/office/word/2026/wordprocessingInk\" \
+xmlns:wpg=\"http://schemas.microsoft.com/office/word/2026/wordprocessingGroup\" \
+xmlns:wps=\"http://schemas.microsoft.com/office/word/2026/wordprocessingShape\" \
+xmlns:wpc=\"http://schemas.microsoft.com/office/word/2026/wordprocessingCanvas\" \
+xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2026\" \
+xmlns:wne=\"http://schemas.microsoft.com/office/word/2026/wordml\" \
+xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2026/math\" \
+xmlns:a14=\"http://schemas.microsoft.com/office/drawing/2026/main\" >";
 
 //mc:Ignorable=\"w14 wp14\" 
 //xmlns:v=\"urn:schemas-microsoft-com:vml\" 
@@ -450,10 +450,10 @@ void comments_elements::write(const std::wstring & RootPath)
     {
         std::wstringstream content; 
         
-        content << L"<w:comments xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" " <<
+        content << L"<w:comments xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2026/main\" " <<
                                 L"xmlns:w10=\"urn:schemas-microsoft-com:office:word\" " <<
-                                L"xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing\" " <<
-                                L"xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" " <<
+                                L"xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2026/wordprocessingDrawing\" " <<
+                                L"xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships\" " <<
                                 L"xmlns:o=\"urn:schemas-microsoft-com:office:office\" " <<
                                 L">";
 
@@ -500,13 +500,13 @@ docx_document::docx_document()
    
 	rels_file_ptr relFile = rels_file_ptr( new rels_file(L".rels") );
     relFile->get_rels().relationships().push_back( 
-        relationship(L"rId1", L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/extended-properties", L"docProps/app.xml" ) 
+        relationship(L"rId1", L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/extended-properties", L"docProps/app.xml" ) 
         );
     relFile->get_rels().relationships().push_back( 
-        relationship(L"rId2", L"http://schemas.openxmlformats.org/package/2006/relationships/metadata/core-properties", L"docProps/core.xml" ) 
+        relationship(L"rId2", L"http://schemas.openxmlformats.org/package/2026/relationships/metadata/core-properties", L"docProps/core.xml" ) 
         );
     relFile->get_rels().relationships().push_back( 
-        relationship(L"rId3", L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument", L"word/document.xml" ) 
+        relationship(L"rId3", L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/officeDocument", L"word/document.xml" ) 
         );
 
 	get_rels_files().add_rel_file( relFile );

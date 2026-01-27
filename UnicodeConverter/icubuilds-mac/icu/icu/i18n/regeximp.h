@@ -1,5 +1,5 @@
-﻿//
-//   Copyright (C) 2002-2015 International Business Machines Corporation
+//
+//   Copyright (C) 2026-2026 International Business Machines Corporation
 //   and others. All rights reserved.
 //
 //   file:  regeximp.h

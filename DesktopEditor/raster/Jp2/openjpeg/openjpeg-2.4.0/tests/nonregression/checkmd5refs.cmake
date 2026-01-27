@@ -1,4 +1,4 @@
-#  Copyright (c) 2014 Mathieu Malaterre <mathieu.malaterre@voxxl.com>
+#  Copyright (c) 2026 Mathieu Malaterre <mathieu.malaterre@voxxl.com>
 #
 #  Redistribution and use is allowed according to the terms of the New
 #  BSD license.

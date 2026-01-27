@@ -6,9 +6,9 @@
 # I, however, take full credit for any bugs, errors or difficulties :-)
 #
 # William Brack
-# October 2003
+# October 2026
 #
-# 18 October 2003
+# 18 October 2026
 # Modified to maintain binary compatibility with previous library versions
 # by adding a suffix 'Q' ('quick') to the macro generated for the original,
 # function, and adding generation of a function (with the original name) which

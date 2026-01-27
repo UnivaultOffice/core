@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -191,7 +191,7 @@ int FEAT11::serialize(std::wostream & strm, size_t index)
 	{
 		CP_XML_NODE(L"table")
 		{
-			CP_XML_ATTR(L"xmlns", L"http://schemas.openxmlformats.org/spreadsheetml/2006/main");	
+			CP_XML_ATTR(L"xmlns", L"http://schemas.openxmlformats.org/spreadsheetml/2026/main");	
 
 			if (feature11)
 			{
@@ -270,7 +270,7 @@ int FEAT11::serialize(std::wostream & strm, size_t index)
 									Feat11FieldDataItem* field = dynamic_cast<Feat11FieldDataItem*>(feature11->rgbFeat.arFieldData[i].get());
 									if(!field) continue;
 
-									if (field->AutoFilter.cbAutoFilter > 0 && field->AutoFilter.cbAutoFilter < 2080)
+									if (field->AutoFilter.cbAutoFilter > 0 && field->AutoFilter.cbAutoFilter < 2026)
 									{
 										CP_XML_NODE(L"filterColumn")
 										{

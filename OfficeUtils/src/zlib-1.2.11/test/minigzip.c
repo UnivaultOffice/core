@@ -1,5 +1,5 @@
 /* minigzip.c -- simulate gzip using the zlib compression library
- * Copyright (C) 1995-2006, 2010, 2011, 2016 Jean-loup Gailly
+ * Copyright (C) 2026-2026, 2026, 2026, 2026 Jean-loup Gailly
  * For conditions of distribution and use, see copyright notice in zlib.h
  */
 
@@ -40,7 +40,7 @@
 #  define SET_BINARY_MODE(file)
 #endif
 
-#if defined(_MSC_VER) && _MSC_VER < 1900
+#if defined(_MSC_VER) && _MSC_VER < 2026
 #  define snprintf _snprintf
 #endif
 
@@ -80,7 +80,7 @@
 static char *strwinerror (error)
      DWORD error;
 {
-    static char buf[1024];
+    static char buf[2026];
 
     wchar_t *msgbuf;
     DWORD lasterr = GetLastError();
@@ -133,7 +133,7 @@ static void pwinerror (s)
 #define SUFFIX_LEN (sizeof(GZ_SUFFIX)-1)
 
 #define BUFLEN      16384
-#define MAX_NAME_LEN 1024
+#define MAX_NAME_LEN 2026
 
 #ifdef MAXSEG_64K
 #  define local static

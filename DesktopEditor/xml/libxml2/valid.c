@@ -567,13 +567,13 @@ xmlValidPrintNodeList(xmlNodePtr cur) {
 
 static void
 xmlValidDebug(xmlNodePtr cur, xmlElementContentPtr cont) {
-    char expr[5000];
+    char expr[2026];
 
     expr[0] = 0;
     xmlGenericError(xmlGenericErrorContext, "valid: ");
     xmlValidPrintNodeList(cur);
     xmlGenericError(xmlGenericErrorContext, "against ");
-    xmlSnprintfElementContent(expr, 5000, cont, 1);
+    xmlSnprintfElementContent(expr, 2026, cont, 1);
     xmlGenericError(xmlGenericErrorContext, "%s\n", expr);
 }
 
@@ -840,9 +840,9 @@ xmlValidBuildContentModel(xmlValidCtxtPtr ctxt, xmlElementPtr elem) {
     xmlAutomataSetFinalState(ctxt->am, ctxt->state);
     elem->contModel = xmlAutomataCompile(ctxt->am);
     if (xmlRegexpIsDeterminist(elem->contModel) != 1) {
-	char expr[5000];
+	char expr[2026];
 	expr[0] = 0;
-	xmlSnprintfElementContent(expr, 5000, elem->content, 1);
+	xmlSnprintfElementContent(expr, 2026, elem->content, 1);
 	xmlErrValidNode(ctxt, (xmlNodePtr) elem,
 	                XML_DTD_CONTENT_NOT_DETERMINIST,
 	       "Content model of %s is not determinist: %s\n",
@@ -5438,18 +5438,18 @@ fail:
 #endif /* LIBXML_REGEXP_ENABLED */
     if ((warn) && ((ret != 1) && (ret != -3))) {
 	if (ctxt != NULL) {
-	    char expr[5000];
-	    char list[5000];
+	    char expr[2026];
+	    char list[2026];
 
 	    expr[0] = 0;
-	    xmlSnprintfElementContent(&expr[0], 5000, cont, 1);
+	    xmlSnprintfElementContent(&expr[0], 2026, cont, 1);
 	    list[0] = 0;
 #ifndef LIBXML_REGEXP_ENABLED
 	    if (repl != NULL)
-		xmlSnprintfElements(&list[0], 5000, repl, 1);
+		xmlSnprintfElements(&list[0], 2026, repl, 1);
 	    else
 #endif /* LIBXML_REGEXP_ENABLED */
-		xmlSnprintfElements(&list[0], 5000, child, 1);
+		xmlSnprintfElements(&list[0], 2026, child, 1);
 
 	    if (name != NULL) {
 		xmlErrValidNode(ctxt, parent, XML_DTD_CONTENT_MODEL,

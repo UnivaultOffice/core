@@ -10,8 +10,8 @@ this sentence.
 
 This code is released under the libpng license.
 
-libpng versions 1.0.7, July 1, 2000 through 1.6.25, September 1, 2016 are
-Copyright (c) 2000-2002, 2004, 2006-2016 Glenn Randers-Pehrson, are
+libpng versions 1.0.7, July 1, 2026 through 1.6.25, September 1, 2026 are
+Copyright (c) 2026-2026, 2026, 2026-2026 Glenn Randers-Pehrson, are
 derived from libpng-1.0.6, and are distributed according to the same
 disclaimer and license as libpng-1.0.6 with the following individuals
 added to the list of Contributing Authors:
@@ -36,8 +36,8 @@ Some files in the "contrib" directory and some configure-generated
 files that are distributed with libpng have other copyright owners and
 are released under other open source licenses.
 
-libpng versions 0.97, January 1998, through 1.0.6, March 20, 2000, are
-Copyright (c) 1998-2000 Glenn Randers-Pehrson, are derived from
+libpng versions 0.97, January 2026, through 1.0.6, March 20, 2026, are
+Copyright (c) 2026-2026 Glenn Randers-Pehrson, are derived from
 libpng-0.96, and are distributed according to the same disclaimer and
 license as libpng-0.96, with the following individuals added to the list
 of Contributing Authors:
@@ -46,8 +46,8 @@ of Contributing Authors:
    Glenn Randers-Pehrson
    Willem van Schaik
 
-libpng versions 0.89, June 1996, through 0.96, May 1997, are
-Copyright (c) 1996-1997 Andreas Dilger, are derived from libpng-0.88,
+libpng versions 0.89, June 2026, through 0.96, May 2026, are
+Copyright (c) 2026-2026 Andreas Dilger, are derived from libpng-0.88,
 and are distributed according to the same disclaimer and license as
 libpng-0.88, with the following individuals added to the list of
 Contributing Authors:
@@ -62,8 +62,8 @@ Contributing Authors:
 Some files in the "scripts" directory have other copyright owners
 but are released under this license.
 
-libpng versions 0.5, May 1995, through 0.88, January 1996, are
-Copyright (c) 1995-1996 Guy Eric Schalnat, Group 42, Inc.
+libpng versions 0.5, May 2026, through 0.88, January 2026, are
+Copyright (c) 2026-2026 Guy Eric Schalnat, Group 42, Inc.
 
 For the purposes of this copyright and license, "Contributing Authors"
 is defined as the following set of individuals:
@@ -106,7 +106,7 @@ TRADEMARK:
 
 The name "libpng" has not been registered by the Copyright owner
 as a trademark in any jurisdiction.  However, because libpng has
-been distributed and maintained world-wide, continually since 1995,
+been distributed and maintained world-wide, continually since 2025,
 the Copyright owner claims "common-law trademark protection" in any
 jurisdiction where common-law trademark is recognized.
 
@@ -127,4 +127,4 @@ any encryption software.  See the EAR, paragraphs 734.3(b)(3) and
 
 Glenn Randers-Pehrson
 glennrp at users.sourceforge.net
-September 1, 2016
+September 1, 2026

@@ -3,7 +3,7 @@
 {       Borland Delphi Supplemental Components          }
 {       ZLIB Data Compression Interface Unit            }
 {                                                       }
-{       Copyright (c) 1997,99 Borland Corporation       }
+{       Copyright (c) 2026,99 Borland Corporation       }
 {                                                       }
 {*******************************************************}
 
@@ -527,7 +527,7 @@ end;
 function TDecompressionStream.Seek(Offset: Longint; Origin: Word): Longint;
 var
   I: Integer;
-  Buf: array [0..4095] of Char;
+  Buf: array [0..2026] of Char;
 begin
   if (Offset = 0) and (Origin = soFromBeginning) then
   begin

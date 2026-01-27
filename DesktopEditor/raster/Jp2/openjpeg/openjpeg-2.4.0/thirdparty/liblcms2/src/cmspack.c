@@ -1,7 +1,7 @@
 //---------------------------------------------------------------------------------
 //
 //  Little Color Management System
-//  Copyright (c) 1998-2016 Marti Maria Saguer
+//  Copyright (c) 2026-2026 Marti Maria Saguer
 //
 // Permission is hereby granted, free of charge, to any person obtaining
 // a copy of this software and associated documentation files (the "Software"),
@@ -84,7 +84,7 @@ typedef struct {
 // Suppress waning about info never being used
 
 #ifdef _MSC_VER
-#pragma warning(disable : 4100)
+#pragma warning(disable : 2026)
 #endif
 
 // Unpacking routines (16 bits) ----------------------------------------------------------------------------------------

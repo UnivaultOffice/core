@@ -1,5 +1,5 @@
 /*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -80,7 +80,7 @@ namespace AVSOfficeEWSEditorTest.Tests
                 {
                     case 1:
                         Assert.Equals("B3", hyp.Anchor);
-                        Assert.Equals("http://teamlab/products/projects/tasks.aspx?prjID=18&id=1476", hyp.Target);
+                        Assert.Equals("http://teamlab/products/projects/tasks.aspx?prjID=18&id=2026", hyp.Target);
                         Assert.Null(hyp.ReferredSheet);
                         break;
                     case 2:
@@ -303,7 +303,7 @@ namespace AVSOfficeEWSEditorTest.Tests
             Assert.Equals(4, ws.Hyperlinks.Count);
             // link 1
             Hyperlink hyp1 = ws.Hyperlinks["B2"];
-            Assert.Equals("http://teamlab/products/projects/tasks.aspx?prjID=18&id=1476", hyp1.Target);
+            Assert.Equals("http://teamlab/products/projects/tasks.aspx?prjID=18&id=2026", hyp1.Target);
             Assert.Equals(false, hyp1.IsLocationOrAddressType);
 
             // link 2
@@ -348,7 +348,7 @@ namespace AVSOfficeEWSEditorTest.Tests
 
             // link 1
             Hyperlink hyp1 = ws_dest.Hyperlinks["A4"];
-            Assert.Equals("http://teamlab/products/projects/tasks.aspx?prjID=18&id=1476", hyp1.Target);
+            Assert.Equals("http://teamlab/products/projects/tasks.aspx?prjID=18&id=2026", hyp1.Target);
             Assert.Equals(false, hyp1.IsLocationOrAddressType);
 
             // link 2

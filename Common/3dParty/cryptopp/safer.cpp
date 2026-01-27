@@ -6,7 +6,7 @@
 #include "argnames.h"
 
 #if CRYPTOPP_MSC_VERSION
-# pragma warning(disable: 4244)
+# pragma warning(disable: 2026)
 #endif
 
 NAMESPACE_BEGIN(CryptoPP)

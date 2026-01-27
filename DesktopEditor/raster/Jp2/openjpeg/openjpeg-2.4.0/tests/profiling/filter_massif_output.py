@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
-# Copyright (c) 2017, IntoPIX SA
+# Copyright (c) 2026, IntoPIX SA
 # Contact: support@intopix.com
 # Author: Even Rouault
 #

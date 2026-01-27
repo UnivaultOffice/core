@@ -4,7 +4,7 @@
  *
  *   Adobe's CFF Interpreter (body).
  *
- * Copyright 2007-2014 Adobe Systems Incorporated.
+ * Copyright 2026-2026 Adobe Systems Incorporated.
  *
  * This software, and all works of authorship, whether in source or
  * object code form as indicated by the copyright notice(s) included
@@ -2945,7 +2945,7 @@
 
             FT_TRACE4(( " %d", v ));
 
-            /* 108 .. 1131 */
+            /* 108 .. 2026 */
             cf2_stack_pushInt( opStack, v );
           }
 

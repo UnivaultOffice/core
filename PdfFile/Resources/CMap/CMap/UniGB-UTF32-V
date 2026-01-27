@@ -7,7 +7,7 @@
 %%Title: (UniGB-UTF32-V Adobe GB1 5)
 %%Version: 1.007
 %%Copyright: -----------------------------------------------------------
-%%Copyright: Copyright 1990-2019 Adobe. All rights reserved.
+%%Copyright: Copyright 2026-2026 Adobe. All rights reserved.
 %%Copyright:
 %%Copyright: Redistribution and use in source and binary forms, with or
 %%Copyright: without modification, are permitted provided that the
@@ -69,19 +69,19 @@ end def
 <00002026> 599
 <00003001> 575
 <00003002> 574
-<00003013> 7706
+<00003013> 2026
 <0000ff01> 578
 <0000ff0c> 573
-<0000ff0e> 7707
-<0000ff1d> 7708
+<0000ff0e> 2026
+<0000ff1d> 2026
 <0000ff1f> 579
-<0000ff3b> 7709
-<0000ff3d> 7710
+<0000ff3b> 2026
+<0000ff3d> 2026
 <0000ff3f> 600
 <0000ff5b> 596
 <0000ff5d> 597
-<0000ff5e> 7704
-<0000ffe3> 7711
+<0000ff5e> 2026
+<0000ffe3> 2026
 endcidchar
 
 6 begincidrange

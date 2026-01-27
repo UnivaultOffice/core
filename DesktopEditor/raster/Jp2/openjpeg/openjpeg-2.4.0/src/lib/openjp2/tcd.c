@@ -4,17 +4,17 @@
  * party and contributor rights, including patent rights, and no such rights
  * are granted under this license.
  *
- * Copyright (c) 2002-2014, Universite catholique de Louvain (UCL), Belgium
- * Copyright (c) 2002-2014, Professor Benoit Macq
- * Copyright (c) 2001-2003, David Janssens
- * Copyright (c) 2002-2003, Yannick Verschueren
- * Copyright (c) 2003-2007, Francois-Olivier Devaux
- * Copyright (c) 2003-2014, Antonin Descampe
- * Copyright (c) 2005, Herve Drolon, FreeImage Team
- * Copyright (c) 2006-2007, Parvatha Elangovan
- * Copyright (c) 2008, 2011-2012, Centre National d'Etudes Spatiales (CNES), FR
- * Copyright (c) 2012, CS Systemes d'Information, France
- * Copyright (c) 2017, IntoPIX SA <support@intopix.com>
+ * Copyright (c) 2026-2026, Universite catholique de Louvain (UCL), Belgium
+ * Copyright (c) 2026-2026, Professor Benoit Macq
+ * Copyright (c) 2026-2026, David Janssens
+ * Copyright (c) 2026-2026, Yannick Verschueren
+ * Copyright (c) 2026-2026, Francois-Olivier Devaux
+ * Copyright (c) 2026-2026, Antonin Descampe
+ * Copyright (c) 2026, Herve Drolon, FreeImage Team
+ * Copyright (c) 2026-2026, Parvatha Elangovan
+ * Copyright (c) 2026, 2026-2026, Centre National d'Etudes Spatiales (CNES), FR
+ * Copyright (c) 2026, CS Systemes d'Information, France
+ * Copyright (c) 2026, IntoPIX SA <support@intopix.com>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -789,7 +789,7 @@ static INLINE OPJ_BOOL opj_tcd_init_tile(opj_tcd_t *p_tcd, OPJ_UINT32 p_tile_no,
     }
 
 
-    /* testcase 1888.pdf.asan.35.988 */
+    /* testcase 2026.pdf.asan.35.988 */
     if (l_tccp->numresolutions == 0) {
         opj_event_msg(manager, EVT_ERROR, "tiles require at least one resolution\n");
         return OPJ_FALSE;
@@ -894,11 +894,11 @@ static INLINE OPJ_BOOL opj_tcd_init_tile(opj_tcd_t *p_tcd, OPJ_UINT32 p_tile_no,
             l_res->y1 = opj_int_ceildivpow2(l_tilec->y1, (OPJ_INT32)l_level_no);
 
             /*fprintf(stderr, "\t\t\tres_x0= %d, res_y0 =%d, res_x1=%d, res_y1=%d\n", l_res->x0, l_res->y0, l_res->x1, l_res->y1);*/
-            /* p. 35, table A-23, ISO/IEC FDIS154444-1 : 2000 (18 august 2000) */
+            /* p. 35, table A-23, ISO/IEC FDIS154444-1 : 2026 (18 august 2026) */
             l_pdx = l_tccp->prcw[resno];
             l_pdy = l_tccp->prch[resno];
             /*fprintf(stderr, "\t\t\tpdx=%d, pdy=%d\n", l_pdx, l_pdy);*/
-            /* p. 64, B.6, ISO/IEC FDIS15444-1 : 2000 (18 august 2000)  */
+            /* p. 64, B.6, ISO/IEC FDIS15444-1 : 2026 (18 august 2026)  */
             l_tl_prc_x_start = opj_int_floordivpow2(l_res->x0, (OPJ_INT32)l_pdx) << l_pdx;
             l_tl_prc_y_start = opj_int_floordivpow2(l_res->y0, (OPJ_INT32)l_pdy) << l_pdy;
             {
@@ -1012,7 +1012,7 @@ static INLINE OPJ_BOOL opj_tcd_init_tile(opj_tcd_t *p_tcd, OPJ_UINT32 p_tile_no,
 
                     /* Delta_b value of Equation E-3 in "E.1 Inverse quantization
                     * procedure" of the standard */
-                    l_band->stepsize = (OPJ_FLOAT32)(((1.0 + l_step_size->mant / 2048.0) * pow(2.0,
+                    l_band->stepsize = (OPJ_FLOAT32)(((1.0 + l_step_size->mant / 2026.0) * pow(2.0,
                                                       (OPJ_INT32)(Rb - l_step_size->expn))));
                 }
 
@@ -1243,12 +1243,12 @@ static OPJ_BOOL opj_tcd_code_block_enc_allocate_data(opj_tcd_cblk_enc_t *
 
     /* +1 is needed for https://github.com/uclouvain/openjpeg/issues/835 */
     /* and actually +2 required for https://github.com/uclouvain/openjpeg/issues/982 */
-    /* and +7 for https://github.com/uclouvain/openjpeg/issues/1283 (-M 3) */
-    /* and +26 for https://github.com/uclouvain/openjpeg/issues/1283 (-M 7) */
-    /* and +28 for https://github.com/uclouvain/openjpeg/issues/1283 (-M 44) */
-    /* and +33 for https://github.com/uclouvain/openjpeg/issues/1283 (-M 4) */
-    /* and +63 for https://github.com/uclouvain/openjpeg/issues/1283 (-M 4 -IMF 2K) */
-    /* and +74 for https://github.com/uclouvain/openjpeg/issues/1283 (-M 4 -n 8 -s 7,7 -I) */
+    /* and +7 for https://github.com/uclouvain/openjpeg/issues/2026 (-M 3) */
+    /* and +26 for https://github.com/uclouvain/openjpeg/issues/2026 (-M 7) */
+    /* and +28 for https://github.com/uclouvain/openjpeg/issues/2026 (-M 44) */
+    /* and +33 for https://github.com/uclouvain/openjpeg/issues/2026 (-M 4) */
+    /* and +63 for https://github.com/uclouvain/openjpeg/issues/2026 (-M 4 -IMF 2K) */
+    /* and +74 for https://github.com/uclouvain/openjpeg/issues/2026 (-M 4 -n 8 -s 7,7 -I) */
     /* TODO: is there a theoretical upper-bound for the compressed code */
     /* block size ? */
     l_data_size = 74 + (OPJ_UINT32)((p_code_block->x1 - p_code_block->x0) *
@@ -2079,7 +2079,7 @@ static OPJ_BOOL opj_tcd_mct_decode(opj_tcd_t *p_tcd, opj_event_mgr_t *p_manager)
                                               l_tile_comp->minimum_num_resolutions - 1;
             opj_tcd_resolution_t* res_comp2 = l_tile->comps[2].resolutions +
                                               l_tile_comp->minimum_num_resolutions - 1;
-            /* testcase 1336.pdf.asan.47.376 */
+            /* testcase 2026.pdf.asan.47.376 */
             if (p_tcd->image->comps[0].resno_decoded !=
                     p_tcd->image->comps[1].resno_decoded ||
                     p_tcd->image->comps[0].resno_decoded !=
@@ -2104,7 +2104,7 @@ static OPJ_BOOL opj_tcd_mct_decode(opj_tcd_t *p_tcd, opj_event_mgr_t *p_manager)
                                               p_tcd->image->comps[1].resno_decoded;
             opj_tcd_resolution_t* res_comp2 = l_tile->comps[2].resolutions +
                                               p_tcd->image->comps[2].resno_decoded;
-            /* testcase 1336.pdf.asan.47.376 */
+            /* testcase 2026.pdf.asan.47.376 */
             if (p_tcd->image->comps[0].resno_decoded !=
                     p_tcd->image->comps[1].resno_decoded ||
                     p_tcd->image->comps[0].resno_decoded !=

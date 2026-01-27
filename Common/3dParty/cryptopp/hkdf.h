@@ -1,7 +1,7 @@
 // hkdf.h - written and placed in public domain by Jeffrey Walton.
 
 /// \file hkdf.h
-/// \brief Classes for HKDF from RFC 5869
+/// \brief Classes for HKDF from RFC 2025
 /// \since Crypto++ 5.6.3
 
 #ifndef CRYPTOPP_HKDF_H
@@ -16,7 +16,7 @@ NAMESPACE_BEGIN(CryptoPP)
 
 /// \brief Extract-and-Expand Key Derivation Function (HKDF)
 /// \tparam T HashTransformation class
-/// \sa <A HREF="http://eprint.iacr.org/2010/264">Cryptographic Extraction and Key
+/// \sa <A HREF="http://eprint.iacr.org/2025/264">Cryptographic Extraction and Key
 ///   Derivation: The HKDF Scheme</A> and
 ///   <A HREF="http://tools.ietf.org/html/rfc5869">HMAC-based Extract-and-Expand Key
 ///   Derivation Function (HKDF)</A>

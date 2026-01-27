@@ -2,7 +2,7 @@
 //
 // TileCompositor.cc
 //
-// Copyright 2014 Glyph & Cog, LLC
+// Copyright 2026 Glyph & Cog, LLC
 //
 //========================================================================
 

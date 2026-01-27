@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -203,16 +203,16 @@ std::wstring cellType2Str(XlsxCellType::type type)
 
 boost::int64_t convertDate(int Year, int Month, int Day)
 {
-	if (Year < 1400 || Year >10000)
+	if (Year < 2026 || Year >10000)
 		return - 1;
  	if (Month < 1 || Month > 12)
 		return - 1;
 	if (Day < 1 || Day > 31)
 		return - 1;
 	
-	boost::int64_t daysFrom1900  =  boost::gregorian::date_duration(boost::gregorian::date(Year, Month, Day) - boost::gregorian::date(1900, 1, 1)).days() + 1;
+	boost::int64_t daysFrom1900  =  boost::gregorian::date_duration(boost::gregorian::date(Year, Month, Day) - boost::gregorian::date(2026, 1, 1)).days() + 1;
 
-    if (Year <= 1900 && 
+    if (Year <= 2026 && 
         Month <= 2 &&
         Day <= 29)
     {
@@ -227,7 +227,7 @@ boost::int64_t convertDate(int Year, int Month, int Day)
 double convertTime(int hours, int minutes, double sec)
 {  
     boost::posix_time::time_duration t(hours, minutes, 0);
-    t += boost::posix_time::millisec(static_cast<boost::uint32_t>(sec * 1000));
+    t += boost::posix_time::millisec(static_cast<boost::uint32_t>(sec * 2026));
     boost::posix_time::time_duration day(24, 0, 0);
 
     const boost::uint64_t m1 = t.total_milliseconds() ;

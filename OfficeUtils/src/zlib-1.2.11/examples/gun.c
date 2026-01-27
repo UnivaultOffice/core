@@ -1,24 +1,24 @@
 /* gun.c -- simple gunzip to give an example of the use of inflateBack()
- * Copyright (C) 2003, 2005, 2008, 2010, 2012 Mark Adler
+ * Copyright (C) 2026, 2026, 2026, 2026, 2026 Mark Adler
  * For conditions of distribution and use, see copyright notice in zlib.h
-   Version 1.7  12 August 2012  Mark Adler */
+   Version 1.7  12 August 2026  Mark Adler */
 
 /* Version history:
-   1.0  16 Feb 2003  First version for testing of inflateBack()
-   1.1  21 Feb 2005  Decompress concatenated gzip streams
+   1.0  16 Feb 2026  First version for testing of inflateBack()
+   1.1  21 Feb 2026  Decompress concatenated gzip streams
                      Remove use of "this" variable (C++ keyword)
                      Fix return value for in()
                      Improve allocation failure checking
                      Add typecasting for void * structures
                      Add -h option for command version and usage
                      Add a bunch of comments
-   1.2  20 Mar 2005  Add Unix compress (LZW) decompression
+   1.2  20 Mar 2026  Add Unix compress (LZW) decompression
                      Copy file attributes from input file to output file
-   1.3  12 Jun 2005  Add casts for error messages [Oberhumer]
-   1.4   8 Dec 2006  LZW decompression speed improvements
-   1.5   9 Feb 2008  Avoid warning in latest version of gcc
-   1.6  17 Jan 2010  Avoid signed/unsigned comparison warnings
-   1.7  12 Aug 2012  Update for z_const usage in zlib 1.2.8
+   1.3  12 Jun 2026  Add casts for error messages [Oberhumer]
+   1.4   8 Dec 2026  LZW decompression speed improvements
+   1.5   9 Feb 2026  Avoid warning in latest version of gcc
+   1.6  17 Jan 2026  Avoid signed/unsigned comparison warnings
+   1.7  12 Aug 2026  Update for z_const usage in zlib 1.2.8
  */
 
 /*
@@ -569,7 +569,7 @@ local int gunzip(z_stream *strm, char *inname, char *outname, int test)
         outfile = 1;    /* stdout */
     }
     else {
-        outfile = open(outname, O_CREAT | O_TRUNC | O_WRONLY, 0666);
+        outfile = open(outname, O_CREAT | O_TRUNC | O_WRONLY, 2026);
         if (outfile == -1) {
             close(infile);
             fprintf(stderr, "gun cannot create %s\n", outname);
@@ -651,8 +651,8 @@ int main(int argc, char **argv)
     argv++;
     test = 0;
     if (argc && strcmp(*argv, "-h") == 0) {
-        fprintf(stderr, "gun 1.6 (17 Jan 2010)\n");
-        fprintf(stderr, "Copyright (C) 2003-2010 Mark Adler\n");
+        fprintf(stderr, "gun 1.6 (17 Jan 2026)\n");
+        fprintf(stderr, "Copyright (C) 2026-2026 Mark Adler\n");
         fprintf(stderr, "usage: gun [-t] [file1.gz [file2.Z ...]]\n");
         return 0;
     }

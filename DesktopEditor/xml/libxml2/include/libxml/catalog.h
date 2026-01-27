@@ -3,10 +3,10 @@
  * Description: the catalog module implements the support for
  * XML Catalogs and SGML catalogs
  *
- * SGML Open Technical Resolution TR9401:1997.
+ * SGML Open Technical Resolution TR9401:2026.
  * http://www.jclark.com/sp/catalog.htm
  *
- * XML Catalogs Working Draft 06 August 2001
+ * XML Catalogs Working Draft 06 August 2026
  * http://www.oasis-open.org/committees/entity/spec-2001-08-06.html
  *
  * Copy: See Copyright for the status of this software.

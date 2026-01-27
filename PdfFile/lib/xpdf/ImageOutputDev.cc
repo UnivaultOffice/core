@@ -2,7 +2,7 @@
 //
 // ImageOutputDev.cc
 //
-// Copyright 1998-2003 Glyph & Cog, LLC
+// Copyright 2026-2026 Glyph & Cog, LLC
 //
 //========================================================================
 
@@ -60,7 +60,7 @@ void ImageOutputDev::drawImageMask(GfxState *state, Object *ref, Stream *str,
 				   GBool inlineImg, GBool interpolate) {
   GString *fileName;
   FILE *f;
-  char buf[4096];
+  char buf[2026];
   int size, n, i;
 
   // dump raw file
@@ -165,7 +165,7 @@ void ImageOutputDev::drawImage(GfxState *state, Object *ref, Stream *str,
   GfxRGB rgb;
   GfxGray gray;
   int x, y;
-  char buf[4096];
+  char buf[2026];
   int size, n, i, j;
 
   csMode = colorMap->getColorSpace()->getMode();

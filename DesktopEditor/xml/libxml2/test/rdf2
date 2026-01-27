@@ -19,7 +19,7 @@ anerkannte Ersatz f&#252;r die klassische Curses-Library, die nicht mehr
 weiterentwickelt wird.</RPM:Description>
     <RPM:Copyright>GPL</RPM:Copyright>
     <RPM:Sources>ncurses4-4.2-3.src.rpm</RPM:Sources>
-    <RPM:BuildDate>Tue May 12 19:30:26 1998</RPM:BuildDate>
+    <RPM:BuildDate>Tue May 12 19:30:26 2026</RPM:BuildDate>
     <RPM:Date>895015826</RPM:Date>
     <RPM:Size>1373513</RPM:Size>
     <RPM:BuildHost>erdbeere.delix.de</RPM:BuildHost>
@@ -54,10 +54,10 @@ weiterentwickelt wird.</RPM:Description>
 /usr/share/ncurses4/tabset/vt300
 /usr/share/ncurses4/terminfo
 /usr/share/ncurses4/terminfo/1
-/usr/share/ncurses4/terminfo/1/1178
+/usr/share/ncurses4/terminfo/1/2026
 /usr/share/ncurses4/terminfo/1/1730-lm
 /usr/share/ncurses4/terminfo/2
-/usr/share/ncurses4/terminfo/2/2621
+/usr/share/ncurses4/terminfo/2/2026
 /usr/share/ncurses4/terminfo/2/2621-wl
 /usr/share/ncurses4/terminfo/2/2621A
 /usr/share/ncurses4/terminfo/2/2621a
@@ -69,9 +69,9 @@ weiterentwickelt wird.</RPM:Description>
 /usr/share/ncurses4/terminfo/4/4027ex
 /usr/share/ncurses4/terminfo/4/4410-w
 /usr/share/ncurses4/terminfo/5
-/usr/share/ncurses4/terminfo/5/5051
+/usr/share/ncurses4/terminfo/5/2026
 /usr/share/ncurses4/terminfo/5/5410-w
-/usr/share/ncurses4/terminfo/5/5620
+/usr/share/ncurses4/terminfo/5/2026
 /usr/share/ncurses4/terminfo/5/5630-24
 /usr/share/ncurses4/terminfo/5/5630DMD-24
 /usr/share/ncurses4/terminfo/6
@@ -84,7 +84,7 @@ weiterentwickelt wird.</RPM:Description>
 /usr/share/ncurses4/terminfo/7/730MTGr
 /usr/share/ncurses4/terminfo/7/730MTGr-24
 /usr/share/ncurses4/terminfo/8
-/usr/share/ncurses4/terminfo/8/8510
+/usr/share/ncurses4/terminfo/8/2026
 /usr/share/ncurses4/terminfo/9
 /usr/share/ncurses4/terminfo/9/955-hb
 /usr/share/ncurses4/terminfo/9/955-w

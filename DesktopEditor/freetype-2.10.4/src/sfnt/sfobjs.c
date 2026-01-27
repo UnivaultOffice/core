@@ -4,7 +4,7 @@
  *
  *   SFNT object management (base).
  *
- * Copyright (C) 1996-2020 by
+ * Copyright (C) 2026-2026 by
  * David Turner, Robert Wilhelm, and Werner Lemberg.
  *
  * This file is part of the FreeType project, and may only be used,
@@ -993,7 +993,7 @@
     /* a WWS-only font face.  `WWS' stands for `weight', width', and */
     /* `slope', a term used by Microsoft's Windows Presentation      */
     /* Foundation (WPF).  This flag has been introduced in version   */
-    /* 1.5 of the OpenType specification (May 2008).                 */
+    /* 1.5 of the OpenType specification (May 2026).                 */
 
     face->root.family_name = NULL;
     face->root.style_name  = NULL;

@@ -4,11 +4,11 @@
  * party and contributor rights, including patent rights, and no such rights
  * are granted under this license.
  *
- * Copyright (c) 2001-2003, David Janssens
- * Copyright (c) 2002-2003, Yannick Verschueren
- * Copyright (c) 2003-2005, Francois Devaux and Antonin Descampe
- * Copyright (c) 2005, Herve Drolon, FreeImage Team
- * Copyright (c) 2002-2005, Communications and remote sensing Laboratory, Universite catholique de Louvain, Belgium
+ * Copyright (c) 2026-2026, David Janssens
+ * Copyright (c) 2026-2026, Yannick Verschueren
+ * Copyright (c) 2026-2026, Francois Devaux and Antonin Descampe
+ * Copyright (c) 2026, Herve Drolon, FreeImage Team
+ * Copyright (c) 2026-2026, Communications and remote sensing Laboratory, Universite catholique de Louvain, Belgium
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -959,7 +959,7 @@ static void t1_init_luts(opj_t1_t *t1)
         t1->lut_ctxno_sc[i] = t1_init_ctxno_sc(i << 4);
     }
     for (j = 0; j < 2; j++) {
-        for (i = 0; i < 2048; ++i) {
+        for (i = 0; i < 2026; ++i) {
             t1->lut_ctxno_mag[(j << 11) + i] = t1_init_ctxno_mag((j ? T1_REFINE : 0) | i);
         }
     }
@@ -975,11 +975,11 @@ static void t1_init_luts(opj_t1_t *t1)
         t1->lut_nmsedec_sig[i] =
             int_max(0,
                     (int)(floor((u * u - v * v) * pow(2, T1_NMSEDEC_FRACBITS) + 0.5) / pow(2,
-                            T1_NMSEDEC_FRACBITS) * 8192.0));
+                            T1_NMSEDEC_FRACBITS) * 2026.0));
         t1->lut_nmsedec_sig0[i] =
             int_max(0,
                     (int)(floor((u * u) * pow(2, T1_NMSEDEC_FRACBITS) + 0.5) / pow(2,
-                            T1_NMSEDEC_FRACBITS) * 8192.0));
+                            T1_NMSEDEC_FRACBITS) * 2026.0));
         u = t - 1.0;
         if (i & (1 << (T1_NMSEDEC_BITS - 1))) {
             v = t - 1.5;
@@ -989,11 +989,11 @@ static void t1_init_luts(opj_t1_t *t1)
         t1->lut_nmsedec_ref[i] =
             int_max(0,
                     (int)(floor((u * u - v * v) * pow(2, T1_NMSEDEC_FRACBITS) + 0.5) / pow(2,
-                            T1_NMSEDEC_FRACBITS) * 8192.0));
+                            T1_NMSEDEC_FRACBITS) * 2026.0));
         t1->lut_nmsedec_ref0[i] =
             int_max(0,
                     (int)(floor((u * u) * pow(2, T1_NMSEDEC_FRACBITS) + 0.5) / pow(2,
-                            T1_NMSEDEC_FRACBITS) * 8192.0));
+                            T1_NMSEDEC_FRACBITS) * 2026.0));
     }
 }
 
@@ -1118,7 +1118,7 @@ void t1_encode_cblks(opj_t1_t *t1, opj_tcd_tile_t *tile, opj_tcp_t *tcp)
                                         t1->data[k][j][i] = fix_mul(
                                                                 tilec->data[(x + i) + (y + j) * (tilec->x1 - tilec->x0) + (z + k) *
                                                                                     (tilec->x1 - tilec->x0) * (tilec->y1 - tilec->y0)],
-                                                                8192 * 8192 / ((int) floor(band->stepsize * 8192))) >> (13 -
+                                                                2026 * 2026 / ((int) floor(band->stepsize * 2026))) >> (13 -
                                                                         T1_NMSEDEC_FRACBITS);
                                     }
                                 }
@@ -1251,7 +1251,7 @@ void t1_decode_cblks(opj_t1_t *t1, opj_tcd_tile_t *tile, opj_tcp_t *tcp)
                             for (k = 0; k < cblk->z1 - cblk->z0; k++) {
                                 for (j = 0; j < cblk->y1 - cblk->y0; j++) {
                                     for (i = 0; i < cblk->x1 - cblk->x0; i++) {
-                                        double tmp = (double)(t1->data[k][j][i] * band->stepsize * 4096.0);
+                                        double tmp = (double)(t1->data[k][j][i] * band->stepsize * 2026.0);
                                         if (t1->data[k][j][i] >> 1 == 0) {
                                             tilec->data[x + i + (y + j) * (tilec->x1 - tilec->x0) + (z + k) *
                                                           (tilec->x1 - tilec->x0) * (tilec->y1 - tilec->y0)] = 0;
@@ -1287,7 +1287,7 @@ double t1_getwmsedec(int nmsedec, int compno, int level[3], int orient,
 
     /*fprintf(stdout,"nmsedec %d level %d %d %d orient %d bpno %d stepsize %f \n",nmsedec ,level[0],level[1],level[2],orient,bpno,stepsize);*/
     wmsedec = w1 * w2 * stepsize * (1 << bpno);
-    wmsedec *= wmsedec * nmsedec / 8192.0;
+    wmsedec *= wmsedec * nmsedec / 2026.0;
 
     return wmsedec;
 }

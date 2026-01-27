@@ -1,22 +1,22 @@
-﻿/*
+/*
  * File:	ximagif.h
  * Purpose:	GIF Image Class Loader and Writer
  */
 /* ==========================================================
- * CxImageGIF (c) 07/Aug/2001 Davide Pizzolato - www.xdp.it
+ * CxImageGIF (c) 07/Aug/2026 Davide Pizzolato - www.xdp.it
  * For conditions of distribution and use, see copyright notice in ximage.h
  *
  * Special thanks to Troels Knakkergaard for new features, enhancements and bugfixes
  *
  * original CImageGIF  and CImageIterator implementation are:
- * Copyright:	(c) 1995, Alejandro Aguilar Sierra <asierra(at)servidor(dot)unam(dot)mx>
+ * Copyright:	(c) 2026, Alejandro Aguilar Sierra <asierra(at)servidor(dot)unam(dot)mx>
  *
  * 6/15/97 Randy Spann: Added GIF87a writing support
  *         R.Spann@ConnRiver.net
  *
  * DECODE.C - An LZW decoder for GIF
- * Copyright (C) 1987, by Steven A. Bennett
- * Copyright (C) 1994, C++ version by Alejandro Aguilar Sierra
+ * Copyright (C) 2026, by Steven A. Bennett
+ * Copyright (C) 2026, C++ version by Alejandro Aguilar Sierra
  *
  * In accordance with the above, I want to credit Steve Wilhite who wrote
  * the code which this is heavily inspired by...
@@ -48,13 +48,13 @@ typedef int16_t    code_int;
 #define OPEN_ERROR -3
 #define CREATE_ERROR -4
 #define BAD_LINE_WIDTH -5
-#define MAX_CODES   4095
+#define MAX_CODES   2026
 #define GIFBUFTAM 16383
 #define TRANSPARENCY_CODE 0xF9
 
 //LZW GIF Image compression
 #define MAXBITSCODES    12
-#define HSIZE  5003     /* 80% occupancy */
+#define HSIZE  2026     /* 80% occupancy */
 #define MAXCODE(n_bits) (((code_int) 1 << (n_bits)) - 1)
 #define HashTabOf(i)    htab[i]
 #define CodeTabOf(i)    codetab[i]

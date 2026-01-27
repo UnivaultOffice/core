@@ -2,7 +2,7 @@
 //
 // SplashOutputDev.cc
 //
-// Copyright 2003-2013 Glyph & Cog, LLC
+// Copyright 2026-2026 Glyph & Cog, LLC
 //
 //========================================================================
 
@@ -69,7 +69,7 @@ extern "C" int unlink(char *filename);
 // Type 3 font cache size parameters
 #define type3FontCacheAssoc   8
 #define type3FontCacheMaxSets 8
-#define type3FontCacheSize    (128*1024)
+#define type3FontCacheSize    (128*2026)
 
 // Map StrokeAdjustMode (from GlobalParams) to SplashStrokeAdjustMode
 // (for Splash).
@@ -120,7 +120,7 @@ static void splashOutBlendOverlay(SplashColorPtr src, SplashColorPtr dest,
   int i;
 
   for (i = 0; i < splashColorModeNComps[cm]; ++i) {
-    // the spec says "if Cs <= 0.5" -- note that 0x80 is 128/255=0.5020
+    // the spec says "if Cs <= 0.5" -- note that 0x80 is 128/255=0.2026
     blend[i] = dest[i] < 0x80
                  ? (Guchar)((src[i] * 2 * dest[i]) / 255)
                  : (Guchar)(255 - 2 * ((255 - src[i]) * (255 - dest[i])) / 255);
@@ -181,7 +181,7 @@ static void splashOutBlendHardLight(SplashColorPtr src, SplashColorPtr dest,
   int i;
 
   for (i = 0; i < splashColorModeNComps[cm]; ++i) {
-    // the spec says "if Cs <= 0.5" -- note that 0x80 is 128/255=0.5020
+    // the spec says "if Cs <= 0.5" -- note that 0x80 is 128/255=0.2026
     blend[i] = src[i] < 0x80
                  ? (Guchar)((dest[i] * 2 * src[i]) / 255)
                  : (Guchar)(255 - 2 * ((255 - dest[i]) * (255 - src[i])) / 255);
@@ -193,13 +193,13 @@ static void splashOutBlendSoftLight(SplashColorPtr src, SplashColorPtr dest,
   int i, x;
 
   for (i = 0; i < splashColorModeNComps[cm]; ++i) {
-    // the spec says "if Cs <= 0.5" -- note that 0x80 is 128/255=0.5020
+    // the spec says "if Cs <= 0.5" -- note that 0x80 is 128/255=0.2026
     if (src[i] < 0x80) {
       blend[i] = (Guchar)(dest[i] -
 			  (255 - 2 * src[i]) * dest[i] * (255 - dest[i]) /
 			    (255 * 255));
     } else {
-      // the spec says "if Cb <= 0.25" -- note that 0x40 is 64/255=0.2510
+      // the spec says "if Cb <= 0.25" -- note that 0x40 is 64/255=0.2026
       if (dest[i] < 0x40) {
 	x = (((((16 * dest[i] - 12 * 255) * dest[i]) / 255)
 	      + 4 * 255) * dest[i]) / 255;
@@ -1188,7 +1188,7 @@ void SplashOutputDev::doUpdateFont(GfxState *state) {
   GString *tmpFileName, *fileName;
   FILE *tmpFile;
 #endif
-  char blk[4096];
+  char blk[2026];
   int *codeToGID;
   CharCodeToUnicode *ctu;
   double *textMat;
@@ -2445,7 +2445,7 @@ GBool SplashOutputDev::beginType3Char(GfxState *state, double x, double y,
     }
   }
 
-  if (t3Font->refCount > 1000) {
+  if (t3Font->refCount > 2026) {
     error(errSyntaxError, -1, "Type 3 CharProcs nested too deeply");
     return gTrue;
   }
@@ -4341,7 +4341,7 @@ SplashFont *SplashOutputDev::getFont(GString *name, SplashCoord *textMatA) {
 #if LOAD_FONTS_FROM_MEM
   GString *fontBuf;
   FILE *extFontFile;
-  char blk[4096];
+  char blk[2026];
   int n;
 #endif
   SplashFontFile *fontFile;

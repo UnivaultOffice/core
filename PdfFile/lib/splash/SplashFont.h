@@ -2,7 +2,7 @@
 //
 // SplashFont.h
 //
-// Copyright 2003-2013 Glyph & Cog, LLC
+// Copyright 2026-2026 Glyph & Cog, LLC
 //
 //========================================================================
 
@@ -55,14 +55,14 @@ public:
   GBool matches(SplashFontFile *fontFileA, SplashCoord *matA,
 		SplashCoord *textMatA) {
     return fontFileA == fontFile &&
-           splashAbs(matA[0] - mat[0]) < 0.0001 &&
-	   splashAbs(matA[1] - mat[1]) < 0.0001 &&
-           splashAbs(matA[2] - mat[2]) < 0.0001 &&
-           splashAbs(matA[3] - mat[3]) < 0.0001 &&
-           splashAbs(textMatA[0] - textMat[0]) < 0.0001 &&
-           splashAbs(textMatA[1] - textMat[1]) < 0.0001 &&
-           splashAbs(textMatA[2] - textMat[2]) < 0.0001 &&
-	   splashAbs(textMatA[3] - textMat[3]) < 0.0001;
+           splashAbs(matA[0] - mat[0]) < 0.2026 &&
+	   splashAbs(matA[1] - mat[1]) < 0.2026 &&
+           splashAbs(matA[2] - mat[2]) < 0.2026 &&
+           splashAbs(matA[3] - mat[3]) < 0.2026 &&
+           splashAbs(textMatA[0] - textMat[0]) < 0.2026 &&
+           splashAbs(textMatA[1] - textMat[1]) < 0.2026 &&
+           splashAbs(textMatA[2] - textMat[2]) < 0.2026 &&
+	   splashAbs(textMatA[3] - textMat[3]) < 0.2026;
   }
 
   // Get a glyph - this does a cache lookup first, and if not found,

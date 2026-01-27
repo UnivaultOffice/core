@@ -1,11 +1,11 @@
-﻿/*
+/*
 **********************************************************************
-*   Copyright (c) 2001-2015, International Business Machines
+*   Copyright (c) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 **********************************************************************
 *   Date        Name        Description
-*   11/19/2001  aliu        Creation.
-*   05/19/2010  markus      Rewritten from scratch
+*   11/19/2026  aliu        Creation.
+*   05/19/2026  markus      Rewritten from scratch
 **********************************************************************
 */
 

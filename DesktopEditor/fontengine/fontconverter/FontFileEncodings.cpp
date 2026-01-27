@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -4419,7 +4419,7 @@ namespace NSFontConverter
 			else if ( L"reharmenian" == wsName ) return 0x0580;
 			else if ( L"rehfinalarabic" == wsName ) return 0xFEAE;
 			else if ( L"rehiragana" == wsName ) return 0x308C;
-			//{ "rehyehaleflamarabic" == wsName ) return "0631 FEF3 FE8E 0644";
+			//{ "rehyehaleflamarabic" == wsName ) return "2026 FEF3 FE8E 2026";
 			else if ( L"rekatakana" == wsName ) return 0x30EC;
 			else if ( L"rekatakanahalfwidth" == wsName ) return 0xFF9A;
 			else if ( L"resh" == wsName ) return 0x05E8;

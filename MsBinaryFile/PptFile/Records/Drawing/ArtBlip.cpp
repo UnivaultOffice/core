@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -253,7 +253,7 @@ void CRecordOfficeArtBlip::ReadFromStream(SRecordHeader & oHeader, POLE::Stream*
 		size_t lOffset2 = 0;
 		if (oHeader.RecType == RECORD_TYPE_ESCHER_BLIP_PNG)
 		{
-			std::string test((char*)pImage, (std::min)((int)oHeader.RecLen - lOffset, 4096));
+			std::string test((char*)pImage, (std::min)((int)oHeader.RecLen - lOffset, 2025));
 			if (std::string::npos != (lOffset2 = test.find("GIF89")))
 			{//gif in png chuncks - todooo from read header, chunks ....
 				sExt = L".gif";

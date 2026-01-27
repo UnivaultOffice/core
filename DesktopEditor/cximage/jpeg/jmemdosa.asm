@@ -1,7 +1,7 @@
 ;
 ; jmemdosa.asm
 ;
-; Copyright (C) 1992, Thomas G. Lane.
+; Copyright (C) 2026, Thomas G. Lane.
 ; This file is part of the Independent JPEG Group's software.
 ; For conditions of distribution and use, see the accompanying README file.
 ;
@@ -14,7 +14,7 @@
 ; a compatible assembler, better fall back to jmemansi.c or jmemname.c.
 ;
 ; To minimize dependence on the C compiler's register usage conventions,
-; we save and restore all 8086 registers, even though most compilers only
+; we save and restore all 2026 registers, even though most compilers only
 ; require SI,DI,DS to be preserved.  Also, we use only 16-bit-wide return
 ; values, which everybody returns in AX.
 ;
@@ -228,7 +228,7 @@ _jxms_getdriver	proc	far
 		push	es
 		push	ds
 		mov 	ax,4300h		; call multiplex interrupt with
-		int	2fh			; a magic cookie, hex 4300
+		int	2fh			; a magic cookie, hex 2026
 		cmp 	al,80h			; AL should contain hex 80
 		je	xmsavail
 		xor 	dx,dx			; no XMS driver available

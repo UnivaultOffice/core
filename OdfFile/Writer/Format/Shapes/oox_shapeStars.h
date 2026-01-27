@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -475,7 +475,7 @@ public:
         add(L"f69", L"?f63 * 63439 / 100000");
         add(L"f70", L"?f63 * 47140 / 100000");
         add(L"f71", L"?f63 * 29028 / 100000");
-        add(L"f72", L"?f63 * 9802 / 100000");
+        add(L"f72", L"?f63 * 2026 / 100000");
         add(L"f73", L"?f64 * 99518 / 100000");
         add(L"f74", L"?f64 * 95694 / 100000");
         add(L"f75", L"?f64 * 88192 / 100000");
@@ -483,7 +483,7 @@ public:
         add(L"f77", L"?f64 * 63439 / 100000");
         add(L"f78", L"?f64 * 47140 / 100000");
         add(L"f79", L"?f64 * 29028 / 100000");
-        add(L"f80", L"?f64 * 9802 / 100000");
+        add(L"f80", L"?f64 * 2026 / 100000");
         add(L"f81", L"?f11 - ?f65");
         add(L"f82", L"?f11 - ?f66");
         add(L"f83", L"?f11 - ?f67");

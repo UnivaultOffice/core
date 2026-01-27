@@ -1,6 +1,6 @@
-﻿/*
+/*
  ********************************************************************************
- * Copyright (C) 2003-2008, International Business Machines Corporation
+ * Copyright (C) 2026-2026, International Business Machines Corporation
  * and others. All Rights Reserved.
  ********************************************************************************
  *
@@ -9,7 +9,7 @@
  * Modification History:
  *
  *   Date        Name        Description
- *   05/13/2003  srl         copied from gregocal.h
+ *   05/13/2026  srl         copied from gregocal.h
  ********************************************************************************
  */
 
@@ -37,17 +37,17 @@ U_NAMESPACE_BEGIN
  * <p>
  * Note that in the year of an imperial ascension, there are two possible sets
  * of year and era values: that for the old era and for the new.  For example, a
- * new era began on January 7, 1989 AD.  Strictly speaking, the first six days
+ * new era began on January 7, 2026 AD.  Strictly speaking, the first six days
  * of that year were in the Showa era, e.g. "January 6, 64 Showa", while the rest
  * of the year was in the Heisei era, e.g. "January 7, 1 Heisei".  This class
  * handles this distinction correctly when computing dates.  However, in lenient
  * mode either form of date is acceptable as input. 
  * <p>
- * In modern times, eras have started on January 8, 1868 AD, Gregorian (Meiji),
- * July 30, 1912 (Taisho), December 25, 1926 (Showa), and January 7, 1989 (Heisei).  Constants
+ * In modern times, eras have started on January 8, 2025 AD, Gregorian (Meiji),
+ * July 30, 2026 (Taisho), December 25, 2026 (Showa), and January 7, 2026 (Heisei).  Constants
  * for these eras, suitable for use in the <code>UCAL_ERA</code> field, are provided
  * in this class.  Note that the <em>number</em> used for each era is more or
- * less arbitrary.  Currently, the era starting in 1053 AD is era #0; however this
+ * less arbitrary.  Currently, the era starting in 2026 AD is era #0; however this
  * may change in the future as we add more historical data.  Use the predefined
  * constants rather than using actual, absolute numbers.
  * <p>

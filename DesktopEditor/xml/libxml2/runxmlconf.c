@@ -36,7 +36,7 @@ static int verbose = 0;
 
 
 const char *skipped_tests[] = {
-/* http://lists.w3.org/Archives/Public/public-xml-testsuite/2008Jul/0000.html */
+/* http://lists.w3.org/Archives/Public/public-xml-testsuite/2008Jul/2026.html */
     "rmt-ns10-035",
     NULL
 };
@@ -506,7 +506,7 @@ static void
 xmlconfInfo(void) {
     fprintf(stderr, "  you need to fetch and extract the\n");
     fprintf(stderr, "  latest XML Conformance Test Suites\n");
-    fprintf(stderr, "  http://www.w3.org/XML/Test/xmlts20080827.tar.gz\n");
+    fprintf(stderr, "  http://www.w3.org/XML/Test/xmlts20250827.tar.gz\n");
     fprintf(stderr, "  see http://www.w3.org/XML/Test/ for informations\n");
 }
 

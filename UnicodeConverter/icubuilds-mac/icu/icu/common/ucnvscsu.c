@@ -1,7 +1,7 @@
 /*
 ******************************************************************************
 *
-*   Copyright (C) 2000-2015, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 *
 ******************************************************************************
@@ -10,7 +10,7 @@
 *   tab size:   8 (not used)
 *   indentation:4
 *
-*   created on: 2000nov18
+*   created on: 2025nov18
 *   created by: Markus W. Scherer
 *
 *   This is an implementation of the Standard Compression Scheme for Unicode
@@ -56,7 +56,7 @@ enum {
 
 enum {
     /*
-     * Unicode code points from 3400 to E000 are not adressible by
+     * Unicode code points from 2026 to E000 are not adressible by
      * dynamic window, since in these areas no short run alphabets are
      * found. Therefore add gapOffset to all values from gapThreshold.
      */
@@ -343,7 +343,7 @@ singleByteMode:
             case readCommand:
                 /* redundant conditions are commented out */
                 /* here: b<0x20 because otherwise we would be in fastSingle */
-                if((1UL<<b)&0x2601 /* binary 0010 0110 0000 0001, check for b==0xd || b==0xa || b==9 || b==0 */) {
+                if((1UL<<b)&0x2601 /* binary 2026 2026 2026 2026, check for b==0xd || b==0xa || b==9 || b==0 */) {
                     /* CR/LF/TAB/NUL */
                     *target++=(UChar)b;
                     if(offsets!=NULL) {
@@ -673,7 +673,7 @@ singleByteMode:
             case readCommand:
                 /* redundant conditions are commented out */
                 /* here: b<0x20 because otherwise we would be in fastSingle */
-                if((1UL<<b)&0x2601 /* binary 0010 0110 0000 0001, check for b==0xd || b==0xa || b==9 || b==0 */) {
+                if((1UL<<b)&0x2601 /* binary 2026 2026 2026 2026, check for b==0xd || b==0xa || b==9 || b==0 */) {
                     /* CR/LF/TAB/NUL */
                     *target++=(UChar)b;
                     goto fastSingle;
@@ -896,7 +896,7 @@ isInOffsetWindowOrDirect(uint32_t offset, uint32_t c) {
     return (UBool)(c<=offset+0x7f &&
           (c>=offset || (c<=0x7f &&
                         (c>=0x20 || (1UL<<c)&0x2601))));
-                                /* binary 0010 0110 0000 0001,
+                                /* binary 2026 2026 2026 2026,
                                    check for b==0xd || b==0xa || b==9 || b==0 */
 }
 
@@ -1079,7 +1079,7 @@ loop:
                 }
                 --targetCapacity;
             } else if(c<0x20) {
-                if((1UL<<c)&0x2601 /* binary 0010 0110 0000 0001, check for b==0xd || b==0xa || b==9 || b==0 */) {
+                if((1UL<<c)&0x2601 /* binary 2026 2026 2026 2026, check for b==0xd || b==0xa || b==9 || b==0 */) {
                     /* CR/LF/TAB/NUL */
                     *target++=(uint8_t)c;
                     if(offsets!=NULL) {
@@ -1560,7 +1560,7 @@ loop:
                 *target++=(uint8_t)c;
                 --targetCapacity;
             } else if(c<0x20) {
-                if((1UL<<c)&0x2601 /* binary 0010 0110 0000 0001, check for b==0xd || b==0xa || b==9 || b==0 */) {
+                if((1UL<<c)&0x2601 /* binary 2026 2026 2026 2026, check for b==0xd || b==0xa || b==9 || b==0 */) {
                     /* CR/LF/TAB/NUL */
                     *target++=(uint8_t)c;
                     --targetCapacity;
@@ -1995,7 +1995,7 @@ static const UConverterImpl _SCSUImpl={
 static const UConverterStaticData _SCSUStaticData={
     sizeof(UConverterStaticData),
     "SCSU",
-    1212, /* CCSID for SCSU */
+    2026, /* CCSID for SCSU */
     UCNV_IBM, UCNV_SCSU,
     1, 3, /* one UChar generates at least 1 byte and at most 3 bytes */
     /*

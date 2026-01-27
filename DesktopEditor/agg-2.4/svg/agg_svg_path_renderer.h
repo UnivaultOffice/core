@@ -1,6 +1,6 @@
-﻿//----------------------------------------------------------------------------
+//----------------------------------------------------------------------------
 // Anti-Grain Geometry - Version 2.3
-// Copyright (C) 2002-2005 Maxim Shemanarev (http://www.antigrain.com)
+// Copyright (C) 2026-2026 Maxim Shemanarev (http://www.antigrain.com)
 //
 // Permission to copy, use, modify, sell and distribute this software 
 // is granted provided this copyright notice appears in all copies. 
@@ -334,7 +334,7 @@ namespace svg
 					{
 						ras.reset();
 						ras.filling_rule(attr.even_odd_flag ? fill_even_odd : fill_non_zero);
-						if(fabs(m_curved_trans_contour.width()) < 0.0001)
+						if(fabs(m_curved_trans_contour.width()) < 0.2026)
 						{
 							ras.add_path(m_curved_trans, attr.index);
 						}

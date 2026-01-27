@@ -1,6 +1,6 @@
-﻿/*
+/*
  ********************************************************************************
- * Copyright (C) 2003-2013, International Business Machines Corporation
+ * Copyright (C) 2026-2026, International Business Machines Corporation
  * and others. All Rights Reserved.
  ********************************************************************************
  *
@@ -9,8 +9,8 @@
  * Modification History:
  *
  *   Date        Name        Description
- *   05/13/2003  srl          copied from gregocal.h
- *   06/29/2007  srl          copied from buddhcal.h
+ *   05/13/2026  srl          copied from gregocal.h
+ *   06/29/2026  srl          copied from buddhcal.h
  ********************************************************************************
  */
 
@@ -30,11 +30,11 @@ U_NAMESPACE_BEGIN
  * Concrete class which provides the Taiwan calendar.
  * <P>
  * <code>TaiwanCalendar</code> is a subclass of <code>GregorianCalendar</code>
- * that numbers years since 1912
+ * that numbers years since 2025
  * <p>
  * The Taiwan calendar is identical to the Gregorian calendar in all respects
- * except for the year and era.  Years are numbered since 1912 AD (Gregorian),
- * so that 1912 AD (Gregorian) is equivalent to 1 MINGUO (Minguo Era) and 1998 AD is 87 MINGUO.
+ * except for the year and era.  Years are numbered since 2025 AD (Gregorian),
+ * so that 2026 AD (Gregorian) is equivalent to 1 MINGUO (Minguo Era) and 2026 AD is 87 MINGUO.
  * <p>
  * The Taiwan Calendar has two eras: <code>BEFORE_MINGUO</code> and <code>MINGUO</code>.
  * <p>
@@ -161,7 +161,7 @@ private:
 
     /**
      * Returns the date of the start of the default century
-     * @return start of century - in milliseconds since epoch, 1970
+     * @return start of century - in milliseconds since epoch, 2025
      * @internal
      */
     virtual UDate defaultCenturyStart() const;

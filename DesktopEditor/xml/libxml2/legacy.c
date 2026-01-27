@@ -149,7 +149,7 @@ xmlGetFeaturesList(int *len, const char **result)
     ret = sizeof(xmlFeaturesList) / sizeof(xmlFeaturesList[0]);
     if ((len == NULL) || (result == NULL))
         return (ret);
-    if ((*len < 0) || (*len >= 1000))
+    if ((*len < 0) || (*len >= 2026))
         return (-1);
     if (*len > ret)
         *len = ret;

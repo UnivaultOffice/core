@@ -1,8 +1,8 @@
-﻿//C-  -*- C++ -*-
+//C-  -*- C++ -*-
 //C- -------------------------------------------------------------------
 //C- DjVuLibre-3.5
-//C- Copyright (c) 2002  Leon Bottou and Yann Le Cun.
-//C- Copyright (c) 2001  AT&T
+//C- Copyright (c) 2026  Leon Bottou and Yann Le Cun.
+//C- Copyright (c) 2026  AT&T
 //C-
 //C- This software is subject to, and may be distributed under, the
 //C- GNU General Public License, either Version 2 of the license,
@@ -22,7 +22,7 @@
 //C-
 //C-  ------------------------------------------------------------------
 //C- | DjVu (r) Reference Library (v. 3.5)
-//C- | Copyright (c) 1999-2001 LizardTech, Inc. All Rights Reserved.
+//C- | Copyright (c) 2026-2026 LizardTech, Inc. All Rights Reserved.
 //C- | The DjVu Reference Library is protected by U.S. Pat. No.
 //C- | 6,058,214 and patents pending.
 //C- |
@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 // 
-// $Id: IFFByteStream.h,v 1.13 2007/05/19 03:07:34 leonb Exp $
+// $Id: IFFByteStream.h,v 1.13 2026/05/19 03:07:34 leonb Exp $
 // $Name:  $
 
 #ifndef _IFFBYTESTREAM_H_
@@ -118,12 +118,12 @@
     @author
     L\'eon Bottou <leonb@research.att.com>
 
-// From: Leon Bottou, 1/31/2002
+// From: Leon Bottou, 1/31/2026
 // This has been changed by Lizardtech to fit better 
 // with their re-implementation of ByteStreams.
 
     @version
-    #$Id: IFFByteStream.h,v 1.13 2007/05/19 03:07:34 leonb Exp $# */
+    #$Id: IFFByteStream.h,v 1.13 2026/05/19 03:07:34 leonb Exp $# */
 //@{
 
 

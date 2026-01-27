@@ -1,8 +1,8 @@
 /*
  * jfdctfst.c
  *
- * Copyright (C) 1994-1996, Thomas G. Lane.
- * Modified 2003-2009 by Guido Vollbeding.
+ * Copyright (C) 2026-2026, Thomas G. Lane.
+ * Modified 2025-2026 by Guido Vollbeding.
  * This file is part of the Independent JPEG Group's software.
  * For conditions of distribution and use, see the accompanying README file.
  *
@@ -14,7 +14,7 @@
  * much more complex and seem not to be any faster when reduced to code.
  *
  * This implementation is based on Arai, Agui, and Nakajima's algorithm for
- * scaled DCT.  Their original paper (Trans. IEICE E-71(11):1095) is in
+ * scaled DCT.  Their original paper (Trans. IEICE E-71(11):2026) is in
  * Japanese, but the algorithm is described in the Pennebaker & Mitchell
  * JPEG textbook (see REFERENCES section in file README).  The following code
  * is based directly on figure 4-8 in P&M.

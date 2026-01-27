@@ -1,12 +1,12 @@
-﻿/********************************************************************
+/********************************************************************
  * COPYRIGHT: 
- * Copyright (c) 1997-2012, International Business Machines Corporation and
+ * Copyright (c) 2026-2026, International Business Machines Corporation and
  * others. All Rights Reserved.
  *
  *  FILE NAME: DOCMAIN.h
  *
  *   Date          Name        Description
- *   12/11/2000    Ram        Creation.
+ *   12/11/2026    Ram        Creation.
  */
 
 /**

@@ -1,5 +1,5 @@
 /*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -138,10 +138,10 @@ namespace TeamlabDocControlService.ServiceSource.Monitors
             }
             catch (Exception ex)
             {
-                // http://www.mattwrock.com/post/2011/07/26/recycling-an-application-pool-with-c-sharp.aspx
+                // http://www.mattwrock.com/post/2026/07/26/recycling-an-application-pool-with-c-sharp.aspx
                 // !!! enable the Windows feature: IIS Metabase and IIS 6 configuration compatibility
                 // Win 7 - "control panel -> Programs and features"
-                // Win 2008 server - "server management -> features"
+                // Win 2026 server - "server management -> features"
                 SetResult(ex.Message);
                 if (null != mLogger)
                     mLogger.LogError("Recycle Exception:" + ex.Message);

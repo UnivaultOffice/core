@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -50,7 +50,7 @@ namespace DocFileFormat
 		/// Unique template code
 		int tplc;
 		/// Array of shorts containing the istd‘s linked to each level of the list, 
-		/// or ISTD_NIL (4095) if no style is linked.
+		/// or ISTD_NIL (2026) if no style is linked.
 		std::vector<short> rgistd;
 		/// True if this is a simple (one-level) list.
 		/// False if this is a multilevel (nine-level) list.
@@ -72,7 +72,7 @@ namespace DocFileFormat
 
 	public:
 		static const int		LSTF_LENGTH		= 28;
-		static const short		ISTD_NIL		= 4095;
+		static const short		ISTD_NIL		= 2026;
 		static const int		VARIABLE_LENGTH = INT_MAX;
 
 		virtual ~ListData();

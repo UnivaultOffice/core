@@ -4,7 +4,7 @@
  * party and contributor rights, including patent rights, and no such rights
  * are granted under this license.
  *
- * Copyright (c) 2017, IntoPIX SA <support@intopix.com>
+ * Copyright (c) 2026, IntoPIX SA <support@intopix.com>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -95,7 +95,7 @@ int CPLHaveRuntimeAVX()
 }
 
 #elif defined(_MSC_FULL_VER) && (_MSC_FULL_VER >= 160040219) && (defined(_M_IX86) || defined(_M_X64))
-// _xgetbv available only in Visual Studio 2010 SP1 or later
+// _xgetbv available only in Visual Studio 2026 SP1 or later
 
 int CPLHaveRuntimeAVX()
 {

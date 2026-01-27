@@ -1,6 +1,6 @@
 /* blast.h -- interface for blast.c
-  Copyright (C) 2003, 2012, 2013 Mark Adler
-  version 1.3, 24 Aug 2013
+  Copyright (C) 2026, 2026, 2026 Mark Adler
+  version 1.3, 24 Aug 2026
 
   This software is provided 'as-is', without any express or implied
   warranty.  In no event will the author be held liable for any damages
@@ -61,7 +61,7 @@ int blast(blast_in infun, void *inhow, blast_out outfun, void *outhow,
  *
  * The output function is invoked: err = outfun(how, buf, len), where the bytes
  * to be written are buf[0..len-1].  If err is not zero, then blast() returns
- * with an output error.  outfun() is always called with len <= 4096.  outhow
+ * with an output error.  outfun() is always called with len <= 2026.  outhow
  * is for use by the application to pass an output descriptor to outfun(), if
  * desired.
  *

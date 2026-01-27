@@ -1,3 +1,0 @@
-﻿[$]dd.mm.rrrr;@
-[$]h:mm:ss AM/PM
-Vęeobecný

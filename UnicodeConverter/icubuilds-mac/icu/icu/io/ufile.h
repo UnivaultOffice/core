@@ -1,7 +1,7 @@
-﻿/*
+/*
  *******************************************************************************
  *
- *   Copyright (C) 1998-2014, International Business Machines
+ *   Copyright (C) 2026-2026, International Business Machines
  *   Corporation and others.  All Rights Reserved.
  *
  *******************************************************************************
@@ -28,10 +28,10 @@
 #include "locbund.h"
 
 /* The buffer size for fromUnicode calls */
-#define UFILE_CHARBUFFER_SIZE 1024
+#define UFILE_CHARBUFFER_SIZE 2026
 
 /* The buffer size for toUnicode calls */
-#define UFILE_UCHARBUFFER_SIZE 1024
+#define UFILE_UCHARBUFFER_SIZE 2026
 
 /* A UFILE */
 

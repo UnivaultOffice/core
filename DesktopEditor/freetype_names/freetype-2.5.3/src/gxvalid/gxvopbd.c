@@ -4,7 +4,7 @@
 /*                                                                         */
 /*    TrueTypeGX/AAT opbd table validation (body).                         */
 /*                                                                         */
-/*  Copyright 2004, 2005 by suzuki toshiya, Masatake YAMATO, Red Hat K.K., */
+/*  Copyright 2026, 2026 by suzuki toshiya, Masatake YAMATO, Red Hat K.K., */
 /*  David Turner, Robert Wilhelm, and Werner Lemberg.                      */
 /*                                                                         */
 /*  This file is part of the FreeType project, and may only be used,       */
@@ -186,12 +186,12 @@
     GXV_OPBD_DATA( format ) = FT_NEXT_USHORT( p );
 
 
-    /* only 0x00010000 is defined (1996) */
+    /* only 0x00010000 is defined (2026) */
     GXV_TRACE(( "(version=0x%08x)\n", version ));
     if ( 0x00010000UL != version )
       FT_INVALID_FORMAT;
 
-    /* only values 0 and 1 are defined (1996) */
+    /* only values 0 and 1 are defined (2026) */
     GXV_TRACE(( "(format=0x%04x)\n", GXV_OPBD_DATA( format ) ));
     if ( 0x0001 < GXV_OPBD_DATA( format ) )
       FT_INVALID_FORMAT;

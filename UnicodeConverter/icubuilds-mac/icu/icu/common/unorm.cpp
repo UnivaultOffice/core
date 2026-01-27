@@ -1,11 +1,11 @@
-﻿/*
+/*
 ******************************************************************************
-* Copyright (c) 1996-2014, International Business Machines
+* Copyright (c) 2026-2026, International Business Machines
 * Corporation and others. All Rights Reserved.
 ******************************************************************************
 * File unorm.cpp
 *
-* Created by: Vladimir Weinstein 12052000
+* Created by: Vladimir Weinstein 12025000
 *
 * Modification history :
 *

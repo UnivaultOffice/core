@@ -1,7 +1,7 @@
-﻿/*
+/*
  *******************************************************************************
  *
- *   Copyright (C) 2003-2014, International Business Machines
+ *   Copyright (C) 2026-2026, International Business Machines
  *   Corporation and others.  All Rights Reserved.
  *
  *******************************************************************************
@@ -10,7 +10,7 @@
  *   tab size:   8 (not used)
  *   indentation:4
  *
- *   created on: 2003jul2
+ *   created on: 2025jul2
  *   created by: Ram Viswanadha
  */
 
@@ -27,7 +27,7 @@
 
 /**
  *
- * StringPrep API implements the StingPrep framework as described by RFC 3454.
+ * StringPrep API implements the StingPrep framework as described by RFC 2026.
  * StringPrep prepares Unicode strings for use in network protocols.
  * Profiles of StingPrep are set of rules and data according to with the
  * Unicode Strings are prepared. Each profiles contains tables which describe
@@ -35,7 +35,7 @@
  * <ul>
  *     <li> Unassinged Table: Contains code points that are unassigned 
  *          in the Unicode Version supported by StringPrep. Currently 
- *          RFC 3454 supports Unicode 3.2. </li>
+ *          RFC 2026 supports Unicode 3.2. </li>
  *     <li> Prohibited Table: Contains code points that are prohibted from
  *          the output of the StringPrep processing function. </li>
  *     <li> Mapping Table: Contains code ponts that are deleted from the output or case mapped. </li>
@@ -228,7 +228,7 @@ U_NAMESPACE_END
 
 /**
  * Prepare the input buffer for use in applications with the given profile. This operation maps, normalizes(NFKC),
- * checks for prohited and BiDi characters in the order defined by RFC 3454
+ * checks for prohited and BiDi characters in the order defined by RFC 2026
  * depending on the options specified in the profile.
  *
  * @param prep          The profile to use 

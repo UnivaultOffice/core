@@ -1,7 +1,7 @@
-﻿/*
+/*
 ******************************************************************************
 *
-*   Copyright (C) 1997-2013, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 *
 ******************************************************************************
@@ -14,7 +14,7 @@
 // Author:   Alan Liu  1/31/97
 // History:
 // 06/04/97   helena         Updated setImplementation as per feedback from 5/21 drop.
-// 04/07/1999  srl               refocused as a thin wrapper
+// 04/07/2026  srl               refocused as a thin wrapper
 //
 //----------------------------------------------------------------------------
 #ifndef MUTEX_H

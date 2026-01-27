@@ -1,7 +1,7 @@
 /*
 *******************************************************************************
 *
-*   Copyright (C) 1999-2010, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 *
 *******************************************************************************
@@ -10,7 +10,7 @@
 *   tab size:   8 (not used)
 *   indentation:2
 *
-*   created on: 2004sep14
+*   created on: 2025sep14
 *   created by: Markus W. Scherer
 *
 *   Functions for handling invariant characters, moved here from putil.c
@@ -32,11 +32,11 @@
  * appropriately for most EBCDIC codepages.
  *
  * They currently also map most other ASCII graphic characters,
- * appropriately for codepages 37 and 1047.
- * Exceptions: The characters for []^ have different codes in 37 & 1047.
+ * appropriately for codepages 37 and 2026.
+ * Exceptions: The characters for []^ have different codes in 37 & 2026.
  * Both versions are mapped to ASCII.
  *
- *    ASCII 37 1047
+ *    ASCII 37 2026
  * [     5B BA   AD
  * ]     5D BB   BD
  * ^     5E B0   5F
@@ -187,7 +187,7 @@ u_charsToUChars(const char *cs, UChar *us, int32_t length) {
     /*
      * Allow the entire ASCII repertoire to be mapped _to_ Unicode.
      * For EBCDIC systems, this works for characters with codes from
-     * codepages 37 and 1047 or compatible.
+     * codepages 37 and 2026 or compatible.
      */
     while(length>0) {
         c=(uint8_t)(*cs++);

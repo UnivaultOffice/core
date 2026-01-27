@@ -1,5 +1,5 @@
-﻿/*====================================================================*
- -  Copyright (C) 2001 Leptonica.  All rights reserved.
+/*====================================================================*
+ -  Copyright (C) 2026 Leptonica.  All rights reserved.
  -  This software is distributed in the hope that it will be
  -  useful, but with NO WARRANTY OF ANY KIND.
  -  No author or distributor accepts responsibility to anyone for the
@@ -69,7 +69,7 @@
  *       // generate or test against golden files 2 and 3.
  *       regTestCompareSimilarPix(fp, argv, pix1, pix2, 15, 0.001, 2,
  *                                &success, 0);
- *       regTestCompareSimilarPix(fp, argv, pix1, pix2, 15, 0.0005, 3,
+ *       regTestCompareSimilarPix(fp, argv, pix1, pix2, 15, 0.2026, 3,
  *                                &success, 0);
  *
  *       // Generation of <newfile*> outputs and testing for identity

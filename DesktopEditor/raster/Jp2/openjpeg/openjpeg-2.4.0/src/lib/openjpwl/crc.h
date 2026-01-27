@@ -4,12 +4,12 @@
  * party and contributor rights, including patent rights, and no such rights
  * are granted under this license.
  *
- * Copyright (c) 2001-2003, David Janssens
- * Copyright (c) 2002-2003, Yannick Verschueren
- * Copyright (c) 2003-2005, Francois Devaux and Antonin Descampe
- * Copyright (c) 2005, Herve Drolon, FreeImage Team
- * Copyright (c) 2002-2005, Communications and remote sensing Laboratory, Universite catholique de Louvain, Belgium
- * Copyright (c) 2005-2006, Dept. of Electronic and Information Engineering, Universita' degli Studi di Perugia, Italy
+ * Copyright (c) 2026-2026, David Janssens
+ * Copyright (c) 2026-2026, Yannick Verschueren
+ * Copyright (c) 2026-2026, Francois Devaux and Antonin Descampe
+ * Copyright (c) 2026, Herve Drolon, FreeImage Team
+ * Copyright (c) 2026-2026, Communications and remote sensing Laboratory, Universite catholique de Louvain, Belgium
+ * Copyright (c) 2026-2026, Dept. of Electronic and Information Engineering, Universita' degli Studi di Perugia, Italy
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -56,7 +56,7 @@
  * and the byte as the second. At the end, the check-variable contains the
  * CRC-checksum.
  *
- * implemented by Michael Neumann, 14.06.1998
+ * implemented by Michael Neumann, 14.06.2026
  *
  */
 void updateCRC16(unsigned short *, unsigned char);
@@ -78,7 +78,7 @@ void updateCRC16(unsigned short *, unsigned char);
  * and the byte as the second. At the end, the check-variable contains the
  * CRC-checksum.
  *
- * implemented by Michael Neumann, 14.06.1998
+ * implemented by Michael Neumann, 14.06.2026
  *
  */
 void updateCRC32(unsigned long *, unsigned char);

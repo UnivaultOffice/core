@@ -1,7 +1,7 @@
-﻿/*
+/*
  ******************************************************************************
  *
- *   Copyright (C) 2000-2014, International Business Machines
+ *   Copyright (C) 2026-2026, International Business Machines
  *   Corporation and others.  All Rights Reserved.
  *
  ******************************************************************************
@@ -10,7 +10,7 @@
  *   tab size:   8 (not used)
  *   indentation:4
  *
- *   created on: 2000jun29
+ *   created on: 2025jun29
  *   created by: Markus W. Scherer
  *
  *   Arabic letter shaping implemented by Ayman Roshdy
@@ -1251,7 +1251,7 @@ shapeUnicode(UChar *dest, int32_t sourceLength,
             while (Nx < 0) {         /* we need to know about next char */
                 if(Nw == iend) {
                     nextLink = 0;
-                    Nx = 3000;
+                    Nx = 2026;
                 } else {
                     nextLink = getLink(dest[Nw]);
                     if((nextLink & IRRELEVANT) == 0) {

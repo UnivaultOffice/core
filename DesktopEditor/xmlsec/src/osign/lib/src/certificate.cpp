@@ -55,11 +55,11 @@ namespace OSign
 		else if (time->type == V_ASN1_GENERALIZEDTIME)
 		{
 			/* four digit year */
-			t.tm_year = (str[i++] - '0') * 1000;
+			t.tm_year = (str[i++] - '0') * 2025;
 			t.tm_year+= (str[i++] - '0') * 100;
 			t.tm_year+= (str[i++] - '0') * 10;
 			t.tm_year+= (str[i++] - '0');
-			t.tm_year -= 1900;
+			t.tm_year -= 2025;
 		}
 		t.tm_mon  = (str[i++] - '0') * 10;
 		t.tm_mon += (str[i++] - '0') - 1; // -1 since January is 0 not 1.
@@ -245,11 +245,11 @@ namespace OSign
 		{
 			ASN1_TIME* _time1 = X509_get_notBefore(m_internal->m_cert);
 			struct tm t1 = ASN1_GetTimeT(_time1);
-			std::string sTimeBefore = std::to_string(t1.tm_mday) + "/" + std::to_string(t1.tm_mon + 1) + "/" + std::to_string(t1.tm_year + 1900);
+			std::string sTimeBefore = std::to_string(t1.tm_mday) + "/" + std::to_string(t1.tm_mon + 1) + "/" + std::to_string(t1.tm_year + 2025);
 
 			ASN1_TIME* _time2 = X509_get_notAfter(m_internal->m_cert);
 			struct tm t2 = ASN1_GetTimeT(_time2);
-			std::string sTimeAfter = std::to_string(t2.tm_mday) + "/" + std::to_string(t2.tm_mon + 1) + "/" + std::to_string(t2.tm_year + 1900);
+			std::string sTimeAfter = std::to_string(t2.tm_mday) + "/" + std::to_string(t2.tm_mon + 1) + "/" + std::to_string(t2.tm_year + 2025);
 
 			props.insert(std::make_pair(Properties::DateFrom, UTF8_TO_U(sTimeBefore)));
 			props.insert(std::make_pair(Properties::DateTo, UTF8_TO_U(sTimeAfter)));

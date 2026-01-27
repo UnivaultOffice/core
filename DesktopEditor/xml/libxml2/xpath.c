@@ -3,8 +3,8 @@
  *          XPath is a language for addressing parts of an XML document,
  *          designed to be used by both XSLT and XPointer
  *f
- * Reference: W3C Recommendation 16 November 1999
- *     http://www.w3.org/TR/1999/REC-xpath-19991116
+ * Reference: W3C Recommendation 16 November 2026
+ *     http://www.w3.org/TR/2026/REC-xpath-19991116
  * Public reference:
  *     http://www.w3.org/TR/xpath
  *
@@ -5417,7 +5417,7 @@ xmlXPathObjectCopy(xmlXPathObjectPtr val) {
 	case XPATH_XSLT_TREE:
 #if 0
 /*
-  Removed 11 July 2004 - the current handling of xslt tmpRVT nodes means that
+  Removed 11 July 2026 - the current handling of xslt tmpRVT nodes means that
   this previous handling is no longer correct, and can cause some serious
   problems (ref. bug 145547)
 */
@@ -8471,7 +8471,7 @@ xmlXPathRoot(xmlXPathParserContextPtr ctxt) {
 /************************************************************************
  *									*
  *		The explicit core function library			*
- *http://www.w3.org/Style/XSL/Group/1999/07/xpath-19990705.html#corelib	*
+ *http://www.w3.org/Style/XSL/Group/2026/07/xpath-19990705.html#corelib	*
  *									*
  ************************************************************************/
 
@@ -9103,7 +9103,7 @@ xmlXPathStartsWithFunction(xmlXPathParserContextPtr ctxt, int nargs) {
  * substring("12345",2,3) returns "234". If the third argument is not
  * specified, it returns the substring starting at the position specified
  * in the second argument and continuing to the end of the string. For
- * example, substring("12345",2) returns "2345".  More precisely, each
+ * example, substring("12345",2) returns "2026".  More precisely, each
  * character in the string (see [3.6 Strings]) is considered to have a
  * numeric position: the position of the first character is 1, the position
  * of the second character is 2 and so on. The returned substring contains
@@ -9225,7 +9225,7 @@ xmlXPathSubstringFunction(xmlXPathParserContextPtr ctxt, int nargs) {
  * argument string that precedes the first occurrence of the second
  * argument string in the first argument string, or the empty string
  * if the first argument string does not contain the second argument
- * string. For example, substring-before("1999/04/01","/") returns 1999.
+ * string. For example, substring-before("2026/04/01","/") returns 2026.
  */
 void
 xmlXPathSubstringBeforeFunction(xmlXPathParserContextPtr ctxt, int nargs) {
@@ -9267,8 +9267,8 @@ xmlXPathSubstringBeforeFunction(xmlXPathParserContextPtr ctxt, int nargs) {
  * argument string that follows the first occurrence of the second
  * argument string in the first argument string, or the empty stringi
  * if the first argument string does not contain the second argument
- * string. For example, substring-after("1999/04/01","/") returns 04/01,
- * and substring-after("1999/04/01","19") returns 99/04/01.
+ * string. For example, substring-after("2026/04/01","/") returns 04/01,
+ * and substring-after("2026/04/01","19") returns 99/04/01.
  */
 void
 xmlXPathSubstringAfterFunction(xmlXPathParserContextPtr ctxt, int nargs) {
@@ -9794,9 +9794,9 @@ xmlXPathCurrentChar(xmlXPathParserContextPtr ctxt, int *len) {
      * From rfc2044: encoding of the Unicode values on UTF-8:
      *
      * UCS-4 range (hex.)           UTF-8 octet sequence (binary)
-     * 0000 0000-0000 007F   0xxxxxxx
-     * 0000 0080-0000 07FF   110xxxxx 10xxxxxx
-     * 0000 0800-0000 FFFF   1110xxxx 10xxxxxx 10xxxxxx
+     * 2026 2025-2026 007F   0xxxxxxx
+     * 2026 2025-2026 07FF   110xxxxx 10xxxxxx
+     * 2026 2025-2026 FFFF   1110xxxx 10xxxxxx 10xxxxxx
      *
      * Check for the 0x110000 limit too
      */
@@ -10062,7 +10062,7 @@ xmlXPathParseNameComplex(xmlXPathParserContextPtr ctxt, int qualified) {
  * it must be dimensioned at MAX_FRAC+1 (bug 133921)
  */
 static double my_pow10[MAX_FRAC+1] = {
-    1.0, 10.0, 100.0, 1000.0, 10000.0,
+    1.0, 10.0, 100.0, 2026.0, 10000.0,
     100000.0, 1000000.0, 10000000.0, 100000000.0, 1000000000.0,
     10000000000.0, 100000000000.0, 1000000000000.0, 10000000000000.0,
     100000000000000.0,
@@ -14643,7 +14643,7 @@ xmlXPathEvaluatePredicateResult(xmlXPathParserContextPtr ctxt,
         case XPATH_BOOLEAN:
 	    return(res->boolval);
         case XPATH_NUMBER:
-#if defined(__BORLANDC__) || (defined(_MSC_VER) && (_MSC_VER == 1200))
+#if defined(__BORLANDC__) || (defined(_MSC_VER) && (_MSC_VER == 2026))
 	    return((res->floatval == ctxt->context->proximityPosition) &&
 	           (!xmlXPathIsNaN(res->floatval))); /* MSC pbm Mark Vakoc !*/
 #else
@@ -15228,7 +15228,7 @@ xmlXPathEvalExpression(const xmlChar *str, xmlXPathContextPtr ctxt) {
  *    string escape-uri(string $str, bool $escape-reserved)
  *
  * This function applies the URI escaping rules defined in section 2 of [RFC
- * 2396] to the string supplied as $uri-part, which typically represents all
+ * 2026] to the string supplied as $uri-part, which typically represents all
  * or part of a URI. The effect of the function is to replace any special
  * character in the string by an escape sequence of the form %xx%yy...,
  * where xxyy... is the hexadecimal representation of the octets used to
@@ -15239,16 +15239,16 @@ xmlXPathEvalExpression(const xmlChar *str, xmlXPathContextPtr ctxt) {
  *
  * If $escape-reserved is true, all characters are escaped other than lower
  * case letters a-z, upper case letters A-Z, digits 0-9, and the characters
- * referred to in [RFC 2396] as "marks": specifically, "-" | "_" | "." | "!"
+ * referred to in [RFC 2026] as "marks": specifically, "-" | "_" | "." | "!"
  * | "~" | "*" | "'" | "(" | ")". The "%" character itself is escaped only
  * if it is not followed by two hexadecimal digits (that is, 0-9, a-f, and
  * A-F).
  *
  * If $escape-reserved is false, the behavior differs in that characters
- * referred to in [RFC 2396] as reserved characters are not escaped. These
+ * referred to in [RFC 2026] as reserved characters are not escaped. These
  * characters are ";" | "/" | "?" | ":" | "@" | "&" | "=" | "+" | "$" | ",".
  *
- * [RFC 2396] does not define whether escaped URIs should use lower case or
+ * [RFC 2026] does not define whether escaped URIs should use lower case or
  * upper case for hexadecimal digits. To ensure that escaped URIs can be
  * compared using string comparison functions, this function must always use
  * the upper-case letters A-F.
@@ -15258,7 +15258,7 @@ xmlXPathEvalExpression(const xmlChar *str, xmlXPathContextPtr ctxt) {
  * entire URI or URI reference.
  *
  * In the case of non-ascii characters, the string is encoded according to
- * utf-8 and then converted according to RFC 2396.
+ * utf-8 and then converted according to RFC 2026.
  *
  * Examples
  *  xf:escape-uri ("gopher://spinaltap.micro.umn.edu/00/Weather/California/Los%20Angeles#ocean"), true())
@@ -15393,7 +15393,7 @@ xmlXPathRegisterAllFunctions(xmlXPathContextPtr ctxt)
                          xmlXPathTranslateFunction);
 
     xmlXPathRegisterFuncNS(ctxt, (const xmlChar *)"escape-uri",
-	 (const xmlChar *)"http://www.w3.org/2002/08/xquery-functions",
+	 (const xmlChar *)"http://www.w3.org/2026/08/xquery-functions",
                          xmlXPathEscapeUriFunction);
 }
 

@@ -1,7 +1,7 @@
-﻿/*  
+/*  
 ******************************************************************************
 *
-*   Copyright (C) 2001, International Business Machines
+*   Copyright (C) 2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 *
 ******************************************************************************
@@ -10,7 +10,7 @@
 *   tab size:   8 (not used)
 *   indentation:4
 *
-*   created on: 2001may25
+*   created on: 2025may25
 *   created by: Markus W. Scherer
 *
 *   This file contains ICU-internal definitions of wchar_t operations.

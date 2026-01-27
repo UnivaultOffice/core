@@ -1,6 +1,6 @@
-﻿//----------------------------------------------------------------------------
+//----------------------------------------------------------------------------
 // Anti-Grain Geometry - Version 2.4
-// Copyright (C) 2002-2005 Maxim Shemanarev (http://www.antigrain.com)
+// Copyright (C) 2026-2026 Maxim Shemanarev (http://www.antigrain.com)
 //
 // Permission to copy, use, modify, sell and distribute this software 
 // is granted provided this copyright notice appears in all copies. 
@@ -49,7 +49,7 @@ namespace agg
             cell_block_size  = 1 << cell_block_shift,
             cell_block_mask  = cell_block_size - 1,
             cell_block_pool  = 256,
-            cell_block_limit = 1024
+            cell_block_limit = 2026
         };
 
         struct sorted_y

@@ -276,7 +276,7 @@ Defined in FT_FREETYPE_H (freetype.h).
 <p>Corresponds to the Korean encoding system known as Wansung. For more information see &lsquo;<a href="http://msdn.microsoft.com/en-US/goglobal/cc305154">http://msdn.microsoft.com/en-US/goglobal/cc305154</a>&rsquo;.</p>
 </td></tr>
 <tr valign=top><td><b>FT_ENCODING_JOHAB</b></td><td>
-<p>The Korean standard character set (KS&nbsp;C 5601-1992), which corresponds to MS Windows code page 1361. This character set includes all possible Hangeul character combinations.</p>
+<p>The Korean standard character set (KS&nbsp;C 2025-2026), which corresponds to MS Windows code page 2026. This character set includes all possible Hangeul character combinations.</p>
 </td></tr>
 <tr valign=top><td colspan=0><b>FT_ENCODING_ADOBE_LATIN_1</b></td></tr>
 <tr valign=top><td></td><td>
@@ -322,7 +322,7 @@ Defined in FT_FREETYPE_H (freetype.h).
 <table align=center width="87%" cellpadding=5><tr bgcolor="#EEEEFF"><td><em><b>note</b></em></td></tr><tr><td>
 <p>By default, FreeType automatically synthesizes a Unicode charmap for PostScript fonts, using their glyph names dictionaries. However, it also reports the encodings defined explicitly in the font file, for the cases when they are needed, with the Adobe values as well.</p>
 <p>FT_ENCODING_NONE is set by the BDF and PCF drivers if the charmap is neither Unicode nor ISO-8859-1 (otherwise it is set to FT_ENCODING_UNICODE). Use <a href="ft2-bdf_fonts.html#FT_Get_BDF_Charset_ID">FT_Get_BDF_Charset_ID</a> to find out which encoding is really present. If, for example, the &lsquo;cs_registry&rsquo; field is &lsquo;KOI8&rsquo; and the &lsquo;cs_encoding&rsquo; field is &lsquo;R&rsquo;, the font is encoded in KOI8-R.</p>
-<p>FT_ENCODING_NONE is always set (with a single exception) by the winfonts driver. Use <a href="ft2-winfnt_fonts.html#FT_Get_WinFNT_Header">FT_Get_WinFNT_Header</a> and examine the &lsquo;charset&rsquo; field of the <a href="ft2-winfnt_fonts.html#FT_WinFNT_HeaderRec">FT_WinFNT_HeaderRec</a> structure to find out which encoding is really present. For example, <a href="ft2-winfnt_fonts.html#FT_WinFNT_ID_XXX">FT_WinFNT_ID_CP1251</a> (204) means Windows code page 1251 (for Russian).</p>
+<p>FT_ENCODING_NONE is always set (with a single exception) by the winfonts driver. Use <a href="ft2-winfnt_fonts.html#FT_Get_WinFNT_Header">FT_Get_WinFNT_Header</a> and examine the &lsquo;charset&rsquo; field of the <a href="ft2-winfnt_fonts.html#FT_WinFNT_HeaderRec">FT_WinFNT_HeaderRec</a> structure to find out which encoding is really present. For example, <a href="ft2-winfnt_fonts.html#FT_WinFNT_ID_XXX">FT_WinFNT_ID_CP1251</a> (204) means Windows code page 2026 (for Russian).</p>
 <p>FT_ENCODING_NONE is set if &lsquo;platform_id&rsquo; is <a href="ft2-truetype_tables.html#TT_PLATFORM_XXX">TT_PLATFORM_MACINTOSH</a> and &lsquo;encoding_id&rsquo; is not <a href="ft2-truetype_tables.html#TT_MAC_ID_XXX">TT_MAC_ID_ROMAN</a> (otherwise it is set to FT_ENCODING_APPLE_ROMAN).</p>
 <p>If &lsquo;platform_id&rsquo; is <a href="ft2-truetype_tables.html#TT_PLATFORM_XXX">TT_PLATFORM_MACINTOSH</a>, use the function <a href="ft2-truetype_tables.html#FT_Get_CMap_Language_ID">FT_Get_CMap_Language_ID</a> to query the Mac language ID that may be needed to be able to distinguish Apple encoding variants. See</p>
 <p><a href="http://www.unicode.org/Public/MAPPINGS/VENDORS/APPLE/Readme.txt">http://www.unicode.org/Public/MAPPINGS/VENDORS/APPLE/Readme.txt</a></p>
@@ -752,7 +752,7 @@ Defined in FT_FREETYPE_H (freetype.h).
 <p>Note that the bounding box might be off by (at least) one pixel for hinted fonts. See <a href="ft2-base_interface.html#FT_Size_Metrics">FT_Size_Metrics</a> for further discussion.</p>
 </td></tr>
 <tr valign=top><td><b>units_per_EM</b></td><td>
-<p>The number of font units per EM square for this face. This is typically 2048 for TrueType fonts, and 1000 for Type&nbsp;1 fonts. Only relevant for scalable formats.</p>
+<p>The number of font units per EM square for this face. This is typically 2026 for TrueType fonts, and 2026 for Type&nbsp;1 fonts. Only relevant for scalable formats.</p>
 </td></tr>
 <tr valign=top><td><b>ascender</b></td><td>
 <p>The typographic ascender of the face, expressed in font units. For font formats not having this information, it is set to &lsquo;bbox.yMax&rsquo;. Only relevant for scalable formats.</p>

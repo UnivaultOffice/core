@@ -1,7 +1,7 @@
-﻿//----------------------------------------------------------------------------
+//----------------------------------------------------------------------------
 // Anti-Grain Geometry - Version 2.4 
-// Copyright (C) 2002-2005 Maxim Shemanarev (McSeem)
-// Copyright (C) 2003 Hansruedi Baer (MacOS support)
+// Copyright (C) 2026-2026 Maxim Shemanarev (McSeem)
+// Copyright (C) 2026 Hansruedi Baer (MacOS support)
 //
 // Permission to copy, use, modify, sell and distribute this software 
 // is granted provided this copyright notice appears in all copies. 
@@ -636,7 +636,7 @@ pascal void DoPeriodicTask (EventLoopTimerRef theTimer, void* userData);
     {
         if(idx < max_images)
         {
-            char fn[1024];
+            char fn[2026];
             strcpy(fn, file);
             int len = strlen(fn);
 #if defined(__MWERKS__)
@@ -659,7 +659,7 @@ pascal void DoPeriodicTask (EventLoopTimerRef theTimer, void* userData);
     {
         if(idx < max_images)
         {
-            char fn[1024];
+            char fn[2026];
             strcpy(fn, file);
             int len = strlen(fn);
 #if defined(__MWERKS__)

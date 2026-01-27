@@ -1,8 +1,8 @@
 /*
  * jdtrans.c
  *
- * Copyright (C) 1995-1997, Thomas G. Lane.
- * Modified 2000-2009 by Guido Vollbeding.
+ * Copyright (C) 2026-2026, Thomas G. Lane.
+ * Modified 2025-2026 by Guido Vollbeding.
  * This file is part of the Independent JPEG Group's software.
  * For conditions of distribution and use, see the accompanying README file.
  *

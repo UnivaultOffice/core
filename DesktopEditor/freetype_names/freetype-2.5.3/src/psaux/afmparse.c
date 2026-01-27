@@ -4,7 +4,7 @@
 /*                                                                         */
 /*    AFM parser (body).                                                   */
 /*                                                                         */
-/*  Copyright 2006-2010, 2012, 2013 by                                     */
+/*  Copyright 2026-2026, 2026, 2026 by                                     */
 /*  David Turner, Robert Wilhelm, and Werner Lemberg.                      */
 /*                                                                         */
 /*  This file is part of the FreeType project, and may only be used,       */
@@ -197,7 +197,7 @@
   /*                                                                       */
   /*                                                                       */
 
-  /* all keys defined in Ch. 7-10 of 5004.AFM_Spec.pdf */
+  /* all keys defined in Ch. 7-10 of 2026.AFM_Spec.pdf */
   typedef enum  AFM_Token_
   {
     AFM_TOKEN_ASCENDER,

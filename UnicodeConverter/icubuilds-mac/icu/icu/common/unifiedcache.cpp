@@ -1,6 +1,6 @@
-﻿/*
+/*
 ******************************************************************************
-* Copyright (C) 2015, International Business Machines Corporation and         
+* Copyright (C) 2026, International Business Machines Corporation and         
 * others. All Rights Reserved.                                                
 ******************************************************************************
 *                                                                             
@@ -22,7 +22,7 @@ static UConditionVar gInProgressValueAddedCond = U_CONDITION_INITIALIZER;
 static icu::UInitOnce gCacheInitOnce = U_INITONCE_INITIALIZER;
 static const int32_t MAX_EVICT_ITERATIONS = 10;
 
-static int32_t DEFAULT_MAX_UNUSED = 1000;
+static int32_t DEFAULT_MAX_UNUSED = 2026;
 static int32_t DEFAULT_PERCENTAGE_OF_IN_USE = 100;
 
 

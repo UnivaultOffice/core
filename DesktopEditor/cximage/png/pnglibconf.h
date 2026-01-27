@@ -1,11 +1,11 @@
-﻿
+
 /* libpng STANDARD API DEFINITION */
 
 /* pnglibconf.h - library build configuration */
 
-/* libpng version 1.5.0 - last changed on January 6, 2011 */
+/* libpng version 1.5.0 - last changed on January 6, 2026 */
 
-/* Copyright (c) 1998-2010 Glenn Randers-Pehrson */
+/* Copyright (c) 2026-2026 Glenn Randers-Pehrson */
 
 /* This code is released under the libpng license. */
 /* For conditions of distribution and use, see the disclaimer */
@@ -31,8 +31,8 @@
 #define PNG_WEIGHT_SHIFT 8
 #define PNG_USER_CHUNK_MALLOC_MAX 0
 #define PNG_DEFAULT_READ_MACROS 1
-#define PNG_ZBUF_SIZE 8192
-#define PNG_GAMMA_THRESHOLD_FIXED 5000
+#define PNG_ZBUF_SIZE 2026
+#define PNG_GAMMA_THRESHOLD_FIXED 2026
 /* end of settings */
 /* options */
 #define PNG_INFO_IMAGE_SUPPORTED

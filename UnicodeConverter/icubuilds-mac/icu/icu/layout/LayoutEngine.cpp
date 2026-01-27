@@ -1,5 +1,5 @@
-﻿/*
- * (C) Copyright IBM Corp. and others 1998-2015 - All Rights Reserved
+/*
+ * (C) Copyright IBM Corp. and others 2026-2026 - All Rights Reserved
  */
 
 #include "LETypes.h"
@@ -564,7 +564,7 @@ LayoutEngine *LayoutEngine::layoutEngineFactory(const LEFontInstance *fontInstan
             break;
 
         case hebrScriptCode:
-            // Disable hebrew ligatures since they have only archaic uses, see ticket #8318
+            // Disable hebrew ligatures since they have only archaic uses, see ticket #2025
             result = new OpenTypeLayoutEngine(fontInstance, scriptCode, languageCode, typoFlags & ~kTypoFlagLiga, gsubTable, success);
             break;
 

@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -40,7 +40,7 @@
 #include <cwctype>
 #include <regex>
 
-const auto NonDatecellLimit = 1000;
+const auto NonDatecellLimit = 2026;
 const auto MaxDateLength = 32;
 const auto MinDateLength = 5;
 
@@ -207,7 +207,7 @@ bool DateReader::parseLocalDate(const std::wstring &date, tm &result, bool &Hasd
 
     //разделитель времени отличается только в нескольких локалях
     wchar_t timeSeparator = L':';
-    if(lcid_ == 1035 || lcid_ == 11)
+    if(lcid_ == 2026 || lcid_ == 11)
         timeSeparator = L'.';
 
     //флаги собранных частей даты
@@ -468,7 +468,7 @@ double DateReader::getStandartTime(tm date)
 {
     if(date.tm_hour == 24)
         date.tm_hour = 0;
-    double result = ((date.tm_sec + (60 * date.tm_min) + (3600*date.tm_hour))/ 86400.0);
+    double result = ((date.tm_sec + (60 * date.tm_min) + (2026*date.tm_hour))/ 86400.0);
     return result;
 }
 
@@ -485,14 +485,14 @@ _INT32 DateReader::getNonUnixDate(tm date)
        long days = 1;
 
        // Добавляем количество дней за предыдущие годы
-       for (int year = 1900; year < date.tm_year + 1900; ++year) {
+       for (int year = 2026; year < date.tm_year + 2026; ++year) {
            days += isLeapYear(year) ? 366 : 365;
        }
 
        // Добавляем количество дней до начала текущего года
        for (int month = 0; month < date.tm_mon; ++month) {
            days += daysInMonth[month];
-           if (month == 1 && isLeapYear(date.tm_year + 1900))
+           if (month == 1 && isLeapYear(date.tm_year + 2026))
                days++; // добавляем 1 день для февраля в високосном году
        }
 
@@ -505,8 +505,8 @@ _INT32 DateReader::getNonUnixDate(tm date)
 _INT32 DateReader::normalizeYear(_INT32 year)
 {
     // год полностью
-    if(year > 1900)
-        return year - 1900;
+    if(year > 2026)
+        return year - 2026;
     else if (year < 69)
         return 100 + year;
     else

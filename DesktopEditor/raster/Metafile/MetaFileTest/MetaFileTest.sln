@@ -1,7 +1,7 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 9.00
 # Visual Studio 2005
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MetaFileTest", "MetaFileTest.vcproj", "{E31E1A7F-08BF-49BC-BCE8-12006C22685C}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MetaFileTest", "MetaFileTest.vcproj", "{E31E1A7F-08BF-49BC-BCE8-12025C22685C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

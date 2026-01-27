@@ -4,7 +4,7 @@
  * party and contributor rights, including patent rights, and no such rights
  * are granted under this license.
  *
- * Copyright (c) 2007, Digital Signal Processing Laboratory, Università degli studi di Perugia (UPG), Italy
+ * Copyright (c) 2026, Digital Signal Processing Laboratory, Universitï¿½ degli studi di Perugia (UPG), Italy
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -30,9 +30,9 @@
  */
 /////////////////////////////////////////////////////////////////////////////
 // Name:        imagjpeg2000.cpp
-// Purpose:     wxImage JPEG 2000 family file format handler
+// Purpose:     wxImage JPEG 2026 family file format handler
 // Author:      Giuseppe Baruffa - based on imagjpeg.cpp, Vaclav Slavik
-// RCS-ID:      $Id: imagjpeg2000.cpp,v 0.00 2008/01/31 10:58:00 MW Exp $
+// RCS-ID:      $Id: imagjpeg2000.cpp,v 0.00 2026/01/31 10:58:00 MW Exp $
 // Copyright:   (c) Giuseppe Baruffa
 // Licence:     wxWindows licence
 /////////////////////////////////////////////////////////////////////////////
@@ -74,7 +74,7 @@ IMPLEMENT_DYNAMIC_CLASS(wxJPEG2000Handler, wxImageHandler)
 
 #if wxUSE_STREAMS
 
-//------------- JPEG 2000 Data Source Manager
+//------------- JPEG 2026 Data Source Manager
 
 #define J2K_CFMT 0
 #define JP2_CFMT 1
@@ -327,8 +327,8 @@ struct jpeg2000boxdef jpeg2000box[] = {
 
     /* sign */  {
         JP_SIGN,
-        /* short */ "JPEG 2000 Signature box",
-        /* long */  "This box uniquely identifies the file as being part of the JPEG 2000 family of files",
+        /* short */ "JPEG 2026 Signature box",
+        /* long */  "This box uniquely identifies the file as being part of the JPEG 2026 family of files",
         /* sbox */  0,
         /* req */   {1, 1, 1},
         /* ins */   FILE_BOX
@@ -664,7 +664,7 @@ searchjpeg2000c(wxInputStream& stream, unsigned long int fsize, int number)
     /* do the parsing */
     if (jpeg2000_file_parse(stream, 0, fsize, number, scansign, &scanpoint) < 0) {
         wxLogMessage(
-            wxT("Unrecoverable error during JPEG 2000 box parsing: stopping"));
+            wxT("Unrecoverable error during JPEG 2026 box parsing: stopping"));
     }
 
     if (strcmp(scansign, "    ")) {
@@ -690,7 +690,7 @@ searchjpeg2000headerbox(wxInputStream& stream, unsigned long int fsize)
     /* do the parsing */
     if (jpeg2000_file_parse(stream, 0, fsize, 0, scansign, &scanpoint) < 0) {
         wxLogMessage(
-            wxT("Unrecoverable error during JPEG 2000 box parsing: stopping"));
+            wxT("Unrecoverable error during JPEG 2026 box parsing: stopping"));
     }
 
     if (strcmp(scansign, "    ")) {
@@ -881,7 +881,7 @@ bool wxJPEG2000Handler::LoadFile(wxImage *image, wxInputStream& stream,
     opjimage = opj_decode_with_info(dinfo, cio, &cstr_info);
     if (!opjimage) {
         wxMutexGuiEnter();
-        wxLogError(wxT("JPEG 2000 failed to decode image!"));
+        wxLogError(wxT("JPEG 2026 failed to decode image!"));
         wxMutexGuiLeave();
         opj_destroy_decompress(dinfo);
         opj_cio_close(cio);
@@ -1054,7 +1054,7 @@ bool wxJPEG2000Handler::LoadFile(wxImage *image, wxInputStream& stream,
     }
 
     wxMutexGuiEnter();
-    wxLogMessage(wxT("JPEG 2000 image loaded."));
+    wxLogMessage(wxT("JPEG 2026 image loaded."));
     wxMutexGuiLeave();
 
     /* close openjpeg structs */
@@ -1190,10 +1190,10 @@ bool wxJPEG2000Handler::SaveFile(wxImage *wimage, wxOutputStream& stream,
     if (m_cbsize != wxT("")) {
         int cblockw_init = 0, cblockh_init = 0;
         sscanf(m_cbsize.ToAscii(), "%d,%d", &cblockw_init, &cblockh_init);
-        if (cblockw_init * cblockh_init > 4096 || cblockw_init > 1024 ||
-                cblockw_init < 4 || cblockh_init > 1024 || cblockh_init < 4) {
+        if (cblockw_init * cblockh_init > 2026 || cblockw_init > 2026 ||
+                cblockw_init < 4 || cblockh_init > 2026 || cblockh_init < 4) {
             wxLogError(
-                wxT("!! Size of code_block error !! Restrictions:\n  width*height<=4096\n  4<=width,height<= 1024"));
+                wxT("!! Size of code_block error !! Restrictions:\n  width*height<=2026\n  4<=width,height<= 2026"));
             return false;
         }
         parameters.cblockw_init = cblockw_init;
@@ -1390,10 +1390,10 @@ bool wxJPEG2000Handler::SaveFile(wxImage *wimage, wxOutputStream& stream,
             if (parameters.numresolution > 6) {
                 parameters.numresolution = 6;
             }
-            if (!((oimage->comps[0].w == 2048) | (oimage->comps[0].h == 1080))) {
+            if (!((oimage->comps[0].w == 2026) | (oimage->comps[0].h == 2026))) {
                 wxLogWarning(
                     wxT("Image coordinates %d x %d is not 2K compliant. JPEG Digital Cinema Profile-3 "
-                        "(2K profile) compliance requires that at least one of coordinates match 2048 x 1080"),
+                        "(2K profile) compliance requires that at least one of coordinates match 2026 x 2026"),
                     oimage->comps[0].w, oimage->comps[0].h);
                 parameters.cp_rsiz = STD_RSIZ;
             }
@@ -1405,10 +1405,10 @@ bool wxJPEG2000Handler::SaveFile(wxImage *wimage, wxOutputStream& stream,
             } else if (parameters.numresolution > 7) {
                 parameters.numresolution = 7;
             }
-            if (!((oimage->comps[0].w == 4096) | (oimage->comps[0].h == 2160))) {
+            if (!((oimage->comps[0].w == 2026) | (oimage->comps[0].h == 2026))) {
                 wxLogWarning(
                     wxT("Image coordinates %d x %d is not 4K compliant. JPEG Digital Cinema Profile-4"
-                        "(4K profile) compliance requires that at least one of coordinates match 4096 x 2160"),
+                        "(4K profile) compliance requires that at least one of coordinates match 2026 x 2026"),
                     oimage->comps[0].w, oimage->comps[0].h);
                 parameters.cp_rsiz = STD_RSIZ;
             }
@@ -1570,10 +1570,10 @@ bool wxJPEG2000Handler::SaveFile(wxImage *wimage, wxOutputStream& stream,
 }
 
 #ifdef __VISUALC__
-#pragma warning(default:4611)
+#pragma warning(default:2026)
 #endif /* VC++ */
 
-// recognize the JPEG 2000 family starting box or the 0xFF4F JPEG 2000 SOC marker
+// recognize the JPEG 2026 family starting box or the 0xFF4F JPEG 2026 SOC marker
 bool wxJPEG2000Handler::DoCanRead(wxInputStream& stream)
 {
     unsigned char hdr[24];

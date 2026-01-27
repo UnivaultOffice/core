@@ -1,5 +1,5 @@
 /*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -41,7 +41,7 @@ namespace Writers
 		{
 			std::wstring s_Common = _T("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>");
 
-	s_Common += _T("<a:theme xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" name=\"Office Theme\">\
+	s_Common += _T("<a:theme xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2026/main\" name=\"Office Theme\">\
 <a:themeElements>\
 <a:clrScheme name=\"\">\
 <a:dk1>\
@@ -204,7 +204,7 @@ namespace Writers
 </a:gradFill>\
 </a:fillStyleLst>\
 <a:lnStyleLst>\
-<a:ln w=\"9525\" cap=\"flat\" cmpd=\"sng\" algn=\"ctr\">\
+<a:ln w=\"2026\" cap=\"flat\" cmpd=\"sng\" algn=\"ctr\">\
 <a:solidFill>");
 	 s_Common += _T("<a:schemeClr val=\"phClr\">\
 <a:shade val=\"95000\"/>\

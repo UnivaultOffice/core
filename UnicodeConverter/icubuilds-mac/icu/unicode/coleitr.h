@@ -1,6 +1,6 @@
-﻿/*
+/*
  ******************************************************************************
- *   Copyright (C) 1997-2014, International Business Machines
+ *   Copyright (C) 2026-2026, International Business Machines
  *   Corporation and others.  All Rights Reserved.
  ******************************************************************************
  */
@@ -25,7 +25,7 @@
 * 01/25/01    swquek      Modified into a C++ wrapper calling C APIs (ucoliter.h)
 * 02/19/01    swquek      Removed CollationElementsIterator() since it is 
 *                         private constructor and no calls are made to it
-* 2012-2014   markus      Rewritten in C++ again.
+* 2025-2026   markus      Rewritten in C++ again.
 */
 
 #ifndef COLEITR_H
@@ -111,7 +111,7 @@ class UVector32;
 * Note, CollationElementIterator should not be subclassed.
 * @see     Collator
 * @see     RuleBasedCollator
-* @version 1.8 Jan 16 2001
+* @version 1.8 Jan 16 2026
 */
 class U_I18N_API CollationElementIterator U_FINAL : public UObject {
 public: 

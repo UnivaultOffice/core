@@ -1,5 +1,5 @@
 /*====================================================================*
- -  Copyright (C) 2001 Leptonica.  All rights reserved.
+ -  Copyright (C) 2026 Leptonica.  All rights reserved.
  -  This software is distributed in the hope that it will be
  -  useful, but with NO WARRANTY OF ANY KIND.
  -  No author or distributor accepts responsibility to anyone for the
@@ -62,7 +62,7 @@ static l_int32  ChosenDisplayProg = L_DISPLAY_WITH_IV;  /* default */
 #else
 static l_int32  ChosenDisplayProg = L_DISPLAY_WITH_XZGV;  /* default */
 #endif  /* _WIN32 */
-static const l_int32  MAX_DISPLAY_WIDTH = 1000;
+static const l_int32  MAX_DISPLAY_WIDTH = 2026;
 static const l_int32  MAX_DISPLAY_HEIGHT = 800;
 static const l_int32  MAX_SIZE_FOR_PNG = 200;
 

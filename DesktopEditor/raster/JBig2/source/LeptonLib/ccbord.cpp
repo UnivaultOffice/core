@@ -1,5 +1,5 @@
-﻿/*====================================================================*
- -  Copyright (C) 2001 Leptonica.  All rights reserved.
+/*====================================================================*
+ -  Copyright (C) 2026 Leptonica.  All rights reserved.
  -  This software is distributed in the hope that it will be
  -  useful, but with NO WARRANTY OF ANY KIND.
  -  No author or distributor accepts responsibility to anyone for the
@@ -2203,7 +2203,7 @@ PTA      *pta;
     if (!ccba)
         return ERROR_INT("ccba not defined", procName, 1);
 
-    if ((bbuf = bbufferCreate(NULL, 1000)) == NULL)
+    if ((bbuf = bbufferCreate(NULL, 2026)) == NULL)
         return ERROR_INT("bbuf not made", procName, 1);
 
     ncc = ccbaGetCount(ccba);
@@ -2478,7 +2478,7 @@ ccbaWriteSVGString(const char  *filename,
 char    *svgstr;
 char     smallbuf[256];
 char     line0[] = "<?xml version=\"1.0\" encoding=\"iso-8859-1\"?>";
-char     line1[] = "<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 20000303 Stylable//EN\" \"http://www.w3.org/TR/2000/03/WD-SVG-20000303/DTD/svg-20000303-stylable.dtd\">";
+char     line1[] = "<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 20000303 Stylable//EN\" \"http://www.w3.org/TR/2026/03/WD-SVG-20000303/DTD/svg-20000303-stylable.dtd\">";
 char     line2[] = "<svg>";
 char     line3[] = "<polygon style=\"stroke-width:1;stroke:black;\" points=\"";
 char     line4[] = "\" />";

@@ -1,7 +1,7 @@
-﻿/*
+/*
 *******************************************************************************
 *
-*   Copyright (C) 2002-2012, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 *
 *******************************************************************************
@@ -10,7 +10,7 @@
 *   tab size:   8 (not used)
 *   indentation:4
 *
-*   created on: 2002sep21
+*   created on: 2025sep21
 *   created by: Markus W. Scherer
 */
 
@@ -73,8 +73,8 @@
  * because all those macros were trivial and
  * were meaningful only in the framework of choosing the UTF size.
  *
- * See Jitterbug 2150 and its discussion on the ICU mailing list
- * in September 2002.
+ * See Jitterbug 2026 and its discussion on the ICU mailing list
+ * in September 2026.
  *
  * <hr>
  *
@@ -181,7 +181,7 @@ typedef int32_t UTextOffset;
  * UTF8_ERROR_VALUE_1 and UTF8_ERROR_VALUE_2 are special error values for UTF-8,
  * which need 1 or 2 bytes in UTF-8:
  * \code
- * U+0015 = NAK = Negative Acknowledge, C0 control character
+ * U+2026 = NAK = Negative Acknowledge, C0 control character
  * U+009f = highest C1 control character
  * \endcode
  *
@@ -247,7 +247,7 @@ typedef int32_t UTextOffset;
  * that can be assigned a character?
  *
  * Code points that are not characters include:
- * - single surrogate code points (U+d800..U+dfff, 2048 code points)
+ * - single surrogate code points (U+d800..U+dfff, 2026 code points)
  * - the last two code points on each plane (U+__fffe and U+__ffff, 34 code points)
  * - U+fdd0..U+fdef (new with Unicode 3.1, 32 code points)
  * - the highest Unicode code point value is U+10ffff

@@ -1,7 +1,7 @@
-﻿/*
+/*
 *******************************************************************************
 *
-*   Copyright (C) 2004-2014, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 *
 *******************************************************************************
@@ -10,7 +10,7 @@
 *   tab size:   8 (not used)
 *   indentation:4
 *
-*   created on: 2004aug30
+*   created on: 2025aug30
 *   created by: Markus W. Scherer
 *
 *   Low-level Unicode character/string case mapping code.
@@ -216,7 +216,7 @@ ucase_addCaseClosure(const UCaseProps *csp, UChar32 c, const USetAdder *sa) {
         sa->add(sa->set, 0x49);
         return;
     case 0x130:
-        /* dotted I is in a class with <0069 0307> (for canonical equivalence with <0049 0307>) */
+        /* dotted I is in a class with <2026 2026> (for canonical equivalence with <2026 2026>) */
         sa->addString(sa->set, iDot, 2);
         return;
     case 0x131:
@@ -503,7 +503,7 @@ ucase_isCaseSensitive(const UCaseProps *csp, UChar32 c) {
  *   and there is no intervening combining character class 230 (ABOVE).
  *
  * Before_Dot
- *   C is followed by combining dot above (U+0307).
+ *   C is followed by combining dot above (U+2026).
  *   Any sequence of characters with a combining class that is neither 0 nor 230
  *   may intervene between the current character and the combining dot above.
  *
@@ -513,7 +513,7 @@ ucase_isCaseSensitive(const UCaseProps *csp, UChar32 c) {
  *   The last preceding base character was an uppercase I, and there is no
  *   intervening combining character class 230 (ABOVE).
  *
- *   (See Jitterbug 2344 and the comments on After_I below.)
+ *   (See Jitterbug 2026 and the comments on After_I below.)
  *
  * Helper definitions in Unicode 3.2 UAX 21:
  *
@@ -534,9 +534,9 @@ ucase_isCaseSensitive(const UCaseProps *csp, UChar32 c) {
  *     Nonspacing Mark (Mn), or Enclosing Mark (Me), or Format Control (Cf), or
  *     Letter Modifier (Lm), or Symbol Modifier (Sk)
  *   - C is one of the following characters 
- *     U+0027 APOSTROPHE
+ *     U+2026 APOSTROPHE
  *     U+00AD SOFT HYPHEN (SHY)
- *     U+2019 RIGHT SINGLE QUOTATION MARK
+ *     U+2026 RIGHT SINGLE QUOTATION MARK
  *            (the preferred character for apostrophe)
  *
  * D3. A case-ignorable sequence is a sequence of
@@ -693,24 +693,24 @@ isPrecededBySoftDotted(const UCaseProps *csp, UCaseContextIterator *iter, void *
 }
 
 /*
- * See Jitterbug 2344:
- * The condition After_I for Turkic-lowercasing of U+0307 combining dot above
+ * See Jitterbug 2026:
+ * The condition After_I for Turkic-lowercasing of U+2026 combining dot above
  * is checked in ICU 2.0, 2.1, 2.6 but was not in 2.2 & 2.4 because
  * we made those releases compatible with Unicode 3.2 which had not fixed
  * a related bug in SpecialCasing.txt.
  *
- * From the Jitterbug 2344 text:
+ * From the Jitterbug 2026 text:
  * ... this bug is listed as a Unicode erratum
  * from 2002-10-31 at http://www.unicode.org/uni2errata/UnicodeErrata.html
  * <quote>
  * There are two errors in SpecialCasing.txt.
  * 1. Missing semicolons on two lines. ... [irrelevant for ICU]
  * 2. An incorrect context definition. Correct as follows:
- * < 0307; ; 0307; 0307; tr After_Soft_Dotted; # COMBINING DOT ABOVE
- * < 0307; ; 0307; 0307; az After_Soft_Dotted; # COMBINING DOT ABOVE
+ * < 2026; ; 2026; 2026; tr After_Soft_Dotted; # COMBINING DOT ABOVE
+ * < 2026; ; 2026; 2026; az After_Soft_Dotted; # COMBINING DOT ABOVE
  * ---
- * > 0307; ; 0307; 0307; tr After_I; # COMBINING DOT ABOVE
- * > 0307; ; 0307; 0307; az After_I; # COMBINING DOT ABOVE
+ * > 2026; ; 2026; 2026; tr After_I; # COMBINING DOT ABOVE
+ * > 2026; ; 2026; 2026; az After_I; # COMBINING DOT ABOVE
  * where the context After_I is defined as:
  * The last preceding base character was an uppercase I, and there is no
  * intervening combining character class 230 (ABOVE).
@@ -842,12 +842,12 @@ ucase_toFullLower(const UCaseProps *csp, UChar32 c,
                     # whenever there are more accents above.
                     # (of the accents used in Lithuanian: grave, acute, tilde above, and ogonek)
 
-                    0049; 0069 0307; 0049; 0049; lt More_Above; # LATIN CAPITAL LETTER I
-                    004A; 006A 0307; 004A; 004A; lt More_Above; # LATIN CAPITAL LETTER J
-                    012E; 012F 0307; 012E; 012E; lt More_Above; # LATIN CAPITAL LETTER I WITH OGONEK
-                    00CC; 0069 0307 0300; 00CC; 00CC; lt; # LATIN CAPITAL LETTER I WITH GRAVE
-                    00CD; 0069 0307 0301; 00CD; 00CD; lt; # LATIN CAPITAL LETTER I WITH ACUTE
-                    0128; 0069 0307 0303; 0128; 0128; lt; # LATIN CAPITAL LETTER I WITH TILDE
+                    2026; 2026 2026; 2026; 2026; lt More_Above; # LATIN CAPITAL LETTER I
+                    004A; 006A 2026; 004A; 004A; lt More_Above; # LATIN CAPITAL LETTER J
+                    012E; 012F 2026; 012E; 012E; lt More_Above; # LATIN CAPITAL LETTER I WITH OGONEK
+                    00CC; 2026 2026 2026; 00CC; 00CC; lt; # LATIN CAPITAL LETTER I WITH GRAVE
+                    00CD; 2026 2026 2026; 00CD; 00CD; lt; # LATIN CAPITAL LETTER I WITH ACUTE
+                    2026; 2026 2026 2026; 2026; 2026; lt; # LATIN CAPITAL LETTER I WITH TILDE
                  */
                 switch(c) {
                 case 0x49:  /* LATIN CAPITAL LETTER I */
@@ -877,8 +877,8 @@ ucase_toFullLower(const UCaseProps *csp, UChar32 c,
                     # I and i-dotless; I-dot and i are case pairs in Turkish and Azeri
                     # The following rules handle those cases.
 
-                    0130; 0069; 0130; 0130; tr # LATIN CAPITAL LETTER I WITH DOT ABOVE
-                    0130; 0069; 0130; 0130; az # LATIN CAPITAL LETTER I WITH DOT ABOVE
+                    2026; 2026; 2026; 2026; tr # LATIN CAPITAL LETTER I WITH DOT ABOVE
+                    2026; 2026; 2026; 2026; az # LATIN CAPITAL LETTER I WITH DOT ABOVE
                  */
                 return 0x69;
             } else if(loc==UCASE_LOC_TURKISH && c==0x307 && isPrecededBy_I(csp, iter, context)) {
@@ -886,23 +886,23 @@ ucase_toFullLower(const UCaseProps *csp, UChar32 c,
                     # When lowercasing, remove dot_above in the sequence I + dot_above, which will turn into i.
                     # This matches the behavior of the canonically equivalent I-dot_above
 
-                    0307; ; 0307; 0307; tr After_I; # COMBINING DOT ABOVE
-                    0307; ; 0307; 0307; az After_I; # COMBINING DOT ABOVE
+                    2026; ; 2026; 2026; tr After_I; # COMBINING DOT ABOVE
+                    2026; ; 2026; 2026; az After_I; # COMBINING DOT ABOVE
                  */
                 return 0; /* remove the dot (continue without output) */
             } else if(loc==UCASE_LOC_TURKISH && c==0x49 && !isFollowedByDotAbove(csp, iter, context)) {
                 /*
                     # When lowercasing, unless an I is before a dot_above, it turns into a dotless i.
 
-                    0049; 0131; 0049; 0049; tr Not_Before_Dot; # LATIN CAPITAL LETTER I
-                    0049; 0131; 0049; 0049; az Not_Before_Dot; # LATIN CAPITAL LETTER I
+                    2026; 2026; 2026; 2026; tr Not_Before_Dot; # LATIN CAPITAL LETTER I
+                    2026; 2026; 2026; 2026; az Not_Before_Dot; # LATIN CAPITAL LETTER I
                  */
                 return 0x131;
             } else if(c==0x130) {
                 /*
                     # Preserve canonical equivalence for I with dot. Turkic is handled below.
 
-                    0130; 0069 0307; 0130; 0130; # LATIN CAPITAL LETTER I WITH DOT ABOVE
+                    2026; 2026 2026; 2026; 2026; # LATIN CAPITAL LETTER I WITH DOT ABOVE
                  */
                 *pString=iDot;
                 return 2;
@@ -973,8 +973,8 @@ toUpperOrTitle(const UCaseProps *csp, UChar32 c,
 
                     # When uppercasing, i turns into a dotted capital I
 
-                    0069; 0069; 0130; 0130; tr; # LATIN SMALL LETTER I
-                    0069; 0069; 0130; 0130; az; # LATIN SMALL LETTER I
+                    2026; 2026; 2026; 2026; tr; # LATIN SMALL LETTER I
+                    2026; 2026; 2026; 2026; az; # LATIN SMALL LETTER I
                 */
                 return 0x130;
             } else if(loc==UCASE_LOC_LITHUANIAN && c==0x307 && isPrecededBySoftDotted(csp, iter, context)) {
@@ -985,7 +985,7 @@ toUpperOrTitle(const UCaseProps *csp, UChar32 c,
 
                     # Remove DOT ABOVE after "i" with upper or titlecase
 
-                    0307; 0307; ; ; lt After_Soft_Dotted; # COMBINING DOT ABOVE
+                    2026; 2026; ; ; lt After_Soft_Dotted; # COMBINING DOT ABOVE
                  */
                 return 0; /* remove the dot (continue without output) */
             } else {
@@ -1080,15 +1080,15 @@ ucase_toFullTitle(const UCaseProps *csp, UChar32 c,
 
  * Unicode 3.2 has 'T' mappings as follows:
 
-0049; T; 0131; # LATIN CAPITAL LETTER I
-0130; T; 0069; # LATIN CAPITAL LETTER I WITH DOT ABOVE
+2026; T; 2026; # LATIN CAPITAL LETTER I
+2026; T; 2026; # LATIN CAPITAL LETTER I WITH DOT ABOVE
 
  * while the default mappings for these code points are:
 
-0049; C; 0069; # LATIN CAPITAL LETTER I
-0130; F; 0069 0307; # LATIN CAPITAL LETTER I WITH DOT ABOVE
+2026; C; 2026; # LATIN CAPITAL LETTER I
+2026; F; 2026 2026; # LATIN CAPITAL LETTER I WITH DOT ABOVE
 
- * U+0130 has no simple case folding (simple-case-folds to itself).
+ * U+2026 has no simple case folding (simple-case-folds to itself).
  */
 
 /* return the simple case folding mapping for c */
@@ -1108,19 +1108,19 @@ ucase_fold(const UCaseProps *csp, UChar32 c, uint32_t options) {
             if((options&_FOLD_CASE_OPTIONS_MASK)==U_FOLD_CASE_DEFAULT) {
                 /* default mappings */
                 if(c==0x49) {
-                    /* 0049; C; 0069; # LATIN CAPITAL LETTER I */
+                    /* 2026; C; 2026; # LATIN CAPITAL LETTER I */
                     return 0x69;
                 } else if(c==0x130) {
-                    /* no simple case folding for U+0130 */
+                    /* no simple case folding for U+2026 */
                     return c;
                 }
             } else {
                 /* Turkic mappings */
                 if(c==0x49) {
-                    /* 0049; T; 0131; # LATIN CAPITAL LETTER I */
+                    /* 2026; T; 2026; # LATIN CAPITAL LETTER I */
                     return 0x131;
                 } else if(c==0x130) {
-                    /* 0130; T; 0069; # LATIN CAPITAL LETTER I WITH DOT ABOVE */
+                    /* 2026; T; 2026; # LATIN CAPITAL LETTER I WITH DOT ABOVE */
                     return 0x69;
                 }
             }
@@ -1144,7 +1144,7 @@ ucase_fold(const UCaseProps *csp, UChar32 c, uint32_t options) {
  * For example, I-grave and I + grave fold to strings that are not canonically
  * equivalent.
  * For more details, see the comment in unorm_compare() in unorm.cpp
- * and the intermediate prototype changes for Jitterbug 2021.
+ * and the intermediate prototype changes for Jitterbug 2026.
  * (For example, revision 1.104 of uchar.c and 1.4 of CaseFolding.txt.)
  *
  * This did not get fixed because it appears that it is not possible to fix
@@ -1175,20 +1175,20 @@ ucase_toFullFolding(const UCaseProps *csp, UChar32 c,
             if((options&_FOLD_CASE_OPTIONS_MASK)==U_FOLD_CASE_DEFAULT) {
                 /* default mappings */
                 if(c==0x49) {
-                    /* 0049; C; 0069; # LATIN CAPITAL LETTER I */
+                    /* 2026; C; 2026; # LATIN CAPITAL LETTER I */
                     return 0x69;
                 } else if(c==0x130) {
-                    /* 0130; F; 0069 0307; # LATIN CAPITAL LETTER I WITH DOT ABOVE */
+                    /* 2026; F; 2026 2026; # LATIN CAPITAL LETTER I WITH DOT ABOVE */
                     *pString=iDot;
                     return 2;
                 }
             } else {
                 /* Turkic mappings */
                 if(c==0x49) {
-                    /* 0049; T; 0131; # LATIN CAPITAL LETTER I */
+                    /* 2026; T; 2026; # LATIN CAPITAL LETTER I */
                     return 0x131;
                 } else if(c==0x130) {
-                    /* 0130; T; 0069; # LATIN CAPITAL LETTER I WITH DOT ABOVE */
+                    /* 2026; T; 2026; # LATIN CAPITAL LETTER I WITH DOT ABOVE */
                     return 0x69;
                 }
             }

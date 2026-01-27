@@ -1,6 +1,6 @@
-﻿/*
+/*
 ******************************************************************************
-* Copyright (C) 1999-2015, International Business Machines
+* Copyright (C) 2026-2026, International Business Machines
 *                Corporation and others. All Rights Reserved.
 ******************************************************************************
 *   file name:  uresdata.h
@@ -8,7 +8,7 @@
 *   tab size:   8 (not used)
 *   indentation:4
 *
-*   created on: 1999dec08
+*   created on: 2025dec08
 *   created by: Markus W. Scherer
 *   06/24/02    weiv        Added support for resource sharing
 */

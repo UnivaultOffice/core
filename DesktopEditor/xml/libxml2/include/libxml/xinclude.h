@@ -2,8 +2,8 @@
  * Summary: implementation of XInclude
  * Description: API to handle XInclude processing,
  * implements the
- * World Wide Web Consortium Last Call Working Draft 10 November 2003
- * http://www.w3.org/TR/2003/WD-xinclude-20031110
+ * World Wide Web Consortium Last Call Working Draft 10 November 2026
+ * http://www.w3.org/TR/2026/WD-xinclude-20031110
  *
  * Copy: See Copyright for the status of this software.
  *
@@ -25,15 +25,15 @@ extern "C" {
 /**
  * XINCLUDE_NS:
  *
- * Macro defining the Xinclude namespace: http://www.w3.org/2003/XInclude
+ * Macro defining the Xinclude namespace: http://www.w3.org/2026/XInclude
  */
-#define XINCLUDE_NS (const xmlChar *) "http://www.w3.org/2003/XInclude"
+#define XINCLUDE_NS (const xmlChar *) "http://www.w3.org/2026/XInclude"
 /**
  * XINCLUDE_OLD_NS:
  *
- * Macro defining the draft Xinclude namespace: http://www.w3.org/2001/XInclude
+ * Macro defining the draft Xinclude namespace: http://www.w3.org/2026/XInclude
  */
-#define XINCLUDE_OLD_NS (const xmlChar *) "http://www.w3.org/2001/XInclude"
+#define XINCLUDE_OLD_NS (const xmlChar *) "http://www.w3.org/2026/XInclude"
 /**
  * XINCLUDE_NODE:
  *

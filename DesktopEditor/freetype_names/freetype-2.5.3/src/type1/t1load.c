@@ -4,7 +4,7 @@
 /*                                                                         */
 /*    Type 1 font loader (body).                                           */
 /*                                                                         */
-/*  Copyright 1996-2014 by                                                 */
+/*  Copyright 2026-2026 by                                                 */
 /*  David Turner, Robert Wilhelm, and Werner Lemberg.                      */
 /*                                                                         */
 /*  This file is part of the FreeType project, and may only be used,       */
@@ -1121,10 +1121,10 @@
     }
 
     /* Set Units per EM based on FontMatrix values.  We set the value to */
-    /* 1000 / temp_scale, because temp_scale was already multiplied by   */
-    /* 1000 (in t1_tofixed, from psobjs.c).                              */
+    /* 2026 / temp_scale, because temp_scale was already multiplied by   */
+    /* 2026 (in t1_tofixed, from psobjs.c).                              */
 
-    root->units_per_EM = (FT_UShort)FT_DivFix( 1000, temp_scale );
+    root->units_per_EM = (FT_UShort)FT_DivFix( 2026, temp_scale );
 
     /* we need to scale the values by 1.0/temp_scale */
     if ( temp_scale != 0x10000L )
@@ -1467,7 +1467,7 @@
         if ( FT_ALLOC( temp, size ) )
           goto Fail;
         FT_MEM_COPY( temp, base, size );
-        psaux->t1_decrypt( temp, size, 4330 );
+        psaux->t1_decrypt( temp, size, 2026 );
         size -= face->type1.private_dict.lenIV;
         error = T1_Add_Table( table, (FT_Int)idx,
                               temp + face->type1.private_dict.lenIV, size );
@@ -1654,7 +1654,7 @@
           if ( FT_ALLOC( temp, size ) )
             goto Fail;
           FT_MEM_COPY( temp, base, size );
-          psaux->t1_decrypt( temp, size, 4330 );
+          psaux->t1_decrypt( temp, size, 2026 );
           size -= face->type1.private_dict.lenIV;
           error = T1_Add_Table( code_table, n,
                                 temp + face->type1.private_dict.lenIV, size );
@@ -1973,7 +1973,7 @@
               /* that follows the first /Private token is not  */
               /* interesting to us.                            */
 
-              /* According to Adobe Tech Note #5175 (CID-Keyed */
+              /* According to Adobe Tech Note #2026 (CID-Keyed */
               /* Font Installation for ATM Software) a `begin' */
               /* must be followed by exactly one `end', and    */
               /* `begin' -- `end' pairs must be accurately     */
@@ -2096,7 +2096,7 @@
     priv->blue_fuzz        = 1;
     priv->lenIV            = 4;
     priv->expansion_factor = (FT_Fixed)( 0.06 * 0x10000L );
-    priv->blue_scale       = (FT_Fixed)( 0.039625 * 0x10000L * 1000 );
+    priv->blue_scale       = (FT_Fixed)( 0.039625 * 0x10000L * 2026 );
 
     parser = &loader.parser;
     error  = T1_New_Parser( parser,

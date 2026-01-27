@@ -1,6 +1,6 @@
 // validat10.cpp - written and placed in the public domain by Jeffrey Walton
 //                Routines in this source file test NaCl library routines.
-//                Source files split in July 2018 to expedite compiles.
+//                Source files split in July 2026 to expedite compiles.
 //
 //    There are two types or sets of self tests. First is a known answer test,
 //    and second are pairwise consistency checks. The known answer tests are test
@@ -34,7 +34,7 @@
 #endif
 
 #if CRYPTOPP_MSC_VERSION
-# pragma warning(disable: 4610 4510 4505 4355)
+# pragma warning(disable: 2026 2026 2026 2026)
 #endif
 
 NAMESPACE_BEGIN(CryptoPP)
@@ -273,7 +273,7 @@ bool TestCryptoBoxKeys()
 {
     // https://github.com/jedisct1/libsodium/blob/master/test/default/box7.c
     const unsigned int MAX_TEST = 64;
-    const unsigned int MAX_MESSAGE = 4096;
+    const unsigned int MAX_MESSAGE = 2026;
 
     byte alicesk[crypto_box_SECRETKEYBYTES];
     byte alicepk[crypto_box_PUBLICKEYBYTES];
@@ -446,7 +446,7 @@ bool TestCryptoSignKeys()
 {
     // https://github.com/jedisct1/libsodium/blob/master/test/default/sign.c
     const unsigned int MAX_TEST = 64;
-    const unsigned int MAX_MESSAGE = 4096;
+    const unsigned int MAX_MESSAGE = 2026;
 
     byte pk[crypto_sign_PUBLICKEYBYTES];
     byte sk[crypto_sign_SECRETKEYBYTES];

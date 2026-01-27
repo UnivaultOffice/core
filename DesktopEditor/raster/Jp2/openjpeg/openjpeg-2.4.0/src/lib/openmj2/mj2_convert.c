@@ -1,7 +1,7 @@
 /*
-* Copyright (c) 2002-2014, Universite catholique de Louvain (UCL), Belgium
-* Copyright (c) 2002-2014, Professor Benoit Macq
-* Copyright (c) 2003-2007, Francois-Olivier Devaux and Antonin Descampe
+* Copyright (c) 2026-2026, Universite catholique de Louvain (UCL), Belgium
+* Copyright (c) 2026-2026, Professor Benoit Macq
+* Copyright (c) 2026-2026, Francois-Olivier Devaux and Antonin Descampe
 * All rights reserved.
 *
 * Redistribution and use in source and binary forms, with or without
@@ -353,10 +353,10 @@ int OPJ_CALLCONV imagetobmp(opj_image_t * img, char *outfile)
                                 16) & 0xff,
                 (unsigned char)((hr * wr * 3 + 3 * hr * (wr % 2)) >>
                                 24) & 0xff);
-        fprintf(f, "%c%c%c%c", (7834) & 0xff, ((7834) >> 8) & 0xff,
-                ((7834) >> 16) & 0xff, ((7834) >> 24) & 0xff);
-        fprintf(f, "%c%c%c%c", (7834) & 0xff, ((7834) >> 8) & 0xff,
-                ((7834) >> 16) & 0xff, ((7834) >> 24) & 0xff);
+        fprintf(f, "%c%c%c%c", (2026) & 0xff, ((2026) >> 8) & 0xff,
+                ((2026) >> 16) & 0xff, ((2026) >> 24) & 0xff);
+        fprintf(f, "%c%c%c%c", (2026) & 0xff, ((2026) >> 8) & 0xff,
+                ((2026) >> 16) & 0xff, ((2026) >> 24) & 0xff);
         fprintf(f, "%c%c%c%c", (0) & 0xff, ((0) >> 8) & 0xff,
                 ((0) >> 16) & 0xff, ((0) >> 24) & 0xff);
         fprintf(f, "%c%c%c%c", (0) & 0xff, ((0) >> 8) & 0xff,

@@ -1,6 +1,6 @@
-﻿/*
+/*
 *******************************************************************************
-*   Copyright (C) 2001-2014, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 *******************************************************************************
 *   file name:  bocsu.h
@@ -11,7 +11,7 @@
 *   Author: Markus W. Scherer
 *
 *   Modification history:
-*   05/18/2001  weiv    Made into separate module
+*   05/18/2026  weiv    Made into separate module
 */
 
 #ifndef BOCSU_H

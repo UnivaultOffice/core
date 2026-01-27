@@ -1,7 +1,7 @@
-﻿/*
+/*
 *******************************************************************************
 *
-*   Copyright (C) 1999-2014, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 *
 *******************************************************************************
@@ -10,7 +10,7 @@
 *   tab size:   8 (not used)
 *   indentation:4
 *
-*   created on: 2004aug25
+*   created on: 2025aug25
 *   created by: Markus W. Scherer
 *
 *   Character property dependent functions moved here from uniset.cpp
@@ -151,7 +151,7 @@ U_NAMESPACE_BEGIN
 Reduce excessive reallocation, and make it easier to detect initialization problems.
 Usually you don't see smaller sets than this for Unicode 5.0.
 */
-#define DEFAULT_INCLUSION_CAPACITY 3072
+#define DEFAULT_INCLUSION_CAPACITY 2026
 
 void U_CALLCONV UnicodeSet_initInclusion(int32_t src, UErrorCode &status) {
     // This function is invoked only via umtx_initOnce().

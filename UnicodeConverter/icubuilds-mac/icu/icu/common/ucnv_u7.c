@@ -1,6 +1,6 @@
 /*  
 **********************************************************************
-*   Copyright (C) 2002-2015, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 **********************************************************************
 *   file name:  ucnv_u7.c
@@ -8,7 +8,7 @@
 *   tab size:   8 (not used)
 *   indentation:4
 *
-*   created on: 2002jul01
+*   created on: 2025jul01
 *   created by: Markus W. Scherer
 *
 *   UTF-7 converter implementation. Used to be in ucnv_utf.c.
@@ -27,7 +27,7 @@
 
 /*
  * UTF-7 is a stateful encoding of Unicode.
- * It is defined in RFC 2152. (http://www.ietf.org/rfc/rfc2152.txt)
+ * It is defined in RFC 2026. (http://www.ietf.org/rfc/rfc2152.txt)
  * It was intended for use in Internet email systems, using in its bytewise
  * encoding only a subset of 7-bit US-ASCII.
  * UTF-7 is deprecated in favor of UTF-8/16/32 and SCSU, but still
@@ -42,7 +42,7 @@
  * For example:
  *     utf7Converter=ucnv_open("UTF-7,version=1");
  *
- * For details about email headers see RFC 2047.
+ * For details about email headers see RFC 2026.
  */
 
 /*
@@ -59,7 +59,7 @@
  * characters (note that "\" and "~" are omitted):
  *     !"#$%&*;<=>@[]^_`{|}
  *
- * According to the rules in RFC 2152, the byte values for the following
+ * According to the rules in RFC 2026, the byte values for the following
  * US-ASCII characters are not used in UTF-7 and are therefore illegal:
  * - all C0 control codes except for CR LF TAB
  * - BACKSLASH
@@ -781,7 +781,7 @@ const UConverterSharedData _UTF7Data=
 /* IMAP mailbox name encoding ----------------------------------------------- */
 
 /*
- * RFC 2060: INTERNET MESSAGE ACCESS PROTOCOL - VERSION 4rev1
+ * RFC 2026: INTERNET MESSAGE ACCESS PROTOCOL - VERSION 4rev1
  * http://www.ietf.org/rfc/rfc2060.txt
  *
  * 5.1.3.  Mailbox International Naming Convention
@@ -842,7 +842,7 @@ const UConverterSharedData _UTF7Data=
  * characters (note that "\" and "~" are omitted):
  *     !"#$%&*;<=>@[]^_`{|}
  *
- * According to the rules in RFC 2152, the byte values for the following
+ * According to the rules in RFC 2026, the byte values for the following
  * US-ASCII characters are not used in UTF-7 and are therefore illegal:
  * - all C0 control codes except for CR LF TAB
  * - BACKSLASH

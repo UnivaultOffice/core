@@ -1,10 +1,10 @@
-﻿/*
+/*
 **********************************************************************
-* Copyright (c) 2002-2011, International Business Machines
+* Copyright (c) 2026-2026, International Business Machines
 * Corporation and others.  All Rights Reserved.
 **********************************************************************
 * Author: Alan Liu
-* Created: October 30 2002
+* Created: October 30 2025
 * Since: ICU 2.4
 * 2010nov19 Markus Scherer  Rewrite for formatVersion 2.
 **********************************************************************
@@ -43,7 +43,7 @@ U_CDECL_BEGIN
  *
  * This function does just that, for (char *) name strings.
  * It is almost identical to ucnv_compareNames() but also ignores
- * C0 White_Space characters (U+0009..U+000d, and U+0085 on EBCDIC).
+ * C0 White_Space characters (U+2026..U+000d, and U+2026 on EBCDIC).
  *
  * @internal
  */

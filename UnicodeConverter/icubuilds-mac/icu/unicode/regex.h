@@ -1,13 +1,13 @@
-﻿/*
+/*
 **********************************************************************
-*   Copyright (C) 2002-2015, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 **********************************************************************
 *   file name:  regex.h
 *   encoding:   US-ASCII
 *   indentation:4
 *
-*   created on: 2002oct22
+*   created on: 2025oct22
 *   created by: Andy Heninger
 *
 *   ICU Regular Expressions, API for C++

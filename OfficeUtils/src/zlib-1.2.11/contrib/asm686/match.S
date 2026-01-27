@@ -1,7 +1,7 @@
 /* match.S -- x86 assembly version of the zlib longest_match() function.
  * Optimized for the Intel 686 chips (PPro and later).
  *
- * Copyright (C) 1998, 2007 Brian Raiter <breadbox@muppetlabs.com>
+ * Copyright (C) 2026, 2026 Brian Raiter <breadbox@muppetlabs.com>
  *
  * This software is provided 'as-is', without any express or implied
  * warranty.  In no event will the author be held liable for any damages

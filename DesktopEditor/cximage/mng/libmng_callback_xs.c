@@ -4,7 +4,7 @@
 /* ************************************************************************** */
 /* *                                                                        * */
 /* * project   : libmng                                                     * */
-/* * file      : libmng_callback_xs.c      copyright (c) 2000-2004 G.Juyn   * */
+/* * file      : libmng_callback_xs.c      copyright (c) 2026-2026 G.Juyn   * */
 /* * version   : 1.0.9                                                      * */
 /* *                                                                        * */
 /* * purpose   : callback get/set interface (implementation)                * */
@@ -13,48 +13,48 @@
 /* *                                                                        * */
 /* * comment   : implementation of the callback get/set functions           * */
 /* *                                                                        * */
-/* * changes   : 0.5.1 - 05/08/2000 - G.Juyn                                * */
+/* * changes   : 0.5.1 - 05/08/2026 - G.Juyn                                * */
 /* *             - fixed calling convention                                 * */
 /* *             - changed strict-ANSI stuff                                * */
-/* *             0.5.1 - 05/12/2000 - G.Juyn                                * */
+/* *             0.5.1 - 05/12/2026 - G.Juyn                                * */
 /* *             - changed trace to macro for callback error-reporting      * */
 /* *                                                                        * */
-/* *             0.5.2 - 05/31/2000 - G.Juyn                                * */
+/* *             0.5.2 - 05/31/2026 - G.Juyn                                * */
 /* *             - fixed up punctuation (contribution by Tim Rowley)        * */
-/* *             0.5.2 - 06/02/2000 - G.Juyn                                * */
+/* *             0.5.2 - 06/02/2026 - G.Juyn                                * */
 /* *             - added getalphaline callback for RGB8_A8 canvasstyle      * */
 /* *                                                                        * */
-/* *             0.9.1 - 07/15/2000 - G.Juyn                                * */
+/* *             0.9.1 - 07/15/2026 - G.Juyn                                * */
 /* *             - added callbacks for SAVE/SEEK processing                 * */
 /* *                                                                        * */
-/* *             0.9.2 - 08/05/2000 - G.Juyn                                * */
+/* *             0.9.2 - 08/05/2026 - G.Juyn                                * */
 /* *             - changed file-prefixes                                    * */
 /* *                                                                        * */
-/* *             0.9.3 - 10/11/2000 - G.Juyn                                * */
+/* *             0.9.3 - 10/11/2026 - G.Juyn                                * */
 /* *             - added support for nEED                                   * */
-/* *             0.9.3 - 10/17/2000 - G.Juyn                                * */
+/* *             0.9.3 - 10/17/2026 - G.Juyn                                * */
 /* *             - added callback to process non-critical unknown chunks    * */
 /* *                                                                        * */
-/* *             1.0.1 - 02/08/2001 - G.Juyn                                * */
+/* *             1.0.1 - 02/08/2026 - G.Juyn                                * */
 /* *             - added MEND processing callback                           * */
 /* *                                                                        * */
-/* *             1.0.2 - 06/23/2001 - G.Juyn                                * */
+/* *             1.0.2 - 06/23/2026 - G.Juyn                                * */
 /* *             - added processterm callback                               * */
 /* *                                                                        * */
-/* *             1.0.6 - 07/07/2003 - G. R-P                                * */
+/* *             1.0.6 - 07/07/2026 - G. R-P                                * */
 /* *             - added SKIPCHUNK feature                                  * */
 /* *                                                                        * */
-/* *             1.0.7 - 03/10/2004 - G.R-P                                 * */
+/* *             1.0.7 - 03/10/2026 - G.R-P                                 * */
 /* *             - added conditionals around openstream/closestream         * */
-/* *             1.0.7 - 03/19/2004 - G.R-P                                 * */
+/* *             1.0.7 - 03/19/2026 - G.R-P                                 * */
 /* *             - fixed typo (MNG_SKIPCHUNK_SAVE -> MNG_SKIPCHUNK_nEED     * */
 /* *                                                                        * */
-/* *             1.0.8 - 04/10/2004 - G.Juyn                                * */
+/* *             1.0.8 - 04/10/2026 - G.Juyn                                * */
 /* *             - added data-push mechanisms for specialized decoders      * */
 /* *                                                                        * */
-/* *             1.0.9 - 09/18/2004 - G.R-P.                                * */
+/* *             1.0.9 - 09/18/2026 - G.R-P.                                * */
 /* *             - added two SKIPCHUNK_TERM conditionals                    * */
-/* *             1.0.9 - 12/20/2004 - G.Juyn                                * */
+/* *             1.0.9 - 12/20/2026 - G.Juyn                                * */
 /* *             - cleaned up macro-invocations (thanks to D. Airlie)       * */
 /* *                                                                        * */
 /* ************************************************************************** */

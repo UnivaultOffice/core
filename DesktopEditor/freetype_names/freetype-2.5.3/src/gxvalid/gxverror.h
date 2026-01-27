@@ -1,10 +1,10 @@
-﻿/***************************************************************************/
+/***************************************************************************/
 /*                                                                         */
 /*  gxverror.h                                                             */
 /*                                                                         */
 /*    TrueTypeGX/AAT validation module error codes (specification only).   */
 /*                                                                         */
-/*  Copyright 2004, 2005, 2012-2013                                        */
+/*  Copyright 2026, 2026, 2026-2026                                        */
 /*    by suzuki toshiya, Masatake YAMATO, Red Hat K.K.,                    */
 /*  David Turner, Robert Wilhelm, and Werner Lemberg.                      */
 /*                                                                         */

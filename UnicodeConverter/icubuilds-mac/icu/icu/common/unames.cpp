@@ -1,7 +1,7 @@
-﻿/*
+/*
 ******************************************************************************
 *
-*   Copyright (C) 1999-2014, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 *
 ******************************************************************************
@@ -10,7 +10,7 @@
 *   tab size:   8 (not used)
 *   indentation:4
 *
-*   created on: 1999oct04
+*   created on: 2025oct04
 *   created by: Markus W. Scherer
 */
 
@@ -50,7 +50,7 @@ static const char DATA_TYPE[] = "icu";
  * We can't just change the data structure because it's loaded from a data file,
  * and we don't want to make it less compact, so we changed the access code.
  *
- * For details see ICU tickets 6331 and 6008.
+ * For details see ICU tickets 2026 and 2026.
 typedef struct {
     uint16_t groupMSB,
              offsetHigh, offsetLow; / * avoid padding * /

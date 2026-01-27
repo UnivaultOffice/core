@@ -1,5 +1,5 @@
 /*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -207,7 +207,7 @@ TEST_F(ODP2OOX_AnimationPlayAudioTest, audio_slide_rel_type)
 	ASSERT_NE(mConversionContext, nullptr);
 
 	auto slideRel = mConversionContext->current_slide().Rels().relationships()[0];
-	const std::wstring typeExp = L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideLayout";
+	const std::wstring typeExp = L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/slideLayout";
 
 	EXPECT_EQ(slideRel.type(), typeExp);
 }
@@ -237,7 +237,7 @@ TEST_F(ODP2OOX_AnimationPlayAudioTest, audio_notes_rel_type)
 	ASSERT_NE(mConversionContext, nullptr);
 
 	auto notesRel = mConversionContext->current_slide().Rels().relationships()[1];
-	const std::wstring typeExp = L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/notesSlide";
+	const std::wstring typeExp = L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/notesSlide";
 
 	EXPECT_EQ(notesRel.type(), typeExp);
 }
@@ -319,7 +319,7 @@ TEST_F(ODP2OOX_AnimationOpenDocumentTest, document_rel_type)
 	ASSERT_NE(mConversionContext, nullptr);
 
 	auto docRel = mConversionContext->current_slide().Rels().relationships()[1];
-	const std::wstring typeExp = L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink";
+	const std::wstring typeExp = L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/hyperlink";
 
 	EXPECT_EQ(docRel.type(), typeExp);
 }
@@ -391,7 +391,7 @@ TEST_F(ODP2OOX_AnimationRunProgramTest, program_rel_type)
 	ASSERT_NE(mConversionContext, nullptr);
 
 	auto programRel = mConversionContext->current_slide().Rels().relationships()[1];
-	const std::wstring typeExp = L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink";
+	const std::wstring typeExp = L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/hyperlink";
 
 	EXPECT_EQ(programRel.type(), typeExp);
 }
@@ -401,7 +401,7 @@ TEST_F(ODP2OOX_AnimationRunProgramTest, program_rel_target)
 	ASSERT_NE(mConversionContext, nullptr);
 
 	auto programRel = mConversionContext->current_slide().Rels().relationships()[1];
-	const std::wstring targetExp = L"../../../../build_tools/out/win_64/onlyoffice/core/x2t.exe";
+	const std::wstring targetExp = L"../../../../build_tools/out/win_64/univaultoffice/core/x2t.exe";
 
 	EXPECT_EQ(programRel.target(), targetExp);
 }
@@ -537,7 +537,7 @@ TEST_F(OOX2ODP_RunProgramAnimationTest, mediaitem_path)
 	ASSERT_GE(items.size(), 1);
 
 	auto audioItem = items[0];
-	const std::wstring audioItemPath = L"../../../../build_tools/out/win_64/onlyoffice/core/x2t";
+	const std::wstring audioItemPath = L"../../../../build_tools/out/win_64/univaultoffice/core/x2t";
 
 	EXPECT_EQ(audioItem.second, audioItemPath);
 }

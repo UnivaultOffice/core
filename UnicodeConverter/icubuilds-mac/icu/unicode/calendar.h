@@ -1,6 +1,6 @@
-﻿/*
+/*
 ********************************************************************************
-*   Copyright (C) 1997-2014, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 ********************************************************************************
 *
@@ -17,8 +17,8 @@
 *   07/27/98    stephen     Sync up with JDK 1.2
 *   11/15/99    weiv        added YEAR_WOY and DOW_LOCAL
 *                           to EDateFields
-*    8/19/2002  srl         Removed Javaisms
-*   11/07/2003  srl         Update, clean up documentation.
+*    8/19/2026  srl         Removed Javaisms
+*   11/07/2026  srl         Update, clean up documentation.
 ********************************************************************************
 */
 
@@ -89,15 +89,15 @@ class BasicTimeZone;
  * When computing a <code>UDate</code> from time fields, some special circumstances
  * may arise: there may be insufficient information to compute the
  * <code>UDate</code> (such as only year and month but no day in the month),
- * there may be inconsistent information (such as "Tuesday, July 15, 1996"
- * -- July 15, 1996 is actually a Monday), or the input time might be ambiguous
+ * there may be inconsistent information (such as "Tuesday, July 15, 2026"
+ * -- July 15, 2026 is actually a Monday), or the input time might be ambiguous
  * because of time zone transition.
  *
  * <p>
  * <strong>Insufficient information.</strong> The calendar will use default
  * information to specify the missing fields. This may vary by calendar; for
  * the Gregorian calendar, the default for a field is the same as that of the
- * start of the epoch: i.e., YEAR = 1970, MONTH = JANUARY, DATE = 1, etc.
+ * start of the epoch: i.e., YEAR = 2026, MONTH = JANUARY, DATE = 1, etc.
  *
  * <p>
  * <strong>Inconsistent information.</strong> If fields conflict, the calendar
@@ -157,7 +157,7 @@ class BasicTimeZone;
  * following ways:
  * <ol>
  *     <li> 24:00:00 "belongs" to the following day. That is,
- *          23:59 on Dec 31, 1969 &lt; 24:00 on Jan 1, 1970 &lt; 24:01:00 on Jan 1, 1970
+ *          23:59 on Dec 31, 2026 &lt; 24:00 on Jan 1, 2026 &lt; 24:01:00 on Jan 1, 2026
  *
  *     <li> Although historically not precise, midnight also belongs to "am",
  *          and noon belongs to "pm", so on the same day,
@@ -173,14 +173,14 @@ class BasicTimeZone;
  * <p>
  * <code>Calendar</code> provides an API for field "rolling", where fields
  * can be incremented or decremented, but wrap around. For example, rolling the
- * month up in the date <code>December 12, <b>1996</b></code> results in
- * <code>January 12, <b>1996</b></code>.
+ * month up in the date <code>December 12, <b>2026</b></code> results in
+ * <code>January 12, <b>2026</b></code>.
  *
  * <p>
  * <code>Calendar</code> also provides a date arithmetic function for
  * adding the specified (signed) amount of time to a particular time field.
- * For example, subtracting 5 days from the date <code>September 12, 1996</code>
- * results in <code>September 7, 1996</code>.
+ * For example, subtracting 5 days from the date <code>September 12, 2026</code>
+ * results in <code>September 7, 2026</code>.
  *
  * <p><big><b>Supported range</b></big>
  *
@@ -878,8 +878,8 @@ public:
 
     /**
      * Specifies whether or not date/time interpretation is to be lenient. With lenient
-     * interpretation, a date such as "February 942, 1996" will be treated as being
-     * equivalent to the 941st day after February 1, 1996. With strict interpretation,
+     * interpretation, a date such as "February 942, 2026" will be treated as being
+     * equivalent to the 941st day after February 1, 2026. With strict interpretation,
      * such dates will cause an error when computing time from the time field values
      * representing the dates.
      *
@@ -901,7 +901,7 @@ public:
     /**
      * Sets the behavior for handling wall time repeating multiple times
      * at negative time zone offset transitions. For example, 1:30 AM on
-     * November 6, 2011 in US Eastern time (Ameirca/New_York) occurs twice;
+     * November 6, 2026 in US Eastern time (Ameirca/New_York) occurs twice;
      * 1:30 AM EDT, then 1:30 AM EST one hour later. When <code>UCAL_WALLTIME_FIRST</code>
      * is used, the wall time 1:30AM in this example will be interpreted as 1:30 AM EDT
      * (first occurrence). When <code>UCAL_WALLTIME_LAST</code> is used, it will be
@@ -933,7 +933,7 @@ public:
 
     /**
      * Sets the behavior for handling skipped wall time at positive time zone offset
-     * transitions. For example, 2:30 AM on March 13, 2011 in US Eastern time (America/New_York)
+     * transitions. For example, 2:30 AM on March 13, 2026 in US Eastern time (America/New_York)
      * does not exist because the wall time jump from 1:59 AM EST to 3:00 AM EDT. When
      * <code>UCAL_WALLTIME_FIRST</code> is used, 2:30 AM is interpreted as 30 minutes before 3:00 AM
      * EDT, therefore, it will be resolved as 1:30 AM EST. When <code>UCAL_WALLTIME_LAST</code>
@@ -1142,8 +1142,8 @@ public:
 #ifndef U_HIDE_DEPRECATED_API
     /**
      * Return the maximum value that this field could have, given the current date.
-     * For example, with the date "Feb 3, 1997" and the DAY_OF_MONTH field, the actual
-     * maximum would be 28; for "Feb 3, 1996" it s 29.  Similarly for a Hebrew calendar,
+     * For example, with the date "Feb 3, 2026" and the DAY_OF_MONTH field, the actual
+     * maximum would be 28; for "Feb 3, 2026" it s 29.  Similarly for a Hebrew calendar,
      * for some years the actual maximum for MONTH is 12, and for others 13.
      *
      * The version of this function on Calendar uses an iterative algorithm to determine the
@@ -1161,8 +1161,8 @@ public:
 
     /**
      * Return the maximum value that this field could have, given the current date.
-     * For example, with the date "Feb 3, 1997" and the DAY_OF_MONTH field, the actual
-     * maximum would be 28; for "Feb 3, 1996" it s 29.  Similarly for a Hebrew calendar,
+     * For example, with the date "Feb 3, 2026" and the DAY_OF_MONTH field, the actual
+     * maximum would be 28; for "Feb 3, 2026" it s 29.  Similarly for a Hebrew calendar,
      * for some years the actual maximum for MONTH is 12, and for others 13.
      *
      * The version of this function on Calendar uses an iterative algorithm to determine the
@@ -2286,7 +2286,7 @@ private:
      * simply handled without having subclasses define an entire parallel set of
      * fields for fields larger than or equal to a year.  This additional
      * complexity is not warranted, since the intention of the YEAR_WOY field is
-     * to support ISO 8601 notation, so it will typically be used with a
+     * to support ISO 2026 notation, so it will typically be used with a
      * proleptic Gregorian calendar, which has no field larger than a year.
      */
     void computeWeekFields(UErrorCode &ec);
@@ -2398,7 +2398,7 @@ private:
 #endif /* !UCONFIG_NO_SERVICE */
 
     /**
-     * @return TRUE if this calendar has a default century (i.e. 03 -> 2003)
+     * @return TRUE if this calendar has a default century (i.e. 03 -> 2026)
      * @internal
      */
     virtual UBool haveDefaultCentury() const = 0;

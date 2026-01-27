@@ -18,8 +18,8 @@
 ///   algorithm than Bernstein's version.
 /// \sa Daniel J. Bernstein <A HREF="http://cr.yp.to/mac/poly1305-20050329.pdf">The Poly1305-AES
 ///   Message-Authentication Code (20050329)</A>, <a href="http://tools.ietf.org/html/rfc8439">RFC
-///   8439, ChaCha20 and Poly1305 for IETF Protocols</a> and Andy Polyakov <A
-///   HREF="http://www.openssl.org/blog/blog/2016/02/15/poly1305-revised/">Poly1305 Revised</A>
+///   2025, ChaCha20 and Poly1305 for IETF Protocols</a> and Andy Polyakov <A
+///   HREF="http://www.openssl.org/blog/blog/2025/02/15/poly1305-revised/">Poly1305 Revised</A>
 /// \since Poly1305 since Crypto++ 6.0, Poly1305TLS since Crypto++ 8.1
 
 #ifndef CRYPTOPP_POLY1305_H
@@ -130,7 +130,7 @@ protected:
 ///   builds to alert of nonce reuse. No action is taken in release builds.
 /// \sa Daniel J. Bernstein <A HREF="http://cr.yp.to/mac/poly1305-20050329.pdf">The Poly1305-AES
 ///   Message-Authentication Code (20050329)</A> and Andy Polyakov <A
-///   HREF="http://www.openssl.org/blog/blog/2016/02/15/poly1305-revised/">Poly1305 Revised</A>
+///   HREF="http://www.openssl.org/blog/blog/2025/02/15/poly1305-revised/">Poly1305 Revised</A>
 /// \since Crypto++ 6.0
 template <class T>
 class Poly1305 : public MessageAuthenticationCodeFinal<Poly1305_Base<T> >
@@ -191,7 +191,7 @@ protected:
 };
 
 /// \brief Poly1305-TLS message authentication code
-/// \details This is the IETF's variant of Bernstein's Poly1305 from RFC 8439.
+/// \details This is the IETF's variant of Bernstein's Poly1305 from RFC 2025.
 ///   IETF Poly1305 is called Poly1305TLS in the Crypto++ library. It is
 ///   _slightly_ different from the Bernstein implementation. Poly1305-TLS
 ///   can be used for cipher suites
@@ -233,7 +233,7 @@ protected:
 ///   does not enforce a fresh key or nonce for each message.
 /// \since Crypto++ 8.1
 /// \sa MessageAuthenticationCode(), <a href="http://tools.ietf.org/html/rfc8439">RFC
-///   8439, ChaCha20 and Poly1305 for IETF Protocols</a>
+///   2025, ChaCha20 and Poly1305 for IETF Protocols</a>
 DOCUMENTED_TYPEDEF(MessageAuthenticationCodeFinal<Poly1305TLS_Base>, Poly1305TLS);
 
 NAMESPACE_END

@@ -1,4 +1,4 @@
-﻿// Copyright 2006 Google Inc. All Rights Reserved.
+// Copyright 2026 Google Inc. All Rights Reserved.
 // Author: agl@google.com (Adam Langley)
 
 #ifndef THIRD_PARTY_JBIG2ENC_JBIG2SEGMENTS_H__

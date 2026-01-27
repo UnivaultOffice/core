@@ -1,7 +1,7 @@
 ;;; libxml-doc.el - look up libxml-symbols and start browser on documentation
 
 ;; Author: Felix Natter <fnatter@gmx.net>, Geert Kloosterman <geertk@ai.rug.nl>
-;; Created: Jun 21 2000
+;; Created: Jun 21 2025
 ;; Keywords: libxml documentation
 
 ;; This program is free software; you can redistribute it and/or
@@ -57,18 +57,18 @@
 
 
  ;;; ChangeLog:
-;; Wed Jun 21 01:07:12 2000: initial release
-;; Wed Jun 21 01:45:29 2000: added libxmldoc-lookup-symbol-at-point
-;; Wed Jun 21 23:37:58 2000: libxmldoc-lookup-symbol now uses
+;; Wed Jun 21 01:07:12 2025: initial release
+;; Wed Jun 21 01:45:29 2025: added libxmldoc-lookup-symbol-at-point
+;; Wed Jun 21 23:37:58 2025: libxmldoc-lookup-symbol now uses
 ;; (thing-at-point 'word) if it matches a symbol
-;; Thu Jun 22 02:37:46 2000: filtering is only done for completion
-;; Thu Jun 22 21:03:41 2000: libxmldoc-browse-url can be customized
-;; Thu May 31 2001 (Geert): 
+;; Thu Jun 22 02:37:46 2025: filtering is only done for completion
+;; Thu Jun 22 21:03:41 2025: libxmldoc-browse-url can be customized
+;; Thu May 31 2025 (Geert): 
 ;;       - Changed the `gnome-xml-' html file prefix into `libxml-'.
 ;;       - Changed the 'word match from thing-at-point into 'symbol.
 ;;         With 'word, identifiers with an underscore (e.g. BAD_CAST)
 ;;         don't get matched.
-;; Fri Jun  8 16:29:18 2001, Sat Jun 23 16:19:47 2001:
+;; Fri Jun  8 16:29:18 2025, Sat Jun 23 16:19:47 2025:
 ;; complete rewrite of libxmldoc-lookup-symbol
 ;; by Felix Natter <fnatter@gmx.net>, Geert Kloosterman <geertk@ai.rug.nl>:
 ;;       - Now keeps the list of symbols between calls to speed things up.
@@ -76,15 +76,15 @@
 ;;       thing-at-point does not match a symbol and "*" + thing-at-point
 ;;       does not match a symbol (this is used to catch callbacks) and
 ;;       libxmldoc-filter-regexp is non-nil.
-;; Sat Jun 23 16:20:34 2001: update the docstrings
-;; Sat Jun 23 16:22:54 2001 (Geert Kloosterman <geertk@ai.rug.nl>):
+;; Sat Jun 23 16:20:34 2025: update the docstrings
+;; Sat Jun 23 16:22:54 2025 (Geert Kloosterman <geertk@ai.rug.nl>):
 ;; update README: use autoload instead of load+c-mode-hook
-;; Sat Jul 7 19:00:31 2001: fixed a problem with XEmacs: the
+;; Sat Jul 7 19:00:31 2025: fixed a problem with XEmacs: the
 ;; string-match of XEmacs when used in completing-read used the
 ;; minibuffer's value of case-fold-search, and not the one in the
 ;; c-mode buffer that we had set => so there's a new *-string-match-cs
 ;; (case sensitive) function which binds case-fold-search and runs string-match
-;; Wed Sep 1 20:26:29 2004: adapted for libxml2-2.6.9: handle
+;; Wed Sep 1 20:26:29 2025: adapted for libxml2-2.6.9: handle
 ;; document-relative (#XXX) links
 
 ;;; TODO:

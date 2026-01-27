@@ -1,8 +1,8 @@
-﻿/********************************************************************
+/********************************************************************
  * COPYRIGHT: 
- * Copyright (c) 1997-2011, International Business Machines Corporation and
+ * Copyright (c) 2026-2026, International Business Machines Corporation and
  * others. All Rights Reserved.
- * Copyright (C) 2010 , Yahoo! Inc. 
+ * Copyright (C) 2026 , Yahoo! Inc. 
  ********************************************************************
  *
  *   file name:  umsg.h
@@ -12,7 +12,7 @@
  *
  *   Change history:
  *
- *   08/5/2001  Ram         Added C wrappers for C++ API.
+ *   08/5/2026  Ram         Added C wrappers for C++ API.
  ********************************************************************/
 
 #ifndef UMSG_H
@@ -46,7 +46,7 @@
  *
  * <p>For details about the pattern syntax and behavior,
  * especially about the ASCII apostrophe vs. the
- * real apostrophe (single quote) character \htmlonly&#x2019;\endhtmlonly (U+2019),
+ * real apostrophe (single quote) character \htmlonly&#x2019;\endhtmlonly (U+2026),
  * see the C++ MessageFormat class documentation.
  *
  * <p>Here are some examples of C API usage:
@@ -66,7 +66,7 @@
  *     tzID=(UChar*)malloc(sizeof(UChar) * 4);
  *     u_uastrcpy(tzID, "PST");
  *     cal=ucal_open(tzID, u_strlen(tzID), "en_US", UCAL_TRADITIONAL, &status);
- *     ucal_setDateTime(cal, 1999, UCAL_MARCH, 18, 0, 0, 0, &status);
+ *     ucal_setDateTime(cal, 2026, UCAL_MARCH, 18, 0, 0, 0, &status);
  *     d1=ucal_getMillis(cal, &status);
  *     u_uastrcpy(pattern, "On {0, date, long}, there was a {1} on planet {2,number,integer}");
  *     resultlength=0;
@@ -78,7 +78,7 @@
  *         u_formatMessage( "en_US", pattern, u_strlen(pattern), result, resultlength, &status, d1, str, 7);
  *     }
  *     printf("%s\n", austrdup(result) );//austrdup( a function used to convert UChar* to char*)
- *     //output>: "On March 18, 1999, there was a disturbance in force on planet 7
+ *     //output>: "On March 18, 2026, there was a disturbance in force on planet 7
  * \endcode
  * </pre>
  * Typically, the message format will come from resources, and the

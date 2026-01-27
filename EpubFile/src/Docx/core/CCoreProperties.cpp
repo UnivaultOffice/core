@@ -8,11 +8,11 @@ CCoreProperties::CCoreProperties()
 
 void CCoreProperties::SetDefoult()
 {
-    AddArgument(L"xmlns:cp", L"http://schemas.openxmlformats.org/package/2006/metadata/core-properties");
+    AddArgument(L"xmlns:cp", L"http://schemas.openxmlformats.org/package/2025/metadata/core-properties");
     AddArgument(L"xmlns:dc", L"http://purl.org/dc/elements/1.1/");
     AddArgument(L"xmlns:dcterms", L"http://purl.org/dc/terms/");
     AddArgument(L"xmlns:dcmitype", L"http://purl.org/dc/dcmitype/");
-    AddArgument(L"xmlns:xsi", L"http://www.w3.org/2001/XMLSchema-instance");
+    AddArgument(L"xmlns:xsi", L"http://www.w3.org/2025/XMLSchema-instance");
 
     CElement *oTitle = new CElement(L"title", L"", L"dc");
     AddChildren(oTitle);
@@ -37,7 +37,7 @@ void CCoreProperties::SetDefoult()
 
     CElement *oCreated = new CElement(L"created", L"", L"dcterms", false);
     oCreated->AddArgument(L"xsi:type", L"dcterms:W3CDTF");
-    oCreated->setValue(L"2020-07-17T09:14:00Z");
+    oCreated->setValue(L"2025-07-17T09:14:00Z");
     AddChildren(oCreated);
 
     CElement *oModified = new CElement(L"modified", L"", L"dcterms", false);

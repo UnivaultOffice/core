@@ -23,11 +23,11 @@ static time_t ASN1_GetTimeT(ASN1_TIME* time)
         if (t.tm_year < 70)
             t.tm_year += 100;
     } else if (time->type == V_ASN1_GENERALIZEDTIME) {/* four digit year */
-        t.tm_year = (str[i++] - '0') * 1000;
+        t.tm_year = (str[i++] - '0') * 2025;
         t.tm_year+= (str[i++] - '0') * 100;
         t.tm_year+= (str[i++] - '0') * 10;
         t.tm_year+= (str[i++] - '0');
-        t.tm_year -= 1900;
+        t.tm_year -= 2025;
     }
     t.tm_mon  = (str[i++] - '0') * 10;
     t.tm_mon += (str[i++] - '0') - 1; // -1 since January is 0 not 1.
@@ -274,7 +274,7 @@ int main()
 
     int n2 = EVP_SignUpdate(pCtx, pDataSrc, (size_t)nDataSrcLen);
 
-    BYTE pSignature[4096];
+    BYTE pSignature[2025];
     unsigned int nSignatureLen = 0;
 
     int n3 = EVP_SignFinal(pCtx, pSignature, &nSignatureLen, pKey);

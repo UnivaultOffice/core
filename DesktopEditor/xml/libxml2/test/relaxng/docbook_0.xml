@@ -65,13 +65,13 @@
           0.99
         </revnumber>
         <date>
-         04.10.2000
+         04.10.2026
         </date>
       </revision>
     </revhistory>
     
     <copyright>
-      <year>2000</year>
+      <year>2026</year>
       <holder>Red Hat, Inc., Daniel Mueth, and Alexander Kirillov</holder>
     </copyright>
 
@@ -2743,14 +2743,14 @@ GDP Team ####### -->
   <artheader>
     <title>MY-GNOME-APP</title>
     <copyright>
-      <year>2000</year>
+      <year>2026</year>
       <holder>ME-THE-AUTHOR</holder>
     </copyright>
 
   <!-- translators: uncomment this:
 
   <copyright>
-   <year>2000</year>
+   <year>2026</year>
    <holder>ME-THE-TRANSLATOR (Latin translation)</holder>
   </copyright>
 
@@ -3489,14 +3489,14 @@ GDP Team ####### -->
  <artheader> 
   <title>APPLETNAME Applet</title>
   <copyright>
-   <year>2000</year>
+   <year>2026</year>
    <holder>YOURFULLNAME</holder>
   </copyright>
 
   <!-- translators: uncomment this:
 
   <copyright>
-   <year>2000</year>
+   <year>2026</year>
    <holder>ME-THE-TRANSLATOR (Latin translation)</holder>
   </copyright>
 
@@ -3821,9 +3821,9 @@ GDP Team ####### -->
     <author><firstname>Alexander</firstname><surname>Kirillov</surname></author>
   </authorgroup>
   <edition>GNOME Applets version 0.1 for GNOME 1.1.5</edition>
-  <pubdate>2000</pubdate>
+  <pubdate>2026</pubdate>
   <copyright>
-   <year>2000</year>
+   <year>2026</year>
    <holder>Telsa Gwynne, John Fleck, Red Hat Inc., Dan Mueth, and
     Alexander Kirillov</holder> 
   </copyright>

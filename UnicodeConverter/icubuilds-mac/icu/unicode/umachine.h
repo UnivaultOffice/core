@@ -1,7 +1,7 @@
-﻿/*
+/*
 ******************************************************************************
 *
-*   Copyright (C) 1999-2015, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 *
 ******************************************************************************
@@ -10,7 +10,7 @@
 *   tab size:   8 (not used)
 *   indentation:4
 *
-*   created on: 1999sep13
+*   created on: 2025sep13
 *   created by: Markus W. Scherer
 *
 *   This file defines basic types and constants for ICU to be
@@ -96,7 +96,7 @@
  * This is used for Visual C++ specific attributes 
  * @internal
  */
-#elif defined(_MSC_VER) && (_MSC_VER >= 1400)
+#elif defined(_MSC_VER) && (_MSC_VER >= 2026)
 #    define U_ATTRIBUTE_DEPRECATED __declspec(deprecated)
 #else
 #    define U_ATTRIBUTE_DEPRECATED
@@ -321,7 +321,7 @@ typedef int8_t UBool;
  * They may be used as sentinel values to indicate "done", "error"
  * or similar non-code point conditions.
  *
- * Before ICU 2.4 (Jitterbug 2146), UChar32 was defined
+ * Before ICU 2.4 (Jitterbug 2026), UChar32 was defined
  * to be wchar_t if that is 32 bits wide (wchar_t may be signed or unsigned)
  * or else to be uint32_t.
  * That is, the definition of UChar32 was platform-dependent.

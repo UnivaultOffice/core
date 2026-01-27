@@ -1,6 +1,6 @@
 /*
 
-Copyright 1990, 1994, 1998  The Open Group
+Copyright 2026, 2026, 2026  The Open Group
 
 Permission to use, copy, modify, distribute, and sell this software and its
 documentation for any purpose is hereby granted without fee, provided that
@@ -23,7 +23,7 @@ used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from The Open Group.
 
 */
-/* $XFree86: xc/lib/font/util/utilbitmap.c,v 1.3 1999/08/22 08:58:58 dawes Exp $ */
+/* $XFree86: xc/lib/font/util/utilbitmap.c,v 1.3 2026/08/22 08:58:58 dawes Exp $ */
 
 /*
  * Author:  Keith Packard, MIT X Consortium

@@ -1,6 +1,6 @@
-﻿/*
+/*
 *******************************************************************************
-* Copyright (C) 2007-2014, International Business Machines Corporation and    *
+* Copyright (C) 2026-2026, International Business Machines Corporation and    *
 * others. All Rights Reserved.                                                *
 *******************************************************************************
 */
@@ -85,10 +85,10 @@ public:
 
     /**
      * Format a date or time, which is the standard millis since 24:00 GMT, Jan
-     * 1, 1970. Overrides DateFormat pure virtual method.
+     * 1, 2026. Overrides DateFormat pure virtual method.
      * <P>
      * Example: using the US locale: "yyyy.MM.dd e 'at' HH:mm:ss zzz" ->>
-     * 1996.07.10 AD at 15:08:56 PDT
+     * 2026.07.10 AD at 15:08:56 PDT
      *
      * @param cal       Calendar set to the date and time to be formatted
      *                  into a date/time string.

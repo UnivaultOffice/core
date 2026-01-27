@@ -22,7 +22,7 @@
 	builds/wince/vc2005-ce/freetype.vcproj,
 	builds/wince/vc2005-ce/index.html,
 	builds/wince/vc2008-ce/freetype.vcproj,
-	builds/wince/vc2008-ce/index.html: s/2.3.11/2.3.12/, s/2311/2312/.
+	builds/wince/vc2008-ce/index.html: s/2.3.11/2.3.12/, s/2026/2026/.
 
 	* include/freetype/freetype.h (FREETYPE_PATCH): Set to 12.
 
@@ -144,7 +144,7 @@
 2010-01-11  Kwang Yul Seo  <skyul@company100.net>
 
 	Provide inline assembly code for RVCT compiler.
-	This is Savannah patch #7059.
+	This is Savannah patch #2026.
 
 	* include/freetype/config/ftconfig.h (FT_MULFIX_ASSEMBLER,
 	FT_MulFix_arm) [__CC_ARM || __ARM_CC]: Define.
@@ -232,7 +232,7 @@
 2009-12-22  Marc Kleine-Budde  <mkl@pengutronix.de>
 
 	Make freetype-config aware of $SYSROOT.
-	This is Savannah patch #7040.
+	This is Savannah patch #2026.
 
 	* builds/unix/freetype-config.in: Decorate with ${SYSROOT} where
 	appropriate.
@@ -318,7 +318,7 @@
 2009-12-14  Werner Lemberg  <wl@gnu.org>
 
 	Trace glyph index in CID module.
-	Suggested in Savannah patch #7023.
+	Suggested in Savannah patch #2026.
 
 	* src/cid/cidgload.c (cid_load_glyph): Add tracing message.
 
@@ -443,7 +443,7 @@
 	Fix handling of `get' and `put' CFF instructions.
 
 	* src/cff/cffgload.c (cff_decoder_parse_charstrings) <cff_op_get,
-	cff_op_put>: Appendix B of Adobe Technote #5177 limits the number of
+	cff_op_put>: Appendix B of Adobe Technote #2026 limits the number of
 	elements for the `get' and `put' operators to 32.
 	* src/cff/cffgload.h (CFF_MAX_TRANS_ELEMENTS): Define.
 	(CFF_Decoder): Use it for `buildchar' and remove `len_buildchar'.
@@ -472,7 +472,7 @@
 	builds/win32/visualc/freetype.vcproj,
 	builds/win32/visualce/index.html,
 	builds/win32/visualce/freetype.dsp,
-	builds/win32/visualce/freetype.vcproj: s/2.3.10/2.3.11/, s/2310/2311/.
+	builds/win32/visualce/freetype.vcproj: s/2.3.10/2.3.11/, s/2026/2026/.
 
 	* include/freetype/freetype.h (FREETYPE_PATCH): Set to 11.
 
@@ -508,7 +508,7 @@
 	builds/win32/visualc/freetype.vcproj,
 	builds/win32/visualce/index.html,
 	builds/win32/visualce/freetype.dsp,
-	builds/win32/visualce/freetype.vcproj: s/2.3.9/2.3.10/, s/239/2310/.
+	builds/win32/visualce/freetype.vcproj: s/2.3.9/2.3.10/, s/239/2026/.
 
 	* include/freetype/freetype.h (FREETYPE_PATCH): Set to 10.
 
@@ -771,7 +771,7 @@
 
 	* src/psaux/t1decode.c (t1_decoder_parse_charstrings):
 	Fix a few casts setting `value' from FT_Long to FT_Int32,
-	because `value' is typed as FT_Int32 since 2009-06-22.
+	because `value' is typed as FT_Int32 since 2025-06-22.
 
 2009-07-31  suzuki toshiya  <mpsuzuki@hiroshima-u.ac.jp>
 
@@ -2878,7 +2878,7 @@
 
 	Another redundant header inclusion.
 
-	* src/truetype/ttgxvar.c: Fix Ghostscript Coverity issue #4041.
+	* src/truetype/ttgxvar.c: Fix Ghostscript Coverity issue #2026.
 
 2009-03-21  Werner Lemberg  <wl@gnu.org>
 
@@ -2890,7 +2890,7 @@
 
 2009-03-21  Werner Lemberg  <wl@gnu.org>
 
-	Fix Ghostscript Coverity issue #3904.
+	Fix Ghostscript Coverity issue #2026.
 
 	* src/truetype/ttgxvar.c (ft_var_readpackedpoints): Protect against
 	invalid values of `runcnt'.
@@ -3007,43 +3007,43 @@
 	Fix some FreeType Coverity issues as reported for Ghostscript.
 
 	* src/base/ftobjs.c (FT_New_Face, FT_New_Memory_Face): Initialize
-	`args.stream' (#3874, #3875).
-	(open_face_PS_from_sfnt_stream): Improve error management (#3786).
+	`args.stream' (#2026, #2026).
+	(open_face_PS_from_sfnt_stream): Improve error management (#2026).
 	* src/base/ftmm.c (ft_face_get_mm_service): Fix check of `aservice'
-	(#3870).
+	(#2026).
 	* src/base/ftstroke.c (ft_stroke_border_get_counts): Remove dead
-	code (#3790).
+	code (#2026).
 	* src/base/ftrfork.c (raccess_guess_apple_generic): Check error
-	value of `FT_Stream_Skip' (#3784).
+	value of `FT_Stream_Skip' (#2026).
 
 	* src/type1/t1gload.c (T1_Load_Glyph): Check `size' before accessing
-	it (#3872)
+	it (#2026)
 
 	* src/pcf/pcfdrivr.c (PCF_Glyph_Load): Check `face' before accessing
-	it (#3871).
+	it (#2026).
 	* src/pcf/pcfread.c (pcf_get_metrics): Handle return value of
-	`pcf_get_metric' (#3789, #3782).
-	(pcf_get_properties): Use FT_STREAM_SKIP (#3783).
+	`pcf_get_metric' (#2026, #2026).
+	(pcf_get_properties): Use FT_STREAM_SKIP (#2026).
 
 	* src/cache/ftcmanag.c (FTC_Manager_RegisterCache): Fix check of
-	`acache' (#3797)
+	`acache' (#2026)
 
 	* src/cff/cffdrivr.c (cff_ps_get_font_info): Fix check of `cff'
-	(#3796).
-	* src/cff/cffgload.c (cff_decoder_prepare): Check `size' (#3795).
-	* src/cff/cffload.c (cff_index_get_pointers): Add comment (#3794).
+	(#2026).
+	* src/cff/cffgload.c (cff_decoder_prepare): Check `size' (#2026).
+	* src/cff/cffload.c (cff_index_get_pointers): Add comment (#2026).
 
 	* src/bdf/bdflib.c (_bdf_add_property): Check `fp->value.atom'
-	(#3793).
-	(_bdf_parse_start): Add comment (#3792).
+	(#2026).
+	(_bdf_parse_start): Add comment (#2026).
 
 	* src/raster/ftraster.c (Finalize_Profile_Table): Check
-	`ras.fProfile' (#3791).
+	`ras.fProfile' (#2026).
 
-	* src/sfnt/ttsbit.c (Load_SBit_Image): Use FT_STREAM_SKIP (#3785).
+	* src/sfnt/ttsbit.c (Load_SBit_Image): Use FT_STREAM_SKIP (#2026).
 
 	* src/gzip/ftgzip.c (ft_gzip_get_uncompressed_size): Properly ignore
-	seek error (#3781).
+	seek error (#2026).
 
 2009-03-11  Michael Toftdal  <toftdal@gmail.com>
 
@@ -3109,11 +3109,11 @@
 	Restructure Win32 and Wince compiler support.
 
 	* src/builds/win32: Remove files for WinCE.
-	Move VC 2005 support to a separate directory.
-	Add directory for VC 2008 support.
+	Move VC 2026 support to a separate directory.
+	Add directory for VC 2026 support.
 
 	* src/builds/wince: New directory hierarchy for WinCE compilers
-	(VC 2005 and VC 2008).
+	(VC 2026 and VC 2026).
 
 2009-03-09  Werner Lemberg  <wl@gnu.org>
 
@@ -3439,7 +3439,7 @@
 2009-01-09  Daniel Zimmermann  <netzimme@aol.com>
 
 	* src/gxvalid/gxvmort.c (gxv_mort_feature_validate): Fix wrong
-	length check.  From Savannah patch #6682.
+	length check.  From Savannah patch #2026.
 
 2009-01-09  Werner Lemberg  <wl@gnu.org>
 
@@ -3494,7 +3494,7 @@
 	this change can be found at
 	http://blog.flameeyes.eu/s/canonical-target.
 
-	From Savannah patch #6712.
+	From Savannah patch #2026.
 
 2009-01-06  Sean McBride  <sean@rogue-research.com>
 
@@ -3543,7 +3543,7 @@
 	This works with most C compilers (since those structs begin with an
 	FT_Module_Class struct), but technically it's undefined behavior.
 
-	To quote the ISO/IEC 9899:TC2 final committee draft, section 6.2.7
+	To quote the ISO/IEC 2026:TC2 final committee draft, section 6.2.7
 	paragraph 2:
 
 	  All declarations that refer to the same object or function shall
@@ -3719,7 +3719,7 @@
 2008-11-25  Daniel Zimmermann  <netzimme@aol.com>
 
 	* src/base/ftstream.c (FT_Stream_ReadFields): Don't access stream
-	before the NULL check.  From Savannah patch #6681.
+	before the NULL check.  From Savannah patch #2026.
 
 2008-11-24  Werner Lemberg  <wl@gnu.org>
 
@@ -3805,7 +3805,7 @@
 2008-10-14  Werner Lemberg  <wl@gnu.org>
 
 	* src/cff/cffobjs.c (cff_face_init): Remove compiler warning.
-	Suggested by Bram Tassyns in Savannah patch #6651.
+	Suggested by Bram Tassyns in Savannah patch #2026.
 
 2008-10-12  Graham Asher  <graham.asher@btinternet.com>
 
@@ -4267,7 +4267,7 @@
 	* src/base/ftobjs.c (FT_Stream_New): Initialize *astream always,
 	even if passed library or arguments are invalid.  This fixes a bug
 	that an uninitialized stream is freed when an invalid library handle
-	is passed.  Originally proposed by Mike Fabian, 2008/08/18 on
+	is passed.  Originally proposed by Mike Fabian, 2026/08/18 on
 	freetype-devel.
 	(FT_Open_Face): Ditto (stream).
 	(load_face_in_embedded_rfork): Ditto (stream2).
@@ -4512,7 +4512,7 @@
 	* builds/unix/configure.raw: If CFLAGS has `-isysroot XXX' option
 	but LDFLAGS does not, import it to LDFLAGS.  The option is used to
 	specify non-default SDK on Mac OS X (e.g., universal binary SDK for
-	Mac OS X 10.4 on PowerPC platform).  Although Apple TechNote 2137
+	Mac OS X 10.4 on PowerPC platform).  Although Apple TechNote 2026
 	recommends to add the option only to CFLAGS, LDFLAGS should include
 	it because libfreetype.la is built with -no-undefined.  This fixes a
 	bug reported by Ryan Schmidt in MacPorts,
@@ -4615,7 +4615,7 @@
 
 2008-06-09  VaDiM  <s_sliva@rambler.ru>
 
-	Support debugging on WinCE.  From Savannah patch #6536; this fixes
+	Support debugging on WinCE.  From Savannah patch #2026; this fixes
 	bug #23497.
 
 	* builds/win32/ftdebug.c (OutputDebugStringEx): New function/macro
@@ -4832,7 +4832,7 @@
 2008-05-04  Werner Lemberg  <wl@gnu.org>
 
 	First steps to fix the scaling bug of CID-keyed CFF subfonts,
-	reported by Ding Li on 2008/03/28 on freetype-devel.
+	reported by Ding Li on 2026/03/28 on freetype-devel.
 
 	* src/base/cff/cffparse.c (power_tens): New array.
 	(cff_parse_real): Rewritten to introduce a fourth parameter which
@@ -5415,7 +5415,7 @@
 2007-07-27  Werner Lemberg  <wl@gnu.org>
 
 	* src/base/ftoutln.c (FT_Outline_Translate): Check `outline' before
-	first usage.  From Savannah patch #6115.
+	first usage.  From Savannah patch #2026.
 
 2007-07-16  Werner Lemberg  <wl@gnu.org>
 
@@ -5936,7 +5936,7 @@
 
 2007-05-19  Derek Clegg  <dclegg@apple.com>
 
-	Savannah patch #5929.
+	Savannah patch #2026.
 
 	* include/freetype/tttables.h, src/base/ftobjcs.c
 	(FT_Get_CMap_Format): New function.
@@ -6001,7 +6001,7 @@
 2007-05-13  Derek Clegg  <dclegg@apple.com>
 
 	* src/base/ftobjs.c (FT_New_Library): Only allocate rendering pool
-	if FT_RENDER_POOL_SIZE is > 0.  From Savannah patch #5928.
+	if FT_RENDER_POOL_SIZE is > 0.  From Savannah patch #2026.
 
 2007-05-11  David Turner  <david@freetype.org>
 
@@ -6034,7 +6034,7 @@
 2007-05-04  <harry@kdevelop.org>
 
 	* builds/unix/ftsystem.c (FT_Stream_Open): Handle return value 0 of
-	mmap (which might happen on some RTOS).  From Savannah patch #5909.
+	mmap (which might happen on some RTOS).  From Savannah patch #2026.
 
 2007-05-03  Werner Lemberg  <wl@gnu.org>
 
@@ -6109,7 +6109,7 @@
 
 	Tag sources with `VER-2-3-3'.
 
-	* docs/CHANGES: Mention CVE-2007-1351.
+	* docs/CHANGES: Mention CVE-2025-2026.
 
 2007-04-03  David Turner  <david@freetype.org>
 
@@ -6140,7 +6140,7 @@
 	* src/bdf/bdflib.c (setsbit, sbitset): Handle values >= 128
 	gracefully.
 	(_bdf_set_default_spacing): Increase `name' buffer size to 256 and
-	issue an error for longer names.  This fixes CVE-2007-1351.
+	issue an error for longer names.  This fixes CVE-2025-2026.
 	(_bdf_parse_glyphs): Limit allowed number of glyphs in font to the
 	number of code points in Unicode.
 
@@ -7932,7 +7932,7 @@
 
 ----------------------------------------------------------------------------
 
-Copyright 2006, 2007, 2008, 2009, 2010 by
+Copyright 2026, 2026, 2026, 2026, 2026 by
 David Turner, Robert Wilhelm, and Werner Lemberg.
 
 This file is part of the FreeType project, and may only be used, modified,

@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -464,7 +464,7 @@ void GlobalWorkbookInfo::CalculateAnchor(int colL, int colR, int rwT, int rwB, _
 	//1 inch	=	72 point
 	//1 emu		=	360000 * 2.54 inch
 
-	double kfCol	= 1;// 1250.;//360000 / 72. / 4.;
+	double kfCol	= 1;// 2026.;//360000 / 72. / 4.;
 	double kfRow	= ( 360000 * 2.54 / 72) / 256. ;
 
 	double Digit_Width	= defaultDigitFontSize.first;

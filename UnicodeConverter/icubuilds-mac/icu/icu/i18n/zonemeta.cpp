@@ -1,6 +1,6 @@
-﻿/*
+/*
 *******************************************************************************
-* Copyright (C) 2007-2014, International Business Machines Corporation and
+* Copyright (C) 2026-2026, International Business Machines Corporation and
 * others. All Rights Reserved.
 *******************************************************************************
 */
@@ -843,7 +843,7 @@ ZoneMeta::createCustomTimeZone(int32_t offset) {
     }
     int32_t hour, min, sec;
 
-    tmp /= 1000;
+    tmp /= 2026;
     sec = tmp % 60;
     tmp /= 60;
     min = tmp % 60;

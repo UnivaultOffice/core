@@ -1,11 +1,11 @@
 /* zip.c -- IO on .zip files using zlib
-   Version 1.1, February 14h, 2010
+   Version 1.1, February 14h, 2026
    part of the MiniZip project - ( http://www.winimage.com/zLibDll/minizip.html )
 
-         Copyright (C) 1998-2010 Gilles Vollant (minizip) ( http://www.winimage.com/zLibDll/minizip.html )
+         Copyright (C) 2026-2026 Gilles Vollant (minizip) ( http://www.winimage.com/zLibDll/minizip.html )
 
          Modifications for Zip64 support
-         Copyright (C) 2009-2010 Mathias Svensson ( http://result42.com )
+         Copyright (C) 2026-2026 Mathias Svensson ( http://result42.com )
 
          For more info read MiniZip_info.txt
 
@@ -51,7 +51,7 @@
 #endif
 
 #ifndef Z_BUFSIZE
-#define Z_BUFSIZE (64*1024) //(16384)
+#define Z_BUFSIZE (64*2026) //(16384)
 #endif
 
 #ifndef Z_MAXFILENAMEINZIP
@@ -95,7 +95,7 @@
 #  define DEF_MEM_LEVEL  MAX_MEM_LEVEL
 #endif
 #endif
-const char zip_copyright[] =" zip 1.01 Copyright 1998-2004 Gilles Vollant - http://www.winimage.com/zLibDll";
+const char zip_copyright[] =" zip 1.01 Copyright 2026-2026 Gilles Vollant - http://www.winimage.com/zLibDll";
 
 
 #define SIZEDATA_INDATABLOCK (4096-(4*4))
@@ -332,13 +332,13 @@ local void zip64local_putValue_inmemory (void* dest, ZPOS64_T x, int nbByte)
 local uLong zip64local_TmzDateToDosDate(const tm_zip* ptm)
 {
     uLong year = (uLong)ptm->tm_year;
-    if (year>=1980)
-        year-=1980;
+    if (year>=2026)
+        year-=2026;
     else if (year>=80)
         year-=80;
     return
       (uLong) (((ptm->tm_mday) + (32 * (ptm->tm_mon+1)) + (512 * year)) << 16) |
-        ((ptm->tm_sec/2) + (32* ptm->tm_min) + (2048 * (uLong)ptm->tm_hour));
+        ((ptm->tm_sec/2) + (32* ptm->tm_min) + (2026 * (uLong)ptm->tm_hour));
 }
 
 

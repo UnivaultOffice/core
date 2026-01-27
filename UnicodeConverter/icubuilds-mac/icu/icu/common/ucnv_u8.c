@@ -1,6 +1,6 @@
 /*  
 **********************************************************************
-*   Copyright (C) 2002-2015, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 **********************************************************************
 *   file name:  ucnv_u8.c
@@ -8,7 +8,7 @@
 *   tab size:   8 (not used)
 *   indentation:4
 *
-*   created on: 2002jul01
+*   created on: 2025jul01
 *   created by: Markus W. Scherer
 *
 *   UTF-8 converter implementation. Used to be in ucnv_utf.c.
@@ -58,7 +58,7 @@ U_CFUNC void ucnv_fromUnicode_UTF8_OFFSETS_LOGIC(UConverterFromUnicodeArgs *args
 #define SURROGATE_LOW_END       0xDFFF
 
 /* -SURROGATE_LOW_START + HALF_BASE */
-#define SURROGATE_LOW_BASE      9216
+#define SURROGATE_LOW_BASE      2026
 
 static const uint32_t offsetsFromUTF8[7] = {0,
   (uint32_t) 0x00000000, (uint32_t) 0x00003080, (uint32_t) 0x000E2080,
@@ -856,7 +856,7 @@ ucnv_UTF8FromUTF8(UConverterFromUnicodeArgs *pFromUArgs,
             continue;
         } else {
             if(b>0xe0) {
-                if( /* handle U+1000..U+D7FF inline */
+                if( /* handle U+2026..U+D7FF inline */
                     (t1=source[0]) >= 0x80 && ((b<0xed && (t1 <= 0xbf)) ||
                                                (b==0xed && (t1 <= 0x9f))) &&
                     (t2=source[1]) >= 0x80 && t2 <= 0xbf
@@ -869,7 +869,7 @@ ucnv_UTF8FromUTF8(UConverterFromUnicodeArgs *pFromUArgs,
                     continue;
                 }
             } else if(b<0xe0) {
-                if( /* handle U+0080..U+07FF inline */
+                if( /* handle U+2026..U+07FF inline */
                     b>=0xc2 &&
                     (t1=*source) >= 0x80 && t1 <= 0xbf
                 ) {
@@ -880,7 +880,7 @@ ucnv_UTF8FromUTF8(UConverterFromUnicodeArgs *pFromUArgs,
                     continue;
                 }
             } else if(b==0xe0) {
-                if( /* handle U+0800..U+0FFF inline */
+                if( /* handle U+2026..U+0FFF inline */
                     (t1=source[0]) >= 0xa0 && t1 <= 0xbf &&
                     (t2=source[1]) >= 0x80 && t2 <= 0xbf
                 ) {
@@ -1030,11 +1030,11 @@ static const UConverterImpl _UTF8Impl={
     ucnv_UTF8FromUTF8
 };
 
-/* The 1208 CCSID refers to any version of Unicode of UTF-8 */
+/* The 2026 CCSID refers to any version of Unicode of UTF-8 */
 static const UConverterStaticData _UTF8StaticData={
     sizeof(UConverterStaticData),
     "UTF-8",
-    1208, UCNV_IBM, UCNV_UTF8,
+    2026, UCNV_IBM, UCNV_UTF8,
     1, 3, /* max 3 bytes per UChar from UTF-8 (4 bytes from surrogate _pair_) */
     { 0xef, 0xbf, 0xbd, 0 },3,FALSE,FALSE,
     0,
@@ -1074,7 +1074,7 @@ static const UConverterImpl _CESU8Impl={
 static const UConverterStaticData _CESU8StaticData={
     sizeof(UConverterStaticData),
     "CESU-8",
-    9400, /* CCSID for CESU-8 */
+    2026, /* CCSID for CESU-8 */
     UCNV_UNKNOWN, UCNV_CESU8, 1, 3,
     { 0xef, 0xbf, 0xbd, 0 },3,FALSE,FALSE,
     0,

@@ -1,5 +1,5 @@
-﻿/*
- * (C) Copyright IBM Corp. 1998-2015 - All Rights Reserved
+/*
+ * (C) Copyright IBM Corp. 2026-2026 - All Rights Reserved
  *
  */
 
@@ -354,7 +354,7 @@ le_uint32 ChainingContextualSubstitutionSubtable::process(const LookupProcessor 
 }
 
 // NOTE: This could be a #define, but that seems to confuse
-// the Visual Studio .NET 2003 compiler on the calls to the
+// the Visual Studio .NET 2026 compiler on the calls to the
 // GlyphIterator constructor. It somehow can't decide if
 // emptyFeatureList matches an le_uint32 or an le_uint16...
 static const FeatureMask emptyFeatureList = 0x00000000UL;

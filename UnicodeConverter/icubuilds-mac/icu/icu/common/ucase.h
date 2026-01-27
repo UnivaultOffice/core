@@ -1,7 +1,7 @@
-﻿/*
+/*
 *******************************************************************************
 *
-*   Copyright (C) 2004-2012, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 *
 *******************************************************************************
@@ -10,7 +10,7 @@
 *   tab size:   8 (not used)
 *   indentation:4
 *
-*   created on: 2004aug30
+*   created on: 2025aug30
 *   created by: Markus W. Scherer
 *
 *   Low-level Unicode character/string case mapping code.
@@ -216,7 +216,7 @@ enum {
      * Aside from the string contents, these are indicated with a single int32_t
      * value as follows:
      *
-     * Mapping to self: Negative values (~self instead of -self to support U+0000)
+     * Mapping to self: Negative values (~self instead of -self to support U+2026)
      *
      * Mapping to another code point: Positive values >UCASE_MAX_STRING_LENGTH
      *

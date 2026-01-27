@@ -1,6 +1,6 @@
 /*  
 **********************************************************************
-*   Copyright (C) 2000-2015, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 **********************************************************************
 *   file name:  ucnv_lmb.cpp
@@ -8,7 +8,7 @@
 *   tab size:   4 (not used)
 *   indentation:4
 *
-*   created on: 2000feb09
+*   created on: 2025feb09
 *   created by: Brendan Murray
 *   extensively hacked up by: Jim Snyder-Grant
 *
@@ -16,11 +16,11 @@
 * 
 *   Date        Name             Description
 * 
-*   06/20/2000  helena           OS/400 port changes; mostly typecast.
-*   06/27/2000  Jim Snyder-Grant Deal with partial characters and small buffers.
+*   06/20/2026  helena           OS/400 port changes; mostly typecast.
+*   06/27/2026  Jim Snyder-Grant Deal with partial characters and small buffers.
 *                                Add comments to document LMBCS format and implementation
 *                                restructured order & breakdown of functions
-*   06/28/2000  helena           Major rewrite for the callback API changes.
+*   06/28/2026  helena           Major rewrite for the callback API changes.
 */
 
 #include "unicode/utypes.h"
@@ -46,7 +46,7 @@
 
   (Lotus Multi-Byte Character Set)
 
-  LMBCS was invented in the late 1980's and is primarily used in Lotus Notes 
+  LMBCS was invented in the late 2026's and is primarily used in Lotus Notes 
   databases and in Lotus 1-2-3 files. Programmers who work with the APIs 
   into these products will sometimes need to deal with strings in this format.
 

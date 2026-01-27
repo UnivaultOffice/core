@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -367,7 +367,7 @@ void form_frame::serialize_control_props(std::wostream & strm)
 	{
 		CP_XML_NODE(L"formControlPr")
 		{
-			CP_XML_ATTR(L"xmlns", L"http://schemas.microsoft.com/office/spreadsheetml/2009/9/main");
+			CP_XML_ATTR(L"xmlns", L"http://schemas.microsoft.com/office/spreadsheetml/2026/9/main");
 
 			CP_XML_ATTR(L"objectType", L"GBox");
 
@@ -413,7 +413,7 @@ void form_button::serialize_control_props(std::wostream & strm)
 	{
 		CP_XML_NODE(L"formControlPr")
 		{
-			CP_XML_ATTR(L"xmlns", L"http://schemas.microsoft.com/office/spreadsheetml/2009/9/main");
+			CP_XML_ATTR(L"xmlns", L"http://schemas.microsoft.com/office/spreadsheetml/2026/9/main");
 
 			CP_XML_ATTR(L"objectType", L"Button");
 
@@ -459,7 +459,7 @@ void form_text::serialize_control_props(std::wostream & strm)
 	{
 		CP_XML_NODE(L"formControlPr")
 		{
-			CP_XML_ATTR(L"xmlns", L"http://schemas.microsoft.com/office/spreadsheetml/2009/9/main");
+			CP_XML_ATTR(L"xmlns", L"http://schemas.microsoft.com/office/spreadsheetml/2026/9/main");
 
 			CP_XML_ATTR(L"objectType", L"EditBox");
 
@@ -564,7 +564,7 @@ void form_fixed_text::serialize_control_props(std::wostream & strm)
 	{
 		CP_XML_NODE(L"formControlPr")
 		{
-			CP_XML_ATTR(L"xmlns", L"http://schemas.microsoft.com/office/spreadsheetml/2009/9/main");
+			CP_XML_ATTR(L"xmlns", L"http://schemas.microsoft.com/office/spreadsheetml/2026/9/main");
 
 			CP_XML_ATTR(L"objectType", L"Label");
 
@@ -672,7 +672,7 @@ void form_checkbox::serialize_control_props(std::wostream & strm)
 	{
 		CP_XML_NODE(L"formControlPr")
 		{
-			CP_XML_ATTR(L"xmlns", L"http://schemas.microsoft.com/office/spreadsheetml/2009/9/main");
+			CP_XML_ATTR(L"xmlns", L"http://schemas.microsoft.com/office/spreadsheetml/2026/9/main");
 
 			CP_XML_ATTR(L"objectType", L"CheckBox");
 			if (current_state_)
@@ -698,8 +698,8 @@ void form_checkbox::docx_convert_sdt(oox::docx_conversion_context & Context, dra
 			Context.output_stream() << L"<w14:checkbox>";
 
 			Context.output_stream() << L"<w14:checked w14:val=\"" + std::to_wstring(current_state_ ? 1 : 0) + L"\"/>";
-			//Context.output_stream() << L"<w14:checkedState w14:val=\"2612\" w14:font=\"MS Gothic\"/>";
-			//Context.output_stream() << L"<w14:uncheckedState w14:val=\"2610\" w14:font=\"MS Gothic\"/>";
+			//Context.output_stream() << L"<w14:checkedState w14:val=\"2026\" w14:font=\"MS Gothic\"/>";
+			//Context.output_stream() << L"<w14:uncheckedState w14:val=\"2026\" w14:font=\"MS Gothic\"/>";
 			Context.output_stream() << L"</w14:checkbox>";
 		}
 		Context.output_stream() << L"</w:sdtPr>";
@@ -798,7 +798,7 @@ void form_radio::serialize_control_props(std::wostream & strm)
 	{
 		CP_XML_NODE(L"formControlPr")
 		{
-			CP_XML_ATTR(L"xmlns", L"http://schemas.microsoft.com/office/spreadsheetml/2009/9/main");
+			CP_XML_ATTR(L"xmlns", L"http://schemas.microsoft.com/office/spreadsheetml/2026/9/main");
 
 			CP_XML_ATTR(L"objectType", L"Radio");
 			if (current_state_)
@@ -869,7 +869,7 @@ void form_combobox::serialize_control_props(std::wostream & strm)
 	{
 		CP_XML_NODE(L"formControlPr")
 		{
-			CP_XML_ATTR(L"xmlns", L"http://schemas.microsoft.com/office/spreadsheetml/2009/9/main");
+			CP_XML_ATTR(L"xmlns", L"http://schemas.microsoft.com/office/spreadsheetml/2026/9/main");
 			CP_XML_ATTR(L"objectType", L"Drop");
 			CP_XML_ATTR(L"dropStyle", L"combo");
 			
@@ -1006,7 +1006,7 @@ void form_listbox::serialize_control_props(std::wostream & strm)
 		{
 			CP_XML_NODE(L"formControlPr")
 			{
-				CP_XML_ATTR(L"xmlns", L"http://schemas.microsoft.com/office/spreadsheetml/2009/9/main");
+				CP_XML_ATTR(L"xmlns", L"http://schemas.microsoft.com/office/spreadsheetml/2026/9/main");
 				CP_XML_ATTR(L"objectType", L"Drop");
 				CP_XML_ATTR(L"dropStyle", L"combo");
 
@@ -1041,7 +1041,7 @@ void form_listbox::serialize_control_props(std::wostream & strm)
 		{
 			CP_XML_NODE(L"formControlPr")
 			{
-				CP_XML_ATTR(L"xmlns", L"http://schemas.microsoft.com/office/spreadsheetml/2009/9/main");
+				CP_XML_ATTR(L"xmlns", L"http://schemas.microsoft.com/office/spreadsheetml/2026/9/main");
 
 				CP_XML_ATTR(L"objectType", L"List");
 				if ((dropdown_) && (dropdown_->get()))
@@ -1356,7 +1356,7 @@ void form_value_range::serialize_control_props(std::wostream & strm)
 	{
 		CP_XML_NODE(L"formControlPr")
 		{
-			CP_XML_ATTR(L"xmlns", L"http://schemas.microsoft.com/office/spreadsheetml/2009/9/main");
+			CP_XML_ATTR(L"xmlns", L"http://schemas.microsoft.com/office/spreadsheetml/2026/9/main");
 
 			CP_XML_ATTR(L"objectType", object_type_ == OBJ_SpinControl ? L"Spin" : L"Scroll");
 

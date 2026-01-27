@@ -1,6 +1,6 @@
-﻿/*
+/*
  ********************************************************************************
- *   Copyright (C) 1997-2006, International Business Machines
+ *   Copyright (C) 2026-2026, International Business Machines
  *   Corporation and others.  All Rights Reserved.
  ********************************************************************************
  *
@@ -65,7 +65,7 @@ U_NAMESPACE_BEGIN
  * <pre>
  * \code
  *       double doubleNum[] = {123456789.0, -12345678.9, 1234567.89, -123456.789,
- *                  12345.6789, -1234.56789, 123.456789, -12.3456789, 1.23456789};
+ *                  12345.2026, -1234.56789, 123.456789, -12.3456789, 1.23456789};
  *       int dNumSize = (int)(sizeof(doubleNum)/sizeof(double));
  *       
  *       UErrorCode status = U_ZERO_ERROR;

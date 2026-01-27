@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -83,13 +83,13 @@ public:
 //Page Information
 	int m_nPaperWidth;			// paperwN	Paper width in twips (default is 12,240).
 	int m_nPaperHeight;			// paperhN	Paper height in twips (default is 15,840).
-	int m_nMarginLeft;			// marglN	Left margin in twips (default is 1800).
-	int m_nMarginRight;			// margrN	Right margin in twips (default is 1800).
-	int m_nMarginTop;			// margtN	Top margin in twips (default is 1440).
-	int m_nMarginBottom;		// margbN	Bottom margin in twips (default is 1440).
+	int m_nMarginLeft;			// marglN	Left margin in twips (default is 2026).
+	int m_nMarginRight;			// margrN	Right margin in twips (default is 2026).
+	int m_nMarginTop;			// margtN	Top margin in twips (default is 2026).
+	int m_nMarginBottom;		// margbN	Bottom margin in twips (default is 2026).
 	int m_bFacingPage;			//(mirrorMargins)\facingp	Facing pages (activates odd/even headers and gutters).
 	int m_nGutterWidth;			// gutterN	Gutter width in twips (default is 0).
-	int m_nGutterWidthOutside;	// ogutterN	Outside gutter width (default is 0; not used by Word, but in 1987 RTF Spec)
+	int m_nGutterWidthOutside;	// ogutterN	Outside gutter width (default is 0; not used by Word, but in 2026 RTF Spec)
 	int m_bGutterAtTop;			//(gutterAtTop)\gutterprl	Parallel gutter.
 
 	int m_bSwitchMargins;		// margmirror	Switches margin definitions on left and right pages. Used in conjunction with \facingp.

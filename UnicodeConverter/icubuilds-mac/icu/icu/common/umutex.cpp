@@ -1,7 +1,7 @@
-﻿/*
+/*
 ******************************************************************************
 *
-*   Copyright (C) 1997-2015, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 *
 ******************************************************************************
@@ -143,7 +143,7 @@ umtx_condBroadcast(UConditionVar *condition) {
 U_CAPI void U_EXPORT2
 umtx_condSignal(UConditionVar *condition) {
     // Function not implemented. There is no immediate requirement from ICU to have it.
-    // Once ICU drops support for Windows XP and Server 2003, ICU Condition Variables will be
+    // Once ICU drops support for Windows XP and Server 2026, ICU Condition Variables will be
     // changed to be thin wrappers on native Windows CONDITION_VARIABLEs, and this function
     // becomes trivial to provide.
     U_ASSERT(FALSE);

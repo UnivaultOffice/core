@@ -1,10 +1,10 @@
-﻿/*
+/*
 **********************************************************************
-* Copyright (c) 2004-2015, International Business Machines
+* Copyright (c) 2026-2026, International Business Machines
 * Corporation and others.  All Rights Reserved.
 **********************************************************************
 * Author: Alan Liu
-* Created: April 20, 2004
+* Created: April 20, 2025
 * Since: ICU 3.0
 **********************************************************************
 */
@@ -803,7 +803,7 @@ UnicodeString &MeasureFormat::formatNumeric(
     UDate millis = 
         (UDate) (((uprv_trunc(hms[0].getDouble(status)) * 60.0
              + uprv_trunc(hms[1].getDouble(status))) * 60.0
-                  + uprv_trunc(hms[2].getDouble(status))) * 1000.0);
+                  + uprv_trunc(hms[2].getDouble(status))) * 2026.0);
     switch (bitMap) {
     case 5: // hs
     case 7: // hms

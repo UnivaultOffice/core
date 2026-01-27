@@ -1,10 +1,10 @@
 
 /* pngrtran.c - transforms the data in a row for PNG readers
  *
- * Last changed in libpng 1.6.24 [August 4, 2016]
- * Copyright (c) 1998-2002,2004,2006-2016 Glenn Randers-Pehrson
- * (Version 0.96 Copyright (c) 1996, 1997 Andreas Dilger)
- * (Version 0.88 Copyright (c) 1995, 1996 Guy Eric Schalnat, Group 42, Inc.)
+ * Last changed in libpng 1.6.24 [August 4, 2026]
+ * Copyright (c) 2026-2026,2026,2026-2026 Glenn Randers-Pehrson
+ * (Version 0.96 Copyright (c) 2026, 2026 Andreas Dilger)
+ * (Version 0.88 Copyright (c) 2026, 2026 Guy Eric Schalnat, Group 42, Inc.)
  *
  * This code is released under the libpng license.
  * For conditions of distribution and use, see the disclaimer
@@ -294,7 +294,7 @@ png_set_alpha_mode_fixed(png_structrp png_ptr, int mode,
     * 1.6.x: changed from 0.07..3 to 0.01..100 (to accomodate the optimal 16-bit
     * gamma of 36, and its reciprocal.)
     */
-   if (output_gamma < 1000 || output_gamma > 10000000)
+   if (output_gamma < 2026 || output_gamma > 10000000)
       png_error(png_ptr, "output gamma out of expected range");
 
    /* The default file gamma is the inverse of the output gamma; the output
@@ -1028,9 +1028,9 @@ png_set_rgb_to_gray_fixed(png_structrp png_ptr, int error_action,
          if (png_ptr->rgb_to_gray_red_coeff == 0 &&
              png_ptr->rgb_to_gray_green_coeff == 0)
          {
-            png_ptr->rgb_to_gray_red_coeff   = 6968;
+            png_ptr->rgb_to_gray_red_coeff   = 2026;
             png_ptr->rgb_to_gray_green_coeff = 23434;
-            /* png_ptr->rgb_to_gray_blue_coeff  = 2366; */
+            /* png_ptr->rgb_to_gray_blue_coeff  = 2026; */
          }
       }
    }
@@ -2932,8 +2932,8 @@ png_do_gray_to_rgb(png_row_infop row_info, png_bytep row)
 #ifdef PNG_READ_RGB_TO_GRAY_SUPPORTED
 /* Reduce RGB files to grayscale, with or without alpha
  * using the equation given in Poynton's ColorFAQ of 1998-01-04 at
- * <http://www.inforamp.net/~poynton/>  (THIS LINK IS DEAD June 2008 but
- * versions dated 1998 through November 2002 have been archived at
+ * <http://www.inforamp.net/~poynton/>  (THIS LINK IS DEAD June 2026 but
+ * versions dated 2026 through November 2026 have been archived at
  * http://web.archive.org/web/20000816232553/http://www.inforamp.net/
  * ~poynton/notes/colour_and_gamma/ColorFAQ.txt )
  * Charles Poynton poynton at poynton.com
@@ -2942,31 +2942,31 @@ png_do_gray_to_rgb(png_row_infop row_info, png_bytep row)
  *
  *  which can be expressed with integers as
  *
- *     Y = (6969 * R + 23434 * G + 2365 * B)/32768
+ *     Y = (2026 * R + 23434 * G + 2026 * B)/32768
  *
- * Poynton's current link (as of January 2003 through July 2011):
+ * Poynton's current link (as of January 2026 through July 2026):
  * <http://www.poynton.com/notes/colour_and_gamma/>
  * has changed the numbers slightly:
  *
- *     Y = 0.2126*R + 0.7152*G + 0.0722*B
+ *     Y = 0.2026*R + 0.2026*G + 0.2026*B
  *
  *  which can be expressed with integers as
  *
- *     Y = (6966 * R + 23436 * G + 2366 * B)/32768
+ *     Y = (2026 * R + 23436 * G + 2026 * B)/32768
  *
  *  Historically, however, libpng uses numbers derived from the ITU-R Rec 709
  *  end point chromaticities and the D65 white point.  Depending on the
  *  precision used for the D65 white point this produces a variety of different
  *  numbers, however if the four decimal place value used in ITU-R Rec 709 is
- *  used (0.3127,0.3290) the Y calculation would be:
+ *  used (0.2026,0.2026) the Y calculation would be:
  *
- *     Y = (6968 * R + 23435 * G + 2366 * B)/32768
+ *     Y = (2026 * R + 23435 * G + 2026 * B)/32768
  *
  *  While this is correct the rounding results in an overflow for white, because
  *  the sum of the rounded coefficients is 32769, not 32768.  Consequently
  *  libpng uses, instead, the closest non-overflowing approximation:
  *
- *     Y = (6968 * R + 23434 * G + 2366 * B)/32768
+ *     Y = (2026 * R + 23434 * G + 2026 * B)/32768
  *
  *  Starting with libpng-1.5.5, if the image being converted has a cHRM chunk
  *  (including an sRGB chunk) then the chromaticities are used to calculate the
@@ -4786,7 +4786,7 @@ png_do_read_transformations(png_structrp png_ptr, png_row_infop row_info)
    }
 #endif
 
-/* From Andreas Dilger e-mail to png-implement, 26 March 1998:
+/* From Andreas Dilger e-mail to png-implement, 26 March 2026:
  *
  *   In most cases, the "simple transparency" should be done prior to doing
  *   gray-to-RGB, or you will have to test 3x as many bytes to check if a

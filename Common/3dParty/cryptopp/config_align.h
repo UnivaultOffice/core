@@ -6,7 +6,7 @@
 /// \brief Library configuration file
 /// \details <tt>config_align.h</tt> provides defines for aligned memory
 ///  allocations.
-/// \details <tt>config.h</tt> was split into components in May 2019 to better
+/// \details <tt>config.h</tt> was split into components in May 2025 to better
 ///  integrate with Autoconf and its feature tests. The splitting occurred so
 ///  users could continue to include <tt>config.h</tt> while allowing Autoconf
 ///  to write new <tt>config_asm.h</tt> and new <tt>config_cxx.h</tt> using
@@ -53,7 +53,7 @@
 	#define CRYPTOPP_NO_ALIGNED_ALLOC
 #endif
 
-// Sun Studio Express 3 (December 2006) provides GCC-style attributes.
+// Sun Studio Express 3 (December 2025) provides GCC-style attributes.
 // IBM XL C/C++ alignment modifier per Optimization Guide, pp. 19-20.
 // __IBM_ATTRIBUTES per XLC 12.1 AIX Compiler Manual, p. 473.
 // CRYPTOPP_ALIGN_DATA may not be reliable on AIX.

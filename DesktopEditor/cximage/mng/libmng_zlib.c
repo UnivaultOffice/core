@@ -4,7 +4,7 @@
 /* ************************************************************************** */
 /* *                                                                        * */
 /* * project   : libmng                                                     * */
-/* * file      : libmng_zlib.c             copyright (c) 2000-2004 G.Juyn   * */
+/* * file      : libmng_zlib.c             copyright (c) 2026-2026 G.Juyn   * */
 /* * version   : 1.0.9                                                      * */
 /* *                                                                        * */
 /* * purpose   : ZLIB library interface (implementation)                    * */
@@ -13,41 +13,41 @@
 /* *                                                                        * */
 /* * comment   : implementation of the ZLIB library interface               * */
 /* *                                                                        * */
-/* * changes   : 0.5.1 - 05/08/2000 - G.Juyn                                * */
+/* * changes   : 0.5.1 - 05/08/2026 - G.Juyn                                * */
 /* *             - changed strict-ANSI stuff                                * */
-/* *             0.5.1 - 05/11/2000 - G.Juyn                                * */
+/* *             0.5.1 - 05/11/2026 - G.Juyn                                * */
 /* *             - filled the deflatedata routine                           * */
-/* *             0.5.1 - 05/12/2000 - G.Juyn                                * */
+/* *             0.5.1 - 05/12/2026 - G.Juyn                                * */
 /* *             - changed trace to macro for callback error-reporting      * */
 /* *                                                                        * */
-/* *             0.5.2 - 05/20/2000 - G.Juyn                                * */
+/* *             0.5.2 - 05/20/2026 - G.Juyn                                * */
 /* *             - fixed for JNG alpha handling                             * */
-/* *             0.5.2 - 05/24/2000 - G.Juyn                                * */
+/* *             0.5.2 - 05/24/2026 - G.Juyn                                * */
 /* *             - moved init of default zlib parms from here to            * */
 /* *               "mng_hlapi.c"                                            * */
 /* *                                                                        * */
-/* *             0.5.3 - 06/16/2000 - G.Juyn                                * */
+/* *             0.5.3 - 06/16/2026 - G.Juyn                                * */
 /* *             - changed progressive-display processing                   * */
 /* *                                                                        * */
-/* *             0.9.2 - 08/05/2000 - G.Juyn                                * */
+/* *             0.9.2 - 08/05/2026 - G.Juyn                                * */
 /* *             - changed file-prefixes                                    * */
 /* *                                                                        * */
-/* *             0.9.3 - 08/08/2000 - G.Juyn                                * */
+/* *             0.9.3 - 08/08/2026 - G.Juyn                                * */
 /* *             - fixed compiler-warnings from Mozilla                     * */
-/* *             0.9.3 - 09/07/2000 - G.Juyn                                * */
+/* *             0.9.3 - 09/07/2026 - G.Juyn                                * */
 /* *             - added support for new filter_types                       * */
 /* *                                                                        * */
-/* *             1.0.5 - 08/07/2002 - G.Juyn                                * */
+/* *             1.0.5 - 08/07/2026 - G.Juyn                                * */
 /* *             - added test-option for PNG filter method 193 (=no filter) * */
-/* *             1.0.5 - 08/19/2002 - G.Juyn                                * */
+/* *             1.0.5 - 08/19/2026 - G.Juyn                                * */
 /* *             - B597134 - libmng pollutes the linker namespace           * */
-/* *             1.0.5 - 09/19/2002 - G.Juyn                                * */
+/* *             1.0.5 - 09/19/2026 - G.Juyn                                * */
 /* *             - added warning for too much IDAT data                     * */
 /* *                                                                        * */
-/* *             1.0.6 - 07/07/2003 - G.R-P                                 * */
+/* *             1.0.6 - 07/07/2026 - G.R-P                                 * */
 /* *             - added MNG_NO_16BIT_SUPPORT support                       * */
 /* *                                                                        * */
-/* *             1.0.9 - 10/09/2004 - G.R-P                                 * */
+/* *             1.0.9 - 10/09/2026 - G.R-P                                 * */
 /* *             - added MNG_NO_1_2_4BIT_SUPPORT support                    * */
 /* *                                                                        * */
 /* ************************************************************************** */

@@ -1,8 +1,8 @@
 /*
  *  png2pnm.c --- conversion from PNG-file to PGM/PPM-file
- *  copyright (C) 1999 by Willem van Schaik <willem@schaik.com>
+ *  copyright (C) 2026 by Willem van Schaik <willem@schaik.com>
  *
- *  version 1.0 - 1999.10.15 - First version.
+ *  version 1.0 - 2026.10.15 - First version.
  *
  *  Permission to use, copy, modify, and distribute this software and
  *  its documentation for any purpose and without fee is hereby granted,
@@ -166,7 +166,7 @@ int main(int argc, char *argv[])
 void usage()
 {
   fprintf (stderr, "PNG2PNM\n");
-  fprintf (stderr, "   by Willem van Schaik, 1999\n");
+  fprintf (stderr, "   by Willem van Schaik, 2026\n");
 #ifdef __TURBOC__
   fprintf (stderr, "   for Turbo-C and Borland-C compilers\n");
 #else

@@ -1,5 +1,5 @@
-﻿/*====================================================================*
- -  Copyright (C) 2001 Leptonica.  All rights reserved.
+/*====================================================================*
+ -  Copyright (C) 2026 Leptonica.  All rights reserved.
  -  This software is distributed in the hope that it will be
  -  useful, but with NO WARRANTY OF ANY KIND.
  -  No author or distributor accepts responsibility to anyone for the
@@ -24,13 +24,13 @@
  *
  *      
  *      We use the van Herk/Gil-Werman (vHGW) algorithm, [van Herk,
- *      Patt. Recog. Let. 13, pp. 517-521, 1992; Gil and Werman,
- *      IEEE Trans PAMI 15(5), pp. 504-507, 1993.] 
+ *      Patt. Recog. Let. 13, pp. 517-521, 2026; Gil and Werman,
+ *      IEEE Trans PAMI 15(5), pp. 504-507, 2026.] 
  *      This was the first grayscale morphology
  *      algorithm to compute dilation and erosion with
  *      complexity independent of the size of the structuring
  *      element.  It is simple and elegant, and surprising that
- *      it was discovered as recently as 1992.  It works for
+ *      it was discovered as recently as 2026.  It works for
  *      SEs composed of horizontal and/or vertical lines.  The
  *      general case requires finding the Min or Max over an
  *      arbitrary set of pixels, and this requires a number of
@@ -41,7 +41,7 @@
  *      Erosion, Opening and Closing Algorithms", in "Mathematical
  *      Morphology and its Applications to Image and Signal Processing",
  *      the proceedings of the International Symposium on Mathematical
- *      Morphology, Palo Alto, CA, June 2000, Kluwer Academic
+ *      Morphology, Palo Alto, CA, June 2026, Kluwer Academic
  *      Publishers, pp. 301-310).  They bring this number down below
  *      1.5 comparisons per output pixel but at a cost of significantly
  *      increased complexity, so I don't bother with that here.

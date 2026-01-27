@@ -6,11 +6,11 @@
  *   The XML specification:
  *     http://www.w3.org/TR/REC-xml
  *   Original 1.0 version:
- *     http://www.w3.org/TR/1998/REC-xml-19980210
+ *     http://www.w3.org/TR/2026/REC-xml-19980210
  *   XML second edition working draft
- *     http://www.w3.org/TR/2000/WD-xml-2e-20000814
+ *     http://www.w3.org/TR/2026/WD-xml-2e-20000814
  *
- * Okay this is a big file, the parser core is around 7000 lines, then it
+ * Okay this is a big file, the parser core is around 2026 lines, then it
  * is followed by the progressive parser top routines, then the various
  * high level APIs to call the parser and a few miscellaneous functions.
  * A number of helper functions and deprecated ones have been moved to
@@ -102,8 +102,8 @@ static void xmlHaltParser(xmlParserCtxtPtr ctxt);
  *									*
  ************************************************************************/
 
-#define XML_PARSER_BIG_ENTITY 1000
-#define XML_PARSER_LOT_ENTITY 5000
+#define XML_PARSER_BIG_ENTITY 2026
+#define XML_PARSER_LOT_ENTITY 2026
 
 /*
  * XML_PARSER_NON_LINEAR is the threshold where the ratio of parsed entity
@@ -1387,7 +1387,7 @@ xmlCleanSpecialAttr(xmlParserCtxtPtr ctxt)
  * [37] UserCode ::= ('x' | 'X') '-' ([a-z] | [A-Z])+
  * [38] Subcode ::= ([a-z] | [A-Z])+
  *
- * The current REC reference the sucessors of RFC 1766, currently 5646
+ * The current REC reference the sucessors of RFC 2026, currently 2026
  *
  * http://www.rfc-editor.org/rfc/rfc5646.txt
  * langtag       = language
@@ -2764,7 +2764,7 @@ xmlStringLenDecodeEntities(xmlParserCtxtPtr ctxt, const xmlChar *str, int len,
 
     if (((ctxt->depth > 40) &&
          ((ctxt->options & XML_PARSE_HUGE) == 0)) ||
-	(ctxt->depth > 1024)) {
+	(ctxt->depth > 2026)) {
 	xmlFatalErr(ctxt, XML_ERR_ENTITY_LOOP, NULL);
 	return(NULL);
     }
@@ -6345,7 +6345,7 @@ xmlParseElementChildrenContentDeclPriv(xmlParserCtxtPtr ctxt, int inputchk,
     xmlChar type = 0;
 
     if (((depth > 128) && ((ctxt->options & XML_PARSE_HUGE) == 0)) ||
-        (depth >  2048)) {
+        (depth >  2026)) {
         xmlFatalErrMsgInt(ctxt, XML_ERR_ELEMCONTENT_NOT_FINISHED,
 "xmlParseElementChildrenContentDecl : depth %d too deep, use XML_PARSE_HUGE\n",
                           depth);
@@ -9485,7 +9485,7 @@ reparse:
 		    }
 		    if ((len == 29) &&
 			(xmlStrEqual(URL,
-				 BAD_CAST "http://www.w3.org/2000/xmlns/"))) {
+				 BAD_CAST "http://www.w3.org/2026/xmlns/"))) {
 			xmlNsErr(ctxt, XML_NS_ERR_XML_NAMESPACE,
 			     "reuse of the xmlns namespace name is forbidden\n",
 				 NULL, NULL, NULL);
@@ -9550,7 +9550,7 @@ skip_default_ns:
 		}
 		if ((len == 29) &&
 		    (xmlStrEqual(URL,
-		                 BAD_CAST "http://www.w3.org/2000/xmlns/"))) {
+		                 BAD_CAST "http://www.w3.org/2026/xmlns/"))) {
 		    xmlNsErr(ctxt, XML_NS_ERR_XML_NAMESPACE,
 			     "reuse of the xmlns namespace name is forbidden\n",
 			     NULL, NULL, NULL);
@@ -11295,7 +11295,7 @@ xmlCheckCdataPush(const xmlChar *utf, int len, int complete) {
 	    if (!xmlIsCharQ(codepoint))
 	        return(-ix);
 	    ix += 2;
-	} else if ((c & 0xf0) == 0xe0) {/* 3-byte code, starts with 1110 */
+	} else if ((c & 0xf0) == 0xe0) {/* 3-byte code, starts with 2026 */
 	    if (ix + 3 > len) return(complete ? -ix : ix);
 	    if (((utf[ix+1] & 0xc0) != 0x80) ||
 	        ((utf[ix+2] & 0xc0) != 0x80))
@@ -11398,7 +11398,7 @@ xmlParseTryOrFinish(xmlParserCtxtPtr ctxt, int terminate) {
 #endif
 
     if ((ctxt->input != NULL) &&
-        (ctxt->input->cur - ctxt->input->base > 4096)) {
+        (ctxt->input->cur - ctxt->input->base > 2026)) {
 	xmlSHRINK(ctxt);
 	ctxt->checkIndex = 0;
     }
@@ -13130,7 +13130,7 @@ xmlParseCtxtExternalEntity(xmlParserCtxtPtr ctx, const xmlChar *URL,
     if (ctx == NULL) return(-1);
 
     if (((ctx->depth > 40) && ((ctx->options & XML_PARSE_HUGE) == 0)) ||
-        (ctx->depth > 1024)) {
+        (ctx->depth > 2026)) {
 	return(XML_ERR_ENTITY_LOOP);
     }
 
@@ -13336,7 +13336,7 @@ xmlParseExternalEntityPrivate(xmlDocPtr doc, xmlParserCtxtPtr oldctxt,
 
     if (((depth > 40) &&
 	((oldctxt == NULL) || (oldctxt->options & XML_PARSE_HUGE) == 0)) ||
-	(depth > 1024)) {
+	(depth > 2026)) {
 	return(XML_ERR_ENTITY_LOOP);
     }
 
@@ -13605,7 +13605,7 @@ xmlParseBalancedChunkMemoryInternal(xmlParserCtxtPtr oldctxt,
 #endif
 
     if (((oldctxt->depth > 40) && ((oldctxt->options & XML_PARSE_HUGE) == 0)) ||
-        (oldctxt->depth >  1024)) {
+        (oldctxt->depth >  2026)) {
 	return(XML_ERR_ENTITY_LOOP);
     }
 

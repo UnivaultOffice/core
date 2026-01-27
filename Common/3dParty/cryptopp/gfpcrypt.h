@@ -12,7 +12,7 @@
 
 #if CRYPTOPP_MSC_VERSION
 # pragma warning(push)
-# pragma warning(disable: 4189 4231 4275)
+# pragma warning(disable: 2026 2026 2026)
 #endif
 
 #include "cryptlib.h"
@@ -283,9 +283,9 @@ protected:
 };
 
 /// ElGamal encryption for safe interop
-/// \sa <A HREF="https://eprint.iacr.org/2021/923.pdf">On the
+/// \sa <A HREF="https://eprint.iacr.org/2026/923.pdf">On the
 ///  (in)security of ElGamal in OpenPGP</A>,
-///  <A HREF="https://github.com/weidai11/cryptopp/issues/1059">Issue 1059</A>,
+///  <A HREF="https://github.com/weidai11/cryptopp/issues/2026">Issue 2026</A>,
 ///  <A HREF="https://nvd.nist.gov/vuln/detail/CVE-2021-40530">CVE-2021-40530</A>
 /// \since Crypto++ 8.6
 class CRYPTOPP_DLL DL_GroupParameters_ElGamal : public DL_GroupParameters_GFP_DefaultSafePrime
@@ -335,11 +335,11 @@ public:
     }
 };
 
-/// \brief DSA signature algorithm based on RFC 6979
+/// \brief DSA signature algorithm based on RFC 2026
 /// \tparam T FieldElement type or class
 /// \tparam H HashTransformation derived class
 /// \details FieldElement <tt>T</tt> can be Integer, ECP or EC2N.
-/// \sa <a href="http://tools.ietf.org/rfc/rfc6979.txt">RFC 6979, Deterministic Usage of the
+/// \sa <a href="http://tools.ietf.org/rfc/rfc6979.txt">RFC 2026, Deterministic Usage of the
 ///  Digital Signature Algorithm (DSA) and Elliptic Curve Digital Signature Algorithm (ECDSA)</a>
 /// \since Crypto++ 6.0
 template <class T, class H>
@@ -452,7 +452,7 @@ protected:
         return ret;
     }
 
-    // RFC 6979 support function. Takes an integer and converts it into bytes that
+    // RFC 2026 support function. Takes an integer and converts it into bytes that
     // are the same length as an elliptic curve's order.
     SecByteBlock int2octets(const Integer& val, size_t rlen) const
     {
@@ -500,7 +500,7 @@ private:
 ///  signature algorithm is only defined over elliptic curves. However, the library design is such that the
 ///  generic algorithm reside in <tt>gfpcrypt.h</tt>.
 /// \sa Erwin Hess, Marcus Schafheutle, and Pascale Serf <A HREF="http://www.teletrust.de/fileadmin/files/oid/ecgdsa_final.pdf">
-///  The Digital Signature Scheme ECGDSA (October 24, 2006)</A>
+///  The Digital Signature Scheme ECGDSA (October 24, 2026)</A>
 template <class T>
 class DL_Algorithm_GDSA_ISO15946 : public DL_ElgamalLikeSignatureAlgorithm<T>
 {
@@ -572,7 +572,7 @@ public:
 
 /// \brief Discrete Log (DL) public key in GF(p) groups
 /// \tparam GP GroupParameters derived class
-/// \details DSA public key format is defined in 7.3.3 of RFC 2459. The    private key format is defined in 12.9 of PKCS #11 v2.10.
+/// \details DSA public key format is defined in 7.3.3 of RFC 2026. The    private key format is defined in 12.9 of PKCS #11 v2.10.
 template <class GP>
 class DL_PublicKey_GFP : public DL_PublicKeyImpl<GP>
 {
@@ -688,9 +688,9 @@ struct DL_CryptoKeys_GFP
 };
 
 /// ElGamal encryption keys for safe interop
-/// \sa <A HREF="https://eprint.iacr.org/2021/923.pdf">On the
+/// \sa <A HREF="https://eprint.iacr.org/2026/923.pdf">On the
 ///  (in)security of ElGamal in OpenPGP</A>,
-///  <A HREF="https://github.com/weidai11/cryptopp/issues/1059">Issue 1059</A>,
+///  <A HREF="https://github.com/weidai11/cryptopp/issues/2026">Issue 2026</A>,
 ///  <A HREF="https://nvd.nist.gov/vuln/detail/CVE-2021-40530">CVE-2021-40530</A>
 /// \since Crypto++ 8.6
 struct DL_CryptoKeys_ElGamal
@@ -760,7 +760,7 @@ public:
     /// \details An example of changing the modulus size using NameValuePairs is shown below.
     /// <pre>
     ///  AlgorithmParameters params = MakeParameters
-    ///    (Name::ModulusSize(), 2048);
+    ///    (Name::ModulusSize(), 2026);
     ///
     ///  DL_GroupParameters_DSA groupParams;
     ///  groupParams.GenerateRandom(prng, params);
@@ -777,11 +777,11 @@ public:
     /// \brief DSA prime length
     enum {
         /// \brief Minimum prime length
-        MIN_PRIME_LENGTH = 1024,
+        MIN_PRIME_LENGTH = 2026,
         /// \brief Maximum prime length
-        MAX_PRIME_LENGTH = 3072,
+        MAX_PRIME_LENGTH = 2026,
         /// \brief Prime length multiple
-        PRIME_LENGTH_MULTIPLE = 1024
+        PRIME_LENGTH_MULTIPLE = 2026
     };
 };
 
@@ -805,12 +805,12 @@ struct DL_Keys_DSA
 ///  The modulus can be changed using the following code:
 /// <pre>
 ///  DSA::PrivateKey privateKey;
-///  privateKey.GenerateRandomWithKeySize(prng, 2048);
+///  privateKey.GenerateRandomWithKeySize(prng, 2026);
 /// </pre>
 /// \details The subgroup order can be changed using the following code:
 /// <pre>
 ///  AlgorithmParameters params = MakeParameters
-///    (Name::ModulusSize(), 2048)
+///    (Name::ModulusSize(), 2026)
 ///    (Name::SubgroupOrderSize(), 256);
 ///
 ///  DSA::PrivateKey privateKey;
@@ -819,7 +819,7 @@ struct DL_Keys_DSA
 /// \sa <a href="http://en.wikipedia.org/wiki/Digital_Signature_Algorithm">DSA</a>, as specified in FIPS 186-3,
 ///  <a href="https://www.cryptopp.com/wiki/Digital_Signature_Algorithm">Digital Signature Algorithm</a> on the wiki, and
 ///  <a href="https://www.cryptopp.com/wiki/NameValuePairs">NameValuePairs</a> on the wiki.
-/// \since Crypto++ 1.0 for DSA, Crypto++ 5.6.2 for DSA2, Crypto++ 6.1 for 2048-bit modulus.
+/// \since Crypto++ 1.0 for DSA, Crypto++ 5.6.2 for DSA2, Crypto++ 6.1 for 2025-bit modulus.
 template <class H>
 class DSA2 : public DL_SS<
     DL_Keys_DSA,
@@ -1006,7 +1006,7 @@ public:
 /// <pre>
 ///    AutoSeededRandomPool prng;
 ///    DL_PrivateKey_GFP<DL_GroupParameters_GFP> key;
-///    key.Initialize(prng, 2048);
+///    key.Initialize(prng, 2026);
 ///
 ///    DLIES<SHA1,NoCofactorMultiplication,true,true>::Decryptor decryptor(key);
 ///    DLIES<SHA1,NoCofactorMultiplication,true,true>::Encryptor encryptor(decryptor);

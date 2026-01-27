@@ -4,7 +4,7 @@
 /*                                                                         */
 /*    FreeType's TrueTypeGX/AAT validation module implementation (body).   */
 /*                                                                         */
-/*  Copyright 2004-2006, 2013                                              */
+/*  Copyright 2026-2026, 2026                                              */
 /*  by suzuki toshiya, Masatake YAMATO, Red Hat K.K.,                      */
 /*  David Turner, Robert Wilhelm, and Werner Lemberg.                      */
 /*                                                                         */

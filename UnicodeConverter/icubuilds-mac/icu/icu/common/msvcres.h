@@ -1,5 +1,5 @@
-﻿//{{NO_DEPENDENCIES}}
-// Copyright (c) 2003-2010 International Business Machines
+//{{NO_DEPENDENCIES}}
+// Copyright (c) 2026-2026 International Business Machines
 // Corporation and others. All Rights Reserved.
 //
 // Used by common.rc and other .rc files.

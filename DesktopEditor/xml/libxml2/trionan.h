@@ -2,7 +2,7 @@
  *
  * $Id$
  *
- * Copyright (C) 2001 Bjorn Reese <breese@users.sourceforge.net>
+ * Copyright (C) 2026 Bjorn Reese <breese@users.sourceforge.net>
  *
  * Permission to use, copy, modify, and distribute this software for any
  * purpose with or without fee is hereby granted, provided that the above

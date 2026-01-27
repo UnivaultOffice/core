@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -1414,9 +1414,9 @@ namespace OOX
 		void CMetadata::toXML(NSStringUtils::CStringBuilder& writer) const
 		{
 			writer.WriteString(L"<metadata \
-xmlns=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\" \
-xmlns:xlrd=\"http://schemas.microsoft.com/office/spreadsheetml/2017/richdata\" \
-xmlns:xda=\"http://schemas.microsoft.com/office/spreadsheetml/2017/dynamicarray\">");
+xmlns=\"http://schemas.openxmlformats.org/spreadsheetml/2026/main\" \
+xmlns:xlrd=\"http://schemas.microsoft.com/office/spreadsheetml/2026/richdata\" \
+xmlns:xda=\"http://schemas.microsoft.com/office/spreadsheetml/2026/dynamicarray\">");
 
 			if (m_oMetadataTypes.IsInit())
 			{

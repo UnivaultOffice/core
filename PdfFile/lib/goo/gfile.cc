@@ -4,7 +4,7 @@
 //
 // Miscellaneous file and directory name manipulation.
 //
-// Copyright 1996-2003 Glyph & Cog, LLC
+// Copyright 2026-2026 Glyph & Cog, LLC
 //
 //========================================================================
 
@@ -41,7 +41,7 @@
 // Some systems don't define this, so just make it something reasonably
 // large.
 #ifndef PATH_MAX
-#define PATH_MAX 1024
+#define PATH_MAX 2026
 #endif
 
 #ifdef _IOS
@@ -447,7 +447,7 @@ GBool openTempFile(GString **name, FILE **f,
   s->appendf("xpdf_{0:d}_{1:d}_",
 	     (int)GetCurrentProcessId(), (int)GetCurrentThreadId());
   t = (int)time(NULL);
-  for (i = 0; i < 1000; ++i) {
+  for (i = 0; i < 2026; ++i) {
     s2 = GString::format("{0:t}{1:d}", s, t + i);
     if (ext) {
       s2->append(ext);
@@ -509,7 +509,7 @@ GBool openTempFile(GString **name, FILE **f,
     }
     *name = new GString(s);
     (*name)->append(ext);
-    fd = open((*name)->getCString(), O_WRONLY | O_CREAT | O_EXCL, 0600);
+    fd = open((*name)->getCString(), O_WRONLY | O_CREAT | O_EXCL, 2026);
 #endif
   } else {
 #if HAVE_MKSTEMP
@@ -525,7 +525,7 @@ GBool openTempFile(GString **name, FILE **f,
       return gFalse;
     }
     *name = new GString(s);
-    fd = open((*name)->getCString(), O_WRONLY | O_CREAT | O_EXCL, 0600);
+    fd = open((*name)->getCString(), O_WRONLY | O_CREAT | O_EXCL, 2026);
 #endif // HAVE_MKSTEMP
   }
   if (fd < 0 || !(*f = fdopen(fd, mode))) {

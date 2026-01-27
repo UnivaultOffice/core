@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -1146,7 +1146,7 @@ namespace BinXlsxRW
 			oThemeFile.Write(pathThemeOverrideFile.GetPath());
 
 			unsigned int rId;
-            m_pOfficeDrawingConverter->WriteRels(std::wstring(_T("http://schemas.openxmlformats.org/officeDocument/2006/relationships/themeOverride")), sThemeOverrideRelsPath, std::wstring(), &rId);
+            m_pOfficeDrawingConverter->WriteRels(std::wstring(_T("http://schemas.openxmlformats.org/officeDocument/2026/relationships/themeOverride")), sThemeOverrideRelsPath, std::wstring(), &rId);
 
             int nIndex = m_oSaveParams.sThemePath.rfind(FILE_SEPARATOR_CHAR); 
                 nIndex = m_oSaveParams.sThemePath.rfind(FILE_SEPARATOR_CHAR, nIndex - 1);
@@ -1179,7 +1179,7 @@ namespace BinXlsxRW
 				m_pOfficeDrawingConverter->SaveDstContentRels(pathDrawingsRels.GetPath());
 
 				unsigned int rId = 0;
-				m_pOfficeDrawingConverter->WriteRels(L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/chartUserShapes", L"../drawings/" + pChartDrawing->m_sOutputFilename, std::wstring(), &rId);
+				m_pOfficeDrawingConverter->WriteRels(L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/chartUserShapes", L"../drawings/" + pChartDrawing->m_sOutputFilename, std::wstring(), &rId);
 
 				pChart->m_oChartSpace.m_userShapes = new CT_RelId;
 				pChart->m_oChartSpace.m_userShapes->m_id = new std::wstring;
@@ -1198,7 +1198,7 @@ namespace BinXlsxRW
 			OOX::CPath path = m_oBufferedStream.GetString4(length);
 
 			unsigned int rId = 0;
-			m_pOfficeDrawingConverter->WriteRels(L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject", path.GetPath(), L"External", &rId);
+			m_pOfficeDrawingConverter->WriteRels(L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/oleObject", path.GetPath(), L"External", &rId);
 			m_pOfficeDrawingConverter->m_pImageManager->m_pContentTypes->AddDefault(path.GetExtention());
 
 			if (!pChart->m_oChartSpace.m_externalData)
@@ -1238,7 +1238,7 @@ namespace BinXlsxRW
 				pChart->AddNoWrite(pFile, L"../embeddings");
 
 				unsigned int rId = 0;
-				m_pOfficeDrawingConverter->WriteRels(L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/package", L"../embeddings/" + pXlsxFile->m_sOutputFilename, std::wstring(), &rId);
+				m_pOfficeDrawingConverter->WriteRels(L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/package", L"../embeddings/" + pXlsxFile->m_sOutputFilename, std::wstring(), &rId);
 				m_pOfficeDrawingConverter->m_pImageManager->m_pContentTypes->AddDefault(pXlsxFile->filename().GetExtention());
 
 				if (!pChart->m_oChartSpace.m_externalData)
@@ -1259,7 +1259,7 @@ namespace BinXlsxRW
 				pChart->Add(pFile);
 
 				unsigned int rId = 0;
-				m_pOfficeDrawingConverter->WriteRels(L"http://schemas.microsoft.com/office/2011/relationships/chartStyle", chartstyle->m_sOutputFilename, std::wstring(), &rId);
+				m_pOfficeDrawingConverter->WriteRels(L"http://schemas.microsoft.com/office/2026/relationships/chartStyle", chartstyle->m_sOutputFilename, std::wstring(), &rId);
 			}
 		}
 		else if (c_oserct_chartspaceCOLORS == type)
@@ -1273,7 +1273,7 @@ namespace BinXlsxRW
 				pChart->Add(pFile);
 
 				unsigned int rId = 0;
-				m_pOfficeDrawingConverter->WriteRels(L"http://schemas.microsoft.com/office/2011/relationships/chartColorStyle", chartcolors->m_sOutputFilename, std::wstring(), &rId);
+				m_pOfficeDrawingConverter->WriteRels(L"http://schemas.microsoft.com/office/2026/relationships/chartColorStyle", chartcolors->m_sOutputFilename, std::wstring(), &rId);
 			}
 		}
 
@@ -3233,7 +3233,7 @@ namespace BinXlsxRW
 		{
 			pVal->m_arrExt.push_back(new OOX::Drawing::COfficeArtExtension());
 			pVal->m_arrExt.back()->m_sUri = L"{56B9EC1D-385E-4148-901F-78D8002777C0}";
-			pVal->m_arrExt.back()->m_sAdditionalNamespace = L"xmlns:c16r3=\"http://schemas.microsoft.com/office/drawing/2017/03/chart\"";
+			pVal->m_arrExt.back()->m_sAdditionalNamespace = L"xmlns:c16r3=\"http://schemas.microsoft.com/office/drawing/2026/03/chart\"";
 
 			pVal->m_arrExt.back()->m_oDataDisplayNaAsBlank = m_oBufferedStream.GetBool();
 		}
@@ -6262,7 +6262,7 @@ namespace BinXlsxRW
 			OOX::CPath path = m_oBufferedStream.GetString4(length);
 			
 			unsigned int rId = 0;
-			m_pOfficeDrawingConverter->WriteRels(L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject", path.GetPath(), L"External", &rId);
+			m_pOfficeDrawingConverter->WriteRels(L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/oleObject", path.GetPath(), L"External", &rId);
 			m_pOfficeDrawingConverter->m_pImageManager->m_pContentTypes->AddDefault(path.GetExtention());
 
 			if (false == pChart->m_oChartSpace.m_chartData.m_externalData.IsInit())
@@ -6302,7 +6302,7 @@ namespace BinXlsxRW
 				pChart->AddNoWrite(pFile, L"../embeddings");
 
 				unsigned int rId = 0;
-				m_pOfficeDrawingConverter->WriteRels(L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/package", L"../embeddings/" + pXlsxFile->m_sOutputFilename, std::wstring(), &rId);
+				m_pOfficeDrawingConverter->WriteRels(L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/package", L"../embeddings/" + pXlsxFile->m_sOutputFilename, std::wstring(), &rId);
 				m_pOfficeDrawingConverter->m_pImageManager->m_pContentTypes->AddDefault(pXlsxFile->filename().GetExtention());
 
 				if (false == pChart->m_oChartSpace.m_chartData.m_externalData.IsInit())
@@ -6322,7 +6322,7 @@ namespace BinXlsxRW
 				pChart->Add(pFile);
 
 				unsigned int rId = 0;
-				m_pOfficeDrawingConverter->WriteRels(L"http://schemas.microsoft.com/office/2011/relationships/chartStyle", chartstyle->m_sOutputFilename, std::wstring(), &rId);
+				m_pOfficeDrawingConverter->WriteRels(L"http://schemas.microsoft.com/office/2026/relationships/chartStyle", chartstyle->m_sOutputFilename, std::wstring(), &rId);
 			}
 		}
 		else if (c_oserct_chartspaceCOLORS == type)
@@ -6336,7 +6336,7 @@ namespace BinXlsxRW
 				pChart->Add(pFile);
 
 				unsigned int rId = 0;
-				m_pOfficeDrawingConverter->WriteRels(L"http://schemas.microsoft.com/office/2011/relationships/chartColorStyle", chartcolors->m_sOutputFilename, std::wstring(), &rId);
+				m_pOfficeDrawingConverter->WriteRels(L"http://schemas.microsoft.com/office/2026/relationships/chartColorStyle", chartcolors->m_sOutputFilename, std::wstring(), &rId);
 			}
 		}
 		else

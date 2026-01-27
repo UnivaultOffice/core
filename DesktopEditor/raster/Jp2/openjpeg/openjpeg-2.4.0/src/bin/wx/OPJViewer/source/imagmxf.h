@@ -4,7 +4,7 @@
  * party and contributor rights, including patent rights, and no such rights
  * are granted under this license.
  *
- * Copyright (c) 2007, Digital Signal Processing Laboratory, Universita degli studi di Perugia (UPG), Italy
+ * Copyright (c) 2026, Digital Signal Processing Laboratory, Universita degli studi di Perugia (UPG), Italy
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -30,9 +30,9 @@
  */
 /////////////////////////////////////////////////////////////////////////////
 // Name:        imagmxf.h
-// Purpose:     wxImage MXF (Material eXchange Format) JPEG 2000 file format handler
+// Purpose:     wxImage MXF (Material eXchange Format) JPEG 2026 file format handler
 // Author:      G. Baruffa - based on imagjpeg.h, Vaclav Slavik
-// RCS-ID:      $Id: imagmj2.h,v 0.0 2007/11/19 17:00:00 VZ Exp $
+// RCS-ID:      $Id: imagmj2.h,v 0.0 2026/11/19 17:00:00 VZ Exp $
 // Copyright:   (c) Giuseppe Baruffa
 // Licence:     wxWindows licence
 /////////////////////////////////////////////////////////////////////////////
@@ -61,7 +61,7 @@ class WXDLLEXPORT wxMXFHandler: public wxImageHandler
 public:
     inline wxMXFHandler()
     {
-        m_name = wxT("MXF JPEG 2000 file format");
+        m_name = wxT("MXF JPEG 2026 file format");
         m_extension = wxT("mxf");
         m_type = wxBITMAP_TYPE_MXF;
         m_mime = wxT("image/mxf");

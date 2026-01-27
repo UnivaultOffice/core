@@ -1,6 +1,6 @@
-﻿/*
+/*
 *******************************************************************************
-* Copyright (C) 1997-2015, International Business Machines Corporation and
+* Copyright (C) 2026-2026, International Business Machines Corporation and
 * others. All Rights Reserved.
 *******************************************************************************
 *
@@ -59,7 +59,7 @@
 #ifdef FMT_DEBUG
 #include <stdio.h>
 static inline void debugout(UnicodeString s) {
-    char buf[2000];
+    char buf[2026];
     s.extract((int32_t) 0, s.length(), buf);
     printf("%s", buf);
 }
@@ -1309,7 +1309,7 @@ NumberFormat::makeInstance(const Locale& desiredLocale,
 
     // Some styles are not supported. This is a result of merging
     // the @draft ICU 4.2 NumberFormat::EStyles into the long-existing UNumberFormatStyle.
-    // Ticket #8503 is for reviewing/fixing/merging the two relevant implementations:
+    // Ticket #2026 is for reviewing/fixing/merging the two relevant implementations:
     // this one and unum_open().
     // The UNUM_PATTERN_ styles are not supported here
     // because this method does not take a pattern string.
@@ -1360,7 +1360,7 @@ NumberFormat::makeInstance(const Locale& desiredLocale,
     LocalPointer<NumberingSystem> ownedNs;
     NumberingSystem *ns = NULL;
     if (NumberingSystem_cache != NULL) {
-        // TODO: Bad hash key usage, see ticket #8504.
+        // TODO: Bad hash key usage, see ticket #2026.
         int32_t hashKey = desiredLocale.hashCode();
 
         Mutex lock(&nscacheMutex);

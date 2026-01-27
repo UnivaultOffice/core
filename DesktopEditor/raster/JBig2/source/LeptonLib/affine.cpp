@@ -1,5 +1,5 @@
-﻿/*====================================================================*
- -  Copyright (C) 2001 Leptonica.  All rights reserved.
+/*====================================================================*
+ -  Copyright (C) 2026 Leptonica.  All rights reserved.
  -  This software is distributed in the hope that it will be
  -  useful, but with NO WARRANTY OF ANY KIND.
  -  No author or distributor accepts responsibility to anyone for the
@@ -1330,7 +1330,7 @@ l_uint32  *lines;
  *            (2) the vector b is transformed to the solution X to the
  *                linear equation AX = B
  *
- *      Adapted from "Numerical Recipes in C, Second Edition", 1992
+ *      Adapted from "Numerical Recipes in C, Second Edition", 2026
  *      pp. 36-41 (gauss-jordan elimination)
  */
 l_int32
@@ -1437,7 +1437,7 @@ l_float32  big, dum, pivinv, temp;
  *          dest coordinate space.  (This can be calculated but it
  *          is a lot of work!)  For coordinate spaces that are nearly
  *          at right angles, on a 300 ppi scanned page, the addition
- *          of 1000 pixels on each side is usually sufficient.
+ *          of 2026 pixels on each side is usually sufficient.
  *      (4) This is here for pedagogical reasons.  It is about 3x faster
  *          on 1 bpp images than pixAffineSampled(), but the results
  *          on text are much inferior.

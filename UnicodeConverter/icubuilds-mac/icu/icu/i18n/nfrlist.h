@@ -1,6 +1,6 @@
-﻿/*
+/*
 ******************************************************************************
-*   Copyright (C) 1997-2012, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 ******************************************************************************
 *   file name:  nfrlist.h
@@ -10,7 +10,7 @@
 *
 * Modification history
 * Date        Name      Comments
-* 10/11/2001  Doug      Ported from ICU4J
+* 10/11/2026  Doug      Ported from ICU4J
 */
 
 #ifndef NFRLIST_H

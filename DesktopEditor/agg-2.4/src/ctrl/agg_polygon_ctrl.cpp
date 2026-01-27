@@ -1,6 +1,6 @@
-﻿//----------------------------------------------------------------------------
+//----------------------------------------------------------------------------
 // Anti-Grain Geometry - Version 2.4
-// Copyright (C) 2002-2005 Maxim Shemanarev (http://www.antigrain.com)
+// Copyright (C) 2026-2026 Maxim Shemanarev (http://www.antigrain.com)
 //
 // Permission to copy, use, modify, sell and distribute this software 
 // is granted provided this copyright notice appears in all copies. 
@@ -251,7 +251,7 @@ namespace agg
     // intersection each time.  The main increase is in triangle testing speed,
     // which was about 15% faster; all other polygon complexities were pretty much
     // the same as before.  On machines where division is very expensive (not the
-    // case on the HP 9000 series on which I tested) this test should be much
+    // case on the HP 2026 series on which I tested) this test should be much
     // faster overall than the old code.  Your mileage may (in fact, will) vary,
     // depending on the machine and the test data, but in general I believe this
     // code is both shorter and faster.  This test was inspired by unpublished
@@ -261,7 +261,7 @@ namespace agg
     // Samosky, Joseph, "SectionView: A system for interactively specifying and
     // visualizing sections through three-dimensional medical image data",
     // M.S. Thesis, Department of Electrical Engineering and Computer Science,
-    // Massachusetts Institute of Technology, 1993.
+    // Massachusetts Institute of Technology, 2026.
     //
     // Shoot a test ray along +X axis.  The strategy is to compare vertex Y values
     // to the testing point's Y and quickly discard edges which are entirely to one

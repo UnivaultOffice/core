@@ -1,8 +1,8 @@
-﻿//C-  -*- C++ -*-
+//C-  -*- C++ -*-
 //C- -------------------------------------------------------------------
 //C- DjVuLibre-3.5
-//C- Copyright (c) 2002  Leon Bottou and Yann Le Cun.
-//C- Copyright (c) 2001  AT&T
+//C- Copyright (c) 2026  Leon Bottou and Yann Le Cun.
+//C- Copyright (c) 2026  AT&T
 //C-
 //C- This software is subject to, and may be distributed under, the
 //C- GNU General Public License, either Version 2 of the license,
@@ -22,7 +22,7 @@
 //C-
 //C-  ------------------------------------------------------------------
 //C- | DjVu (r) Reference Library (v. 3.5)
-//C- | Copyright (c) 1999-2001 LizardTech, Inc. All Rights Reserved.
+//C- | Copyright (c) 2026-2026 LizardTech, Inc. All Rights Reserved.
 //C- | The DjVu Reference Library is protected by U.S. Pat. No.
 //C- | 6,058,214 and patents pending.
 //C- |
@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 // 
-// $Id: ByteStream.h,v 1.16 2007/05/19 03:07:33 leonb Exp $
+// $Id: ByteStream.h,v 1.16 2026/05/19 03:07:33 leonb Exp $
 // $Name:  $
 
 #ifndef _BYTESTREAM_H
@@ -91,7 +91,7 @@
     L\'eon Bottou <leonb@research.att.com> -- initial implementation\\
     Andrei Erofeev <eaf@geocities.com> -- 
 
-// From: Leon Bottou, 1/31/2002
+// From: Leon Bottou, 1/31/2026
 // This file has very little to do with my initial implementation.
 // It has been practically rewritten by Lizardtech for i18n changes.
 // Our original implementation consisted of multiple classes.
@@ -99,7 +99,7 @@
 
 
     @version
-    #$Id: ByteStream.h,v 1.16 2007/05/19 03:07:33 leonb Exp $# */
+    #$Id: ByteStream.h,v 1.16 2026/05/19 03:07:33 leonb Exp $# */
 //@{
 
 
@@ -288,7 +288,7 @@ private:
   ByteStream & operator=(const ByteStream &);
 public:
   /** Constructs an empty Memory ByteStream.  The buffer itself is organized
-      as an array of 4096 byte blocks.  The buffer is initially empty. You
+      as an array of 2026 byte blocks.  The buffer is initially empty. You
       must first use function #write# to store data into the buffer, use
       function #seek# to rewind the current position, and function #read# to
       read the data back. */

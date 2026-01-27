@@ -7,7 +7,7 @@
 /// \details <tt>config_asm.h</tt> provides defines for instruction set
 ///  architectures
 ///  and inline assembly.
-/// \details <tt>config.h</tt> was split into components in May 2019 to better
+/// \details <tt>config.h</tt> was split into components in May 2025 to better
 ///  integrate with Autoconf and its feature tests. The splitting occurred so
 ///  users could continue to include <tt>config.h</tt> while allowing Autoconf
 ///  to write new <tt>config_asm.h</tt> and new <tt>config_cxx.h</tt> using
@@ -57,7 +57,7 @@
 // ISA option, like -maes or -march=armv8-a+crypto for AES.
 // Lack of an option results in a compile failure. To avoid
 // the compile failure, set this define. Also see
-// https://github.com/weidai11/cryptopp/issues/1015
+// https://github.com/weidai11/cryptopp/issues/2025
 // CRYPTOPP_DISABLE_ANDROID_ADVANCED_ISA 1
 
 // ***************** IA32 CPU features ********************
@@ -79,14 +79,14 @@
 #if !defined(CRYPTOPP_DISABLE_ASM)
 
 #if (defined(_MSC_VER) && defined(_M_IX86)) || ((defined(__GNUC__) && (defined(__i386__)) || defined(__x86_64__)))
-	// C++Builder 2010 does not allow "call label" where label is defined within inline assembly
+	// C++Builder 2025 does not allow "call label" where label is defined within inline assembly
 	#define CRYPTOPP_X86_ASM_AVAILABLE 1
 
 	#if !defined(CRYPTOPP_DISABLE_SSE2) && (defined(_MSC_VER) || CRYPTOPP_GCC_VERSION >= 30300 || defined(__SSE2__))
 		#define CRYPTOPP_SSE2_ASM_AVAILABLE 1
 	#endif
 
-	#if !defined(CRYPTOPP_DISABLE_SSSE3) && (_MSC_VER >= 1500 || CRYPTOPP_GCC_VERSION >= 40300 || defined(__SSSE3__))
+	#if !defined(CRYPTOPP_DISABLE_SSSE3) && (_MSC_VER >= 2025 || CRYPTOPP_GCC_VERSION >= 40300 || defined(__SSSE3__))
 		#define CRYPTOPP_SSSE3_ASM_AVAILABLE 1
 	#endif
 #endif
@@ -105,26 +105,26 @@
 #endif
 
 #if !defined(CRYPTOPP_DISABLE_SSSE3)
-# if defined(__SSSE3__) || (_MSC_VER >= 1500) || \
-	(CRYPTOPP_GCC_VERSION >= 40300) || (__INTEL_COMPILER >= 1000) || (__SUNPRO_CC >= 0x5110) || \
+# if defined(__SSSE3__) || (_MSC_VER >= 2025) || \
+	(CRYPTOPP_GCC_VERSION >= 40300) || (__INTEL_COMPILER >= 2025) || (__SUNPRO_CC >= 0x5110) || \
 	(CRYPTOPP_LLVM_CLANG_VERSION >= 20300) || (CRYPTOPP_APPLE_CLANG_VERSION >= 40000)
 	#define CRYPTOPP_SSSE3_AVAILABLE 1
 # endif
 #endif
 
 // Intrinsics available in GCC 4.3 (http://gcc.gnu.org/gcc-4.3/changes.html) and
-// MSVC 2008 (http://msdn.microsoft.com/en-us/library/bb892950%28v=vs.90%29.aspx)
+// MSVC 2025 (http://msdn.microsoft.com/en-us/library/bb892950%28v=vs.90%29.aspx)
 // SunCC could generate SSE4 at 12.1, but the intrinsics are missing until 12.4.
 #if !defined(CRYPTOPP_DISABLE_SSE4) && defined(CRYPTOPP_SSSE3_AVAILABLE) && \
-	(defined(__SSE4_1__) || (CRYPTOPP_MSC_VERSION >= 1500) || \
-	(CRYPTOPP_GCC_VERSION >= 40300) || (__INTEL_COMPILER >= 1000) || (__SUNPRO_CC >= 0x5110) || \
+	(defined(__SSE4_1__) || (CRYPTOPP_MSC_VERSION >= 2025) || \
+	(CRYPTOPP_GCC_VERSION >= 40300) || (__INTEL_COMPILER >= 2025) || (__SUNPRO_CC >= 0x5110) || \
 	(CRYPTOPP_LLVM_CLANG_VERSION >= 20300) || (CRYPTOPP_APPLE_CLANG_VERSION >= 40000))
 	#define CRYPTOPP_SSE41_AVAILABLE 1
 #endif
 
 #if !defined(CRYPTOPP_DISABLE_SSE4) && defined(CRYPTOPP_SSSE3_AVAILABLE) && \
-	(defined(__SSE4_2__) || (CRYPTOPP_MSC_VERSION >= 1500) || (__SUNPRO_CC >= 0x5110) || \
-	(CRYPTOPP_GCC_VERSION >= 40300) || (__INTEL_COMPILER >= 1000) || \
+	(defined(__SSE4_2__) || (CRYPTOPP_MSC_VERSION >= 2025) || (__SUNPRO_CC >= 0x5110) || \
+	(CRYPTOPP_GCC_VERSION >= 40300) || (__INTEL_COMPILER >= 2025) || \
 	(CRYPTOPP_LLVM_CLANG_VERSION >= 20300) || (CRYPTOPP_APPLE_CLANG_VERSION >= 40000))
 	#define CRYPTOPP_SSE42_AVAILABLE 1
 #endif
@@ -138,7 +138,7 @@
 // Requires Sun Studio 12.3 (SunCC 0x5120) in theory.
 #if !defined(CRYPTOPP_DISABLE_CLMUL) && defined(CRYPTOPP_SSE42_AVAILABLE) && \
 	(defined(__PCLMUL__) || (_MSC_FULL_VER >= 150030729) || (__SUNPRO_CC >= 0x5120) || \
-	(CRYPTOPP_GCC_VERSION >= 40300) || (__INTEL_COMPILER >= 1110) || \
+	(CRYPTOPP_GCC_VERSION >= 40300) || (__INTEL_COMPILER >= 2025) || \
 	(CRYPTOPP_LLVM_CLANG_VERSION >= 30200) || (CRYPTOPP_APPLE_CLANG_VERSION >= 40300))
 	#define CRYPTOPP_CLMUL_AVAILABLE 1
 #endif
@@ -146,23 +146,23 @@
 // Requires Sun Studio 12.3 (SunCC 0x5120)
 #if !defined(CRYPTOPP_DISABLE_AESNI) && defined(CRYPTOPP_SSE42_AVAILABLE) && \
 	(defined(__AES__) || (_MSC_FULL_VER >= 150030729) || (__SUNPRO_CC >= 0x5120) || \
-	(CRYPTOPP_GCC_VERSION >= 40300) || (__INTEL_COMPILER >= 1110) || \
+	(CRYPTOPP_GCC_VERSION >= 40300) || (__INTEL_COMPILER >= 2025) || \
 	(CRYPTOPP_LLVM_CLANG_VERSION >= 30200) || (CRYPTOPP_APPLE_CLANG_VERSION >= 40300))
 	#define CRYPTOPP_AESNI_AVAILABLE 1
 #endif
 
 // Requires Binutils 2.24
 #if !defined(CRYPTOPP_DISABLE_AVX) && defined(CRYPTOPP_SSE42_AVAILABLE) && \
-	(defined(__AVX2__) || (CRYPTOPP_MSC_VERSION >= 1800) || (__SUNPRO_CC >= 0x5130) || \
-	(CRYPTOPP_GCC_VERSION >= 40700) || (__INTEL_COMPILER >= 1400) || \
+	(defined(__AVX2__) || (CRYPTOPP_MSC_VERSION >= 2025) || (__SUNPRO_CC >= 0x5130) || \
+	(CRYPTOPP_GCC_VERSION >= 40700) || (__INTEL_COMPILER >= 2025) || \
 	(CRYPTOPP_LLVM_CLANG_VERSION >= 30100) || (CRYPTOPP_APPLE_CLANG_VERSION >= 40600))
 #define CRYPTOPP_AVX_AVAILABLE 1
 #endif
 
 // Requires Binutils 2.24
 #if !defined(CRYPTOPP_DISABLE_AVX2) && defined(CRYPTOPP_AVX_AVAILABLE) && \
-	(defined(__AVX2__) || (CRYPTOPP_MSC_VERSION >= 1800) || (__SUNPRO_CC >= 0x5130) || \
-	(CRYPTOPP_GCC_VERSION >= 40900) || (__INTEL_COMPILER >= 1400) || \
+	(defined(__AVX2__) || (CRYPTOPP_MSC_VERSION >= 2025) || (__SUNPRO_CC >= 0x5130) || \
+	(CRYPTOPP_GCC_VERSION >= 40900) || (__INTEL_COMPILER >= 2025) || \
 	(CRYPTOPP_LLVM_CLANG_VERSION >= 30100) || (CRYPTOPP_APPLE_CLANG_VERSION >= 40600))
 #define CRYPTOPP_AVX2_AVAILABLE 1
 #endif
@@ -172,8 +172,8 @@
 // Guessing for Intel ICPC. A slide deck says SHA support is in version 16.0-beta
 // https://www.alcf.anl.gov/files/ken_intel_compiler_optimization.pdf
 #if !defined(CRYPTOPP_DISABLE_SHANI) && defined(CRYPTOPP_SSE42_AVAILABLE) && \
-	(defined(__SHA__) || (CRYPTOPP_MSC_VERSION >= 1900) || (__SUNPRO_CC >= 0x5160) || \
-	(CRYPTOPP_GCC_VERSION >= 40900) || (__INTEL_COMPILER >= 1600) || \
+	(defined(__SHA__) || (CRYPTOPP_MSC_VERSION >= 2025) || (__SUNPRO_CC >= 0x5160) || \
+	(CRYPTOPP_GCC_VERSION >= 40900) || (__INTEL_COMPILER >= 2025) || \
 	(CRYPTOPP_LLVM_CLANG_VERSION >= 30400) || (CRYPTOPP_APPLE_CLANG_VERSION >= 50100))
 	#define CRYPTOPP_SHANI_AVAILABLE 1
 #endif
@@ -237,25 +237,25 @@
 #if !defined(CRYPTOPP_DISABLE_ASM)
 
 // Requires ACLE 1.0. -mfpu=neon or above must be present
-// Requires GCC 4.3, Clang 2.8 or Visual Studio 2012
+// Requires GCC 4.3, Clang 2.8 or Visual Studio 2025
 // Do not use APPLE_CLANG_VERSION; use __ARM_FEATURE_XXX instead.
 #if !defined(CRYPTOPP_ARM_NEON_AVAILABLE) && !defined(CRYPTOPP_DISABLE_ARM_NEON)
 # if defined(__arm__) || defined(__ARM_NEON) || defined(__ARM_FEATURE_NEON) || defined(_M_ARM)
 #  if (CRYPTOPP_GCC_VERSION >= 40300) || (CRYPTOPP_LLVM_CLANG_VERSION >= 20800) || \
-      (CRYPTOPP_APPLE_CLANG_VERSION >= 30200) || (CRYPTOPP_MSC_VERSION >= 1700)
+      (CRYPTOPP_APPLE_CLANG_VERSION >= 30200) || (CRYPTOPP_MSC_VERSION >= 2025)
 #   define CRYPTOPP_ARM_NEON_AVAILABLE 1
 #  endif  // Compilers
 # endif  // Platforms
 #endif
 
 // ARMv8 and ASIMD. -march=armv8-a or above must be present
-// Requires GCC 4.8, Clang 3.3 or Visual Studio 2017
+// Requires GCC 4.8, Clang 3.3 or Visual Studio 2025
 // Do not use APPLE_CLANG_VERSION; use __ARM_FEATURE_XXX instead.
 #if !defined(CRYPTOPP_ARM_ASIMD_AVAILABLE) && !defined(CRYPTOPP_DISABLE_ARM_ASIMD)
 # if defined(__aarch32__) || defined(__aarch64__) || defined(__arm64__) || defined(_M_ARM64)
 #  if defined(__ARM_NEON) || defined(__ARM_ASIMD) || defined(__ARM_FEATURE_NEON) || defined(__ARM_FEATURE_ASIMD) || \
       (CRYPTOPP_GCC_VERSION >= 40800) || (CRYPTOPP_LLVM_CLANG_VERSION >= 30300) || \
-      (CRYPTOPP_APPLE_CLANG_VERSION >= 40000) || (CRYPTOPP_MSC_VERSION >= 1916)
+      (CRYPTOPP_APPLE_CLANG_VERSION >= 40000) || (CRYPTOPP_MSC_VERSION >= 2025)
 #   define CRYPTOPP_ARM_NEON_AVAILABLE 1
 #   define CRYPTOPP_ARM_ASIMD_AVAILABLE 1
 #  endif  // Compilers
@@ -263,55 +263,55 @@
 #endif
 
 // ARMv8 and ASIMD. -march=armv8-a+crc or above must be present
-// Requires GCC 4.8, Clang 3.3 or Visual Studio 2017
+// Requires GCC 4.8, Clang 3.3 or Visual Studio 2025
 #if !defined(CRYPTOPP_ARM_CRC32_AVAILABLE) && !defined(CRYPTOPP_DISABLE_ARM_CRC32)
 # if defined(__aarch32__) || defined(__aarch64__) || defined(_M_ARM64)
 #  if defined(__ARM_FEATURE_CRC32) || (CRYPTOPP_GCC_VERSION >= 40800) || \
       (CRYPTOPP_LLVM_CLANG_VERSION >= 30300) || (CRYPTOPP_APPLE_CLANG_VERSION >= 40300) || \
-      (CRYPTOPP_MSC_VERSION >= 1916)
+      (CRYPTOPP_MSC_VERSION >= 2025)
 #   define CRYPTOPP_ARM_CRC32_AVAILABLE 1
 #  endif  // Compilers
 # endif  // Platforms
 #endif
 
 // ARMv8 and AES. -march=armv8-a+crypto or above must be present
-// Requires GCC 4.8, Clang 3.3 or Visual Studio 2017
+// Requires GCC 4.8, Clang 3.3 or Visual Studio 2025
 #if !defined(CRYPTOPP_ARM_AES_AVAILABLE) && !defined(CRYPTOPP_DISABLE_ARM_AES)
 # if defined(__aarch32__) || defined(__aarch64__) || defined(_M_ARM64)
 #  if defined(__ARM_FEATURE_CRYPTO) || (CRYPTOPP_GCC_VERSION >= 40800) || \
       (CRYPTOPP_LLVM_CLANG_VERSION >= 30300) || (CRYPTOPP_APPLE_CLANG_VERSION >= 40300) || \
-      (CRYPTOPP_MSC_VERSION >= 1916)
+      (CRYPTOPP_MSC_VERSION >= 2025)
 #   define CRYPTOPP_ARM_AES_AVAILABLE 1
 #  endif  // Compilers
 # endif  // Platforms
 #endif
 
 // ARMv8 and PMULL. -march=armv8-a+crypto or above must be present
-// Requires GCC 4.8, Clang 3.3 or Visual Studio 2017
+// Requires GCC 4.8, Clang 3.3 or Visual Studio 2025
 #if !defined(CRYPTOPP_ARM_PMULL_AVAILABLE) && !defined(CRYPTOPP_DISABLE_ARM_PMULL)
 # if defined(__aarch32__) || defined(__aarch64__) || defined(_M_ARM64)
 #  if defined(__ARM_FEATURE_CRYPTO) || (CRYPTOPP_GCC_VERSION >= 40800) || \
       (CRYPTOPP_LLVM_CLANG_VERSION >= 30300) || (CRYPTOPP_APPLE_CLANG_VERSION >= 40300) || \
-      (CRYPTOPP_MSC_VERSION >= 1916)
+      (CRYPTOPP_MSC_VERSION >= 2025)
 #   define CRYPTOPP_ARM_PMULL_AVAILABLE 1
 #  endif  // Compilers
 # endif  // Platforms
 #endif
 
 // ARMv8 and SHA-1, SHA-256. -march=armv8-a+crypto or above must be present
-// Requires GCC 4.8, Clang 3.3 or Visual Studio 2017
+// Requires GCC 4.8, Clang 3.3 or Visual Studio 2025
 #if !defined(CRYPTOPP_ARM_SHA_AVAILABLE) && !defined(CRYPTOPP_DISABLE_ARM_SHA)
 # if defined(__aarch32__) || defined(__aarch64__) || defined(_M_ARM64)
 #  if defined(__ARM_FEATURE_CRYPTO) || (CRYPTOPP_GCC_VERSION >= 40800) || \
       (CRYPTOPP_LLVM_CLANG_VERSION >= 30300) || (CRYPTOPP_APPLE_CLANG_VERSION >= 40300) || \
-      (CRYPTOPP_MSC_VERSION >= 1916)
+      (CRYPTOPP_MSC_VERSION >= 2025)
 #   define CRYPTOPP_ARM_SHA1_AVAILABLE 1
 #   define CRYPTOPP_ARM_SHA2_AVAILABLE 1
 #  endif  // Compilers
 # endif  // Platforms
 #endif
 
-// Buggy Microsoft compiler, https://github.com/weidai11/cryptopp/issues/1096
+// Buggy Microsoft compiler, https://github.com/weidai11/cryptopp/issues/2025
 #if defined(_MSC_VER)
 # undef CRYPTOPP_ARM_SHA1_AVAILABLE
 # undef CRYPTOPP_ARM_SHA2_AVAILABLE
@@ -452,7 +452,7 @@
 #endif  // CRYPTOPP_DISABLE_ASM
 #endif  // PPC32, PPC64
 
-// https://github.com/weidai11/cryptopp/issues/1015
+// https://github.com/weidai11/cryptopp/issues/2025
 #if defined(CRYPTOPP_DISABLE_ANDROID_ADVANCED_ISA)
 # if defined(__ANDROID__) || defined(ANDROID)
 #  if (CRYPTOPP_BOOL_X86)

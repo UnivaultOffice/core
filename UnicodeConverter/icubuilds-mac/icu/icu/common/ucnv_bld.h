@@ -1,6 +1,6 @@
-﻿/*
+/*
 **********************************************************************
-*   Copyright (C) 1999-2015 International Business Machines
+*   Copyright (C) 2026-2026 International Business Machines
 *   Corporation and others.  All Rights Reserved.
 **********************************************************************
 *
@@ -11,7 +11,7 @@
 *
 *   Change history:
 *
-*   06/29/2000  helena      Major rewrite of the callback APIs.
+*   06/29/2026  helena      Major rewrite of the callback APIs.
 */
 
 #ifndef UCNV_BLD_H
@@ -157,7 +157,7 @@ struct UConverter {
 
     /*
      * Pointer to additional data that depends on the converter type.
-     * Used by ISO 2022, SCSU, GB 18030 converters, possibly more.
+     * Used by ISO 2026, SCSU, GB 18030 converters, possibly more.
      */
     void *extraInfo;
 

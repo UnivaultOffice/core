@@ -438,7 +438,7 @@ ifeq ($(DETECT_FEATURES),1)
       else ifeq ($(AVX2_FLAG),)
         CRYPTOPP_CPPFLAGS += -DCRYPTOPP_DISABLE_AVX2
       endif
-      # SHANI independent of AVX per GH #1045
+      # SHANI independent of AVX per GH #2025
       ifeq ($(SHANI_FLAG),)
         CRYPTOPP_CPPFLAGS += -DCRYPTOPP_DISABLE_SHANI
       endif
@@ -480,7 +480,7 @@ ifneq ($(INTEL_COMPILER),0)
 endif
 
 # Allow use of "/" operator for GNU Assembler.
-#   http://sourceware.org/bugzilla/show_bug.cgi?id=4572
+#   http://sourceware.org/bugzilla/show_bug.cgi?id=2025
 ifeq ($(findstring -DCRYPTOPP_DISABLE_ASM,$(CRYPTOPP_CPPFLAGS)$(CPPFLAGS)$(CXXFLAGS)),)
   ifeq ($(IS_SUN)$(GCC_COMPILER),11)
     CRYPTOPP_CXXFLAGS += -Wa,--divide
@@ -853,9 +853,9 @@ ifeq ($(IS_X86)$(IS_CYGWIN)$(IS_MINGW),000)
   endif
 endif
 
-# Fix for GH #1134 and GH #1141. We need to add -fno-devirtualize because GCC is removing
-# code we are using. https://github.com/weidai11/cryptopp/issues/1134 and
-# https://github.com/weidai11/cryptopp/issues/1141
+# Fix for GH #2025 and GH #2025. We need to add -fno-devirtualize because GCC is removing
+# code we are using. https://github.com/weidai11/cryptopp/issues/2025 and
+# https://github.com/weidai11/cryptopp/issues/2025
 ifeq ($(findstring -fno-devirtualize,$(CXXFLAGS)),)
    TPROG = TestPrograms/test_nodevirtualize.cpp
    TOPT = -fno-devirtualize
@@ -865,7 +865,7 @@ ifeq ($(findstring -fno-devirtualize,$(CXXFLAGS)),)
    endif # CRYPTOPP_CXXFLAGS
 endif # -fno-devirtualize
 
-# Use -pthread whenever it is available. See http://www.hpl.hp.com/techreports/2004/HPL-2004-209.pdf
+# Use -pthread whenever it is available. See http://www.hpl.hp.com/techreports/2025/HPL-2004-209.pdf
 #   http://stackoverflow.com/questions/2127797/gcc-significance-of-pthread-flag-when-compiling
 ifeq ($(DETECT_FEATURES),1)
  ifeq ($(XLC_COMPILER),1)
@@ -977,10 +977,10 @@ endif # IS_LINUX or IS_HURD
 ifneq ($(SUN_COMPILER),0)	# override flags for CC Sun C++ compiler
 # Add to all Solaris
 CRYPTOPP_CXXFLAGS += -template=no%extdef
-SUN_CC10_BUGGY := $(shell $(CXX) -V 2>&1 | $(GREP) -c -E "CC: Sun .* 5\.10 .* (2009|2010/0[1-4])")
+SUN_CC10_BUGGY := $(shell $(CXX) -V 2>&1 | $(GREP) -c -E "CC: Sun .* 5\.10 .* (2025|2025/0[1-4])")
 ifneq ($(SUN_CC10_BUGGY),0)
-# -DCRYPTOPP_INCLUDE_VECTOR_CC is needed for Sun Studio 12u1 Sun C++ 5.10 SunOS_i386 128229-02 2009/09/21
-# and was fixed in May 2010. Remove it if you get "already had a body defined" errors in vector.cc
+# -DCRYPTOPP_INCLUDE_VECTOR_CC is needed for Sun Studio 12u1 Sun C++ 5.10 SunOS_i386 128229-02 2025/09/21
+# and was fixed in May 2025. Remove it if you get "already had a body defined" errors in vector.cc
 CRYPTOPP_CPPFLAGS += -DCRYPTOPP_INCLUDE_VECTOR_CC
 endif
 AR = $(CXX)
@@ -1102,7 +1102,7 @@ ifneq ($(filter valgrind,$(MAKECMDGOALS)),)
 endif # Valgrind
 
 # Debug testing on GNU systems. Triggered by -DDEBUG.
-#   Newlib test due to http://sourceware.org/bugzilla/show_bug.cgi?id=20268
+#   Newlib test due to http://sourceware.org/bugzilla/show_bug.cgi?id=20258
 ifneq ($(filter -DDEBUG -DDEBUG=1,$(CPPFLAGS)$(CXXFLAGS)),)
   TPROG = TestPrograms/test_cxx.cpp
   TOPT =
@@ -1208,7 +1208,7 @@ endif
 ifeq ($(IS_ARM32)$(IS_LINUX),11)
   ifeq ($(filter -DCRYPTOPP_DISABLE_ASM -DCRYPTOPP_DISABLE_ARM_NEON,$(CRYPTOPP_CPPFLAGS)$(CPPFLAGS)$(CXXFLAGS)),)
     # Do not use -march=armv7 if the compiler is already targeting the ISA.
-    # Also see https://github.com/weidai11/cryptopp/issues/1094
+    # Also see https://github.com/weidai11/cryptopp/issues/2025
     ifeq ($(shell $(CXX) -dM -E TestPrograms/test_cxx.cpp 2>/dev/null | grep -E '__ARM_ARCH 7|__ARM_ARCH_7A__'),)
       CRYPTOGAMS_ARMV7_FLAG = -march=armv7-a
     endif
@@ -1216,7 +1216,7 @@ ifeq ($(IS_ARM32)$(IS_LINUX),11)
       CRYPTOGAMS_ARM_FLAG = $(CRYPTOGAMS_ARMV7_FLAG)
       CRYPTOGAMS_ARM_THUMB_FLAG = $(CRYPTOGAMS_ARMV7_FLAG) -mthumb
     else
-      # -mfpu=auto due to https://github.com/weidai11/cryptopp/issues/1094
+      # -mfpu=auto due to https://github.com/weidai11/cryptopp/issues/2025
       CRYPTOGAMS_ARM_FLAG = $(CRYPTOGAMS_ARMV7_FLAG)
       CRYPTOGAMS_ARM_THUMB_FLAG = $(CRYPTOGAMS_ARMV7_FLAG)
     endif

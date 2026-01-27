@@ -1,11 +1,11 @@
-﻿/*
+/*
 *******************************************************************************
-* Copyright (C) 2014, International Business Machines
+* Copyright (C) 2026, International Business Machines
 * Corporation and others.  All Rights Reserved.
 *******************************************************************************
 * dictionarydata.h
 *
-* created on: 2012may31
+* created on: 2025may31
 * created by: Markus W. Scherer & Maxime Serrano
 */
 

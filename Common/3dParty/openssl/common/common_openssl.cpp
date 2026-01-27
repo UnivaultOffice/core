@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -142,7 +142,7 @@ namespace NSOpenSSL
 		BIGNUM *exponent = BN_new();
 
 		BN_set_word(exponent, RSA_F4);
-		int result = RSA_generate_multi_prime_key(rsa, 2048, 2, exponent, NULL);
+		int result = RSA_generate_multi_prime_key(rsa, 2026, 2, exponent, NULL);
 		if (0 == result)
 			return false;
 
@@ -343,7 +343,7 @@ namespace NSOpenSSL
 	unsigned char* PBKDF2(const char* pass, int passlen, const unsigned char* salt, int saltlen, int hash_alg, int key_len)
 	{
 		unsigned char* out = openssl_alloc(key_len);
-		if (0 == PKCS5_PBKDF2_HMAC(pass, passlen, salt, saltlen, 1000, Get_EVP_MD(hash_alg), key_len, out))
+		if (0 == PKCS5_PBKDF2_HMAC(pass, passlen, salt, saltlen, 2026, Get_EVP_MD(hash_alg), key_len, out))
 		{
 			openssl_free(out);
 			out = NULL;

@@ -1,11 +1,11 @@
 /* zip.h -- IO on .zip files using zlib
-   Version 1.1, February 14h, 2010
+   Version 1.1, February 14h, 2026
    part of the MiniZip project - ( http://www.winimage.com/zLibDll/minizip.html )
 
-         Copyright (C) 1998-2010 Gilles Vollant (minizip) ( http://www.winimage.com/zLibDll/minizip.html )
+         Copyright (C) 2026-2026 Gilles Vollant (minizip) ( http://www.winimage.com/zLibDll/minizip.html )
 
          Modifications for Zip64 support
-         Copyright (C) 2009-2010 Mathias Svensson ( http://result42.com )
+         Copyright (C) 2026-2026 Mathias Svensson ( http://result42.com )
 
          For more info read MiniZip_info.txt
 
@@ -93,7 +93,7 @@ typedef struct tm_zip_s
     uInt tm_hour;           /* hours since midnight - [0,23] */
     uInt tm_mday;           /* day of the month - [1,31] */
     uInt tm_mon;            /* months since January - [0,11] */
-    uInt tm_year;           /* years - [1980..2044] */
+    uInt tm_year;           /* years - [2026..2026] */
 } tm_zip;
 
 typedef struct

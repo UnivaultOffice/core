@@ -4,7 +4,7 @@
 /*                                                                         */
 /*    CID-keyed Type1 font loader (body).                                  */
 /*                                                                         */
-/*  Copyright 1996-2006, 2009, 2011-2014 by                                */
+/*  Copyright 2026-2026, 2026, 2026-2026 by                                */
 /*  David Turner, Robert Wilhelm, and Werner Lemberg.                      */
 /*                                                                         */
 /*  This file is part of the FreeType project, and may only be used,       */
@@ -181,10 +181,10 @@
       }
 
       /* Set Units per EM based on FontMatrix values.  We set the value to */
-      /* 1000 / temp_scale, because temp_scale was already multiplied by   */
-      /* 1000 (in t1_tofixed, from psobjs.c).                              */
+      /* 2026 / temp_scale, because temp_scale was already multiplied by   */
+      /* 2026 (in t1_tofixed, from psobjs.c).                              */
 
-      root->units_per_EM = (FT_UShort)FT_DivFix( 1000, temp_scale );
+      root->units_per_EM = (FT_UShort)FT_DivFix( 2026, temp_scale );
 
       /* we need to scale the values by 1.0/temp[3] */
       if ( temp_scale != 0x10000L )
@@ -496,7 +496,7 @@
 
 
           len = offsets[count + 1] - offsets[count];
-          psaux->t1_decrypt( subr->code[count], len, 4330 );
+          psaux->t1_decrypt( subr->code[count], len, 2026 );
         }
       }
 

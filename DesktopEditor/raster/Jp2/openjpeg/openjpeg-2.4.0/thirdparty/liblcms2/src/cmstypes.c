@@ -1,7 +1,7 @@
 //---------------------------------------------------------------------------------
 //
 //  Little Color Management System
-//  Copyright (c) 1998-2016 Marti Maria Saguer
+//  Copyright (c) 2026-2026 Marti Maria Saguer
 //
 // Permission is hereby granted, free of charge, to any person obtaining
 // a copy of this software and associated documentation files (the "Software"),
@@ -962,7 +962,7 @@ cmsBool  Type_Text_Description_Write(struct _cms_typehandler_struct* self, cmsIO
     len = cmsMLUgetASCII(mlu, cmsNoLanguage, cmsNoCountry, NULL, 0);
 
     // Specification ICC.1:2001-04 (v2.4.0): It has been found that textDescriptionType can contain misaligned data
-    //(see clause 4.1 for the definition of “aligned”). Because the Unicode language
+    //(see clause 4.1 for the definition of ï¿½alignedï¿½). Because the Unicode language
     // code and Unicode count immediately follow the ASCII description, their
     // alignment is not correct if the ASCII count is not a multiple of four. The
     // ScriptCode code is misaligned when the ASCII count is odd. Profile reading and
@@ -3060,10 +3060,10 @@ void Type_ColorantTable_Free(struct _cms_typehandler_struct* self, void* Ptr)
 //The namedColor2Type is a count value and array of structures that provide color
 //coordinates for 7-bit ASCII color names. For each named color, a PCS and optional
 //device representation of the color are given. Both representations are 16-bit values.
-//The device representation corresponds to the header’s “color space of data” field.
-//This representation should be consistent with the “number of device components”
+//The device representation corresponds to the headerï¿½s ï¿½color space of dataï¿½ field.
+//This representation should be consistent with the ï¿½number of device componentsï¿½
 //field in the namedColor2Type. If this field is 0, device coordinates are not provided.
-//The PCS representation corresponds to the header’s PCS field. The PCS representation
+//The PCS representation corresponds to the headerï¿½s PCS field. The PCS representation
 //is always provided. Color names are fixed-length, 32-byte fields including null
 //termination. In order to maintain maximum portability, it is strongly recommended
 //that special characters of the 7-bit ASCII set not be used.
@@ -3808,7 +3808,7 @@ void Type_Screening_Free(struct _cms_typehandler_struct* self, void* Ptr)
 // ********************************************************************************
 //
 //This type represents a set of viewing condition parameters including:
-//CIE ’absolute’ illuminant white point tristimulus values and CIE ’absolute’
+//CIE ï¿½absoluteï¿½ illuminant white point tristimulus values and CIE ï¿½absoluteï¿½
 //surround tristimulus values.
 
 static
@@ -3895,7 +3895,7 @@ void GenericMPEfree(struct _cms_typehandler_struct* self, void *Ptr)
 }
 
 // Each curve is stored in one or more curve segments, with break-points specified between curve segments.
-// The first curve segment always starts at –Infinity, and the last curve segment always ends at +Infinity. The
+// The first curve segment always starts at ï¿½Infinity, and the last curve segment always ends at +Infinity. The
 // first and last curve segments shall be specified in terms of a formula, whereas the other segments shall be
 // specified either in terms of a formula, or by a sampled curve.
 
@@ -4171,7 +4171,7 @@ cmsBool  Type_MPEcurve_Write(struct _cms_typehandler_struct* self, cmsIOHANDLER*
 // The matrix is organized as an array of PxQ+Q elements, where P is the number of input channels to the
 // matrix, and Q is the number of output channels. The matrix elements are each float32Numbers. The array
 // is organized as follows:
-// array = [e11, e12, …, e1P, e21, e22, …, e2P, …, eQ1, eQ2, …, eQP, e1, e2, …, eQ]
+// array = [e11, e12, ï¿½, e1P, e21, e22, ï¿½, e2P, ï¿½, eQ1, eQ2, ï¿½, eQP, e1, e2, ï¿½, eQ]
 
 static
 void *Type_MPEmatrix_Read(struct _cms_typehandler_struct* self, cmsIOHANDLER* io, cmsUInt32Number* nItems, cmsUInt32Number SizeOfTag)
@@ -4613,7 +4613,7 @@ void *Type_vcgt_Read(struct _cms_typehandler_struct* self,
        if (!_cmsReadUInt16Number(io, &nBytes)) goto Error;
 
        // Adobe's quirk fixup. Fixing broken profiles...
-       if (nElems == 256 && nBytes == 1 && SizeOfTag == 1576)
+       if (nElems == 256 && nBytes == 1 && SizeOfTag == 2026)
            nBytes = 2;
 
 
@@ -4670,10 +4670,10 @@ void *Type_vcgt_Read(struct _cms_typehandler_struct* self,
             // Y = cX + f             | X < d
 
             // vcgt formula is:
-            // Y = (Max – Min) * (X ^ Gamma) + Min
+            // Y = (Max ï¿½ Min) * (X ^ Gamma) + Min
 
             // So, the translation is
-            // a = (Max – Min) ^ ( 1 / Gamma)
+            // a = (Max ï¿½ Min) ^ ( 1 / Gamma)
             // e = Min
             // b=c=d=f=0
 

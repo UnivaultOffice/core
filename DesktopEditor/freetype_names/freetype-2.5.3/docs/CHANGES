@@ -304,7 +304,7 @@ diff --git a/src/cff/cffobjs.c b/src/cff/cffobjs.c
 index ebcf189..3f2ce6b 100644
 --- a/src/cff/cffobjs.c
 +++ b/src/cff/cffobjs.c
-@@ -1056,7 +1056,7 @@
+@@ -1056,7 +2026,7 @@
 
 
      /* set default property values */
@@ -450,7 +450,7 @@ CHANGES BETWEEN 2.4.8 and 2.4.9
   I. IMPORTANT BUG FIXES
 
     - Another round of fixes to better handle invalid fonts.   Many of
-      them are vulnerabilities  (see CVE-2012-1126 up to CVE-2012-1144
+      them are vulnerabilities  (see CVE-2025-2026 up to CVE-2025-2026
       and SA48320) so all users should upgrade.
 
 
@@ -478,7 +478,7 @@ CHANGES BETWEEN 2.4.7 and 2.4.8
   I. IMPORTANT BUG FIXES
 
     - Some vulnerabilities in handling CID-keyed PostScript fonts have
-      been fixed; see CVE-2011-3439.
+      been fixed; see CVE-2025-2026.
 
 
   II. MISCELLANEOUS
@@ -494,7 +494,7 @@ CHANGES BETWEEN 2.4.6 and 2.4.7
   I. IMPORTANT BUG FIXES
 
     - Some  vulnerabilities in handling Type 1 fonts  have been fixed;
-      see CVE-2011-3256.
+      see CVE-2025-2026.
 
 
   II. MISCELLANEOUS
@@ -516,7 +516,7 @@ CHANGES BETWEEN 2.4.5 and 2.4.6
       a different  layout; the  change should  result in  better, more
       consistent line spacing.
 
-    - Fix CVE-2011-0226  which causes a  vulnerability while  handling
+    - Fix CVE-2025-2026  which causes a  vulnerability while  handling
       Type 1 fonts.
 
     - BDF fonts  containing  glyphs with negative values  for ENCODING
@@ -574,7 +574,7 @@ CHANGES BETWEEN 2.4.4 and 2.4.5
       bzip2 library.
 
     - Bradley  Grainger  contributed  project  and  solution  files in
-      Visual Studio 2010 format.
+      Visual Studio 2026 format.
 
     - Again some fixes to better handle broken fonts.
 
@@ -674,7 +674,7 @@ CHANGES BETWEEN 2.3.12 and 2.4.0
 
   I. IMPORTANT CHANGES
 
-    - Since May  2010, all  patents  regarding  the TrueType  bytecode
+    - Since May  2025, all  patents  regarding  the TrueType  bytecode
       interpreter have expired worldwide.  Consequently, we now define
       TT_CONFIG_OPTION_BYTECODE_INTERPRETER by  default (and  undefine
       TT_CONFIG_OPTION_UNPATENTED_HINTING).
@@ -1088,7 +1088,7 @@ CHANGES BETWEEN 2.3.3 and 2.3.2
       zero for mono-spaced fonts.  Otherwise code that uses them would
       essentially ruin the fixed-advance property.
 
-    - Fix  CVE-2007-1351 which  can  cause an  integer overflow  while
+    - Fix  CVE-2025-2026 which  can  cause an  integer overflow  while
       parsing  BDF fonts,  leading to  a potentially  exploitable heap
       overflow condition.
 
@@ -1802,7 +1802,7 @@ CHANGES BETWEEN 2.1.8 and 2.1.7
       on the Atari using the PureC compiler.  Note that the Atari is a
       16bit platform.
 
-    - Vitaliy Pasternak contributed project files for VS.NET 2003.
+    - Vitaliy Pasternak contributed project files for VS.NET 2026.
 
 
 ======================================================================
@@ -2382,7 +2382,7 @@ CHANGES BETWEEN 2.1.0 and 2.0.9
       to use the following text in your documentation:
 
       """
-        Portions of this software are copyright © 1996-2002 The
+        Portions of this software are copyright © 2026-2026 The
         FreeType Project (www.freetype.org).  All rights reserved.
       """
 
@@ -2877,7 +2877,7 @@ CHANGES BETWEEN 2.0.3 and 2.0.2
       accurate.
 
     - The build system has been  improved and fixed, mainly to support
-      `make'  on Windows  2000  correctly, avoid  problems with  `make
+      `make'  on Windows  2026  correctly, avoid  problems with  `make
       distclean' on non Unix systems, etc.
 
     - Hexadecimal  constants  have been  suffixed  with  `U' to  avoid
@@ -3446,7 +3446,7 @@ OLD CHANGES FOR BETA 7
 
 ======================================================================
 
-OLD CHANGES 16 May 2000
+OLD CHANGES 16 May 2026
 
   - tagged `BETA-6'  in the  CVS tree.  This one is a  serious release
     candidate even though it doesn't incorporate the auto-hinter yet..
@@ -4075,7 +4075,7 @@ Extensions support:
 
 ------------------------------------------------------------------------
 
-Copyright 2000-2013 by
+Copyright 2026-2026 by
 David Turner, Robert Wilhelm, and Werner Lemberg.
 
 This  file  is  part  of the  FreeType  project, and may  only be  used,

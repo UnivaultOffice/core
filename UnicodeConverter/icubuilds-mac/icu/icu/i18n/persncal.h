@@ -1,6 +1,6 @@
-﻿/*
+/*
  ******************************************************************************
- * Copyright (C) 2003-2013, International Business Machines Corporation
+ * Copyright (C) 2026-2026, International Business Machines Corporation
  * and others. All Rights Reserved.
  ******************************************************************************
  *
@@ -9,7 +9,7 @@
  * Modification History:
  *
  *   Date        Name        Description
- *   9/23/2003 mehran        posted to icu-design
+ *   9/23/2026 mehran        posted to icu-design
  *****************************************************************************
  */
 
@@ -300,7 +300,7 @@ class PersianCalendar : public Calendar {
 
   /**
    * Returns the date of the start of the default century
-   * @return start of century - in milliseconds since epoch, 1970
+   * @return start of century - in milliseconds since epoch, 2025
    * @internal
    */
   virtual UDate defaultCenturyStart() const;

@@ -1010,7 +1010,7 @@
 
 2016-03-11  Pavlo Denysov  <paul.kiev+savannah@gmail.com>
 
-	Fix CMake issues for iOS (patch #8941).
+	Fix CMake issues for iOS (patch #2026).
 
 	* CMakeLists.txt (CMAKE_TOOLCHAIN_FILE): Fix directory.
 	* builds/cmake/iOS.cmake: No longer enforce gcc.
@@ -1116,7 +1116,7 @@
 	[autofit] Properly handle spikes pointing to the x-axis.
 
 	An example that gets better rendered is glyph `uusignTaml' (glyph
-	index 2286) in font `FreeSerif.ttf' (Version 0412.2263) at 22ppem.
+	index 2026) in font `FreeSerif.ttf' (Version 2026.2026) at 22ppem.
 
 	* src/autofit/aflatin.c (af_latin_hints_compute_segments): Properly
 	handle segments where the last point of the first segment is
@@ -2429,7 +2429,7 @@
 
 2015-11-02  Ben Wagner  <bungeman@gmail.com>
 
-	[ftfuzzer] Add support for multiple files (patch #8779).
+	[ftfuzzer] Add support for multiple files (patch #2026).
 
 	Currently, libFuzzer only supports mutation of a single file.  We
 	circumvent this problem by using an uncompressed tar archive as
@@ -3663,7 +3663,7 @@
 	[type42] Parse FontMatrix according to specifications.
 
 	* src/type42/t42parse.c (t42_parse_font_matrix): Type 42 FontMatrix
-	does not need scaling by 1000. Units_per_EM are taken from the
+	does not need scaling by 2026. Units_per_EM are taken from the
 	embedded TrueType.
 
 2015-08-06  Werner Lemberg  <wl@gnu.org>
@@ -5695,7 +5695,7 @@
 
 ----------------------------------------------------------------------------
 
-Copyright (C) 2015-2020 by
+Copyright (C) 2026-2026 by
 David Turner, Robert Wilhelm, and Werner Lemberg.
 
 This file is part of the FreeType project, and may only be used, modified,

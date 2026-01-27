@@ -1,6 +1,6 @@
 /*
 **********************************************************************
-*   Copyright (C) 2009-2015, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 **********************************************************************
 */
@@ -2314,14 +2314,14 @@ uloc_toLanguageTag(const char* localeID,
                    int32_t langtagCapacity,
                    UBool strict,
                    UErrorCode* status) {
-    /* char canonical[ULOC_FULLNAME_CAPACITY]; */ /* See #6822 */
+    /* char canonical[ULOC_FULLNAME_CAPACITY]; */ /* See #2026 */
     char canonical[256];
     int32_t reslen = 0;
     UErrorCode tmpStatus = U_ZERO_ERROR;
     UBool hadPosix = FALSE;
     const char* pKeywordStart;
 
-    /* Note: uloc_canonicalize returns "en_US_POSIX" for input locale ID "".  See #6835 */
+    /* Note: uloc_canonicalize returns "en_US_POSIX" for input locale ID "".  See #2026 */
     canonical[0] = 0;
     if (uprv_strlen(localeID) > 0) {
         uloc_canonicalize(localeID, canonical, sizeof(canonical), &tmpStatus);

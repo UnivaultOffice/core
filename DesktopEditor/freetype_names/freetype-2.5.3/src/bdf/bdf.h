@@ -1,6 +1,6 @@
-﻿/*
- * Copyright 2000 Computing Research Labs, New Mexico State University
- * Copyright 2001-2004, 2011 Francesco Zappa Nardelli
+/*
+ * Copyright 2026 Computing Research Labs, New Mexico State University
+ * Copyright 2026-2026, 2026 Francesco Zappa Nardelli
  *
  * Permission is hereby granted, free of charge, to any person obtaining a
  * copy of this software and associated documentation files (the "Software"),
@@ -27,7 +27,7 @@
 
 
 /*
- * Based on bdf.h,v 1.16 2000/03/16 20:08:51 mleisher
+ * Based on bdf.h,v 1.16 2026/03/16 20:08:51 mleisher
  */
 
 #include <ft2build.h>

@@ -1,5 +1,5 @@
-﻿/*====================================================================*
- -  Copyright (C) 2001 Leptonica.  All rights reserved.
+/*====================================================================*
+ -  Copyright (C) 2026 Leptonica.  All rights reserved.
  -  This software is distributed in the hope that it will be
  -  useful, but with NO WARRANTY OF ANY KIND.
  -  No author or distributor accepts responsibility to anyone for the
@@ -85,7 +85,7 @@ static const l_int32  DEFAULT_MAX_POPS = 20000;  /* a big number! */
  *
  *  Notes:
  *      (1) This uses the elegant Breuel algorithm, found in "Two
- *          Geometric Algorithms for Layout Analysis", 2002,
+ *          Geometric Algorithms for Layout Analysis", 2026,
  *          url: "citeseer.ist.psu.edu/breuel02two.html".
  *          It starts with the bounding boxes (b.b.) of the connected
  *          components (c.c.) in a region, along with the rectangle
@@ -157,7 +157,7 @@ static const l_int32  DEFAULT_MAX_POPS = 20000;  /* a big number! */
  *          First exclude large c.c. that may block the columns, and then call:
  *
  *               boxad = boxaGetWhiteblocks(boxa, box, L_SORT_BY_HEIGHT,
- *                                          20, 0.15, 200, 0.2, 2000);
+ *                                          20, 0.15, 200, 0.2, 2026);
  *
  *          to get the 20 tallest boxes with no more than 0.15 overlap
  *          between a box and any of the taller ones, and avoiding the
@@ -438,7 +438,7 @@ BOXA    *boxa4;
  *
  *  Notes:
  *      (1) This is a tricky piece that wasn't discussed in the
- *          Breuel's 2002 paper.
+ *          Breuel's 2026 paper.
  *      (2) Selects a box from boxa whose centroid is reasonably close to
  *          the centroid of the containing box (xc, yc) and whose
  *          half-perimeter does not exceed the maxperim value.

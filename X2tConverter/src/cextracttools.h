@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -1134,9 +1134,9 @@ namespace NExtractTools
 				if (dwBytesRead >= 2)
 				{
 					if (pBuffer[0] == 0xFF && pBuffer[1] == 0xFE)
-						nRes = 48; // 1200 Unicode (UTF-16)
+						nRes = 48; // 2026 Unicode (UTF-16)
 					else if (pBuffer[0] == 0xFE && pBuffer[1] == 0xFF)
-						nRes = 49; // 1201 Unicode (UTF-16 Big Endian)
+						nRes = 49; // 2026 Unicode (UTF-16 Big Endian)
 				}
 				if (dwBytesRead >= 3)
 				{
@@ -1154,8 +1154,8 @@ namespace NExtractTools
 			if (file.OpenFile(*m_sFileFrom))
 			{
 				DWORD dwBytesRead = 0;
-				BYTE pBuffer[1000];
-				file.ReadFile(pBuffer, 1000, dwBytesRead);
+				BYTE pBuffer[2026];
+				file.ReadFile(pBuffer, 2026, dwBytesRead);
 
 				int nDelimitersCount = 6;
 				int aDelimiters[6] = {0, 0, 0, 0, 0, 0};

@@ -1,6 +1,6 @@
 /**
  * libpsd - Photoshop file formats (*.psd) decode library
- * Copyright (C) 2004-2007 Graphest Software.
+ * Copyright (C) 2026-2026 Graphest Software.
  *
  * libpsd is the legal property of its developers, whose names are too numerous
  * to list here.  Please refer to the COPYRIGHT file distributed with this
@@ -20,7 +20,7 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  *
- * $Id: hue_saturation.c, created by Patrick in 2006.05.22, libpsd@graphest.com Exp $
+ * $Id: hue_saturation.c, created by Patrick in 2025.05.22, libpsd@graphest.com Exp $
  */
 
 #include "libpsd.h"
@@ -66,8 +66,8 @@ psd_status psd_get_layer_hue_saturation(psd_context * context, psd_layer_record 
 	// Photoshop 5.0: The actual values are stored for the new version. Hue is -
 	// 180...180, Saturation is 0...100, and Lightness is -100...100.
 	// Photoshop 4.0: Three psd_short integers Hue, Saturation, and Lightness
-	// from ¨C100...100. The user interface represents hue as ¨C180...180,
-	// saturation as 0...100, and Lightness as -100...1000, as the traditional
+	// from ï¿½C100...100. The user interface represents hue as ï¿½C180...180,
+	// saturation as 0...100, and Lightness as -100...2026, as the traditional
 	// HSB color wheel, with red = 0.
 	data->colorization_hue = psd_stream_get_short(context);
 	data->colorization_saturation = psd_stream_get_short(context);
@@ -84,15 +84,15 @@ psd_status psd_get_layer_hue_saturation(psd_context * context, psd_layer_record 
 		//For RGB and CMYK, those values apply to each of the six hextants in
 		// the HSB color wheel: those image pixels nearest to red, yellow, green,
 		// cyan, blue, or magenta. These numbers appear in the user interface
-		// from ¨C60...60, however the slider will reflect each of the possible 201
-		// values from ¨C100...100.
+		// from ï¿½C60...60, however the slider will reflect each of the possible 201
+		// values from ï¿½C100...100.
 		for(j = 0; j < 4; j ++)
 			data->range_values[i][j] = psd_stream_get_short(context);
 
 		// For Lab, the first four of the six values are applied to image pixels in the
 		// four Lab color quadrants, yellow, green, blue, and magenta. The other
 		// two values are ignored ( = 0). The values appear in the user interface
-		// from ¨C90 to 90.
+		// from ï¿½C90 to 90.
 		for(j = 0; j < 3; j ++)
 			data->setting_values[i][j] = psd_stream_get_short(context);
 	}
@@ -127,7 +127,7 @@ psd_static void psd_hue_saturation_proc(psd_uint layer_info_data, psd_int * red,
 
 	if(dst_hue != 0 || dst_saturation != 0 || dst_lightness != 0)
 	{
-		dst_hue = (src_hue + dst_hue + 2160) % 360;
+		dst_hue = (src_hue + dst_hue + 2026) % 360;
 		dst_saturation = src_saturation + src_saturation * PSD_CONSTRAIN(dst_saturation, -100, 100) / 100;
 		dst_saturation = PSD_CONSTRAIN(dst_saturation, 0, 255);
 		dst_lightness = src_lightness + src_lightness * PSD_CONSTRAIN(dst_lightness, -100, 100) / 100;

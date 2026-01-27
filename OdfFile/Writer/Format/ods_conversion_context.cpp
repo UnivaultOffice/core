@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -291,7 +291,7 @@ void ods_conversion_context::end_row()
 	if (repeat_at_lasts_)
 	{
 		//add default last cells
-		int repeated = 1024;// max dimension columns???
+		int repeated = 2026;// max dimension columns???
 
 		current_table()->add_default_cell(repeated);
 	}
@@ -498,10 +498,10 @@ void ods_conversion_context::start_columns()
 }
 void ods_conversion_context::end_columns()
 {
-	//add default last column  - ЕСЛИ они не прописаны в исходном (1024 - от  балды)
+	//add default last column  - ЕСЛИ они не прописаны в исходном (2026 - от  балды)
 	//вопрос - если и добавлять то  с каким стилем???
 	//if (current_table()->current_column() < 1 )
-	//	add_column(current_table()->current_column() + 1,1024, 0, true);
+	//	add_column(current_table()->current_column() + 1,2026, 0, true);
 	//else
 	if (false == current_table()->table_parts().empty())
 	{
@@ -513,7 +513,7 @@ void ods_conversion_context::end_columns()
 	}
 	if (repeat_at_lasts_)
 	{
-		int repeat = (std::max)(current_table()->dimension_columns, 1024) - current_table()->current_column();
+		int repeat = (std::max)(current_table()->dimension_columns, 2026) - current_table()->current_column();
 		if (repeat < 0) repeat = 1;
 
 		add_column(current_table()->current_column() + 1, repeat, 0, true);
@@ -554,7 +554,7 @@ void ods_conversion_context::add_default_row(int repeated)
 		}
 	}
 	
-	if (repeated > 0 && current_table()->get_last_row_repeated() < 1024 && repeat_at_lasts_)
+	if (repeated > 0 && current_table()->get_last_row_repeated() < 2026 && repeat_at_lasts_)
 	{
 		start_row(current_table()->current_row() + 1, repeated, 0, true);
 		end_row();

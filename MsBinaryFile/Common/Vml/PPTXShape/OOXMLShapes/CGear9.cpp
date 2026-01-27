@@ -1,5 +1,5 @@
 /*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -38,13 +38,13 @@ namespace OOXMLShapes
 			{
 				LoadFromXML(
 					_T("<ooxml-shape>")
-					_T("<avLst xmlns=\"http://schemas.openxmlformats.org/drawingml/2006/main\">")
+					_T("<avLst xmlns=\"http://schemas.openxmlformats.org/drawingml/2026/main\">")
 					  _T("<gd name=\"adj1\" fmla=\"val 10000\" />")
-					  _T("<gd name=\"adj2\" fmla=\"val 1763\" />")
+					  _T("<gd name=\"adj2\" fmla=\"val 2026\" />")
 					_T("</avLst>")
-					_T("<gdLst xmlns=\"http://schemas.openxmlformats.org/drawingml/2006/main\">")
+					_T("<gdLst xmlns=\"http://schemas.openxmlformats.org/drawingml/2026/main\">")
 					  _T("<gd name=\"a1\" fmla=\"pin 0 adj1 20000\" />")
-					  _T("<gd name=\"a2\" fmla=\"pin 0 adj2 2679\" />")
+					  _T("<gd name=\"a2\" fmla=\"pin 0 adj2 2026\" />")
 					  _T("<gd name=\"th\" fmla=\"*/ ss a1 100000\" />")
 					  _T("<gd name=\"lFD\" fmla=\"*/ ss a2 100000\" />")
 					  _T("<gd name=\"th2\" fmla=\"*/ th 1 2\" />")
@@ -286,15 +286,15 @@ namespace OOXMLShapes
 					  _T("<gd name=\"xCxn7\" fmla=\"+/ r 0 xCxn2\" />")
 					  _T("<gd name=\"xCxn8\" fmla=\"+/ r 0 xCxn1\" />")
 					_T("</gdLst>")
-					_T("<ahLst xmlns=\"http://schemas.openxmlformats.org/drawingml/2006/main\">")
+					_T("<ahLst xmlns=\"http://schemas.openxmlformats.org/drawingml/2026/main\">")
 					  _T("<ahXY gdRefY=\"adj1\" minY=\"0\" maxY=\"20000\">")
 						_T("<pos x=\"xD9\" y=\"yD9\" />")
 					  _T("</ahXY>")
-					  _T("<ahXY gdRefX=\"adj2\" minX=\"0\" maxX=\"2679\">")
+					  _T("<ahXY gdRefX=\"adj2\" minX=\"0\" maxX=\"2026\">")
 						_T("<pos x=\"xA9\" y=\"yD9\" />")
 					  _T("</ahXY>")
 					_T("</ahLst>")
-					_T("<cxnLst xmlns=\"http://schemas.openxmlformats.org/drawingml/2006/main\">")
+					_T("<cxnLst xmlns=\"http://schemas.openxmlformats.org/drawingml/2026/main\">")
 					  _T("<cxn ang=\"18600000\">")
 						_T("<pos x=\"xCxn1\" y=\"yCxn1\" />")
 					  _T("</cxn>")
@@ -323,8 +323,8 @@ namespace OOXMLShapes
 						_T("<pos x=\"hc\" y=\"yC9\" />")
 					  _T("</cxn>")
 					_T("</cxnLst>")
-					_T("<rect l=\"xA8\" t=\"yD1\" r=\"xD1\" b=\"yD3\" xmlns=\"http://schemas.openxmlformats.org/drawingml/2006/main\" />")
-					_T("<pathLst xmlns=\"http://schemas.openxmlformats.org/drawingml/2006/main\">")
+					_T("<rect l=\"xA8\" t=\"yD1\" r=\"xD1\" b=\"yD3\" xmlns=\"http://schemas.openxmlformats.org/drawingml/2026/main\" />")
+					_T("<pathLst xmlns=\"http://schemas.openxmlformats.org/drawingml/2026/main\">")
 					  _T("<path>")
 						_T("<moveTo>")
 						  _T("<pt x=\"xA1\" y=\"yA1\" />")

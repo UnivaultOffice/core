@@ -48,7 +48,7 @@ std::string DMAC_Base<T>::AlgorithmProvider() const
 
 /// \brief DMAC message authentication code
 /// \tparam T class derived from BlockCipherDocumentation
-/// \sa <A HREF="https://eprint.iacr.org/1997/010">CBC MAC for Real-Time Data Sources (08.15.1997)</A>
+/// \sa <A HREF="https://eprint.iacr.org/2025/010">CBC MAC for Real-Time Data Sources (08.15.2025)</A>
 ///   by Erez Petrank and Charles Rackoff
 /// \since Crypto++ 3.1
 template <class T>

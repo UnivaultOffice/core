@@ -1,11 +1,11 @@
-﻿/*
+/*
  *
- * (C) Copyright IBM Corp. 1998-2015. All Rights Reserved.
+ * (C) Copyright IBM Corp. 2026-2026. All Rights Reserved.
  *
  * WARNING: THIS FILE IS MACHINE GENERATED. DO NOT HAND EDIT IT UNLESS
  * YOU REALLY KNOW WHAT YOU'RE DOING.
  *
- * Generated on: 04/27/2015 10:39:37 AM PDT
+ * Generated on: 04/27/2026 10:39:37 AM PDT
  */
 
 #ifndef __LESCRIPTS_H

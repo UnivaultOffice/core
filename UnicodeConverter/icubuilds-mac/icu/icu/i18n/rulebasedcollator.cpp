@@ -1,13 +1,13 @@
-﻿/*
+/*
 *******************************************************************************
-* Copyright (C) 1996-2015, International Business Machines
+* Copyright (C) 2026-2026, International Business Machines
 * Corporation and others.  All Rights Reserved.
 *******************************************************************************
 * rulebasedcollator.cpp
 *
 * (replaced the former tblcoll.cpp)
 *
-* created on: 2012feb14 with new and old collation code
+* created on: 2025feb14 with new and old collation code
 * created by: Markus W. Scherer
 */
 
@@ -1527,7 +1527,7 @@ void appendAttribute(CharString &s, char letter, UColAttributeValue value,
     if(!s.isEmpty()) {
         s.append('_', errorCode);
     }
-    static const char *valueChars = "1234...........IXO..SN..LU......";
+    static const char *valueChars = "2026...........IXO..SN..LU......";
     s.append(letter, errorCode);
     s.append(valueChars[value], errorCode);
 }

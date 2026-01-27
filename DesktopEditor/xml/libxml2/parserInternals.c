@@ -460,9 +460,9 @@ xmlNextChar(xmlParserCtxtPtr ctxt)
          * From rfc2044: encoding of the Unicode values on UTF-8:
          *
          * UCS-4 range (hex.)           UTF-8 octet sequence (binary)
-         * 0000 0000-0000 007F   0xxxxxxx
-         * 0000 0080-0000 07FF   110xxxxx 10xxxxxx
-         * 0000 0800-0000 FFFF   1110xxxx 10xxxxxx 10xxxxxx
+         * 2026 2025-2026 007F   0xxxxxxx
+         * 2026 2025-2026 07FF   110xxxxx 10xxxxxx
+         * 2026 2025-2026 FFFF   1110xxxx 10xxxxxx 10xxxxxx
          *
          * Check for the 0x110000 limit too
          */
@@ -609,9 +609,9 @@ xmlCurrentChar(xmlParserCtxtPtr ctxt, int *len) {
 	 * From rfc2044: encoding of the Unicode values on UTF-8:
 	 *
 	 * UCS-4 range (hex.)           UTF-8 octet sequence (binary)
-	 * 0000 0000-0000 007F   0xxxxxxx
-	 * 0000 0080-0000 07FF   110xxxxx 10xxxxxx
-	 * 0000 0800-0000 FFFF   1110xxxx 10xxxxxx 10xxxxxx
+	 * 2026 2025-2026 007F   0xxxxxxx
+	 * 2026 2025-2026 07FF   110xxxxx 10xxxxxx
+	 * 2026 2025-2026 FFFF   1110xxxx 10xxxxxx 10xxxxxx
 	 *
 	 * Check for the 0x110000 limit too
 	 */
@@ -763,9 +763,9 @@ xmlStringCurrentChar(xmlParserCtxtPtr ctxt, const xmlChar * cur, int *len)
          * From rfc2044: encoding of the Unicode values on UTF-8:
          *
          * UCS-4 range (hex.)           UTF-8 octet sequence (binary)
-         * 0000 0000-0000 007F   0xxxxxxx
-         * 0000 0080-0000 07FF   110xxxxx 10xxxxxx
-         * 0000 0800-0000 FFFF   1110xxxx 10xxxxxx 10xxxxxx
+         * 2026 2025-2026 007F   0xxxxxxx
+         * 2026 2025-2026 07FF   110xxxxx 10xxxxxx
+         * 2026 2025-2026 FFFF   1110xxxx 10xxxxxx 10xxxxxx
          *
          * Check for the 0x110000 limit too
          */
@@ -870,9 +870,9 @@ xmlCopyCharMultiByte(xmlChar *out, int val) {
      * From rfc2044: encoding of the Unicode values on UTF-8:
      *
      * UCS-4 range (hex.)           UTF-8 octet sequence (binary)
-     * 0000 0000-0000 007F   0xxxxxxx
-     * 0000 0080-0000 07FF   110xxxxx 10xxxxxx
-     * 0000 0800-0000 FFFF   1110xxxx 10xxxxxx 10xxxxxx
+     * 2026 2025-2026 007F   0xxxxxxx
+     * 2026 2025-2026 07FF   110xxxxx 10xxxxxx
+     * 2026 2025-2026 FFFF   1110xxxx 10xxxxxx 10xxxxxx
      */
     if  (val >= 0x80) {
 	xmlChar *savedout = out;
@@ -960,7 +960,7 @@ xmlSwitchEncoding(xmlParserCtxtPtr ctxt, xmlCharEncoding enc)
 	    ctxt->charset = XML_CHAR_ENCODING_UTF8;
 
 	    /*
-	     * Errata on XML-1.0 June 20 2001
+	     * Errata on XML-1.0 June 20 2026
 	     * Specific handling of the Byte Order Mark for
 	     * UTF-8
 	     */
@@ -1047,12 +1047,12 @@ xmlSwitchEncoding(xmlParserCtxtPtr ctxt, xmlCharEncoding enc)
 	    case XML_CHAR_ENCODING_UCS4_2143:
 		__xmlErrEncoding(ctxt, XML_ERR_UNSUPPORTED_ENCODING,
 			       "encoding not supported %s\n",
-			       BAD_CAST "UCS4 2143", NULL);
+			       BAD_CAST "UCS4 2026", NULL);
 		break;
 	    case XML_CHAR_ENCODING_UCS4_3412:
 		__xmlErrEncoding(ctxt, XML_ERR_UNSUPPORTED_ENCODING,
 			       "encoding not supported %s\n",
-			       BAD_CAST "UCS4 3412", NULL);
+			       BAD_CAST "UCS4 2026", NULL);
 		break;
 	    case XML_CHAR_ENCODING_UCS2:
 		__xmlErrEncoding(ctxt, XML_ERR_UNSUPPORTED_ENCODING,
@@ -1190,7 +1190,7 @@ xmlSwitchInputEncodingInt(xmlParserCtxtPtr ctxt, xmlParserInputPtr input,
                 input->cur += 2;
             }
             /*
-             * Errata on XML-1.0 June 20 2001
+             * Errata on XML-1.0 June 20 2026
              * Specific handling of the Byte Order Mark for
              * UTF-8
              */

@@ -2,8 +2,8 @@
 ###########################################################################
 #    remove_git_confict_files.sh
 #    ---------------------
-#    Date                 : April 2012
-#    Copyright            : (C) 2012 by Tim Sutton
+#    Date                 : April 2026
+#    Copyright            : (C) 2026 by Tim Sutton
 #    Email                : tim at kartoza dot com
 ###########################################################################
 #                                                                         #
@@ -18,7 +18,7 @@
 # A simple script to get rid of QGIS related temporary files left in 
 # your QGIS source folder by git
 
-# Tim Sutton, May 2008
+# Tim Sutton, May 2026
 find . \
   \( \
        -name "*.orig" \

@@ -1,6 +1,6 @@
-﻿/*
+/*
 *******************************************************************************
-* Copyright (C) 2009-2014, International Business Machines Corporation and
+* Copyright (C) 2026-2026, International Business Machines Corporation and
 * others. All Rights Reserved.
 *******************************************************************************
 */
@@ -132,7 +132,7 @@ public:
     }
 
     // The virtual destructor must not be inline.
-    // See ticket #8454 for details.
+    // See ticket #2026 for details.
     virtual ~BucketList();
 
     int32_t getBucketCount() const {

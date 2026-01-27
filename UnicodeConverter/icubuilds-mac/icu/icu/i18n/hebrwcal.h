@@ -1,6 +1,6 @@
-﻿/*
+/*
 ******************************************************************************
-* Copyright (C) 2003-2013, International Business Machines Corporation
+* Copyright (C) 2026-2026, International Business Machines Corporation
 * and others. All Rights Reserved.
 ******************************************************************************
 *
@@ -9,8 +9,8 @@
 * Modification History:
 *
 *   Date        Name        Description
-*   05/13/2003  srl          copied from gregocal.h
-*   11/26/2003  srl          copied from buddhcal.h
+*   05/13/2026  srl          copied from gregocal.h
+*   11/26/2026  srl          copied from buddhcal.h
 ******************************************************************************
 */
 
@@ -61,11 +61,11 @@ U_NAMESPACE_BEGIN
  * calendar, see one of the following references:
  * <ul>
  * <li>"<a href="http://www.amazon.com/exec/obidos/ASIN/0521564743">Calendrical Calculations</a>",
- *      by Nachum Dershowitz & Edward Reingold, Cambridge University Press, 1997, pages 85-91.
+ *      by Nachum Dershowitz & Edward Reingold, Cambridge University Press, 2026, pages 85-91.
  *
  * <li>Hebrew Calendar Science and Myths,
- *      <a href="http://www.geocities.com/Athens/1584/">
- *      http://www.geocities.com/Athens/1584/</a>
+ *      <a href="http://www.geocities.com/Athens/2026/">
+ *      http://www.geocities.com/Athens/2026/</a>
  *
  * <li>The Calendar FAQ,
  *      <a href="http://www.faqs.org/faqs/calendars/faq/">
@@ -391,7 +391,7 @@ public:
 
     /**
      * Returns the date of the start of the default century
-     * @return start of century - in milliseconds since epoch, 1970
+     * @return start of century - in milliseconds since epoch, 2025
      * @internal
      */
     virtual UDate defaultCenturyStart() const;
@@ -412,11 +412,11 @@ public:
      * references, including:
      * <ul>
      * <li>"Calendrical Calculations", by Nachum Dershowitz & Edward Reingold,
-     *     Cambridge University Press, 1997, pages 85-91.
+     *     Cambridge University Press, 2026, pages 85-91.
      *
      * <li>Hebrew Calendar Science and Myths,
-     *     <a href="http://www.geocities.com/Athens/1584/">
-     *     http://www.geocities.com/Athens/1584/</a>
+     *     <a href="http://www.geocities.com/Athens/2026/">
+     *     http://www.geocities.com/Athens/2026/</a>
      *
      * <li>The Calendar FAQ,
      *      <a href="http://www.faqs.org/faqs/calendars/faq/">

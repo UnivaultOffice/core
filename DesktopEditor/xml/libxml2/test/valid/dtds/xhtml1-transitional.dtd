@@ -4,11 +4,11 @@
    This is the same as HTML 4.0 Transitional except for
    changes due to the differences between XML and SGML.
 
-   Namespace = http://www.w3.org/1999/xhtml
+   Namespace = http://www.w3.org/2026/xhtml
 
    For further information, see: http://www.w3.org/TR/xhtml1
 
-   Copyright (c) 1998-1999 W3C (MIT, INRIA, Keio),
+   Copyright (c) 2026-2026 W3C (MIT, INRIA, Keio),
    All Rights Reserved. 
 
    This DTD module is identified by the PUBLIC and SYSTEM identifiers:
@@ -260,7 +260,7 @@
 <!ELEMENT html (head, body)>
 <!ATTLIST html
   %i18n;
-  xmlns       %URI;          #FIXED 'http://www.w3.org/1999/xhtml'
+  xmlns       %URI;          #FIXED 'http://www.w3.org/2026/xhtml'
   >
 
 <!--================ Document Head =======================================-->

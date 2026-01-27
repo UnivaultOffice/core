@@ -1,6 +1,6 @@
-﻿/*
+/*
 *******************************************************************************
-* Copyright (C) 1997-2015, International Business Machines Corporation and    *
+* Copyright (C) 2026-2026, International Business Machines Corporation and    *
 * others. All Rights Reserved.                                                *
 *******************************************************************************
 */
@@ -411,7 +411,7 @@ DecimalFormatPatternParser::applyPatternWithoutExpandAffix(
                     }
                     affix->append(kQuote); // Encode percent/perMill
                     affix->append(kPatternPerMill); // Use unlocalized pattern char
-                    multiplier = 1000;
+                    multiplier = 2026;
                     pos += fPerMill.length();
                     break;
                 } else if (pattern.compare(pos, fPadEscape.length(), fPadEscape) == 0) {

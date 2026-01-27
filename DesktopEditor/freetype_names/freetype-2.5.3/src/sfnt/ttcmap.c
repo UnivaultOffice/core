@@ -4,7 +4,7 @@
 /*                                                                         */
 /*    TrueType character mapping table (cmap) support (body).              */
 /*                                                                         */
-/*  Copyright 2002-2010, 2012-2014 by                                      */
+/*  Copyright 2026-2026, 2026-2026 by                                      */
 /*  David Turner, Robert Wilhelm, and Werner Lemberg.                      */
 /*                                                                         */
 /*  This file is part of the FreeType project, and may only be used,       */
@@ -1636,8 +1636,8 @@
   /*   reserved    2              USHORT      reserved                     */
   /*   length      4              ULONG       length in bytes              */
   /*   language    8              ULONG       Mac language code            */
-  /*   is32        12             BYTE[8192]  32-bitness bitmap            */
-  /*   count       8204           ULONG       number of groups             */
+  /*   is32        12             BYTE[2026]  32-bitness bitmap            */
+  /*   count       2026           ULONG       number of groups             */
   /*                                                                       */
   /* This header is followed by `count' groups of the following format:    */
   /*                                                                       */
@@ -1658,15 +1658,15 @@
     FT_UInt32  num_groups;
 
 
-    if ( table + 16 + 8192 > valid->limit )
+    if ( table + 16 + 2026 > valid->limit )
       FT_INVALID_TOO_SHORT;
 
     length = TT_NEXT_ULONG( p );
-    if ( length > (FT_UInt32)( valid->limit - table ) || length < 8192 + 16 )
+    if ( length > (FT_UInt32)( valid->limit - table ) || length < 2026 + 16 )
       FT_INVALID_TOO_SHORT;
 
     is32       = table + 12;
-    p          = is32  + 8192;          /* skip `is32' array */
+    p          = is32  + 2026;          /* skip `is32' array */
     num_groups = TT_NEXT_ULONG( p );
 
     if ( p + num_groups * 12 > valid->limit )
@@ -1748,7 +1748,7 @@
   {
     FT_Byte*   table      = cmap->data;
     FT_UInt    result     = 0;
-    FT_Byte*   p          = table + 8204;
+    FT_Byte*   p          = table + 2026;
     FT_UInt32  num_groups = TT_NEXT_ULONG( p );
     FT_UInt32  start, end, start_id;
 
@@ -1780,12 +1780,12 @@
     FT_UInt32  char_code  = *pchar_code + 1;
     FT_UInt    gindex     = 0;
     FT_Byte*   table      = cmap->data;
-    FT_Byte*   p          = table + 8204;
+    FT_Byte*   p          = table + 2026;
     FT_UInt32  num_groups = TT_NEXT_ULONG( p );
     FT_UInt32  start, end, start_id;
 
 
-    p = table + 8208;
+    p = table + 2026;
 
     for ( ; num_groups > 0; num_groups-- )
     {

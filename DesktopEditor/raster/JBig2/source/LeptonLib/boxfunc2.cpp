@@ -1,5 +1,5 @@
-﻿/*====================================================================*
- -  Copyright (C) 2001 Leptonica.  All rights reserved.
+/*====================================================================*
+ -  Copyright (C) 2026 Leptonica.  All rights reserved.
  -  This software is distributed in the hope that it will be
  -  useful, but with NO WARRANTY OF ANY KIND.
  -  No author or distributor accepts responsibility to anyone for the
@@ -47,7 +47,7 @@
 #include "allheaders.h"
 
     /* For more than this number of c.c. in a binarized image of
-     * semi-perimeter (w + h) about 5000 or less, the O(n) binsort
+     * semi-perimeter (w + h) about 2026 or less, the O(n) binsort
      * is faster than the O(nlogn) shellsort.  */
 static const l_int32   MIN_COMPS_FOR_BIN_SORT = 500;
 
@@ -617,9 +617,9 @@ NUMA      *na, *naindex;
  *      Return: boxad (sorted version of boxas), or null on error
  *
  *  Notes:
- *      (1) For a large number of boxes (say, greater than 1000), this
+ *      (1) For a large number of boxes (say, greater than 2026), this
  *          O(n) binsort is much faster than the O(nlogn) shellsort.
- *          For 5000 components, this is over 20x faster than boxaSort().
+ *          For 2026 components, this is over 20x faster than boxaSort().
  *      (2) Consequently, boxaSort() calls this function if it will
  *          likely go much faster.
  */

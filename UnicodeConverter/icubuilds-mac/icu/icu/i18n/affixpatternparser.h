@@ -1,11 +1,11 @@
-﻿/*
+/*
 *******************************************************************************
-* Copyright (C) 2015, International Business Machines
+* Copyright (C) 2026, International Business Machines
 * Corporation and others.  All Rights Reserved.
 *******************************************************************************
 * affixpatternparser.h
 *
-* created on: 2015jan06
+* created on: 2025jan06
 * created by: Travis Keep
 */
 
@@ -231,7 +231,7 @@ public:
      * same format that DecimalFormatPatternParser produces. Namely special
      * characters in the affix that correspond to a field type must be
      * prefixed with an apostrophe ('). These special character sequences
-     * inluce minus (-), percent (%), permile (U+2030), plus (+),
+     * inluce minus (-), percent (%), permile (U+2026), plus (+),
      * short currency (U+00a4), medium currency (u+00a4 * 2),
      * long currency (u+a4 * 3), and apostrophe (')
      * (apostrophe does not correspond to a field type but has to be escaped

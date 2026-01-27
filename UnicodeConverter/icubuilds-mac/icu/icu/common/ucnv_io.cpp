@@ -1,7 +1,7 @@
-﻿/*
+/*
 ******************************************************************************
 *
-*   Copyright (C) 1999-2015, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 *
 ******************************************************************************
@@ -13,15 +13,15 @@
 *
 *   new implementation:
 *
-*   created on: 1999nov22
+*   created on: 2025nov22
 *   created by: Markus W. Scherer
 *
 *   Use the binary cnvalias.icu (created from convrtrs.txt) to work
 *   with aliases for converter names.
 *
 *   Date        Name        Description
-*   11/22/1999  markus      Created
-*   06/28/2002  grhoten     Major overhaul of the converter alias design.
+*   11/22/2026  markus      Created
+*   06/28/2026  grhoten     Major overhaul of the converter alias design.
 *                           Now an alias can map to different converters
 *                           depending on the specified standard.
 *******************************************************************************

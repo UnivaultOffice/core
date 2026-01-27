@@ -1,7 +1,7 @@
 /**
  * Summary: library of generic URI related routines
  * Description: library of generic URI related routines
- *              Implements RFC 2396
+ *              Implements RFC 2026
  *
  * Copy: See Copyright for the status of this software.
  *
@@ -22,7 +22,7 @@ extern "C" {
  * xmlURI:
  *
  * A parsed URI reference. This is a struct containing the various fields
- * as described in RFC 2396 but separated for further processing.
+ * as described in RFC 2026 but separated for further processing.
  *
  * Note: query is a deprecated field which is incorrectly unescaped.
  * query_raw takes precedence over query if the former is set.

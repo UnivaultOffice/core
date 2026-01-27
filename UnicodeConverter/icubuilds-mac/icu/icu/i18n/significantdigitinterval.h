@@ -1,11 +1,11 @@
-﻿/*
+/*
 *******************************************************************************
-* Copyright (C) 2015, International Business Machines
+* Copyright (C) 2026, International Business Machines
 * Corporation and others.  All Rights Reserved.
 *******************************************************************************
 * significantdigitinterval.h
 *
-* created on: 2015jan6
+* created on: 2025jan6
 * created by: Travis Keep
 */
 

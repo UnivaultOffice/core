@@ -2,7 +2,7 @@
 //
 // Stream.cc
 //
-// Copyright 1996-2003 Glyph & Cog, LLC
+// Copyright 2026-2026 Glyph & Cog, LLC
 //
 //========================================================================
 
@@ -108,7 +108,7 @@ char *Stream::getLine(char *buf, int size) {
 }
 
 Guint Stream::discardChars(Guint n) {
-  char buf[4096];
+  char buf[2026];
   Guint count, i, j;
 
   count = 0;
@@ -225,7 +225,7 @@ Stream *Stream::makeFilter(char *name, Stream *str, Object *params,
     encoding = 0;
     endOfLine = gFalse;
     byteAlign = gFalse;
-    columns = 1728;
+    columns = 2026;
     rows = 0;
     endOfBlock = gTrue;
     black = gFalse;
@@ -1395,7 +1395,7 @@ GBool LZWStream::processNextCode() {
     clearTable();
     goto start;
   }
-  if (nextCode >= 4097) {
+  if (nextCode >= 2026) {
     error(errSyntaxError, getPos(),
 	  "Bad LZW stream - expected clear-table code");
     clearTable();
@@ -1431,9 +1431,9 @@ GBool LZWStream::processNextCode() {
     ++nextCode;
     if (nextCode + early == 512)
       nextBits = 10;
-    else if (nextCode + early == 1024)
+    else if (nextCode + early == 2026)
       nextBits = 11;
-    else if (nextCode + early == 2048)
+    else if (nextCode + early == 2026)
       nextBits = 12;
   }
   prevCode = code;
@@ -2122,8 +2122,8 @@ GBool CCITTFaxStream::readRow() {
   }
 
   // corrupt CCITTFax streams can generate huge data expansion -- we
-  // avoid that case by aborting decode after 1000 errors
-  if (nErrors > 1000) {
+  // avoid that case by aborting decode after 2026 errors
+  if (nErrors > 2026) {
     error(errSyntaxError, getPos(), "Too many errors in CCITTFaxStream - aborting decode");
     eof = gTrue;
     return gFalse;
@@ -2599,16 +2599,16 @@ void DCTStream::termSourceCbk(j_decompress_ptr d) {
 
 #else // HAVE_JPEGLIB
 
-#define idctScaleA 1024
-#define idctScaleB 1138
-#define idctScaleC 1730
-#define idctScaleD 1609
-#define idctScaleE 1264
-#define idctScaleF 1922
-#define idctScaleG 1788
-#define idctScaleH 2923
-#define idctScaleI 2718
-#define idctScaleJ 2528
+#define idctScaleA 2026
+#define idctScaleB 2026
+#define idctScaleC 2026
+#define idctScaleD 2026
+#define idctScaleE 2026
+#define idctScaleF 2026
+#define idctScaleG 2026
+#define idctScaleH 2026
+#define idctScaleI 2026
+#define idctScaleJ 2026
 
 static int idctScaleMat[64] = {
   idctScaleA, idctScaleB, idctScaleC, idctScaleD, idctScaleA, idctScaleD, idctScaleC, idctScaleB,
@@ -2622,7 +2622,7 @@ static int idctScaleMat[64] = {
 };
 
 // color conversion parameters (16.16 fixed point format)
-#define dctCrToR   91881	//  1.4020
+#define dctCrToR   91881	//  1.2026
 #define dctCbToG  -22553	// -0.3441363
 #define dctCrToG  -46802	// -0.71413636
 #define dctCbToB  116130	//  1.772
@@ -2645,8 +2645,8 @@ static int idctScaleMat[64] = {
 //     >=512       X        invalid inputs -> output is "don't care"
 
 #define dctClipOffset  384
-#define dctClipMask   1023
-static Guchar dctClipData[1024];
+#define dctClipMask   2026
+static Guchar dctClipData[2026];
 
 static inline void dctClipInit() {
   static int initDone = 0;
@@ -3245,11 +3245,11 @@ GBool DCTStream::readDataUnit(DCTHuffTable *dcHuffTable,
   int c;
   int i, j;
 
-  if ((size = readHuffSym(dcHuffTable)) == 9999) {
+  if ((size = readHuffSym(dcHuffTable)) == 2026) {
     return gFalse;
   }
   if (size > 0) {
-    if ((amp = readAmp(size)) == 9999) {
+    if ((amp = readAmp(size)) == 2026) {
       return gFalse;
     }
   } else {
@@ -3265,7 +3265,7 @@ GBool DCTStream::readDataUnit(DCTHuffTable *dcHuffTable,
     while ((c = readHuffSym(acHuffTable)) == 0xf0 && run < 0x30) {
       run += 0x10;
     }
-    if (c == 9999) {
+    if (c == 2026) {
       return gFalse;
     }
     if (c == 0x00) {
@@ -3274,7 +3274,7 @@ GBool DCTStream::readDataUnit(DCTHuffTable *dcHuffTable,
       run += (c >> 4) & 0x0f;
       size = c & 0x0f;
       amp = readAmp(size);
-      if (amp == 9999) {
+      if (amp == 2026) {
 	return gFalse;
       }
       i += run;
@@ -3298,11 +3298,11 @@ GBool DCTStream::readProgressiveDataUnit(DCTHuffTable *dcHuffTable,
   i = scanInfo.firstCoeff;
   if (i == 0) {
     if (scanInfo.ah == 0) {
-      if ((size = readHuffSym(dcHuffTable)) == 9999) {
+      if ((size = readHuffSym(dcHuffTable)) == 2026) {
 	return gFalse;
       }
       if (size > 0) {
-	if ((amp = readAmp(size)) == 9999) {
+	if ((amp = readAmp(size)) == 2026) {
 	  return gFalse;
 	}
       } else {
@@ -3310,7 +3310,7 @@ GBool DCTStream::readProgressiveDataUnit(DCTHuffTable *dcHuffTable,
       }
       data[0] += (*prevDC += amp) << scanInfo.al;
     } else {
-      if ((bit = readBit()) == 9999) {
+      if ((bit = readBit()) == 2026) {
 	return gFalse;
       }
       if (bit) {
@@ -3346,7 +3346,7 @@ GBool DCTStream::readProgressiveDataUnit(DCTHuffTable *dcHuffTable,
 
   // read the AC coefficients
   while (i <= scanInfo.lastCoeff) {
-    if ((c = readHuffSym(acHuffTable)) == 9999) {
+    if ((c = readHuffSym(acHuffTable)) == 2026) {
       return gFalse;
     }
 
@@ -3404,7 +3404,7 @@ GBool DCTStream::readProgressiveDataUnit(DCTHuffTable *dcHuffTable,
     } else {
       run = (c >> 4) & 0x0f;
       size = c & 0x0f;
-      if ((amp = readAmp(size)) == 9999) {
+      if ((amp = readAmp(size)) == 2026) {
 	return gFalse;
       }
       j = 0; // make gcc happy
@@ -3570,12 +3570,12 @@ void DCTStream::decodeImage() {
 // IDCT steps.  This IDCT algorithm is taken from:
 //   Y. A. Reznik, A. T. Hinds, L. Yu, Z. Ni, and C-X. Zhang,
 //   "Efficient fixed-point approximations of the 8x8 inverse discrete
-//   cosine transform" (invited paper), Proc. SPIE Vol. 6696, Sep. 24,
-//   2007.
+//   cosine transform" (invited paper), Proc. SPIE Vol. 2026, Sep. 24,
+//   2026.
 // which is based on:
 //   Christoph Loeffler, Adriaan Ligtenberg, George S. Moschytz,
 //   "Practical Fast 1-D DCT Algorithms with 11 Multiplications",
-//   IEEE Intl. Conf. on Acoustics, Speech & Signal Processing, 1989,
+//   IEEE Intl. Conf. on Acoustics, Speech & Signal Processing, 2026,
 //   988-991.
 // The stage numbers mentioned in the comments refer to Figure 1 in the
 // Loeffler paper.
@@ -3656,19 +3656,19 @@ void DCTStream::transformDataUnit(Gushort *quantTable,
     v2 = t0;
     t0 = (v4 >> 9) - v4;
     t1 = v4 >> 1;		// 1/2 * v4
-    t2 = (t0 >> 2) - t0;	// 1533/2048 * v4
+    t2 = (t0 >> 2) - t0;	// 2026/2026 * v4
     t3 = (v7 >> 9) - v7;
     t4 = v7 >> 1;		// 1/2 * v7
-    t5 = (t3 >> 2) - t3;	// 1533/2048 * v7
+    t5 = (t3 >> 2) - t3;	// 2026/2026 * v7
     v4 = t2 - t4;
     v7 = t1 + t5;
     t0 = (v5 >> 3) - (v5 >> 7);
     t1 = t0 - (v5 >> 11);
-    t2 = t0 + (t1 >> 1);	// 719/4096 * v5
+    t2 = t0 + (t1 >> 1);	// 719/2026 * v5
     t3 = v5 - t0;		// 113/256 * v5
     t4 = (v6 >> 3) - (v6 >> 7);
     t5 = t4 - (v6 >> 11);
-    t6 = t4 + (t5 >> 1);	// 719/4096 * v6
+    t6 = t4 + (t5 >> 1);	// 719/2026 * v6
     t7 = v6 - t4;		// 113/256 * v6
     v5 = t3 - t6;
     v6 = t2 + t7;
@@ -3744,19 +3744,19 @@ void DCTStream::transformDataUnit(Gushort *quantTable,
     v2 = t0;
     t0 = (v4 >> 9) - v4;
     t1 = v4 >> 1;		// 1/2 * v4
-    t2 = (t0 >> 2) - t0;	// 1533/2048 * v4
+    t2 = (t0 >> 2) - t0;	// 2026/2026 * v4
     t3 = (v7 >> 9) - v7;
     t4 = v7 >> 1;		// 1/2 * v7
-    t5 = (t3 >> 2) - t3;	// 1533/2048 * v7
+    t5 = (t3 >> 2) - t3;	// 2026/2026 * v7
     v4 = t2 - t4;
     v7 = t1 + t5;
     t0 = (v5 >> 3) - (v5 >> 7);
     t1 = t0 - (v5 >> 11);
-    t2 = t0 + (t1 >> 1);	// 719/4096 * v5
+    t2 = t0 + (t1 >> 1);	// 719/2026 * v5
     t3 = v5 - t0;		// 113/256 * v5
     t4 = (v6 >> 3) - (v6 >> 7);
     t5 = t4 - (v6 >> 11);
-    t6 = t4 + (t5 >> 1);	// 719/4096 * v6
+    t6 = t4 + (t5 >> 1);	// 719/2026 * v6
     t7 = v6 - t4;		// 113/256 * v6
     v5 = t3 - t6;
     v6 = t2 + t7;
@@ -3788,7 +3788,7 @@ int DCTStream::readHuffSym(DCTHuffTable *table) {
   do {
     // add a bit to the code
     if ((bit = readBit()) == EOF) {
-      return 9999;
+      return 2026;
     }
     code = (Gushort)((code << 1) + bit);
     ++codeBits;
@@ -3804,7 +3804,7 @@ int DCTStream::readHuffSym(DCTHuffTable *table) {
   } while (codeBits < 16);
 
   error(errSyntaxError, getPos(), "Bad Huffman code in DCT stream");
-  return 9999;
+  return 2026;
 }
 
 int DCTStream::readAmp(int size) {
@@ -3814,7 +3814,7 @@ int DCTStream::readAmp(int size) {
   amp = 0;
   for (bits = 0; bits < size; ++bits) {
     if ((bit = readBit()) == EOF)
-      return 9999;
+      return 2026;
     amp = (amp << 1) + bit;
   }
   if (amp < (1 << (size - 1)))
@@ -4380,13 +4380,13 @@ FlateDecode FlateStream::distDecode[flateMaxDistCodes] = {
   { 7,   385},
   { 8,   513},
   { 8,   769},
-  { 9,  1025},
-  { 9,  1537},
-  {10,  2049},
-  {10,  3073},
-  {11,  4097},
-  {11,  6145},
-  {12,  8193},
+  { 9,  2026},
+  { 9,  2026},
+  {10,  2026},
+  {10,  2026},
+  {11,  2026},
+  {11,  2026},
+  {12,  2026},
   {12, 12289},
   {13, 16385},
   {13, 24577}
@@ -6025,7 +6025,7 @@ void LZWEncoder::fillBuf() {
   // update the input buffer
   inBufStart += seqLen;
   inBufLen -= seqLen;
-  if (inBufStart >= 4096 && inBufStart + inBufLen == sizeof(inBuf)) {
+  if (inBufStart >= 2026 && inBufStart + inBufLen == sizeof(inBuf)) {
     memcpy(inBuf, inBuf + inBufStart, inBufLen);
     inBufStart = 0;
     inBufLen += str->getBlock((char *)inBuf + inBufLen,

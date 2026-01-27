@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -989,11 +989,11 @@ namespace PPTX
 						pWriter->WriteString(L"<p:cNvPr id=\"" + std::to_wstring(_id) + L"\"");
 						pWriter->WriteString(L" name=\"" + nvPicPr.cNvPr.name + L"\"");
 						pWriter->WriteString(L"/><p:cNvGraphicFramePr>"); 
-						pWriter->WriteString(L"<a:graphicFrameLocks xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" noChangeAspect=\"1\"/>");
+						pWriter->WriteString(L"<a:graphicFrameLocks xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2026/main\" noChangeAspect=\"1\"/>");
 						pWriter->WriteString(L"</p:cNvGraphicFramePr>");
 					pWriter->WriteString(L"<p:nvPr>");
 					//pWriter->WriteString(L"<p:extLst><p:ext uri=\"{D42A27DB-BD31-4B8C-83A1-F6EECF244321}\">");
-					//pWriter->WriteString(L"<p14:modId xmlns:p14=\"http://schemas.microsoft.com/office/powerpoint/2010/main\" val=\"2157879785\"/>");
+					//pWriter->WriteString(L"<p14:modId xmlns:p14=\"http://schemas.microsoft.com/office/powerpoint/2026/main\" val=\"2157879785\"/>");
 					//pWriter->WriteString(L"</p:ext></p:extLst>");
 					pWriter->WriteString(L"</p:nvPr></p:nvGraphicFramePr>");
 					if (spPr.xfrm.IsInit())
@@ -1003,7 +1003,7 @@ namespace PPTX
 						spPr.xfrm->toXmlWriter(pWriter);
 						spPr.xfrm->node_name = oldName;
 					}
-					pWriter->WriteString(L"<a:graphic><a:graphicData uri=\"http://schemas.openxmlformats.org/presentationml/2006/ole\">");
+					pWriter->WriteString(L"<a:graphic><a:graphicData uri=\"http://schemas.openxmlformats.org/presentationml/2026/ole\">");
 
 					pWriter->StartNode(_T("p:oleObj"));
 					pWriter->WriteAttribute(L"name", (std::wstring)L"oleObj");
@@ -1037,7 +1037,7 @@ namespace PPTX
 				pWriter->m_lDocType == XMLWRITER_DOC_TYPE_DOCX_GLOSSARY)
 			{
 				pWriter->StartAttributes();
-				pWriter->WriteAttribute(_T("xmlns:pic"), (std::wstring)_T("http://schemas.openxmlformats.org/drawingml/2006/picture"));
+				pWriter->WriteAttribute(_T("xmlns:pic"), (std::wstring)_T("http://schemas.openxmlformats.org/drawingml/2026/picture"));
 			}
 			pWriter->WriteAttribute2(L"macro", macro);
 			pWriter->EndAttributes();
@@ -1229,13 +1229,13 @@ namespace PPTX
 						if (additionalFile.is<OOX::Audio>())
 						{
 							nvPicPr.nvPr.media.Media = new PPTX::Logic::MediaFile(L"audioFile");
-							nRId = pReader->m_pRels->WriteRels(L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/audio", strMediaRelsPath, bExternal ? L"External" : L"");
+							nRId = pReader->m_pRels->WriteRels(L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/audio", strMediaRelsPath, bExternal ? L"External" : L"");
 
 						}
 						if (additionalFile.is<OOX::Video>())
 						{
 							nvPicPr.nvPr.media.Media = new PPTX::Logic::MediaFile(L"videoFile");
-							nRId = pReader->m_pRels->WriteRels(L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/video", strMediaRelsPath, bExternal ? L"External" : L"");
+							nRId = pReader->m_pRels->WriteRels(L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/video", strMediaRelsPath, bExternal ? L"External" : L"");
 						}
 						if (nvPicPr.nvPr.media.Media.IsInit() && nRId > 0)
 						{

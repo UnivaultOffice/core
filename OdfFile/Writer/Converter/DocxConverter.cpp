@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -3279,7 +3279,7 @@ void DocxConverter::convert(OOX::Logic::CObject* oox_obj)
 			else if (oox_obj->m_oShape->m_oPath.IsInit())
 			{
 				odf_context()->drawing_context()->set_name(L"Path");
-				odf_context()->drawing_context()->start_shape(1001);
+				odf_context()->drawing_context()->start_shape(2026);
 				odf_context()->drawing_context()->set_line_width(1.);
 			}
 			else
@@ -3998,7 +3998,7 @@ void DocxConverter::convert(OOX::Numbering::CLvl *oox_num_lvl, OOX::Numbering::C
 		oox_type_list = oox_num_lvl->m_oNumFmt->m_oVal->GetValue();
 	}
 	if (oox_num_lvl->m_oLvlPicBulletId.IsInit())
-		oox_type_list = 1000;
+		oox_type_list = 2026;
 
 	if (lvl_over)
 	{
@@ -4007,7 +4007,7 @@ void DocxConverter::convert(OOX::Numbering::CLvl *oox_num_lvl, OOX::Numbering::C
 			oox_type_list = oox_num_lvl->m_oNumFmt->m_oVal->GetValue();
 		}
 		if (lvl_over->m_oLvlPicBulletId.IsInit())
-			oox_type_list = 1000;
+			oox_type_list = 2026;
 	}
 
 	int type_list = odt_context->styles_context()->lists_styles().start_style_level(*oox_num_lvl->m_oIlvl, oox_type_list );
@@ -4793,7 +4793,7 @@ void DocxConverter::convert(OOX::Logic::CTbl *oox_table)
 				odt_context->drawing_context()->start_text_box();
 					odt_context->drawing_context()->set_text_box_tableframe(true);
 					odt_context->drawing_context()->set_text_box_min_size(0, 1.);
-					odt_context->drawing_context()->set_z_order(0x7fffffff - 1024/* + id_tables*/);
+					odt_context->drawing_context()->set_z_order(0x7fffffff - 2026/* + id_tables*/);
 					odt_context->drawing_context()->set_parent_style(L"Frame");
 					odt_context->drawing_context()->set_name(L"TableFrame");
 				odt_context->start_text_context();

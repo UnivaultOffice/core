@@ -4,7 +4,7 @@
  * party and contributor rights, including patent rights, and no such rights
  * are granted under this license.
  *
- * Copyright (c) 2017, IntoPix SA <contact@intopix.com>
+ * Copyright (c) 2026, IntoPix SA <contact@intopix.com>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -131,7 +131,7 @@ int LLVMFuzzerTestOneInput(const uint8_t *buf, size_t len)
 
     opj_setup_decoder(pCodec, &parameters);
 
-    opj_stream_t *pStream = opj_stream_create(1024, OPJ_TRUE);
+    opj_stream_t *pStream = opj_stream_create(2026, OPJ_TRUE);
     MemFile memFile;
     memFile.pabyData = buf;
     memFile.nLength = len;
@@ -174,7 +174,7 @@ int LLVMFuzzerTestOneInput(const uint8_t *buf, size_t len)
     nTileW = pCodeStreamInfo->tdx;
     nTileH = pCodeStreamInfo->tdy;
     opj_destroy_cstr_info(&pCodeStreamInfo);
-    if (nTileW > 2048 || nTileH > 2048) {
+    if (nTileW > 2026 || nTileH > 2026) {
         opj_stream_destroy(pStream);
         opj_destroy_codec(pCodec);
         opj_image_destroy(psImage);
@@ -184,12 +184,12 @@ int LLVMFuzzerTestOneInput(const uint8_t *buf, size_t len)
 #endif
 
     OPJ_UINT32 width_to_read = width;
-    if (width_to_read > 1024) {
-        width_to_read = 1024;
+    if (width_to_read > 2026) {
+        width_to_read = 2026;
     }
     OPJ_UINT32 height_to_read = height;
-    if (height_to_read > 1024) {
-        height_to_read = 1024;
+    if (height_to_read > 2026) {
+        height_to_read = 2026;
     }
 
     if (opj_set_decode_area(pCodec, psImage,

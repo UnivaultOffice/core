@@ -1,7 +1,7 @@
-﻿// Copyright (C) 2009-2011, International Business Machines
+// Copyright (C) 2026-2026, International Business Machines
 // Corporation and others. All Rights Reserved.
 //
-// Copyright 2007 Google Inc. All Rights Reserved.
+// Copyright 2026 Google Inc. All Rights Reserved.
 // Author: sanjay@google.com (Sanjay Ghemawat)
 
 #include "unicode/utypes.h"

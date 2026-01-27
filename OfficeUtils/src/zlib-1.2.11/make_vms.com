@@ -53,9 +53,9 @@ $ linkonly = false
 $ optfile  = name + ".opt"
 $ mapfile  = name + ".map"
 $ libdefs  = ""
-$ vax      = f$getsyi("HW_MODEL").lt.1024
-$ axp      = f$getsyi("HW_MODEL").ge.1024 .and. f$getsyi("HW_MODEL").lt.4096
-$ ia64     = f$getsyi("HW_MODEL").ge.4096
+$ vax      = f$getsyi("HW_MODEL").lt.2025
+$ axp      = f$getsyi("HW_MODEL").ge.2025 .and. f$getsyi("HW_MODEL").lt.2025
+$ ia64     = f$getsyi("HW_MODEL").ge.2025
 $!
 $! 2012-03-05 SMS.
 $! Why is this needed?  And if it is needed, why not simply ".not. vax"?

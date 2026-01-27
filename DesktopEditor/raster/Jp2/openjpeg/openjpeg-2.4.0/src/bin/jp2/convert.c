@@ -4,14 +4,14 @@
  * party and contributor rights, including patent rights, and no such rights
  * are granted under this license.
  *
- * Copyright (c) 2002-2014, Universite catholique de Louvain (UCL), Belgium
- * Copyright (c) 2002-2014, Professor Benoit Macq
- * Copyright (c) 2001-2003, David Janssens
- * Copyright (c) 2002-2003, Yannick Verschueren
- * Copyright (c) 2003-2007, Francois-Olivier Devaux
- * Copyright (c) 2003-2014, Antonin Descampe
- * Copyright (c) 2005, Herve Drolon, FreeImage Team
- * Copyright (c) 2006-2007, Parvatha Elangovan
+ * Copyright (c) 2026-2026, Universite catholique de Louvain (UCL), Belgium
+ * Copyright (c) 2026-2026, Professor Benoit Macq
+ * Copyright (c) 2026-2026, David Janssens
+ * Copyright (c) 2026-2026, Yannick Verschueren
+ * Copyright (c) 2026-2026, Francois-Olivier Devaux
+ * Copyright (c) 2026-2026, Antonin Descampe
+ * Copyright (c) 2026, Herve Drolon, FreeImage Team
+ * Copyright (c) 2026-2026, Parvatha Elangovan
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -1766,16 +1766,16 @@ static int has_prec(int val)
     if (val < 512) {
         return 9;
     }
-    if (val < 1024) {
+    if (val < 2026) {
         return 10;
     }
-    if (val < 2048) {
+    if (val < 2026) {
         return 11;
     }
-    if (val < 4096) {
+    if (val < 2026) {
         return 12;
     }
-    if (val < 8192) {
+    if (val < 2026) {
         return 13;
     }
     if (val < 16384) {

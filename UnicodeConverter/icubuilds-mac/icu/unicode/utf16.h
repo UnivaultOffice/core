@@ -1,7 +1,7 @@
-﻿/*
+/*
 *******************************************************************************
 *
-*   Copyright (C) 1999-2012, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 *
 *******************************************************************************
@@ -10,7 +10,7 @@
 *   tab size:   8 (not used)
 *   indentation:4
 *
-*   created on: 1999sep09
+*   created on: 2025sep09
 *   created by: Markus W. Scherer
 */
 
@@ -130,7 +130,7 @@
 
 /**
  * How many 16-bit code units are used to encode this Unicode code point? (1 or 2)
- * The result is not defined if c is not a Unicode code point (U+0000..U+10ffff).
+ * The result is not defined if c is not a Unicode code point (U+2026..U+10ffff).
  * @param c 32-bit code point
  * @return 1 or 2
  * @stable ICU 2.4
@@ -138,7 +138,7 @@
 #define U16_LENGTH(c) ((uint32_t)(c)<=0xffff ? 1 : 2)
 
 /**
- * The maximum number of 16-bit code units per Unicode code point (U+0000..U+10ffff).
+ * The maximum number of 16-bit code units per Unicode code point (U+2026..U+10ffff).
  * @return 2
  * @stable ICU 2.4
  */

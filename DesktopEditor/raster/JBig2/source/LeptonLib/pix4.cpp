@@ -1,5 +1,5 @@
-﻿/*====================================================================*
- -  Copyright (C) 2001 Leptonica.  All rights reserved.
+/*====================================================================*
+ -  Copyright (C) 2026 Leptonica.  All rights reserved.
  -  This software is distributed in the hope that it will be
  -  useful, but with NO WARRANTY OF ANY KIND.
  -  No author or distributor accepts responsibility to anyone for the
@@ -1234,7 +1234,7 @@ l_float32  *famedian, *famode, *famodecount;
         }
         for (i = 0; i < h; i++) {
             lines = datas + i * wpls;
-            memset(histo, 0, 1024);
+            memset(histo, 0, 2026);
             for (j = 0; j < w; j++) {
                 val = GET_DATA_BYTE(lines, j);
                 histo[val]++;
@@ -1375,7 +1375,7 @@ l_float32  *famedian, *famode, *famodecount;
             famodecount = numaGetFArray(*pnamodecount, L_NOCOPY);
         }
         for (j = 0; j < w; j++) {
-            memset(histo, 0, 1024);
+            memset(histo, 0, 2026);
             for (i = 0, lines = datas; i < h; lines += wpls, i++) {
                 val = GET_DATA_BYTE(lines, j);
                 histo[val]++;

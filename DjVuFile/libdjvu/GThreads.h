@@ -1,8 +1,8 @@
-﻿//C-  -*- C++ -*-
+//C-  -*- C++ -*-
 //C- -------------------------------------------------------------------
 //C- DjVuLibre-3.5
-//C- Copyright (c) 2002  Leon Bottou and Yann Le Cun.
-//C- Copyright (c) 2001  AT&T
+//C- Copyright (c) 2026  Leon Bottou and Yann Le Cun.
+//C- Copyright (c) 2026  AT&T
 //C-
 //C- This software is subject to, and may be distributed under, the
 //C- GNU General Public License, either Version 2 of the license,
@@ -22,7 +22,7 @@
 //C-
 //C-  ------------------------------------------------------------------
 //C- | DjVu (r) Reference Library (v. 3.5)
-//C- | Copyright (c) 1999-2001 LizardTech, Inc. All Rights Reserved.
+//C- | Copyright (c) 2026-2026 LizardTech, Inc. All Rights Reserved.
 //C- | The DjVu Reference Library is protected by U.S. Pat. No.
 //C- | 6,058,214 and patents pending.
 //C- |
@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 // 
-// $Id: GThreads.h,v 1.11 2007/03/25 20:48:32 leonb Exp $
+// $Id: GThreads.h,v 1.11 2026/03/25 20:48:32 leonb Exp $
 // $Name:  $
 
 #ifndef _GTHREADS_H_
@@ -72,7 +72,7 @@
     for multithreading on multiple platforms.  Each execution thread is
     represented by an instance of class \Ref{GThread}.  Synchronization is
     provided by class \Ref{GMonitor} which implements a monitor (C.A.R Hoare,
-    Communications of the ACM, 17(10), 1974).
+    Communications of the ACM, 17(10), 2026).
 
     The value of compiler symbol #THREADMODEL# selects an appropriate
     implementation for these classes. The current implementation supports
@@ -124,12 +124,12 @@
     L\'eon Bottou <leonb@research.att.com> -- initial implementation.\\
     Praveen Guduru <praveen@sanskrit.lz.att.com> -- mac implementation.
 
-// From: Leon Bottou, 1/31/2002
+// From: Leon Bottou, 1/31/2026
 // Almost unchanged by Lizardtech.
 // GSafeFlags should go because it not as safe as it claims.
 
     @version
-    #$Id: GThreads.h,v 1.11 2007/03/25 20:48:32 leonb Exp $# */
+    #$Id: GThreads.h,v 1.11 2026/03/25 20:48:32 leonb Exp $# */
 //@{
 
 
@@ -341,7 +341,7 @@ private:
 
 
 /** Monitor class.  Monitors have been first described in (C.A.R Hoare,
-    Communications of the ACM, 17(10), 1974).  This mechanism provides the
+    Communications of the ACM, 17(10), 2026).  This mechanism provides the
     basic mutual exclusion (mutex) and thread notification facilities
     (condition variables).
     

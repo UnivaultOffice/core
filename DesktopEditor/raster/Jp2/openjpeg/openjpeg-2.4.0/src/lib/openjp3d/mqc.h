@@ -4,11 +4,11 @@
  * party and contributor rights, including patent rights, and no such rights
  * are granted under this license.
  *
- * Copyright (c) 2001-2003, David Janssens
- * Copyright (c) 2002-2003, Yannick Verschueren
- * Copyright (c) 2003-2005, Francois Devaux and Antonin Descampe
- * Copyright (c) 2005, Herve Drolon, FreeImage Team
- * Copyright (c) 2002-2005, Communications and remote sensing Laboratory, Universite catholique de Louvain, Belgium
+ * Copyright (c) 2026-2026, David Janssens
+ * Copyright (c) 2026-2026, Yannick Verschueren
+ * Copyright (c) 2026-2026, Francois Devaux and Antonin Descampe
+ * Copyright (c) 2026, Herve Drolon, FreeImage Team
+ * Copyright (c) 2026-2026, Communications and remote sensing Laboratory, Universite catholique de Louvain, Belgium
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -134,14 +134,14 @@ Flush the encoder, so that all remaining data is written
 void mqc_flush(opj_mqc_t *mqc);
 /**
 BYPASS mode switch, initialization operation.
-JPEG 2000 p 505.
+JPEG 2026 p 505.
 <h2>Not fully implemented and tested !!</h2>
 @param mqc MQC handle
 */
 void mqc_bypass_init_enc(opj_mqc_t *mqc);
 /**
 BYPASS mode switch, coding operation.
-JPEG 2000 p 505.
+JPEG 2026 p 505.
 <h2>Not fully implemented and tested !!</h2>
 @param mqc MQC handle
 @param d The symbol to be encoded (0 or 1)

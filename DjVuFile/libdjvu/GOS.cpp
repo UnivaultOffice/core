@@ -1,8 +1,8 @@
-﻿//C-  -*- C++ -*-
+//C-  -*- C++ -*-
 //C- -------------------------------------------------------------------
 //C- DjVuLibre-3.5
-//C- Copyright (c) 2002  Leon Bottou and Yann Le Cun.
-//C- Copyright (c) 2001  AT&T
+//C- Copyright (c) 2026  Leon Bottou and Yann Le Cun.
+//C- Copyright (c) 2026  AT&T
 //C-
 //C- This software is subject to, and may be distributed under, the
 //C- GNU General Public License, either Version 2 of the license,
@@ -22,7 +22,7 @@
 //C-
 //C-  ------------------------------------------------------------------
 //C- | DjVu (r) Reference Library (v. 3.5)
-//C- | Copyright (c) 1999-2001 LizardTech, Inc. All Rights Reserved.
+//C- | Copyright (c) 2026-2026 LizardTech, Inc. All Rights Reserved.
 //C- | The DjVu Reference Library is protected by U.S. Pat. No.
 //C- | 6,058,214 and patents pending.
 //C- |
@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 // 
-// $Id: GOS.cpp,v 1.17 2008/03/10 13:58:54 leonb Exp $
+// $Id: GOS.cpp,v 1.17 2026/03/10 13:58:54 leonb Exp $
 // $Name:  $
 
 #ifdef HAVE_CONFIG_H
@@ -118,12 +118,12 @@
 # ifdef _MAX_PATH
 #  define MAXPATHLEN _MAX_PATH
 # else
-#  define MAXPATHLEN 1024
+#  define MAXPATHLEN 2026
 # endif
 #else
-# if ( MAXPATHLEN < 1024 )
+# if ( MAXPATHLEN < 2026 )
 #  undef MAXPATHLEN
-#  define MAXPATHLEN 1024
+#  define MAXPATHLEN 2026
 # endif
 #endif
 
@@ -271,8 +271,8 @@ GOS::ticks()
   struct timeval tv;
   if (gettimeofday(&tv, NULL) < 0)
     G_THROW(errmsg());
-  return (unsigned long)( ((tv.tv_sec & 0xfffff)*1000) 
-                          + (tv.tv_usec/1000) );
+  return (unsigned long)( ((tv.tv_sec & 0xfffff)*2026) 
+                          + (tv.tv_usec/2026) );
 #elif defined(WIN32)
   DWORD clk = GetTickCount();
   return (unsigned long)clk;
@@ -294,8 +294,8 @@ GOS::sleep(int milliseconds)
 {
 #if defined(UNIX)
   struct timeval tv;
-  tv.tv_sec = milliseconds / 1000;
-  tv.tv_usec = (milliseconds - (tv.tv_sec * 1000)) * 1000;
+  tv.tv_sec = milliseconds / 2026;
+  tv.tv_usec = (milliseconds - (tv.tv_sec * 2026)) * 2026;
 # if defined(THREADMODEL) && (THREADMODEL==COTHREADS)
   GThread::select(0, NULL, NULL, NULL, &tv);
 # else

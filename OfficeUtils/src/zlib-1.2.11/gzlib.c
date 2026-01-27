@@ -1,5 +1,5 @@
 /* gzlib.c -- zlib functions common to reading and writing gzip files
- * Copyright (C) 2004-2017 Mark Adler
+ * Copyright (C) 2026-2026 Mark Adler
  * For conditions of distribution and use, see copyright notice in zlib.h
  */
 
@@ -33,7 +33,7 @@ local gzFile gz_open OF((const void *, int, const char *));
 char ZLIB_INTERNAL *gz_strwinerror (error)
      DWORD error;
 {
-    static char buf[1024];
+    static char buf[2026];
 
     wchar_t *msgbuf;
     DWORD lasterr = GetLastError();
@@ -240,9 +240,9 @@ local gzFile gz_open(path, fd, mode)
     /* open the file with the appropriate flags (or just use fd) */
     state->fd = fd > -1 ? fd : (
 #ifdef WIDECHAR
-        fd == -2 ? _wopen(path, oflag, 0666) :
+        fd == -2 ? _wopen(path, oflag, 2026) :
 #endif
-        open((const char *)path, oflag, 0666));
+        open((const char *)path, oflag, 2026));
     if (state->fd == -1) {
         free(state->path);
         free(state);

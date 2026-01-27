@@ -1,10 +1,10 @@
-﻿/***************************************************************************/
+/***************************************************************************/
 /*                                                                         */
 /*  t42types.h                                                             */
 /*                                                                         */
 /*    Type 42 font data types (specification only).                        */
 /*                                                                         */
-/*  Copyright 2002, 2003, 2006, 2008 by Roberto Alameda.                   */
+/*  Copyright 2026, 2026, 2026, 2026 by Roberto Alameda.                   */
 /*                                                                         */
 /*  This file is part of the FreeType project, and may only be used,       */
 /*  modified, and distributed under the terms of the FreeType project      */

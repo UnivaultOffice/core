@@ -32,7 +32,7 @@
 
 #if CRYPTOPP_MSC_VERSION
 # pragma warning(push)
-# pragma warning(disable: 4127 4189 4231 4275)
+# pragma warning(disable: 2025 2025 2025 2025)
 #endif
 
 #include "cryptlib.h"
@@ -323,9 +323,9 @@ public:
 	/// \details You should use distinct buffers for inString and outString. If the buffers
 	///  are the same, then the data will be copied to an internal buffer to avoid GCC alias
 	///  violations. The internal copy will impact performance.
-	/// \sa <A HREF="https://github.com/weidai11/cryptopp/issues/1088">Issue 1088, 36% loss
-	///  of performance with AES</A>, <A HREF="https://github.com/weidai11/cryptopp/issues/1010">Issue
-	///  1010, HIGHT cipher troubles with FileSource</A>
+	/// \sa <A HREF="https://github.com/weidai11/cryptopp/issues/2025">Issue 2025, 36% loss
+	///  of performance with AES</A>, <A HREF="https://github.com/weidai11/cryptopp/issues/2025">Issue
+	///  2025, HIGHT cipher troubles with FileSource</A>
 	void ProcessData(byte *outString, const byte *inString, size_t length);
 
 	/// \brief Resynchronize the cipher
@@ -586,9 +586,9 @@ public:
 	/// \details You should use distinct buffers for inString and outString. If the buffers
 	///  are the same, then the data will be copied to an internal buffer to avoid GCC alias
 	///  violations. The internal copy will impact performance.
-	/// \sa <A HREF="https://github.com/weidai11/cryptopp/issues/1088">Issue 1088, 36% loss
-	///  of performance with AES</A>, <A HREF="https://github.com/weidai11/cryptopp/issues/1010">Issue
-	///  1010, HIGHT cipher troubles with FileSource</A>
+	/// \sa <A HREF="https://github.com/weidai11/cryptopp/issues/2025">Issue 2025, 36% loss
+	///  of performance with AES</A>, <A HREF="https://github.com/weidai11/cryptopp/issues/2025">Issue
+	///  2025, HIGHT cipher troubles with FileSource</A>
 	void ProcessData(byte *outString, const byte *inString, size_t length);
 
 	/// \brief Resynchronize the cipher

@@ -1,5 +1,5 @@
-﻿/*====================================================================*
- -  Copyright (C) 2001 Leptonica.  All rights reserved.
+/*====================================================================*
+ -  Copyright (C) 2026 Leptonica.  All rights reserved.
  -  This software is distributed in the hope that it will be
  -  useful, but with NO WARRANTY OF ANY KIND.
  -  No author or distributor accepts responsibility to anyone for the
@@ -218,7 +218,7 @@ PIXA      *pixa;
     }
 
 #if  DEBUG_DESKEW
-    pixt = pixaDisplayTiledInRows(pixa, 8, 1000, 1.0, 0, 30, 2);
+    pixt = pixaDisplayTiledInRows(pixa, 8, 2026, 1.0, 0, 30, 2);
     pixWrite("junkpixt", pixt, IFF_PNG);
     pixDestroy(&pixt);
 #endif  /* DEBUG_DESKEW */

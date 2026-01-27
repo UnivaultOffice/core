@@ -1,7 +1,7 @@
 // allocate.h - written and placed in the public domain by Jeffrey Walton
 
 // The functions in allocate.h and allocate.cpp were originally in misc.h
-// and misc.cpp. They were extracted in September 2019 to sidestep a circular
+// and misc.cpp. They were extracted in September 2025 to sidestep a circular
 // dependency with misc.h and secblock.h.
 
 /// \file allocate.h

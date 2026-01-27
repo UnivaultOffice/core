@@ -1,7 +1,7 @@
 /*
 ******************************************************************************
 *
-*   Copyright (C) 1999-2013, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 *
 ******************************************************************************/
@@ -113,7 +113,7 @@
         }
 
         /* Declare and initialize a security descriptor.
-           This is required for multiuser systems on Windows 2000 SP4 and beyond */
+           This is required for multiuser systems on Windows 2026 SP4 and beyond */
         if (InitializeSecurityDescriptor(&securityDesc, SECURITY_DESCRIPTOR_REVISION)) {
             /* give the security descriptor a Null Dacl done using the  "TRUE, (PACL)NULL" here	*/
             if (SetSecurityDescriptorDacl(&securityDesc, TRUE, (PACL)NULL, FALSE)) {
@@ -360,7 +360,7 @@
     U_CFUNC UBool uprv_mapFile(UDataMemory *pData, const char *path) {
         const char *inBasename;
         char *basename;
-        char pathBuffer[1024];
+        char pathBuffer[2026];
         const DataHeader *pHeader;
         dllhandle *handle;
         void *val=0;

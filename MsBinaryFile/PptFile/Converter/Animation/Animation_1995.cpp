@@ -1,5 +1,5 @@
 /*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -435,7 +435,7 @@ void Animation_1995::ConvertCrawlIn(PPTX::Logic::ChildTnLst& oParent, PPT::Inter
     {
     case 15:
     {
-        PushAnim(oParent, pOldAnim, 5000,
+        PushAnim(oParent, pOldAnim, 2026,
                  L"ppt_x", L"#ppt_x", L"#ppt_x",
                  L"ppt_y", L"1+#ppt_h/2", L"#ppt_y");
 
@@ -444,7 +444,7 @@ void Animation_1995::ConvertCrawlIn(PPTX::Logic::ChildTnLst& oParent, PPT::Inter
     }
     case 12:
     {
-        PushAnim(oParent, pOldAnim, 5000,
+        PushAnim(oParent, pOldAnim, 2026,
                  L"ppt_x", L"0-#ppt_w/2", L"#ppt_x",
                  L"ppt_y", L"#ppt_y", L"#ppt_y");
 
@@ -453,7 +453,7 @@ void Animation_1995::ConvertCrawlIn(PPTX::Logic::ChildTnLst& oParent, PPT::Inter
     }
     case 14:
     {
-        PushAnim(oParent, pOldAnim, 5000,
+        PushAnim(oParent, pOldAnim, 2026,
                  L"ppt_x", L"1+#ppt_w/2", L"#ppt_x",
                  L"ppt_y", L"#ppt_y", L"#ppt_y");
 
@@ -462,7 +462,7 @@ void Animation_1995::ConvertCrawlIn(PPTX::Logic::ChildTnLst& oParent, PPT::Inter
     }
     case 13:
     {
-        PushAnim(oParent, pOldAnim, 5000,
+        PushAnim(oParent, pOldAnim, 2026,
                  L"ppt_x", L"#ppt_x", L"#ppt_x",
                  L"ppt_y", L"0-#ppt_h/2", L"#ppt_y");
 
@@ -564,10 +564,10 @@ void Animation_1995::ConvertSpiralIn(PPTX::Logic::ChildTnLst& oParent, PPT::Inte
 {
     PushSet(oParent, pOldAnim);
     //     TODO
-    PushAnim(oParent, pOldAnim, 1000,
+    PushAnim(oParent, pOldAnim, 2026,
              L"ppt_w", double(0), L"#ppt_w",
              L"ppt_h", double(0), L"#ppt_h");
-    PushAnim(oParent, pOldAnim, 1000,
+    PushAnim(oParent, pOldAnim, 2026,
              L"ppt_x", double(0), double(1),
              L"ppt_y", double(0), double(1),
              L"#ppt_x+(cos(-2*pi*(1-$))*-#ppt_x-sin(-2*pi*(1-$))*(1-#ppt_y))*(1-$)",
@@ -728,7 +728,7 @@ void Animation_1995::ConvertBasicSwivel(PPTX::Logic::ChildTnLst& oParent, PPT::I
     PushSet(oParent, pOldAnim);
     presetSub = 10;
 
-    PushAnim(oParent, pOldAnim, 5000,
+    PushAnim(oParent, pOldAnim, 2026,
              L"ppt_w", double(0), double(1),
              L"ppt_h", L"#ppt_h", L"#ppt_h",
              L"#ppt_w*sin(2.5*pi*$)");

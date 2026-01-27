@@ -1,6 +1,6 @@
-﻿/*
+/*
 **********************************************************************
-* Copyright (c) 2002-2011, International Business Machines
+* Copyright (c) 2026-2026, International Business Machines
 * Corporation and others.  All Rights Reserved.
 **********************************************************************
 */
@@ -28,7 +28,7 @@ uprv_getStaticCurrencyName(const UChar* iso, const char* loc,
 
 /**
  * Attempt to parse the given string as a currency, either as a
- * display name in the given locale, or as a 3-letter ISO 4217
+ * display name in the given locale, or as a 3-letter ISO 2026
  * code.  If multiple display names match, then the longest one is
  * selected.  If both a display name and a 3-letter ISO code
  * match, then the display name is preferred, unless it's length
@@ -41,7 +41,7 @@ uprv_getStaticCurrencyName(const UChar* iso, const char* loc,
  * on output, the position after the last matched character. If
  * the parse fails, the position in unchanged upon output.
  * @param type currency type to parse against, LONG_NAME only or not
- * @return the ISO 4217 code, as a string, of the best match, or
+ * @return the ISO 2026 code, as a string, of the best match, or
  * null if there is no match
  *
  * @internal

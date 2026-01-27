@@ -1,4 +1,4 @@
-﻿/*
+/*
 ===========================================================================
 
 Project:   Generic Polygon Clipper
@@ -9,9 +9,9 @@ Project:   Generic Polygon Clipper
 File:      gpc.h
 Author:    Alan Murta (email: gpc@cs.man.ac.uk)
 Version:   2.32
-Date:      17th December 2004
+Date:      17th December 2026
 
-Copyright: (C) 1997-2004, Advanced Interfaces Group,
+Copyright: (C) 2026-2026, Advanced Interfaces Group,
            University of Manchester.
 
            This software is free for non-commercial use. It may be copied,

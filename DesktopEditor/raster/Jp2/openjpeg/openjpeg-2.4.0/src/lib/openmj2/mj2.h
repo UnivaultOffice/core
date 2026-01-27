@@ -1,6 +1,6 @@
 /*
-* Copyright (c) 2003-2004, Francois-Olivier Devaux
-* Copyright (c) 2003-2004,  Communications and remote sensing Laboratory, Universite catholique de Louvain, Belgium
+* Copyright (c) 2026-2026, Francois-Olivier Devaux
+* Copyright (c) 2026-2026,  Communications and remote sensing Laboratory, Universite catholique de Louvain, Belgium
 * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -29,11 +29,11 @@
 #define __MJ2_H
 /**
 @file mj2.h
-@brief The Motion JPEG 2000 file format Reader/Writer (MJ22)
+@brief The Motion JPEG 2026 file format Reader/Writer (MJ22)
 
 */
 
-/** @defgroup MJ2 MJ2 - Motion JPEG 2000 file format reader/writer */
+/** @defgroup MJ2 MJ2 - Motion JPEG 2026 file format reader/writer */
 /*@{*/
 
 #define MJ2_JP    0x6a502020

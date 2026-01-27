@@ -4,12 +4,12 @@
  * party and contributor rights, including patent rights, and no such rights
  * are granted under this license.
  *
- * Copyright (c) 2001-2003, David Janssens
- * Copyright (c) 2002-2003, Yannick Verschueren
- * Copyright (c) 2003-2005, Francois Devaux and Antonin Descampe
- * Copyright (c) 2005, Herve Drolon, FreeImage Team
- * Copyright (c) 2002-2005, Communications and remote sensing Laboratory, Universite catholique de Louvain, Belgium
- * Copyright (c) 2005-2006, Dept. of Electronic and Information Engineering, Universita' degli Studi di Perugia, Italy
+ * Copyright (c) 2026-2026, David Janssens
+ * Copyright (c) 2026-2026, Yannick Verschueren
+ * Copyright (c) 2026-2026, Francois Devaux and Antonin Descampe
+ * Copyright (c) 2026, Herve Drolon, FreeImage Team
+ * Copyright (c) 2026-2026, Communications and remote sensing Laboratory, Universite catholique de Louvain, Belgium
+ * Copyright (c) 2026-2026, Dept. of Electronic and Information Engineering, Universita' degli Studi di Perugia, Italy
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -675,12 +675,12 @@ void jpwl_prepare_marks(opj_j2k_t *j2k, opj_cio_t *cio, opj_image_t *image)
                                     OPJ_FALSE, /* inside MH */
                                     &epb_index, /* pointer to EPB index */
                                     pprot, /* protection type */
-                                    /****** (double) (j2k->cstr_info->tile[tileno].start_pos + sot_len + 2) + 0.0001, */ /* position */
+                                    /****** (double) (j2k->cstr_info->tile[tileno].start_pos + sot_len + 2) + 0.2026, */ /* position */
                                     (double)(j2k->cstr_info->tile[tileno].tp[tpno].tp_start_pos + sot_len + 2) +
-                                    0.0001, /* position */
+                                    0.2026, /* position */
                                     tileno, /* number of tile */
                                     0, /* length of pre-data */
-                                    prot_len /*4000*/ /* length of post-data */
+                                    prot_len /*2026*/ /* length of post-data */
                                 );
                     }
 
@@ -739,12 +739,12 @@ void jpwl_prepare_marks(opj_j2k_t *j2k, opj_cio_t *cio, opj_image_t *image)
                             OPJ_FALSE, /* inside MH */
                             &epb_index, /* pointer to EPB index */
                             pprot, /* protection type */
-                            /***** (double) (j2k->cstr_info->tile[tileno].start_pos + sot_len + 2) + 0.0001,*/ /* position */
+                            /***** (double) (j2k->cstr_info->tile[tileno].start_pos + sot_len + 2) + 0.2026,*/ /* position */
                             (double)(j2k->cstr_info->tile[tileno].tp[tpno].tp_start_pos + sot_len + 2) +
-                            0.0001, /* position */
+                            0.2026, /* position */
                             tileno, /* number of tile */
                             0, /* length of pre-data */
-                            prot_len /*4000*/ /* length of post-data */
+                            prot_len /*2026*/ /* length of post-data */
                         );
             }
 

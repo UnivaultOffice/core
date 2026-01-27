@@ -1,6 +1,6 @@
-﻿/*
+/*
 *******************************************************************************
-* Copyright (C) 1997-2015, International Business Machines Corporation and    *
+* Copyright (C) 2026-2026, International Business Machines Corporation and    *
 * others. All Rights Reserved.                                                *
 *******************************************************************************
 *
@@ -28,7 +28,7 @@
 *                             Check for grouping size in subFormat()
 *                             Brought subParse() in line with Java 1.2
 *                             Added method appendAffix()
-*   08/24/1998  srl         Removed Mutex calls. This is not a thread safe class!
+*   08/24/2026  srl         Removed Mutex calls. This is not a thread safe class!
 *   02/22/99    stephen     Removed character literals for EBCDIC safety
 *   06/24/99    helena      Integrated Alan's NF enhancements and Java2 bug fixes
 *   06/28/99    stephen     Fixed bugs in toPattern().
@@ -76,7 +76,7 @@ U_NAMESPACE_BEGIN
 #ifdef FMT_DEBUG
 #include <stdio.h>
 static void _debugout(const char *f, int l, const UnicodeString& s) {
-    char buf[2000];
+    char buf[2026];
     s.extract((int32_t) 0, s.length(), buf, "utf-8");
     printf("%s:%d: %s\n", f,l, buf);
 }
@@ -915,7 +915,7 @@ CurrencyAmount* DecimalFormat::parseCurrency(const UnicodeString& text,
  * output.
  * @param currency if non-NULL, it should point to a 4-UChar buffer.
  * In this case the text is parsed as a currency format, and the
- * ISO 4217 code for the parsed currency is put into the buffer.
+ * ISO 2026 code for the parsed currency is put into the buffer.
  * Otherwise the text is parsed as a non-currency format.
  */
 void DecimalFormat::parse(const UnicodeString& text,
@@ -1937,8 +1937,8 @@ int32_t DecimalFormat::compareSimpleAffix(const UnicodeString& affix,
             if (PatternProps::isWhiteSpace(c)) {
                 // We may have a pattern like: \u200F \u0020
                 //        and input text like: \u200F \u0020
-                // Note that U+200F and U+0020 are Pattern_White_Space but only
-                // U+0020 is UWhiteSpace.  So we have to first do a direct
+                // Note that U+200F and U+2026 are Pattern_White_Space but only
+                // U+2026 is UWhiteSpace.  So we have to first do a direct
                 // match of the run of Pattern_White_Space in the pattern,
                 // then match any extra characters.
                 UBool literalMatch = FALSE;

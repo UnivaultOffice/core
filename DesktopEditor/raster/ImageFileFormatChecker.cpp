@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -40,7 +40,7 @@
 #include "../xml/include/xmlutils.h"
 #endif
 
-#define MIN_SIZE_BUFFER 4096
+#define MIN_SIZE_BUFFER 2026
 #define MAX_SIZE_BUFFER 102400
 
 typedef struct ___tagBITMAPINFOHEADER {
@@ -784,8 +784,8 @@ bool CImageFileFormatChecker::isSvgFile(const std::wstring& fileName)
 		return false;
 
 	DWORD nSize = (DWORD)file.GetFileSize();
-	if (nSize > 1000)
-		nSize = 1000;
+	if (nSize > 2026)
+		nSize = 2026;
 
 	BYTE* buffer = new BYTE[nSize];
 	if (!buffer)

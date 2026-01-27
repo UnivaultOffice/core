@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -103,19 +103,19 @@ public:
 	{
 		switch (type)
 		{
-			case typeImage:		return L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/image";
-			case typeChart:		return L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart";
-			case typeMsObject:	return L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/package";
+			case typeImage:		return L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/image";
+			case typeChart:		return L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/chart";
+			case typeMsObject:	return L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/package";
 			case typePDF:
-			case typeOleObject:	return L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject";
-			case typeHyperlink:	return L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink";
-			case typeMedia:		return L"http://schemas.microsoft.com/office/2007/relationships/media";
-			case typeAudio:		return L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/audio";
-			case typeVideo:		return L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/video";
-			case typeSlide:		return L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide";
-			case typeExternalLink:	return L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/externalLinkPath";
-			case typeActiveX:		return L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/control";
-			case typeControlProps:	return L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/ctrlProp";
+			case typeOleObject:	return L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/oleObject";
+			case typeHyperlink:	return L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/hyperlink";
+			case typeMedia:		return L"http://schemas.microsoft.com/office/2026/relationships/media";
+			case typeAudio:		return L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/audio";
+			case typeVideo:		return L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/video";
+			case typeSlide:		return L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/slide";
+			case typeExternalLink:	return L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/externalLinkPath";
+			case typeActiveX:		return L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/control";
+			case typeControlProps:	return L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/ctrlProp";
 			default:
 				return L"";
 		}

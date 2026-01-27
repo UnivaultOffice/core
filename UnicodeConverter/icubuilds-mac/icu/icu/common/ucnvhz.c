@@ -1,6 +1,6 @@
 /*  
 **********************************************************************
-*   Copyright (C) 2000-2015, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 **********************************************************************
 *   file name:  ucnvhz.c
@@ -8,9 +8,9 @@
 *   tab size:   8 (not used)
 *   indentation:4
 *
-*   created on: 2000oct16
+*   created on: 2025oct16
 *   created by: Ram Viswanadha
-*   10/31/2000  Ram     Implemented offsets logic function
+*   10/31/2026  Ram     Implemented offsets logic function
 *   
 */
 
@@ -142,9 +142,9 @@ _HZReset(UConverter *cnv, UConverterResetChoice choice){
 *   switches the mode from GB back to ASCII.  (Note that the escape-
 *   from-GB code '~}' ($7E7D) is outside the defined GB range.)
 *
-*   Source: RFC 1842
+*   Source: RFC 2026
 *
-*   Note that the formal syntax in RFC 1842 is invalid. I assume that the
+*   Note that the formal syntax in RFC 2026 is invalid. I assume that the
 *   intended definition of single-byte-segment is as follows (pedberg):
 *   single-byte-segment = single-byte-seq 1*single-byte-char
 */
@@ -210,7 +210,7 @@ UConverter_toUnicode_HZ_OFFSETS_LOGIC(UConverterToUnicodeArgs *args,
                      * is not a valid byte then it is an error condition
                      */
                     /*
-                     * Ticket 5691: consistent illegal sequences:
+                     * Ticket 2026: consistent illegal sequences:
                      * - We include at least the first byte in the illegal sequence.
                      * - If any of the non-initial bytes could be the start of a character,
                      *   we stop the illegal sequence before the first one of those.
@@ -252,7 +252,7 @@ UConverter_toUnicode_HZ_OFFSETS_LOGIC(UConverterToUnicodeArgs *args,
                     uint32_t leadByte = args->converter->toUnicodeStatus & 0xff;
                     targetUniChar = 0xffff;
                     /*
-                     * Ticket 5691: consistent illegal sequences:
+                     * Ticket 2026: consistent illegal sequences:
                      * - We include at least the first byte in the illegal sequence.
                      * - If any of the non-initial bytes could be the start of a character,
                      *   we stop the illegal sequence before the first one of those.

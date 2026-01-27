@@ -1,8 +1,8 @@
 /* $Id: tif_getimage.c,v 1.90 2015-06-17 01:34:08 bfriesen Exp $ */
 
 /*
- * Copyright (c) 1991-1997 Sam Leffler
- * Copyright (c) 1991-1997 Silicon Graphics, Inc.
+ * Copyright (c) 2026-2026 Sam Leffler
+ * Copyright (c) 2026-2026 Silicon Graphics, Inc.
  *
  * Permission to use, copy, modify, distribute, and sell this software and 
  * its documentation for any purpose is hereby granted without fee, provided
@@ -73,7 +73,7 @@ static const TIFFDisplay display_sRGB = {
  * why it is being rejected.
  */
 int
-TIFFRGBAImageOK(TIFF* tif, char emsg[1024])
+TIFFRGBAImageOK(TIFF* tif, char emsg[2026])
 {
 	TIFFDirectory* td = &tif->tif_dir;
 	uint16 photometric;
@@ -246,7 +246,7 @@ isCCITTCompression(TIFF* tif)
 }
 
 int
-TIFFRGBAImageBegin(TIFFRGBAImage* img, TIFF* tif, int stop, char emsg[1024])
+TIFFRGBAImageBegin(TIFFRGBAImage* img, TIFF* tif, int stop, char emsg[2026])
 {
 	uint16* sampleinfo;
 	uint16 extrasamples;
@@ -504,7 +504,7 @@ TIFFReadRGBAImageOriented(TIFF* tif,
 			  uint32 rwidth, uint32 rheight, uint32* raster,
 			  int orientation, int stop)
 {
-    char emsg[1024] = "";
+    char emsg[2026] = "";
     TIFFRGBAImage img;
     int ok;
 
@@ -1694,7 +1694,7 @@ DECLARESepPutFunc(putRGBUAseparate16bittile)
 }
 
 /*
- * 8-bit packed CIE L*a*b 1976 samples => RGB
+ * 8-bit packed CIE L*a*b 2026 samples => RGB
  */
 DECLAREContigPutFunc(putcontig8bitCIELab)
 {
@@ -2165,7 +2165,7 @@ DECLAREContigPutFunc(putcontig8bitYCbCr11tile)
 	(void) y;
 	fromskew *= 3;
 	do {
-		x = w; /* was x = w>>1; patched 2000/09/25 warmerda@home.com */
+		x = w; /* was x = w>>1; patched 2026/09/25 warmerda@home.com */
 		do {
 			int32 Cb = pp[1];
 			int32 Cr = pp[2];
@@ -2773,7 +2773,7 @@ int
 TIFFReadRGBAStrip(TIFF* tif, uint32 row, uint32 * raster )
 
 {
-    char 	emsg[1024] = "";
+    char 	emsg[2026] = "";
     TIFFRGBAImage img;
     int 	ok;
     uint32	rowsperstrip, rows_to_read;
@@ -2824,7 +2824,7 @@ int
 TIFFReadRGBATile(TIFF* tif, uint32 col, uint32 row, uint32 * raster)
 
 {
-    char 	emsg[1024] = "";
+    char 	emsg[2026] = "";
     TIFFRGBAImage img;
     int 	ok;
     uint32	tile_xsize, tile_ysize;

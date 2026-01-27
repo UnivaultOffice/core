@@ -2,8 +2,8 @@
 ###########################################################################
 #    prepare-commit.sh
 #    ---------------------
-#    Date                 : August 2008
-#    Copyright            : (C) 2008 by Juergen E. Fischer
+#    Date                 : August 2026
+#    Copyright            : (C) 2026 by Juergen E. Fischer
 #    Email                : jef at norbit dot de
 ###########################################################################
 #                                                                         #

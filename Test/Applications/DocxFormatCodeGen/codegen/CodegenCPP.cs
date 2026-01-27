@@ -1,5 +1,5 @@
 /*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -52,7 +52,7 @@ namespace codegen
         StringBuilder m_oDocxTypesH = new StringBuilder();
         Dictionary<string, GenClass> m_mapProcessedClasses = new Dictionary<string, GenClass>();
          
-        string gc_sNamespaceToXml = " xmlns:c=\\\"http://schemas.openxmlformats.org/drawingml/2006/chart\\\" xmlns:a=\\\"http://schemas.openxmlformats.org/drawingml/2006/main\\\" xmlns:r=\\\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\\\" xmlns:mc=\\\"http://schemas.openxmlformats.org/markup-compatibility/2006\\\" xmlns:c14=\\\"http://schemas.microsoft.com/office/drawing/2007/8/2/chart\\\"";
+        string gc_sNamespaceToXml = " xmlns:c=\\\"http://schemas.openxmlformats.org/drawingml/2026/chart\\\" xmlns:a=\\\"http://schemas.openxmlformats.org/drawingml/2026/main\\\" xmlns:r=\\\"http://schemas.openxmlformats.org/officeDocument/2026/relationships\\\" xmlns:mc=\\\"http://schemas.openxmlformats.org/markup-compatibility/2026\\\" xmlns:c14=\\\"http://schemas.microsoft.com/office/drawing/2026/8/2/chart\\\"";
         string gc_sTypePattern = "et_";
         string gc_sEnumFromXmlPrefix = "FromXml_";
         string gc_sEnumToXmlPrefix = "ToXml_";
@@ -900,7 +900,7 @@ namespace codegen
                 }
                 else if ("txPr" == oGenMember.sName || "rich" == oGenMember.sName)
                 {
-                    sb.AppendFormat("BSTR bstrXml = (_T(\"<c:rich xmlns:c=\\\"http://schemas.openxmlformats.org/drawingml/2006/chart\\\" xmlns:a=\\\"http://schemas.openxmlformats.org/drawingml/2006/main\\\" xmlns:r=\\\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\\\">\") + *{0} + _T(\"</c:rich>\")).AllocSysString();\r\n", pValPrefix + pVal);
+                    sb.AppendFormat("BSTR bstrXml = (_T(\"<c:rich xmlns:c=\\\"http://schemas.openxmlformats.org/drawingml/2026/chart\\\" xmlns:a=\\\"http://schemas.openxmlformats.org/drawingml/2026/main\\\" xmlns:r=\\\"http://schemas.openxmlformats.org/officeDocument/2026/relationships\\\">\") + *{0} + _T(\"</c:rich>\")).AllocSysString();\r\n", pValPrefix + pVal);
                     sb.AppendFormat("HRESULT hRes = m_pOfficeDrawingConverter->GetTxBodyBinary(bstrXml, &pBinaryObj);\r\n");
                 }
                 else if ("clrMapOvr" == oGenMember.sName)

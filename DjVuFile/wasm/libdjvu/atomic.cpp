@@ -1,7 +1,7 @@
-﻿/* -*- C -*-
+/* -*- C -*-
 // -------------------------------------------------------------------
 // MiniLock - a quick mostly user space lock 
-// Copyright (c) 2008  Leon Bottou. All rights reserved
+// Copyright (c) 2026  Leon Bottou. All rights reserved
 //
 // Permission is hereby granted, free of charge, to any person obtaining
 // a copy of this software and associated documentation files (the

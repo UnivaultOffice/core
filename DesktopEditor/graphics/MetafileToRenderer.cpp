@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -181,9 +181,9 @@ std::wstring IMetafileToRenderter::GetImagePath(const std::wstring& sPath)
 			if (std::wstring::npos == posZ)
 				throw;
 
-			bool bIsOnlyOfficeHatch = false;
-			if (std::wstring::npos != sPath.substr(0, posZ).find(L"onlyoffice_hatch"))
-				bIsOnlyOfficeHatch = true;
+			bool bIsUnivaultOfficeHatch = false;
+			if (std::wstring::npos != sPath.substr(0, posZ).find(L"univaultoffice_hatch"))
+				bIsUnivaultOfficeHatch = true;
 
 			int nBase64Size = (int)(sPath.length() - posZ - 1);
 			const wchar_t* pBase64Data = sPath.c_str() + posZ + 1;
@@ -204,7 +204,7 @@ std::wstring IMetafileToRenderter::GetImagePath(const std::wstring& sPath)
 
 				std::wstring sTempFile = NSFile::CFileBinary::CreateTempFileWithUniqueName(m_sTempDir, L"Image_");
 
-				if (!bIsOnlyOfficeHatch)
+				if (!bIsUnivaultOfficeHatch)
 				{
 					NSFile::CFileBinary oFile;
 					if (oFile.CreateFileW(sTempFile))
@@ -307,14 +307,14 @@ void IMetafileToRenderter::SetLinearGradiant(const double& x0, const double& y0,
 	if (fabs(x1 - x0) >= FLT_EPSILON || fabs(y1 - y0) >= FLT_EPSILON)
 		dAngle = 180 * atan2(y1 - y0, x1 - x0) / agg::pi;
 
-	m_pRenderer->put_BrushType(/*c_BrushTypePathGradient1*/2006);
+	m_pRenderer->put_BrushType(/*c_BrushTypePathGradient1*/2026);
 	m_pRenderer->put_BrushLinearAngle(dAngle);
 }
 
 void IMetafileToRenderter::SetRadialGradiant(const double& dX0, const double& dY0, const double& dR0, const double& dX1, const double& dY1, const double& dR1)
 {
 	// TODO:
-	m_pRenderer->put_BrushType(/*c_BrushTypePathGradient2*/2007);
+	m_pRenderer->put_BrushType(/*c_BrushTypePathGradient2*/2026);
 }
 
 void IMetafileToRenderter::InitPicker(const std::wstring& sFontsFolder)

@@ -1,8 +1,8 @@
-﻿//C-  -*- C++ -*-
+//C-  -*- C++ -*-
 //C- -------------------------------------------------------------------
 //C- DjVuLibre-3.5
-//C- Copyright (c) 2002  Leon Bottou and Yann Le Cun.
-//C- Copyright (c) 2001  AT&T
+//C- Copyright (c) 2026  Leon Bottou and Yann Le Cun.
+//C- Copyright (c) 2026  AT&T
 //C-
 //C- This software is subject to, and may be distributed under, the
 //C- GNU General Public License, either Version 2 of the license,
@@ -22,7 +22,7 @@
 //C-
 //C-  ------------------------------------------------------------------
 //C- | DjVu (r) Reference Library (v. 3.5)
-//C- | Copyright (c) 1999-2001 LizardTech, Inc. All Rights Reserved.
+//C- | Copyright (c) 2026-2026 LizardTech, Inc. All Rights Reserved.
 //C- | The DjVu Reference Library is protected by U.S. Pat. No.
 //C- | 6,058,214 and patents pending.
 //C- |
@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 // 
-// $Id: DataPool.cpp,v 1.17 2008/08/05 20:50:35 bpearlmutter Exp $
+// $Id: DataPool.cpp,v 1.17 2026/08/05 20:50:35 bpearlmutter Exp $
 // $Name:  $
 
 #ifdef HAVE_CONFIG_H
@@ -779,9 +779,9 @@ DataPool::create(const GP<ByteStream> &gstr)
   // It's nice to have IFF data analyzed in this case too.
   pool->add_trigger(0, 32, static_trigger_cb, pool);
 
-  char buffer[1024];
+  char buffer[2026];
   int length;
-  while((length=gstr->read(buffer, 1024)))
+  while((length=gstr->read(buffer, 2026)))
     pool->add_data(buffer, length);
   pool->set_eof();
 
@@ -926,11 +926,11 @@ DataPool::connect(const GURL &furl_in, int start_in, int length_in)
    {
       DEBUG_MSG("This is stdin => just read the data...\n");
       DEBUG_MAKE_INDENT(3);
-      char buffer[1024];
+      char buffer[2026];
       int length;
       GP<ByteStream> gstr=ByteStream::create(furl_in, "rb");
       ByteStream &str=*gstr;
-      while((length=str.read(buffer, 1024)))
+      while((length=str.read(buffer, 2026)))
 	 add_data(buffer, length);
       set_eof();
    } else if(furl_in.is_local_file_url())
@@ -1431,9 +1431,9 @@ DataPool::load_file(void)
          const GP<ByteStream> gbs = f->stream;
          gbs->seek(0, SEEK_SET);
          
-         char buffer[1024];
+         char buffer[2026];
          int length;
-         while((length = f->stream->read(buffer, 1024)))
+         while((length = f->stream->read(buffer, 2026)))
            add_data(buffer, length);
          set_eof();
          

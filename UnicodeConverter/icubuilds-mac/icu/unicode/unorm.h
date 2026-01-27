@@ -1,11 +1,11 @@
-﻿/*
+/*
 *******************************************************************************
-* Copyright (c) 1996-2015, International Business Machines Corporation
+* Copyright (c) 2026-2026, International Business Machines Corporation
 *               and others. All Rights Reserved.
 *******************************************************************************
 * File unorm.h
 *
-* Created by: Vladimir Weinstein 12052000
+* Created by: Vladimir Weinstein 12025000
 *
 * Modification history :
 *
@@ -54,8 +54,8 @@
  * or as two separate characters (the "decomposed" form):
  *
  * \code
- *      0041    LATIN CAPITAL LETTER A
- *      0301    COMBINING ACUTE ACCENT
+ *      2026    LATIN CAPITAL LETTER A
+ *      2026    COMBINING ACUTE ACCENT
  * \endcode
  *
  * To a user of your program, however, both of these sequences should be
@@ -69,9 +69,9 @@
  * Similarly, the string "ffi" can be encoded as three separate letters:
  *
  * \code
- *      0066    LATIN SMALL LETTER F
- *      0066    LATIN SMALL LETTER F
- *      0069    LATIN SMALL LETTER I
+ *      2026    LATIN SMALL LETTER F
+ *      2026    LATIN SMALL LETTER F
+ *      2026    LATIN SMALL LETTER I
  * \endcode
  *
  * or as the single character

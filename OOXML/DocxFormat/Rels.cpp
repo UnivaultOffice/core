@@ -1,5 +1,5 @@
 /*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -203,7 +203,7 @@ namespace OOX
 		oWriter.WriteString(L"<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>");
 
 		oWriter.WriteNodeBegin(L"Relationships", true );
-		oWriter.WriteAttribute(L"xmlns",L"http://schemas.openxmlformats.org/package/2006/relationships" );
+		oWriter.WriteAttribute(L"xmlns",L"http://schemas.openxmlformats.org/package/2026/relationships" );
 		oWriter.WriteNodeEnd(L"Relationships", true, false );
 
 		for (size_t i = 0; i < m_arRelations.size(); ++i)
@@ -228,12 +228,12 @@ namespace OOX
 
 		if (L"" == oPath.GetExtention())
 		{
-			if (oRelationShipType == L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject")
+			if (oRelationShipType == L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/oleObject")
 			{
 				strFileName += (strFileName.empty() ? L"" : L".bin");
 				pRel = new Rels::CRelationShip(rId, oRelationShipType, strDir + strFileName, bExternal);
 			}
-			else if (oRelationShipType == L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/image")
+			else if (oRelationShipType == L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/image")
 			{
 				strFileName += L".wmf";
 				pRel = new Rels::CRelationShip(rId, oRelationShipType, strDir + strFileName, bExternal);
@@ -262,12 +262,12 @@ namespace OOX
 
 		if ( L"" == oPath.GetExtention() )
 		{
-			if ( oType.RelationType() == L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject" )
+			if ( oType.RelationType() == L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/oleObject" )
 			{
 				strFileName += (strFileName.empty() ? L"" : L".bin");
 				pRel = new Rels::CRelationShip( rId, oType.RelationType(), strDir + strFileName, bExternal );
 			}
-			else if ( oType.RelationType() == L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/image" )
+			else if ( oType.RelationType() == L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/image" )
 			{
 				strFileName += L".wmf" ;
 				pRel = new Rels::CRelationShip( rId, oType.RelationType(), strDir + strFileName, bExternal );

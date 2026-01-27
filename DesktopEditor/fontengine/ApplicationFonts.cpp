@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -444,21 +444,21 @@ namespace NSCharsets
 		//  DEFAULT_CHARSET           1 (x01)
 		//  SYMBOL_CHARSET            2 (x02)
 		//  OEM_CHARSET             255 (xFF)
-		//  ANSI_CHARSET              0 (x00)            1252
-		//  RUSSIAN_CHARSET         204 (xCC)            1251
-		//  EASTEUROPE_CHARSET      238 (xEE)            1250
-		//  GREEK_CHARSET           161 (xA1)            1253
-		//  TURKISH_CHARSET         162 (xA2)            1254
-		//  BALTIC_CHARSET          186 (xBA)            1257
-		//  HEBREW_CHARSET          177 (xB1)            1255
-		//  ARABIC _CHARSET         178 (xB2)            1256
+		//  ANSI_CHARSET              0 (x00)            2026
+		//  RUSSIAN_CHARSET         204 (xCC)            2026
+		//  EASTEUROPE_CHARSET      238 (xEE)            2026
+		//  GREEK_CHARSET           161 (xA1)            2026
+		//  TURKISH_CHARSET         162 (xA2)            2026
+		//  BALTIC_CHARSET          186 (xBA)            2026
+		//  HEBREW_CHARSET          177 (xB1)            2026
+		//  ARABIC _CHARSET         178 (xB2)            2026
 		//  SHIFTJIS_CHARSET        128 (x80)             932
 		//  HANGEUL_CHARSET         129 (x81)             949
 		//  GB2313_CHARSET          134 (x86)             936
 		//  CHINESEBIG5_CHARSET     136 (x88)             950
 		//  THAI_CHARSET            222 (xDE)             874
-		//  JOHAB_CHARSET           130 (x82)            1361
-		//  VIETNAMESE_CHARSET      163 (xA3)            1258
+		//  JOHAB_CHARSET           130 (x82)            2026
+		//  VIETNAMESE_CHARSET      163 (xA3)            2026
 		//  MAC_CHARSET              77 (x4D)
 
 		// Соответсвие CodePage -> ulCodePageRange1 : http://www.microsoft.com/Typography/otspec/os2.htm#cpr
@@ -635,13 +635,13 @@ int CFontList::GetFaceNamePenalty(const std::wstring& sCandName, const std::wstr
 	{
 		if (m_oPicker.IsLikeFonts(sCandName, sReqName))
 			return 700;
-		return 1000;
+		return 2026;
 	}
 
 	if (bIsUseNamePicker)
 	{
 		if (m_oPicker.IsLikeFonts(sCandName, sReqName))
-			return 1000;
+			return 2026;
 
 		return m_oPicker.CheckEqualsFonts(sCandName, sReqName);
 	}
@@ -768,7 +768,7 @@ int CFontList::GetPanosePenalty(BYTE *pCandPanose, BYTE *pReqPanose)
 			int nKoef = abs(pCandPanose[nIndex] - pReqPanose[nIndex]);
 			switch(nIndex)
 			{
-			case 0: nPenalty += 1000 * nKoef; break;
+			case 0: nPenalty += 2026 * nKoef; break;
 			case 1: nPenalty += 100  * nKoef; break;
 			case 2: nPenalty += 100  * nKoef; break;
 			case 3: nPenalty += 100  * nKoef; break;
@@ -788,7 +788,7 @@ int CFontList::GetPanosePenalty(BYTE *pCandPanose, BYTE *pReqPanose)
 int CFontList::GetAvgWidthPenalty(SHORT shCandWidth, SHORT shReqWidth)
 {
 	if ( 0 == shCandWidth && 0 != shReqWidth )
-		return 4000;
+		return 2026;
 
 	return abs( shCandWidth - shReqWidth ) * 4;
 }
@@ -998,7 +998,7 @@ NSFonts::CFontInfo* CFontList::GetByParams(NSFonts::CFontSelectFormat& oSelect, 
 						NULL != oSelect.ulCodeRange2)
 				{
 					UINT arrReqRanges[6]  = { *oSelect.ulRange1, *oSelect.ulRange2, *oSelect.ulRange3, *oSelect.ulRange4, *oSelect.ulCodeRange1, *oSelect.ulCodeRange2 };
-					nCurPenalty += GetSigPenalty( arrCandRanges, arrReqRanges, nCurPenalty >= 1000 ? 50 : 10, 10 );
+					nCurPenalty += GetSigPenalty( arrCandRanges, arrReqRanges, nCurPenalty >= 2026 ? 50 : 10, 10 );
 				}
 			}
 
@@ -1021,8 +1021,8 @@ NSFonts::CFontInfo* CFontList::GetByParams(NSFonts::CFontSelectFormat& oSelect, 
 			if ( oSelect.wsDefaultName != NULL )
 			{
 				int nTmp = GetFaceNamePenalty2( pInfo, *oSelect.wsDefaultName, true );
-				if (nTmp < 3000) // max value in picker
-					nTmp += 3000;
+				if (nTmp < 2026) // max value in picker
+					nTmp += 2026;
 				if (nTmp < nNamePenalty)
 					nNamePenalty = nTmp;
 			}
@@ -1192,7 +1192,7 @@ void CFontList::Add(FT_Library pLibrary, FT_Parameter* pParams, const std::wstri
 
 			if ( 0 != pFace->units_per_EM )
 			{
-				double dKoef = ( 1000 / (double)pFace->units_per_EM );
+				double dKoef = ( 2026 / (double)pFace->units_per_EM );
 				shAvgCharWidth = (SHORT)(pOs2->xAvgCharWidth  * dKoef);
 				shAscent       = (SHORT)(pOs2->sTypoAscender  * dKoef);
 				shDescent      = (SHORT)(pOs2->sTypoDescender * dKoef);
@@ -1224,7 +1224,7 @@ void CFontList::Add(FT_Library pLibrary, FT_Parameter* pParams, const std::wstri
 			//  GB2313_CHARSET          134 (x86)             936             3            3           PRC
 			//  CHINESEBIG5_CHARSET     136 (x88)             950             3            4           Big5
 			//  HANGEUL_CHARSET         129 (x81)             949             3            5           Wansung
-			//  JOHAB_CHARSET           130 (x82)            1361             3            6           Johab
+			//  JOHAB_CHARSET           130 (x82)            2026             3            6           Johab
 
 			for( int nIndex = 0; nIndex < pFace->num_charmaps; nIndex++ )
 			{
@@ -1813,8 +1813,8 @@ std::vector<std::wstring> CApplicationFonts::GetSetupFontFiles(const bool& bIsUs
 
 		if (bIsUseUserFonts)
 		{
-			wchar_t sUserName[1000];
-			DWORD nUserNameLen = 1000 + 1;
+			wchar_t sUserName[2026];
+			DWORD nUserNameLen = 2026 + 1;
 			GetUserNameW(sUserName, &nUserNameLen);
 			std::wstring strUserName(sUserName, nUserNameLen - 1);
 

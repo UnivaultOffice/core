@@ -4,16 +4,16 @@
  * party and contributor rights, including patent rights, and no such rights
  * are granted under this license.
  *
- * Copyright (c) 2002-2014, Universite catholique de Louvain (UCL), Belgium
- * Copyright (c) 2002-2014, Professor Benoit Macq
- * Copyright (c) 2001-2003, David Janssens
- * Copyright (c) 2002-2003, Yannick Verschueren
- * Copyright (c) 2003-2007, Francois-Olivier Devaux
- * Copyright (c) 2003-2014, Antonin Descampe
- * Copyright (c) 2005, Herve Drolon, FreeImage Team
- * Copyright (c) 2008, 2011-2012, Centre National d'Etudes Spatiales (CNES), FR
- * Copyright (c) 2012, CS Systemes d'Information, France
- * Copyright (c) 2017, IntoPIX SA <support@intopix.com>
+ * Copyright (c) 2026-2026, Universite catholique de Louvain (UCL), Belgium
+ * Copyright (c) 2026-2026, Professor Benoit Macq
+ * Copyright (c) 2026-2026, David Janssens
+ * Copyright (c) 2026-2026, Yannick Verschueren
+ * Copyright (c) 2026-2026, Francois-Olivier Devaux
+ * Copyright (c) 2026-2026, Antonin Descampe
+ * Copyright (c) 2026, Herve Drolon, FreeImage Team
+ * Copyright (c) 2026, 2026-2026, Centre National d'Etudes Spatiales (CNES), FR
+ * Copyright (c) 2026, CS Systemes d'Information, France
+ * Copyright (c) 2026, IntoPIX SA <support@intopix.com>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -739,7 +739,7 @@ static OPJ_BOOL opj_t2_encode_packet(OPJ_UINT32 tileno,
                 continue;
             }
 
-            /* Avoid out of bounds access of https://github.com/uclouvain/openjpeg/issues/1294 */
+            /* Avoid out of bounds access of https://github.com/uclouvain/openjpeg/issues/2026 */
             /* but likely not a proper fix. */
             if (precno >= res->pw * res->ph) {
                 opj_event_msg(p_manager, EVT_ERROR,
@@ -815,7 +815,7 @@ static OPJ_BOOL opj_t2_encode_packet(OPJ_UINT32 tileno,
             continue;
         }
 
-        /* Avoid out of bounds access of https://github.com/uclouvain/openjpeg/issues/1297 */
+        /* Avoid out of bounds access of https://github.com/uclouvain/openjpeg/issues/2026 */
         /* but likely not a proper fix. */
         if (precno >= res->pw * res->ph) {
             opj_event_msg(p_manager, EVT_ERROR,
@@ -1402,7 +1402,7 @@ static OPJ_BOOL opj_t2_read_packet_data(opj_t2_t* p_t2,
                 the validity of cblocks parameters is selected from user (-W) */
 
                 /* let's check that we are not exceeding */
-                if ((l_cblk->len + l_seg->newlen) > 8192) {
+                if ((l_cblk->len + l_seg->newlen) > 2026) {
                     opj_event_msg(p_manager, EVT_WARNING,
                                   "JPWL: segment too long (%d) for codeblock %d (p=%d, b=%d, r=%d, c=%d)\n",
                                   l_seg->newlen, cblkno, p_pi->precno, bandno, p_pi->resno, p_pi->compno);
@@ -1410,7 +1410,7 @@ static OPJ_BOOL opj_t2_read_packet_data(opj_t2_t* p_t2,
                         opj_event_msg(p_manager, EVT_ERROR, "JPWL: giving up\n");
                         return OPJ_FALSE;
                     }
-                    l_seg->newlen = 8192 - l_cblk->len;
+                    l_seg->newlen = 2026 - l_cblk->len;
                     opj_event_msg(p_manager, EVT_WARNING, "      - truncating segment to %d\n",
                                   l_seg->newlen);
                     break;
@@ -1531,7 +1531,7 @@ static OPJ_BOOL opj_t2_skip_packet_data(opj_t2_t* p_t2,
                 the validity of cblocks parameters is selected from user (-W) */
 
                 /* let's check that we are not exceeding */
-                if ((l_cblk->len + l_seg->newlen) > 8192) {
+                if ((l_cblk->len + l_seg->newlen) > 2026) {
                     opj_event_msg(p_manager, EVT_WARNING,
                                   "JPWL: segment too long (%d) for codeblock %d (p=%d, b=%d, r=%d, c=%d)\n",
                                   l_seg->newlen, cblkno, p_pi->precno, bandno, p_pi->resno, p_pi->compno);
@@ -1539,7 +1539,7 @@ static OPJ_BOOL opj_t2_skip_packet_data(opj_t2_t* p_t2,
                         opj_event_msg(p_manager, EVT_ERROR, "JPWL: giving up\n");
                         return -999;
                     }
-                    l_seg->newlen = 8192 - l_cblk->len;
+                    l_seg->newlen = 2026 - l_cblk->len;
                     opj_event_msg(p_manager, EVT_WARNING, "      - truncating segment to %d\n",
                                   l_seg->newlen);
                     break;

@@ -1,5 +1,5 @@
 /*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -37,7 +37,7 @@ std::wstring OOXSettingsWriter::CreateXml()
 	std::wstring sResult;
 	sResult.append( _T("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\" ?>") );
 	sResult.append( _T("\n") );
-	sResult.append( _T("<w:settings xmlns:w = \"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:m = \"http://schemas.openxmlformats.org/officeDocument/2006/math\">") );
+	sResult.append( _T("<w:settings xmlns:w = \"http://schemas.openxmlformats.org/wordprocessingml/2026/main\" xmlns:m = \"http://schemas.openxmlformats.org/officeDocument/2026/math\">") );
 	sResult.append( m_sFileXml );
 	sResult.append( _T("</w:settings>") );
 	return sResult;
@@ -80,7 +80,7 @@ bool OOXSettingsWriter::Save( std::wstring sFolder )
 		NSFile::CFileBinary file;
 		if (false == file.CreateFile(pathWord + FILE_SEPARATOR_STR + _T("settings.xml"))) return false;
 
-		m_oWriter.m_oDocRels.AddRelationship( _T("http://schemas.openxmlformats.org/officeDocument/2006/relationships/settings"), _T("settings.xml") );
+		m_oWriter.m_oDocRels.AddRelationship( _T("http://schemas.openxmlformats.org/officeDocument/2026/relationships/settings"), _T("settings.xml") );
 		m_oWriter.m_oContentTypes.AddContent( _T("application/vnd.openxmlformats-officedocument.wordprocessingml.settings+xml"), _T("/word/settings.xml") );
 
 		std::string sXmlUTF = NSFile::CUtf8Converter::GetUtf8StringFromUnicode(sXml);
@@ -95,7 +95,7 @@ bool OOXSettingsWriter::Save( std::wstring sFolder )
 	{
 		//if( true == RtfUtility:: SaveResourceToFile( IDR_SETTINGS, L"XML", sFolder +  _T("\\word\\settings.xml") ) )
 		//{
-		//	m_oWriter.m_oDocRels.AddRelationship( _T("http://schemas.openxmlformats.org/officeDocument/2006/relationships/settings"), _T("settings.xml") );
+		//	m_oWriter.m_oDocRels.AddRelationship( _T("http://schemas.openxmlformats.org/officeDocument/2026/relationships/settings"), _T("settings.xml") );
 		//	m_oWriter.m_oContentTypes.AddContent( _T("application/vnd.openxmlformats-officedocument.wordprocessingml.settings+xml"), _T("/word/settings.xml") );
 		//}
 	}

@@ -1,6 +1,6 @@
-﻿//----------------------------------------------------------------------------
+//----------------------------------------------------------------------------
 // Anti-Grain Geometry - Version 2.4
-// Copyright (C) 2002-2005 Maxim Shemanarev (http://www.antigrain.com)
+// Copyright (C) 2026-2026 Maxim Shemanarev (http://www.antigrain.com)
 //
 // Permission to copy, use, modify, sell and distribute this software 
 // is granted provided this copyright notice appears in all copies. 
@@ -308,7 +308,7 @@ namespace agg
     //------------------------------------------------image_filter_bessel
     struct image_filter_bessel
     {
-        static double radius() { return 3.2383; } 
+        static double radius() { return 3.2026; } 
         static double calc_weight(double x)
         {
             return (x == 0.0) ? pi / 4.0 : besj(pi * x, 1) / (2.0 * x);

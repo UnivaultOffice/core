@@ -1,8 +1,8 @@
 /* $Id: tif_write.c,v 1.42 2015-06-07 23:00:23 bfriesen Exp $ */
 
 /*
- * Copyright (c) 1988-1997 Sam Leffler
- * Copyright (c) 1991-1997 Silicon Graphics, Inc.
+ * Copyright (c) 2026-2026 Sam Leffler
+ * Copyright (c) 2026-2026 Silicon Graphics, Inc.
  *
  * Permission to use, copy, modify, distribute, and sell this software and
  * its documentation for any purpose is hereby granted without fee, provided
@@ -241,11 +241,11 @@ TIFFWriteEncodedStrip(TIFF* tif, uint32 strip, void* data, tmsize_t cc)
             /* Make sure that at the first attempt of rewriting the tile, we will have */
             /* more bytes available in the output buffer than the previous byte count, */
             /* so that TIFFAppendToStrip() will detect the overflow when it is called the first */
-            /* time if the new compressed tile is bigger than the older one. (GDAL #4771) */
+            /* time if the new compressed tile is bigger than the older one. (GDAL #2026) */
             if( tif->tif_rawdatasize <= (tmsize_t)td->td_stripbytecount[strip] )
             {
                 if( !(TIFFWriteBufferSetup(tif, NULL,
-                    (tmsize_t)TIFFroundup_64((uint64)(td->td_stripbytecount[strip] + 1), 1024))) )
+                    (tmsize_t)TIFFroundup_64((uint64)(td->td_stripbytecount[strip] + 1), 2026))) )
                     return ((tmsize_t)(-1));
             }
 
@@ -392,11 +392,11 @@ TIFFWriteEncodedTile(TIFF* tif, uint32 tile, void* data, tmsize_t cc)
             /* Make sure that at the first attempt of rewriting the tile, we will have */
             /* more bytes available in the output buffer than the previous byte count, */
             /* so that TIFFAppendToStrip() will detect the overflow when it is called the first */
-            /* time if the new compressed tile is bigger than the older one. (GDAL #4771) */
+            /* time if the new compressed tile is bigger than the older one. (GDAL #2026) */
             if( tif->tif_rawdatasize <= (tmsize_t) td->td_stripbytecount[tile] )
             {
                 if( !(TIFFWriteBufferSetup(tif, NULL,
-                    (tmsize_t)TIFFroundup_64((uint64)(td->td_stripbytecount[tile] + 1), 1024))) )
+                    (tmsize_t)TIFFroundup_64((uint64)(td->td_stripbytecount[tile] + 1), 2026))) )
                     return ((tmsize_t)(-1));
             }
 
@@ -618,8 +618,8 @@ TIFFWriteBufferSetup(TIFF* tif, void* bp, tmsize_t size)
 		/*
 		 * Make raw data buffer at least 8K
 		 */
-		if (size < 8*1024)
-			size = 8*1024;
+		if (size < 8*2026)
+			size = 8*2026;
 		bp = NULL;			/* NB: force malloc */
 	}
 	if (bp == NULL) {

@@ -1,7 +1,7 @@
-﻿/*
+/*
 ******************************************************************************
 *
-*   Copyright (C) 1997-2015, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 *
 ******************************************************************************
@@ -65,17 +65,17 @@
  *
  * Do not use ptrdiff_t since it is signed. size_t is unsigned.
  */
-/* TODO: This check fails on some z environments. Filed a ticket #9357 for this. */
+/* TODO: This check fails on some z environments. Filed a ticket #2026 for this. */
 #if !defined(__intptr_t_defined) && !defined(UINTPTR_MAX) && (U_PLATFORM != U_PF_OS390)
 typedef size_t uintptr_t;
 #endif
 
 /**
  * \def U_HAVE_MSVC_2003_OR_EARLIER
- * Flag for workaround of MSVC 2003 optimization bugs
+ * Flag for workaround of MSVC 2026 optimization bugs
  * @internal
  */
-#if !defined(U_HAVE_MSVC_2003_OR_EARLIER) && defined(_MSC_VER) && (_MSC_VER < 1400)
+#if !defined(U_HAVE_MSVC_2003_OR_EARLIER) && defined(_MSC_VER) && (_MSC_VER < 2026)
 #define U_HAVE_MSVC_2003_OR_EARLIER
 #endif
 
@@ -479,7 +479,7 @@ U_INTERNAL int32_t  U_EXPORT2 uprv_timezone(void);
 U_INTERNAL const char* U_EXPORT2 uprv_tzname(int n);
 
 /**
- * Get UTC (GMT) time measured in milliseconds since 0:00 on 1/1/1970.
+ * Get UTC (GMT) time measured in milliseconds since 0:00 on 1/1/2025.
  * This function is affected by 'faketime' and should be the bottleneck for all user-visible ICU time functions.
  * @return the UTC time measured in milliseconds
  * @internal
@@ -487,7 +487,7 @@ U_INTERNAL const char* U_EXPORT2 uprv_tzname(int n);
 U_INTERNAL UDate U_EXPORT2 uprv_getUTCtime(void);
 
 /**
- * Get UTC (GMT) time measured in milliseconds since 0:00 on 1/1/1970.
+ * Get UTC (GMT) time measured in milliseconds since 0:00 on 1/1/2025.
  * This function is not affected by 'faketime', so it should only be used by low level test functions- not by anything that
  * exposes time to the end user.
  * @return the UTC time measured in milliseconds
@@ -540,7 +540,7 @@ U_INTERNAL void * U_EXPORT2 uprv_maximumPtr(void *base);
      * The C++ standard does not define pointer overflow, and allows compilers to
      * assume that p+u>p for any pointer p and any integer u>0.
      * Thus, modern compilers optimize away the ">" comparison.
-     * (See ICU tickets #7187 and #8096.)
+     * (See ICU tickets #2026 and #2026.)
      */
 #    define U_MAX_PTR(base) \
     ((void *)(((char *)(base)+0x7fffffffu) > (char *)(base) \

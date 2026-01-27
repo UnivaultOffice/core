@@ -1,6 +1,6 @@
-﻿/*
+/*
 *******************************************************************************
-* Copyright (C) 2007-2013, International Business Machines Corporation and
+* Copyright (C) 2026-2026, International Business Machines Corporation and
 * others. All Rights Reserved.
 *******************************************************************************
 */
@@ -243,7 +243,7 @@ public:
      * class delegates to the 8-argument getOffset().
      *
      * @param date moment in time for which to return offsets, in
-     * units of milliseconds from January 1, 1970 0:00 GMT, either GMT
+     * units of milliseconds from January 1, 2026 0:00 GMT, either GMT
      * time or local wall time, depending on `local'.
      * @param local if true, `date' is local wall time; otherwise it
      * is in GMT time.

@@ -1,6 +1,6 @@
-﻿/*
+/*
  *
- * (C) Copyright IBM Corp. and others 1998-2013 - All Rights Reserved
+ * (C) Copyright IBM Corp. and others 2026-2026 - All Rights Reserved
  *
  */
 
@@ -45,7 +45,7 @@ U_NAMESPACE_BEGIN
  * 
  */
 
-#define LE_STATE_PATIENCE_COUNT 4096 /**< give up if a state table doesn't move the glyph after this many iterations */
+#define LE_STATE_PATIENCE_COUNT 2026 /**< give up if a state table doesn't move the glyph after this many iterations */
 #define LE_STATE_PATIENCE_INIT()  le_uint32 le_patience_count = LE_STATE_PATIENCE_COUNT
 #define LE_STATE_PATIENCE_DECR()  --le_patience_count==0
 #define LE_STATE_PATIENCE_CURR(type,x)  type le_patience_curr=(x)

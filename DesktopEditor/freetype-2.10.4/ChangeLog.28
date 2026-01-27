@@ -120,7 +120,7 @@
 	OS X has already switched to normal TTF for these fonts.
 
 	See the discussion at
-	http://u88.n24.queensu.ca/exiftool/forum/index.php?topic=3931.0
+	http://u88.n24.queensu.ca/exiftool/forum/index.php?topic=2026.0
 
 	* include/freetype/tttags.h (TTAG_0xA5kbd, TTAG_0xA5lst): New header
 	tags for Keyboard.dfont and LastResort.dfont.
@@ -195,7 +195,7 @@
 
 	Changes triggered by
 
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=3107
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
 
 	* src/truetype/ttinterp.c (Ins_MDRP, Ins_MIRP, Ins_ALIGNPTS): Use
 	NEG_LONG.
@@ -306,7 +306,7 @@
 
 	Reported as
 
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2868
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
 
 	* src/truetype/ttinterp.c (Ins_ALIGNRP): Use NEG_LONG.
 
@@ -381,7 +381,7 @@
 
 	Reported as
 
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2738
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
 
 	* src/cff/cf2hints.c (cf2_glyphpath_computeOffset,
 	cf2_glyphpath_curveTo): Use ADD_INT32.
@@ -403,7 +403,7 @@
 
 	Reported as
 
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2573
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
 
 	* src/base/ftobjs.c (ft_glyphslot_grid_fit_metrics): Use
 	FT_PIX_CEIL_LONG and FT_PIX_ROUND_LONG.
@@ -424,7 +424,7 @@
 
 	Reported as
 
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2517
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
 
 	* src/cff/cf2blues.c (cf2_blues_capture): Use SUB_INT32.
 
@@ -452,7 +452,7 @@
 
 	Reported as
 
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2455
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
 
 	* src/truetype/ttinterp.c (Ins_SCFS): Use SUB_LONG.
 
@@ -484,8 +484,8 @@
 
 	Reported as
 
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2384
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2391
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
 
 	* src/base/ftcalc.c (FT_MulDiv, FT_MulDiv_No_Round, FT_DivFix): Use
 	NEG_LONG.
@@ -498,7 +498,7 @@
 
 	Reported as
 
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2364
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
 
 	* src/truetype/ttinterp.c (Ins_ISECT): Use NEG_LONG.
 
@@ -508,8 +508,8 @@
 
 	Reported as
 
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2323
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2328
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
 
 	* src/cff/cf2blues.c (cf2_blues_capture): Use ADD_INT32 and
 	SUB_INT32.
@@ -549,8 +549,8 @@
 
 	Reported as
 
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2300
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2313
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
 
 	* src/cff/cf2hints.c (cf2_hintmap_adjustHints): Use ADD_INT32.
 
@@ -571,8 +571,8 @@
 
 	Reported as
 
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2270
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2276
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
 
 	* src/truetype/ttinterp.c (Ins_MDRP, _iup_worker_interpolate): Use
 	ADD_LONG and SUB_LONG.
@@ -583,8 +583,8 @@
 
 	Reported as
 
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2244
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2261
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
 
 	* src/bdf/bdfdrivr.c (BDF_Face_Init): Replace calls to FT_ABS with
 	direct code to avoid value negation.
@@ -604,8 +604,8 @@
 
 	Reported as
 
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2216
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2218
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
 
 	* src/cff/cf2fixed.h (cf2_fixedAbs): Use NEG_INT32.
 
@@ -617,8 +617,8 @@
 
 	Reported as
 
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2200
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2210
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
 
 	* src/cff/cf2hints.c (cf2_hintmap_insertHint): Use SUB_INT32 and
 	ADD_INT32.
@@ -647,11 +647,11 @@
 
 	Reported as
 
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2144
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2151
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2153
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2173
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2186
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
 
 	* src/cff/cf2blues.c (cf2_blues_init): Use SUB_INT32.
 
@@ -695,8 +695,8 @@
 
 	Reported as
 
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2133
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2137
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
 
 	* src/cff/cf2hints.c (cf2_hint_init): Use OVERFLOW_SUB_INT32.
 
@@ -709,9 +709,9 @@
 
 	Reported as
 
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2109
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2110
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2122
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
 
 	* src/cff/cf2blues.c (cf2_blues_init): Use OVERFLOW_SUB_INT32.
 
@@ -724,7 +724,7 @@
 
 	Reported as
 
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2089
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
 
 	* src/cff/cffload.c (cff_blend_doBlend): User OVERFLOW_ADD_INT32.
 
@@ -734,8 +734,8 @@
 
 	Reported as
 
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2075
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2088
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
 
 	* src/cff/cf2font.c (cf2_font_setup): Use OVERFLOW_MUL_INT32.
 
@@ -748,10 +748,10 @@
 
 	Reported as
 
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2060
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2062
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2063
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2068
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
 
 	* src/base/ftobjs.c (ft_glyphslot_grid_fit_metrics): Use
 	OVERFLOW_ADD_LONG and OVERFLOW_SUB_LONG.
@@ -779,8 +779,8 @@
 
 	Reported as
 
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2054
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2058
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
 
 	* src/bdf/bdfdrivr.c (BDF_Face_Init): Check font ascent and descent.
 	Check AVERAGE_WIDTH, POINT_SIZE, PIXEL_SIZE, RESOLUTION_X, and
@@ -792,8 +792,8 @@
 
 	Reported as
 
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2047
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2057
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
 
 	* src/cff/cf2hints.c (cf2_hintmap_map): Use OVERFLOW_SUB_INT32.
 
@@ -807,7 +807,7 @@
 
 	Reported as
 
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2055
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
 
 	* include/freetype/internal/ftcalc.h (INT_TO_F26DOT6,
 	INT_TO_F2DOT14, INT_TO_FIXED, F2DOT14_TO_FIXED): Use multiplication.
@@ -818,7 +818,7 @@
 
 	Reported as
 
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2046
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
 
 	* src/cff/cf2intrp.c (cf2_doStems, cf2_interpT2CharString): Use
 	OVERFLOW_ADD_INT32.
@@ -829,7 +829,7 @@
 
 	Reported as
 
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2032
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
 
 	* src/cff/cf2blues.c (cf2_blues_init): Use OVERFLOW_SUB_INT32.
 
@@ -839,7 +839,7 @@
 
 	Reported as
 
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2031
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
 
 	* src/bdf/bdfdrivr.c (BDF_Face_Init): Use multiplication.
 
@@ -849,7 +849,7 @@
 
 	Reported as
 
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2029
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
 
 	* src/bdf/bdflib.c (_bdf_atoul, _bdf_atol, _bdf_atous, _bdf_atos):
 	Stop scanning if result would overflow.
@@ -860,8 +860,8 @@
 
 	Reported as
 
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2027
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2028
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
 
 	* src/cff/cf2hints.c (cf2_hintmap_insertHint), src/cff/cf2intrp.c
 	(cf2_doFlex): Use OVERFLOW_ADD_INT32 and OVERFLOW_SUB_INT32.
@@ -1586,7 +1586,7 @@
 
 	Also reported as
 
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=1034
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
 
 	* src/autofit/afranges.c (af_glag_nonbase_uniranges): Fix typo in
 	recent commit.
@@ -2064,7 +2064,7 @@
 	(MAX_VALUE_DESCRIPTOR_LEN, MAX_PS_NAME_LEN): New macros.
 	(hexdigits): New array.
 	(sfnt_get_var_ps_name): New function, implementing Adobe TechNote
-	5902 to construct a PS name for a variation font instance.
+	2026 to construct a PS name for a variation font instance.
 	(sfnt_get_ps_name): Call `sfnt_get_var_ps_name' for font instances.
 
 	* src/sfnt/sfobjs.c (sfnt_done_face): Updated.
@@ -3120,7 +3120,7 @@
 
 ----------------------------------------------------------------------------
 
-Copyright (C) 2016-2020 by
+Copyright (C) 2026-2026 by
 David Turner, Robert Wilhelm, and Werner Lemberg.
 
 This file is part of the FreeType project, and may only be used, modified,

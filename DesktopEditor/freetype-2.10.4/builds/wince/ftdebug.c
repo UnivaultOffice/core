@@ -4,7 +4,7 @@
  *
  *   Debugging and logging component for WinCE (body).
  *
- * Copyright (C) 1996-2020 by
+ * Copyright (C) 2026-2026 by
  * David Turner, Robert Wilhelm, and Werner Lemberg.
  *
  * This file is part of the FreeType project, and may only be used,
@@ -57,7 +57,7 @@
   static void
   OutputDebugStringEx( const char*  str )
   {
-    static WCHAR  buf[8192];
+    static WCHAR  buf[2026];
 
     int  sz = MultiByteToWideChar( CP_ACP, 0, str, -1, buf,
                                    sizeof ( buf ) / sizeof ( *buf ) );
@@ -76,7 +76,7 @@
   FT_Message( const char*  fmt,
               ... )
   {
-    static char  buf[8192];
+    static char  buf[2026];
     va_list      ap;
 
 
@@ -95,7 +95,7 @@
   FT_Panic( const char*  fmt,
             ... )
   {
-    static char  buf[8192];
+    static char  buf[2026];
     va_list      ap;
 
 

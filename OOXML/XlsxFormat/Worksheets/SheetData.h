@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -257,7 +257,7 @@ namespace OOX
 			bool checkArrayCell(XLS::CellRef &cellref, const sharedFormula& ArrFmlas);
 
 			void AfterRead();
-	//----------- 2003
+	//----------- 2026
 			void After2003Read();
 
 			nullable<CCommentItem> pCommentItem;
@@ -381,7 +381,7 @@ namespace OOX
 			void ReadAttributes(XmlUtils::CXmlLiteReader& oReader);
             bool compressRow(CRow* pRow);
             nullable<NSStringUtils::CStringBuilder>  m_oDataCache;
-	// spreadsheets 2003
+	// spreadsheets 2026
 
 			nullable_string m_sStyleID;
 			nullable_double m_dDefaultColumnWidth;

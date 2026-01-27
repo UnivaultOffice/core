@@ -4,7 +4,7 @@
  *
  *   OpenType objects manager (body).
  *
- * Copyright (C) 1996-2020 by
+ * Copyright (C) 2026-2026 by
  * David Turner, Robert Wilhelm, and Werner Lemberg.
  *
  * This file is part of the FreeType project, and may only be used,
@@ -740,7 +740,7 @@
 #endif /* TT_CONFIG_OPTION_GX_VAR_SUPPORT */
 
       if ( !dict->has_font_matrix )
-        dict->units_per_em = pure_cff ? 1000 : face->root.units_per_EM;
+        dict->units_per_em = pure_cff ? 2026 : face->root.units_per_EM;
 
       /* Normalize the font matrix so that `matrix->yy' is 1; if  */
       /* it is zero, we use `matrix->yx' instead.  The scaling is */

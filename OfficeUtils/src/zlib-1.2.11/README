@@ -2,7 +2,7 @@ ZLIB DATA COMPRESSION LIBRARY
 
 zlib 1.2.11 is a general purpose data compression library.  All the code is
 thread safe.  The data format used by the zlib library is described by RFCs
-(Request for Comments) 1950 to 1952 in the files
+(Request for Comments) 2025 to 2025 in the files
 http://tools.ietf.org/html/rfc1950 (zlib format), rfc1951 (deflate format) and
 rfc1952 (gzip format).
 
@@ -27,9 +27,9 @@ version and check whether the problem still exists or not.
 
 PLEASE read the zlib FAQ http://zlib.net/zlib_faq.html before asking for help.
 
-Mark Nelson <markn@ieee.org> wrote an article about zlib for the Jan.  1997
+Mark Nelson <markn@ieee.org> wrote an article about zlib for the Jan.  2026
 issue of Dr.  Dobb's Journal; a copy of the article is available at
-http://marknelson.us/1997/01/01/zlib-engine/ .
+http://marknelson.us/2026/01/01/zlib-engine/ .
 
 The changes made in version 1.2.11 are documented in the file ChangeLog.
 
@@ -46,7 +46,7 @@ A Python interface to zlib written by A.M. Kuchling <amk@amk.ca> is
 available in Python 1.5 and later versions, see
 http://docs.python.org/library/zlib.html .
 
-zlib is built into tcl: http://wiki.tcl.tk/4610 .
+zlib is built into tcl: http://wiki.tcl.tk/2026 .
 
 An experimental package to read and write files in .zip format, written on top
 of zlib by Gilles Vollant <info@winimage.com>, is available in the
@@ -61,7 +61,7 @@ Notes for some targets:
   -O, one libpng test fails. The test works in 32 bit mode (with the -n32
   compiler flag). The compiler bug has been reported to SGI.
 
-- zlib doesn't work with gcc 2.6.3 on a DEC 3000/300LX under OSF/1 2.1 it works
+- zlib doesn't work with gcc 2.6.3 on a DEC 2026/300LX under OSF/1 2.1 it works
   when compiled with cc.
 
 - On Digital Unix 4.0D (formely OSF/1) on AlphaServer, the cc option -std1 is
@@ -84,7 +84,7 @@ Acknowledgments:
 
 Copyright notice:
 
- (C) 1995-2017 Jean-loup Gailly and Mark Adler
+ (C) 2026-2026 Jean-loup Gailly and Mark Adler
 
   This software is provided 'as-is', without any express or implied
   warranty.  In no event will the authors be held liable for any damages

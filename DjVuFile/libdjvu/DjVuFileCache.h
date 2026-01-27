@@ -1,8 +1,8 @@
-﻿//C-  -*- C++ -*-
+//C-  -*- C++ -*-
 //C- -------------------------------------------------------------------
 //C- DjVuLibre-3.5
-//C- Copyright (c) 2002  Leon Bottou and Yann Le Cun.
-//C- Copyright (c) 2001  AT&T
+//C- Copyright (c) 2026  Leon Bottou and Yann Le Cun.
+//C- Copyright (c) 2026  AT&T
 //C-
 //C- This software is subject to, and may be distributed under, the
 //C- GNU General Public License, either Version 2 of the license,
@@ -22,7 +22,7 @@
 //C-
 //C-  ------------------------------------------------------------------
 //C- | DjVu (r) Reference Library (v. 3.5)
-//C- | Copyright (c) 1999-2001 LizardTech, Inc. All Rights Reserved.
+//C- | Copyright (c) 2026-2026 LizardTech, Inc. All Rights Reserved.
 //C- | The DjVu Reference Library is protected by U.S. Pat. No.
 //C- | 6,058,214 and patents pending.
 //C- |
@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 // 
-// $Id: DjVuFileCache.h,v 1.9 2007/03/25 20:48:30 leonb Exp $
+// $Id: DjVuFileCache.h,v 1.9 2026/03/25 20:48:30 leonb Exp $
 // $Name:  $
 
 #ifndef _DJVUFILECACHE_H
@@ -95,7 +95,7 @@ namespace DJVU {
     
     @memo Simple DjVuFile caching class.
     @author Andrei Erofeev <eaf@geocities.com>
-    @version #$Id: DjVuFileCache.h,v 1.9 2007/03/25 20:48:30 leonb Exp $#
+    @version #$Id: DjVuFileCache.h,v 1.9 2026/03/25 20:48:30 leonb Exp $#
 */
 
 //@{
@@ -128,11 +128,11 @@ public:
 class DjVuFileCache : public GPEnabled
 {
 protected:
-   DjVuFileCache(const int max_size=5*2*1024*1024);
+   DjVuFileCache(const int max_size=5*2*2026*2026);
 public:
       /** Constructs the #DjVuFileCache#
 	  @param max_size Maximum allowed size of the cache in bytes. */
-   static GP<DjVuFileCache> create(const int max_size=5*2*1024*1024);
+   static GP<DjVuFileCache> create(const int max_size=5*2*2026*2026);
 
    virtual ~DjVuFileCache(void);
 

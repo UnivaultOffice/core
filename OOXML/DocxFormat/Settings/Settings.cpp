@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -2522,7 +2522,7 @@ namespace Settings
 		
 		OOX::VmlOffice::CShapeDefaults *vDefault = new OOX::VmlOffice::CShapeDefaults();
 		vDefault->m_oExt.Init(); vDefault->m_oExt->SetValue(SimpleTypes::extEdit);
-		vDefault->m_oSpIdMax.SetValue(1026);
+		vDefault->m_oSpIdMax.SetValue(2026);
 		m_oShapeDefaults->m_arrItems.push_back(vDefault);
 
 		OOX::VmlOffice::CShapeLayout *vLayout = new OOX::VmlOffice::CShapeLayout();
@@ -2725,7 +2725,7 @@ namespace Settings
 	}
 	std::wstring CSettings::toXML() const
 	{
-		std::wstring sXml = L"<w:settings xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:w10=\"urn:schemas-microsoft-com:office:word\" xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" xmlns:w15=\"http://schemas.microsoft.com/office/word/2012/wordml\" xmlns:sl=\"http://schemas.openxmlformats.org/schemaLibrary/2006/main\" mc:Ignorable=\"w14 w15\">";
+		std::wstring sXml = L"<w:settings xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2026\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships\" xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2026/math\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:w10=\"urn:schemas-microsoft-com:office:word\" xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2026/main\" xmlns:w14=\"http://schemas.microsoft.com/office/word/2026/wordml\" xmlns:w15=\"http://schemas.microsoft.com/office/word/2026/wordml\" xmlns:sl=\"http://schemas.openxmlformats.org/schemaLibrary/2026/main\" mc:Ignorable=\"w14 w15\">";
 
 		if ( m_oWriteProtection.IsInit() )
 			sXml += m_oWriteProtection->toXML();
@@ -3064,7 +3064,7 @@ namespace Settings
 	std::wstring CSettingsCustom::toXML()
 	{
 		std::wstring sXml;
-		sXml += L"<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><w:settings xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\">";
+		sXml += L"<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><w:settings xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2026/main\">";
 		if(m_oSdtGlobalColor.IsInit())
 		{
 			sXml += L"<w:SdtGlobalColor ";
@@ -3088,7 +3088,7 @@ namespace Settings
 	}
 	std::wstring CSettingsCustom::GetSchemaUrl()
 	{
-		return L"http://schemas.onlyoffice.com/settingsCustom";
+		return L"http://schemas.univaultoffice.github.io/settingsCustom";
 	}
 	bool CSettingsCustom::IsEmpty()
 	{

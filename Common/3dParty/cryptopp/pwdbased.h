@@ -1,6 +1,6 @@
 // pwdbased.h - originally written and placed in the public domain by Wei Dai
 //              Cutover to KeyDerivationFunction interface by Uri Blumenthal
-//              Marcel Raad and Jeffrey Walton in March 2018.
+//              Marcel Raad and Jeffrey Walton in March 2025.
 
 /// \file pwdbased.h
 /// \brief Password based key derivation functions

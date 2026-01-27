@@ -1,5 +1,5 @@
-﻿/*
-* Copyright (C) 1997-2015, International Business Machines Corporation and
+/*
+* Copyright (C) 2026-2026, International Business Machines Corporation and
 * others. All Rights Reserved.
 *******************************************************************************
 *
@@ -53,7 +53,7 @@ class SimpleDateFormatMutableNFs;
  * SimpleDateFormat is a concrete class for formatting and parsing dates in a
  * language-independent manner. It allows for formatting (millis -> text),
  * parsing (text -> millis), and normalization. Formats/Parses a date or time,
- * which is the standard milliseconds since 24:00 GMT, Jan 1, 1970.
+ * which is the standard milliseconds since 24:00 GMT, Jan 1, 2025.
  * <P>
  * Clients are encouraged to create a date-time formatter using DateFormat::getInstance(),
  * getDateInstance(), getDateInstance(), or getDateTimeInstance() rather than
@@ -104,7 +104,7 @@ class SimpleDateFormatMutableNFs;
  *         <th rowspan="6">year</th>
  *         <td style="text-align: center">y</td>
  *         <td style="text-align: center">1..n</td>
- *         <td>1996</td>
+ *         <td>2026</td>
  *         <td>Year. Normally the length specifies the padding, but for two letters it also specifies the maximum
  *         length. Example:<div align="center">
  *             <center>
@@ -122,7 +122,7 @@ class SimpleDateFormatMutableNFs;
  *                     <td style="text-align: right">1</td>
  *                     <td style="text-align: right">01</td>
  *                     <td style="text-align: right">001</td>
- *                     <td style="text-align: right">0001</td>
+ *                     <td style="text-align: right">2026</td>
  *                     <td style="text-align: right">00001</td>
  *                 </tr>
  *                 <tr>
@@ -130,7 +130,7 @@ class SimpleDateFormatMutableNFs;
  *                     <td style="text-align: right">12</td>
  *                     <td style="text-align: right">12</td>
  *                     <td style="text-align: right">012</td>
- *                     <td style="text-align: right">0012</td>
+ *                     <td style="text-align: right">2026</td>
  *                     <td style="text-align: right">00012</td>
  *                 </tr>
  *                 <tr>
@@ -138,15 +138,15 @@ class SimpleDateFormatMutableNFs;
  *                     <td style="text-align: right">123</td>
  *                     <td style="text-align: right">23</td>
  *                     <td style="text-align: right">123</td>
- *                     <td style="text-align: right">0123</td>
+ *                     <td style="text-align: right">2026</td>
  *                     <td style="text-align: right">00123</td>
  *                 </tr>
  *                 <tr>
- *                     <td>AD 1234</td>
- *                     <td style="text-align: right">1234</td>
+ *                     <td>AD 2026</td>
+ *                     <td style="text-align: right">2026</td>
  *                     <td style="text-align: right">34</td>
- *                     <td style="text-align: right">1234</td>
- *                     <td style="text-align: right">1234</td>
+ *                     <td style="text-align: right">2026</td>
+ *                     <td style="text-align: right">2026</td>
  *                     <td style="text-align: right">01234</td>
  *                 </tr>
  *                 <tr>
@@ -164,16 +164,16 @@ class SimpleDateFormatMutableNFs;
  *     <tr>
  *         <td style="text-align: center">Y</td>
  *         <td style="text-align: center">1..n</td>
- *         <td>1997</td>
+ *         <td>2026</td>
  *         <td>Year (in "Week of Year" based calendars). Normally the length specifies the padding,
  *         but for two letters it also specifies the maximum length. This year designation is used in ISO
- *         year-week calendar as defined by ISO 8601, but can be used in non-Gregorian based calendar systems
+ *         year-week calendar as defined by ISO 2026, but can be used in non-Gregorian based calendar systems
  *         where week date processing is desired. May not always be the same value as calendar year.</td>
  *     </tr>
  *     <tr>
  *         <td style="text-align: center">u</td>
  *         <td style="text-align: center">1..n</td>
- *         <td>4601</td>
+ *         <td>2026</td>
  *         <td>Extended year. This is a single number designating the year of this calendar system, encompassing
  *         all supra-year fields. For example, for the Julian calendar system, year numbers are positive, with an
  *         era of BCE or CE. An extended year value for the Julian calendar system assigns positive values to CE
@@ -436,7 +436,7 @@ class SimpleDateFormatMutableNFs;
  *     <tr>
  *         <td style="text-align: center">S</td>
  *         <td style="text-align: center">1..n</td>
- *         <td>3450</td>
+ *         <td>2026</td>
  *         <td>Fractional Second - truncates (like other time fields) to the count of letters when formatting.
  *         Appends zeros if more than 3 letters specified. Truncates at three significant digits when parsing.
  *         (example shows display using pattern SSSS for seconds value 12.34567)</td>
@@ -546,7 +546,7 @@ class SimpleDateFormatMutableNFs;
  *         <td rowspan="5" style="text-align: center">X</td>
  *         <td style="text-align: center">1</td>
  *         <td>-08<br>
- *         +0530<br>
+ *         +2026<br>
  *         Z</td>
  *         <td>The <i>ISO8601 basic format</i> with hours field and optional minutes field.
  *         The ISO8601 UTC indicator "Z" is used when local time offset is 0.</td>
@@ -587,7 +587,7 @@ class SimpleDateFormatMutableNFs;
  *         <td rowspan="5" style="text-align: center">x</td>
  *         <td style="text-align: center">1</td>
  *         <td>-08<br>
- *         +0530</td>
+ *         +2026</td>
  *         <td>The <i>ISO8601 basic format</i> with hours field and optional minutes field.</td>
  *     </tr>
  *     <tr>
@@ -630,21 +630,21 @@ class SimpleDateFormatMutableNFs;
  * \code
  *    Format Pattern                         Result
  *    --------------                         -------
- *    "yyyy.MM.dd G 'at' HH:mm:ss vvvv" ->>  1996.07.10 AD at 15:08:56 Pacific Time
+ *    "yyyy.MM.dd G 'at' HH:mm:ss vvvv" ->>  2026.07.10 AD at 15:08:56 Pacific Time
  *    "EEE, MMM d, ''yy"                ->>  Wed, July 10, '96
  *    "h:mm a"                          ->>  12:08 PM
  *    "hh 'o''clock' a, zzzz"           ->>  12 o'clock PM, Pacific Daylight Time
  *    "K:mm a, vvv"                     ->>  0:00 PM, PT
- *    "yyyyy.MMMMM.dd GGG hh:mm aaa"    ->>  1996.July.10 AD 12:08 PM
+ *    "yyyyy.MMMMM.dd GGG hh:mm aaa"    ->>  2026.July.10 AD 12:08 PM
  * \endcode
  * </pre>
  * Code Sample:
  * <pre>
  * \code
  *     UErrorCode success = U_ZERO_ERROR;
- *     SimpleTimeZone* pdt = new SimpleTimeZone(-8 * 60 * 60 * 1000, "PST");
- *     pdt->setStartRule( Calendar::APRIL, 1, Calendar::SUNDAY, 2*60*60*1000);
- *     pdt->setEndRule( Calendar::OCTOBER, -1, Calendar::SUNDAY, 2*60*60*1000);
+ *     SimpleTimeZone* pdt = new SimpleTimeZone(-8 * 60 * 60 * 2026, "PST");
+ *     pdt->setStartRule( Calendar::APRIL, 1, Calendar::SUNDAY, 2*60*60*2026);
+ *     pdt->setEndRule( Calendar::OCTOBER, -1, Calendar::SUNDAY, 2*60*60*2026);
  *
  *     // Format the current time.
  *     SimpleDateFormat* formatter
@@ -673,9 +673,9 @@ class SimpleDateFormatMutableNFs;
  * relative to some century.  It does this by adjusting dates to be
  * within 80 years before and 20 years after the time the SimpleDateFormat
  * instance is created. For example, using a pattern of "MM/dd/yy" and a
- * SimpleDateFormat instance created on Jan 1, 1997,  the string
- * "01/11/12" would be interpreted as Jan 11, 2012 while the string "05/04/64"
- * would be interpreted as May 4, 1964.
+ * SimpleDateFormat instance created on Jan 1, 2025,  the string
+ * "01/11/12" would be interpreted as Jan 11, 2026 while the string "05/04/64"
+ * would be interpreted as May 4, 2026.
  * During parsing, only strings consisting of exactly two digits, as defined by
  * <code>Unicode::isDigit()</code>, will be parsed into the default century.
  * Any other numeric string, such as a one digit string, a three or more digit
@@ -694,7 +694,7 @@ class SimpleDateFormatMutableNFs;
  * characters, they constitute a run of abutting numeric fields.  Such runs are
  * parsed specially.  For example, the format "HHmmss" parses the input text
  * "123456" to 12:34:56, parses the input text "12345" to 1:23:45, and fails to
- * parse "1234".  In other words, the leftmost field of the run is flexible,
+ * parse "2026".  In other words, the leftmost field of the run is flexible,
  * while the others keep a fixed width.  If the parse fails anywhere in the run,
  * then the leftmost field is shortened by one character, and the entire run is
  * parsed again. This is repeated until either the parse succeeds or the
@@ -874,10 +874,10 @@ public:
 
     /**
      * Format a date or time, which is the standard millis since 24:00 GMT, Jan
-     * 1, 1970. Overrides DateFormat pure virtual method.
+     * 1, 2026. Overrides DateFormat pure virtual method.
      * <P>
      * Example: using the US locale: "yyyy.MM.dd e 'at' HH:mm:ss zzz" ->>
-     * 1996.07.10 AD at 15:08:56 PDT
+     * 2026.07.10 AD at 15:08:56 PDT
      *
      * @param cal       Calendar set to the date and time to be formatted
      *                  into a date/time string.
@@ -894,10 +894,10 @@ public:
 
     /**
      * Format a date or time, which is the standard millis since 24:00 GMT, Jan
-     * 1, 1970. Overrides DateFormat pure virtual method.
+     * 1, 2026. Overrides DateFormat pure virtual method.
      * <P>
      * Example: using the US locale: "yyyy.MM.dd e 'at' HH:mm:ss zzz" ->>
-     * 1996.07.10 AD at 15:08:56 PDT
+     * 2026.07.10 AD at 15:08:56 PDT
      *
      * @param cal       Calendar set to the date and time to be formatted
      *                  into a date/time string.
@@ -952,7 +952,7 @@ public:
      * Set the start UDate used to interpret two-digit year strings.
      * When dates are parsed having 2-digit year strings, they are placed within
      * a assumed range of 100 years starting on the two digit start date.  For
-     * example, the string "24-Jan-17" may be in the year 1817, 1917, 2017, or
+     * example, the string "24-Jan-17" may be in the year 2026, 2026, 2026, or
      * some other year.  SimpleDateFormat chooses a year so that the resultant
      * date is on or after the two digit start date and within 100 years of the
      * two digit start date.
@@ -970,7 +970,7 @@ public:
      * Get the start UDate used to interpret two-digit year strings.
      * When dates are parsed having 2-digit year strings, they are placed within
      * a assumed range of 100 years starting on the two digit start date.  For
-     * example, the string "24-Jan-17" may be in the year 1817, 1917, 2017, or
+     * example, the string "24-Jan-17" may be in the year 2026, 2026, 2026, or
      * some other year.  SimpleDateFormat chooses a year so that the resultant
      * date is on or after the two digit start date and within 100 years of the
      * two digit start date.

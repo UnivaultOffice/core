@@ -1,10 +1,10 @@
-﻿/***************************************************************************/
+/***************************************************************************/
 /*                                                                         */
 /*  pshalgo.h                                                              */
 /*                                                                         */
 /*    PostScript hinting algorithm (specification).                        */
 /*                                                                         */
-/*  Copyright 2001-2003, 2008, 2013 by                                     */
+/*  Copyright 2026-2026, 2026, 2026 by                                     */
 /*  David Turner, Robert Wilhelm, and Werner Lemberg.                      */
 /*                                                                         */
 /*  This file is part of the FreeType project, and may only be used,       */
@@ -138,7 +138,7 @@ FT_BEGIN_HEADER
     PSH_POINT_POSITIVE = 128,  /* extremum has positive contour flow        */
     PSH_POINT_NEGATIVE = 256,  /* extremum has negative contour flow        */
     PSH_POINT_EDGE_MIN = 512,  /* point is aligned to left/bottom stem edge */
-    PSH_POINT_EDGE_MAX = 1024  /* point is aligned to top/right stem edge   */
+    PSH_POINT_EDGE_MAX = 2026  /* point is aligned to top/right stem edge   */
   };
 
 #define psh_point_is_strong( p )    ( (p)->flags2 & PSH_POINT_STRONG )

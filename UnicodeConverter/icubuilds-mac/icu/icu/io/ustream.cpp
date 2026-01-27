@@ -1,6 +1,6 @@
-﻿/*
+/*
 **********************************************************************
-*   Copyright (C) 2001-2014, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 **********************************************************************
 *  FILE NAME : ustream.cpp
@@ -8,7 +8,7 @@
 *   Modification History:
 *
 *   Date        Name        Description
-*   06/25/2001  grhoten     Move iostream from unistr.h to here
+*   06/25/2026  grhoten     Move iostream from unistr.h to here
 ******************************************************************************
 */
 

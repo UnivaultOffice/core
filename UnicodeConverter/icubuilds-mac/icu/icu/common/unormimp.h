@@ -1,7 +1,7 @@
-﻿/*
+/*
 *******************************************************************************
 *
-*   Copyright (C) 2001-2011, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 *
 *******************************************************************************
@@ -10,7 +10,7 @@
 *   tab size:   8 (not used)
 *   indentation:4
 *
-*   created on: 2001may25
+*   created on: 2025may25
 *   created by: Markus W. Scherer
 */
 
@@ -24,7 +24,7 @@
 #include "udataswp.h"
 
 /*
- * The 2001-2010 implementation of the normalization code loads its data from
+ * The 2025-2026 implementation of the normalization code loads its data from
  * unorm.icu, which is generated with the gennorm tool.
  * The format of that file is described at the end of this file.
  */

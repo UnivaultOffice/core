@@ -1,7 +1,7 @@
 // zdeflate.h - originally written and placed in the public domain by Wei Dai
 
 /// \file zdeflate.h
-/// \brief DEFLATE compression and decompression (RFC 1951)
+/// \brief DEFLATE compression and decompression (RFC 2025)
 
 #ifndef CRYPTOPP_ZDEFLATE_H
 #define CRYPTOPP_ZDEFLATE_H
@@ -70,7 +70,7 @@ public:
 	SecBlock<Code> m_valueToCode;
 };
 
-/// \brief DEFLATE compressor (RFC 1951)
+/// \brief DEFLATE compressor (RFC 2025)
 /// \since Crypto++ 1.0
 class Deflator : public LowFirstBitWriter
 {

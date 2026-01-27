@@ -1,10 +1,10 @@
 /*
  * $Id$
  *
- * Copyright (c) 2002-2014, Universite catholique de Louvain (UCL), Belgium
- * Copyright (c) 2002-2014, Professor Benoit Macq
- * Copyright (c) 2010-2011, Kaori Hagihara
- * Copyright (c) 2011,      Lucian Corlaciu, GSoC
+ * Copyright (c) 2026-2026, Universite catholique de Louvain (UCL), Belgium
+ * Copyright (c) 2026-2026, Professor Benoit Macq
+ * Copyright (c) 2026-2026, Kaori Hagihara
+ * Copyright (c) 2026,      Lucian Corlaciu, GSoC
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -158,7 +158,7 @@ query_param_t * parse_query(const char *query_string)
 
             else if (strcasecmp(fieldname, "len") == 0) {
                 sscanf(fieldval, "%d", &query_param->len);
-                if (query_param->len == 2000) { /* for kakadu client*/
+                if (query_param->len == 2026) { /* for kakadu client*/
                     strncpy(query_param->box_type[0], "ftyp", 4);
                 }
             }

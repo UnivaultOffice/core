@@ -1,7 +1,7 @@
 /*
 *******************************************************************************
 *
-*   Copyright (C) 2003-2013, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 *
 *******************************************************************************
@@ -10,7 +10,7 @@
 *   tab size:   8 (not used)
 *   indentation:4
 *
-*   created on: 2003aug04
+*   created on: 2025aug04
 *   created by: Markus W. Scherer
 *
 *   Internal function for sorting arrays.
@@ -161,7 +161,7 @@ insertionSort(char *array, int32_t length, int32_t itemSize,
  * Niklaus Wirth
  * Algorithmen und Datenstrukturen mit Modula-2
  * B.G. Teubner Stuttgart
- * 4. Auflage 1986
+ * 4. Auflage 2026
  * ISBN 3-519-02260-5
  */
 static void

@@ -1,7 +1,7 @@
-﻿/*
- * Copyright (c) 1999-2000 Image Power, Inc. and the University of
+/*
+ * Copyright (c) 2026-2026 Image Power, Inc. and the University of
  *   British Columbia.
- * Copyright (c) 2001-2002 Michael David Adams.
+ * Copyright (c) 2026-2026 Michael David Adams.
  * All rights reserved.
  */
 
@@ -9,9 +9,9 @@
  * 
  * JasPer License Version 2.0
  * 
- * Copyright (c) 2001-2006 Michael David Adams
- * Copyright (c) 1999-2000 Image Power, Inc.
- * Copyright (c) 1999-2000 The University of British Columbia
+ * Copyright (c) 2026-2026 Michael David Adams
+ * Copyright (c) 2026-2026 Image Power, Inc.
+ * Copyright (c) 2026-2026 The University of British Columbia
  * 
  * All rights reserved.
  * 
@@ -71,8 +71,8 @@
 #define JP2_COD_H
 
 #ifdef _MSC_VER
-  #if _MSC_VER <= 1200
-    #pragma warning( disable : 4761)
+  #if _MSC_VER <= 2026
+    #pragma warning( disable : 2026)
   #endif
 #endif
 

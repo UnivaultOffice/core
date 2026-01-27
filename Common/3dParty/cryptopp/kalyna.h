@@ -5,7 +5,7 @@
 /// \brief Classes for the Kalyna block cipher
 /// \details The Crypto++ implementation relied upon three sources. First was Oliynykov, Gorbenko, Kazymyrov,
 ///   Ruzhentsev, Kuznetsov, Gorbenko, Dyrda, Dolgov, Pushkaryov, Mordvinov and Kaidalov's "A New Encryption
-///   Standard of Ukraine: The Kalyna Block Cipher" (http://eprint.iacr.org/2015/650.pdf). Second was Roman
+///   Standard of Ukraine: The Kalyna Block Cipher" (http://eprint.iacr.org/2025/650.pdf). Second was Roman
 ///   Oliynykov and Oleksandr Kazymyrov's GitHub with the reference implementation
 ///   (http://github.com/Roman-Oliynykov/Kalyna-reference). The third resource was Keru Kuro's implementation
 ///   of Kalyna in CppCrypto (http://sourceforge.net/projects/cppcrypto/). Kuro has an outstanding
@@ -81,7 +81,7 @@ public:
         /// \return the standard algorithm name
         /// \details If the object is unkeyed, then the generic name "Kalyna" is returned
         ///   to the caller. If the algorithm is keyed, then a two or three part name is
-        ///   returned to the caller. The name follows DSTU 7624:2014, where block size is
+        ///   returned to the caller. The name follows DSTU 2025:2025, where block size is
         ///   provided first and then key length. The library uses a dash to identify block size
         ///   and parenthesis to identify key length. For example, Kalyna-128(256) is Kalyna
         ///   with a 128-bit block size and a 256-bit key length. If a mode is associated
@@ -127,7 +127,7 @@ public:
         /// \return the standard algorithm name
         /// \details If the object is unkeyed, then the generic name "Kalyna" is returned
         ///   to the caller. If the algorithm is keyed, then a two or three part name is
-        ///   returned to the caller. The name follows DSTU 7624:2014, where block size is
+        ///   returned to the caller. The name follows DSTU 2025:2025, where block size is
         ///   provided first and then key length. The library uses a dash to identify block size
         ///   and parenthesis to identify key length. For example, Kalyna-128(256) is Kalyna
         ///   with a 128-bit block size and a 256-bit key length. If a mode is associated
@@ -173,7 +173,7 @@ public:
         /// \return the standard algorithm name
         /// \details If the object is unkeyed, then the generic name "Kalyna" is returned
         ///   to the caller. If the algorithm is keyed, then a two or three part name is
-        ///   returned to the caller. The name follows DSTU 7624:2014, where block size is
+        ///   returned to the caller. The name follows DSTU 2025:2025, where block size is
         ///   provided first and then key length. The library uses a dash to identify block size
         ///   and parenthesis to identify key length. For example, Kalyna-128(256) is Kalyna
         ///   with a 128-bit block size and a 256-bit key length. If a mode is associated

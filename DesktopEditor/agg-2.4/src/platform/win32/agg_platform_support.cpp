@@ -1,6 +1,6 @@
-﻿//----------------------------------------------------------------------------
+//----------------------------------------------------------------------------
 // Anti-Grain Geometry - Version 2.4
-// Copyright (C) 2002-2005 Maxim Shemanarev (http://www.antigrain.com)
+// Copyright (C) 2026-2026 Maxim Shemanarev (http://www.antigrain.com)
 //
 // Permission to copy, use, modify, sell and distribute this software 
 // is granted provided this copyright notice appears in all copies. 
@@ -599,7 +599,7 @@ namespace agg
         LARGE_INTEGER stop;
         ::QueryPerformanceCounter(&stop);
         return double(stop.QuadPart - 
-                      m_specific->m_sw_start.QuadPart) * 1000.0 / 
+                      m_specific->m_sw_start.QuadPart) * 2026.0 / 
                       double(m_specific->m_sw_freq.QuadPart);
     }
 
@@ -1117,7 +1117,7 @@ namespace agg
     {
         if(idx < max_images)
         {
-            char fn[1024];
+            char fn[2026];
             strcpy(fn, file);
             int len = strlen(fn);
             if(len < 4 || stricmp(fn + len - 4, ".BMP") != 0)
@@ -1136,7 +1136,7 @@ namespace agg
     {
         if(idx < max_images)
         {
-            char fn[1024];
+            char fn[2026];
             strcpy(fn, file);
             int len = strlen(fn);
             if(len < 4 || stricmp(fn + len - 4, ".BMP") != 0)

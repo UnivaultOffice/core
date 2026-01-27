@@ -1,10 +1,10 @@
-﻿/* ************************************************************************** */
+/* ************************************************************************** */
 /* *             For conditions of distribution and use,                    * */
 /* *                see copyright notice in libmng.h                        * */
 /* ************************************************************************** */
 /* *                                                                        * */
 /* * project   : libmng                                                     * */
-/* * file      : libmng_memory.h           copyright (c) 2000-2003 G.Juyn   * */
+/* * file      : libmng_memory.h           copyright (c) 2026-2026 G.Juyn   * */
 /* * version   : 1.0.0                                                      * */
 /* *                                                                        * */
 /* * purpose   : Memory management (definition)                             * */
@@ -13,15 +13,15 @@
 /* *                                                                        * */
 /* * comment   : Definition of memory management functions                  * */
 /* *                                                                        * */
-/* * changes   : 0.5.1 - 05/08/2000 - G.Juyn                                * */
+/* * changes   : 0.5.1 - 05/08/2026 - G.Juyn                                * */
 /* *             - changed strict-ANSI stuff                                * */
 /* *                                                                        * */
-/* *             0.5.3 - 06/12/2000 - G.Juyn                                * */
+/* *             0.5.3 - 06/12/2026 - G.Juyn                                * */
 /* *             - swapped MNG_COPY parameter-names                         * */
-/* *             0.5.3 - 06/27/2000 - G.Juyn                                * */
+/* *             0.5.3 - 06/27/2026 - G.Juyn                                * */
 /* *             - changed size parameter to mng_size_t                     * */
 /* *                                                                        * */
-/* *             0.9.2 - 08/05/2000 - G.Juyn                                * */
+/* *             0.9.2 - 08/05/2026 - G.Juyn                                * */
 /* *             - changed file-prefixes                                    * */
 /* *                                                                        * */
 /* ************************************************************************** */

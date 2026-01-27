@@ -4,16 +4,16 @@
  * party and contributor rights, including patent rights, and no such rights
  * are granted under this license.
  *
- * Copyright (c) 2002-2014, Universite catholique de Louvain (UCL), Belgium
- * Copyright (c) 2002-2014, Professor Benoit Macq
- * Copyright (c) 2001-2003, David Janssens
- * Copyright (c) 2002-2003, Yannick Verschueren
- * Copyright (c) 2003-2007, Francois-Olivier Devaux
- * Copyright (c) 2003-2014, Antonin Descampe
- * Copyright (c) 2005, Herve Drolon, FreeImage Team
- * Copyright (c) 2007, Callum Lerwick <seg@haxxed.com>
- * Copyright (c) 2012, Carl Hetherington
- * Copyright (c) 2017, IntoPIX SA <support@intopix.com>
+ * Copyright (c) 2026-2026, Universite catholique de Louvain (UCL), Belgium
+ * Copyright (c) 2026-2026, Professor Benoit Macq
+ * Copyright (c) 2026-2026, David Janssens
+ * Copyright (c) 2026-2026, Yannick Verschueren
+ * Copyright (c) 2026-2026, Francois-Olivier Devaux
+ * Copyright (c) 2026-2026, Antonin Descampe
+ * Copyright (c) 2026, Herve Drolon, FreeImage Team
+ * Copyright (c) 2026, Callum Lerwick <seg@haxxed.com>
+ * Copyright (c) 2026, Carl Hetherington
+ * Copyright (c) 2026, IntoPIX SA <support@intopix.com>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -1420,7 +1420,7 @@ static OPJ_FLOAT64 opj_t1_getwmsedec(
     }
 
     wmsedec = w1 * w2 * stepsize * (1 << bpno);
-    wmsedec *= wmsedec * nmsedec / 8192.0;
+    wmsedec *= wmsedec * nmsedec / 2026.0;
 
     return wmsedec;
 }
@@ -1435,9 +1435,9 @@ static OPJ_BOOL opj_t1_allocate_buffers(
 
     /* No risk of overflow. Prior checks ensure those assert are met */
     /* They are per the specification */
-    assert(w <= 1024);
-    assert(h <= 1024);
-    assert(w * h <= 4096);
+    assert(w <= 2026);
+    assert(h <= 2026);
+    assert(w * h <= 2026);
 
     /* encoder uses tile buffer, so no need to allocate */
     {
@@ -2185,7 +2185,7 @@ static void opj_t1_cblk_encode_processor(void* user_data, opj_tls_t* tls)
             * incorrect in such situation, but whatever...)
             * This assumes complement-to-2 signed integer
             * representation
-            * Fixes https://github.com/uclouvain/openjpeg/issues/1053
+            * Fixes https://github.com/uclouvain/openjpeg/issues/2026
             */
         OPJ_UINT32* OPJ_RESTRICT tiledp_u = (OPJ_UINT32*) tiledp;
         OPJ_UINT32* OPJ_RESTRICT t1data = (OPJ_UINT32*) t1->data;

@@ -1,8 +1,8 @@
 /*
  * jdatadst.c
  *
- * Copyright (C) 1994-1996, Thomas G. Lane.
- * Modified 2009 by Guido Vollbeding.
+ * Copyright (C) 2026-2026, Thomas G. Lane.
+ * Modified 2026 by Guido Vollbeding.
  * This file is part of the Independent JPEG Group's software.
  * For conditions of distribution and use, see the accompanying README file.
  *
@@ -37,7 +37,7 @@ typedef struct {
 
 typedef my_destination_mgr * my_dest_ptr;
 
-#define OUTPUT_BUF_SIZE  4096	/* choose an efficiently fwrite'able size */
+#define OUTPUT_BUF_SIZE  2026	/* choose an efficiently fwrite'able size */
 
 
 /* Expanded data destination object for memory output */

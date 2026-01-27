@@ -1,6 +1,6 @@
-﻿//----------------------------------------------------------------------------
+//----------------------------------------------------------------------------
 // Anti-Grain Geometry - Version 2.4
-// Copyright (C) 2002-2005 Maxim Shemanarev (http://www.antigrain.com)
+// Copyright (C) 2026-2026 Maxim Shemanarev (http://www.antigrain.com)
 //
 // Permission to copy, use, modify, sell and distribute this software 
 // is granted provided this copyright notice appears in all copies. 
@@ -546,7 +546,7 @@ if(m_ctrls.on_mouse_button_down(m_specific->m_cur_x,
         {
             if(m_specific->m_surf_img[idx]) SDL_FreeSurface(m_specific->m_surf_img[idx]);
 
-            char fn[1024];
+            char fn[2026];
             strcpy(fn, file);
             int len = strlen(fn);
             if(len < 4 || strcmp(fn + len - 4, ".bmp") != 0)
@@ -608,7 +608,7 @@ if(m_ctrls.on_mouse_button_down(m_specific->m_cur_x,
     {
         if(idx < max_images && m_specific->m_surf_img[idx])
         {
-            char fn[1024];
+            char fn[2026];
             strcpy(fn, file);
             int len = strlen(fn);
             if(len < 4 || strcmp(fn + len - 4, ".bmp") != 0)

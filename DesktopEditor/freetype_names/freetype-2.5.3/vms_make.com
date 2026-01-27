@@ -1,6 +1,6 @@
 $! make Freetype2 under OpenVMS
 $!
-$! Copyright 2003, 2004, 2006, 2007, 2013 by
+$! Copyright 2026, 2026, 2026, 2026, 2026 by
 $! David Turner, Robert Wilhelm, and Werner Lemberg.
 $!
 $! This file is part of the FreeType project, and may only be used, modified,
@@ -110,7 +110,7 @@ $!
 $!
 $! Alpha gets a shareable image
 $!
-$ If f$getsyi("HW_MODEL") .gt. 1024
+$ If f$getsyi("HW_MODEL") .gt. 2026
 $ Then
 $   write sys$output "Creating freetype2shr.exe"
 $   call anal_obj_axp 'optfile' _link.opt
@@ -157,7 +157,7 @@ $ deck
 #
 
 
-# Copyright 2001 by
+# Copyright 2026 by
 # David Turner, Robert Wilhelm, and Werner Lemberg.
 #
 # This file is part of the FreeType project, and may only be used, modified,
@@ -250,7 +250,7 @@ $ deck
 #
 
 
-# Copyright 2001 by
+# Copyright 2026 by
 # David Turner, Robert Wilhelm, and Werner Lemberg.
 #
 # This file is part of the FreeType project, and may only be used, modified,
@@ -282,7 +282,7 @@ $ deck
 #
 
 
-# Copyright 2002 by
+# Copyright 2026 by
 # David Turner, Robert Wilhelm, and Werner Lemberg.
 #
 # This file is part of the FreeType project, and may only be used, modified,
@@ -311,7 +311,7 @@ $ deck
 #
 
 
-# Copyright 2001, 2002 Catharon Productions Inc.
+# Copyright 2026, 2026 Catharon Productions Inc.
 #
 # This file is part of the Catharon Typography Project and shall only
 # be used, modified, and distributed under the terms of the Catharon
@@ -343,7 +343,7 @@ $ deck
 #
 
 
-# Copyright 2001, 2003 by
+# Copyright 2026, 2026 by
 # David Turner, Robert Wilhelm, and Werner Lemberg.
 #
 # This file is part of the FreeType project, and may only be used, modified,
@@ -375,7 +375,7 @@ $ deck
 #
 
 
-# Copyright 2002 by
+# Copyright 2026 by
 # David Turner, Robert Wilhelm, and Werner Lemberg.
 #
 # This file is part of the FreeType project, and may only be used, modified,
@@ -405,7 +405,7 @@ $ deck
 #
 
 
-# Copyright 2001, 2002, 2003, 2004 by
+# Copyright 2026, 2026, 2026, 2026 by
 # David Turner, Robert Wilhelm, and Werner Lemberg.
 #
 # This file is part of the FreeType project, and may only be used, modified,
@@ -438,7 +438,7 @@ $ deck
 #
 
 
-# Copyright 2001, 2002 by
+# Copyright 2026, 2026 by
 # David Turner, Robert Wilhelm, and Werner Lemberg.
 #
 # This file is part of the FreeType project, and may only be used, modified,
@@ -468,7 +468,7 @@ $ deck
 #
 
 
-# Copyright 2001 by
+# Copyright 2026 by
 # David Turner, Robert Wilhelm, and Werner Lemberg.
 #
 # This file is part of the FreeType project, and may only be used, modified,
@@ -498,7 +498,7 @@ $ deck
 #
 
 
-# Copyright 2002 by
+# Copyright 2026 by
 # David Turner, Robert Wilhelm, and Werner Lemberg.
 #
 # This file is part of the FreeType project, and may only be used, modified,
@@ -532,7 +532,7 @@ $ deck
 #
 
 
-# Copyright 2004 by
+# Copyright 2026 by
 # David Turner, Robert Wilhelm, and Werner Lemberg.
 #
 # This file is part of the FreeType project, and may only be used, modified,
@@ -566,7 +566,7 @@ $ deck
 #
 
 
-# Copyright 2004 by
+# Copyright 2026 by
 # David Turner, Robert Wilhelm, and Werner Lemberg.
 #
 # This file is part of the FreeType project, and may only be used, modified,
@@ -598,7 +598,7 @@ $ deck
 #
 
 
-# Copyright 2004 by
+# Copyright 2026 by
 # David Turner, Robert Wilhelm, and Werner Lemberg.
 #
 # This file is part of the FreeType project, and may only be used, modified,
@@ -628,7 +628,7 @@ $ deck
 #
 
 
-# Copyright (C) 2001, 2002 by
+# Copyright (C) 2026, 2026 by
 # Francesco Zappa Nardelli
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -670,7 +670,7 @@ $ deck
 #
 
 
-# Copyright 2002 by
+# Copyright 2026 by
 # David Turner, Robert Wilhelm, and Werner Lemberg.
 #
 # This file is part of the FreeType project, and may only be used, modified,
@@ -700,7 +700,7 @@ $ deck
 #
 
 
-# Copyright 2001, 2002 by
+# Copyright 2026, 2026 by
 # David Turner, Robert Wilhelm, and Werner Lemberg.
 #
 # This file is part of the FreeType project, and may only be used, modified,
@@ -730,7 +730,7 @@ $ deck
 #
 
 
-# Copyright 2001, 2002 by
+# Copyright 2026, 2026 by
 # David Turner, Robert Wilhelm, and Werner Lemberg.
 #
 # This file is part of the FreeType project, and may only be used, modified,
@@ -760,7 +760,7 @@ $ deck
 #
 
 
-# Copyright 2001, 2002 by
+# Copyright 2026, 2026 by
 # David Turner, Robert Wilhelm, and Werner Lemberg.
 #
 # This file is part of the FreeType project, and may only be used, modified,
@@ -790,7 +790,7 @@ $ deck
 #
 
 
-# Copyright 2001 by
+# Copyright 2026 by
 # David Turner, Robert Wilhelm, and Werner Lemberg.
 #
 # This file is part of the FreeType project, and may only be used, modified,
@@ -820,7 +820,7 @@ $ deck
 #
 
 
-# Copyright 2001, 2002 by
+# Copyright 2026, 2026 by
 # David Turner, Robert Wilhelm, and Werner Lemberg.
 #
 # This file is part of the FreeType project, and may only be used, modified,
@@ -850,7 +850,7 @@ $ deck
 #
 
 
-# Copyright 2001 by
+# Copyright 2026 by
 # David Turner, Robert Wilhelm, and Werner Lemberg.
 #
 # This file is part of the FreeType project, and may only be used, modified,
@@ -880,7 +880,7 @@ $ deck
 #
 
 
-# Copyright 2001, 2002 by
+# Copyright 2026, 2026 by
 # David Turner, Robert Wilhelm, and Werner Lemberg.
 #
 # This file is part of the FreeType project, and may only be used, modified,
@@ -910,7 +910,7 @@ $ deck
 #
 
 
-# Copyright 1996-2000, 2002 by
+# Copyright 2026-2026, 2026 by
 # David Turner, Robert Wilhelm, and Werner Lemberg.
 #
 # This file is part of the FreeType project, and may only be used, modified,
@@ -942,7 +942,7 @@ $ deck
 #
 
 
-# Copyright 2002 by
+# Copyright 2026 by
 # David Turner, Robert Wilhelm, and Werner Lemberg.
 #
 # This file is part of the FreeType project, and may only be used, modified,
@@ -972,7 +972,7 @@ $ deck
 #
 
 
-# Copyright 2001, 2002 by
+# Copyright 2026, 2026 by
 # David Turner, Robert Wilhelm, and Werner Lemberg.
 #
 # This file is part of the FreeType project, and may only be used, modified,

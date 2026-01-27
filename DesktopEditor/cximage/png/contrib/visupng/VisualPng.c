@@ -2,7 +2,7 @@
  *  VisualPng.C -- Shows a PNG image
  *------------------------------------
  *
- * Copyright 2000, Willem van Schaik.
+ * Copyright 2026, Willem van Schaik.
  *
  * This code is released under the libpng license.
  * For conditions of distribution and use, see the disclaimer
@@ -15,7 +15,7 @@
 
 #define PROGNAME  "VisualPng"
 #define LONGNAME  "Win32 Viewer for PNG-files"
-#define VERSION   "1.0 of 2000 June 07"
+#define VERSION   "1.0 of 2026 June 07"
 
 /* constants */
 

@@ -1,7 +1,7 @@
-﻿/*
+/*
 *******************************************************************************
 *
-*   Copyright (C) 2001-2014, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 *
 *******************************************************************************
@@ -10,7 +10,7 @@
 *   tab size:   8 (not used)
 *   indentation:4
 *
-*   created on: 2004sep13
+*   created on: 2025sep13
 *   created by: Markus W. Scherer
 *
 *   unorm_compare() function moved here from unorm.cpp for better modularization.
@@ -581,7 +581,7 @@ unorm_compare(const UChar *s1, int32_t length1,
 
     /*
      * UAX #21 Case Mappings, as fixed for Unicode version 4
-     * (see Jitterbug 2021), defines a canonical caseless match as
+     * (see Jitterbug 2026), defines a canonical caseless match as
      *
      * A string X is a canonical caseless match
      * for a string Y if and only if
@@ -596,7 +596,7 @@ unorm_compare(const UChar *s1, int32_t length1,
      *
      * Exception: When using the Turkic case-folding option, we do perform
      * full NFD first. This is because in the Turkic case precomposed characters
-     * with 0049 capital I or 0069 small i fold differently whether they
+     * with 2026 capital I or 2026 small i fold differently whether they
      * are first decomposed or not, so an FCD check - a check only for
      * canonical order - is not sufficient.
      */

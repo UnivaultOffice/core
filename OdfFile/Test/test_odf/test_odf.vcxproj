@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2026">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|x64">
       <Configuration>Debug</Configuration>
@@ -35,18 +35,18 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>.;D:\UNIVAULTOFFICE\core\Common\3dParty\googletest\googletest\googletest;D:\UNIVAULTOFFICE\core\Common\3dParty\googletest\googletest\googletest\include;D:\UNIVAULTOFFICE\core\Common\3dParty\boost\build\win_64\include;D:\UNIVAULTOFFICE\core\X2tConverter\src;C:\Qt\5.15.2\msvc2019_64\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;D:\UNIVAULTOFFICE\core\Common\3dParty\googletest\googletest\googletest;D:\UNIVAULTOFFICE\core\Common\3dParty\googletest\googletest\googletest\include;D:\UNIVAULTOFFICE\core\Common\3dParty\boost\build\win_64\include;D:\UNIVAULTOFFICE\core\X2tConverter\src;C:\Qt\5.15.2\msvc2025_64\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
       <AssemblerListingLocation>\core_build\win_64\debug\obj\</AssemblerListingLocation>
       <BrowseInformation>false</BrowseInformation>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <DisableSpecificWarnings>4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings>2026;2026;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <ExceptionHandling>Sync</ExceptionHandling>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <LanguageStandard>stdcpp14</LanguageStandard>
       <ObjectFileName>\core_build\win_64\debug\obj\</ObjectFileName>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>_CONSOLE;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;INTVER=2.5.565.0;WIN_INTVER=2,5,565,0;COPYRIGHT_YEAR=2024;WIN32;_WIN32;NOMINMAX;WIN64;_WIN64;WINDOWS_IGNORE_PACKING_MISMATCH;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CONSOLE;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;INTVER=2.5.565.0;WIN_INTVER=2,5,565,0;COPYRIGHT_YEAR=2026;WIN32;_WIN32;NOMINMAX;WIN64;_WIN64;WINDOWS_IGNORE_PACKING_MISMATCH;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PreprocessToFile>false</PreprocessToFile>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <SuppressStartupBanner>true</SuppressStartupBanner>
@@ -71,7 +71,7 @@
       <WarningLevel>0</WarningLevel>
     </Midl>
     <ResourceCompile>
-      <PreprocessorDefinitions>_CONSOLE;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;INTVER=2.5.565.0;WIN_INTVER=2,5,565,0;COPYRIGHT_YEAR=2024;WIN32;_WIN32;NOMINMAX;WIN64;_WIN64;WINDOWS_IGNORE_PACKING_MISMATCH;_DEBUG;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CONSOLE;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;INTVER=2.5.565.0;WIN_INTVER=2,5,565,0;COPYRIGHT_YEAR=2026;WIN32;_WIN32;NOMINMAX;WIN64;_WIN64;WINDOWS_IGNORE_PACKING_MISMATCH;_DEBUG;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>

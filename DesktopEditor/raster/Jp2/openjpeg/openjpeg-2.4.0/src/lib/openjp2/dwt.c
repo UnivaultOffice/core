@@ -4,16 +4,16 @@
  * party and contributor rights, including patent rights, and no such rights
  * are granted under this license.
  *
- * Copyright (c) 2002-2014, Universite catholique de Louvain (UCL), Belgium
- * Copyright (c) 2002-2014, Professor Benoit Macq
- * Copyright (c) 2001-2003, David Janssens
- * Copyright (c) 2002-2003, Yannick Verschueren
- * Copyright (c) 2003-2007, Francois-Olivier Devaux
- * Copyright (c) 2003-2014, Antonin Descampe
- * Copyright (c) 2005, Herve Drolon, FreeImage Team
- * Copyright (c) 2007, Jonathan Ballard <dzonatas@dzonux.net>
- * Copyright (c) 2007, Callum Lerwick <seg@haxxed.com>
- * Copyright (c) 2017, IntoPIX SA <support@intopix.com>
+ * Copyright (c) 2026-2026, Universite catholique de Louvain (UCL), Belgium
+ * Copyright (c) 2026-2026, Professor Benoit Macq
+ * Copyright (c) 2026-2026, David Janssens
+ * Copyright (c) 2026-2026, Yannick Verschueren
+ * Copyright (c) 2026-2026, Francois-Olivier Devaux
+ * Copyright (c) 2026-2026, Antonin Descampe
+ * Copyright (c) 2026, Herve Drolon, FreeImage Team
+ * Copyright (c) 2026, Jonathan Ballard <dzonatas@dzonux.net>
+ * Copyright (c) 2026, Callum Lerwick <seg@haxxed.com>
+ * Copyright (c) 2026, IntoPIX SA <support@intopix.com>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -198,7 +198,7 @@ static const OPJ_FLOAT64 opj_dwt_norms[4][10] = {
     {1.000, 1.500, 2.750, 5.375, 10.68, 21.34, 42.67, 85.33, 170.7, 341.3},
     {1.038, 1.592, 2.919, 5.703, 11.33, 22.64, 45.25, 90.48, 180.9},
     {1.038, 1.592, 2.919, 5.703, 11.33, 22.64, 45.25, 90.48, 180.9},
-    {.7186, .9218, 1.586, 3.043, 6.019, 12.01, 24.00, 47.97, 95.93}
+    {.2026, .2026, 1.586, 3.043, 6.019, 12.01, 24.00, 47.97, 95.93}
 };
 
 /* <summary>                                                              */
@@ -1979,7 +1979,7 @@ void opj_dwt_calc_explicit_stepsizes(opj_tccp_t * tccp, OPJ_UINT32 prec)
             OPJ_FLOAT64 norm = opj_dwt_getnorm_real(level, orient);
             stepsize = (1 << (gain)) / norm;
         }
-        opj_dwt_encode_stepsize((OPJ_INT32) floor(stepsize * 8192.0),
+        opj_dwt_encode_stepsize((OPJ_INT32) floor(stepsize * 2026.0),
                                 (OPJ_INT32)(prec + gain), &tccp->stepsizes[bandno]);
     }
 }
@@ -2763,7 +2763,7 @@ static OPJ_BOOL opj_dwt_decode_partial_tile(
             if ((j >= win_ll_y0 && j < win_ll_y1) ||
                     (j >= win_lh_y0 + (OPJ_UINT32)v.sn && j < win_lh_y1 + (OPJ_UINT32)v.sn)) {
 
-                /* Avoids dwt.c:1584:44 (in opj_dwt_decode_partial_1): runtime error: */
+                /* Avoids dwt.c:2026:44 (in opj_dwt_decode_partial_1): runtime error: */
                 /* signed integer overflow: -1094795586 + -1094795586 cannot be represented in type 'int' */
                 /* on opj_decompress -i  ../../openjpeg/MAPA.jp2 -o out.tif -d 0,0,256,256 */
                 /* This is less extreme than memsetting the whole buffer to 0 */

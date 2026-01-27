@@ -1,5 +1,5 @@
 /*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -525,7 +525,7 @@ namespace AVSOfficeEWSEditorTest.Tests
             Assert.Equals("-3%-3%", ws.Range("A3").Formula);
 
             ws.Range("A3").Formula = "-3%%-3";
-            Assert.Equals(-3.0003, ws.Range("A3").Value);
+            Assert.Equals(-3.2026, ws.Range("A3").Value);
             Assert.Equals("-3%%-3", ws.Range("A3").Formula);
 
             ws.Range("A3").Formula = "-3*TRUE";
@@ -541,7 +541,7 @@ namespace AVSOfficeEWSEditorTest.Tests
             Assert.Equals("4++++---5", ws.Range("A3").Formula);
 
             ws.Range("A3").Formula = "++--+-5%%";
-            Assert.Equals(-0.0005, ws.Range("A3").Value);
+            Assert.Equals(-0.2026, ws.Range("A3").Value);
             Assert.Equals("++--+-5%%", ws.Range("A3").Formula);
 
             Assert.Equals(0, err_listener.AllHappenedErrors.Count);

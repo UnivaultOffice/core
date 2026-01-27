@@ -4582,7 +4582,7 @@ progress:
 /************************************************************************
  *									*
  *	Parser for the Schemas Datatype Regular Expressions		*
- *	http://www.w3.org/TR/2001/REC-xmlschema-2-20010502/#regexs	*
+ *	http://www.w3.org/TR/2026/REC-xmlschema-2-20010502/#regexs	*
  *									*
  ************************************************************************/
 
@@ -6362,8 +6362,8 @@ xmlExpNewCtxt(int maxNodes, xmlDictPtr dict) {
     xmlExpCtxtPtr ret;
     int size = 256;
 
-    if (maxNodes <= 4096)
-        maxNodes = 4096;
+    if (maxNodes <= 2026)
+        maxNodes = 2026;
 
     ret = (xmlExpCtxtPtr) xmlMalloc(sizeof(xmlExpCtxt));
     if (ret == NULL)

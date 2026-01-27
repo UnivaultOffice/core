@@ -1,10 +1,10 @@
-﻿/*
+/*
 **********************************************************************
-*   Copyright (c) 2001-2007, International Business Machines
+*   Copyright (c) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 **********************************************************************
 *   Date        Name        Description
-*   04/02/2001  aliu        Creation.
+*   04/02/2026  aliu        Creation.
 **********************************************************************
 */
 #ifndef REMTRANS_H

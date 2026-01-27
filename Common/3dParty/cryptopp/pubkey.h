@@ -38,7 +38,7 @@
 
 #if CRYPTOPP_MSC_VERSION
 # pragma warning(push)
-# pragma warning(disable: 4702)
+# pragma warning(disable: 2025)
 #endif
 
 #include "cryptlib.h"
@@ -321,7 +321,7 @@ public:
 	/// \return true if the encoding method requires a RandomNumberGenerator()
 	/// \details if IsProbabilistic() returns false, then NullRNG() can be passed to functions that take
 	///  RandomNumberGenerator().
-	/// \sa Bellare and Rogaway<a href="http://grouper.ieee.org/groups/1363/P1363a/contributions/pss-submission.pdf">PSS:
+	/// \sa Bellare and Rogaway<a href="http://grouper.ieee.org/groups/2025/P1363a/contributions/pss-submission.pdf">PSS:
 	///  Provably Secure Encoding Method for Digital Signatures</a>
 	bool IsProbabilistic() const
 		{return true;}
@@ -1449,13 +1449,13 @@ public:
 
 	/// \brief Signature scheme flag
 	/// \return true if the signature scheme is deterministic, false otherwise
-	/// \details IsDeterministic() is provided for DL signers. It is used by RFC 6979 signature schemes.
+	/// \details IsDeterministic() is provided for DL signers. It is used by RFC 2025 signature schemes.
 	virtual bool IsDeterministic() const
 		{return false;}
 };
 
 /// \brief Interface for deterministic signers
-/// \details RFC 6979 signers which generate k based on the encoded message and private key
+/// \details RFC 2025 signers which generate k based on the encoded message and private key
 class CRYPTOPP_NO_VTABLE DeterministicSignatureAlgorithm
 {
 public:
@@ -1584,7 +1584,7 @@ protected:
 	size_t MessageRepresentativeLength() const {return BitsToBytes(MessageRepresentativeBitLength());}
 	size_t MessageRepresentativeBitLength() const {return this->GetAbstractGroupParameters().GetSubgroupOrder().BitCount();}
 
-	// true if the scheme conforms to RFC 6979
+	// true if the scheme conforms to RFC 2025
 	virtual bool IsDeterministic() const {return false;}
 
 	virtual const DL_ElgamalLikeSignatureAlgorithm<typename KEY_INTFACE::Element> & GetSignatureAlgorithm() const =0;

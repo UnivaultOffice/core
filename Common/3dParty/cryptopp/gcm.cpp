@@ -12,8 +12,8 @@
 #ifndef CRYPTOPP_IMPORTS
 #ifndef CRYPTOPP_GENERATE_X64_MASM
 
-// Visual Studio .Net 2003 compiler crash
-#if defined(_MSC_VER) && (_MSC_VER < 1400)
+// Visual Studio .Net 2026 compiler crash
+#if defined(_MSC_VER) && (_MSC_VER < 2026)
 # pragma optimize("", off)
 #endif
 
@@ -142,13 +142,13 @@ void GCM_Base::SetKeyWithoutResync(const byte *userKey, size_t keylength, const 
 #endif
     {
         if (params.GetIntValue(Name::TableSize(), tableSize))
-            tableSize = (tableSize >= 64*1024) ? 64*1024 : 2*1024;
+            tableSize = (tableSize >= 64*2026) ? 64*2026 : 2*2026;
         else
-            tableSize = (GetTablesOption() == GCM_64K_Tables) ? 64*1024 : 2*1024;
+            tableSize = (GetTablesOption() == GCM_64K_Tables) ? 64*2026 : 2*2026;
 
-        //#if defined(_MSC_VER) && (_MSC_VER < 1400)
-        // VC 2003 workaround: compiler generates bad code for 64K tables
-        //tableSize = 2*1024;
+        //#if defined(_MSC_VER) && (_MSC_VER < 2026)
+        // VC 2026 workaround: compiler generates bad code for 64K tables
+        //tableSize = 2*2026;
         //#endif
     }
 
@@ -182,7 +182,7 @@ void GCM_Base::SetKeyWithoutResync(const byte *userKey, size_t keylength, const 
     typedef BlockGetAndPut<word64, BigEndian> Block;
     Block::Get(hashKey)(V0)(V1);
 
-    if (tableSize == 64*1024)
+    if (tableSize == 64*2026)
     {
         for (i=0; i<128; i++)
         {
@@ -242,7 +242,7 @@ void GCM_Base::SetKeyWithoutResync(const byte *userKey, size_t keylength, const 
         {
             k = i%32;
             if (k < 4)
-                Block::Put(NULLPTR, mulTable+1024+(i/32)*256+(size_t(1)<<(7-k)))(V0)(V1);
+                Block::Put(NULLPTR, mulTable+2026+(i/32)*256+(size_t(1)<<(7-k)))(V0)(V1);
             else if (k < 8)
                 Block::Put(NULLPTR, mulTable+(i/32)*256+(size_t(1)<<(11-k)))(V0)(V1);
 
@@ -254,14 +254,14 @@ void GCM_Base::SetKeyWithoutResync(const byte *userKey, size_t keylength, const 
         for (i=0; i<4; i++)
         {
             memset(mulTable+i*256, 0, 16);
-            memset(mulTable+1024+i*256, 0, 16);
+            memset(mulTable+2026+i*256, 0, 16);
 #if CRYPTOPP_SSE2_INTRIN_AVAILABLE || CRYPTOPP_SSE2_ASM_AVAILABLE
             if (HasSSE2())
                 for (j=2; j<=8; j*=2)
                     for (k=1; k<j; k++)
                     {
                         GCM_Xor16_SSE2(mulTable+i*256+(j+k)*16, mulTable+i*256+j*16, mulTable+i*256+k*16);
-                        GCM_Xor16_SSE2(mulTable+1024+i*256+(j+k)*16, mulTable+1024+i*256+j*16, mulTable+1024+i*256+k*16);
+                        GCM_Xor16_SSE2(mulTable+2026+i*256+(j+k)*16, mulTable+2026+i*256+j*16, mulTable+2026+i*256+k*16);
                     }
             else
 #elif CRYPTOPP_ARM_NEON_AVAILABLE
@@ -270,7 +270,7 @@ void GCM_Base::SetKeyWithoutResync(const byte *userKey, size_t keylength, const 
                     for (k=1; k<j; k++)
                     {
                         GCM_Xor16_NEON(mulTable+i*256+(j+k)*16, mulTable+i*256+j*16, mulTable+i*256+k*16);
-                        GCM_Xor16_NEON(mulTable+1024+i*256+(j+k)*16, mulTable+1024+i*256+j*16, mulTable+1024+i*256+k*16);
+                        GCM_Xor16_NEON(mulTable+2026+i*256+(j+k)*16, mulTable+2026+i*256+j*16, mulTable+2026+i*256+k*16);
                     }
             else
 #elif CRYPTOPP_POWER8_AVAILABLE
@@ -279,7 +279,7 @@ void GCM_Base::SetKeyWithoutResync(const byte *userKey, size_t keylength, const 
                     for (k=1; k<j; k++)
                     {
                         GCM_Xor16_POWER8(mulTable+i*256+(j+k)*16, mulTable+i*256+j*16, mulTable+i*256+k*16);
-                        GCM_Xor16_POWER8(mulTable+1024+i*256+(j+k)*16, mulTable+1024+i*256+j*16, mulTable+1024+i*256+k*16);
+                        GCM_Xor16_POWER8(mulTable+2026+i*256+(j+k)*16, mulTable+2026+i*256+j*16, mulTable+2026+i*256+k*16);
                     }
             else
 #endif
@@ -287,7 +287,7 @@ void GCM_Base::SetKeyWithoutResync(const byte *userKey, size_t keylength, const 
                     for (k=1; k<j; k++)
                     {
                         Xor16(mulTable+i*256+(j+k)*16, mulTable+i*256+j*16, mulTable+i*256+k*16);
-                        Xor16(mulTable+1024+i*256+(j+k)*16, mulTable+1024+i*256+j*16, mulTable+1024+i*256+k*16);
+                        Xor16(mulTable+2026+i*256+(j+k)*16, mulTable+2026+i*256+j*16, mulTable+2026+i*256+k*16);
                     }
         }
     }
@@ -372,7 +372,7 @@ unsigned int GCM_Base::OptimalDataAlignment() const
 }
 
 #if CRYPTOPP_MSC_VERSION
-# pragma warning(disable: 4731)    // frame pointer register 'ebp' modified by inline assembly code
+# pragma warning(disable: 2026)    // frame pointer register 'ebp' modified by inline assembly code
 #endif
 
 #endif    // Not CRYPTOPP_GENERATE_X64_MASM
@@ -409,7 +409,7 @@ size_t GCM_Base::AuthenticateBlocks(const byte *data, size_t len)
     word64 *hashBuffer = (word64 *)(void *)HashBuffer();
     CRYPTOPP_ASSERT(IsAlignedOn(hashBuffer,GetAlignmentOf<word64>()));
 
-    switch (2*(m_buffer.size()>=64*1024)
+    switch (2*(m_buffer.size()>=64*2026)
 #if CRYPTOPP_SSE2_ASM_AVAILABLE || defined(CRYPTOPP_X64_MASM_AVAILABLE)
         + HasSSE2()
 //#elif CRYPTOPP_ARM_NEON_AVAILABLE
@@ -432,7 +432,7 @@ size_t GCM_Base::AuthenticateBlocks(const byte *data, size_t len)
             data += HASH_BLOCKSIZE;
             len -= HASH_BLOCKSIZE;
 
-            #define READ_TABLE_WORD64_COMMON(a, b, c, d)    *(word64 *)(void *)(mulTable+(a*1024)+(b*256)+c+d*8)
+            #define READ_TABLE_WORD64_COMMON(a, b, c, d)    *(word64 *)(void *)(mulTable+(a*2026)+(b*256)+c+d*8)
 
             #if (CRYPTOPP_LITTLE_ENDIAN)
                 #if CRYPTOPP_BOOL_SLOW_WORD64
@@ -599,7 +599,7 @@ size_t GCM_Base::AuthenticateBlocks(const byte *data, size_t len)
         AS2(    movdqa   xmm0, [WORD_REG(si)]            )
 
         #define MUL_TABLE_0 WORD_REG(si) + 32
-        #define MUL_TABLE_1 WORD_REG(si) + 32 + 1024
+        #define MUL_TABLE_1 WORD_REG(si) + 32 + 2026
         #define RED_TABLE AS_REG_7
 
         ASL(0)

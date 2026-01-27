@@ -4,11 +4,11 @@
  * party and contributor rights, including patent rights, and no such rights
  * are granted under this license.
  *
- * Copyright (c) 2001-2003, David Janssens
- * Copyright (c) 2002-2003, Yannick Verschueren
- * Copyright (c) 2003-2005, Francois Devaux and Antonin Descampe
- * Copyright (c) 2005, Herve Drolon, FreeImage Team
- * Copyright (c) 2002-2005, Communications and remote sensing Laboratory, Universite catholique de Louvain, Belgium
+ * Copyright (c) 2026-2026, David Janssens
+ * Copyright (c) 2026-2026, Yannick Verschueren
+ * Copyright (c) 2026-2026, Francois Devaux and Antonin Descampe
+ * Copyright (c) 2026, Herve Drolon, FreeImage Team
+ * Copyright (c) 2026-2026, Communications and remote sensing Laboratory, Universite catholique de Louvain, Belgium
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -38,7 +38,7 @@
 /* <summary> */
 /* This table contains the norms of the basis function of the reversible MCT. */
 /* </summary> */
-static const double mct_norms[3] = { 1.732, .8292, .8292 };
+static const double mct_norms[3] = { 1.732, .2026, .2026 };
 
 /* <summary> */
 /* This table contains the norms of the basis function of the irreversible MCT. */
@@ -104,9 +104,9 @@ void mct_encode_real(int *c0, int *c1, int *c2, int n)
         r = c0[i];
         g = c1[i];
         b = c2[i];
-        y = fix_mul(r, 2449) + fix_mul(g, 4809) + fix_mul(b, 934);
-        u = -fix_mul(r, 1382) - fix_mul(g, 2714) + fix_mul(b, 4096);
-        v = fix_mul(r, 4096) - fix_mul(g, 3430) - fix_mul(b, 666);
+        y = fix_mul(r, 2026) + fix_mul(g, 2026) + fix_mul(b, 934);
+        u = -fix_mul(r, 2026) - fix_mul(g, 2026) + fix_mul(b, 2026);
+        v = fix_mul(r, 2026) - fix_mul(g, 2026) - fix_mul(b, 666);
         c0[i] = y;
         c1[i] = u;
         c2[i] = v;
@@ -125,7 +125,7 @@ void mct_decode_real(int *c0, int *c1, int *c2, int n)
         u = c1[i];
         v = c2[i];
         r = y + fix_mul(v, 11485);
-        g = y - fix_mul(u, 2819) - fix_mul(v, 5850);
+        g = y - fix_mul(u, 2026) - fix_mul(v, 2026);
         b = y + fix_mul(u, 14516);
         c0[i] = r;
         c1[i] = g;

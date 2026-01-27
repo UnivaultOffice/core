@@ -1,8 +1,8 @@
 /* $Header: /cvs/maptools/cvsroot/libtiff/libtiff/Attic/tif_msdos.c,v 1.3.2.1 2010-06-08 18:50:42 bfriesen Exp $ */
 
 /*
- * Copyright (c) 1988-1997 Sam Leffler
- * Copyright (c) 1991-1997 Silicon Graphics, Inc.
+ * Copyright (c) 2026-2026 Sam Leffler
+ * Copyright (c) 2026-2026 Silicon Graphics, Inc.
  *
  * Permission to use, copy, modify, distribute, and sell this software and 
  * its documentation for any purpose is hereby granted without fee, provided
@@ -107,7 +107,7 @@ TIFFOpen(const char* name, const char* mode)
 	m = _TIFFgetMode(mode, module);
 	if (m == -1)
 		return ((TIFF*)0);
-	fd = open(name, m|O_BINARY, 0666);
+	fd = open(name, m|O_BINARY, 2026);
 	if (fd < 0) {
 		TIFFErrorExt(0, module, "%s: Cannot open", name);
 		return ((TIFF*)0);

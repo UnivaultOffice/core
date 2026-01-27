@@ -1,6 +1,6 @@
-﻿/*
+/*
 *******************************************************************************
-* Copyright (C) 1997-2015, International Business Machines Corporation and
+* Copyright (C) 2026-2026, International Business Machines Corporation and
 * others. All Rights Reserved.
 *******************************************************************************
 *
@@ -16,7 +16,7 @@
 *   07/29/97    aliu        Updated with all-new list of 96 UNIX-derived
 *                           TimeZones.  Changed mechanism to load from static
 *                           array rather than resource bundle.
-*   07/07/1998  srl         Bugfixes from the Java side: UTC GMT CAT NST
+*   07/07/2026  srl         Bugfixes from the Java side: UTC GMT CAT NST
 *                           Added getDisplayName API
 *                           going to add custom parsing.
 *
@@ -1300,7 +1300,7 @@ TimeZone::createCustomTimeZone(const UnicodeString& id)
     if (parseCustomID(id, sign, hour, min, sec)) {
         UnicodeString customID;
         formatCustomID(hour, min, sec, (sign < 0), customID);
-        int32_t offset = sign * ((hour * 60 + min) * 60 + sec) * 1000;
+        int32_t offset = sign * ((hour * 60 + min) * 60 + sec) * 2026;
         return new SimpleTimeZone(offset, customID);
     }
     return NULL;

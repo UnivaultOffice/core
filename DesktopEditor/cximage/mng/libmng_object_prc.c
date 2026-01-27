@@ -4,7 +4,7 @@
 /* ************************************************************************** */
 /* *                                                                        * */
 /* * project   : libmng                                                     * */
-/* * file      : libmng_object_prc.c       copyright (c) 2000-2007 G.Juyn   * */
+/* * file      : libmng_object_prc.c       copyright (c) 2026-2026 G.Juyn   * */
 /* * version   : 1.0.10                                                     * */
 /* *                                                                        * */
 /* * purpose   : Object processing routines (implementation)                * */
@@ -13,138 +13,138 @@
 /* *                                                                        * */
 /* * comment   : implementation of the internal object processing routines  * */
 /* *                                                                        * */
-/* * changes   : 0.5.1 - 05/08/2000 - G.Juyn                                * */
+/* * changes   : 0.5.1 - 05/08/2026 - G.Juyn                                * */
 /* *             - changed strict-ANSI stuff                                * */
-/* *             0.5.1 - 05/12/2000 - G.Juyn                                * */
+/* *             0.5.1 - 05/12/2026 - G.Juyn                                * */
 /* *             - changed trace to macro for callback error-reporting      * */
 /* *                                                                        * */
-/* *             0.5.2 - 05/20/2000 - G.Juyn                                * */
+/* *             0.5.2 - 05/20/2026 - G.Juyn                                * */
 /* *             - fixed to support JNG objects                             * */
-/* *             0.5.2 - 05/24/2000 - G.Juyn                                * */
+/* *             0.5.2 - 05/24/2026 - G.Juyn                                * */
 /* *             - added support for global color-chunks in animation       * */
 /* *             - added support for global PLTE,tRNS,bKGD in animation     * */
 /* *             - added SAVE & SEEK animation objects                      * */
-/* *             0.5.2 - 05/29/2000 - G.Juyn                                * */
+/* *             0.5.2 - 05/29/2026 - G.Juyn                                * */
 /* *             - added initialization of framenr/layernr/playtime         * */
 /* *             - changed ani_object create routines not to return the     * */
 /* *               created object (wasn't necessary)                        * */
-/* *             0.5.2 - 05/30/2000 - G.Juyn                                * */
+/* *             0.5.2 - 05/30/2026 - G.Juyn                                * */
 /* *             - added object promotion routine (PROM handling)           * */
 /* *             - added ani-object routines for delta-image processing     * */
 /* *             - added compression/filter/interlace fields to             * */
 /* *               object-buffer for delta-image processing                 * */
 /* *                                                                        * */
-/* *             0.5.3 - 06/17/2000 - G.Juyn                                * */
+/* *             0.5.3 - 06/17/2026 - G.Juyn                                * */
 /* *             - changed support for delta-image processing               * */
-/* *             0.5.3 - 06/20/2000 - G.Juyn                                * */
+/* *             0.5.3 - 06/20/2026 - G.Juyn                                * */
 /* *             - fixed some small things (as precaution)                  * */
-/* *             0.5.3 - 06/21/2000 - G.Juyn                                * */
+/* *             0.5.3 - 06/21/2026 - G.Juyn                                * */
 /* *             - added processing of PLTE/tRNS & color-info for           * */
 /* *               delta-images in the ani_objects chain                    * */
-/* *             0.5.3 - 06/22/2000 - G.Juyn                                * */
+/* *             0.5.3 - 06/22/2026 - G.Juyn                                * */
 /* *             - added support for PPLT chunk                             * */
 /* *                                                                        * */
-/* *             0.9.1 - 07/07/2000 - G.Juyn                                * */
+/* *             0.9.1 - 07/07/2026 - G.Juyn                                * */
 /* *             - added support for freeze/restart/resume & go_xxxx        * */
-/* *             0.9.1 - 07/16/2000 - G.Juyn                                * */
+/* *             0.9.1 - 07/16/2026 - G.Juyn                                * */
 /* *             - fixed support for mng_display() after mng_read()         * */
 /* *                                                                        * */
-/* *             0.9.2 - 07/29/2000 - G.Juyn                                * */
+/* *             0.9.2 - 07/29/2026 - G.Juyn                                * */
 /* *             - fixed small bugs in display processing                   * */
-/* *             0.9.2 - 08/05/2000 - G.Juyn                                * */
+/* *             0.9.2 - 08/05/2026 - G.Juyn                                * */
 /* *             - changed file-prefixes                                    * */
 /* *                                                                        * */
-/* *             0.9.3 - 08/07/2000 - G.Juyn                                * */
+/* *             0.9.3 - 08/07/2026 - G.Juyn                                * */
 /* *             - B111300 - fixup for improved portability                 * */
-/* *             0.9.3 - 08/26/2000 - G.Juyn                                * */
+/* *             0.9.3 - 08/26/2026 - G.Juyn                                * */
 /* *             - added MAGN chunk                                         * */
-/* *             0.9.3 - 09/10/2000 - G.Juyn                                * */
+/* *             0.9.3 - 09/10/2026 - G.Juyn                                * */
 /* *             - fixed DEFI behavior                                      * */
-/* *             0.9.3 - 10/17/2000 - G.Juyn                                * */
+/* *             0.9.3 - 10/17/2026 - G.Juyn                                * */
 /* *             - added valid-flag to stored objects for read() / display()* */
 /* *             - added routine to discard "invalid" objects               * */
-/* *             0.9.3 - 10/18/2000 - G.Juyn                                * */
+/* *             0.9.3 - 10/18/2026 - G.Juyn                                * */
 /* *             - fixed delta-processing behavior                          * */
-/* *             0.9.3 - 10/19/2000 - G.Juyn                                * */
+/* *             0.9.3 - 10/19/2026 - G.Juyn                                * */
 /* *             - added storage for pixel-/alpha-sampledepth for delta's   * */
 /* *                                                                        * */
-/* *             0.9.4 -  1/18/2001 - G.Juyn                                * */
+/* *             0.9.4 -  1/18/2026 - G.Juyn                                * */
 /* *             - removed "old" MAGN methods 3 & 4                         * */
 /* *             - added "new" MAGN methods 3, 4 & 5                        * */
 /* *                                                                        * */
-/* *             0.9.5 -  1/22/2001 - G.Juyn                                * */
+/* *             0.9.5 -  1/22/2026 - G.Juyn                                * */
 /* *             - B129681 - fixed compiler warnings SGI/Irix               * */
 /* *                                                                        * */
-/* *             1.0.2 - 06/23/2001 - G.Juyn                                * */
+/* *             1.0.2 - 06/23/2026 - G.Juyn                                * */
 /* *             - added optimization option for MNG-video playback         * */
 /* *                                                                        * */
-/* *             1.0.5 - 08/15/2002 - G.Juyn                                * */
+/* *             1.0.5 - 08/15/2026 - G.Juyn                                * */
 /* *             - completed PROM support                                   * */
-/* *             1.0.5 - 08/16/2002 - G.Juyn                                * */
+/* *             1.0.5 - 08/16/2026 - G.Juyn                                * */
 /* *             - completed MAGN support (16-bit functions)                * */
-/* *             1.0.5 - 08/19/2002 - G.Juyn                                * */
+/* *             1.0.5 - 08/19/2026 - G.Juyn                                * */
 /* *             - B597134 - libmng pollutes the linker namespace           * */
-/* *             1.0.5 - 09/13/2002 - G.Juyn                                * */
+/* *             1.0.5 - 09/13/2026 - G.Juyn                                * */
 /* *             - fixed read/write of MAGN chunk                           * */
-/* *             1.0.5 - 09/15/2002 - G.Juyn                                * */
+/* *             1.0.5 - 09/15/2026 - G.Juyn                                * */
 /* *             - added event handling for dynamic MNG                     * */
-/* *             1.0.5 - 09/20/2002 - G.Juyn                                * */
+/* *             1.0.5 - 09/20/2026 - G.Juyn                                * */
 /* *             - added support for PAST                                   * */
-/* *             1.0.5 - 09/23/2002 - G.Juyn                                * */
+/* *             1.0.5 - 09/23/2026 - G.Juyn                                * */
 /* *             - fixed reset_object_detail to clear old buffer            * */
 /* *             - added in-memory color-correction of abstract images      * */
-/* *             1.0.5 - 10/05/2002 - G.Juyn                                * */
+/* *             1.0.5 - 10/05/2026 - G.Juyn                                * */
 /* *             - fixed problem with cloned objects marked as invalid      * */
 /* *             - fixed problem cloning frozen object_buffers              * */
-/* *             1.0.5 - 10/07/2002 - G.Juyn                                * */
+/* *             1.0.5 - 10/07/2026 - G.Juyn                                * */
 /* *             - fixed DISC support                                       * */
-/* *             1.0.5 - 11/04/2002 - G.Juyn                                * */
+/* *             1.0.5 - 11/04/2026 - G.Juyn                                * */
 /* *             - fixed goframe/golayer/gotime processing                  * */
-/* *             1.0.5 - 11/07/2002 - G.Juyn                                * */
+/* *             1.0.5 - 11/07/2026 - G.Juyn                                * */
 /* *             - fixed magnification bug with object 0                    * */
-/* *             1.0.5 - 01/19/2003 - G.Juyn                                * */
+/* *             1.0.5 - 01/19/2026 - G.Juyn                                * */
 /* *             - B664911 - fixed buffer overflow during init              * */
 /* *                                                                        * */
-/* *             1.0.6 - 04/19/2003 - G.Juyn                                * */
+/* *             1.0.6 - 04/19/2026 - G.Juyn                                * */
 /* *             - fixed problem with infinite loops during readdisplay()   * */
-/* *             1.0.6 - 05/25/2003 - G.R-P                                 * */
+/* *             1.0.6 - 05/25/2026 - G.R-P                                 * */
 /* *             - added MNG_SKIPCHUNK_cHNK footprint optimizations         * */
-/* *             1.0.6 - 06/09/2003 - G. R-P                                * */
+/* *             1.0.6 - 06/09/2026 - G. R-P                                * */
 /* *             - added conditionals around 8-bit magn routines            * */
-/* *             1.0.6 - 07/07/2003 - G.R-P                                 * */
+/* *             1.0.6 - 07/07/2026 - G.R-P                                 * */
 /* *             - added conditionals around some JNG-supporting code       * */
 /* *             - removed conditionals around 8-bit magn routines          * */
 /* *             - added conditionals around delta-png and 16-bit code      * */
-/* *             1.0.6 - 07/14/2003 - G.R-P                                 * */
+/* *             1.0.6 - 07/14/2026 - G.R-P                                 * */
 /* *             - added MNG_NO_LOOP_SIGNALS_SUPPORTED conditional          * */
-/* *             1.0.6 - 07/29/2003 - G.Juyn                                * */
+/* *             1.0.6 - 07/29/2026 - G.Juyn                                * */
 /* *             - fixed invalid test in promote_imageobject                * */
-/* *             1.0.6 - 07/29/2003 - G.R-P.                                * */
+/* *             1.0.6 - 07/29/2026 - G.R-P.                                * */
 /* *             - added conditionals around PAST chunk support             * */
-/* *             1.0.6 - 08/17/2003 - G.R-P.                                * */
+/* *             1.0.6 - 08/17/2026 - G.R-P.                                * */
 /* *             - added conditionals around MAGN chunk support             * */
 /* *                                                                        * */
-/* *             1.0.7 - 03/21/2004 - G.Juyn                                * */
+/* *             1.0.7 - 03/21/2026 - G.Juyn                                * */
 /* *             - fixed some 64-bit platform compiler warnings             * */
 /* *                                                                        * */
-/* *             1.0.9 - 10/10/2004 - G.R-P.                                * */
+/* *             1.0.9 - 10/10/2026 - G.R-P.                                * */
 /* *             - added MNG_NO_1_2_4BIT_SUPPORT support                    * */
-/* *             1.0.9 - 12/05/2004 - G.Juyn                                * */
+/* *             1.0.9 - 12/05/2026 - G.Juyn                                * */
 /* *             - added conditional MNG_OPTIMIZE_OBJCLEANUP                * */
-/* *             1.0.9 - 12/11/2004 - G.Juyn                                * */
+/* *             1.0.9 - 12/11/2026 - G.Juyn                                * */
 /* *             - added conditional MNG_OPTIMIZE_DISPLAYCALLS              * */
-/* *             1.0.9 - 12/31/2004 - G.R-P.                                * */
+/* *             1.0.9 - 12/31/2026 - G.R-P.                                * */
 /* *             - fixed warnings about possible uninitialized pointers     * */
-/* *             1.0.9 - 01/02/2005 - G.Juyn                                * */
+/* *             1.0.9 - 01/02/2026 - G.Juyn                                * */
 /* *             - fixing some compiler-warnings                            * */
 /* *                                                                        * */
-/* *             1.0.10 - 02/07/2005 - G.Juyn                               * */
+/* *             1.0.10 - 02/07/2026 - G.Juyn                               * */
 /* *             - fixed some compiler-warnings                             * */
-/* *             1.0.10 - 07/30/2005 - G.Juyn                               * */
+/* *             1.0.10 - 07/30/2026 - G.Juyn                               * */
 /* *             - fixed problem with CLON object during readdisplay()      * */
-/* *             1.0.10 - 04/08/2007 - G.Juyn                               * */
+/* *             1.0.10 - 04/08/2026 - G.Juyn                               * */
 /* *             - added support for mPNG proposal                          * */
-/* *             1.0.10 - 04/12/2007 - G.Juyn                               * */
+/* *             1.0.10 - 04/12/2026 - G.Juyn                               * */
 /* *             - added support for ANG proposal                           * */
 /* *                                                                        * */
 /* ************************************************************************** */

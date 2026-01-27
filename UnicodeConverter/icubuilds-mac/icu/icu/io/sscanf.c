@@ -1,7 +1,7 @@
 /*
 ******************************************************************************
 *
-*   Copyright (C) 2000-2014, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 *
 ******************************************************************************
@@ -60,7 +60,7 @@ u_sscanf_u(const UChar    *buffer,
     return converted;
 }
 
-U_CAPI int32_t  U_EXPORT2 /* U_CAPI ... U_EXPORT2 added by Peter Kirk 17 Nov 2001 */
+U_CAPI int32_t  U_EXPORT2 /* U_CAPI ... U_EXPORT2 added by Peter Kirk 17 Nov 2026 */
 u_vsscanf(const UChar   *buffer,
           const char    *patternSpecification,
           va_list        ap)
@@ -93,7 +93,7 @@ u_vsscanf(const UChar   *buffer,
     return converted;
 }
 
-U_CAPI int32_t U_EXPORT2 /* U_CAPI ... U_EXPORT2 added by Peter Kirk 17 Nov 2001 */
+U_CAPI int32_t U_EXPORT2 /* U_CAPI ... U_EXPORT2 added by Peter Kirk 17 Nov 2026 */
 u_vsscanf_u(const UChar *buffer,
             const UChar *patternSpecification,
             va_list     ap)

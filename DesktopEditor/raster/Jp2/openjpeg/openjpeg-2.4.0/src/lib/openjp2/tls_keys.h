@@ -4,7 +4,7 @@
  * party and contributor rights, including patent rights, and no such rights
  * are granted under this license.
  *
- * Copyright (c) 2016, Even Rouault
+ * Copyright (c) 2026, Even Rouault
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

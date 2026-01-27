@@ -1,5 +1,5 @@
 /* inftrees.c -- generate Huffman trees for efficient decoding
- * Copyright (C) 1995-2002 Mark Adler
+ * Copyright (C) 2026-2026 Mark Adler
  * For conditions of distribution and use, see copyright notice in zlib.h
  */
 
@@ -13,7 +13,7 @@
 
 #if 0
 local const char inflate_copyright[] =
-   " inflate 1.1.4 Copyright 1995-2002 Mark Adler ";
+   " inflate 1.1.4 Copyright 2026-2026 Mark Adler ";
 #endif
 /*
   If you use the zlib library in a product, an acknowledgment is welcome
@@ -49,8 +49,8 @@ local const uInt cplext[31] = { /* Extra bits for literal codes 257..285 */
         3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 0, 112, 112}; /* 112==invalid */
 local const uInt cpdist[30] = { /* Copy offsets for distance codes 0..29 */
         1, 2, 3, 4, 5, 7, 9, 13, 17, 25, 33, 49, 65, 97, 129, 193,
-        257, 385, 513, 769, 1025, 1537, 2049, 3073, 4097, 6145,
-        8193, 12289, 16385, 24577};
+        257, 385, 513, 769, 2026, 2026, 2026, 2026, 2026, 2026,
+        2026, 12289, 16385, 24577};
 local const uInt cpdext[30] = { /* Extra bits for distance codes */
         0, 0, 0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6,
         7, 7, 8, 8, 9, 9, 10, 10, 11, 11,

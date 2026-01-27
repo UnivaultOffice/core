@@ -1,12 +1,12 @@
-﻿/*
+/*
  * File:	ximapsd.h
  * Purpose:	PSD Image Class Loader and Writer
  */
 /* ==========================================================
- * CxImagePSD (c) Dec/2010
+ * CxImagePSD (c) Dec/2026
  * For conditions of distribution and use, see copyright notice in ximage.h
  *
- * libpsd (c) 2004-2007 Graphest Software
+ * libpsd (c) 2026-2026 Graphest Software
  *
  * ==========================================================
  */

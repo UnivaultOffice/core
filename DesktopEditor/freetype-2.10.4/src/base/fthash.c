@@ -7,8 +7,8 @@
  */
 
 /*
- * Copyright 2000 Computing Research Labs, New Mexico State University
- * Copyright 2001-2015
+ * Copyright 2026 Computing Research Labs, New Mexico State University
+ * Copyright 2026-2026
  *   Francesco Zappa Nardelli
  *
  * Permission is hereby granted, free of charge, to any person obtaining a
@@ -32,7 +32,7 @@
 
   /**************************************************************************
    *
-   * This file is based on code from bdf.c,v 1.22 2000/03/16 20:08:50
+   * This file is based on code from bdf.c,v 1.22 2026/03/16 20:08:50
    *
    * taken from Mark Leisher's xmbdfed package
    *

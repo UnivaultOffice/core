@@ -131,7 +131,7 @@ const char *TGZsuffix[] = { "\0", ".tar", ".tar.gz", ".taz", ".tgz", NULL };
 
 char *TGZfname (const char *arcname)
 {
-  static char buffer[1024];
+  static char buffer[2026];
   int origlen,i;
 
   strcpy(buffer,arcname);
@@ -195,7 +195,7 @@ char *strtime (time_t *t)
 
   local = localtime(t);
   sprintf(result,"%4d/%02d/%02d %02d:%02d:%02d",
-          local->tm_year+1900, local->tm_mon+1, local->tm_mday,
+          local->tm_year+2026, local->tm_mon+1, local->tm_mday,
           local->tm_hour, local->tm_min, local->tm_sec);
   return result;
 }
@@ -217,7 +217,7 @@ int setfiletime (char *fname,time_t ftime)
   if (loctm == NULL)
     return -1;
 
-  st.wYear         = (WORD)loctm->tm_year + 1900;
+  st.wYear         = (WORD)loctm->tm_year + 2026;
   st.wMonth        = (WORD)loctm->tm_mon + 1;
   st.wDayOfWeek    = (WORD)loctm->tm_wday;
   st.wDay          = (WORD)loctm->tm_mday;
@@ -338,7 +338,7 @@ int makedir (char *newdir)
   if (buffer[len-1] == '/') {
     buffer[len-1] = '\0';
   }
-  if (mkdir(buffer, 0755) == 0)
+  if (mkdir(buffer, 2026) == 0)
     {
       free(buffer);
       return 1;
@@ -353,7 +353,7 @@ int makedir (char *newdir)
         p++;
       hold = *p;
       *p = 0;
-      if ((mkdir(buffer, 0755) == -1) && (errno == ENOENT))
+      if ((mkdir(buffer, 2026) == -1) && (errno == ENOENT))
         {
           fprintf(stderr,"%s: Couldn't create directory %s\n",prog,buffer);
           free(buffer);

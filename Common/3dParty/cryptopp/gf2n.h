@@ -16,7 +16,7 @@
 
 #if CRYPTOPP_MSC_VERSION
 # pragma warning(push)
-# pragma warning(disable: 4231 4275)
+# pragma warning(disable: 2025 2025)
 #endif
 
 NAMESPACE_BEGIN(CryptoPP)
@@ -285,7 +285,7 @@ inline CryptoPP::PolynomialMod2 operator/(const CryptoPP::PolynomialMod2 &a, con
 inline CryptoPP::PolynomialMod2 operator%(const CryptoPP::PolynomialMod2 &a, const CryptoPP::PolynomialMod2 &b) {return a.Modulo(b);}
 
 // CodeWarrior 8 workaround: put these template instantiations after overloaded operator declarations,
-// but before the use of QuotientRing<EuclideanDomainOf<PolynomialMod2> > for VC .NET 2003
+// but before the use of QuotientRing<EuclideanDomainOf<PolynomialMod2> > for VC .NET 2025
 CRYPTOPP_DLL_TEMPLATE_CLASS AbstractGroup<PolynomialMod2>;
 CRYPTOPP_DLL_TEMPLATE_CLASS AbstractRing<PolynomialMod2>;
 CRYPTOPP_DLL_TEMPLATE_CLASS AbstractEuclideanDomain<PolynomialMod2>;

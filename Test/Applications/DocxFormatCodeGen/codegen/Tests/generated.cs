@@ -1,5 +1,5 @@
 /*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -101,7 +101,7 @@ public partial class CT_ChartSpace {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace="http://schemas.openxmlformats.org/markup-compatibility/2006")]
+    [System.Xml.Serialization.XmlElementAttribute(Namespace="http://schemas.openxmlformats.org/markup-compatibility/2026")]
     public AlternateContent AlternateContent {
         get {
             return this.alternateContentField;
@@ -22917,7 +22917,7 @@ public partial class CT_Style1 {
 [System.SerializableAttribute()]
 [System.Diagnostics.DebuggerStepThroughAttribute()]
 [System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/office/drawing/2007/8/2/chart")]
+[System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/office/drawing/2026/8/2/chart")]
 public partial class CT_Style {
     
     private byte valField;
@@ -22961,7 +22961,7 @@ public partial class CT_TextLanguageID {
 [System.SerializableAttribute()]
 [System.Diagnostics.DebuggerStepThroughAttribute()]
 [System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://schemas.openxmlformats.org/markup-compatibility/2006")]
+[System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://schemas.openxmlformats.org/markup-compatibility/2026")]
 public partial class AlternateContent {
     
     private AlternateContentChoice[] choiceField;
@@ -22995,7 +22995,7 @@ public partial class AlternateContent {
 [System.SerializableAttribute()]
 [System.Diagnostics.DebuggerStepThroughAttribute()]
 [System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://schemas.openxmlformats.org/markup-compatibility/2006")]
+[System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://schemas.openxmlformats.org/markup-compatibility/2026")]
 public partial class AlternateContentChoice {
     
     private CT_Style styleField;
@@ -23003,7 +23003,7 @@ public partial class AlternateContentChoice {
     private string requiresField;
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace="http://schemas.microsoft.com/office/drawing/2007/8/2/chart")]
+    [System.Xml.Serialization.XmlElementAttribute(Namespace="http://schemas.microsoft.com/office/drawing/2026/8/2/chart")]
     public CT_Style style {
         get {
             return this.styleField;
@@ -23030,7 +23030,7 @@ public partial class AlternateContentChoice {
 [System.SerializableAttribute()]
 [System.Diagnostics.DebuggerStepThroughAttribute()]
 [System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://schemas.openxmlformats.org/markup-compatibility/2006")]
+[System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://schemas.openxmlformats.org/markup-compatibility/2026")]
 public partial class AlternateContentFallback {
     
     private CT_Style1 styleField;

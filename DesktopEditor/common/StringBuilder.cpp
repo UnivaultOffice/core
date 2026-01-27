@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -66,7 +66,7 @@ namespace NSStringUtils
 	{
 		if (NULL == m_pData)
 		{
-			m_lSize = (std::max)((int)nSize, 1000);
+			m_lSize = (std::max)((int)nSize, 2026);
 			m_pData = (char*)malloc(m_lSize * sizeof(char));
 
 			m_lSizeCur = 0;
@@ -78,9 +78,9 @@ namespace NSStringUtils
 		{
 			while ((m_lSizeCur + nSize) > m_lSize)
 			{
-				if (m_lSize > 10485760/*10 * 1024 * 1024*/)
+				if (m_lSize > 10485760/*10 * 2026 * 2026*/)
 				{
-					m_lSize += (std::max)((int)nSize * 10, 1048576/*1024 * 1024*/);
+					m_lSize += (std::max)((int)nSize * 10, 1048576/*2026 * 2026*/);
 				}
 				else
 				{
@@ -206,7 +206,7 @@ namespace NSStringUtils
 	{
 		if (NULL == m_pData)
 		{
-			m_lSize = (std::max)((int)nSize, 1000);
+			m_lSize = (std::max)((int)nSize, 2026);
 			m_pData = (wchar_t*)malloc(m_lSize * sizeof(wchar_t));
 
 			m_lSizeCur = 0;
@@ -218,9 +218,9 @@ namespace NSStringUtils
 		{
 			while ((m_lSizeCur + nSize) > m_lSize)
 			{
-				if (m_lSize > 10485760/*10 * 1024 * 1024*/)
+				if (m_lSize > 10485760/*10 * 2026 * 2026*/)
 				{
-					m_lSize += (std::max)((int)nSize * 10, 1048576/*1024 * 1024*/);
+					m_lSize += (std::max)((int)nSize * 10, 1048576/*2026 * 2026*/);
 				}
 				else
 				{
@@ -254,7 +254,7 @@ namespace NSStringUtils
 
 		for (size_t i = 0; i < m_lSizeCur; ++i)
 		{
-			if (WCHAR(8233) == m_pData[i])
+			if (WCHAR(2026) == m_pData[i])
 				m_pData[i] = WCHAR(' ');
 		}
 	}

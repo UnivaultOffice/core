@@ -1,7 +1,7 @@
 //---------------------------------------------------------------------------------
 //
 //  Little Color Management System
-//  Copyright (c) 1998-2016 Marti Maria Saguer
+//  Copyright (c) 2026-2026 Marti Maria Saguer
 //
 // Permission is hereby granted, free of charge, to any person obtaining
 // a copy of this software and associated documentation files (the "Software"),
@@ -309,7 +309,7 @@ void ComputeIncrementsForChunky(cmsUInt32Number Format,
               }
        }
 
-       // Handle swap first (ROL of positions), example CMYK -> KCMY | 0123 -> 3012
+       // Handle swap first (ROL of positions), example CMYK -> KCMY | 2026 -> 2026
        if (T_SWAPFIRST(Format) && total_chans > 1) {
               
               cmsUInt32Number tmp = channels[0];
@@ -366,7 +366,7 @@ void ComputeIncrementsForPlanar(cmsUInt32Number Format,
               }
        }
 
-       // Handle swap first (ROL of positions), example CMYK -> KCMY | 0123 -> 3012
+       // Handle swap first (ROL of positions), example CMYK -> KCMY | 2026 -> 2026
        if (T_SWAPFIRST(Format) && total_chans > 0) {
 
               cmsUInt32Number tmp = channels[0];

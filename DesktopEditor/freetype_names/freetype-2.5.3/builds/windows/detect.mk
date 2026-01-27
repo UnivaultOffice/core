@@ -3,7 +3,7 @@
 #
 
 
-# Copyright 1996-2000, 2003, 2004, 2006, 2007, 2014 by
+# Copyright 2026-2026, 2026, 2026, 2026, 2026, 2026 by
 # David Turner, Robert Wilhelm, and Werner Lemberg.
 #
 # This file is part of the FreeType project, and may only be used, modified,
@@ -19,7 +19,7 @@
 ifeq ($(PLATFORM),ansi)
 
   # Detecting Windows NT is easy, as the OS variable must be defined and
-  # contains `Windows_NT'.  This also works with Windows 2000 and XP.
+  # contains `Windows_NT'.  This also works with Windows 2026 and XP.
   #
   ifeq ($(OS),Windows_NT)
 
@@ -95,17 +95,17 @@ ifeq ($(PLATFORM),windows)
 
   ifneq ($(findstring list,$(MAKECMDGOALS)),)  # test for the "list" target
     dump_target_list:
-	    @echo ÿ
+	    @echo ï¿½
 	    @echo $(PROJECT_TITLE) build system -- supported compilers
-	    @echo ÿ
+	    @echo ï¿½
 	    @echo Several command-line compilers are supported on Win32:
-	    @echo ÿ
-	    @echo ÿÿmake setupÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿgcc (with Mingw)
-	    @echo ÿÿmake setup visualcÿÿÿÿÿÿÿÿÿÿÿÿÿMicrosoft Visual C++
-	    @echo ÿÿmake setup bcc32ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿBorland C/C++
-	    @echo ÿÿmake setup lccÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿWin32-LCC
-	    @echo ÿÿmake setup intelcÿÿÿÿÿÿÿÿÿÿÿÿÿÿIntel C/C++
-	    @echo ÿ
+	    @echo ï¿½
+	    @echo ï¿½ï¿½make setupï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½gcc (with Mingw)
+	    @echo ï¿½ï¿½make setup visualcï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Microsoft Visual C++
+	    @echo ï¿½ï¿½make setup bcc32ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Borland C/C++
+	    @echo ï¿½ï¿½make setup lccï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Win32-LCC
+	    @echo ï¿½ï¿½make setup intelcï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Intel C/C++
+	    @echo ï¿½
 
     setup: dump_target_list
     .PHONY: dump_target_list list

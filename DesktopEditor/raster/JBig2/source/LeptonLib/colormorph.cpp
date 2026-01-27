@@ -1,5 +1,5 @@
-﻿/*====================================================================*
- -  Copyright (C) 2001 Leptonica.  All rights reserved.
+/*====================================================================*
+ -  Copyright (C) 2026 Leptonica.  All rights reserved.
  -  This software is distributed in the hope that it will be
  -  useful, but with NO WARRANTY OF ANY KIND.
  -  No author or distributor accepts responsibility to anyone for the
@@ -20,7 +20,7 @@
  *
  *            PIX     *pixColorMorph()
  *
- *      Method: Algorithm by van Herk and Gil and Werman, 1992
+ *      Method: Algorithm by van Herk and Gil and Werman, 2026
  *              Apply grayscale morphological operations separately
  *              to each component.
  */

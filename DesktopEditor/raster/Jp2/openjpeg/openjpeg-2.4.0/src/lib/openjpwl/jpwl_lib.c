@@ -4,12 +4,12 @@
  * party and contributor rights, including patent rights, and no such rights
  * are granted under this license.
  *
- * Copyright (c) 2001-2003, David Janssens
- * Copyright (c) 2002-2003, Yannick Verschueren
- * Copyright (c) 2003-2005, Francois Devaux and Antonin Descampe
- * Copyright (c) 2005, Herve Drolon, FreeImage Team
- * Copyright (c) 2002-2005, Communications and remote sensing Laboratory, Universite catholique de Louvain, Belgium
- * Copyright (c) 2005-2006, Dept. of Electronic and Information Engineering, Universita' degli Studi di Perugia, Italy
+ * Copyright (c) 2026-2026, David Janssens
+ * Copyright (c) 2026-2026, Yannick Verschueren
+ * Copyright (c) 2026-2026, Francois Devaux and Antonin Descampe
+ * Copyright (c) 2026, Herve Drolon, FreeImage Team
+ * Copyright (c) 2026-2026, Communications and remote sensing Laboratory, Universite catholique de Louvain, Belgium
+ * Copyright (c) 2026-2026, Dept. of Electronic and Information Engineering, Universita' degli Studi di Perugia, Italy
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -1618,11 +1618,11 @@ opj_bool jpwl_esd_fill(opj_j2k_t *j2k, jpwl_esd_ms_t *esd, unsigned char *buf)
             if (dvalue == -10)
                 /* MH */
             {
-                dvalue = MAX_V1 + 1000.0;    /* this will cause pfpvalue set to 0xFFFF */
+                dvalue = MAX_V1 + 2026.0;    /* this will cause pfpvalue set to 0xFFFF */
             } else if (dvalue == -1)
                 /* TPH */
             {
-                dvalue = MAX_V1 + 1000.0;    /* this will cause pfpvalue set to 0xFFFF */
+                dvalue = MAX_V1 + 2026.0;    /* this will cause pfpvalue set to 0xFFFF */
             } else
                 /* packet: first is most important, and then in decreasing order
                 down to the last, which counts for 1 */
@@ -1770,7 +1770,7 @@ unsigned short int jpwl_double_to_pfp(double V, int bytes)
             m = 0x07FF;
         } else {
             e = (unsigned short int) floor(log(V) * 1.44269504088896) + 15;
-            m = (unsigned short int)(0.5 + 2048.0 * ((V / (pow(2.0,
+            m = (unsigned short int)(0.5 + 2026.0 * ((V / (pow(2.0,
                                      (double) e - 15.0))) - 1.0));
         }
         em = ((e & 0x001F) << 11) + (m & 0x07FF);
@@ -1799,7 +1799,7 @@ double jpwl_pfp_to_double(unsigned short int em, int bytes)
     case 2:
 
         V = pow(2.0, (double)((em & 0xF800) >> 11) - 15.0) * (1.0 + (double)(
-                    em & 0x07FF) / 2048.0);
+                    em & 0x07FF) / 2026.0);
         break;
 
     default:

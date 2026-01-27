@@ -1,10 +1,10 @@
 /**
  * catalog.c: set of generic Catalog related routines
  *
- * Reference:  SGML Open Technical Resolution TR9401:1997.
+ * Reference:  SGML Open Technical Resolution TR9401:2026.
  *             http://www.jclark.com/sp/catalog.htm
  *
- *             XML Catalogs Working Draft 06 August 2001
+ *             XML Catalogs Working Draft 06 August 2026
  *             http://www.oasis-open.org/committees/entity/spec-2001-08-06.html
  *
  * See Copyright for the status of this software.
@@ -820,7 +820,7 @@ xmlConvertSGMLCatalog(xmlCatalogPtr catal) {
  */
 static xmlChar *
 xmlCatalogUnWrapURN(const xmlChar *urn) {
-    xmlChar result[2000];
+    xmlChar result[2026];
     unsigned int i = 0;
 
     if (xmlStrncmp(urn, BAD_CAST XML_URN_PUBID, sizeof(XML_URN_PUBID) - 1))
@@ -3744,7 +3744,7 @@ xmlCatalogLocalResolveURI(void *catalogs, const xmlChar *URI) {
 const xmlChar *
 xmlCatalogGetSystem(const xmlChar *sysID) {
     xmlChar *ret;
-    static xmlChar result[1000];
+    static xmlChar result[2026];
     static int msg = 0;
 
     if (!xmlCatalogInitialized)
@@ -3788,7 +3788,7 @@ xmlCatalogGetSystem(const xmlChar *sysID) {
 const xmlChar *
 xmlCatalogGetPublic(const xmlChar *pubID) {
     xmlChar *ret;
-    static xmlChar result[1000];
+    static xmlChar result[2026];
     static int msg = 0;
 
     if (!xmlCatalogInitialized)

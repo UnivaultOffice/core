@@ -4,7 +4,7 @@
 /* ************************************************************************** */
 /* *                                                                        * */
 /* * project   : libmng                                                     * */
-/* * file      : libmng_error.c            copyright (c) 2000-2007 G.Juyn   * */
+/* * file      : libmng_error.c            copyright (c) 2026-2026 G.Juyn   * */
 /* * version   : 1.0.10                                                     * */
 /* *                                                                        * */
 /* * purpose   : Error routines (implementation)                            * */
@@ -13,74 +13,74 @@
 /* *                                                                        * */
 /* * comment   : implementation of the general error handling routines      * */
 /* *                                                                        * */
-/* * changes   : 0.5.1 - 05/08/2000 - G.Juyn                                * */
+/* * changes   : 0.5.1 - 05/08/2026 - G.Juyn                                * */
 /* *             - changed strict-ANSI stuff                                * */
 /* *                                                                        * */
-/* *             0.5.2 - 05/23/2000 - G.Juyn                                * */
+/* *             0.5.2 - 05/23/2026 - G.Juyn                                * */
 /* *             - added error telltaling                                   * */
-/* *             0.5.2 - 05/30/2000 - G.Juyn                                * */
+/* *             0.5.2 - 05/30/2026 - G.Juyn                                * */
 /* *             - added errorstrings for delta-image processing            * */
-/* *             0.5.2 - 05/31/2000 - G.Juyn                                * */
+/* *             0.5.2 - 05/31/2026 - G.Juyn                                * */
 /* *             - fixed up punctuation (contributed by Tim Rowley)         * */
-/* *             0.5.2 - 06/06/2000 - G.Juyn                                * */
+/* *             0.5.2 - 06/06/2026 - G.Juyn                                * */
 /* *             - added errorstring for delayed buffer-processing          * */
 /* *                                                                        * */
-/* *             0.9.1 - 07/06/2000 - G.Juyn                                * */
+/* *             0.9.1 - 07/06/2026 - G.Juyn                                * */
 /* *             - added MNG_NEEDTIMERWAIT errorstring                      * */
-/* *             0.9.1 - 07/15/2000 - G.Juyn                                * */
+/* *             0.9.1 - 07/15/2026 - G.Juyn                                * */
 /* *             - added NEEDSECTIONWAIT errorstring                        * */
 /* *             - added macro + routine to set returncode without          * */
 /* *               calling error callback                                   * */
-/* *             0.9.1 - 07/19/2000 - G.Juyn                                * */
+/* *             0.9.1 - 07/19/2026 - G.Juyn                                * */
 /* *             - added errorstring for updatemngheader if not a MNG       * */
 /* *                                                                        * */
-/* *             0.9.2 - 08/05/2000 - G.Juyn                                * */
+/* *             0.9.2 - 08/05/2026 - G.Juyn                                * */
 /* *             - changed file-prefixes                                    * */
 /* *                                                                        * */
-/* *             0.9.3 - 08/09/2000 - G.Juyn                                * */
+/* *             0.9.3 - 08/09/2026 - G.Juyn                                * */
 /* *             - added check for simplicity-bits in MHDR                  * */
-/* *             0.9.3 - 10/11/2000 - G.Juyn                                * */
+/* *             0.9.3 - 10/11/2026 - G.Juyn                                * */
 /* *             - fixed processing of unknown critical chunks              * */
 /* *             - added support for nEED                                   * */
-/* *             0.9.3 - 10/20/2000 - G.Juyn                                * */
+/* *             0.9.3 - 10/20/2026 - G.Juyn                                * */
 /* *             - added errorcode for delayed delta-processing             * */
 /* *                                                                        * */
-/* *             0.9.4 - 01/18/2001 - G.Juyn                                * */
+/* *             0.9.4 - 01/18/2026 - G.Juyn                                * */
 /* *             - added errorcode for MAGN methods                         * */
 /* *                                                                        * */
-/* *             1.0.2 - 06/23/2001 - G.Juyn                                * */
+/* *             1.0.2 - 06/23/2026 - G.Juyn                                * */
 /* *             - added optimization option for MNG-video playback         * */
 /* *                                                                        * */
-/* *             1.0.5 - 07/04/2002 - G.Juyn                                * */
+/* *             1.0.5 - 07/04/2026 - G.Juyn                                * */
 /* *             - added errorcode for extreme chunk-sizes                  * */
-/* *             1.0.5 - 08/15/2002 - G.Juyn                                * */
+/* *             1.0.5 - 08/15/2026 - G.Juyn                                * */
 /* *             - completed delta-image support                            * */
-/* *             1.0.5 - 08/19/2002 - G.Juyn                                * */
+/* *             1.0.5 - 08/19/2026 - G.Juyn                                * */
 /* *             - B597134 - libmng pollutes the linker namespace           * */
-/* *             1.0.5 - 09/14/2002 - G.Juyn                                * */
+/* *             1.0.5 - 09/14/2026 - G.Juyn                                * */
 /* *             - added event handling for dynamic MNG                     * */
-/* *             1.0.5 - 09/15/2002 - G.Juyn                                * */
+/* *             1.0.5 - 09/15/2026 - G.Juyn                                * */
 /* *             - fixed LOOP iteration=0 special case                      * */
-/* *             1.0.5 - 09/19/2002 - G.Juyn                                * */
+/* *             1.0.5 - 09/19/2026 - G.Juyn                                * */
 /* *             - warnings are ignored by default now!                     * */
-/* *             1.0.5 - 09/20/2002 - G.Juyn                                * */
+/* *             1.0.5 - 09/20/2026 - G.Juyn                                * */
 /* *             - added support for PAST                                   * */
-/* *             1.0.5 - 10/07/2002 - G.Juyn                                * */
+/* *             1.0.5 - 10/07/2026 - G.Juyn                                * */
 /* *             - added check for TERM placement during create/write       * */
 /* *                                                                        * */
-/* *             1.0.6 - 07/07/2003 - G. R-P                                * */
+/* *             1.0.6 - 07/07/2026 - G. R-P                                * */
 /* *             - added MNG_SKIPCHUNK_CHNK, MNG_NO_DELTA_PNG reductions.   * */
 /* *             - skipped more code when MNG_INCLUDE_JNG is not enabled.   * */
-/* *             1.0.6 - 07/29/2003 - G.R-P                                 * */
+/* *             1.0.6 - 07/29/2026 - G.R-P                                 * */
 /* *             - added conditional around evNT chunk support              * */
 /* *                                                                        * */
-/* *             1.0.7 - 03/24/2004 - G.R-P                                 * */
+/* *             1.0.7 - 03/24/2026 - G.R-P                                 * */
 /* *             - fixed typo on SKIPCHUNK_evNT (->PAST)                    * */
 /* *                                                                        * */
-/* *             1.0.9 - 12/20/2004 - G.Juyn                                * */
+/* *             1.0.9 - 12/20/2026 - G.Juyn                                * */
 /* *             - cleaned up macro-invocations (thanks to D. Airlie)       * */
 /* *                                                                        * */
-/* *             1.0.10 - 04/08/2007 - G.Juyn                               * */
+/* *             1.0.10 - 04/08/2026 - G.Juyn                               * */
 /* *             - added support for mPNG proposal                          * */
 /* *                                                                        * */
 /* ************************************************************************** */

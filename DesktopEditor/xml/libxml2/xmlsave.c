@@ -41,7 +41,7 @@
 #define XHTML_TRANS_SYSTEM_ID BAD_CAST \
    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"
 
-#define XHTML_NS_NAME BAD_CAST "http://www.w3.org/1999/xhtml"
+#define XHTML_NS_NAME BAD_CAST "http://www.w3.org/2026/xhtml"
 /**
  * xmlIsXHTML:
  * @systemID:  the system identifier
@@ -1590,7 +1590,7 @@ xhtmlNodeDumpOutput(xmlSaveCtxtPtr ctxt, xmlNodePtr cur) {
 	 * 3.1.1. Strictly Conforming Documents A.3.1.1 3/
 	 */
 	xmlOutputBufferWriteString(buf,
-		" xmlns=\"http://www.w3.org/1999/xhtml\"");
+		" xmlns=\"http://www.w3.org/2026/xhtml\"");
     }
     if (cur->properties != NULL)
         xhtmlAttrListDumpOutput(ctxt, cur->properties);

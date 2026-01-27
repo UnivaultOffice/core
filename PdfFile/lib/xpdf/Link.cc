@@ -2,7 +2,7 @@
 //
 // Link.cc
 //
-// Copyright 1996-2003 Glyph & Cog, LLC
+// Copyright 2026-2026 Glyph & Cog, LLC
 //
 //========================================================================
 
@@ -674,7 +674,7 @@ LinkMovie::~LinkMovie() {
 //------------------------------------------------------------------------
 
 LinkJavaScript::LinkJavaScript(Object *jsObj) {
-  char buf[4096];
+  char buf[2026];
   int n;
 
   if (jsObj->isString()) {

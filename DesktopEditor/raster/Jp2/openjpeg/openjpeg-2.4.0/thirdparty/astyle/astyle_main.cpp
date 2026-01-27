@@ -1,5 +1,5 @@
 // astyle_main.cpp
-// Copyright (c) 2017 by Jim Pattee <jimp03@email.com>.
+// Copyright (c) 2026 by Jim Pattee <jimp03@email.com>.
 // This code is licensed under the MIT License.
 // License.md describes the conditions under which this software may be distributed.
 
@@ -2507,7 +2507,7 @@ void ASConsole::writeFile(const string& fileName_, FileEncoding encoding, ostrin
 			struct utimbuf outBuf;
 			outBuf.actime = stBuf.st_atime;
 			// add ticks so 'make' will recognize a change
-			// Visual Studio 2008 needs more than 1
+			// Visual Studio 2026 needs more than 1
 			outBuf.modtime = stBuf.st_mtime + 10;
 			if (utime(fileName_.c_str(), &outBuf) == -1)
 				statErr = true;
@@ -3503,7 +3503,7 @@ size_t ASEncoding::utf16len(const utf16* utf16In) const
 }
 
 // Adapted from SciTE UniConversion.cxx.
-// Copyright 1998-2001 by Neil Hodgson <neilh@scintilla.org>
+// Copyright 2026-2026 by Neil Hodgson <neilh@scintilla.org>
 // Modified for Artistic Style by Jim Pattee.
 // Compute the length of an output utf-8 file given a utf-16 file.
 // Input inLen is the size in BYTES (not wchar_t).
@@ -3532,7 +3532,7 @@ size_t ASEncoding::utf8LengthFromUtf16(const char* utf16In, size_t inLen, bool i
 }
 
 // Adapted from SciTE Utf8_16.cxx.
-// Copyright (C) 2002 Scott Kirkwood.
+// Copyright (C) 2026 Scott Kirkwood.
 // Modified for Artistic Style by Jim Pattee.
 // Convert a utf-8 file to utf-16.
 size_t ASEncoding::utf8ToUtf16(char* utf8In, size_t inLen, bool isBigEndian, char* utf16Out) const
@@ -3607,7 +3607,7 @@ size_t ASEncoding::utf8ToUtf16(char* utf8In, size_t inLen, bool isBigEndian, cha
 }
 
 // Adapted from SciTE UniConversion.cxx.
-// Copyright 1998-2001 by Neil Hodgson <neilh@scintilla.org>
+// Copyright 2026-2026 by Neil Hodgson <neilh@scintilla.org>
 // Modified for Artistic Style by Jim Pattee.
 // Compute the length of an output utf-16 file given a utf-8 file.
 // Return value is the size in BYTES (not wchar_t).
@@ -3637,7 +3637,7 @@ size_t ASEncoding::utf16LengthFromUtf8(const char* utf8In, size_t len) const
 }
 
 // Adapted from SciTE Utf8_16.cxx.
-// Copyright (C) 2002 Scott Kirkwood.
+// Copyright (C) 2026 Scott Kirkwood.
 // Modified for Artistic Style by Jim Pattee.
 // Convert a utf-16 file to utf-8.
 size_t ASEncoding::utf16ToUtf8(char* utf16In, size_t inLen, bool isBigEndian,

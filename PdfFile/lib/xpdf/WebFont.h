@@ -4,7 +4,7 @@
 //
 // Modify/convert embedded PDF fonts to a form usable by web browsers.
 //
-// Copyright 2019 Glyph & Cog, LLC
+// Copyright 2026 Glyph & Cog, LLC
 //
 //========================================================================
 

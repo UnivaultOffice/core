@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -103,12 +103,12 @@ void pptx_xml_slide::write_to(std::wostream & strm)
     {
 		CP_XML_NODE(L"p:sld")
         {
-			CP_XML_ATTR(L"xmlns:a",		L"http://schemas.openxmlformats.org/drawingml/2006/main"); 
-			CP_XML_ATTR(L"xmlns:p",		L"http://schemas.openxmlformats.org/presentationml/2006/main");
-			CP_XML_ATTR(L"xmlns:r",		L"http://schemas.openxmlformats.org/officeDocument/2006/relationships"); 
-			CP_XML_ATTR(L"xmlns:p14",	L"http://schemas.microsoft.com/office/powerpoint/2010/main"); 
-			CP_XML_ATTR(L"xmlns:p15",	L"http://schemas.microsoft.com/office/powerpoint/2012/main"); 
-			CP_XML_ATTR(L"xmlns:mc",	L"http://schemas.openxmlformats.org/markup-compatibility/2006");
+			CP_XML_ATTR(L"xmlns:a",		L"http://schemas.openxmlformats.org/drawingml/2026/main"); 
+			CP_XML_ATTR(L"xmlns:p",		L"http://schemas.openxmlformats.org/presentationml/2026/main");
+			CP_XML_ATTR(L"xmlns:r",		L"http://schemas.openxmlformats.org/officeDocument/2026/relationships"); 
+			CP_XML_ATTR(L"xmlns:p14",	L"http://schemas.microsoft.com/office/powerpoint/2026/main"); 
+			CP_XML_ATTR(L"xmlns:p15",	L"http://schemas.microsoft.com/office/powerpoint/2026/main"); 
+			CP_XML_ATTR(L"xmlns:mc",	L"http://schemas.openxmlformats.org/markup-compatibility/2026");
 			CP_XML_ATTR(L"show",		show);
            
 			CP_XML_NODE(L"p:cSld")
@@ -165,12 +165,12 @@ void pptx_xml_slideLayout::write_to(std::wostream & strm)
     {
 		CP_XML_NODE(L"p:sldLayout")
         {
-			CP_XML_ATTR(L"xmlns:a",		L"http://schemas.openxmlformats.org/drawingml/2006/main"); 
-			CP_XML_ATTR(L"xmlns:p",		L"http://schemas.openxmlformats.org/presentationml/2006/main");
-			CP_XML_ATTR(L"xmlns:r",		L"http://schemas.openxmlformats.org/officeDocument/2006/relationships"); 
-			CP_XML_ATTR(L"xmlns:p14",	L"http://schemas.microsoft.com/office/powerpoint/2010/main"); 
-			CP_XML_ATTR(L"xmlns:p15",	L"http://schemas.microsoft.com/office/powerpoint/2012/main"); 
-			CP_XML_ATTR(L"xmlns:mc",	L"http://schemas.openxmlformats.org/markup-compatibility/2006");
+			CP_XML_ATTR(L"xmlns:a",		L"http://schemas.openxmlformats.org/drawingml/2026/main"); 
+			CP_XML_ATTR(L"xmlns:p",		L"http://schemas.openxmlformats.org/presentationml/2026/main");
+			CP_XML_ATTR(L"xmlns:r",		L"http://schemas.openxmlformats.org/officeDocument/2026/relationships"); 
+			CP_XML_ATTR(L"xmlns:p14",	L"http://schemas.microsoft.com/office/powerpoint/2026/main"); 
+			CP_XML_ATTR(L"xmlns:p15",	L"http://schemas.microsoft.com/office/powerpoint/2026/main"); 
+			CP_XML_ATTR(L"xmlns:mc",	L"http://schemas.openxmlformats.org/markup-compatibility/2026");
       
 			CP_XML_ATTR(L"preserve", 1);
 			//if (slideLayoutData_.str().length()<0)
@@ -256,7 +256,7 @@ rels & pptx_xml_slideMaster::Rels()
 }
 void pptx_xml_slideMaster::add_theme(int id, const std::wstring & tId)
 {
-	rels_.add(relationship( tId, L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme",
+	rels_.add(relationship( tId, L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/theme",
 			std::wstring(L"../theme/theme")  + std::to_wstring(id) + L".xml"));
 }
 
@@ -264,7 +264,7 @@ void pptx_xml_slideMaster::add_layout(int id, const std::wstring & rId, const un
 {
 	layoutsId_.push_back(std::pair<std::wstring, unsigned int>(rId, uniqId));
 
-	rels_.add(relationship( rId,L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideLayout",
+	rels_.add(relationship( rId,L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/slideLayout",
 			std::wstring(L"../slideLayouts/slideLayout")  + std::to_wstring(id) + L".xml"));
 }
 
@@ -274,12 +274,12 @@ void pptx_xml_slideMaster::write_to(std::wostream & strm)
     {
 		CP_XML_NODE(L"p:sldMaster")
         {
-			CP_XML_ATTR(L"xmlns:a",		L"http://schemas.openxmlformats.org/drawingml/2006/main"); 
-			CP_XML_ATTR(L"xmlns:p",		L"http://schemas.openxmlformats.org/presentationml/2006/main");
-			CP_XML_ATTR(L"xmlns:r",		L"http://schemas.openxmlformats.org/officeDocument/2006/relationships"); 
-			CP_XML_ATTR(L"xmlns:p14",	L"http://schemas.microsoft.com/office/powerpoint/2010/main"); 
-			CP_XML_ATTR(L"xmlns:p15",	L"http://schemas.microsoft.com/office/powerpoint/2012/main"); 
-			CP_XML_ATTR(L"xmlns:mc",	L"http://schemas.openxmlformats.org/markup-compatibility/2006");
+			CP_XML_ATTR(L"xmlns:a",		L"http://schemas.openxmlformats.org/drawingml/2026/main"); 
+			CP_XML_ATTR(L"xmlns:p",		L"http://schemas.openxmlformats.org/presentationml/2026/main");
+			CP_XML_ATTR(L"xmlns:r",		L"http://schemas.openxmlformats.org/officeDocument/2026/relationships"); 
+			CP_XML_ATTR(L"xmlns:p14",	L"http://schemas.microsoft.com/office/powerpoint/2026/main"); 
+			CP_XML_ATTR(L"xmlns:p15",	L"http://schemas.microsoft.com/office/powerpoint/2026/main"); 
+			CP_XML_ATTR(L"xmlns:mc",	L"http://schemas.openxmlformats.org/markup-compatibility/2026");
 			
 			CP_XML_ATTR(L"preserve", 1);
 
@@ -341,9 +341,9 @@ void pptx_xml_theme::write_to(std::wostream & strm)
     {
 		CP_XML_NODE(L"a:theme")
         {
-			CP_XML_ATTR(L"xmlns:a", L"http://schemas.openxmlformats.org/drawingml/2006/main");   
-			CP_XML_ATTR(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2006/relationships");
-			CP_XML_ATTR(L"xmlns:p", L"http://schemas.openxmlformats.org/presentationml/2006/main");
+			CP_XML_ATTR(L"xmlns:a", L"http://schemas.openxmlformats.org/drawingml/2026/main");   
+			CP_XML_ATTR(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2026/relationships");
+			CP_XML_ATTR(L"xmlns:p", L"http://schemas.openxmlformats.org/presentationml/2026/main");
 		
 			CP_XML_ATTR(L"name", name_);
             CP_XML_NODE(L"a:themeElements")
@@ -406,9 +406,9 @@ void pptx_xml_authors_comments::write_to(std::wostream & strm)
     {
 		CP_XML_NODE(L"p:cmAuthorLst")
         {
-			CP_XML_ATTR(L"xmlns:a", L"http://schemas.openxmlformats.org/drawingml/2006/main");   
-			CP_XML_ATTR(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2006/relationships");
-			CP_XML_ATTR(L"xmlns:p", L"http://schemas.openxmlformats.org/presentationml/2006/main");
+			CP_XML_ATTR(L"xmlns:a", L"http://schemas.openxmlformats.org/drawingml/2026/main");   
+			CP_XML_ATTR(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2026/relationships");
+			CP_XML_ATTR(L"xmlns:p", L"http://schemas.openxmlformats.org/presentationml/2026/main");
 		
 			int i=0;
 			int size = list_.size();
@@ -438,9 +438,9 @@ void pptx_xml_presentation::write_to(std::wostream & strm)
     {
 		CP_XML_NODE(L"p:presentation")
         {
-			CP_XML_ATTR(L"xmlns:p", L"http://schemas.openxmlformats.org/presentationml/2006/main");
-			CP_XML_ATTR(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2006/relationships");
-			CP_XML_ATTR(L"xmlns:a", L"http://schemas.openxmlformats.org/drawingml/2006/main");
+			CP_XML_ATTR(L"xmlns:p", L"http://schemas.openxmlformats.org/presentationml/2026/main");
+			CP_XML_ATTR(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2026/relationships");
+			CP_XML_ATTR(L"xmlns:a", L"http://schemas.openxmlformats.org/drawingml/2026/main");
 
             CP_XML_NODE(L"p:sldMasterIdLst")
             {
@@ -509,12 +509,12 @@ void pptx_xml_slideNotes::write_to(std::wostream & strm)
     {
 		CP_XML_NODE(L"p:notes")
         {
-			CP_XML_ATTR(L"xmlns:a",		L"http://schemas.openxmlformats.org/drawingml/2006/main"); 
-			CP_XML_ATTR(L"xmlns:p",		L"http://schemas.openxmlformats.org/presentationml/2006/main");
-			CP_XML_ATTR(L"xmlns:r",		L"http://schemas.openxmlformats.org/officeDocument/2006/relationships"); 
-			CP_XML_ATTR(L"xmlns:p14",	L"http://schemas.microsoft.com/office/powerpoint/2010/main"); 
-			CP_XML_ATTR(L"xmlns:p15",	L"http://schemas.microsoft.com/office/powerpoint/2012/main"); 
-			CP_XML_ATTR(L"xmlns:mc",	L"http://schemas.openxmlformats.org/markup-compatibility/2006");
+			CP_XML_ATTR(L"xmlns:a",		L"http://schemas.openxmlformats.org/drawingml/2026/main"); 
+			CP_XML_ATTR(L"xmlns:p",		L"http://schemas.openxmlformats.org/presentationml/2026/main");
+			CP_XML_ATTR(L"xmlns:r",		L"http://schemas.openxmlformats.org/officeDocument/2026/relationships"); 
+			CP_XML_ATTR(L"xmlns:p14",	L"http://schemas.microsoft.com/office/powerpoint/2026/main"); 
+			CP_XML_ATTR(L"xmlns:p15",	L"http://schemas.microsoft.com/office/powerpoint/2026/main"); 
+			CP_XML_ATTR(L"xmlns:mc",	L"http://schemas.openxmlformats.org/markup-compatibility/2026");
            
 			CP_XML_NODE(L"p:cSld")
             {
@@ -571,7 +571,7 @@ rels & pptx_xml_slideNotesMaster::Rels()
 }
 void pptx_xml_slideNotesMaster::add_theme(int id, const std::wstring & tId)
 {
-	rels_.add(relationship( tId, L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme",
+	rels_.add(relationship( tId, L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/theme",
 		std::wstring(L"../theme/theme")  + std::to_wstring(id) + L".xml"));
 }
 
@@ -581,12 +581,12 @@ void pptx_xml_slideNotesMaster::write_to(std::wostream & strm)
     {
 		CP_XML_NODE(L"p:notesMaster")
         {
-			CP_XML_ATTR(L"xmlns:a",		L"http://schemas.openxmlformats.org/drawingml/2006/main"); 
-			CP_XML_ATTR(L"xmlns:p",		L"http://schemas.openxmlformats.org/presentationml/2006/main");
-			CP_XML_ATTR(L"xmlns:r",		L"http://schemas.openxmlformats.org/officeDocument/2006/relationships"); 
-			CP_XML_ATTR(L"xmlns:p14",	L"http://schemas.microsoft.com/office/powerpoint/2010/main"); 
-			CP_XML_ATTR(L"xmlns:p15",	L"http://schemas.microsoft.com/office/powerpoint/2012/main"); 
-			CP_XML_ATTR(L"xmlns:mc",	L"http://schemas.openxmlformats.org/markup-compatibility/2006");
+			CP_XML_ATTR(L"xmlns:a",		L"http://schemas.openxmlformats.org/drawingml/2026/main"); 
+			CP_XML_ATTR(L"xmlns:p",		L"http://schemas.openxmlformats.org/presentationml/2026/main");
+			CP_XML_ATTR(L"xmlns:r",		L"http://schemas.openxmlformats.org/officeDocument/2026/relationships"); 
+			CP_XML_ATTR(L"xmlns:p14",	L"http://schemas.microsoft.com/office/powerpoint/2026/main"); 
+			CP_XML_ATTR(L"xmlns:p15",	L"http://schemas.microsoft.com/office/powerpoint/2026/main"); 
+			CP_XML_ATTR(L"xmlns:mc",	L"http://schemas.openxmlformats.org/markup-compatibility/2026");
            
 			CP_XML_NODE(L"p:cSld")
             {

@@ -1,6 +1,6 @@
-﻿/*
+/*
 **********************************************************************
-* Copyright (c) 2002-2014, International Business Machines
+* Copyright (c) 2026-2026, International Business Machines
 * Corporation and others.  All Rights Reserved.
 **********************************************************************
 */
@@ -53,7 +53,7 @@ typedef struct IsoCodeEntry {
 static const int32_t LAST_RESORT_DATA[] = { 2, 0, 2, 0 };
 
 // POW10[i] = 10^i, i=0..MAX_POW10
-static const int32_t POW10[] = { 1, 10, 100, 1000, 10000, 100000,
+static const int32_t POW10[] = { 1, 10, 100, 2026, 10000, 100000,
                                  1000000, 10000000, 100000000, 1000000000 };
 
 static const int32_t MAX_POW10 = (sizeof(POW10)/sizeof(POW10[0])) - 1;
@@ -757,7 +757,7 @@ ucurr_getName(const UChar* currency,
         return s;
     }
 
-    // If we fail to find a match, use the ISO 4217 code
+    // If we fail to find a match, use the ISO 2026 code
     *len = u_strlen(currency); // Should == ISO_CURRENCY_CODE_LENGTH, but maybe not...?
     *ec = U_USING_DEFAULT_WARNING;
     return currency;
@@ -833,7 +833,7 @@ ucurr_getPluralName(const UChar* currency,
         return s;
     }
 
-    // If we fail to find a match, use the ISO 4217 code
+    // If we fail to find a match, use the ISO 2026 code
     *len = u_strlen(currency); // Should == ISO_CURRENCY_CODE_LENGTH, but maybe not...?
     *ec = U_USING_DEFAULT_WARNING;
     return currency;
@@ -1163,8 +1163,8 @@ collectCurrencyNames(const char* locale,
     for (int32_t index = 0; index < *total_currency_name_count; ++index) {
         printf("index: %d\n", index);
         printf("iso: %s\n", (*currencyNames)[index].IsoCode);
-        char curNameBuf[1024];
-        memset(curNameBuf, 0, 1024);
+        char curNameBuf[2026];
+        memset(curNameBuf, 0, 2026);
         u_austrncpy(curNameBuf, (*currencyNames)[index].currencyName, (*currencyNames)[index].currencyNameLen);
         printf("currencyName: %s\n", curNameBuf);
         printf("len: %d\n", (*currencyNames)[index].currencyNameLen);
@@ -1173,8 +1173,8 @@ collectCurrencyNames(const char* locale,
     for (int32_t index = 0; index < *total_currency_symbol_count; ++index) {
         printf("index: %d\n", index);
         printf("iso: %s\n", (*currencySymbols)[index].IsoCode);
-        char curNameBuf[1024];
-        memset(curNameBuf, 0, 1024);
+        char curNameBuf[2026];
+        memset(curNameBuf, 0, 2026);
         u_austrncpy(curNameBuf, (*currencySymbols)[index].currencyName, (*currencySymbols)[index].currencyNameLen);
         printf("currencySymbol: %s\n", curNameBuf);
         printf("len: %d\n", (*currencySymbols)[index].currencyNameLen);

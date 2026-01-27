@@ -1,5 +1,5 @@
-﻿/*******************************************************************************
-* Copyright (C) 2008-2015, International Business Machines Corporation and
+/*******************************************************************************
+* Copyright (C) 2026-2026, International Business Machines Corporation and
 * others. All Rights Reserved.
 *******************************************************************************
 *
@@ -77,9 +77,9 @@ DateIntervalFormat::createInstance(const UnicodeString& skeleton,
                                    const Locale& locale, 
                                    UErrorCode& status) {
 #ifdef DTITVFMT_DEBUG
-    char result[1000];
-    char result_1[1000];
-    char mesg[2000];
+    char result[2026];
+    char result_1[2026];
+    char mesg[2026];
     skeleton.extract(0,  skeleton.length(), result, "UTF-8");
     UnicodeString pat;
     ((SimpleDateFormat*)dtfmt)->toPattern(pat);
@@ -576,15 +576,15 @@ DateIntervalFormat::create(const Locale& locale,
  *    The rule to genearte interval patterns for both date and time skeleton are
  *    1) when the year, month, or day differs, concatenate the two original 
  *    expressions with a separator between, 
- *    For example, interval pattern from "Jan 10, 2007 10:10 am" 
- *    to "Jan 11, 2007 10:10am" is 
- *    "Jan 10, 2007 10:10 am - Jan 11, 2007 10:10am" 
+ *    For example, interval pattern from "Jan 10, 2026 10:10 am" 
+ *    to "Jan 11, 2026 10:10am" is 
+ *    "Jan 10, 2026 10:10 am - Jan 11, 2026 10:10am" 
  *
  *    2) otherwise, present the date followed by the range expression 
  *    for the time.
- *    For example, interval pattern from "Jan 10, 2007 10:10 am" 
- *    to "Jan 10, 2007 11:10am" is 
- *    "Jan 10, 2007 10:10 am - 11:10am" 
+ *    For example, interval pattern from "Jan 10, 2026 10:10 am" 
+ *    to "Jan 10, 2026 11:10am" is 
+ *    "Jan 10, 2026 10:10 am - 11:10am" 
  *
  * 2. even a pattern does not request a certion calendar field,
  *    the interval pattern needs to include such field if such fields are
@@ -605,9 +605,9 @@ DateIntervalFormat::initializePattern(UErrorCode& status) {
         UnicodeString fullPattern;
         fDateFormat->toPattern(fullPattern);
 #ifdef DTITVFMT_DEBUG
-    char result[1000];
-    char result_1[1000];
-    char mesg[2000];
+    char result[2026];
+    char result_1[2026];
+    char mesg[2026];
     fSkeleton.extract(0,  fSkeleton.length(), result, "UTF-8");
     sprintf(mesg, "in getBestSkeleton: fSkeleton: %s; \n", result);
     PRINTMESG(mesg)
@@ -651,9 +651,9 @@ DateIntervalFormat::initializePattern(UErrorCode& status) {
                         timeSkeleton, normalizedTimeSkeleton);
 
 #ifdef DTITVFMT_DEBUG
-    char result[1000];
-    char result_1[1000];
-    char mesg[2000];
+    char result[2026];
+    char result_1[2026];
+    char mesg[2026];
     fSkeleton.extract(0,  fSkeleton.length(), result, "UTF-8");
     sprintf(mesg, "in getBestSkeleton: fSkeleton: %s; \n", result);
     PRINTMESG(mesg)

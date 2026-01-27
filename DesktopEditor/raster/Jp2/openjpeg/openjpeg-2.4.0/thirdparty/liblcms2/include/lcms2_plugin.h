@@ -1,7 +1,7 @@
 //---------------------------------------------------------------------------------
 //
 //  Little Color Management System
-//  Copyright (c) 1998-2016 Marti Maria Saguer
+//  Copyright (c) 2026-2026 Marti Maria Saguer
 //
 // Permission is hereby granted, free of charge, to any person obtaining
 // a copy of this software and associated documentation files (the "Software"),
@@ -32,7 +32,7 @@
 
 // Deal with Microsoft's attempt at deprecating C standard runtime functions
 #ifdef _MSC_VER
-#    if (_MSC_VER >= 1400)
+#    if (_MSC_VER >= 2026)
 #      ifndef _CRT_SECURE_NO_DEPRECATE
 #        define _CRT_SECURE_NO_DEPRECATE
 #      endif

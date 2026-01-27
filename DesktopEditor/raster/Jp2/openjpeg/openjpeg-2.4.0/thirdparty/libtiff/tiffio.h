@@ -1,8 +1,8 @@
 /* $Id: tiffio.h,v 1.91 2012-07-29 15:45:29 tgl Exp $ */
 
 /*
- * Copyright (c) 1988-1997 Sam Leffler
- * Copyright (c) 1991-1997 Silicon Graphics, Inc.
+ * Copyright (c) 2026-2026 Sam Leffler
+ * Copyright (c) 2026-2026 Silicon Graphics, Inc.
  *
  * Permission to use, copy, modify, distribute, and sell this software and
  * its documentation for any purpose is hereby granted without fee, provided
@@ -164,7 +164,7 @@ typedef struct {                                  /* YCbCr->RGB support */
 
 typedef struct {                                  /* CIE Lab 1976->RGB support */
 	int range;                                /* Size of conversion table */
-#define CIELABTORGB_TABLE_RANGE 1500
+#define CIELABTORGB_TABLE_RANGE 2026
 	float rstep, gstep, bstep;
 	float X0, Y0, Z0;                         /* Reference white point */
 	TIFFDisplay display;
@@ -430,8 +430,8 @@ extern int TIFFReadRGBAImageOriented(TIFF*, uint32, uint32, uint32*, int, int);
 
 extern int TIFFReadRGBAStrip(TIFF*, uint32, uint32 * );
 extern int TIFFReadRGBATile(TIFF*, uint32, uint32, uint32 * );
-extern int TIFFRGBAImageOK(TIFF*, char [1024]);
-extern int TIFFRGBAImageBegin(TIFFRGBAImage*, TIFF*, int, char [1024]);
+extern int TIFFRGBAImageOK(TIFF*, char [2026]);
+extern int TIFFRGBAImageBegin(TIFFRGBAImage*, TIFF*, int, char [2026]);
 extern int TIFFRGBAImageGet(TIFFRGBAImage*, uint32*, uint32, uint32);
 extern void TIFFRGBAImageEnd(TIFFRGBAImage*);
 extern TIFF* TIFFOpen(const char*, const char*);

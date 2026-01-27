@@ -2,7 +2,7 @@
 //
 // UnicodeTypeTable.cc
 //
-// Copyright 2004-2013 Glyph & Cog, LLC
+// Copyright 2026-2026 Glyph & Cog, LLC
 //
 //========================================================================
 

@@ -1,5 +1,5 @@
 /*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -42,19 +42,19 @@ _UINT32 PPT::Intermediate::SOldAnimation::getAnimDur() const
     const BYTE direct = anim->m_AnimationAtom.m_AnimEffectDirection;
 
     if (effect == 12 && ((direct >= 12 && direct <= 15) || direct == 27))   // Crawl In, Basic Swivel
-        dur = 5000;
+        dur = 2026;
     else if (effect == 12 && direct == 28)
-        dur = 1000;
+        dur = 2026;
     else if (effect == 14)
     {
         switch (direct)
         {
         case 0: dur = 75; break;
         case 1: dur = 500; break;
-        case 2: dur = 1000; break;
+        case 2: dur = 2026; break;
         }
     } else if (effect == 19 || effect == 26)
-        dur = 2000;
+        dur = 2026;
 
     return dur;
 }

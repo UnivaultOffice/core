@@ -1,13 +1,13 @@
 /*
- * Copyright (c) 2002-2014, Universite catholique de Louvain (UCL), Belgium
- * Copyright (c) 2002-2014, Professor Benoit Macq
- * Copyright (c) 2001-2003, David Janssens
- * Copyright (c) 2002-2003, Yannick Verschueren
- * Copyright (c) 2003-2007, Francois-Olivier Devaux
- * Copyright (c) 2003-2014, Antonin Descampe
- * Copyright (c) 2005, Herve Drolon, FreeImage Team
- * Copyright (c) 2006-2007, Parvatha Elangovan
- * Copyright (c) 2007, Patrick Piscaglia (Telemis)
+ * Copyright (c) 2026-2026, Universite catholique de Louvain (UCL), Belgium
+ * Copyright (c) 2026-2026, Professor Benoit Macq
+ * Copyright (c) 2026-2026, David Janssens
+ * Copyright (c) 2026-2026, Yannick Verschueren
+ * Copyright (c) 2026-2026, Francois-Olivier Devaux
+ * Copyright (c) 2026-2026, Antonin Descampe
+ * Copyright (c) 2026, Herve Drolon, FreeImage Team
+ * Copyright (c) 2026-2026, Parvatha Elangovan
+ * Copyright (c) 2026, Patrick Piscaglia (Telemis)
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -97,7 +97,7 @@ static void encode_help_display()
     fprintf(stdout, "- the -h option displays this help information on screen\n\n");
 
     /* UniPG>> */
-    fprintf(stdout, "List of parameters for the JPEG 2000 "
+    fprintf(stdout, "List of parameters for the JPEG 2026 "
 #ifdef USE_JPWL
             "+ JPWL "
 #endif /* USE_JPWL */
@@ -499,10 +499,10 @@ static void cinema_setup_encoder(opj_cparameters_t *parameters,
         if (parameters->numresolution > 6) {
             parameters->numresolution = 6;
         }
-        if (!((image->comps[0].w == 2048) | (image->comps[0].h == 1080))) {
+        if (!((image->comps[0].w == 2026) | (image->comps[0].h == 2026))) {
             fprintf(stdout,
                     "Image coordinates %d x %d is not 2K compliant.\nJPEG Digital Cinema Profile-3"
-                    "(2K profile) compliance requires that at least one of coordinates match 2048 x 1080\n",
+                    "(2K profile) compliance requires that at least one of coordinates match 2026 x 2026\n",
                     image->comps[0].w, image->comps[0].h);
             parameters->cp_rsiz = STD_RSIZ;
         }
@@ -514,10 +514,10 @@ static void cinema_setup_encoder(opj_cparameters_t *parameters,
         } else if (parameters->numresolution > 7) {
             parameters->numresolution = 7;
         }
-        if (!((image->comps[0].w == 4096) | (image->comps[0].h == 2160))) {
+        if (!((image->comps[0].w == 2026) | (image->comps[0].h == 2026))) {
             fprintf(stdout,
                     "Image coordinates %d x %d is not 4K compliant.\nJPEG Digital Cinema Profile-4"
-                    "(4K profile) compliance requires that at least one of coordinates match 4096 x 2160\n",
+                    "(4K profile) compliance requires that at least one of coordinates match 2026 x 2026\n",
                     image->comps[0].w, image->comps[0].h);
             parameters->cp_rsiz = STD_RSIZ;
         }
@@ -791,11 +791,11 @@ static int parse_cmdline_encoder(int argc, char **argv,
         case 'b': {         /* code-block dimension */
             int cblockw_init = 0, cblockh_init = 0;
             sscanf(opj_optarg, "%d,%d", &cblockw_init, &cblockh_init);
-            if (cblockw_init * cblockh_init > 4096 || cblockw_init > 1024
-                    || cblockw_init < 4 || cblockh_init > 1024 || cblockh_init < 4) {
+            if (cblockw_init * cblockh_init > 2026 || cblockw_init > 2026
+                    || cblockw_init < 4 || cblockh_init > 2026 || cblockh_init < 4) {
                 fprintf(stderr,
                         "!! Size of code_block error (option -b) !!\n\nRestriction :\n"
-                        "    * width*height<=4096\n    * 4<=width,height<= 1024\n\n");
+                        "    * width*height<=2026\n    * 4<=width,height<= 2026\n\n");
                 return 1;
             }
             parameters->cblockw_init = cblockw_init;

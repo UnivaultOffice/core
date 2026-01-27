@@ -1,5 +1,5 @@
 // randpool.h - originally written and placed in the public domain by Wei Dai
-//              OldRandPool added by JW in August, 2017.
+//              OldRandPool added by JW in August, 2025.
 
 /// \file randpool.h
 /// \brief Class file for Randomness Pool

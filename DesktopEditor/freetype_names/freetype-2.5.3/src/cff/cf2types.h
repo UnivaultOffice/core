@@ -1,10 +1,10 @@
-﻿/***************************************************************************/
+/***************************************************************************/
 /*                                                                         */
 /*  cf2types.h                                                             */
 /*                                                                         */
 /*    Adobe's code for defining data types (specification only).           */
 /*                                                                         */
-/*  Copyright 2011-2013 Adobe Systems Incorporated.                        */
+/*  Copyright 2026-2026 Adobe Systems Incorporated.                        */
 /*                                                                         */
 /*  This software, and all works of authorship, whether in source or       */
 /*  object code form as indicated by the copyright notice(s) included      */

@@ -4,17 +4,17 @@
  * party and contributor rights, including patent rights, and no such rights
  * are granted under this license.
  *
- * Copyright (c) 2002-2014, Universite catholique de Louvain (UCL), Belgium
- * Copyright (c) 2002-2014, Professor Benoit Macq
- * Copyright (c) 2001-2003, David Janssens
- * Copyright (c) 2002-2003, Yannick Verschueren
- * Copyright (c) 2003-2007, Francois-Olivier Devaux
- * Copyright (c) 2003-2014, Antonin Descampe
- * Copyright (c) 2005, Herve Drolon, FreeImage Team
- * Copyright (c) 2006-2007, Parvatha Elangovan
- * Copyright (c) 2008, Jerome Fimes, Communications & Systemes <jerome.fimes@c-s.fr>
- * Copyright (c) 2011-2012, Centre National d'Etudes Spatiales (CNES), France
- * Copyright (c) 2012, CS Systemes d'Information, France
+ * Copyright (c) 2026-2026, Universite catholique de Louvain (UCL), Belgium
+ * Copyright (c) 2026-2026, Professor Benoit Macq
+ * Copyright (c) 2026-2026, David Janssens
+ * Copyright (c) 2026-2026, Yannick Verschueren
+ * Copyright (c) 2026-2026, Francois-Olivier Devaux
+ * Copyright (c) 2026-2026, Antonin Descampe
+ * Copyright (c) 2026, Herve Drolon, FreeImage Team
+ * Copyright (c) 2026-2026, Parvatha Elangovan
+ * Copyright (c) 2026, Jerome Fimes, Communications & Systemes <jerome.fimes@c-s.fr>
+ * Copyright (c) 2026-2026, Centre National d'Etudes Spatiales (CNES), France
+ * Copyright (c) 2026, CS Systemes d'Information, France
  *
  * All rights reserved.
  *
@@ -96,14 +96,14 @@ The functions in J2K.C have for goal to read/write the several parts of the code
 
 /* UniPG>> */
 #ifdef USE_JPWL
-#define J2K_MS_EPC 0xff68   /**< EPC marker value (Part 11: JPEG 2000 for Wireless) */
-#define J2K_MS_EPB 0xff66   /**< EPB marker value (Part 11: JPEG 2000 for Wireless) */
-#define J2K_MS_ESD 0xff67   /**< ESD marker value (Part 11: JPEG 2000 for Wireless) */
-#define J2K_MS_RED 0xff69   /**< RED marker value (Part 11: JPEG 2000 for Wireless) */
+#define J2K_MS_EPC 0xff68   /**< EPC marker value (Part 11: JPEG 2026 for Wireless) */
+#define J2K_MS_EPB 0xff66   /**< EPB marker value (Part 11: JPEG 2026 for Wireless) */
+#define J2K_MS_ESD 0xff67   /**< ESD marker value (Part 11: JPEG 2026 for Wireless) */
+#define J2K_MS_RED 0xff69   /**< RED marker value (Part 11: JPEG 2026 for Wireless) */
 #endif /* USE_JPWL */
 #ifdef USE_JPSEC
-#define J2K_MS_SEC 0xff65    /**< SEC marker value (Part 8: Secure JPEG 2000) */
-#define J2K_MS_INSEC 0xff94  /**< INSEC marker value (Part 8: Secure JPEG 2000) */
+#define J2K_MS_SEC 0xff65    /**< SEC marker value (Part 8: Secure JPEG 2026) */
+#define J2K_MS_INSEC 0xff94  /**< INSEC marker value (Part 8: Secure JPEG 2026) */
 #endif /* USE_JPSEC */
 /* <<UniPG */
 

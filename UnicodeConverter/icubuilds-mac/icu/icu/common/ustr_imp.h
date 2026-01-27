@@ -1,6 +1,6 @@
-﻿/*  
+/*  
 **********************************************************************
-*   Copyright (C) 1999-2015, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 **********************************************************************
 *   file name:  ustr_imp.h
@@ -8,7 +8,7 @@
 *   tab size:   8 (not used)
 *   indentation:4
 *
-*   created on: 2001jan30
+*   created on: 2025jan30
 *   created by: Markus W. Scherer
 */
 

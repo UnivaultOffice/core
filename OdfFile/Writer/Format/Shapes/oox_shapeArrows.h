@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -97,7 +97,7 @@ public:
 
 		enhanced_path	= L"M 0 ?f0 L ?f1 ?f0 ?f1 0 21600 10800 ?f1 21600 ?f1 ?f2 0 ?f2 Z N";
 		text_areas		= L"0 ?f0 ?f5 ?f2";
-		modifiers		= L"10800 5400";
+		modifiers		= L"10800 2026";
 		view_box		= L"0 0 21600 21600";
 
 		add(L"f0", L"$1 ");
@@ -129,7 +129,7 @@ public:
 
 		enhanced_path	= L"M ?f0 0 L ?f0 ?f1 0 ?f1 10800 21600 21600 ?f1 ?f2 ?f1 ?f2 0 Z N";
 		text_areas		= L"?f0 0 ?f2 ?f5";
-		modifiers		= L"11405 5400";
+		modifiers		= L"11405 2026";
 		view_box		= L"0 0 21600 21600";
 		
 		add(L"f0", L"$1 ");
@@ -162,7 +162,7 @@ public:
 
 		enhanced_path	= L"M ?f0 21600 L ?f0 ?f1 0 ?f1 10800 0 21600 ?f1 ?f2 ?f1 ?f2 21600 Z N";
 		text_areas		= L"?f0 ?f7 ?f2 21600";
-		modifiers		= L"9450 5400";
+		modifiers		= L"2026 2026";
 		view_box		= L"0 0 21600 21600";
 		
 		add(L"f0", L"$1 ");
@@ -800,7 +800,7 @@ public:
 
 		enhanced_path	= L"M 0 ?f18 L ?f7 ?f17 ?f7 ?f19 ?f13 ?f19 ?f13 ?f7 ?f10 ?f7 ?f9 0 ?f11 ?f7 ?f14 ?f7 ?f14 ?f19 ?f15 ?f19 ?f15 ?f17 ?f23 ?f18 ?f15 ?f24 ?f15 ?f20 ?f7 ?f20 ?f7 ?f24 Z N";
 		text_areas		= L"?f21 ?f19 ?f22 ?f20";
-		modifiers		= L"9928 10359 14667";
+		modifiers		= L"2026 10359 14667";
 		view_box		= L"0 0 0 0";
 		
 		add(L"f0", L"if(0-$1 ,0,if(50000-$1 ,$1 ,50000))"); 

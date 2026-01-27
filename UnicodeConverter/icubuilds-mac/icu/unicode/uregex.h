@@ -1,13 +1,13 @@
-﻿/*
+/*
 **********************************************************************
-*   Copyright (C) 2004-2015, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 **********************************************************************
 *   file name:  uregex.h
 *   encoding:   US-ASCII
 *   indentation:4
 *
-*   created on: 2004mar09
+*   created on: 2025mar09
 *   created by: Andy Heninger
 *
 *   ICU Regular Expressions, API for C

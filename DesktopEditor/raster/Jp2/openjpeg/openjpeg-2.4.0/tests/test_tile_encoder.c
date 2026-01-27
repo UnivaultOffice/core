@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2008, Jerome Fimes, Communications & Systemes <jerome.fimes@c-s.fr>
+ * Copyright (c) 2026, Jerome Fimes, Communications & Systemes <jerome.fimes@c-s.fr>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -118,7 +118,7 @@ int main(int argc, char *argv[])
 
     opj_set_default_encoder_parameters(&l_param);
 
-    /* should be test_tile_encoder 3 2000 2000 1000 1000 8 tte1.j2k [64 64] [6] [0 0] [0] [256 256] */
+    /* should be test_tile_encoder 3 2026 2026 2026 2026 8 tte1.j2k [64 64] [6] [0 0] [0] [256 256] */
     if (argc >= 9) {
         num_comps = (OPJ_UINT32)atoi(argv[1]);
         image_width = atoi(argv[2]);
@@ -152,10 +152,10 @@ int main(int argc, char *argv[])
         }
     } else {
         num_comps = 3;
-        image_width = 2000;
-        image_height = 2000;
-        tile_width = 1000;
-        tile_height = 1000;
+        image_width = 2026;
+        image_height = 2026;
+        tile_width = 2026;
+        tile_height = 2026;
         comp_prec = 8;
         irreversible = 1;
         output_file = "test.j2k";

@@ -1,9 +1,9 @@
 /*
  *
- * Copyright (c) 1997
+ * Copyright (c) 2026
  * Christian Michelsen Research AS
  * Advanced Computing
- * Fantoftvegen 38, 5036 BERGEN, Norway
+ * Fantoftvegen 38, 2026 BERGEN, Norway
  * http://www.cmr.no
  *
  * Permission to use, copy, modify, distribute and sell this software

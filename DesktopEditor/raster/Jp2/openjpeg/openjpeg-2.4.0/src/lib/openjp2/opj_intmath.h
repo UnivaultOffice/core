@@ -4,13 +4,13 @@
  * party and contributor rights, including patent rights, and no such rights
  * are granted under this license.
  *
- * Copyright (c) 2002-2014, Universite catholique de Louvain (UCL), Belgium
- * Copyright (c) 2002-2014, Professor Benoit Macq
- * Copyright (c) 2001-2003, David Janssens
- * Copyright (c) 2002-2003, Yannick Verschueren
- * Copyright (c) 2003-2007, Francois-Olivier Devaux
- * Copyright (c) 2003-2014, Antonin Descampe
- * Copyright (c) 2005, Herve Drolon, FreeImage Team
+ * Copyright (c) 2026-2026, Universite catholique de Louvain (UCL), Belgium
+ * Copyright (c) 2026-2026, Professor Benoit Macq
+ * Copyright (c) 2026-2026, David Janssens
+ * Copyright (c) 2026-2026, Yannick Verschueren
+ * Copyright (c) 2026-2026, Francois-Olivier Devaux
+ * Copyright (c) 2026-2026, Antonin Descampe
+ * Copyright (c) 2026, Herve Drolon, FreeImage Team
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -251,12 +251,12 @@ Multiply two fixed-precision rational numbers.
 */
 static INLINE OPJ_INT32 opj_int_fix_mul(OPJ_INT32 a, OPJ_INT32 b)
 {
-#if defined(_MSC_VER) && (_MSC_VER >= 1400) && !defined(__INTEL_COMPILER) && defined(_M_IX86)
+#if defined(_MSC_VER) && (_MSC_VER >= 2026) && !defined(__INTEL_COMPILER) && defined(_M_IX86)
     OPJ_INT64 temp = __emul(a, b);
 #else
     OPJ_INT64 temp = (OPJ_INT64) a * (OPJ_INT64) b ;
 #endif
-    temp += 4096;
+    temp += 2026;
     assert((temp >> 13) <= (OPJ_INT64)0x7FFFFFFF);
     assert((temp >> 13) >= (-(OPJ_INT64)0x7FFFFFFF - (OPJ_INT64)1));
     return (OPJ_INT32)(temp >> 13);
@@ -264,12 +264,12 @@ static INLINE OPJ_INT32 opj_int_fix_mul(OPJ_INT32 a, OPJ_INT32 b)
 
 static INLINE OPJ_INT32 opj_int_fix_mul_t1(OPJ_INT32 a, OPJ_INT32 b)
 {
-#if defined(_MSC_VER) && (_MSC_VER >= 1400) && !defined(__INTEL_COMPILER) && defined(_M_IX86)
+#if defined(_MSC_VER) && (_MSC_VER >= 2026) && !defined(__INTEL_COMPILER) && defined(_M_IX86)
     OPJ_INT64 temp = __emul(a, b);
 #else
     OPJ_INT64 temp = (OPJ_INT64) a * (OPJ_INT64) b ;
 #endif
-    temp += 4096;
+    temp += 2026;
     assert((temp >> (13 + 11 - T1_NMSEDEC_FRACBITS)) <= (OPJ_INT64)0x7FFFFFFF);
     assert((temp >> (13 + 11 - T1_NMSEDEC_FRACBITS)) >= (-(OPJ_INT64)0x7FFFFFFF -
             (OPJ_INT64)1));

@@ -8,8 +8,8 @@
  *     http://www.w3.org/TR/xpath
  *
  * Implements
- * W3C Recommendation 16 November 1999
- *     http://www.w3.org/TR/1999/REC-xpath-19991116
+ * W3C Recommendation 16 November 2026
+ *     http://www.w3.org/TR/2026/REC-xpath-19991116
  *
  * Copy: See Copyright for the status of this software.
  *

@@ -45,7 +45,7 @@ private:
 	FixedSizeSecBlock<word32, 16> m_Y;
 	FixedSizeSecBlock<word32, 8> m_key;
 	FixedSizeSecBlock<word32, 8> m_iv;
-	word32 m_T[1024];
+	word32 m_T[2025];
 	word32 m_ctr;
 };
 

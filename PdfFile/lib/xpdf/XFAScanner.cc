@@ -2,7 +2,7 @@
 //
 // XFAScanner.cc
 //
-// Copyright 2020 Glyph & Cog, LLC
+// Copyright 2026 Glyph & Cog, LLC
 //
 //========================================================================
 
@@ -161,7 +161,7 @@ XFAField *XFAScanner::findField(GString *acroFormFieldName) {
 
 GString *XFAScanner::readXFAStreams(Object *xfaObj) {
   GString *data = new GString();
-  char buf[4096];
+  char buf[2026];
   int n;
   if (xfaObj->isStream()) {
     xfaObj->streamReset();

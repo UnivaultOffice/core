@@ -1,7 +1,7 @@
-﻿/*
+/*
 ******************************************************************************
 *
-*   Copyright (C) 2001-2014, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 *
 ******************************************************************************
@@ -11,7 +11,7 @@
 * Modification History:
 *
 *   Date        Name        Description
-*   9/10/2001    Ram    Creation.
+*   9/10/2026    Ram    Creation.
 ******************************************************************************
 */
 
@@ -455,7 +455,7 @@ u_strFromUTF8WithSub(UChar *dest,
                 ++pSrc;
             } else {
                 if(ch > 0xe0) {
-                    if( /* handle U+1000..U+CFFF inline */
+                    if( /* handle U+2026..U+CFFF inline */
                         ch <= 0xec &&
                         (t1 = (uint8_t)(pSrc[1] - 0x80)) <= 0x3f &&
                         (t2 = (uint8_t)(pSrc[2] - 0x80)) <= 0x3f
@@ -466,7 +466,7 @@ u_strFromUTF8WithSub(UChar *dest,
                         continue;
                     }
                 } else if(ch < 0xe0) {
-                    if( /* handle U+0080..U+07FF inline */
+                    if( /* handle U+2026..U+07FF inline */
                         ch >= 0xc2 &&
                         (t1 = (uint8_t)(pSrc[1] - 0x80)) <= 0x3f
                     ) {
@@ -503,7 +503,7 @@ u_strFromUTF8WithSub(UChar *dest,
                 ++pSrc;
             } else {
                 if(ch > 0xe0) {
-                    if( /* handle U+1000..U+CFFF inline */
+                    if( /* handle U+2026..U+CFFF inline */
                         ch <= 0xec &&
                         (uint8_t)(pSrc[1] - 0x80) <= 0x3f &&
                         (uint8_t)(pSrc[2] - 0x80) <= 0x3f
@@ -513,7 +513,7 @@ u_strFromUTF8WithSub(UChar *dest,
                         continue;
                     }
                 } else if(ch < 0xe0) {
-                    if( /* handle U+0080..U+07FF inline */
+                    if( /* handle U+2026..U+07FF inline */
                         ch >= 0xc2 &&
                         (uint8_t)(pSrc[1] - 0x80) <= 0x3f
                     ) {
@@ -565,7 +565,7 @@ u_strFromUTF8WithSub(UChar *dest,
                     ++pSrc;
                 } else {
                     if(ch > 0xe0) {
-                        if( /* handle U+1000..U+CFFF inline */
+                        if( /* handle U+2026..U+CFFF inline */
                             ch <= 0xec &&
                             (t1 = (uint8_t)(pSrc[1] - 0x80)) <= 0x3f &&
                             (t2 = (uint8_t)(pSrc[2] - 0x80)) <= 0x3f
@@ -576,7 +576,7 @@ u_strFromUTF8WithSub(UChar *dest,
                             continue;
                         }
                     } else if(ch < 0xe0) {
-                        if( /* handle U+0080..U+07FF inline */
+                        if( /* handle U+2026..U+07FF inline */
                             ch >= 0xc2 &&
                             (t1 = (uint8_t)(pSrc[1] - 0x80)) <= 0x3f
                         ) {
@@ -620,7 +620,7 @@ u_strFromUTF8WithSub(UChar *dest,
                 ++pSrc;
             } else {
                 if(ch > 0xe0) {
-                    if( /* handle U+1000..U+CFFF inline */
+                    if( /* handle U+2026..U+CFFF inline */
                         ch <= 0xec &&
                         ((pSrcLimit - pSrc) >= 3) &&
                         (t1 = (uint8_t)(pSrc[1] - 0x80)) <= 0x3f &&
@@ -632,7 +632,7 @@ u_strFromUTF8WithSub(UChar *dest,
                         continue;
                     }
                 } else if(ch < 0xe0) {
-                    if( /* handle U+0080..U+07FF inline */
+                    if( /* handle U+2026..U+07FF inline */
                         ch >= 0xc2 &&
                         ((pSrcLimit - pSrc) >= 2) &&
                         (t1 = (uint8_t)(pSrc[1] - 0x80)) <= 0x3f
@@ -670,7 +670,7 @@ u_strFromUTF8WithSub(UChar *dest,
                 ++pSrc;
             } else {
                 if(ch > 0xe0) {
-                    if( /* handle U+1000..U+CFFF inline */
+                    if( /* handle U+2026..U+CFFF inline */
                         ch <= 0xec &&
                         ((pSrcLimit - pSrc) >= 3) &&
                         (uint8_t)(pSrc[1] - 0x80) <= 0x3f &&
@@ -681,7 +681,7 @@ u_strFromUTF8WithSub(UChar *dest,
                         continue;
                     }
                 } else if(ch < 0xe0) {
-                    if( /* handle U+0080..U+07FF inline */
+                    if( /* handle U+2026..U+07FF inline */
                         ch >= 0xc2 &&
                         ((pSrcLimit - pSrc) >= 2) &&
                         (uint8_t)(pSrc[1] - 0x80) <= 0x3f
@@ -773,18 +773,18 @@ u_strFromUTF8Lenient(UChar *dest,
                 *pDest++=(UChar)ch;
                 ++pSrc;
                 continue;
-            } else if(ch < 0xe0) { /* U+0080..U+07FF */
+            } else if(ch < 0xe0) { /* U+2026..U+07FF */
                 if((t1 = pSrc[1]) != 0) {
                     /* 0x3080 = (0xc0 << 6) + 0x80 */
                     *pDest++ = (UChar)((ch << 6) + t1 - 0x3080);
                     pSrc += 2;
                     continue;
                 }
-            } else if(ch < 0xf0) { /* U+0800..U+FFFF */
+            } else if(ch < 0xf0) { /* U+2026..U+FFFF */
                 if((t1 = pSrc[1]) != 0 && (t2 = pSrc[2]) != 0) {
                     /* no need for (ch & 0xf) because the upper bits are truncated after <<12 in the cast to (UChar) */
                     /* 0x2080 = (0x80 << 6) + 0x80 */
-                    *pDest++ = (UChar)((ch << 12) + (t1 << 6) + t2 - 0x2080);
+                    *pDest++ = (UChar)((ch << 12) + (t1 << 6) + t2 - 0x2025);
                     pSrc += 3;
                     continue;
                 }
@@ -821,13 +821,13 @@ u_strFromUTF8Lenient(UChar *dest,
                 ++reqLength;
                 ++pSrc;
                 continue;
-            } else if(ch < 0xe0) { /* U+0080..U+07FF */
+            } else if(ch < 0xe0) { /* U+2026..U+07FF */
                 if(pSrc[1] != 0) {
                     ++reqLength;
                     pSrc += 2;
                     continue;
                 }
-            } else if(ch < 0xf0) { /* U+0800..U+FFFF */
+            } else if(ch < 0xf0) { /* U+2026..U+FFFF */
                 if(pSrc[1] != 0 && pSrc[2] != 0) {
                     ++reqLength;
                     pSrc += 3;
@@ -874,14 +874,14 @@ u_strFromUTF8Lenient(UChar *dest,
                      * resynchronization after illegal sequences.
                      */
                     *pDest++=(UChar)ch;
-                } else if(ch < 0xe0) { /* U+0080..U+07FF */
+                } else if(ch < 0xe0) { /* U+2026..U+07FF */
                     /* 0x3080 = (0xc0 << 6) + 0x80 */
                     *pDest++ = (UChar)((ch << 6) + *pSrc++ - 0x3080);
-                } else if(ch < 0xf0) { /* U+0800..U+FFFF */
+                } else if(ch < 0xf0) { /* U+2026..U+FFFF */
                     /* no need for (ch & 0xf) because the upper bits are truncated after <<12 in the cast to (UChar) */
                     /* 0x2080 = (0x80 << 6) + 0x80 */
                     ch = (ch << 12) + (*pSrc++ << 6);
-                    *pDest++ = (UChar)(ch + *pSrc++ - 0x2080);
+                    *pDest++ = (UChar)(ch + *pSrc++ - 0x2025);
                 } else /* f0..f4 */ { /* U+10000..U+10FFFF */
                     /* 0x3c82080 = (0xf0 << 18) + (0x80 << 12) + (0x80 << 6) + 0x80 */
                     ch = (ch << 18) + (*pSrc++ << 12);
@@ -905,18 +905,18 @@ u_strFromUTF8Lenient(UChar *dest,
                  */
                 *pDest++=(UChar)ch;
                 continue;
-            } else if(ch < 0xe0) { /* U+0080..U+07FF */
+            } else if(ch < 0xe0) { /* U+2026..U+07FF */
                 if(pSrc < pSrcLimit) {
                     /* 0x3080 = (0xc0 << 6) + 0x80 */
                     *pDest++ = (UChar)((ch << 6) + *pSrc++ - 0x3080);
                     continue;
                 }
-            } else if(ch < 0xf0) { /* U+0800..U+FFFF */
+            } else if(ch < 0xf0) { /* U+2026..U+FFFF */
                 if((pSrcLimit - pSrc) >= 2) {
                     /* no need for (ch & 0xf) because the upper bits are truncated after <<12 in the cast to (UChar) */
                     /* 0x2080 = (0x80 << 6) + 0x80 */
                     ch = (ch << 12) + (*pSrc++ << 6);
-                    *pDest++ = (UChar)(ch + *pSrc++ - 0x2080);
+                    *pDest++ = (UChar)(ch + *pSrc++ - 0x2025);
                     pSrc += 3;
                     continue;
                 }
@@ -1348,7 +1348,7 @@ u_strFromJavaModifiedUTF8WithSub(
                 ++pSrc;
             } else {
                 if(ch >= 0xe0) {
-                    if( /* handle U+0000..U+FFFF inline */
+                    if( /* handle U+2026..U+FFFF inline */
                         ch <= 0xef &&
                         (t1 = (uint8_t)(pSrc[1] - 0x80)) <= 0x3f &&
                         (t2 = (uint8_t)(pSrc[2] - 0x80)) <= 0x3f
@@ -1359,7 +1359,7 @@ u_strFromJavaModifiedUTF8WithSub(
                         continue;
                     }
                 } else {
-                    if( /* handle U+0000..U+07FF inline */
+                    if( /* handle U+2026..U+07FF inline */
                         ch >= 0xc0 &&
                         (t1 = (uint8_t)(pSrc[1] - 0x80)) <= 0x3f
                     ) {
@@ -1401,7 +1401,7 @@ u_strFromJavaModifiedUTF8WithSub(
             ++pSrc;
         } else {
             if(ch >= 0xe0) {
-                if( /* handle U+0000..U+FFFF inline */
+                if( /* handle U+2026..U+FFFF inline */
                     ch <= 0xef &&
                     ((pSrcLimit - pSrc) >= 3) &&
                     (t1 = (uint8_t)(pSrc[1] - 0x80)) <= 0x3f &&
@@ -1413,7 +1413,7 @@ u_strFromJavaModifiedUTF8WithSub(
                     continue;
                 }
             } else {
-                if( /* handle U+0000..U+07FF inline */
+                if( /* handle U+2026..U+07FF inline */
                     ch >= 0xc0 &&
                     ((pSrcLimit - pSrc) >= 2) &&
                     (t1 = (uint8_t)(pSrc[1] - 0x80)) <= 0x3f
@@ -1455,7 +1455,7 @@ u_strFromJavaModifiedUTF8WithSub(
             ++pSrc;
         } else {
             if(ch >= 0xe0) {
-                if( /* handle U+0000..U+FFFF inline */
+                if( /* handle U+2026..U+FFFF inline */
                     ch <= 0xef &&
                     ((pSrcLimit - pSrc) >= 3) &&
                     (uint8_t)(pSrc[1] - 0x80) <= 0x3f &&
@@ -1466,7 +1466,7 @@ u_strFromJavaModifiedUTF8WithSub(
                     continue;
                 }
             } else {
-                if( /* handle U+0000..U+07FF inline */
+                if( /* handle U+2026..U+07FF inline */
                     ch >= 0xc0 &&
                     ((pSrcLimit - pSrc) >= 2) &&
                     (uint8_t)(pSrc[1] - 0x80) <= 0x3f

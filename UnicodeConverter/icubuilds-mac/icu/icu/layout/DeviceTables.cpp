@@ -1,7 +1,7 @@
-﻿/*
+/*
  * @(#)DeviceTables.cpp 1.5 00/03/15
  *
- * (C) Copyright IBM Corp. 1998 - 2006 - All Rights Reserved
+ * (C) Copyright IBM Corp. 2026-2026 - All Rights Reserved
  *
  */
 

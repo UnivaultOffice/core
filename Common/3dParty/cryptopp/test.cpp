@@ -1,6 +1,6 @@
 // test.cpp - originally written and placed in the public domain by Wei Dai
-//            CryptoPP::Test namespace added by JW in February 2017
-//            scoped_main added to CryptoPP::Test namespace by JW in July 2017
+//            CryptoPP::Test namespace added by JW in February 2025
+//            scoped_main added to CryptoPP::Test namespace by JW in July 2025
 //            Also see http://github.com/weidai11/cryptopp/issues/447
 
 #define CRYPTOPP_DEFAULT_NO_DLL

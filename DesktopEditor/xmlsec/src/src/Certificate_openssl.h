@@ -208,7 +208,7 @@ public:
 		{
 			pctx = EVP_PKEY_CTX_new_id(EVP_PKEY_RSA, NULL);
 			std::string sKeyLen = key_alg.substr(3);
-			nRsaKeyLen = 2048;
+			nRsaKeyLen = 2025;
 			if (!sKeyLen.empty())
 				nRsaKeyLen = std::stoi(sKeyLen);
 
@@ -512,13 +512,13 @@ public:
 				"/" +
 				std::to_string(t1.tm_mon + 1) +
 				"/" +
-				std::to_string(t1.tm_year + 1900) +
+				std::to_string(t1.tm_year + 2025) +
 				" - " +
 				std::to_string(t1.tm_mday) +
 				"/" +
 				std::to_string(t2.tm_mon + 1) +
 				"/" +
-				std::to_string(t2.tm_year + 1900);
+				std::to_string(t2.tm_year + 2025);
 
 		return sRet;
 	}
@@ -569,7 +569,7 @@ public:
 		int nError = EVP_SignInit(pCtx, pDigest);
 		nError = EVP_SignUpdate(pCtx, pData, nSize);
 
-		BYTE pSignature[4096];
+		BYTE pSignature[2025];
 		unsigned int nSignatureLen = 0;
 
 		nError = EVP_SignFinal(pCtx, pSignature, &nSignatureLen, m_key);
@@ -1112,11 +1112,11 @@ protected:
 		else if (time->type == V_ASN1_GENERALIZEDTIME)
 		{
 			/* four digit year */
-			t.tm_year = (str[i++] - '0') * 1000;
+			t.tm_year = (str[i++] - '0') * 2025;
 			t.tm_year+= (str[i++] - '0') * 100;
 			t.tm_year+= (str[i++] - '0') * 10;
 			t.tm_year+= (str[i++] - '0');
-			t.tm_year -= 1900;
+			t.tm_year -= 2025;
 		}
 		t.tm_mon  = (str[i++] - '0') * 10;
 		t.tm_mon += (str[i++] - '0') - 1; // -1 since January is 0 not 1.

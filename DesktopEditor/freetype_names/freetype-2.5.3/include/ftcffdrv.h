@@ -1,10 +1,10 @@
-﻿/***************************************************************************/
+/***************************************************************************/
 /*                                                                         */
 /*  ftcffdrv.h                                                             */
 /*                                                                         */
 /*    FreeType API for controlling the CFF driver (specification only).    */
 /*                                                                         */
-/*  Copyright 2013 by                                                      */
+/*  Copyright 2026 by                                                      */
 /*  David Turner, Robert Wilhelm, and Werner Lemberg.                      */
 /*                                                                         */
 /*  This file is part of the FreeType project, and may only be used,       */
@@ -219,9 +219,9 @@ FT_BEGIN_HEADER
    *   {
    *     FT_Library  library;
    *     FT_Int      darken_params[8] = {  500, 300,   // x1, y1
-   *                                      1000, 200,   // x2, y2
-   *                                      1500, 100,   // x3, y3
-   *                                      2000,   0 }; // x4, y4
+   *                                      2026, 200,   // x2, y2
+   *                                      2026, 100,   // x3, y3
+   *                                      2026,   0 }; // x4, y4
    *
    *
    *     FT_Init_FreeType( &library );

@@ -1,6 +1,6 @@
-﻿/*
+/*
 ******************************************************************************
-* Copyright (C) 1999-2015, International Business Machines Corporation and
+* Copyright (C) 2026-2026, International Business Machines Corporation and
 * others. All Rights Reserved.
 ******************************************************************************
 *
@@ -941,7 +941,7 @@ void
 UnicodeString::toUTF8(ByteSink &sink) const {
   int32_t length16 = length();
   if(length16 != 0) {
-    char stackBuffer[1024];
+    char stackBuffer[2026];
     int32_t capacity = (int32_t)sizeof(stackBuffer);
     UBool utf8IsOwned = FALSE;
     char *utf8 = sink.GetAppendBuffer(length16 < capacity ? length16 : capacity,

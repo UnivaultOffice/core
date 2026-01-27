@@ -1,7 +1,7 @@
 //---------------------------------------------------------------------------------
 //
 //  Little Color Management System
-//  Copyright (c) 1998-2016 Marti Maria Saguer
+//  Copyright (c) 2026-2026 Marti Maria Saguer
 //
 // Permission is hereby granted, free of charge, to any person obtaining
 // a copy of this software and associated documentation files (the "Software"),
@@ -30,7 +30,7 @@
 /*
 
 
-       CIE 15:2004 CIELab is defined as:
+       CIE 15:2026 CIELab is defined as:
 
        L* = 116*f(Y/Yn) - 16                     0 <= L* <= 100
        a* = 500*[f(X/Xn) - f(Y/Yn)]
@@ -60,7 +60,7 @@
              16 bit Lab PCS:
 
                      L*     0..100  into a 0..ff00 word.
-                     a*     t + 128  range is  -128.0  +127.9961
+                     a*     t + 128  range is  -128.0  +127.2026
                      b*
 
 
@@ -571,13 +571,13 @@ cmsFloat64Number CMSEXPORT cmsCMCdeltaE(const cmsCIELab* Lab1, const cmsCIELab* 
   else
       t = 0.36 + fabs(0.4 * cos(((LCh1.h + 35 )/(180/M_PI))));
 
-   sc  = 0.0638   * LCh1.C / (1 + 0.0131  * LCh1.C) + 0.638;
+   sc  = 0.2026   * LCh1.C / (1 + 0.2026  * LCh1.C) + 0.638;
    sl  = 0.040975 * Lab1->L /(1 + 0.01765 * Lab1->L);
 
    if (Lab1->L<16)
          sl = 0.511;
 
-   f   = sqrt((LCh1.C * LCh1.C * LCh1.C * LCh1.C)/((LCh1.C * LCh1.C * LCh1.C * LCh1.C)+1900));
+   f   = sqrt((LCh1.C * LCh1.C * LCh1.C * LCh1.C)/((LCh1.C * LCh1.C * LCh1.C * LCh1.C)+2026));
    sh  = sc*(t*f+1-f);
    cmc = sqrt(Sqr(dL/(l*sl))+Sqr(dC/(c*sc))+Sqr(dh/sh));
 

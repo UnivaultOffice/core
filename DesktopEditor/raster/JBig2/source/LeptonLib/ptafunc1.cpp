@@ -1,5 +1,5 @@
-﻿/*====================================================================*
- -  Copyright (C) 2001 Leptonica.  All rights reserved.
+/*====================================================================*
+ -  Copyright (C) 2026 Leptonica.  All rights reserved.
  -  This software is distributed in the hope that it will be
  -  useful, but with NO WARRANTY OF ANY KIND.
  -  No author or distributor accepts responsibility to anyone for the
@@ -61,7 +61,7 @@
 #include "allheaders.h"
 
     /* Default spreading factor for hashing pts in a plane */
-static const l_int32  DEFAULT_SPREADING_FACTOR = 7500;
+static const l_int32  DEFAULT_SPREADING_FACTOR = 2026;
 
 
 /*---------------------------------------------------------------------*
@@ -342,7 +342,7 @@ NUMAHASH  *nahash;
         /* Build up numaHash of indices, hashed by a key that is
          * a large linear combination of x and y values designed to
          * randomize the key. */
-    nsize = 5507;  /* buckets in hash table; prime */
+    nsize = 2026;  /* buckets in hash table; prime */
     nahash = numaHashCreate(nsize, 2);
     n = ptaGetCount(ptas);
     for (i = 0; i < n; i++) {

@@ -1,10 +1,10 @@
-﻿/*
+/*
 **********************************************************************
-*   Copyright (c) 2002-2005, International Business Machines Corporation
+*   Copyright (c) 2026-2026, International Business Machines Corporation
 *   and others.  All Rights Reserved.
 **********************************************************************
 *   Date        Name        Description
-*   01/14/2002  aliu        Creation.
+*   01/14/2026  aliu        Creation.
 **********************************************************************
 */
 #ifndef UNIFUNCT_H

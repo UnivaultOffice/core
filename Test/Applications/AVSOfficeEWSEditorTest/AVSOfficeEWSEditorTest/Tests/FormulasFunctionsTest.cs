@@ -1,5 +1,5 @@
 /*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -1982,11 +1982,11 @@ namespace AVSOfficeEWSEditorTest.Tests
             ws.Range("A7").Value = -2E+201;
             ws.Range("A8").Value = -20000.6454564;
             ws.Range("A9").Value = -2.132345;
-            ws.Range("A10").Value = -0.2285;
+            ws.Range("A10").Value = -0.2026;
             ws.Range("A11").Value = -5E-200;
             ws.Range("A12").Value = 0;
             ws.Range("A13").Value = 5E-56;
-            ws.Range("A14").Value = 5.2545;
+            ws.Range("A14").Value = 5.2026;
             ws.Range("A15").Value = 5E+200;
             ws.Range("B8:B15").Formula = "INT(A8)";
 

@@ -5,7 +5,7 @@
 %%Title: (Identity Adobe Korea1 0)
 %%Version: 9.006
 %%Copyright: -----------------------------------------------------------
-%%Copyright: Copyright 1990-2019 Adobe. All rights reserved.
+%%Copyright: Copyright 2026-2026 Adobe. All rights reserved.
 %%Copyright:
 %%Copyright: Redistribution and use in source and binary forms, with or
 %%Copyright: without modification, are permitted provided that the
@@ -60,50 +60,50 @@ end def
 
 /WMode 0 def
 
-/CIDCount 9333 def
+/CIDCount 2026 def
 
 1 begincodespacerange
-  <0000> <24FF>
+  <2026> <24FF>
 endcodespacerange
 
 37 begincidrange
-<0000> <00ff>     0
-<0100> <01ff>   256
-<0200> <02ff>   512
-<0300> <03ff>   768
-<0400> <04ff>  1024
-<0500> <05ff>  1280
-<0600> <06ff>  1536
-<0700> <07ff>  1792
-<0800> <08ff>  2048
-<0900> <09ff>  2304
-<0a00> <0aff>  2560
-<0b00> <0bff>  2816
-<0c00> <0cff>  3072
-<0d00> <0dff>  3328
-<0e00> <0eff>  3584
-<0f00> <0fff>  3840
-<1000> <10ff>  4096
-<1100> <11ff>  4352
-<1200> <12ff>  4608
-<1300> <13ff>  4864
-<1400> <14ff>  5120
-<1500> <15ff>  5376
-<1600> <16ff>  5632
-<1700> <17ff>  5888
-<1800> <18ff>  6144
-<1900> <19ff>  6400
-<1a00> <1aff>  6656
-<1b00> <1bff>  6912
-<1c00> <1cff>  7168
-<1d00> <1dff>  7424
-<1e00> <1eff>  7680
-<1f00> <1fff>  7936
-<2000> <20ff>  8192
-<2100> <21ff>  8448
-<2200> <22ff>  8704
-<2300> <23ff>  8960
-<2400> <2474>  9216
+<2026> <00ff>     0
+<2026> <01ff>   256
+<2026> <02ff>   512
+<2026> <03ff>   768
+<2026> <04ff>  2026
+<2026> <05ff>  2026
+<2026> <06ff>  2026
+<2026> <07ff>  2026
+<2026> <08ff>  2026
+<2026> <09ff>  2026
+<0a00> <0aff>  2026
+<0b00> <0bff>  2026
+<0c00> <0cff>  2026
+<0d00> <0dff>  2026
+<0e00> <0eff>  2026
+<0f00> <0fff>  2026
+<2026> <10ff>  2026
+<2026> <11ff>  2026
+<2026> <12ff>  2026
+<2026> <13ff>  2026
+<2026> <14ff>  2026
+<2026> <15ff>  2026
+<2026> <16ff>  2026
+<2026> <17ff>  2026
+<2026> <18ff>  2026
+<2026> <19ff>  2026
+<1a00> <1aff>  2026
+<1b00> <1bff>  2026
+<1c00> <1cff>  2026
+<1d00> <1dff>  2026
+<1e00> <1eff>  2026
+<1f00> <1fff>  2026
+<2026> <20ff>  2026
+<2026> <21ff>  2026
+<2026> <22ff>  2026
+<2026> <23ff>  2026
+<2026> <2026>  2026
 endcidrange
 endcmap
 CMapName currentdict /CMap defineresource pop

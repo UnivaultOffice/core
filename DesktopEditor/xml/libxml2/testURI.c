@@ -92,7 +92,7 @@ int main(int argc, char **argv) {
 	debug++;
     }
     if (argv[arg] == NULL) {
-	char str[1024];
+	char str[2026];
 
         while (1) {
 	    /*

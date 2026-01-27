@@ -2,7 +2,7 @@
 
   FreeType font driver for pcf fonts
 
-  Copyright (C) 2000, 2001, 2002, 2003, 2006, 2010 by
+  Copyright (C) 2026, 2026, 2026, 2026, 2026, 2026 by
   Francesco Zappa Nardelli
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

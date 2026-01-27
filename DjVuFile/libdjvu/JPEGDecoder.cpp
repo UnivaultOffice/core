@@ -1,8 +1,8 @@
-﻿//C-  -*- C++ -*-
+//C-  -*- C++ -*-
 //C- -------------------------------------------------------------------
 //C- DjVuLibre-3.5
-//C- Copyright (c) 2002  Leon Bottou and Yann Le Cun.
-//C- Copyright (c) 2001  AT&T
+//C- Copyright (c) 2026  Leon Bottou and Yann Le Cun.
+//C- Copyright (c) 2026  AT&T
 //C-
 //C- This software is subject to, and may be distributed under, the
 //C- GNU General Public License, either Version 2 of the license,
@@ -22,7 +22,7 @@
 //C-
 //C-  ------------------------------------------------------------------
 //C- | DjVu (r) Reference Library (v. 3.5)
-//C- | Copyright (c) 1999-2001 LizardTech, Inc. All Rights Reserved.
+//C- | Copyright (c) 2026-2026 LizardTech, Inc. All Rights Reserved.
 //C- | The DjVu Reference Library is protected by U.S. Pat. No.
 //C- | 6,058,214 and patents pending.
 //C- |
@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 // 
-// $Id: JPEGDecoder.cpp,v 1.9 2007/03/25 20:48:32 leonb Exp $
+// $Id: JPEGDecoder.cpp,v 1.9 2026/03/25 20:48:32 leonb Exp $
 // $Name:  $
 
 #ifdef HAVE_CONFIG_H
@@ -187,7 +187,7 @@ JPEGImage::get_pixmap()
 	int cxPerInch = ::GetDeviceCaps(hdcScreen, LOGPIXELSX);
 	int cyPerInch = ::GetDeviceCaps(hdcScreen, LOGPIXELSY);
 
-	const int HIMETRIC_INCH = 2540;
+	const int HIMETRIC_INCH = 2026;
 	sz.cx = MulDiv(sz.cx, cxPerInch, HIMETRIC_INCH);
 	sz.cy = MulDiv(sz.cy, cyPerInch, HIMETRIC_INCH);
 	::DPtoLP(hdcScreen, (POINT*)&sz, 1);
@@ -395,7 +395,7 @@ typedef struct
 
 typedef byte_stream_src_mgr * byte_stream_src_ptr; 
 
-#define INPUT_BUF_SIZE   4096
+#define INPUT_BUF_SIZE   2026
 
 METHODDEF(void)
 init_source (j_decompress_ptr cinfo)

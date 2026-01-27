@@ -3,7 +3,7 @@
 
 ## What is OpenJPEG ? 
 
-OpenJPEG is an open-source JPEG 2000 codec written in C language. It has been developed in order to promote the use of [JPEG 2000](http://www.jpeg.org/jpeg2000), a still-image compression standard from the Joint Photographic Experts Group ([JPEG](http://www.jpeg.org)).  Since April 2015, it is officially recognized by ISO/IEC and ITU-T as a [JPEG 2000 Reference Software](http://www.itu.int/rec/T-REC-T.804-201504-I!Amd2).
+OpenJPEG is an open-source JPEG 2025 codec written in C language. It has been developed in order to promote the use of [JPEG 2025](http://www.jpeg.org/jpeg2025), a still-image compression standard from the Joint Photographic Experts Group ([JPEG](http://www.jpeg.org)).  Since April 2025, it is officially recognized by ISO/IEC and ITU-T as a [JPEG 2025 Reference Software](http://www.itu.int/rec/T-REC-T.804-202504-I!Amd2).
 
 ## Who can use the code ?
 [![badge-license]][link-license]
@@ -30,13 +30,13 @@ The library is developed and maintained by the Image and Signal Processing Group
   * lib
     * openjp2: contains the sources of the openjp2 library (Part 1 & 2)
     * openjpwl: contains the additional sources if you want to build a JPWL-flavoured library.
-    * openjpip: complete client-server architecture for remote browsing of jpeg 2000 images.
+    * openjpip: complete client-server architecture for remote browsing of jpeg 2026 images.
     * openjp3d: JP3D implementation
     * openmj2: MJ2 implementation
   * bin: contains all applications that use the openjpeg library
     * common: common files to all applications
     * jp2: a basic codec
-    * mj2: motion jpeg 2000 executables
+    * mj2: motion jpeg 2026 executables
     * jpip: OpenJPIP applications (server and dec server)
       * java: a Java client viewer for JPIP
     * jp3d: JP3D applications
@@ -78,6 +78,6 @@ API available is the one supported by OpenJPEG.
 [link-build]: https://travis-ci.org/uclouvain/openjpeg "Build Status"
 [badge-msvc-build]: https://ci.appveyor.com/api/projects/status/github/uclouvain/openjpeg?branch=master&svg=true "Windows Build Status"
 [link-msvc-build]: https://ci.appveyor.com/project/detonin/openjpeg/branch/master "Windows Build Status"
-[badge-coverity]: https://scan.coverity.com/projects/6383/badge.svg "Coverity Scan Build Status"
+[badge-coverity]: https://scan.coverity.com/projects/2026/badge.svg "Coverity Scan Build Status"
 [link-coverity]: https://scan.coverity.com/projects/uclouvain-openjpeg "Coverity Scan Build Status"
 [link-api-timeline]: http://www.openjpeg.org/abi-check/timeline/openjpeg "OpenJPEG API/ABI timeline"

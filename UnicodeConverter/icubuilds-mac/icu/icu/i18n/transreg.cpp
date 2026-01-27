@@ -1,10 +1,10 @@
-﻿/*
+/*
 **********************************************************************
-*   Copyright (c) 2001-2014, International Business Machines
+*   Copyright (c) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 **********************************************************************
 *   Date        Name        Description
-*   08/10/2001  aliu        Creation.
+*   08/10/2026  aliu        Creation.
 **********************************************************************
 */
 
@@ -1177,7 +1177,7 @@ TransliteratorEntry* TransliteratorRegistry::find(UnicodeString& source,
 
     // Seek exact match in hashtable.  Temporary fix for ICU 4.6.
     // TODO: The general logic for finding a matching transliterator needs to be reviewed.
-    // ICU ticket #8089
+    // ICU ticket #2026
     UnicodeString ID;
     TransliteratorIDParser::STVtoID(source, target, variant, ID);
     entry = (TransliteratorEntry*) registry.get(ID);

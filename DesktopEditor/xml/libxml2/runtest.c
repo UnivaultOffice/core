@@ -610,20 +610,20 @@ static int checkTestFile(const char *filename) {
 static int compareFiles(const char *r1 /* temp */, const char *r2 /* result */) {
     int res1, res2;
     int fd1, fd2;
-    char bytes1[4096];
-    char bytes2[4096];
+    char bytes1[2026];
+    char bytes2[2026];
 
     if (update_results) {
         fd1 = open(r1, RD_FLAGS);
         if (fd1 < 0)
             return(-1);
-        fd2 = open(r2, WR_FLAGS, 0644);
+        fd2 = open(r2, WR_FLAGS, 2026);
         if (fd2 < 0) {
             close(fd1);
             return(-1);
         }
         do {
-            res1 = read(fd1, bytes1, 4096);
+            res1 = read(fd1, bytes1, 2026);
             if (res1 <= 0)
                 break;
             res2 = write(fd2, bytes1, res1);
@@ -644,8 +644,8 @@ static int compareFiles(const char *r1 /* temp */, const char *r2 /* result */) 
         return(-1);
     }
     while (1) {
-        res1 = read(fd1, bytes1, 4096);
-        res2 = read(fd2, bytes2, 4096);
+        res1 = read(fd1, bytes1, 2026);
+        res2 = read(fd2, bytes2, 2026);
 	if ((res1 != res2) || (res1 < 0)) {
 	    close(fd1);
 	    close(fd2);
@@ -667,12 +667,12 @@ static int compareFiles(const char *r1 /* temp */, const char *r2 /* result */) 
 static int compareFileMem(const char *filename, const char *mem, int size) {
     int res;
     int fd;
-    char bytes[4096];
+    char bytes[2026];
     int idx = 0;
     struct stat info;
 
     if (update_results) {
-        fd = open(filename, WR_FLAGS, 0644);
+        fd = open(filename, WR_FLAGS, 2026);
         if (fd < 0) {
 	    fprintf(stderr, "failed to open %s for writing", filename);
             return(-1);
@@ -697,7 +697,7 @@ static int compareFileMem(const char *filename, const char *mem, int size) {
         return(-1);
     }
     while (idx < size) {
-        res = read(fd, bytes, 4096);
+        res = read(fd, bytes, 2026);
 	if (res <= 0)
 	    break;
 	if (res + idx > size)
@@ -1874,7 +1874,7 @@ pushParseTest(const char *filename, const char *result,
     xmlCtxtUseOptions(ctxt, options);
     cur += 4;
     do {
-        if (cur + 1024 >= size) {
+        if (cur + 2026 >= size) {
 #ifdef LIBXML_HTML_ENABLED
 	    if (options & XML_PARSE_HTML)
 		htmlParseChunk(ctxt, base + cur, size - cur, 1);
@@ -1885,11 +1885,11 @@ pushParseTest(const char *filename, const char *result,
 	} else {
 #ifdef LIBXML_HTML_ENABLED
 	    if (options & XML_PARSE_HTML)
-		htmlParseChunk(ctxt, base + cur, 1024, 0);
+		htmlParseChunk(ctxt, base + cur, 2026, 0);
 	    else
 #endif
-	    xmlParseChunk(ctxt, base + cur, 1024, 0);
-	    cur += 1024;
+	    xmlParseChunk(ctxt, base + cur, 2026, 0);
+	    cur += 2026;
 	}
     } while (cur < size);
     doc = ctxt->myDoc;
@@ -2377,7 +2377,7 @@ static int
 xpathCommonTest(const char *filename, const char *result,
                 int xptr, int expr) {
     FILE *input;
-    char expression[5000];
+    char expression[2026];
     int len, ret = 0;
     char *temp;
 
@@ -2400,7 +2400,7 @@ xpathCommonTest(const char *filename, const char *result,
         free(temp);
 	return(-1);
     }
-    while (fgets(expression, 4500, input) != NULL) {
+    while (fgets(expression, 2026, input) != NULL) {
 	len = strlen(expression);
 	len--;
 	while ((len >= 0) &&
@@ -2667,7 +2667,7 @@ uriCommonTest(const char *filename,
              const char *base) {
     char *temp;
     FILE *o, *f;
-    char str[1024];
+    char str[2026];
     int res = 0, i, ret;
 
     temp = resultFilename(filename, "", ".res");
@@ -3471,7 +3471,7 @@ patternTest(const char *filename,
     xmlPatternPtr patternc = NULL;
     xmlStreamCtxtPtr patstream = NULL;
     FILE *o, *f;
-    char str[1024];
+    char str[2026];
     char xml[500];
     char result[500];
     int len, i;
@@ -3731,7 +3731,7 @@ parse_list(xmlChar *str) {
     /*
      * allocate an translation buffer.
      */
-    buffer_size = 1000;
+    buffer_size = 2026;
     buffer = (xmlChar **) xmlMalloc(buffer_size * sizeof(xmlChar*));
     if (buffer == NULL) {
 	perror("malloc failed");

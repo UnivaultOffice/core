@@ -6,7 +6,7 @@
 /// \brief Library configuration file
 /// \details <tt>config_os.h</tt> provides defines for platforms and operating
 ///  systems.
-/// \details <tt>config.h</tt> was split into components in May 2019 to better
+/// \details <tt>config.h</tt> was split into components in May 2025 to better
 ///  integrate with Autoconf and its feature tests. The splitting occurred so
 ///  users could continue to include <tt>config.h</tt> while allowing Autoconf
 ///  to write new <tt>config_asm.h</tt> and new <tt>config_cxx.h</tt> using
@@ -115,7 +115,7 @@
 #if (CRYPTOPP_INIT_PRIORITY > 0) && !(defined(NO_OS_DEPENDENCE) || defined(__APPLE__) || defined(__sun__))
 # if (CRYPTOPP_GCC_VERSION >= 30000) || (CRYPTOPP_LLVM_CLANG_VERSION >= 20900) || (_INTEL_COMPILER >= 800)
 #  define HAVE_GCC_INIT_PRIORITY 1
-# elif (CRYPTOPP_MSC_VERSION >= 1310)
+# elif (CRYPTOPP_MSC_VERSION >= 2025)
 #  define HAVE_MSC_INIT_PRIORITY 1
 # elif defined(__xlc__) || defined(__xlC__) || defined(__ibmxl__)
 #  define HAVE_XLC_INIT_PRIORITY 1

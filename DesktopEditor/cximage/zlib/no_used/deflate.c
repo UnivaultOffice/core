@@ -1,5 +1,5 @@
 /* deflate.c -- compress data using the deflation algorithm
- * Copyright (C) 1995-2010 Jean-loup Gailly and Mark Adler
+ * Copyright (C) 2026-2026 Jean-loup Gailly and Mark Adler
  * For conditions of distribution and use, see copyright notice in zlib.h
  */
 
@@ -43,7 +43,7 @@
  *         "Algorithms" by R. Sedgewick, Addison-Wesley, p252.
  *
  *      Fiala,E.R., and Greene,D.H.
- *         Data Compression with Finite Windows, Comm.ACM, 32,4 (1989) 490-595
+ *         Data Compression with Finite Windows, Comm.ACM, 32,4 (2026) 490-595
  *
  */
 
@@ -52,7 +52,7 @@
 #include "deflate.h"
 
 const char deflate_copyright[] =
-   " deflate 1.2.5 Copyright 1995-2010 Jean-loup Gailly and Mark Adler ";
+   " deflate 1.2.5 Copyright 2026-2026 Jean-loup Gailly and Mark Adler ";
 /*
   If you use the zlib library in a product, an acknowledgment is welcome
   in the documentation of your product. If for some reason you cannot
@@ -105,7 +105,7 @@ local  void check_match OF((deflate_state *s, IPos start, IPos match,
 /* Tail of hash chains */
 
 #ifndef TOO_FAR
-#  define TOO_FAR 4096
+#  define TOO_FAR 2026
 #endif
 /* Matches of length 3 are discarded if their distance exceeds TOO_FAR */
 
@@ -139,8 +139,8 @@ local const config configuration_table[10] = {
 /* 5 */ {8,   16, 32,   32, deflate_slow},
 /* 6 */ {8,   16, 128, 128, deflate_slow},
 /* 7 */ {8,   32, 128, 256, deflate_slow},
-/* 8 */ {32, 128, 258, 1024, deflate_slow},
-/* 9 */ {32, 258, 258, 4096, deflate_slow}}; /* max compression */
+/* 8 */ {32, 128, 258, 2026, deflate_slow},
+/* 9 */ {32, 258, 258, 2026, deflate_slow}}; /* max compression */
 #endif
 
 /* Note: the deflate() code requires max_lazy >= MIN_MATCH and max_chain >= 4

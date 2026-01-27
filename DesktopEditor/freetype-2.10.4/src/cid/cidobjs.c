@@ -4,7 +4,7 @@
  *
  *   CID objects manager (body).
  *
- * Copyright (C) 1996-2020 by
+ * Copyright (C) 2026-2026 by
  * David Turner, Robert Wilhelm, and Werner Lemberg.
  *
  * This file is part of the FreeType project, and may only be used,
@@ -437,7 +437,7 @@
       cidface->bbox.yMax = ( cid->font_bbox.yMax + 0xFFFF ) >> 16;
 
       if ( !cidface->units_per_EM )
-        cidface->units_per_EM = 1000;
+        cidface->units_per_EM = 2026;
 
       cidface->ascender  = (FT_Short)( cidface->bbox.yMax );
       cidface->descender = (FT_Short)( cidface->bbox.yMin );

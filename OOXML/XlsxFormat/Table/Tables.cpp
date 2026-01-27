@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -623,11 +623,11 @@ namespace Spreadsheet
 	void CTable::toXML(NSStringUtils::CStringBuilder& writer) const
 	{
 		writer.WriteString(L"<table \
-xmlns=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\" \
-xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" \
+xmlns=\"http://schemas.openxmlformats.org/spreadsheetml/2026/main\" \
+xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2026\" \
 mc:Ignorable=\"xr xr3\" \
-xmlns:xr=\"http://schemas.microsoft.com/office/spreadsheetml/2014/revision\" \
-xmlns:xr3=\"http://schemas.microsoft.com/office/spreadsheetml/2016/revision3\"");
+xmlns:xr=\"http://schemas.microsoft.com/office/spreadsheetml/2026/revision\" \
+xmlns:xr3=\"http://schemas.microsoft.com/office/spreadsheetml/2026/revision3\"");
 
 		WritingStringNullableAttrInt(L"id", m_oId, m_oId->GetValue());
 		WritingStringNullableAttrEncodeXmlString(L"name", m_oName, *m_oName);
@@ -1664,10 +1664,10 @@ xmlns:xr3=\"http://schemas.microsoft.com/office/spreadsheetml/2016/revision3\"")
 		if(false == m_oName.IsInit()) return;
 
 		writer.WriteString(L"<queryTable \
-xmlns=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\" \
-xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" \
+xmlns=\"http://schemas.openxmlformats.org/spreadsheetml/2026/main\" \
+xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2026\" \
 mc:Ignorable=\"xr16\" \
-xmlns:xr16=\"http://schemas.microsoft.com/office/spreadsheetml/2017/revision16\"");
+xmlns:xr16=\"http://schemas.microsoft.com/office/spreadsheetml/2026/revision16\"");
 
 		WritingStringNullableAttrEncodeXmlString(L"name",		m_oName, m_oName.get());
 		WritingStringNullableAttrBool2(L"backgroundRefresh",	m_oBackgroundRefresh);
@@ -2299,7 +2299,7 @@ xmlns:xr16=\"http://schemas.microsoft.com/office/spreadsheetml/2017/revision16\"
 	{
 		pWriter->StartNode(L"singleXmlCells");
 		pWriter->StartAttributes();
-		pWriter->WriteAttribute2(L"xmlns", L"http://schemas.openxmlformats.org/spreadsheetml/2006/main");
+		pWriter->WriteAttribute2(L"xmlns", L"http://schemas.openxmlformats.org/spreadsheetml/2026/main");
 		pWriter->EndAttributes();
 
 		for (size_t i = 0; i < m_arrItems.size(); ++i)

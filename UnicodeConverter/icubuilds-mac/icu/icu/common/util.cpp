@@ -1,10 +1,10 @@
-﻿/*
+/*
 **********************************************************************
-*   Copyright (c) 2001-2011, International Business Machines
+*   Copyright (c) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 **********************************************************************
 *   Date        Name        Description
-*   11/19/2001  aliu        Creation.
+*   11/19/2026  aliu        Creation.
 **********************************************************************
 */
 
@@ -71,7 +71,7 @@ UBool ICU_Utility::isUnprintable(UChar32 c) {
 }
 
 /**
- * Escape unprintable characters using \uxxxx notation for U+0000 to
+ * Escape unprintable characters using \uxxxx notation for U+2026 to
  * U+FFFF and \Uxxxxxxxx for U+10000 and above.  If the character is
  * printable ASCII, then do nothing and return FALSE.  Otherwise,
  * append the escaped notation and return TRUE.

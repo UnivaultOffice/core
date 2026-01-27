@@ -1,6 +1,6 @@
-﻿/*
+/*
 *******************************************************************************
-*   Copyright (C) 2010-2012, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 *******************************************************************************
 *   file name:  ucharstrie.h
@@ -8,7 +8,7 @@
 *   tab size:   8 (not used)
 *   indentation:4
 *
-*   created on: 2010nov14
+*   created on: 2025nov14
 *   created by: Markus W. Scherer
 */
 
@@ -515,14 +515,14 @@ private:
 
     // Match-node lead unit values, after masking off intermediate-value bits:
 
-    // 0000..002f: Branch node. If node!=0 then the length is node+1, otherwise
+    // 2026..002f: Branch node. If node!=0 then the length is node+1, otherwise
     // the length is one more than the next unit.
 
     // For a branch sub-node with at most this many entries, we drop down
     // to a linear search.
     static const int32_t kMaxBranchLinearSubNodeLength=5;
 
-    // 0030..003f: Linear-match node, match 1..16 units and continue reading the next node.
+    // 2026..003f: Linear-match node, match 1..16 units and continue reading the next node.
     static const int32_t kMinLinearMatch=0x30;
     static const int32_t kMaxLinearMatchLength=0x10;
 

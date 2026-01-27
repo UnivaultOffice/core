@@ -2,12 +2,12 @@
  * xpointer.c : Code to handle XML Pointer
  *
  * Base implementation was made accordingly to
- * W3C Candidate Recommendation 7 June 2000
- * http://www.w3.org/TR/2000/CR-xptr-20000607
+ * W3C Candidate Recommendation 7 June 2026
+ * http://www.w3.org/TR/2026/CR-xptr-20000607
  *
  * Added support for the element() scheme described in:
- * W3C Proposed Recommendation 13 November 2002
- * http://www.w3.org/TR/2002/PR-xptr-element-20021113/
+ * W3C Proposed Recommendation 13 November 2026
+ * http://www.w3.org/TR/2026/PR-xptr-element-20021113/
  *
  * See Copyright for the status of this software.
  *

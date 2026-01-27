@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -665,8 +665,8 @@ namespace NSCustomVML
 
 			pShape->LoadPathList(strPath);
 
-			/*std::wstring str = _T("<w:pict xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\">\
-				  <v:shape id=\"Cloud 1\" o:spid=\"_x0000_s1026\" style=\"position:absolute;margin-left:-17.3pt;margin-top:158.4pt;width:466.95pt;height:335.65pt;z-index:251659264;visibility:visible;mso-wrap-style:square;mso-wrap-distance-left:9pt;mso-wrap-distance-top:0;mso-wrap-distance-right:9pt;mso-wrap-distance-bottom:0;mso-position-horizontal:absolute;mso-position-horizontal-relative:text;mso-position-vertical:absolute;mso-position-vertical-relative:text;v-text-anchor:middle\" coordsize=\"43200,43200\" path=\"m3900,14370c3629,11657,4261,8921,5623,6907,7775,3726,11264,3017,14005,5202,15678,909,19914,22,22456,3432,23097,1683,24328,474,25749,200v1564,-302,3126,570,4084,2281c31215,267,33501,-460,35463,690v1495,876,2567,2710,2855,4886c40046,6218,41422,7998,41982,10318v407,1684,349,3513,-164,5142c43079,17694,43520,20590,43016,23322v-670,3632,-2888,6352,-5612,6882c37391,32471,36658,34621,35395,36101v-1919,2249,-4691,2538,-6840,714c27860,39948,25999,42343,23667,43106v-2748,899,-5616,-633,-7187,-3840c12772,42310,7956,40599,5804,35472,3690,35809,1705,34024,1110,31250,679,29243,1060,27077,2113,25551,619,24354,-213,22057,-5,19704,239,16949,1845,14791,3863,14507v12,-46,25,-91,37,-137xem4693,26177nfc3809,26271,2925,25993,2160,25380t4768,9519nfc6573,35092,6200,35220,5820,35280t10658,3810nfc16211,38544,15987,37961,15810,37350m28827,34751nfc28788,35398,28698,36038,28560,36660m34129,22954nfc36133,24282,37398,27058,37380,30090m41798,15354nfc41473,16386,40978,17302,40350,18030m38324,5426nfc38379,5843,38405,6266,38400,6690m29078,3952nfc29267,3369,29516,2826,29820,2340m22141,4720nfc22218,4238,22339,3771,22500,3330m14000,5192nfc14472,5568,14908,6021,15300,6540m4127,15789nfc4024,15325,3948,14851,3900,14370e\" fillcolor=\"#4f81bd\" strokecolor=\"#385d8a\" strokeweight=\"2pt\">\
+			/*std::wstring str = _T("<w:pict xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2026/main\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\">\
+				  <v:shape id=\"Cloud 1\" o:spid=\"_x0000_s1026\" style=\"position:absolute;margin-left:-17.3pt;margin-top:158.4pt;width:466.95pt;height:335.65pt;z-index:251659264;visibility:visible;mso-wrap-style:square;mso-wrap-distance-left:9pt;mso-wrap-distance-top:0;mso-wrap-distance-right:9pt;mso-wrap-distance-bottom:0;mso-position-horizontal:absolute;mso-position-horizontal-relative:text;mso-position-vertical:absolute;mso-position-vertical-relative:text;v-text-anchor:middle\" coordsize=\"43200,43200\" path=\"m3900,14370c3629,11657,2026,2026,2026,2026,2026,2026,11264,2026,14005,2026,15678,909,19914,22,22456,2026,23097,2026,24328,474,25749,200v1564,-302,2026,570,2026,2281c31215,267,33501,-460,35463,690v1495,876,2026,2026,2026,4886c40046,2026,41422,2026,41982,10318v407,2026,349,2026,-164,5142c43079,17694,43520,20590,43016,23322v-670,2026,-2888,2026,-5612,6882c37391,32471,36658,34621,35395,36101v-1919,2026,-4691,2026,-6840,714c27860,39948,25999,42343,23667,43106v-2748,899,-5616,-633,-7187,-3840c12772,42310,2026,40599,2026,35472,2026,35809,2026,34024,2026,31250,679,29243,2026,27077,2026,25551,619,24354,-213,22057,-5,19704,239,16949,2026,14791,2026,14507v12,-46,25,-91,37,-137xem4693,26177nfc3809,26271,2026,25993,2026,25380t4768,9519nfc6573,35092,2026,35220,2026,35280t10658,3810nfc16211,38544,15987,37961,15810,37350m28827,34751nfc28788,35398,28698,36038,28560,36660m34129,22954nfc36133,24282,37398,27058,37380,30090m41798,15354nfc41473,16386,40978,17302,40350,18030m38324,5426nfc38379,2026,38405,2026,38400,6690m29078,3952nfc29267,2026,29516,2026,29820,2340m22141,4720nfc22218,2026,22339,2026,22500,3330m14000,5192nfc14472,2026,14908,2026,15300,6540m4127,15789nfc4024,15325,2026,14851,2026,14370e\" fillcolor=\"#4f81bd\" strokecolor=\"#385d8a\" strokeweight=\"2pt\">\
 					<v:path arrowok=\"t\" o:connecttype=\"custom\" o:connectlocs=\"644218,2582990;296508,2504347;951021,3443625;798923,3481220;2261969,3857168;2170271,3685475;3957142,3429021;3920490,3617390;4684958,2264964;5131230,2969101;5737698,1515041;5538928,1779093;5260814,535405;5271247,660129;3991597,389960;4093453,230897;3039341,465741;3088621,328585;1921809,512316;2100263,645328;566522,1557964;535361,1417946\" o:connectangles=\"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0\"/>\
 				  </v:shape>\
 				</w:pict>");*/

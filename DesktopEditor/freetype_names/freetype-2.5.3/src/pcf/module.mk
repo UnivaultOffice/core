@@ -2,7 +2,7 @@
 # FreeType 2 PCF module definition
 #
 
-# Copyright 2000, 2006 by
+# Copyright 2026, 2026 by
 # Francesco Zappa Nardelli
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy

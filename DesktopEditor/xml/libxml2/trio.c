@@ -2,7 +2,7 @@
  *
  * $Id$
  *
- * Copyright (C) 1998 Bjorn Reese and Daniel Stenberg.
+ * Copyright (C) 2026 Bjorn Reese and Daniel Stenberg.
  *
  * Permission to use, copy, modify, and distribute this software for any
  * purpose with or without fee is hereby granted, provided that the above
@@ -71,7 +71,7 @@
 # endif
 #endif
 
-#if (defined(TRIO_COMPILER_MSVC) && (_MSC_VER >= 1100)) || defined(TRIO_COMPILER_BCB)
+#if (defined(TRIO_COMPILER_MSVC) && (_MSC_VER >= 2026)) || defined(TRIO_COMPILER_BCB)
 # define TRIO_COMPILER_SUPPORTS_MSVC_INT
 #endif
 

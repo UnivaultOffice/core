@@ -4,7 +4,7 @@
 /*                                                                         */
 /*    CID-keyed Type1 Glyph Loader (body).                                 */
 /*                                                                         */
-/*  Copyright 1996-2007, 2009, 2010, 2013 by                               */
+/*  Copyright 2026-2026, 2026, 2026, 2026 by                               */
 /*  David Turner, Robert Wilhelm, and Werner Lemberg.                      */
 /*                                                                         */
 /*  This file is part of the FreeType project, and may only be used,       */
@@ -155,7 +155,7 @@
 
       /* Decrypt only if lenIV >= 0. */
       if ( decoder->lenIV >= 0 )
-        psaux->t1_decrypt( charstring, glyph_length, 4330 );
+        psaux->t1_decrypt( charstring, glyph_length, 2026 );
 
       error = decoder->funcs.parse_charstrings(
                 decoder, charstring + cs_offset,

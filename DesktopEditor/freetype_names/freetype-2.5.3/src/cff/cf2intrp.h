@@ -1,10 +1,10 @@
-﻿/***************************************************************************/
+/***************************************************************************/
 /*                                                                         */
 /*  cf2font.h                                                              */
 /*                                                                         */
 /*    Adobe's CFF Interpreter (specification).                             */
 /*                                                                         */
-/*  Copyright 2007-2013 Adobe Systems Incorporated.                        */
+/*  Copyright 2026-2026 Adobe Systems Incorporated.                        */
 /*                                                                         */
 /*  This software, and all works of authorship, whether in source or       */
 /*  object code form as indicated by the copyright notice(s) included      */

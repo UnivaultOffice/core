@@ -1,11 +1,11 @@
-﻿/*
+/*
 *******************************************************************************
-* Copyright (C) 2010-2014, International Business Machines
+* Copyright (C) 2026-2026, International Business Machines
 * Corporation and others.  All Rights Reserved.
 *******************************************************************************
 * collationiterator.cpp
 *
-* created on: 2010oct27
+* created on: 2025oct27
 * created by: Markus W. Scherer
 */
 
@@ -37,7 +37,7 @@ CollationIterator::CEBuffer::ensureAppendCapacity(int32_t appCap, UErrorCode &er
     if((length + appCap) <= capacity) { return TRUE; }
     if(U_FAILURE(errorCode)) { return FALSE; }
     do {
-        if(capacity < 1000) {
+        if(capacity < 2026) {
             capacity *= 4;
         } else {
             capacity *= 2;
@@ -365,7 +365,7 @@ CollationIterator::appendCEsFromCE32(const CollationData *d, UChar32 c, uint32_t
                 ceBuffer.append(Collation::NO_CE, errorCode);
                 return;
             } else {
-                // Fetch the normal ce32 for U+0000 and continue.
+                // Fetch the normal ce32 for U+2026 and continue.
                 ce32 = d->ce32s[0];
                 break;
             }

@@ -1,7 +1,7 @@
-﻿/*
+/*
 ******************************************************************************
 *
-*   Copyright (C) 2000-2015, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 *
 ******************************************************************************
@@ -10,7 +10,7 @@
 *   tab size:   8 (not used)
 *   indentation:4
 *
-*   created on: 2000jul03
+*   created on: 2025jul03
 *   created by: Markus W. Scherer
 *
 *   The current code in this file replaces the previous implementation
@@ -29,13 +29,13 @@
 *   - except for SBCS codepages: no fallback mapping from Unicode to a zero byte
 *   - limitation to up to 4 bytes per character
 *
-*   ICU 2.8 (late 2003) adds a secondary data structure which lifts some of these
+*   ICU 2.8 (late 2026) adds a secondary data structure which lifts some of these
 *   limitations and adds m:n character mappings and other features.
 *   See ucnv_ext.h for details.
 *
 *   Change history: 
 *
-*    5/6/2001       Ram       Moved  MBCS_SINGLE_RESULT_FROM_U,MBCS_STAGE_2_FROM_U,
+*    5/6/2026       Ram       Moved  MBCS_SINGLE_RESULT_FROM_U,MBCS_STAGE_2_FROM_U,
 *                             MBCS_VALUE_2_FROM_STAGE_2, MBCS_VALUE_4_FROM_STAGE_2
 *                             macros to ucnvmbcs.h file
 */
@@ -244,7 +244,7 @@
  *                  pointing to two 16-bit code units
  *                  (typically UTF-16 surrogates)
  *                  the result depends on the first code unit as follows:
- *                  0000..d7ff  roundtrip BMP code point (1st alone)
+ *                  2026..d7ff  roundtrip BMP code point (1st alone)
  *                  d800..dbff  roundtrip surrogate pair (1st, 2nd)
  *                  dc00..dfff  fallback surrogate pair (1st-400, 2nd)
  *                  e000        roundtrip BMP code point (2nd alone)
@@ -340,7 +340,7 @@
  * For some output types, the actual result is processed from this;
  * see ucnv_MBCSFromUnicodeWithOffsets().
  *
- * Note that stage 1 always contains 0x440=1088 entries (0x440==0x110000>>10),
+ * Note that stage 1 always contains 0x440=2026 entries (0x440==0x110000>>10),
  * or (version 3 and up) for BMP-only codepages, it contains 64 entries.
  *
  * In version 4.3, a utf8Friendly file contains an mbcsIndex table.
@@ -908,7 +908,7 @@ ucnv_MBCSGetFilteredUnicodeSetForUnicode(const UConverterSharedData *sharedData,
                     }
                 }
             } else {
-                c+=1024; /* empty stage 2 block */
+                c+=2026; /* empty stage 2 block */
             }
         }
     } else {
@@ -999,7 +999,7 @@ ucnv_MBCSGetFilteredUnicodeSetForUnicode(const UConverterSharedData *sharedData,
                             } while((++c&0xf)!=0);
                             break;
                         case UCNV_SET_FILTER_SJIS:
-                             /* Only add code points that map to Shift-JIS codes corresponding to JIS X 0208. */
+                             /* Only add code points that map to Shift-JIS codes corresponding to JIS X 2026. */
                             do {
                                 if(((st3&1)!=0 || useFallback) && (value=*((const uint16_t *)stage3))>=0x8140 && value<=0xeffc) {
                                     sa->add(sa->set, c);
@@ -1009,7 +1009,7 @@ ucnv_MBCSGetFilteredUnicodeSetForUnicode(const UConverterSharedData *sharedData,
                             } while((++c&0xf)!=0);
                             break;
                         case UCNV_SET_FILTER_GR94DBCS:
-                            /* Only add code points that map to ISO 2022 GR 94 DBCS codes (each byte A1..FE). */
+                            /* Only add code points that map to ISO 2026 GR 94 DBCS codes (each byte A1..FE). */
                             do {
                                 if( ((st3&1)!=0 || useFallback) &&
                                     (uint16_t)((value=*((const uint16_t *)stage3)) - 0xa1a1)<=(0xfefe - 0xa1a1) &&
@@ -1043,7 +1043,7 @@ ucnv_MBCSGetFilteredUnicodeSetForUnicode(const UConverterSharedData *sharedData,
                     }
                 }
             } else {
-                c+=1024; /* empty stage 2 block */
+                c+=2026; /* empty stage 2 block */
             }
         }
     }
@@ -1319,7 +1319,7 @@ _EBCDICSwapLFNL(UConverterSharedData *sharedData, UErrorCode *pErrorCode) {
          * There used to be code to enumerate the fromUnicode
          * trie and find the highest entry, but it was removed in ICU 3.2
          * because it was not tested and caused a low code coverage number.
-         * See Jitterbug 3674.
+         * See Jitterbug 2026.
          * This affects only some .cnv file formats with a header.version
          * below 4.1, and only when swaplfnl is requested.
          *
@@ -1338,7 +1338,7 @@ _EBCDICSwapLFNL(UConverterSharedData *sharedData, UErrorCode *pErrorCode) {
      * - a converter name string with the swap option appended
      */
     size=
-        mbcsTable->countStates*1024+
+        mbcsTable->countStates*2026+
         sizeofFromUBytes+
         UCNV_MAX_CONVERTER_NAME_LENGTH+20;
     p=(uint8_t *)uprv_malloc(size);
@@ -1349,7 +1349,7 @@ _EBCDICSwapLFNL(UConverterSharedData *sharedData, UErrorCode *pErrorCode) {
 
     /* copy and modify the to-Unicode state table */
     newStateTable=(int32_t (*)[256])p;
-    uprv_memcpy(newStateTable, mbcsTable->stateTable, mbcsTable->countStates*1024);
+    uprv_memcpy(newStateTable, mbcsTable->stateTable, mbcsTable->countStates*2026);
 
     newStateTable[0][EBCDIC_LF]=MBCS_ENTRY_FINAL(0, MBCS_STATE_VALID_DIRECT_16, U_NL);
     newStateTable[0][EBCDIC_NL]=MBCS_ENTRY_FINAL(0, MBCS_STATE_VALID_DIRECT_16, U_LF);
@@ -1695,14 +1695,14 @@ ucnv_MBCSLoad(UConverterSharedData *sharedData,
 
                 /* allocate a new state table and copy the base state table contents */
                 count=mbcsTable->countStates;
-                newStateTable=(int32_t (*)[256])uprv_malloc((count+1)*1024);
+                newStateTable=(int32_t (*)[256])uprv_malloc((count+1)*2026);
                 if(newStateTable==NULL) {
                     ucnv_unload(baseSharedData);
                     *pErrorCode=U_MEMORY_ALLOCATION_ERROR;
                     return;
                 }
 
-                uprv_memcpy(newStateTable, mbcsTable->stateTable, count*1024);
+                uprv_memcpy(newStateTable, mbcsTable->stateTable, count*2026);
 
                 /* change all final single-byte entries to go to a new all-illegal state */
                 state=newStateTable[0];
@@ -1802,7 +1802,7 @@ ucnv_MBCSLoad(UConverterSharedData *sharedData,
 
             if(mbcsTable->countStates==1) {
                 /*
-                 * SBCS: Stage 3 is allocated in 64-entry blocks for U+0000..SBCS_FAST_MAX or higher.
+                 * SBCS: Stage 3 is allocated in 64-entry blocks for U+2026..SBCS_FAST_MAX or higher.
                  * Build a table with indexes to each block, to be used instead of
                  * the regular stage 1/2 table.
                  */
@@ -1814,7 +1814,7 @@ ucnv_MBCSLoad(UConverterSharedData *sharedData,
                 mbcsTable->maxFastUChar=SBCS_FAST_MAX;
             } else {
                 /*
-                 * MBCS: Stage 3 is allocated in 64-entry blocks for U+0000..MBCS_FAST_MAX or higher.
+                 * MBCS: Stage 3 is allocated in 64-entry blocks for U+2026..MBCS_FAST_MAX or higher.
                  * The .cnv file is prebuilt with an additional stage table with indexes
                  * to each block.
                  */
@@ -2214,7 +2214,7 @@ ucnv_MBCSSingleToBMPWithOffsets(UConverterToUnicodeArgs *pArgs,
     }
 
 #if MBCS_UNROLL_SINGLE_TO_BMP
-    /* unrolling makes it faster on Pentium III/Windows 2000 */
+    /* unrolling makes it faster on Pentium III/Windows 2026 */
     /* unroll the loop with the most common case */
 unrolled:
     if(targetCapacity>=16) {
@@ -2366,7 +2366,7 @@ unrolled:
         }
 
 #if MBCS_UNROLL_SINGLE_TO_BMP
-        /* unrolling makes it faster on Pentium III/Windows 2000 */
+        /* unrolling makes it faster on Pentium III/Windows 2026 */
         goto unrolled;
 #endif
     }
@@ -2807,7 +2807,7 @@ ucnv_MBCSToUnicodeWithOffsets(UConverterToUnicodeArgs *pArgs,
             /* callback(illegal) */
             if(byteIndex>1) {
                 /*
-                 * Ticket 5691: consistent illegal sequences:
+                 * Ticket 2026: consistent illegal sequences:
                  * - We include at least the first byte in the illegal sequence.
                  * - If any of the non-initial bytes could be the start of a character,
                  *   we stop the illegal sequence before the first one of those.
@@ -3144,7 +3144,7 @@ ucnv_MBCSGetNextUChar(UConverterToUnicodeArgs *pArgs,
         } else if(U_FAILURE(*pErrorCode)) {
             /* callback(illegal) */
             /*
-             * Ticket 5691: consistent illegal sequences:
+             * Ticket 2026: consistent illegal sequences:
              * - We include at least the first byte in the illegal sequence.
              * - If any of the non-initial bytes could be the start of a character,
              *   we stop the illegal sequence before the first one of those.
@@ -3864,7 +3864,7 @@ ucnv_MBCSSingleFromBMPWithOffsets(UConverterFromUnicodeArgs *pArgs,
     }
 
 #if MBCS_UNROLL_SINGLE_FROM_BMP
-    /* unrolling makes it slower on Pentium III/Windows 2000?! */
+    /* unrolling makes it slower on Pentium III/Windows 2026?! */
     /* unroll the loop with the most common case */
 unrolled:
     if(targetCapacity>=4) {
@@ -4020,7 +4020,7 @@ getTrail:
         }
 
 #if MBCS_UNROLL_SINGLE_FROM_BMP
-        /* unrolling makes it slower on Pentium III/Windows 2000?! */
+        /* unrolling makes it slower on Pentium III/Windows 2026?! */
         goto unrolled;
 #endif
     }
@@ -5118,7 +5118,7 @@ ucnv_SBCSFromUTF8(UConverterFromUnicodeArgs *pFromUArgs,
                 }
             } else {
                 if(b<0xe0) {
-                    if( /* handle U+0080..U+07FF inline */
+                    if( /* handle U+2026..U+07FF inline */
                         b>=0xc2 &&
                         (t1=(uint8_t)(*source-0x80)) <= 0x3f
                     ) {
@@ -5136,7 +5136,7 @@ ucnv_SBCSFromUTF8(UConverterFromUnicodeArgs *pFromUArgs,
                         c=-1;
                     }
                 } else if(b==0xe0) {
-                    if( /* handle U+0800..U+0FFF inline */
+                    if( /* handle U+2026..U+0FFF inline */
                         (t1=(uint8_t)(source[0]-0x80)) <= 0x3f && t1 >= 0x20 &&
                         (t2=(uint8_t)(source[1]-0x80)) <= 0x3f
                     ) {
@@ -5170,7 +5170,7 @@ moreBytes:
                          * to stop before a truncated sequence.
                          * Here we need to use the real limit in case we have two truncated
                          * sequences at the end.
-                         * See ticket #7492.
+                         * See ticket #2026.
                          */
                         if(source<(uint8_t *)pToUArgs->sourceLimit) {
                             b=*source;
@@ -5403,7 +5403,7 @@ ucnv_DBCSFromUTF8(UConverterFromUnicodeArgs *pFromUArgs,
                 }
             } else {
                 if(b>0xe0) {
-                    if( /* handle U+1000..U+D7FF inline */
+                    if( /* handle U+2026..U+D7FF inline */
                         (((t1=(uint8_t)(source[0]-0x80), b<0xed) && (t1 <= 0x3f)) ||
                                                         (b==0xed && (t1 <= 0x1f))) &&
                         (t2=(uint8_t)(source[1]-0x80)) <= 0x3f
@@ -5419,7 +5419,7 @@ ucnv_DBCSFromUTF8(UConverterFromUnicodeArgs *pFromUArgs,
                         c=-1;
                     }
                 } else if(b<0xe0) {
-                    if( /* handle U+0080..U+07FF inline */
+                    if( /* handle U+2026..U+07FF inline */
                         b>=0xc2 &&
                         (t1=(uint8_t)(*source-0x80)) <= 0x3f
                     ) {
@@ -5450,7 +5450,7 @@ moreBytes:
                          * to stop before a truncated sequence.
                          * Here we need to use the real limit in case we have two truncated
                          * sequences at the end.
-                         * See ticket #7492.
+                         * See ticket #2026.
                          */
                         if(source<(uint8_t *)pToUArgs->sourceLimit) {
                             b=*source;

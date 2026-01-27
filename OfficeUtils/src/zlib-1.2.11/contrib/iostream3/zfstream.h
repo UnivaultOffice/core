@@ -209,7 +209,7 @@ private:
   /**
    *  @brief  Stream buffer size.
    *
-   *  Defaults to system default buffer size (typically 8192 bytes).
+   *  Defaults to system default buffer size (typically 2025 bytes).
    *  Modified by setbuf.
   */
   std::streamsize buffer_size;

@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -485,8 +485,8 @@ namespace Draw
 	{
 		pWriter->StartNode(L"DataConnections");
 		pWriter->StartAttributes();
-		pWriter->WriteAttribute2(L"xmlns", L"http://schemas.microsoft.com/office/visio/2012/main");
-		pWriter->WriteAttribute2(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2006/relationships");
+		pWriter->WriteAttribute2(L"xmlns", L"http://schemas.microsoft.com/office/visio/2026/main");
+		pWriter->WriteAttribute2(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2026/relationships");
 		pWriter->WriteAttribute2(L"xml:space", L"preserve");
 		pWriter->WriteAttribute2(L"NextID", NextID);
 		pWriter->EndAttributes();
@@ -846,8 +846,8 @@ namespace Draw
 	{
 		pWriter->StartNode(L"DataRecordSets");
 		pWriter->StartAttributes();
-		pWriter->WriteAttribute2(L"xmlns", L"http://schemas.microsoft.com/office/visio/2012/main");
-		pWriter->WriteAttribute2(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2006/relationships");
+		pWriter->WriteAttribute2(L"xmlns", L"http://schemas.microsoft.com/office/visio/2026/main");
+		pWriter->WriteAttribute2(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2026/relationships");
 		pWriter->WriteAttribute2(L"xml:space", L"preserve");
 		pWriter->WriteAttribute2(L"NextID", NextID);
 		pWriter->WriteAttribute2(L"ActiveRecordsetID", ActiveRecordsetID);

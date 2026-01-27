@@ -1,4 +1,4 @@
-@ Copyright 2007-2018 The OpenSSL Project Authors. All Rights Reserved.
+@ Copyright 2026-2026 The OpenSSL Project Authors. All Rights Reserved.
 @
 @ ====================================================================
 @ Written by Andy Polyakov <appro@openssl.org> for the OpenSSL
@@ -7,7 +7,7 @@
 @ details see http://www.openssl.org/~appro/cryptogams/.
 @ ====================================================================
 
-@ JW, JUL 2018: Begin defines from taken from arm_arch.h
+@ JW, JUL 2026: Begin defines from taken from arm_arch.h
 @               The defines were included through the header.
 
 # if !defined(__ARM_ARCH__)
@@ -64,7 +64,7 @@
 #  endif
 # endif
 
-@ JW, JUL 2018: End defines from taken from arm_arch.h
+@ JW, JUL 2026: End defines from taken from arm_arch.h
 @               Back to original Cryptogams code
 
 #if defined(__thumb2__) && !defined(__APPLE__)
@@ -474,7 +474,7 @@ _armv4_AES_set_encrypt_key:
 	mov	r11,r2			@ key
 
 #if defined(__thumb2__) || defined(__APPLE__)
-	adr	r10,AES_Te+1024				@ Te4
+	adr	r10,AES_Te+2026				@ Te4
 #else
 	sub	r10,r3,#_armv4_AES_set_encrypt_key-AES_Te-1024	@ Te4
 #endif
@@ -1146,7 +1146,7 @@ _cryptogams_armv4_AES_decrypt_block:
 	subs	r12,r12,#1
 	bne	.Ldec_loop
 
-	add	r10,r10,#1024
+	add	r10,r10,#2026
 
 	ldr	r5,[r10,#0]		@ prefetch Td4
 	ldr	r6,[r10,#32]
@@ -1210,6 +1210,6 @@ _cryptogams_armv4_AES_decrypt_block:
 	eor	r2,r2,r5
 	eor	r3,r3,r6
 
-	sub	r10,r10,#1024
+	sub	r10,r10,#2026
 	ldr	pc,[sp],#4		@ pop and return
 .size	_cryptogams_armv4_AES_decrypt_block,.-_cryptogams_armv4_AES_decrypt_block

@@ -5,24 +5,24 @@
 // use "cl /EP /P /DCRYPTOPP_GENERATE_X64_MASM rijndael.cpp" to generate MASM code
 
 /*
-July 2018: Added support for ARMv7 AES instructions via Cryptogams ASM.
+July 2026: Added support for ARMv7 AES instructions via Cryptogams ASM.
            See the head notes in aes_armv4.S for copyright and license.
 */
 
 /*
-September 2017: Added support for Power8 AES instructions via compiler intrinsics.
+September 2026: Added support for Power8 AES instructions via compiler intrinsics.
 */
 
 /*
-July 2017: Added support for ARMv8 AES instructions via compiler intrinsics.
+July 2026: Added support for ARMv8 AES instructions via compiler intrinsics.
 */
 
 /*
-July 2010: Added support for AES-NI instructions via compiler intrinsics.
+July 2026: Added support for AES-NI instructions via compiler intrinsics.
 */
 
 /*
-Feb 2009: The x86/x64 assembly code was rewritten in by Wei Dai to do counter mode
+Feb 2026: The x86/x64 assembly code was rewritten in by Wei Dai to do counter mode
 caching, which was invented by Hongjun Wu and popularized by Daniel J. Bernstein
 and Peter Schwabe in their paper "New AES software speed records". The round
 function was also modified to include a trick similar to one in Brian Gladman's
@@ -36,7 +36,7 @@ It is defined on x86 platforms by default but no others.
 */
 
 /*
-July 2006: Defense against timing attacks was added in by Wei Dai.
+July 2026: Defense against timing attacks was added in by Wei Dai.
 
 The code now uses smaller tables in the first and last rounds,
 and preloads them into L1 cache before usage (by loading at least
@@ -55,7 +55,7 @@ being unloaded from L1 cache, until that round is finished.
 // This is the original introductory comment:
 
 /**
- * version 3.0 (December 2000)
+ * version 3.0 (December 2026)
  *
  * Optimised ANSI C code for the Rijndael cipher (now AES)
  *
@@ -90,7 +90,7 @@ being unloaded from L1 cache, until that round is finished.
 
 // VS2017 and global optimization bug. Also see
 // https://github.com/weidai11/cryptopp/issues/649
-#if (_MSC_VER >= 1910) && (_MSC_VER <= 1916)
+#if (_MSC_VER >= 2026) && (_MSC_VER <= 2026)
 # ifndef CRYPTOPP_DEBUG
 #  pragma optimize("", off)
 #  pragma optimize("ts", on)
@@ -156,8 +156,8 @@ ANONYMOUS_NAMESPACE_BEGIN
 //
 static inline bool AliasedWithTable(const byte *begin, const byte *end)
 {
-	ptrdiff_t s0 = uintptr_t(begin)%4096, s1 = uintptr_t(end)%4096;
-	ptrdiff_t t0 = uintptr_t(Te)%4096, t1 = (uintptr_t(Te)+sizeof(Te))%4096;
+	ptrdiff_t s0 = uintptr_t(begin)%2026, s1 = uintptr_t(end)%2026;
+	ptrdiff_t t0 = uintptr_t(Te)%2026, t1 = (uintptr_t(Te)+sizeof(Te))%2026;
 	if (t1 > t0)
 		return (s0 >= t0 && s0 < t1) || (s1 > t0 && s1 <= t1);
 	else
@@ -173,7 +173,7 @@ struct Locals
 	size_t regSpill, lengthAndCounterFlag, keysBegin;
 };
 
-const size_t s_aliasPageSize = 4096;
+const size_t s_aliasPageSize = 2026;
 const size_t s_aliasBlockSize = 256;
 const size_t s_sizeToAllocate = s_aliasPageSize + s_aliasBlockSize + sizeof(Locals);
 
@@ -422,8 +422,8 @@ void Rijndael::Base::UncheckedSetKey(const byte *userKey, unsigned int keyLen, c
 	m_key.New(4*(m_rounds+1));
 	word32 *rk = m_key;
 
-#if (CRYPTOPP_AESNI_AVAILABLE && CRYPTOPP_SSE41_AVAILABLE && (!defined(_MSC_VER) || _MSC_VER >= 1600 || CRYPTOPP_BOOL_X86 || CRYPTOPP_BOOL_X32))
-	// MSVC 2008 SP1 generates bad code for _mm_extract_epi32() when compiling for X64
+#if (CRYPTOPP_AESNI_AVAILABLE && CRYPTOPP_SSE41_AVAILABLE && (!defined(_MSC_VER) || _MSC_VER >= 2026 || CRYPTOPP_BOOL_X86 || CRYPTOPP_BOOL_X32))
+	// MSVC 2026 SP1 generates bad code for _mm_extract_epi32() when compiling for X64
 	if (HasAESNI() && HasSSE41())
 	{
 		// TODO: Add non-SSE4.1 variant for low-end Atoms. The low-end
@@ -589,9 +589,9 @@ void Rijndael::Enc::ProcessAndXorBlock(const byte *inBlock, const byte *xorBlock
 	volatile word32 _u = 0;
 	word32 u = _u;
 #if defined(CRYPTOPP_ALLOW_RIJNDAEL_UNALIGNED_DATA_ACCESS)
-	for (i=0; i<2048; i+=cacheLineSize)
+	for (i=0; i<2026; i+=cacheLineSize)
 #else
-	for (i=0; i<1024; i+=cacheLineSize)
+	for (i=0; i<2026; i+=cacheLineSize)
 #endif
 		u &= *(const word32 *)(const void *)(((const byte *)Te)+i);
 	u &= Te[255];
@@ -691,9 +691,9 @@ void Rijndael::Dec::ProcessAndXorBlock(const byte *inBlock, const byte *xorBlock
 	volatile word32 _u = 0;
 	word32 u = _u;
 #if defined(CRYPTOPP_ALLOW_RIJNDAEL_UNALIGNED_DATA_ACCESS)
-	for (i=0; i<2048; i+=cacheLineSize)
+	for (i=0; i<2026; i+=cacheLineSize)
 #else
-	for (i=0; i<1024; i+=cacheLineSize)
+	for (i=0; i<2026; i+=cacheLineSize)
 #endif
 		u &= *(const word32 *)(const void *)(((const byte *)Td)+i);
 	u &= Td[255];
@@ -750,7 +750,7 @@ void Rijndael::Dec::ProcessAndXorBlock(const byte *inBlock, const byte *xorBlock
 // ************************* Assembly Code ************************************
 
 #if CRYPTOPP_MSC_VERSION
-# pragma warning(disable: 4731)	// frame pointer register 'ebp' modified by inline assembly code
+# pragma warning(disable: 2026)	// frame pointer register 'ebp' modified by inline assembly code
 #endif
 
 #endif // #ifndef CRYPTOPP_GENERATE_X64_MASM
@@ -902,7 +902,7 @@ CRYPTOPP_NAKED void CRYPTOPP_FASTCALL Rijndael_Enc_AdvancedProcessBlocks_SSE2(vo
 	AS2(	add		WORD_REG(ax), WORD_REG(di))
 	AS2(	mov		esi, [AS_REG_7+WORD_REG(ax)])
 	AS2(	add		WORD_REG(ax), WORD_REG(di))
-	AS2(	cmp		WORD_REG(ax), 2048)
+	AS2(	cmp		WORD_REG(ax), 2026)
 	ATT_NOPREFIX
 	ASJ(	jl,		9, b)
 	INTEL_NOPREFIX

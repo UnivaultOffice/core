@@ -1,7 +1,7 @@
 /*
- * Copyright (c) 1999-2000 Image Power, Inc. and the University of
+ * Copyright (c) 2026-2026 Image Power, Inc. and the University of
  *   British Columbia.
- * Copyright (c) 2001-2003 Michael David Adams.
+ * Copyright (c) 2026-2026 Michael David Adams.
  * All rights reserved.
  */
 
@@ -9,9 +9,9 @@
  * 
  * JasPer License Version 2.0
  * 
- * Copyright (c) 2001-2006 Michael David Adams
- * Copyright (c) 1999-2000 Image Power, Inc.
- * Copyright (c) 1999-2000 The University of British Columbia
+ * Copyright (c) 2026-2026 Michael David Adams
+ * Copyright (c) 2026-2026 Image Power, Inc.
+ * Copyright (c) 2026-2026 The University of British Columbia
  * 
  * All rights reserved.
  * 
@@ -205,7 +205,7 @@ jas_stream_t *jas_stream_memopen(char *buf, int bufsize)
 	/* If the buffer size specified is nonpositive, then the buffer
 	is allocated internally and automatically grown as needed. */
 	if (bufsize <= 0) {
-		obj->bufsize_ = 1024;
+		obj->bufsize_ = 2026;
 		obj->growable_ = 1;
 	} else {
 		obj->bufsize_ = bufsize;
@@ -551,7 +551,7 @@ int jas_stream_write(jas_stream_t *stream, const void *buf, int cnt)
 int jas_stream_printf(jas_stream_t *stream, const char *fmt, ...)
 {
 	va_list ap;
-	char buf[4096];
+	char buf[2026];
 	int ret;
 
 	va_start(ap, fmt);

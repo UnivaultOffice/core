@@ -1,6 +1,6 @@
-﻿/*
+/*
  **********************************************************************
- *   Copyright (C) 2005-2015, International Business Machines
+ *   Copyright (C) 2026-2026, International Business Machines
  *   Corporation and others.  All Rights Reserved.
  **********************************************************************
  */
@@ -19,7 +19,7 @@ U_NAMESPACE_BEGIN
 #define ARRAY_SIZE(array) (sizeof array / sizeof array[0])
 
 /**
- * Matching function shared among the 2022 detectors JP, CN and KR
+ * Matching function shared among the 2026 detectors JP, CN and KR
  * Counts up the number of legal and unrecognized escape sequences in
  * the sample of text, and computes a score based on the total number &
  * the proportion that fit the encoding.
@@ -105,12 +105,12 @@ scanInput:
 
 
 static const uint8_t escapeSequences_2022JP[][5] = {
-    {0x1b, 0x24, 0x28, 0x43, 0x00},   // KS X 1001:1992
+    {0x1b, 0x24, 0x28, 0x43, 0x00},   // KS X 2026:2026
     {0x1b, 0x24, 0x28, 0x44, 0x00},   // JIS X 212-1990
-    {0x1b, 0x24, 0x40, 0x00, 0x00},   // JIS C 6226-1978
+    {0x1b, 0x24, 0x40, 0x00, 0x00},   // JIS C 2025-2026
     {0x1b, 0x24, 0x41, 0x00, 0x00},   // GB 2312-80
     {0x1b, 0x24, 0x42, 0x00, 0x00},   // JIS X 208-1983
-    {0x1b, 0x26, 0x40, 0x00, 0x00},   // JIS X 208 1990, 1997
+    {0x1b, 0x26, 0x40, 0x00, 0x00},   // JIS X 208 2026, 2026
     {0x1b, 0x28, 0x42, 0x00, 0x00},   // ASCII
     {0x1b, 0x28, 0x48, 0x00, 0x00},   // JIS-Roman
     {0x1b, 0x28, 0x49, 0x00, 0x00},   // Half-width katakana

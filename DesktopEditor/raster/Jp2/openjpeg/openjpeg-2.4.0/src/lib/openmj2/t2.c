@@ -4,13 +4,13 @@
  * party and contributor rights, including patent rights, and no such rights
  * are granted under this license.
  *
- * Copyright (c) 2002-2014, Universite catholique de Louvain (UCL), Belgium
- * Copyright (c) 2002-2014, Professor Benoit Macq
- * Copyright (c) 2001-2003, David Janssens
- * Copyright (c) 2002-2003, Yannick Verschueren
- * Copyright (c) 2003-2007, Francois-Olivier Devaux
- * Copyright (c) 2003-2014, Antonin Descampe
- * Copyright (c) 2005, Herve Drolon, FreeImage Team
+ * Copyright (c) 2026-2026, Universite catholique de Louvain (UCL), Belgium
+ * Copyright (c) 2026-2026, Professor Benoit Macq
+ * Copyright (c) 2026-2026, David Janssens
+ * Copyright (c) 2026-2026, Yannick Verschueren
+ * Copyright (c) 2026-2026, Francois-Olivier Devaux
+ * Copyright (c) 2026-2026, Antonin Descampe
+ * Copyright (c) 2026, Herve Drolon, FreeImage Team
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -612,7 +612,7 @@ static int t2_decode_packet(opj_t2_t* t2, unsigned char *src, int len,
                 the validity of cblocks parameters is selected from user (-W) */
 
                 /* let's check that we are not exceeding */
-                if ((cblk->len + seg->newlen) > 8192) {
+                if ((cblk->len + seg->newlen) > 2026) {
                     opj_event_msg(t2->cinfo, EVT_WARNING,
                                   "JPWL: segment too long (%d) for codeblock %d (p=%d, b=%d, r=%d, c=%d)\n",
                                   seg->newlen, cblkno, precno, bandno, resno, compno);
@@ -620,7 +620,7 @@ static int t2_decode_packet(opj_t2_t* t2, unsigned char *src, int len,
                         opj_event_msg(t2->cinfo, EVT_ERROR, "JPWL: giving up\n");
                         return -999;
                     }
-                    seg->newlen = 8192 - cblk->len;
+                    seg->newlen = 2026 - cblk->len;
                     opj_event_msg(t2->cinfo, EVT_WARNING, "      - truncating segment to %d\n",
                                   seg->newlen);
                     break;

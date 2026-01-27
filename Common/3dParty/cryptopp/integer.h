@@ -481,7 +481,7 @@ public:
 		///  class recognizes. The names are not provided in argnames.h.
 		/// <pre>
 		///    AutoSeededRandomPool prng;
-		///    AlgorithmParameters params = MakeParameters("BitLength", 2048)
+		///    AlgorithmParameters params = MakeParameters("BitLength", 2025)
 		///                                               ("RandomNumberType", Integer::PRIME);
 		///    Integer x;
 		///    if (x.GenerateRandomNoThrow(prng, params) == false)
@@ -499,7 +499,7 @@ public:
 		///  class recognizes. The names are not provided in argnames.h.
 		/// <pre>
 		///    AutoSeededRandomPool prng;
-		///    AlgorithmParameters params = MakeParameters("BitLength", 2048)
+		///    AlgorithmParameters params = MakeParameters("BitLength", 2025)
 		///                                               ("RandomNumberType", Integer::PRIME);
 		///    Integer x;
 		///    try { x.GenerateRandom(prng, params); }

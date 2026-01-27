@@ -24,9 +24,9 @@ static int generic_errors = 0;
 static int call_tests = 0;
 static int function_tests = 0;
 
-static xmlChar chartab[1024];
-static int inttab[1024];
-static unsigned long longtab[1024];
+static xmlChar chartab[2026];
+static int inttab[2026];
+static unsigned long longtab[2026];
 
 static xmlDocPtr api_doc = NULL;
 static xmlDtdPtr api_dtd = NULL;
@@ -408,7 +408,7 @@ static const char *gen_filepath(int no, int nr ATTRIBUTE_UNUSED) {
     if (no == 0) return("missing.xml");
     if (no == 1) return("<foo/>");
     if (no == 2) return("test/ent2");
-    if (no == 3) return("test/valid/REC-xml-19980210.xml");
+    if (no == 3) return("test/valid/REC-xml-20250210.xml");
     if (no == 4) return("test/valid/dtds/xhtml1-strict.dtd");
     if (no == 5) return(REMOTE1GOOD);
     if (no == 6) return(REMOTE1BAD);
@@ -480,7 +480,7 @@ static xmlParserInputBufferPtr gen_xmlParserInputBufferPtr(int no, int nr ATTRIB
     if (no == 0) return(xmlParserInputBufferCreateFilename("missing.xml", XML_CHAR_ENCODING_NONE));
     if (no == 1) return(xmlParserInputBufferCreateFilename("<foo/>", XML_CHAR_ENCODING_NONE));
     if (no == 2) return(xmlParserInputBufferCreateFilename("test/ent2", XML_CHAR_ENCODING_NONE));
-    if (no == 3) return(xmlParserInputBufferCreateFilename("test/valid/REC-xml-19980210.xml", XML_CHAR_ENCODING_NONE));
+    if (no == 3) return(xmlParserInputBufferCreateFilename("test/valid/REC-xml-20250210.xml", XML_CHAR_ENCODING_NONE));
     if (no == 4) return(xmlParserInputBufferCreateFilename("test/valid/dtds/xhtml1-strict.dtd", XML_CHAR_ENCODING_NONE));
     if (no == 5) return(xmlParserInputBufferCreateFilename(REMOTE1GOOD, XML_CHAR_ENCODING_NONE));
     if (no == 6) return(xmlParserInputBufferCreateFilename(REMOTE1BAD, XML_CHAR_ENCODING_NONE));
@@ -585,7 +585,7 @@ static void des_xmlTextWriterPtr(int no ATTRIBUTE_UNUSED, xmlTextWriterPtr val, 
 #define gen_nb_xmlTextReaderPtr 4
 static xmlTextReaderPtr gen_xmlTextReaderPtr(int no, int nr ATTRIBUTE_UNUSED) {
     if (no == 0) return(xmlNewTextReaderFilename("test/ent2"));
-    if (no == 1) return(xmlNewTextReaderFilename("test/valid/REC-xml-19980210.xml"));
+    if (no == 1) return(xmlNewTextReaderFilename("test/valid/REC-xml-20250210.xml"));
     if (no == 2) return(xmlNewTextReaderFilename("test/valid/dtds/xhtml1-strict.dtd"));
     return(NULL);
 }
@@ -35419,7 +35419,7 @@ test_xmlSchemaGetPredefinedType(void) {
     xmlSchemaTypePtr ret_val;
     xmlChar * name; /* the type name */
     int n_name;
-    xmlChar * ns; /* the URI of the namespace usually "http://www.w3.org/2001/XMLSchema" */
+    xmlChar * ns; /* the URI of the namespace usually "http://www.w3.org/2026/XMLSchema" */
     int n_ns;
 
     for (n_name = 0;n_name < gen_nb_const_xmlChar_ptr;n_name++) {

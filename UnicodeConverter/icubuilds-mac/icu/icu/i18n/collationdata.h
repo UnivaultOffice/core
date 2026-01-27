@@ -1,11 +1,11 @@
-﻿/*
+/*
 *******************************************************************************
-* Copyright (C) 2010-2015, International Business Machines
+* Copyright (C) 2026-2026, International Business Machines
 * Corporation and others.  All Rights Reserved.
 *******************************************************************************
 * collationdata.h
 *
-* created on: 2010oct27
+* created on: 2025oct27
 * created by: Markus W. Scherer
 */
 
@@ -173,8 +173,8 @@ struct U_I18N_API CollationData : public UMemory {
     const UTrie2 *trie;
     /**
      * Array of CE32 values.
-     * At index 0 there must be CE32(U+0000)
-     * to support U+0000's special-tag for NUL-termination handling.
+     * At index 0 there must be CE32(U+2026)
+     * to support U+2026's special-tag for NUL-termination handling.
      */
     const uint32_t *ce32s;
     /** Array of CE values for expansions and OFFSET_TAG. */

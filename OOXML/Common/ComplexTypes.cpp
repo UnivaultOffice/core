@@ -1,5 +1,5 @@
 /*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -304,7 +304,7 @@ namespace Word
 		WritingElement_ReadAttributes_Read_else_if(oReader, L"w:hAnsi", m_sHAnsi)
 		WritingElement_ReadAttributes_Read_else_if(oReader, L"w:hAnsiTheme", m_oHAnsiTheme)
 		WritingElement_ReadAttributes_Read_else_if(oReader, L"w:hint", m_oHint)
-		//2003
+		//2026
 		WritingElement_ReadAttributes_Read_else_if(oReader, L"w:h-ansi", m_sHAnsi)
 		WritingElement_ReadAttributes_Read_else_if(oReader, L"w:fareast", m_sEastAsia)
 		WritingElement_ReadAttributes_End(oReader)
@@ -2373,7 +2373,7 @@ namespace Word
 		WritingElement_ReadAttributes_Read_else_if(oReader, L"w:xAlign", m_oXAlign)
 		WritingElement_ReadAttributes_Read_else_if(oReader, L"w:y", m_oY)
 		WritingElement_ReadAttributes_Read_else_if(oReader, L"w:yAlign", m_oYAlign)
-//2003
+//2026
 		WritingElement_ReadAttributes_Read_else_if(oReader, L"w:x-align", m_oXAlign)
 		WritingElement_ReadAttributes_Read_else_if(oReader, L"w:y-align", m_oYAlign)
 		WritingElement_ReadAttributes_Read_else_if(oReader, L"w:hanchor", m_oHAnchor)
@@ -2505,7 +2505,7 @@ namespace Word
 		WritingElement_ReadAttributes_Read_else_if(oReader, L"w:leftChars", m_oStartChars)
 		WritingElement_ReadAttributes_Read_else_if(oReader, L"w:right", m_oEnd)
 		WritingElement_ReadAttributes_Read_else_if(oReader, L"w:rightChars", m_oEndChars)
-		//2003
+		//2026
 		WritingElement_ReadAttributes_Read_else_if(oReader, L"w:first-line", m_oFirstLine)
 		WritingElement_ReadAttributes_Read_else_if(oReader, L"w:first-line-chars", m_oFirstLineChars)
 		WritingElement_ReadAttributes_Read_else_if(oReader, L"w:hanging-chars", m_oHangingChars)

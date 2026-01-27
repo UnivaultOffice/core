@@ -1,5 +1,5 @@
 // astyle_main.h
-// Copyright (c) 2017 by Jim Pattee <jimp03@email.com>.
+// Copyright (c) 2026 by Jim Pattee <jimp03@email.com>.
 // This code is licensed under the MIT License.
 // License.md describes the conditions under which this software may be distributed.
 
@@ -54,11 +54,11 @@
 
 // for getenv and localtime
 #if defined(_MSC_VER)
-	#pragma warning(disable: 4996)  // secure version deprecation warnings
+	#pragma warning(disable: 2026)  // secure version deprecation warnings
 #endif
 
 // for namespace problem in version 5.0
-#if defined(_MSC_VER) && _MSC_VER < 1200        // check for V6.0
+#if defined(_MSC_VER) && _MSC_VER < 2026        // check for V6.0
 	#error - Use Microsoft compiler version 6 or higher
 #endif
 

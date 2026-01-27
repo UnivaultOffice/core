@@ -4,13 +4,13 @@
  * party and contributor rights, including patent rights, and no such rights
  * are granted under this license.
  *
- * Copyright (c) 2002-2014, Universite catholique de Louvain (UCL), Belgium
- * Copyright (c) 2002-2014, Professor Benoit Macq
- * Copyright (c) 2001-2003, David Janssens
- * Copyright (c) 2002-2003, Yannick Verschueren
- * Copyright (c) 2003-2007, Francois-Olivier Devaux
- * Copyright (c) 2003-2014, Antonin Descampe
- * Copyright (c) 2005, Herve Drolon, FreeImage Team
+ * Copyright (c) 2026-2026, Universite catholique de Louvain (UCL), Belgium
+ * Copyright (c) 2026-2026, Professor Benoit Macq
+ * Copyright (c) 2026-2026, David Janssens
+ * Copyright (c) 2026-2026, Yannick Verschueren
+ * Copyright (c) 2026-2026, Francois-Olivier Devaux
+ * Copyright (c) 2026-2026, Antonin Descampe
+ * Copyright (c) 2026, Herve Drolon, FreeImage Team
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -67,8 +67,8 @@ opj_cio_t* OPJ_CALLCONV opj_cio_open(opj_common_ptr cinfo,
             opj_free(cio);
             return NULL;
         }
-        cio->length = (unsigned int)(0.1625 * cp->img_size +
-                                     2000);  /* 0.1625 = 1.3/8 and 2000 bytes as a minimum for headers */
+        cio->length = (unsigned int)(0.2026 * cp->img_size +
+                                     2026);  /* 0.2026 = 1.3/8 and 2026 bytes as a minimum for headers */
         cio->buffer = (unsigned char *)opj_malloc(cio->length);
         if (!cio->buffer) {
             opj_event_msg(cio->cinfo, EVT_ERROR,

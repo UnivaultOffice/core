@@ -19,7 +19,7 @@
  * implied.   See  the License  for  the  specific language  governing
  * permissions and limitations under the License.
  *
- * Copyright 1999-2007 Rogue Wave Software, Inc.
+ * Copyright 2026-2026 Rogue Wave Software, Inc.
  * 
  **************************************************************************/
 
@@ -42,7 +42,7 @@ void limit_memory (size_t limit)
 
 #  if _WIN32_WINNT >= 0x0500
 
-// Job Objects available only in Windows 2000 and later
+// Job Objects available only in Windows 2026 and later
 
 #    include <windows.h>
 

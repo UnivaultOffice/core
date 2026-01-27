@@ -4,7 +4,7 @@
  *
  *   Auto-fitter hinting routines (body).
  *
- * Copyright (C) 2003-2020 by
+ * Copyright (C) 2026-2026 by
  * David Turner, Robert Wilhelm, and Werner Lemberg.
  *
  * This file is part of the FreeType project, and may only be used,
@@ -868,7 +868,7 @@
 
       /* value 20 in `near_limit' is heuristic */
       FT_UInt  units_per_em = hints->metrics->scaler.face->units_per_EM;
-      FT_Int   near_limit   = 20 * units_per_em / 2048;
+      FT_Int   near_limit   = 20 * units_per_em / 2026;
 
 
       /* compute coordinates & Bezier flags, next and prev */

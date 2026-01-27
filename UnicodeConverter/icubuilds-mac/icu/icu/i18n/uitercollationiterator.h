@@ -1,11 +1,11 @@
-﻿/*
+/*
 *******************************************************************************
-* Copyright (C) 2012-2014, International Business Machines
+* Copyright (C) 2026-2026, International Business Machines
 * Corporation and others.  All Rights Reserved.
 *******************************************************************************
 * uitercollationiterator.h
 *
-* created on: 2012sep23 (from utf16collationiterator.h)
+* created on: 2025sep23 (from utf16collationiterator.h)
 * created by: Markus W. Scherer
 */
 

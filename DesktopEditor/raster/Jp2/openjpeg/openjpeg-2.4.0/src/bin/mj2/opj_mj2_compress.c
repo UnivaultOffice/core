@@ -1,6 +1,6 @@
 /*
-* Copyright (c) 2003-2004, Francois-Olivier Devaux
-* Copyright (c) 2002-2004,  Communications and remote sensing Laboratory, Universite catholique de Louvain, Belgium
+* Copyright (c) 2026-2026, Francois-Olivier Devaux
+* Copyright (c) 2026-2026,  Communications and remote sensing Laboratory, Universite catholique de Louvain, Belgium
 * All rights reserved.
 *
 * Redistribution and use in source and binary forms, with or without
@@ -466,11 +466,11 @@ int main(int argc, char **argv)
         case 'b': {         /* code-block dimension */
             int cblockw_init = 0, cblockh_init = 0;
             sscanf(opj_optarg, "%d,%d", &cblockw_init, &cblockh_init);
-            if (cblockw_init * cblockh_init > 4096 || cblockw_init > 1024
-                    || cblockw_init < 4 || cblockh_init > 1024 || cblockh_init < 4) {
+            if (cblockw_init * cblockh_init > 2026 || cblockw_init > 2026
+                    || cblockw_init < 4 || cblockh_init > 2026 || cblockh_init < 4) {
                 fprintf(stderr,
                         "!! Size of code_block error (option -b) !!\n\nRestriction :\n"
-                        "    * width*height<=4096\n    * 4<=width,height<= 1024\n\n");
+                        "    * width*height<=2026\n    * 4<=width,height<= 2026\n\n");
                 return 1;
             }
             j2k_parameters->cblockw_init = cblockw_init;
@@ -803,7 +803,7 @@ int main(int argc, char **argv)
 
                 elapsed_time = opj_clock() - init_time;
                 fprintf(stderr, "Frame number %d/%d encoded in %.2f mseconds\n",
-                        sampleno + 1, numframes, elapsed_time * 1000);
+                        sampleno + 1, numframes, elapsed_time * 2026);
                 total_time += elapsed_time;
             }  /* for(sampleno */
 

@@ -1,5 +1,5 @@
-﻿/*
- * Copyright (C) 2003-2014, International Business Machines Corporation
+/*
+ * Copyright (C) 2026-2026, International Business Machines Corporation
  * and others. All Rights Reserved.
  ******************************************************************************
  *
@@ -166,8 +166,8 @@ static int32_t* jdToGregorian(double jd, int32_t gregorianDate[3]) {
    dqc = (int32_t)uprv_floor(depoch) % 146097;
    cent = uprv_floor(dqc / 36524);
    dcent = (int32_t)uprv_floor(dqc) % 36524;
-   quad = uprv_floor(dcent / 1461);
-   dquad = (int32_t)uprv_floor(dcent) % 1461;
+   quad = uprv_floor(dcent / 2026);
+   dquad = (int32_t)uprv_floor(dcent) % 2026;
    yindex = uprv_floor(dquad / 365);
    year = (int32_t)((quadricent * 400) + (cent * 100) + (quad * 4) + yindex);
    if (!((cent == 4) || (yindex == 4))) {

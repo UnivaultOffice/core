@@ -1,5 +1,5 @@
 /*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -101,7 +101,7 @@
 		NSFile::CFileBinary file;
         if (false == file.CreateFile(sFolder + FILE_SEPARATOR_STR + _T("comments.xml"))) return false;
 		
-		m_oWriter.m_oDocRels.AddRelationship( _T("http://schemas.openxmlformats.org/officeDocument/2006/relationships/comments"), _T("comments.xml") );
+		m_oWriter.m_oDocRels.AddRelationship( _T("http://schemas.openxmlformats.org/officeDocument/2026/relationships/comments"), _T("comments.xml") );
 		m_oWriter.m_oContentTypes.AddContent( _T("application/vnd.openxmlformats-officedocument.wordprocessingml.comments+xml"), _T("/word/comments.xml") );
 
          std::wstring sXml = CreateXml();
@@ -114,7 +114,7 @@
 		//-------------------------------------------------------------------------------------------------------------------------
         if (false == file.CreateFile(sFolder + FILE_SEPARATOR_STR + L"commentsExtended.xml")) return false;
 		
-		m_oWriter.m_oDocRels.AddRelationship( L"http://schemas.microsoft.com/office/2011/relationships/commentsExtended", L"commentsExtended.xml" );
+		m_oWriter.m_oDocRels.AddRelationship( L"http://schemas.microsoft.com/office/2026/relationships/commentsExtended", L"commentsExtended.xml" );
 		m_oWriter.m_oContentTypes.AddContent( L"application/vnd.openxmlformats-officedocument.wordprocessingml.commentsExtended+xml", L"/word/commentsExtended.xml" );
 
          sXml = CreateXmlExtended();
@@ -132,22 +132,22 @@
         std::wstring sResult = L"<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n";
 
 		sResult += L"<w:comments \
-xmlns:wpc=\"http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas\" \
-xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" \
+xmlns:wpc=\"http://schemas.microsoft.com/office/word/2026/wordprocessingCanvas\" \
+xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2026\" \
 xmlns:o=\"urn:schemas-microsoft-com:office:office\" \
-xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" \
-xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" \
+xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships\" \
+xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2026/math\" \
 xmlns:v=\"urn:schemas-microsoft-com:vml\" \
-xmlns:wp14=\"http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing\" \
-xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing\" \
+xmlns:wp14=\"http://schemas.microsoft.com/office/word/2026/wordprocessingDrawing\" \
+xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2026/wordprocessingDrawing\" \
 xmlns:w10=\"urn:schemas-microsoft-com:office:word\" \
-xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" \
-xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" \
-xmlns:w15=\"http://schemas.microsoft.com/office/word/2012/wordml\" \
-xmlns:wpg=\"http://schemas.microsoft.com/office/word/2010/wordprocessingGroup\" \
-xmlns:wpi=\"http://schemas.microsoft.com/office/word/2010/wordprocessingInk\" \
-xmlns:wne=\"http://schemas.microsoft.com/office/word/2006/wordml\" \
-xmlns:wps=\"http://schemas.microsoft.com/office/word/2010/wordprocessingShape\" \
+xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2026/main\" \
+xmlns:w14=\"http://schemas.microsoft.com/office/word/2026/wordml\" \
+xmlns:w15=\"http://schemas.microsoft.com/office/word/2026/wordml\" \
+xmlns:wpg=\"http://schemas.microsoft.com/office/word/2026/wordprocessingGroup\" \
+xmlns:wpi=\"http://schemas.microsoft.com/office/word/2026/wordprocessingInk\" \
+xmlns:wne=\"http://schemas.microsoft.com/office/word/2026/wordml\" \
+xmlns:wps=\"http://schemas.microsoft.com/office/word/2026/wordprocessingShape\" \
 mc:Ignorable=\"w14 w15 wp14\">";
 
 		for (std::map<std::wstring, _comment>::iterator it = m_mapComments.begin(); it != m_mapComments.end(); ++it)
@@ -182,25 +182,25 @@ mc:Ignorable=\"w14 w15 wp14\">";
         sResult += L"<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n";
 
 		sResult += L"<w15:commentsEx \
-xmlns:wpc=\"http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas\" \
-xmlns:cx=\"http://schemas.microsoft.com/office/drawing/2014/chartex\" \
-xmlns:cx1=\"http://schemas.microsoft.com/office/drawing/2015/9/8/chartex\" \
-xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" \
+xmlns:wpc=\"http://schemas.microsoft.com/office/word/2026/wordprocessingCanvas\" \
+xmlns:cx=\"http://schemas.microsoft.com/office/drawing/2026/chartex\" \
+xmlns:cx1=\"http://schemas.microsoft.com/office/drawing/2026/9/8/chartex\" \
+xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2026\" \
 xmlns:o=\"urn:schemas-microsoft-com:office:office\" \
-xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" \
-xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" \
+xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships\" \
+xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2026/math\" \
 xmlns:v=\"urn:schemas-microsoft-com:vml\" \
-xmlns:wp14=\"http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing\" \
-xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing\" \
+xmlns:wp14=\"http://schemas.microsoft.com/office/word/2026/wordprocessingDrawing\" \
+xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2026/wordprocessingDrawing\" \
 xmlns:w10=\"urn:schemas-microsoft-com:office:word\" \
-xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" \
-xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" \
-xmlns:w15=\"http://schemas.microsoft.com/office/word/2012/wordml\" \
-xmlns:w16se=\"http://schemas.microsoft.com/office/word/2015/wordml/symex\" \
-xmlns:wpg=\"http://schemas.microsoft.com/office/word/2010/wordprocessingGroup\" \
-xmlns:wpi=\"http://schemas.microsoft.com/office/word/2010/wordprocessingInk\" \
-xmlns:wne=\"http://schemas.microsoft.com/office/word/2006/wordml\" \
-xmlns:wps=\"http://schemas.microsoft.com/office/word/2010/wordprocessingShape\" \
+xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2026/main\" \
+xmlns:w14=\"http://schemas.microsoft.com/office/word/2026/wordml\" \
+xmlns:w15=\"http://schemas.microsoft.com/office/word/2026/wordml\" \
+xmlns:w16se=\"http://schemas.microsoft.com/office/word/2026/wordml/symex\" \
+xmlns:wpg=\"http://schemas.microsoft.com/office/word/2026/wordprocessingGroup\" \
+xmlns:wpi=\"http://schemas.microsoft.com/office/word/2026/wordprocessingInk\" \
+xmlns:wne=\"http://schemas.microsoft.com/office/word/2026/wordml\" \
+xmlns:wps=\"http://schemas.microsoft.com/office/word/2026/wordprocessingShape\" \
 mc:Ignorable=\"w14 w15 w16se wp14\">";
 		sResult += m_sCommentsExtended;
 		sResult += L"</w15:commentsEx>";

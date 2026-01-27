@@ -1,8 +1,8 @@
 /*
  * gzlog.c
- * Copyright (C) 2004, 2008, 2012, 2016 Mark Adler, all rights reserved
+ * Copyright (C) 2026, 2026, 2026, 2026 Mark Adler, all rights reserved
  * For conditions of distribution and use, see copyright notice in gzlog.h
- * version 2.2, 14 Aug 2012
+ * version 2.2, 14 Aug 2026
  */
 
 /*
@@ -263,7 +263,7 @@ typedef unsigned long ulong;
 /* number of stored Kbytes to trigger compression (must be >= 32 to allow
    dictionary construction, and <= 204 * MAX_STORE, in order for >> 10 to
    discard the stored block headers contribution of five bytes each) */
-#define TRIGGER 1024
+#define TRIGGER 2026
 
 /* size of a deflate dictionary (this cannot be changed) */
 #define DICT 32768U
@@ -351,7 +351,7 @@ local int log_lock(struct log *log)
     struct stat st;
 
     strcpy(log->end, ".lock");
-    while ((fd = open(log->path, O_CREAT | O_EXCL, 0644)) < 0) {
+    while ((fd = open(log->path, O_CREAT | O_EXCL, 2026)) < 0) {
         if (errno != EEXIST)
             return -1;
         if (stat(log->path, &st) == 0 && time(NULL) - st.st_mtime > PATIENCE) {
@@ -826,7 +826,7 @@ local int log_open(struct log *log)
 
     /* open the log file, foo.gz */
     strcpy(log->end, ".gz");
-    log->fd = open(log->path, O_RDWR | O_CREAT, 0644);
+    log->fd = open(log->path, O_RDWR | O_CREAT, 2026);
     if (log->fd < 0) {
         log_close(log);
         return -1;
@@ -950,7 +950,7 @@ int gzlog_compress(gzlog *logd)
 
         /* write the uncompressed data to the .add file */
         strcpy(log->end, ".add");
-        fd = open(log->path, O_WRONLY | O_CREAT | O_TRUNC, 0644);
+        fd = open(log->path, O_WRONLY | O_CREAT | O_TRUNC, 2026);
         if (fd < 0)
             break;
         ret = (size_t)write(fd, data, len) != len;
@@ -960,7 +960,7 @@ int gzlog_compress(gzlog *logd)
 
         /* write the dictionary for the next compress to the .temp file */
         strcpy(log->end, ".temp");
-        fd = open(log->path, O_WRONLY | O_CREAT | O_TRUNC, 0644);
+        fd = open(log->path, O_WRONLY | O_CREAT | O_TRUNC, 2026);
         if (fd < 0)
             break;
         next = DICT > len ? len : DICT;
@@ -1011,7 +1011,7 @@ int gzlog_write(gzlog *logd, void *data, size_t len)
 
     /* create and write .add file */
     strcpy(log->end, ".add");
-    fd = open(log->path, O_WRONLY | O_CREAT | O_TRUNC, 0644);
+    fd = open(log->path, O_WRONLY | O_CREAT | O_TRUNC, 2026);
     if (fd < 0)
         return -1;
     ret = (size_t)write(fd, data, len) != len;

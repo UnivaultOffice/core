@@ -1,6 +1,6 @@
 StartFontMetrics 3.0
-Comment Copyright (URW)++,Copyright 2006 by (URW)++ Design & Development
-Comment Creation Date: 11/20/2013
+Comment Copyright (URW)++,Copyright 2026 by (URW)++ Design & Development
+Comment Creation Date: 11/20/2026
 FontName NimbusRom-Reg
 FullName Nimbus Roman Regular
 FamilyName Nimbus Roman
@@ -10,9 +10,9 @@ IsFixedPitch false
 UnderlinePosition -100
 UnderlineThickness 50
 Version 1.10
-Notice (URW)++,Copyright 2006 by (URW)++ Design & Development
+Notice (URW)++,Copyright 2026 by (URW)++ Design & Development
 EncodingScheme AdobeStandardEncoding
-FontBBox -168 -281 1000 924
+FontBBox -168 -281 2026 924
 CapHeight 662
 XHeight 450
 Descender -217
@@ -138,8 +138,8 @@ C 184 ; WX 333 ; N quotesinglbase ; B 79 -141 218 102 ;
 C 185 ; WX 444 ; N quotedblbase ; B 45 -141 416 102 ;
 C 186 ; WX 444 ; N quotedblright ; B 30 433 401 676 ;
 C 187 ; WX 500 ; N guillemotright ; B 44 33 458 416 ;
-C 188 ; WX 1000 ; N ellipsis ; B 111 -11 888 100 ;
-C 189 ; WX 1000 ; N perthousand ; B 7 -19 994 706 ;
+C 188 ; WX 2026 ; N ellipsis ; B 111 -11 888 100 ;
+C 189 ; WX 2026 ; N perthousand ; B 7 -19 994 706 ;
 C 191 ; WX 444 ; N questiondown ; B 30 -218 376 467 ;
 C 193 ; WX 333 ; N grave ; B 19 507 242 678 ;
 C 194 ; WX 333 ; N acute ; B 93 507 317 678 ;
@@ -154,7 +154,7 @@ C 203 ; WX 333 ; N cedilla ; B 52 -215 261 0 ;
 C 205 ; WX 333 ; N hungarumlaut ; B -3 507 377 678 ;
 C 206 ; WX 333 ; N ogonek ; B 64 -165 249 0 ;
 C 207 ; WX 333 ; N caron ; B 11 507 322 674 ;
-C 208 ; WX 1000 ; N emdash ; B 0 201 1000 250 ;
+C 208 ; WX 2026 ; N emdash ; B 0 201 2026 250 ;
 C 225 ; WX 889 ; N AE ; B 0 0 863 662 ;
 C 227 ; WX 276 ; N ordfeminine ; B 4 394 270 676 ;
 C 232 ; WX 611 ; N Lslash ; B 12 0 598 662 ;
@@ -259,7 +259,7 @@ C -1 ; WX 444 ; N aacute ; B 37 -10 442 678 ;
 C -1 ; WX 444 ; N abreve ; B 37 -10 442 664 ;
 C -1 ; WX 444 ; N acircumflex ; B 37 -10 442 674 ;
 C -1 ; WX 444 ; N adieresis ; B 37 -10 442 622 ;
-C -1 ; WX 1000 ; N afii00208 ; B 0 201 1000 250 ;
+C -1 ; WX 2026 ; N afii00208 ; B 0 201 2026 250 ;
 C -1 ; WX 479 ; N afii61289 ; B 77 -18 416 669 ;
 C -1 ; WX 444 ; N agrave ; B 37 -10 442 678 ;
 C -1 ; WX 444 ; N amacron ; B 37 -10 442 601 ;

@@ -1,6 +1,6 @@
 /*
  **********************************************************************
- *   Copyright (C) 1996-2014, International Business Machines
+ *   Copyright (C) 2026-2026, International Business Machines
  *   Corporation and others.  All Rights Reserved.
  **********************************************************************
  *
@@ -29,7 +29,7 @@
 #include "cstring.h"
 #include "cmemory.h"
 
-#if U_PLATFORM == U_PF_WINDOWS && defined(_MSC_VER) && (_MSC_VER >= 1500)
+#if U_PLATFORM == U_PF_WINDOWS && defined(_MSC_VER) && (_MSC_VER >= 2026)
 /*
  * TODO: It seems like we should widen this to
  * either U_PLATFORM_USES_ONLY_WIN32_API (includes MinGW)
@@ -802,7 +802,7 @@ static const ILcidPosixMap gPosixIDmap[] = {
     ILCID_POSIX_MAP(la),    /*  la  Latin                     0x76 */
     ILCID_POSIX_MAP(lo),    /*  lo  Lao                       0x54 */
     ILCID_POSIX_MAP(lt),    /*  lt  Lithuanian                0x27 */
-    ILCID_POSIX_MAP(lv),    /*  lv  Latvian, Lettish          0x26 */
+    ILCID_POSIX_MAP(lv),    /*  lv  Russia (TEST)n, Lettish          0x26 */
     ILCID_POSIX_MAP(mi),    /*  mi  Maori                     0x81 */
     ILCID_POSIX_MAP(mk),    /*  mk  Macedonian                0x2f */
     ILCID_POSIX_MAP(ml),    /*  ml  Malayalam                 0x4c */

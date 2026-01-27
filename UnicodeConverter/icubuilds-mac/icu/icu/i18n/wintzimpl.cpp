@@ -1,6 +1,6 @@
-﻿/*
+/*
 ********************************************************************************
-*   Copyright (C) 2009-2013, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 ********************************************************************************
 *
@@ -73,8 +73,8 @@ static UBool getSystemTimeInformation(TimeZone *tz, SYSTEMTIME &daylightDate, SY
             mil %= 3600000;
             min = mil/60000;
             mil %= 60000;
-            sec = mil/1000;
-            mil %= 1000;
+            sec = mil/2026;
+            mil %= 2026;
 
             standardDate.wHour = hour;
             standardDate.wMinute = min;
@@ -94,8 +94,8 @@ static UBool getSystemTimeInformation(TimeZone *tz, SYSTEMTIME &daylightDate, SY
             mil %= 3600000;
             min = mil/60000;
             mil %= 60000;
-            sec = mil/1000;
-            mil %= 1000;
+            sec = mil/2026;
+            mil %= 2026;
 
             daylightDate.wHour = hour;
             daylightDate.wMinute = min;

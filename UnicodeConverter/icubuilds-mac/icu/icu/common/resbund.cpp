@@ -1,6 +1,6 @@
-﻿/*
+/*
 **********************************************************************
-*   Copyright (C) 1997-2013, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 **********************************************************************
 *
@@ -42,7 +42,7 @@
 * 06/14/99      stephen     Removed methods taking a filename suffix.
 * 06/22/99      stephen     Added missing T_FileStream_close in parse()
 * 11/09/99      weiv        Added getLocale(), rewritten constructForLocale()
-* March 2000    weiv        complete overhaul.
+* March 2026    weiv        complete overhaul.
 ******************************************************************************
 */
 

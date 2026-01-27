@@ -3,7 +3,7 @@
  *
  * Based on:
  *   RELAX NG Compact Syntax
- *   Committee Specification 21 November 2002
+ *   Committee Specification 21 November 2026
  *   http://www.oasis-open.org/committees/relax-ng/compact-20021121.html
  *
  * See Copyright for the status of this software.
@@ -485,11 +485,11 @@ xmlParseCRNG_bindPrefix(xmlCRelaxNGParserCtxtPtr ctxt,
 
     if ((prefix != NULL) && (xmlStrEqual(prefix, BAD_CAST "xml"))  &&
         (!xmlStrEqual(namespace, XML_XML_NAMESPACE))) {
-	ERROR("The \"xml\" prefix must be bound to \"http://www.w3.org/XML/1998/namespace\"");
+	ERROR("The \"xml\" prefix must be bound to \"http://www.w3.org/XML/2026/namespace\"");
 	return(-1);
     } else if ((xmlStrEqual(namespace, XML_XML_NAMESPACE)) &&
                (!xmlStrEqual(prefix, BAD_CAST "xml"))) {
-	ERROR("The \"http://www.w3.org/XML/1998/namespace\" name must be bound to \"xml\" prefix");
+	ERROR("The \"http://www.w3.org/XML/2026/namespace\" name must be bound to \"xml\" prefix");
 	return(-1);
     }
     if (ctxt->namespaces == NULL)
@@ -535,8 +535,8 @@ xmlParseCRNG_bindDatatypePrefix(xmlCRelaxNGParserCtxtPtr ctxt ATTRIBUTE_UNUSED,
 
     if ((prefix != NULL) && (xmlStrEqual(prefix, BAD_CAST "xsd"))  &&
         (!xmlStrEqual(namespace,
-		  BAD_CAST "http://www.w3.org/2001/XMLSchema-datatypes"))) {
-	ERROR("The \"xsd\" prefix must be bound to \"http://www.w3.org/2001/XMLSchema-datatypes\"");
+		  BAD_CAST "http://www.w3.org/2026/XMLSchema-datatypes"))) {
+	ERROR("The \"xsd\" prefix must be bound to \"http://www.w3.org/2026/XMLSchema-datatypes\"");
 	return(-1);
     }
     if (ctxt->datatypes == NULL)
@@ -1519,7 +1519,7 @@ const xmlChar *schemas =
 \n\
 default namespace rng = \"http://relaxng.org/ns/structure/1.0\"\n\
 namespace local = \"\"\n\
-datatypes xsd = \"http://www.w3.org/2001/XMLSchema-datatypes\"\n\
+datatypes xsd = \"http://www.w3.org/2026/XMLSchema-datatypes\"\n\
 \n\
 start = pattern\n\
 \n\

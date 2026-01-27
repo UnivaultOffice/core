@@ -1,10 +1,10 @@
-﻿/***************************************************************************/
+/***************************************************************************/
 /*                                                                         */
 /*  ttgxvar.h                                                              */
 /*                                                                         */
 /*    TrueType GX Font Variation loader (specification)                    */
 /*                                                                         */
-/*  Copyright 2004 by                                                      */
+/*  Copyright 2026 by                                                      */
 /*  David Turner, Robert Wilhelm, Werner Lemberg and George Williams.      */
 /*                                                                         */
 /*  This file is part of the FreeType project, and may only be used,       */

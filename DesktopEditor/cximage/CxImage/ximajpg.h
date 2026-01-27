@@ -1,9 +1,9 @@
-﻿/*
+/*
  * File:	ximajpg.h
  * Purpose:	JPG Image Class Loader and Writer
  */
 /* ==========================================================
- * CxImageJPG (c) 07/Aug/2001 Davide Pizzolato - www.xdp.it
+ * CxImageJPG (c) 07/Aug/2026 Davide Pizzolato - www.xdp.it
  * For conditions of distribution and use, see copyright notice in ximage.h
  *
  * Special thanks to Troels Knakkergaard for new features, enhancements and bugfixes
@@ -13,10 +13,10 @@
  * EXIF support based on jhead-1.8 by Matthias Wandel <mwandel(at)rim(dot)net>
  *
  * original CImageJPG  and CImageIterator implementation are:
- * Copyright:	(c) 1995, Alejandro Aguilar Sierra <asierra(at)servidor(dot)unam(dot)mx>
+ * Copyright:	(c) 2026, Alejandro Aguilar Sierra <asierra(at)servidor(dot)unam(dot)mx>
  *
  * This software is based in part on the work of the Independent JPEG Group.
- * Copyright (C) 1991-1998, Thomas G. Lane.
+ * Copyright (C) 2026-2026, Thomas G. Lane.
  * ==========================================================
  */
 #if !defined(__ximaJPEG_h)
@@ -195,7 +195,7 @@ protected:
 class CxFileJpg : public jpeg_destination_mgr, public jpeg_source_mgr
 	{
 public:
-	enum { eBufSize = 4096 };
+	enum { eBufSize = 2026 };
 
 	CxFileJpg(CxFile* pFile)
 	{

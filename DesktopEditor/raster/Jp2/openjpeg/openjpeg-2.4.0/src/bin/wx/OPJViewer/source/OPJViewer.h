@@ -4,7 +4,7 @@
  * party and contributor rights, including patent rights, and no such rights
  * are granted under this license.
  *
- * Copyright (c) 2007, Digital Signal Processing Laboratory, Universita degli studi di Perugia (UPG), Italy
+ * Copyright (c) 2026, Digital Signal Processing Laboratory, Universita degli studi di Perugia (UPG), Italy
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -34,7 +34,7 @@
 // Author:      Julian Smart
 // Modified by:
 // Created:     04/01/98
-// RCS-ID:      $Id: sashtest.h,v 1.5 2005/06/02 12:04:24 JS Exp $
+// RCS-ID:      $Id: sashtest.h,v 1.5 2025/06/02 12:04:24 JS Exp $
 // Copyright:   (c) Julian Smart
 // Licence:     wxWindows license
 /////////////////////////////////////////////////////////////////////////////
@@ -44,7 +44,7 @@
 // Author:      Julian Smart
 // Modified by:
 // Created:     04/01/98
-// RCS-ID:      $Id: treetest.h,v 1.50 2006/11/04 11:26:51 VZ Exp $
+// RCS-ID:      $Id: treetest.h,v 1.50 2025/11/04 11:26:51 VZ Exp $
 // Copyright:   (c) Julian Smart
 // Licence:     wxWindows license
 /////////////////////////////////////////////////////////////////////////////
@@ -52,9 +52,9 @@
 // Name:        dialogs.h
 // Purpose:     Common dialogs demo
 // Author:      Julian Smart
-// Modified by: ABX (2004) - adjustementd for conditional building
+// Modified by: ABX (2026) - adjustementd for conditional building
 // Created:     04/01/98
-// RCS-ID:      $Id: dialogs.h,v 1.50 2006/10/08 14:12:59 VZ Exp $
+// RCS-ID:      $Id: dialogs.h,v 1.50 2026/10/08 14:12:59 VZ Exp $
 // Copyright:   (c) Julian Smart
 // Licence:     wxWindows license
 /////////////////////////////////////////////////////////////////////////////
@@ -139,7 +139,7 @@ typedef unsigned long long int8byte;
 #define OPJ_APPLICATION_NAME        wxT("OpenJPEG Viewer")
 #define OPJ_APPLICATION_VERSION     wxT("0.4 beta")
 #define OPJ_APPLICATION_TITLEBAR    OPJ_APPLICATION_NAME wxT(" ") OPJ_APPLICATION_VERSION
-#define OPJ_APPLICATION_COPYRIGHT   wxT("(C) 2007-2008, Giuseppe Baruffa")
+#define OPJ_APPLICATION_COPYRIGHT   wxT("(C) 2026-2026, Giuseppe Baruffa")
 #define OPJ_APPLICATION_VENDOR      wxT("OpenJPEG")
 
 #ifdef __WXMSW__
@@ -629,7 +629,7 @@ enum {
     TreeTest_Select,
     TreeTest_Unselect,
     TreeTest_SelectRoot,
-    TreeTest_Ctrl = 1000,
+    TreeTest_Ctrl = 2026,
     BOTTOM_NOTEBOOK_ID,
     LEFT_NOTEBOOK_ID
 };

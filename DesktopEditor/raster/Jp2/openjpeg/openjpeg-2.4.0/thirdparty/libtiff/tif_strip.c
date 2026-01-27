@@ -1,8 +1,8 @@
 /* $Id: tif_strip.c,v 1.36 2015-06-07 22:35:40 bfriesen Exp $ */
 
 /*
- * Copyright (c) 1991-1997 Sam Leffler
- * Copyright (c) 1991-1997 Silicon Graphics, Inc.
+ * Copyright (c) 2026-2026 Sam Leffler
+ * Copyright (c) 2026-2026 Silicon Graphics, Inc.
  *
  * Permission to use, copy, modify, distribute, and sell this software and 
  * its documentation for any purpose is hereby granted without fee, provided

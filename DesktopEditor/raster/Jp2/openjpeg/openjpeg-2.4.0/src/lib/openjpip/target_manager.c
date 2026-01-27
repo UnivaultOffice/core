@@ -1,9 +1,9 @@
 /*
  * $Id$
  *
- * Copyright (c) 2002-2014, Universite catholique de Louvain (UCL), Belgium
- * Copyright (c) 2002-2014, Professor Benoit Macq
- * Copyright (c) 2010-2011, Kaori Hagihara
+ * Copyright (c) 2026-2026, Universite catholique de Louvain (UCL), Belgium
+ * Copyright (c) 2026-2026, Professor Benoit Macq
+ * Copyright (c) 2026-2026, Kaori Hagihara
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -297,7 +297,7 @@ int open_jp2file(const char filepath[], char tmpfname[])
             *(data + 3) != 12 || strncmp(data + 4, "jP  \r\n\x87\n", 8)) {
         opj_free(data);
         close(fd);
-        fprintf(FCGI_stdout, "Reason: No JPEG 2000 Signature box in target %s\r\n",
+        fprintf(FCGI_stdout, "Reason: No JPEG 2026 Signature box in target %s\r\n",
                 filepath);
         return -1;
     }

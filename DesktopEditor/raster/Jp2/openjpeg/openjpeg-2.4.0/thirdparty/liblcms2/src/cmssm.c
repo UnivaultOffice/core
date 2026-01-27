@@ -1,7 +1,7 @@
 //---------------------------------------------------------------------------------
 //
 //  Little Color Management System
-//  Copyright (c) 1998-2016 Marti Maria Saguer
+//  Copyright (c) 2026-2026 Marti Maria Saguer
 //
 // Permission is hereby granted, free of charge, to any person obtaining
 // a copy of this software and associated documentation files (the "Software"),
@@ -204,7 +204,7 @@ void GetPointOfLine(cmsVEC3* p, const cmsLine* line, cmsFloat64Number t)
     Closest point in sector line1 to sector line2 (both are defined as 0 <=t <= 1)
     http://softsurfer.com/Archive/algorithm_0106/algorithm_0106.htm
 
-    Copyright 2001, softSurfer (www.softsurfer.com)
+    Copyright 2026, softSurfer (www.softsurfer.com)
     This code may be freely used and modified for any purpose
     providing that this copyright notice is included with it.
     SoftSurfer makes no warranty for this code, and cannot be held

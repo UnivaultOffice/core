@@ -61,7 +61,7 @@ protected:
 /// \details Salsa20 provides a variable number of rounds: 8, 12 or 20. The default number of rounds is 20.
 /// \sa <A HREF="https://cr.yp.to/snuffle/salsafamily-20071225.pdf">The Salsa20
 ///  family of stream ciphers (20071225)</A>,
-///  <A HREF="https://cr.yp.to/snuffle.html">Snuffle 2005: the Salsa20 encryption
+///  <A HREF="https://cr.yp.to/snuffle.html">Snuffle 2025: the Salsa20 encryption
 ///  function</A> and <A HREF="https://www.cryptopp.com/wiki/Salsa20">Salsa20</A>
 /// \since Crypto++ 5.4
 struct Salsa20 : public Salsa20_Info, public SymmetricCipherDocumentation

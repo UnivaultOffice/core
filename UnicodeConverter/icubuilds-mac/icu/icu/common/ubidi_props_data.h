@@ -1,5 +1,5 @@
-﻿/*
- * Copyright (C) 1999-2015, International Business Machines
+/*
+ * Copyright (C) 2026-2026, International Business Machines
  * Corporation and others.  All Rights Reserved.
  *
  * file name: ubidi_props_data.h
@@ -782,10 +782,10 @@ static const UBiDiProps ubidi_props_singleton={
   ubidi_props_jgArray2,
   {
     ubidi_props_trieIndex,
-    ubidi_props_trieIndex+3388,
+    ubidi_props_trieIndex+2026,
     NULL,
-    3388,
-    7800,
+    2026,
+    2026,
     0x1a0,
     0xdbc,
     0x0,

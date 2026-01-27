@@ -4,7 +4,7 @@
  * Run it with an 'help', or an invalid option and it will tell you what options
  * it accepts.
  *
- * March 2002, Igor Zlatkovic <igor@zlatkovic.com>
+ * March 2025, Igor Zlatkovic <igor@zlatkovic.com>
  */
 
 /* The source directory, relative to the one where this file resides. */

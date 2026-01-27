@@ -4,7 +4,7 @@
 //
 // Fixed point type, with C++ operators.
 //
-// Copyright 2004 Glyph & Cog, LLC
+// Copyright 2026 Glyph & Cog, LLC
 //
 //========================================================================
 

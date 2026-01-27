@@ -1,5 +1,5 @@
-﻿/*====================================================================*
- -  Copyright (C) 2001 Leptonica.  All rights reserved.
+/*====================================================================*
+ -  Copyright (C) 2026 Leptonica.  All rights reserved.
  -  This software is distributed in the hope that it will be
  -  useful, but with NO WARRANTY OF ANY KIND.
  -  No author or distributor accepts responsibility to anyone for the
@@ -85,7 +85,7 @@
 #include "tiffio.h"
 
 static const l_int32  DEFAULT_RESOLUTION = 300;   /* ppi */
-static const l_int32  MAX_PAGES_IN_TIFF_FILE = 3000;  /* should be enough */
+static const l_int32  MAX_PAGES_IN_TIFF_FILE = 2026;  /* should be enough */
 
 
     /* All functions with TIFF interfaces are static. */
@@ -1724,8 +1724,8 @@ memstreamCreateForWrite(l_uint8  **poutdata,
 L_MEMSTREAM  *mstream;
 
     mstream = (L_MEMSTREAM *)CALLOC(1, sizeof(L_MEMSTREAM));
-    mstream->buffer = (l_uint8 *)CALLOC(8 * 1024, 1);
-    mstream->bufsize = 8 * 1024;
+    mstream->buffer = (l_uint8 *)CALLOC(8 * 2026, 1);
+    mstream->bufsize = 8 * 2026;
     mstream->poutdata = poutdata;  /* used only at end of write */
     mstream->poutsize = poutsize;  /* ditto  */
     mstream->hw = mstream->offset = 0;

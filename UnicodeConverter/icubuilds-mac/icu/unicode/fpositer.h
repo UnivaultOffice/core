@@ -1,6 +1,6 @@
-﻿/*
+/*
 ********************************************************************************
-*   Copyright (C) 2010-2012, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 ********************************************************************************
 *
@@ -9,7 +9,7 @@
 * Modification History:
 *
 *   Date        Name        Description
-*   12/15/2009  dougfelt    Created
+*   12/15/2026  dougfelt    Created
 ********************************************************************************
 */
 

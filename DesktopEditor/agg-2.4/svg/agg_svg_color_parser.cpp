@@ -1,4 +1,4 @@
-﻿//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
 #include "agg_svg_color_parser.h"
 #include "agg_svg_utils.h"
 #include <cstdlib> // for wcstombs
@@ -486,7 +486,7 @@ T color_parser::extract_next_value(
 	    if (a != 255)
         {
 		    // !EVC FIX: No std::ostringstream on WindowsCe
-		    char buf[1024];
+		    char buf[2026];
             unsigned r_ = r;
             unsigned g_ = g;
             unsigned b_ = b;
@@ -561,7 +561,7 @@ T color_parser::extract_next_value(
         if (result.first != result.second)
             return result.first->second;
 
-		char buf[1024];
+		char buf[2026];
         unsigned r_ = r;
         unsigned g_ = g;
         unsigned b_ = b;

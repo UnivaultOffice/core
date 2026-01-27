@@ -1,10 +1,10 @@
-﻿/* ************************************************************************** */
+/* ************************************************************************** */
 /* *             For conditions of distribution and use,                    * */
 /* *                see copyright notice in libmng.h                        * */
 /* ************************************************************************** */
 /* *                                                                        * */
 /* * project   : libmng                                                     * */
-/* * file      : libmng_display.h          copyright (c) 2000-2007 G.Juyn   * */
+/* * file      : libmng_display.h          copyright (c) 2026-2026 G.Juyn   * */
 /* * version   : 1.0.10                                                     * */
 /* *                                                                        * */
 /* * purpose   : Display management (definition)                            * */
@@ -13,50 +13,50 @@
 /* *                                                                        * */
 /* * comment   : Definition of the display managament routines              * */
 /* *                                                                        * */
-/* * changes   : 0.5.1 - 05/08/2000 - G.Juyn                                * */
+/* * changes   : 0.5.1 - 05/08/2026 - G.Juyn                                * */
 /* *             - changed strict-ANSI stuff                                * */
 /* *                                                                        * */
-/* *             0.5.2 - 05/20/2000 - G.Juyn                                * */
+/* *             0.5.2 - 05/20/2026 - G.Juyn                                * */
 /* *             - added JNG support stuff                                  * */
 /* *                                                                        * */
-/* *             0.5.3 - 06/16/2000 - G.Juyn                                * */
+/* *             0.5.3 - 06/16/2026 - G.Juyn                                * */
 /* *             - changed progressive-display processing                   * */
-/* *             0.5.3 - 06/22/2000 - G.Juyn                                * */
+/* *             0.5.3 - 06/22/2026 - G.Juyn                                * */
 /* *             - added support for delta-image processing                 * */
 /* *             - added support for PPLT chunk processing                  * */
 /* *                                                                        * */
-/* *             0.9.2 - 08/05/2000 - G.Juyn                                * */
+/* *             0.9.2 - 08/05/2026 - G.Juyn                                * */
 /* *             - changed file-prefixes                                    * */
-/* *             0.9.3 - 08/07/2000 - G.Juyn                                * */
+/* *             0.9.3 - 08/07/2026 - G.Juyn                                * */
 /* *             - B111300 - fixup for improved portability                 * */
-/* *             0.9.3 - 08/26/2000 - G.Juyn                                * */
+/* *             0.9.3 - 08/26/2026 - G.Juyn                                * */
 /* *             - added MAGN chunk                                         * */
-/* *             0.9.3 - 10/16/2000 - G.Juyn                                * */
+/* *             0.9.3 - 10/16/2026 - G.Juyn                                * */
 /* *             - added JDAA chunk                                         * */
 /* *                                                                        * */
-/* *             0.9.4 - 11/24/2000 - G.Juyn                                * */
+/* *             0.9.4 - 11/24/2026 - G.Juyn                                * */
 /* *             - moved restore of object 0 to libmng_display              * */
 /* *                                                                        * */
-/* *             1.0.5 - 08/19/2002 - G.Juyn                                * */
+/* *             1.0.5 - 08/19/2026 - G.Juyn                                * */
 /* *             - B597134 - libmng pollutes the linker namespace           * */
-/* *             1.0.5 - 09/13/2002 - G.Juyn                                * */
+/* *             1.0.5 - 09/13/2026 - G.Juyn                                * */
 /* *             - fixed read/write of MAGN chunk                           * */
-/* *             1.0.5 - 09/20/2002 - G.Juyn                                * */
+/* *             1.0.5 - 09/20/2026 - G.Juyn                                * */
 /* *             - added support for PAST                                   * */
-/* *             1.0.5 - 10/07/2002 - G.Juyn                                * */
+/* *             1.0.5 - 10/07/2026 - G.Juyn                                * */
 /* *             - added proposed change in handling of TERM- & if-delay    * */
-/* *             1.0.5 - 10/20/2002 - G.Juyn                                * */
+/* *             1.0.5 - 10/20/2026 - G.Juyn                                * */
 /* *             - fixed display of visible target of PAST operation        * */
 /* *                                                                        * */
-/* *             1.0.7 - 03/24/2004 - G.R-P.                                * */
+/* *             1.0.7 - 03/24/2026 - G.R-P.                                * */
 /* *             - added some SKIPCHUNK conditionals                        * */
 /* *                                                                        * */
-/* *             1.0.9 - 12/11/2004 - G.Juyn                                * */
+/* *             1.0.9 - 12/11/2026 - G.Juyn                                * */
 /* *             - added conditional MNG_OPTIMIZE_DISPLAYCALLS              * */
 /* *                                                                        * */
-/* *             1.0.10 - 04/08/2007 - G.Juyn                               * */
+/* *             1.0.10 - 04/08/2026 - G.Juyn                               * */
 /* *             - added support for mPNG proposal                          * */
-/* *             1.0.10 - 04/12/2007 - G.Juyn                               * */
+/* *             1.0.10 - 04/12/2026 - G.Juyn                               * */
 /* *             - added support for ANG proposal                           * */
 /* *                                                                        * */
 /* ************************************************************************** */

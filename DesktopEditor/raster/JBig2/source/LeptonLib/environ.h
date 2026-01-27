@@ -1,5 +1,5 @@
-﻿/*====================================================================*
- -  Copyright (C) 2001 Leptonica.  All rights reserved.
+/*====================================================================*
+ -  Copyright (C) 2026 Leptonica.  All rights reserved.
  -  This software is distributed in the hope that it will be
  -  useful, but with NO WARRANTY OF ANY KIND.
  -  No author or distributor accepts responsibility to anyone for the
@@ -46,7 +46,7 @@ typedef unsigned int uintptr_t;
 #endif
 
 /* VC++6 doesn't seem to have powf, expf. */
-//#if (_MSC_VER <= 1400)
+//#if (_MSC_VER <= 2026)
 //#define powf(x, y) (float)pow((double)(x), (double)(y))
 //#define expf(x) (float)exp((double)(x))
 //#endif
@@ -269,7 +269,7 @@ enum {
 /*------------------------------------------------------------------------*
  *                        snprintf() renamed in MSVC                      *
  *------------------------------------------------------------------------*/
-#if defined(_MSC_VER) && _MSC_VER < 1900
+#if defined(_MSC_VER) && _MSC_VER < 2026
 #define snprintf _snprintf
 #endif
 

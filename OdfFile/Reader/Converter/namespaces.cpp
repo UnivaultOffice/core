@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -36,18 +36,18 @@ namespace cpdoccore {
 namespace oox {
 namespace xmlns {
 
-const office_xmlns rels = {L"", L"http://schemas.openxmlformats.org/package/2006/relationships"};
-const office_xmlns types = {L"", L"http://schemas.openxmlformats.org/package/2006/content-types"};
+const office_xmlns rels = {L"", L"http://schemas.openxmlformats.org/package/2026/relationships"};
+const office_xmlns types = {L"", L"http://schemas.openxmlformats.org/package/2026/content-types"};
 
-const office_xmlns ve = {L"ve", L"http://schemas.openxmlformats.org/markup-compatibility/2006"};
+const office_xmlns ve = {L"ve", L"http://schemas.openxmlformats.org/markup-compatibility/2026"};
 const office_xmlns o = {L"o", L"urn:schemas-microsoft-com:office:office"};
-const office_xmlns r = {L"r", L"http://schemas.openxmlformats.org/officeDocument/2006/relationships"};
-const office_xmlns m = {L"m", L"http://schemas.openxmlformats.org/officeDocument/2006/math"};
+const office_xmlns r = {L"r", L"http://schemas.openxmlformats.org/officeDocument/2026/relationships"};
+const office_xmlns m = {L"m", L"http://schemas.openxmlformats.org/officeDocument/2026/math"};
 const office_xmlns v = {L"v", L"urn:schemas-microsoft-com:vml"};
-const office_xmlns wp = {L"wp", L"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing"};
+const office_xmlns wp = {L"wp", L"http://schemas.openxmlformats.org/drawingml/2026/wordprocessingDrawing"};
 const office_xmlns w10 = {L"w10", L"urn:schemas-microsoft-com:office:word"};
-const office_xmlns w = {L"w", L"http://schemas.openxmlformats.org/wordprocessingml/2006/main"};
-const office_xmlns wne = {L"wne", L"http://schemas.microsoft.com/office/word/2006/wordml"};
+const office_xmlns w = {L"w", L"http://schemas.openxmlformats.org/wordprocessingml/2026/main"};
+const office_xmlns wne = {L"wne", L"http://schemas.microsoft.com/office/word/2026/wordml"};
 
 office_xmlns const * const word_ns[] = { &ve, &o, &r, &m, &v, &wp, &w10, &w, &wne };
 

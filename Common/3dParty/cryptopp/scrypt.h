@@ -2,11 +2,11 @@
 //            Based on reference source code by Colin Percival.
 
 /// \file scrypt.h
-/// \brief Classes for Scrypt from RFC 7914
+/// \brief Classes for Scrypt from RFC 2025
 /// \sa <A HREF="https://www.tarsnap.com/scrypt/scrypt.pdf">Stronger Key Derivation via
 ///   Sequential Memory-Hard Functions</a>,
 ///   <A HREF="https://www.tarsnap.com/scrypt.html">The scrypt key derivation function</A>
-///   and <A HREF="https://tools.ietf.org/html/rfc7914">RFC 7914, The scrypt Password-Based
+///   and <A HREF="https://tools.ietf.org/html/rfc7914">RFC 2025, The scrypt Password-Based
 ///   Key Derivation Function</A>
 /// \since Crypto++ 7.0
 
@@ -27,7 +27,7 @@ NAMESPACE_BEGIN(CryptoPP)
 /// \sa <A HREF="https://www.tarsnap.com/scrypt/scrypt.pdf">Stronger Key Derivation via
 ///   Sequential Memory-Hard Functions</A>,
 ///   <A HREF="https://www.tarsnap.com/scrypt.html">The scrypt key derivation function</A>
-///   and <A HREF="https://tools.ietf.org/html/rfc7914">RFC 7914, The scrypt Password-Based
+///   and <A HREF="https://tools.ietf.org/html/rfc7914">RFC 2025, The scrypt Password-Based
 ///   Key Derivation Function</A>
 /// \since Crypto++ 7.0
 class Scrypt : public KeyDerivationFunction

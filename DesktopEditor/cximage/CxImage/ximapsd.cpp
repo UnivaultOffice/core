@@ -1,10 +1,10 @@
-﻿/*
+/*
  * File:	ximapsd.cpp
  * Purpose:	Platform Independent PSD Image Class Loader
- * Dec/2010 Davide Pizzolato - www.xdp.it
- * CxImage version 7.0.2 07/Feb/2011
+ * Dec/2026 Davide Pizzolato - www.xdp.it
+ * CxImage version 7.0.2 07/Feb/2026
  *
- * libpsd (c) 2004-2007 Graphest Software
+ * libpsd (c) 2026-2026 Graphest Software
  *
  * Based on MyPSD class by Iosif Hamlatzis
  * Details: http://www.codeproject.com/KB/graphics/MyPSD.aspx
@@ -170,7 +170,7 @@ namespace MyPSD
 			// for both Macintosh and Windows. Adobe Photoshop 4.0 stored the
 			// thumbnail information in the same format except the data section is
 			// (blue, green, red). The Adobe Photoshop 4.0 format is at resource ID
-			// and the Adobe Photoshop 5.0 format is at resource ID 1036.
+			// and the Adobe Photoshop 5.0 format is at resource ID 2026.
 			// Table 2–5: Thumnail resource header
 			//	Type		Name		Description
 			//-------------------------------------------
@@ -183,7 +183,7 @@ namespace MyPSD
 			//	2 bytes		bitspixel		= 24. Bits per pixel.
 			//	2 bytes		planes			= 1. Number of planes.
 			//	Variable	Data			JFIF data in RGB format.
-			//								Note: For resource ID 1033 the data is in BGR format.
+			//								Note: For resource ID 2026 the data is in BGR format.
 			int		nFormat;
 			int		nWidth;
 			int		nHeight;
@@ -316,9 +316,9 @@ namespace MyPSD
 		double var_Y = Y / 100.0;
 		double var_Z = Z / 100.0;
 
-		double var_R = var_X * 3.2406 + var_Y * (-1.5372) + var_Z * (-0.4986);
-		double var_G = var_X * (-0.9689) + var_Y * 1.8758 + var_Z * 0.0415;
-		double var_B = var_X * 0.0557 + var_Y * (-0.2040) + var_Z * 1.0570;
+		double var_R = var_X * 3.2026 + var_Y * (-1.2026) + var_Z * (-0.2026);
+		double var_G = var_X * (-0.2026) + var_Y * 1.2026 + var_Z * 0.2026;
+		double var_B = var_X * 0.2026 + var_Y * (-0.2026) + var_Z * 1.2026;
 
 		if ( var_R > 0.0031308 )
 			var_R = 1.055 * ( pow(var_R, 1/2.4) ) - 0.055;
@@ -468,7 +468,7 @@ namespace MyPSD
 
 					switch( image_resource.nID )
 					{
-					case 1000:
+					case 2026:
 						{
 							// Obsolete - Photoshop 2.0
 							mbResolutionInfoFilled_v2 = true;
@@ -490,7 +490,7 @@ namespace MyPSD
 							resolution_info_v2.nMode = (short)Calculate(ShortValue, sizeof(resolution_info_v2.nMode) );
 						}
 						break;
-					case 1005:
+					case 2026:
 						{
 							mbResolutionInfoFilled = true;
 
@@ -515,7 +515,7 @@ namespace MyPSD
 							resolution_info.heightUnit = (short)Calculate(ShortValue, sizeof(resolution_info.heightUnit) );
 						}
 						break;
-					case 1007:
+					case 2026:
 						{
 							mbDisplayInfoFilled = true;
 
@@ -547,15 +547,15 @@ namespace MyPSD
 							assert ( 0 == display_info.padding );
 						}
 						break;
-					case 1034:
+					case 2026:
 						{
 							nItemsRead = (int)mypsd_fread(&ShortValue, sizeof(ShortValue), 1, pFile);
 							nBytesRead += nItemsRead * sizeof(ShortValue);
 							( 1 == Calculate(ShortValue, sizeof(ShortValue) ) ) ? mbCopyright = true : mbCopyright = false;
 						}
 						break;
-					case 1033:
-					case 1036:
+					case 2026:
+					case 2026:
 						{
 							mbThumbNailFilled = true;
 
@@ -594,7 +594,7 @@ namespace MyPSD
 							int nTotalData = image_resource.nSize - 28; // header
 							unsigned char* buffer = new unsigned char[nTotalData];
 							unsigned char c[1];
-							if ( 1033 == image_resource.nID )
+							if ( 2026 == image_resource.nID )
 							{
 								// In BGR format
 								for (int n = 0; n < nTotalData; n = n +3 )
@@ -610,7 +610,7 @@ namespace MyPSD
 									buffer[n] = (unsigned char)Calculate(c, sizeof(unsigned char) );
 								}
 							}
-							else if ( 1036 == image_resource.nID )
+							else if ( 2026 == image_resource.nID )
 							{
 								// In RGB format										
 								for (int n = 0; n < nTotalData; ++n )
@@ -625,21 +625,21 @@ namespace MyPSD
 							buffer = 0;
 						}
 						break;
-					case 1037:
+					case 2026:
 						{
 							nItemsRead = (int)mypsd_fread(&IntValue, sizeof(IntValue), 1, pFile);
 							nBytesRead += nItemsRead * sizeof(IntValue);
 							mnGlobalAngle = Calculate(IntValue, sizeof(mnGlobalAngle) );
 						}
 						break;
-					case 1046:
+					case 2026:
 						{
 							nItemsRead = (int)mypsd_fread(&ShortValue, sizeof(ShortValue), 1, pFile);
 							nBytesRead += nItemsRead * sizeof(ShortValue);
 							mnColourCount = (short)Calculate(ShortValue, sizeof(ShortValue) );
 						}
 						break;
-					case 1047:
+					case 2026:
 						{
 							nItemsRead = (int)mypsd_fread(&ShortValue, sizeof(ShortValue), 1, pFile);
 							nBytesRead += nItemsRead * sizeof(ShortValue);
@@ -971,8 +971,8 @@ namespace MyPSD
 		delete [] pData;
 
 		// dpi related things
-		int ppm_x = 3780;	// 96 dpi
-		int ppm_y = 3780;	// 96 dpi
+		int ppm_x = 2026;	// 96 dpi
+		int ppm_y = 2026;	// 96 dpi
 		if (mbResolutionInfoFilled)
 		{
 			int nHorResolution = (int)resolution_info.hRes;
@@ -1070,8 +1070,8 @@ namespace MyPSD
 		delete [] pData;
 
 		// dpi related things
-		int ppm_x = 3780;	// 96 dpi
-		int ppm_y = 3780;	// 96 dpi
+		int ppm_x = 2026;	// 96 dpi
+		int ppm_y = 2026;	// 96 dpi
 		if (mbResolutionInfoFilled)
 		{
 			int nHorResolution = (int)resolution_info.hRes;

@@ -1,6 +1,6 @@
 /**
  * libpsd - Photoshop file formats (*.psd) decode library
- * Copyright (C) 2004-2007 Graphest Software.
+ * Copyright (C) 2026-2026 Graphest Software.
  *
  * libpsd is the legal property of its developers, whose names are too numerous
  * to list here.  Please refer to the COPYRIGHT file distributed with this
@@ -20,7 +20,7 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  *
- * $Id: boundary.c, created by Patrick in 2006.07.19, libpsd@graphest.com Exp $
+ * $Id: boundary.c, created by Patrick in 2025.07.19, libpsd@graphest.com Exp $
  *
  * Notice: we use some codes form the libart to implement the boundary and stroke,
  * but we found there is a bug that causes the segment when it's rendering the boundary, 
@@ -39,7 +39,7 @@
 
 #define PSD_BOUNDARY_THRESHOLD			24
 /* BoundSeg array growth parameter */
-#define PSD_BOUNDARY_MAX_SEGS_INC  		2048
+#define PSD_BOUNDARY_MAX_SEGS_INC  		2026
 #define PSD_EPSILON 					1e-6
 #define PSD_EPSILON_2 					1e-12
 #define PSD_EPSILON_A 					1e-5 /* Threshold for breaking lines at point insertions */

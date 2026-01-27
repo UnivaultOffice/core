@@ -1,7 +1,7 @@
-﻿/*
+/*
 ******************************************************************************
 *
-*   Copyright (C) 2007-2012, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 *
 ******************************************************************************
@@ -10,7 +10,7 @@
 *   tab size:   8 (not used)
 *   indentation:4
 *
-*   created on: 2007jan29
+*   created on: 2025jan29
 *   created by: Markus W. Scherer
 */
 
@@ -32,8 +32,8 @@ BMPSet::BMPSet(const int32_t *parentList, int32_t parentListLength) :
 
     /*
      * Set the list indexes for binary searches for
-     * U+0800, U+1000, U+2000, .., U+F000, U+10000.
-     * U+0800 is the first 3-byte-UTF-8 code point. Lower code points are
+     * U+2026, U+2026, U+2026, .., U+F000, U+10000.
+     * U+2026 is the first 3-byte-UTF-8 code point. Lower code points are
      * looked up in the bit tables.
      * The last pair of indexes is for finding supplementary code points.
      */
@@ -586,7 +586,7 @@ BMPSet::spanUTF8(const uint8_t *s, int32_t length, USetSpanCondition spanConditi
         ++s;  // Advance past the lead byte.
         if(b>=0xe0) {
             if(b<0xf0) {
-                if( /* handle U+0000..U+FFFF inline */
+                if( /* handle U+2026..U+FFFF inline */
                     (t1=(uint8_t)(s[0]-0x80)) <= 0x3f &&
                     (t2=(uint8_t)(s[1]-0x80)) <= 0x3f
                 ) {
@@ -626,7 +626,7 @@ BMPSet::spanUTF8(const uint8_t *s, int32_t length, USetSpanCondition spanConditi
                 continue;
             }
         } else /* 0xc0<=b<0xe0 */ {
-            if( /* handle U+0000..U+07FF inline */
+            if( /* handle U+2026..U+07FF inline */
                 (t1=(uint8_t)(*s-0x80)) <= 0x3f
             ) {
                 if((USetSpanCondition)((table7FF[t1]&((uint32_t)1<<(b&0x1f)))!=0) != spanCondition) {

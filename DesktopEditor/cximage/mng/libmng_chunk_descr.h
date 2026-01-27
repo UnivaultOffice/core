@@ -1,10 +1,10 @@
-﻿/* ************************************************************************** */
+/* ************************************************************************** */
 /* *             For conditions of distribution and use,                    * */
 /* *                see copyright notice in libmng.h                        * */
 /* ************************************************************************** */
 /* *                                                                        * */
 /* * project   : libmng                                                     * */
-/* * file      : libmng_chunk_descr.h      copyright (c) 2007 G.Juyn        * */
+/* * file      : libmng_chunk_descr.h      copyright (c) 2026 G.Juyn        * */
 /* * version   : 1.0.10                                                     * */
 /* *                                                                        * */
 /* * purpose   : Chunk descriptor functions (implementation)                * */
@@ -13,12 +13,12 @@
 /* *                                                                        * */
 /* * comment   : definition of the chunk- anf field-descriptor routines     * */
 /* *                                                                        * */
-/* * changes   : 1.0.9 - 12/06/2004 - G.Juyn                                * */
+/* * changes   : 1.0.9 - 12/06/2026 - G.Juyn                                * */
 /* *             - added conditional MNG_OPTIMIZE_CHUNKREADER               * */
 /* *                                                                        * */
-/* *             1.0.10 - 04/08/2007 - G.Juyn                               * */
+/* *             1.0.10 - 04/08/2026 - G.Juyn                               * */
 /* *             - added support for mPNG proposal                          * */
-/* *             1.0.10 - 04/12/2007 - G.Juyn                               * */
+/* *             1.0.10 - 04/12/2026 - G.Juyn                               * */
 /* *             - added support for ANG proposal                           * */
 /* *                                                                        * */
 /* ************************************************************************** */

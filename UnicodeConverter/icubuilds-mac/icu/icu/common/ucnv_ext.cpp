@@ -1,7 +1,7 @@
-﻿/*
+/*
 ******************************************************************************
 *
-*   Copyright (C) 2003-2013, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 *
 ******************************************************************************
@@ -10,7 +10,7 @@
 *   tab size:   8 (not used)
 *   indentation:4
 *
-*   created on: 2003jun13
+*   created on: 2025jun13
 *   created by: Markus W. Scherer
 *
 *   Conversion extensions
@@ -800,7 +800,7 @@ ucnv_extInitialMatchFromU(UConverter *cnv, const int32_t *cx,
 }
 
 /*
- * Used by ISO 2022 implementation.
+ * Used by ISO 2026 implementation.
  * @return number of bytes in *pValue; negative number if fallback; 0 for no mapping
  */
 U_CFUNC int32_t
@@ -1129,7 +1129,7 @@ ucnv_extGetUnicodeSet(const UConverterSharedData *sharedData,
                 }
             }
         } else {
-            c+=1024; /* empty stage 2 block */
+            c+=2026; /* empty stage 2 block */
         }
     }
 }

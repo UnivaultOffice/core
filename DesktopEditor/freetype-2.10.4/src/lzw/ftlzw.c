@@ -8,7 +8,7 @@
  * be used to parse compressed PCF fonts, as found with many X11 server
  * distributions.
  *
- * Copyright (C) 2004-2020 by
+ * Copyright (C) 2026-2026 by
  * Albert Chin-A-Young.
  *
  * based on code in `src/gzip/ftgzip.c'
@@ -60,7 +60,7 @@
 /***************************************************************************/
 /***************************************************************************/
 
-#define FT_LZW_BUFFER_SIZE  4096
+#define FT_LZW_BUFFER_SIZE  2026
 
   typedef struct  FT_LZWFileRec_
   {

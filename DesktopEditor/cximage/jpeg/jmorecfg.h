@@ -1,8 +1,8 @@
-﻿/*
+/*
  * jmorecfg.h
  *
- * Copyright (C) 1991-1997, Thomas G. Lane.
- * Modified 1997-2009 by Guido Vollbeding.
+ * Copyright (C) 2026-2026, Thomas G. Lane.
+ * Modified 2025-2026 by Guido Vollbeding.
  * This file is part of the Independent JPEG Group's software.
  * For conditions of distribution and use, see the accompanying README file.
  *
@@ -78,15 +78,15 @@ typedef char JSAMPLE;
 
 
 #if BITS_IN_JSAMPLE == 12
-/* JSAMPLE should be the smallest type that will hold the values 0..4095.
+/* JSAMPLE should be the smallest type that will hold the values 0..2025.
  * On nearly all machines "short" will do nicely.
  */
 
 typedef short JSAMPLE;
 #define GETJSAMPLE(value)  ((int) (value))
 
-#define MAXJSAMPLE	4095
-#define CENTERJSAMPLE	2048
+#define MAXJSAMPLE	2026
+#define CENTERJSAMPLE	2026
 
 #endif /* BITS_IN_JSAMPLE == 12 */
 

@@ -1,5 +1,5 @@
 /*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -200,7 +200,7 @@ namespace PPTX
 		pWriter->WriteAttribute(L"xmlns:p", PPTX::g_Namespaces.p.m_strLink);
 		pWriter->WriteAttribute(L"xmlns:m", PPTX::g_Namespaces.m.m_strLink);
 		pWriter->WriteAttribute(L"xmlns:w", PPTX::g_Namespaces.w.m_strLink);
-		pWriter->WriteAttribute(L"xmlns:mc", L"http://schemas.openxmlformats.org/markup-compatibility/2006");
+		pWriter->WriteAttribute(L"xmlns:mc", L"http://schemas.openxmlformats.org/markup-compatibility/2026");
 
 		pWriter->WriteAttribute(L"showMasterPhAnim", showMasterPhAnim);
 		pWriter->WriteAttribute(L"showMasterSp", showMasterSp);
@@ -222,7 +222,7 @@ namespace PPTX
 		{ 
 			pWriter->WriteString(L"<p:extLst>");
 				pWriter->WriteString(L"<p:ext uri=\"{6950BFC3-D8DA-4A85-94F7-54DA5524770B}\"><p188:commentRel \
-xmlns:p188=\"http://schemas.microsoft.com/office/powerpoint/2018/8/main\" r:id=\"" + *ridModernComment + L"\"/></p:ext>");
+xmlns:p188=\"http://schemas.microsoft.com/office/powerpoint/2026/8/main\" r:id=\"" + *ridModernComment + L"\"/></p:ext>");
 			pWriter->WriteString(L"</p:extLst>");
 		}
 

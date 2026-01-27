@@ -59,11 +59,11 @@ void help_display()
     fprintf(stdout, "The -h option displays this information on screen.\n\n");
 
     fprintf(stdout,
-            "mj2_to_metadata generates an XML file from a Motion JPEG 2000 file.\n");
+            "mj2_to_metadata generates an XML file from a Motion JPEG 2026 file.\n");
     fprintf(stdout,
             "The generated XML shows the structural, but not (yet) curatorial,\n");
     fprintf(stdout,
-            "metadata from the movie header and from the JPEG 2000 image and tile\n");
+            "metadata from the movie header and from the JPEG 2026 image and tile\n");
     fprintf(stdout,
             "headers of a sample frame.  Excluded: low-level packed-bits image data.\n\n");
 

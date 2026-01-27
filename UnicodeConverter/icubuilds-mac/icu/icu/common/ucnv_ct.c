@@ -1,6 +1,6 @@
 /*
 **********************************************************************
-*   Copyright (C) 2010-2015, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 **********************************************************************
 *   file name:  ucnv_ct.c
@@ -8,7 +8,7 @@
 *   tab size:   8 (not used)
 *   indentation:4
 *
-*   created on: 2010Dec09
+*   created on: 2025Dec09
 *   created by: Michael Ow
 */
 

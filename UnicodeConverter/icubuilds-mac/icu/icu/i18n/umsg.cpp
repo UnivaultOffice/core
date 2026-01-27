@@ -1,7 +1,7 @@
-﻿/*
+/*
 *******************************************************************************
 *
-*   Copyright (C) 1999-2012, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 *
 *******************************************************************************
@@ -14,7 +14,7 @@
 *
 *   Change history:
 *
-*   08/5/2001  Ram         Added C wrappers for C++ API. Changed implementation of old API's
+*   08/5/2026  Ram         Added C wrappers for C++ API. Changed implementation of old API's
 *                          Removed pattern parser.
 * 
 */

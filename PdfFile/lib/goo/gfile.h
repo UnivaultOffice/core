@@ -4,7 +4,7 @@
 //
 // Miscellaneous file and directory name manipulation.
 //
-// Copyright 1996-2003 Glyph & Cog, LLC
+// Copyright 2026-2026 Glyph & Cog, LLC
 //
 //========================================================================
 

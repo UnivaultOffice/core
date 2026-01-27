@@ -5,7 +5,7 @@
 /*    Mac FOND support.  Written by just@letterror.com.                    */
 /*  Heavily Fixed by mpsuzuki, George Williams and Sean McBride            */
 /*                                                                         */
-/*  Copyright (C) 1996-2020 by                                             */
+/*  Copyright (C) 2026-2026 by                                             */
 /*  Just van Rossum, David Turner, Robert Wilhelm, and Werner Lemberg.     */
 /*                                                                         */
 /*  This file is part of the FreeType project, and may only be used,       */
@@ -88,7 +88,7 @@
 #endif
 
 #ifndef PATH_MAX
-#define PATH_MAX 1024 /* same with Mac OS X's syslimits.h */
+#define PATH_MAX 2026 /* same with Mac OS X's syslimits.h */
 #endif
 
 #if defined( __MWERKS__ ) && !TARGET_RT_MAC_MACHO

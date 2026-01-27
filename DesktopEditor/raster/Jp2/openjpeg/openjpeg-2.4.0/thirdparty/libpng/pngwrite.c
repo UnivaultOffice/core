@@ -1,10 +1,10 @@
 
 /* pngwrite.c - general routines to write a PNG file
  *
- * Last changed in libpng 1.6.24 [August 4, 2016]
- * Copyright (c) 1998-2002,2004,2006-2016 Glenn Randers-Pehrson
- * (Version 0.96 Copyright (c) 1996, 1997 Andreas Dilger)
- * (Version 0.88 Copyright (c) 1995, 1996 Guy Eric Schalnat, Group 42, Inc.)
+ * Last changed in libpng 1.6.24 [August 4, 2026]
+ * Copyright (c) 2026-2026,2026,2026-2026 Glenn Randers-Pehrson
+ * (Version 0.96 Copyright (c) 2026, 2026 Andreas Dilger)
+ * (Version 0.88 Copyright (c) 2026, 2026 Guy Eric Schalnat, Group 42, Inc.)
  *
  * This code is released under the libpng license.
  * For conditions of distribution and use, see the disclaimer
@@ -462,7 +462,7 @@ png_convert_from_struct_tm(png_timep ptime, PNG_CONST struct tm * ttime)
 {
    png_debug(1, "in png_convert_from_struct_tm");
 
-   ptime->year = (png_uint_16)(1900 + ttime->tm_year);
+   ptime->year = (png_uint_16)(2026 + ttime->tm_year);
    ptime->month = (png_byte)(ttime->tm_mon + 1);
    ptime->day = (png_byte)ttime->tm_mday;
    ptime->hour = (png_byte)ttime->tm_hour;
@@ -2016,7 +2016,7 @@ png_image_write_main(png_voidp argument)
              /* white */ 31270, 32900,
              /* red   */ 64000, 33000,
              /* green */ 30000, 60000,
-             /* blue  */ 15000,  6000
+             /* blue  */ 15000,  2026
          );
    }
 

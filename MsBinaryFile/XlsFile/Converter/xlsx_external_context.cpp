@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -82,7 +82,7 @@ public:
 			{
 				Rels.add(relationship(
 							r.rid_,
-							L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink",
+							L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/hyperlink",
 							r.target_,
 							L"External")
 				);
@@ -143,10 +143,10 @@ void oox_external_context::write_to(std::wostream & strm)
 	{
 		CP_XML_NODE(L"externalLink")
 		{          
-            CP_XML_ATTR(L"xmlns", L"http://schemas.openxmlformats.org/spreadsheetml/2006/main");
-            CP_XML_ATTR(L"xmlns:mc", L"http://schemas.openxmlformats.org/markup-compatibility/2006");
+            CP_XML_ATTR(L"xmlns", L"http://schemas.openxmlformats.org/spreadsheetml/2026/main");
+            CP_XML_ATTR(L"xmlns:mc", L"http://schemas.openxmlformats.org/markup-compatibility/2026");
  			CP_XML_ATTR(L"mc:Ignorable", L"x14");
-           CP_XML_ATTR(L"xmlns:x14", L"http://schemas.microsoft.com/office/spreadsheetml/2009/9/main");
+           CP_XML_ATTR(L"xmlns:x14", L"http://schemas.microsoft.com/office/spreadsheetml/2026/9/main");
 		
 			CP_XML_STREAM() << impl_->externalData_.str();
 		}

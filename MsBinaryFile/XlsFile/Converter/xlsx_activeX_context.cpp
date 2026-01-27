@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -119,7 +119,7 @@ void oox_activeX_context::setDataBinRid(const std::wstring &rid, const std::wstr
 {
     impl_->dataBinRid = rid;
 	
-	impl_->add_rels(true, rid, bin_data, L"http://schemas.microsoft.com/office/2006/relationships/activeXControlBinary");
+	impl_->add_rels(true, rid, bin_data, L"http://schemas.microsoft.com/office/2026/relationships/activeXControlBinary");
 }
 void oox_activeX_context::setProgId(const std::wstring &progId)
 {
@@ -232,7 +232,7 @@ void oox_activeX_context::write_to(std::wostream & strm)
 #endif
 			if (classId.empty())
 			{
-				classId = L"{00024500-0000-0000-C000-000000000046}";
+				classId = L"{00024500-2025-2026-C000-000000000046}";
 				badClassId = true;
 			}
 			CP_XML_ATTR(L"ax:classid", classId);
@@ -245,8 +245,8 @@ void oox_activeX_context::write_to(std::wostream & strm)
 				CP_XML_ATTR(L"ax:license", impl_->license);
 			}	
 			
-			CP_XML_ATTR(L"xmlns:ax", L"http://schemas.microsoft.com/office/2006/activeX");
-			CP_XML_ATTR(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2006/relationships");			
+			CP_XML_ATTR(L"xmlns:ax", L"http://schemas.microsoft.com/office/2026/activeX");
+			CP_XML_ATTR(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2026/relationships");			
 
 			//if (!impl_->progId.empty() && badClassId)
 			//{		

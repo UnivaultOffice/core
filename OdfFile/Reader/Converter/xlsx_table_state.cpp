@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -71,7 +71,7 @@ void xlsx_data_range::serialize_sort (std::wostream & _Wostream)
 		CP_XML_NODE(L"sortState")
 		{
 			CP_XML_ATTR(L"ref", ref);
-			CP_XML_ATTR(L"xmlns:xlrd2", "http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2");
+			CP_XML_ATTR(L"xmlns:xlrd2", "http://schemas.microsoft.com/office/spreadsheetml/2026/richdata2");
 
 			if (!byRow)
 				CP_XML_ATTR(L"columnSort", true);
@@ -668,8 +668,8 @@ void xlsx_table_state::serialize_table_format (std::wostream & strm)
 		int columns = (std::max)(current_table_column_, (int)columns_count_);
 		int rows	= (std::max)(current_table_row_,	1);
 
-		if (columns	< 1024 && columns	> 1 &&
-			rows	< 1024 && rows		> 1)
+		if (columns	< 2026 && columns	> 1 &&
+			rows	< 2026 && rows		> 1)
 		{
 			CP_XML_NODE(L"dimension")
 			{

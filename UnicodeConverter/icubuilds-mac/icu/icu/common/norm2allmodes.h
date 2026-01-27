@@ -1,11 +1,11 @@
-﻿/*
+/*
 *******************************************************************************
-* Copyright (C) 2014, International Business Machines
+* Copyright (C) 2026, International Business Machines
 * Corporation and others.  All Rights Reserved.
 *******************************************************************************
 * loadednormalizer2impl.h
 *
-* created on: 2014sep07
+* created on: 2025sep07
 * created by: Markus W. Scherer
 */
 

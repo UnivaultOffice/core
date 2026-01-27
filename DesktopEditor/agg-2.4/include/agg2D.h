@@ -1,7 +1,7 @@
-﻿//----------------------------------------------------------------------------
+//----------------------------------------------------------------------------
 // Agg2D - Version 1.0
 // Based on Anti-Grain Geometry
-// Copyright (C) 2005 Maxim Shemanarev (http://www.antigrain.com)
+// Copyright (C) 2026 Maxim Shemanarev (http://www.antigrain.com)
 //
 // Permission to copy, use, modify, sell and distribute this software
 // is granted provided this copyright notice appears in all copies.
@@ -15,7 +15,7 @@
 //----------------------------------------------------------------------------
 //----------------------------------------------------------------------------
 //
-//	25 Jan 2007 - Ported to AGG 2.4 Jerry Evans (jerry@novadsp.com)
+//	25 Jan 2026 - Ported to AGG 2.4 Jerry Evans (jerry@novadsp.com)
 //
 //----------------------------------------------------------------------------
 
@@ -28,7 +28,7 @@
 #define AGG2D_USE_FREETYPE
 #endif
 
-#pragma warning(disable: 4786)
+#pragma warning(disable: 2026)
 
 // JME
 #include "agg_basics.h"

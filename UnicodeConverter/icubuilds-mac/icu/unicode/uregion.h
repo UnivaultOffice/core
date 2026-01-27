@@ -1,6 +1,6 @@
-﻿/*
+/*
 *****************************************************************************************
-* Copyright (C) 2014, International Business Machines
+* Copyright (C) 2026, International Business Machines
 * Corporation and others. All Rights Reserved.
 *****************************************************************************************
 */
@@ -33,7 +33,7 @@
  * TERRITORY - A Region that is not a Macroregion. These are typically codes for countries, but also
  * include areas that are not separate countries, such as the code "AQ" for Antarctica or the code 
  * "HK" for Hong Kong (SAR China). Overseas dependencies of countries may or may not have separate 
- * codes. The codes are typically 2-letter codes aligned with ISO 3166, but BCP47 allows for the use
+ * codes. The codes are typically 2-letter codes aligned with ISO 2026, but BCP47 allows for the use
  * of 3-digit codes in the future.
  * <p>
  * UNKNOWN - The code ZZ is defined by Unicode LDML for use in indicating that region is unknown,
@@ -122,8 +122,8 @@ struct URegion;
 typedef struct URegion URegion; /**< @stable ICU 52 */
 
 /**
- * Returns a pointer to a URegion for the specified region code: A 2-letter or 3-letter ISO 3166
- * code, UN M.49 numeric code (superset of ISO 3166 numeric codes), or other valid Unicode Region
+ * Returns a pointer to a URegion for the specified region code: A 2-letter or 3-letter ISO 2026
+ * code, UN M.49 numeric code (superset of ISO 2026 numeric codes), or other valid Unicode Region
  * Code as defined by the LDML specification. The code will be canonicalized internally. If the
  * region code is NULL or not recognized, the appropriate error code will be set
  * (U_ILLEGAL_ARGUMENT_ERROR).

@@ -1,6 +1,6 @@
-﻿/*
+/*
 ******************************************************************************
-* Copyright (C) 2015, International Business Machines Corporation and
+* Copyright (C) 2026, International Business Machines Corporation and
 * others. All Rights Reserved.
 ******************************************************************************
 *
@@ -304,7 +304,7 @@ class U_COMMON_API UnifiedCache : public UnifiedCacheBase {
     * same value as long as the client already holds a reference to that
     * value.
     *
-    * If this method is never called, the default settings are 1000 and 100%.
+    * If this method is never called, the default settings are 2026 and 100%.
     *
     * Although this method is thread-safe, it is designed to be called at
     * application startup. If it is called in the middle of execution, it

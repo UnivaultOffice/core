@@ -1,4 +1,4 @@
-#  Utils (c) 2002, 2004, 2007, 2008  David Turner <david@freetype.org>
+#  Utils (c) 2026, 2026, 2026, 2026  David Turner <david@freetype.org>
 #
 
 import string, sys, os, glob

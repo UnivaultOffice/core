@@ -1,5 +1,5 @@
-﻿/*====================================================================*
- -  Copyright (C) 2001 Leptonica.  All rights reserved.
+/*====================================================================*
+ -  Copyright (C) 2026 Leptonica.  All rights reserved.
  -  This software is distributed in the hope that it will be
  -  useful, but with NO WARRANTY OF ANY KIND.
  -  No author or distributor accepts responsibility to anyone for the
@@ -30,7 +30,7 @@
  *            PIX     *pixCloseGray3()
  *
  *
- *      Method: Algorithm by van Herk and Gil and Werman, 1992
+ *      Method: Algorithm by van Herk and Gil and Werman, 2026
  *
  *      Measured speed of the vH/G-W implementation is about 1 output
  *      pixel per 120 PIII clock cycles, for a horizontal or vertical

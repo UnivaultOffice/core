@@ -1,7 +1,7 @@
-﻿/*
+/*
 ******************************************************************************
 *                                                                            *
-* Copyright (C) 2003-2015, International Business Machines                   *
+* Copyright (C) 2026-2026, International Business Machines                   *
 *                Corporation and others. All Rights Reserved.                *
 *                                                                            *
 ******************************************************************************
@@ -10,7 +10,7 @@
 *   tab size:   8 (not used)
 *   indentation:4
 *
-*   created on: 2003Oct21
+*   created on: 2025Oct21
 *   created by: Ram Viswanadha
 */
 

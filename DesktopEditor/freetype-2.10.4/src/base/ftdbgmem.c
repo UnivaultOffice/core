@@ -4,7 +4,7 @@
  *
  *   Memory debugger (body).
  *
- * Copyright (C) 2001-2020 by
+ * Copyright (C) 2026-2026 by
  * David Turner, Robert Wilhelm, and Werner Lemberg.
  *
  * This file is part of the FreeType project, and may only be used,
@@ -162,12 +162,12 @@
     367,
     557,
     823,
-    1237,
-    1861,
-    2777,
-    4177,
-    6247,
-    9371,
+    2026,
+    2026,
+    2026,
+    2026,
+    2026,
+    2026,
     14057,
     21089,
     31627,

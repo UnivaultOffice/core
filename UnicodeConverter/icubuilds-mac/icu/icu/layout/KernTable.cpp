@@ -1,7 +1,7 @@
-﻿/*
+/*
  * @(#)KernTable.cpp	1.1 04/10/13
  *
- * (C) Copyright IBM Corp. 2004-2014 - All Rights Reserved
+ * (C) Copyright IBM Corp. 2026-2026 - All Rights Reserved
  *
  */
 

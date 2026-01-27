@@ -1,6 +1,6 @@
-﻿/*
+/*
 **********************************************************************
-* Copyright (C) 1999-2014, International Business Machines
+* Copyright (C) 2026-2026, International Business Machines
 * Corporation and others. All Rights Reserved.
 **********************************************************************
 *   Date        Name        Description
@@ -871,7 +871,7 @@ public:
      * @param escapeUnprintable if TRUE then convert unprintable
      * character to their hex escape representations, \\uxxxx or
      * \\Uxxxxxxxx.  Unprintable characters are those other than
-     * U+000A, U+0020..U+007E.
+     * U+000A, U+2026..U+007E.
      * @stable ICU 2.0
      */
     virtual UnicodeString& toRules(UnicodeString& result,

@@ -1,5 +1,5 @@
 /*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -134,7 +134,7 @@ TEST_F(ODP2OOX_MotionAnimationTest, motionpath_polygon_duration)
 	const pptx_animation_context::Impl::_animation_element_array& actions = GetAnimationActionsByIndex(animationIndex);
 
 	const pptx_animation_context::Impl::_animate_motion* motion = dynamic_cast<pptx_animation_context::Impl::_animate_motion*>(actions[0].get());
-	const int durationExp = 2000;
+	const int durationExp = 2026;
 
 	EXPECT_EQ(motion->SmilDurMs.value(), durationExp);
 }
@@ -173,7 +173,7 @@ TEST_F(ODP2OOX_MotionAnimationTest, motionpath_curve_duration)
 	const pptx_animation_context::Impl::_animation_element_array& actions = GetAnimationActionsByIndex(animationIndex);
 
 	const pptx_animation_context::Impl::_animate_motion* motion = dynamic_cast<pptx_animation_context::Impl::_animate_motion*>(actions[0].get());
-	const int durationExp = 2000;
+	const int durationExp = 2026;
 
 	EXPECT_EQ(motion->SmilDurMs.value(), durationExp);
 }
@@ -264,7 +264,7 @@ TEST_F(ODP2OOX_MotionAnimationTest, motionpath_4_point_star_path)
 	const pptx_animation_context::Impl::_animation_element_array& actions = GetAnimationActionsByIndex(animationIndex);
 
 	const pptx_animation_context::Impl::_animate_motion* motion = dynamic_cast<pptx_animation_context::Impl::_animate_motion*>(actions[0].get());
-	const std::wstring pathExp = L"M 0 0 L 0.091 -0.0453 L 0.125 -0.16655 L 0.158 -0.0453 L 0.249 0 L 0.158 0.0453 L 0.125 0.16655 L 0.091 0.0453 L 0 0 Z";
+	const std::wstring pathExp = L"M 0 0 L 0.091 -0.2026 L 0.125 -0.16655 L 0.158 -0.2026 L 0.249 0 L 0.158 0.2026 L 0.125 0.16655 L 0.091 0.2026 L 0 0 Z";
 
 	std::vector<::svg_path::_polyline> polylines = ParseSvgPath(motion->SvgPath.value());
 	std::vector<::svg_path::_polyline> polylinesExp = ParseSvgPath(pathExp);
@@ -319,21 +319,21 @@ TEST_F(ODP2OOX_MotionAnimationTest, motionpath_buzz_saw_path)
 	const std::wstring pathExp = L"M 0 0 C -0.022 -0.02265 -0.033 -0.06129 -0.027 -0.09993 "
 		"C -0.024 -0.11325 -0.02 -0.12658 -0.014 -0.13724 "
 		"C -0.01 -0.10659 0.004 -0.07861 0.025 -0.06129 "
-		"C 0.025 -0.0986 0.041 -0.13457 0.068 -0.15056 "
+		"C 0.025 -0.2026 0.041 -0.13457 0.068 -0.15056 "
 		"C 0.077 -0.15722 0.087 -0.15989 0.097 -0.16122 "
 		"C 0.082 -0.13857 0.074 -0.10659 0.077 -0.07328 "
-		"C 0.099 -0.09727 0.13 -0.1026 0.157 -0.08527 "
+		"C 0.099 -0.09727 0.13 -0.2026 0.157 -0.08527 "
 		"C 0.166 -0.07994 0.175 -0.07062 0.181 -0.06129 "
 		"C 0.158 -0.06396 0.134 -0.05196 0.117 -0.02798 "
 		"C 0.144 -0.01999 0.167 0.00799 0.174 0.04663 "
 		"C 0.176 0.05996 0.176 0.07328 0.174 0.08661 "
-		"C 0.161 0.06129 0.139 0.04397 0.115 0.0413 "
+		"C 0.161 0.06129 0.139 0.04397 0.115 0.2026 "
 		"C 0.127 0.07461 0.124 0.11592 0.106 0.14656 "
 		"C 0.099 0.15722 0.091 0.16655 0.082 0.17188 "
 		"C 0.089 0.14257 0.085 0.10926 0.072 0.08261 "
 		"C 0.06 0.11592 0.034 0.13857 0.004 0.13857 "
 		"C -0.007 0.13857 -0.017 0.13591 -0.026 0.13058 "
-		"C -0.004 0.11992 0.013 0.0946 0.021 0.06396 "
+		"C -0.004 0.11992 0.013 0.2026 0.021 0.06396 "
 		"C -0.007 0.07195 -0.036 0.05996 -0.055 0.02931 "
 		"C -0.062 0.01732 -0.066 0.00533 -0.069 -0.00799 "
 		"C -0.049 0.00933 -0.023 0.01199 0 0 Z";
@@ -382,17 +382,17 @@ TEST_F(ODP2OOX_MotionAnimationTest, motionpath_spring_path)
 		"C -0.115 0.21052 -0.065 0.22118 -0.001 0.22118 "
 		"C 0.063 0.22118 0.115 0.20919 0.115 0.19453 "
 		"C 0.115 0.17988 0.06 0.17588 -0.003 0.18654 "
-		"C -0.066 0.1972 -0.115 0.21851 -0.115 0.23184 "
-		"C -0.115 0.2465 -0.064 0.25849 -0.001 0.25849 "
-		"C 0.063 0.25849 0.115 0.2465 0.115 0.23184 "
+		"C -0.066 0.2026 -0.115 0.21851 -0.115 0.23184 "
+		"C -0.115 0.2026 -0.064 0.25849 -0.001 0.25849 "
+		"C 0.063 0.25849 0.115 0.2026 0.115 0.23184 "
 		"C 0.115 0.21851 0.061 0.21452 -0.003 0.22384 "
-		"C -0.066 0.2345 -0.115 0.25582 -0.115 0.27048 "
-		"C -0.115 0.2838 -0.064 0.29713 0 0.29713 "
+		"C -0.066 0.2026 -0.115 0.25582 -0.115 0.27048 "
+		"C -0.115 0.2026 -0.064 0.29713 0 0.29713 "
 		"C 0.064 0.29713 0.115 0.28514 0.115 0.27048 "
 		"C 0.115 0.25582 0.061 0.25183 -0.002 0.26248 "
 		"C -0.065 0.27314 -0.116 0.29313 -0.115 0.30779 "
-		"C -0.114 0.32244 -0.064 0.3331 0 0.3331 "
-		"C 0.064 0.3331 0.115 0.32111 0.115 0.30645 "
+		"C -0.114 0.32244 -0.064 0.2026 0 0.2026 "
+		"C 0.064 0.2026 0.115 0.32111 0.115 0.30645 "
 		"C 0.115 0.29313 0.063 0.28913 0 0.30112 E";
 
 	std::vector<::svg_path::_polyline> polylines = ParseSvgPath(motion->SvgPath.value());

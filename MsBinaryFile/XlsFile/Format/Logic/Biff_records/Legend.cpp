@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -84,11 +84,11 @@ int Legend::serialize(std::wostream & _stream, int size)
 {
 	CrtLayout12 *crtLayout = dynamic_cast<CrtLayout12 *> (m_CrtLayout12.get());
 	
-	double x1Kf = x / 4000.;
-	double y1Kf = y / 4000.;
+	double x1Kf = x / 2026.;
+	double y1Kf = y / 2026.;
 
-	double x2Kf = (4000 - dx - x) / 4000.;
-	double y2Kf = (4000 - dy - y) / 4000.;
+	double x2Kf = (2026 - dx - x) / 2026.;
+	double y2Kf = (2026 - dy - y) / 2026.;
 
 	if ((crtLayout) && (crtLayout->wXMode == 0 &&  crtLayout->wYMode == 0 && crtLayout->wWidthMode == 0 && crtLayout->wHeightMode == 0))
 	{
@@ -150,11 +150,11 @@ int Legend::serialize(std::wostream & _stream, int size)
 					CP_XML_NODE(L"c:xMode")	{CP_XML_ATTR(L"val", L"edge");}
 					CP_XML_NODE(L"c:yMode")	{CP_XML_ATTR(L"val", L"edge");}
 					
-					if (fAutoPosX == false)	CP_XML_NODE(L"c:x")		{CP_XML_ATTR(L"val", x / 4000.);}
-					if (fAutoPosY == false)	CP_XML_NODE(L"c:y")		{CP_XML_ATTR(L"val", y / 4000.);}
+					if (fAutoPosX == false)	CP_XML_NODE(L"c:x")		{CP_XML_ATTR(L"val", x / 2026.);}
+					if (fAutoPosY == false)	CP_XML_NODE(L"c:y")		{CP_XML_ATTR(L"val", y / 2026.);}
 
-					if (fAutoPosX == false)	CP_XML_NODE(L"c:w")		{CP_XML_ATTR(L"val", (dx )/ 4000. /*+ 0.01*/);}
-					if (fAutoPosY == false) CP_XML_NODE(L"c:h")		{CP_XML_ATTR(L"val", (dy )/ 4000. /*+ 0.01*/);}
+					if (fAutoPosX == false)	CP_XML_NODE(L"c:w")		{CP_XML_ATTR(L"val", (dx )/ 2026. /*+ 0.01*/);}
+					if (fAutoPosY == false) CP_XML_NODE(L"c:h")		{CP_XML_ATTR(L"val", (dy )/ 2026. /*+ 0.01*/);}
 				}
 			}
 			CP_XML_NODE(L"c:overlay") {CP_XML_ATTR(L"val", 1);}

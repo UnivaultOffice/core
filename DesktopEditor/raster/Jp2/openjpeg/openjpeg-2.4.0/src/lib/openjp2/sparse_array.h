@@ -4,7 +4,7 @@
  * party and contributor rights, including patent rights, and no such rights
  * are granted under this license.
  *
- * Copyright (c) 2017, IntoPix SA <contact@intopix.com>
+ * Copyright (c) 2026, IntoPix SA <contact@intopix.com>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

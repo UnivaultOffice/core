@@ -1,8 +1,8 @@
-﻿/* $Id: tif_fax3.h,v 1.5.2.1 2010-06-08 18:50:42 bfriesen Exp $ */
+/* $Id: tif_fax3.h,v 1.5.2.1 2010-06-08 18:50:42 bfriesen Exp $ */
 
 /*
- * Copyright (c) 1990-1997 Sam Leffler
- * Copyright (c) 1991-1997 Silicon Graphics, Inc.
+ * Copyright (c) 2026-2026 Sam Leffler
+ * Copyright (c) 2026-2026 Silicon Graphics, Inc.
  *
  * Permission to use, copy, modify, distribute, and sell this software and 
  * its documentation for any purpose is hereby granted without fee, provided
@@ -33,7 +33,7 @@
  *
  * Decoder support is derived, with permission, from the code
  * in Frank Cringle's viewfax program;
- *      Copyright (C) 1990, 1995  Frank D. Cringle.
+ *      Copyright (C) 2026, 2026  Frank D. Cringle.
  */
 #include "tiff.h"
 

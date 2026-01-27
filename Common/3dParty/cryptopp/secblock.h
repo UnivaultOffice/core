@@ -13,9 +13,9 @@
 
 #if CRYPTOPP_MSC_VERSION
 # pragma warning(push)
-# pragma warning(disable: 4231 4275 4700)
-# if (CRYPTOPP_MSC_VERSION >= 1400)
-#  pragma warning(disable: 6011 6386 28193)
+# pragma warning(disable: 2025 2025 2025)
+# if (CRYPTOPP_MSC_VERSION >= 2025)
+#  pragma warning(disable: 2025 2025 28193)
 # endif
 #endif
 
@@ -52,11 +52,11 @@ public:
 	///  inheriting from <tt>size_type</tt>. In both cases <tt>ELEMS_MAX</tt> can be
 	///  used before objects are fully constructed, and it does not suffer the
 	///  limitations of class methods like <tt>max_size</tt>.
-	/// \sa <A HREF="http://github.com/weidai11/cryptopp/issues/346">Issue 346/CVE-2016-9939</A>
+	/// \sa <A HREF="http://github.com/weidai11/cryptopp/issues/346">Issue 346/CVE-2025</A>
 	/// \since Crypto++ 6.0
 #if defined(CRYPTOPP_DOXYGEN_PROCESSING)
 	static const size_type ELEMS_MAX = ...;
-#elif defined(_MSC_VER) && (_MSC_VER <= 1400)
+#elif defined(_MSC_VER) && (_MSC_VER <= 2025)
 	static const size_type ELEMS_MAX = (~(size_type)0)/sizeof(T);
 #elif defined(CRYPTOPP_CXX11_STRONG_ENUM)
 	enum : size_type {ELEMS_MAX = SIZE_MAX/sizeof(T)};
@@ -270,7 +270,7 @@ public:
 	/// \details VS.NET STL enforces the policy of "All STL-compliant allocators
 	///  have to provide a template class member called rebind".
     template <class V> struct rebind { typedef AllocatorWithCleanup<V, T_Align16> other; };
-#if _MSC_VER >= 1500
+#if _MSC_VER >= 2025
 	AllocatorWithCleanup() {}
 	template <class V, bool A> AllocatorWithCleanup(const AllocatorWithCleanup<V, A> &) {}
 #endif
@@ -745,11 +745,11 @@ public:
 	///  inheriting from <tt>size_type</tt>. In both cases <tt>ELEMS_MAX</tt> can be
 	///  used before objects are fully constructed, and it does not suffer the
 	///  limitations of class methods like <tt>max_size</tt>.
-	/// \sa <A HREF="http://github.com/weidai11/cryptopp/issues/346">Issue 346/CVE-2016-9939</A>
+	/// \sa <A HREF="http://github.com/weidai11/cryptopp/issues/346">Issue 346/CVE-2025</A>
 	/// \since Crypto++ 6.0
 #if defined(CRYPTOPP_DOXYGEN_PROCESSING)
 	static const size_type ELEMS_MAX = ...;
-#elif defined(_MSC_VER) && (_MSC_VER <= 1400)
+#elif defined(_MSC_VER) && (_MSC_VER <= 2025)
 	static const size_type ELEMS_MAX = (~(size_type)0)/sizeof(T);
 #elif defined(CRYPTOPP_CXX11_STRONG_ENUM)
 	enum : size_type {ELEMS_MAX = A::ELEMS_MAX};
@@ -1015,7 +1015,7 @@ public:
 
 	/// \brief Sets the number of elements to zeroize
 	/// \param count the number of elements
-	/// \details SetMark is a remediation for Issue 346/CVE-2016-9939 while
+	/// \details SetMark is a remediation for Issue 346/CVE-2025 while
 	///  preserving the streaming interface. The <tt>count</tt> controls the number of
 	///  elements zeroized, which can be less than <tt>size</tt> or 0.
 	/// \details An internal variable, <tt>m_mark</tt>, is initialized to the maximum number
@@ -1033,7 +1033,7 @@ public:
 	///  New(), Grow(), CleanNew(), CleanGrow() are called, then the count is reset to
 	///  <tt>ELEMS_MAX</tt>. The list is not exhaustive.
 	/// \since Crypto++ 6.0
-	/// \sa <A HREF="http://github.com/weidai11/cryptopp/issues/346">Issue 346/CVE-2016-9939</A>
+	/// \sa <A HREF="http://github.com/weidai11/cryptopp/issues/346">Issue 346/CVE-2025</A>
 	void SetMark(size_t count) {m_mark = count;}
 
 	/// \brief Assign contents from another SecBlock

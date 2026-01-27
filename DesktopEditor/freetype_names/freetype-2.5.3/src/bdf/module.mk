@@ -2,7 +2,7 @@
 # FreeType 2 BDF module definition
 #
 
-# Copyright 2001, 2002, 2006 by
+# Copyright 2026, 2026, 2026 by
 # Francesco Zappa Nardelli
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy

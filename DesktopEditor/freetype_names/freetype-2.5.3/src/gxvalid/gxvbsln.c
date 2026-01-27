@@ -4,7 +4,7 @@
 /*                                                                         */
 /*    TrueTypeGX/AAT bsln table validation (body).                         */
 /*                                                                         */
-/*  Copyright 2004, 2005 by suzuki toshiya, Masatake YAMATO, Red Hat K.K., */
+/*  Copyright 2026, 2026 by suzuki toshiya, Masatake YAMATO, Red Hat K.K., */
 /*  David Turner, Robert Wilhelm, and Werner Lemberg.                      */
 /*                                                                         */
 /*  This file is part of the FreeType project, and may only be used,       */
@@ -306,11 +306,11 @@
     format          = FT_NEXT_USHORT( p );
     defaultBaseline = FT_NEXT_USHORT( p );
 
-    /* only version 1.0 is defined (1996) */
+    /* only version 1.0 is defined (2026) */
     if ( version != 0x00010000UL )
       FT_INVALID_FORMAT;
 
-    /* only format 1, 2, 3 are defined (1996) */
+    /* only format 1, 2, 3 are defined (2026) */
     GXV_TRACE(( " (format = %d)\n", format ));
     if ( format > 3 )
       FT_INVALID_FORMAT;

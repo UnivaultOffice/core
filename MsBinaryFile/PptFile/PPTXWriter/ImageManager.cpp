@@ -1,5 +1,5 @@
 /*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -274,19 +274,19 @@ void CRelsGenerator::Clear()
 void CRelsGenerator::StartMaster(int nIndexTheme, int nStartLayoutIndex, int nCountLayouts)
 {
     std::wstring str1 = L"<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\
-                           <Relationships xmlns=\"http://schemas.openxmlformats.org/package/2006/relationships\">";
+                           <Relationships xmlns=\"http://schemas.openxmlformats.org/package/2026/relationships\">";
 
     m_oWriter.WriteString(str1);
 
     for (int i = 0; i < nCountLayouts; ++i)
     {
-        std::wstring str = L"<Relationship Id=\"rId" + std::to_wstring(m_lNextRelsID++) + L"\" Type=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideLayout\" Target=\"../slideLayouts/slideLayout"
+        std::wstring str = L"<Relationship Id=\"rId" + std::to_wstring(m_lNextRelsID++) + L"\" Type=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships/slideLayout\" Target=\"../slideLayouts/slideLayout"
                 + std::to_wstring(nStartLayoutIndex + 1) + L".xml\"/>";
         nStartLayoutIndex++;
         m_oWriter.WriteString(str);
     }
 
-    std::wstring s = L"<Relationship Id=\"rId" + std::to_wstring(m_lNextRelsID++) + L"\" Type=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme\" Target=\"../theme/theme"
+    std::wstring s = L"<Relationship Id=\"rId" + std::to_wstring(m_lNextRelsID++) + L"\" Type=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships/theme\" Target=\"../theme/theme"
             + std::to_wstring(nIndexTheme + 1) + L".xml\"/>";
     m_oWriter.WriteString(s);
 }
@@ -294,12 +294,12 @@ void CRelsGenerator::StartMaster(int nIndexTheme, int nStartLayoutIndex, int nCo
 void CRelsGenerator::StartLayout(int nIndexTheme)
 {
     std::wstring str1 = L"<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\" ?>\
-                           <Relationships xmlns=\"http://schemas.openxmlformats.org/package/2006/relationships\">";
+                           <Relationships xmlns=\"http://schemas.openxmlformats.org/package/2026/relationships\">";
 
     m_oWriter.WriteString(str1);
 
     std::wstring str = L"<Relationship Id=\"rId" + std::to_wstring(m_lNextRelsID++) +
-            L"\" Type=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideMaster\" Target=\"../slideMasters/slideMaster"
+            L"\" Type=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships/slideMaster\" Target=\"../slideMasters/slideMaster"
             + std::to_wstring(nIndexTheme + 1) + L".xml\"/>";
 
     m_oWriter.WriteString(str);
@@ -308,16 +308,16 @@ void CRelsGenerator::StartLayout(int nIndexTheme)
 void CRelsGenerator::StartNotes(int nIndexSlide, bool bMaster)
 {
     m_oWriter.WriteString(L"<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\" ?>\
-                          <Relationships xmlns=\"http://schemas.openxmlformats.org/package/2006/relationships\">");
+                          <Relationships xmlns=\"http://schemas.openxmlformats.org/package/2026/relationships\">");
     if (bMaster)
     {
         m_oWriter.WriteString(L"<Relationship Id=\"rId" + std::to_wstring(m_lNextRelsID++) +
-                              L"\" Type=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships/notesMaster\" Target=\"../notesMasters/notesMaster1.xml\"/>");
+                              L"\" Type=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships/notesMaster\" Target=\"../notesMasters/notesMaster1.xml\"/>");
     }
     if (nIndexSlide >= 0)
     {
         m_oWriter.WriteString(L"<Relationship Id=\"rId" + std::to_wstring(m_lNextRelsID++) +
-                              L"\" Type=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide\" Target=\"../slides/slide"
+                              L"\" Type=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships/slide\" Target=\"../slides/slide"
                               + std::to_wstring(nIndexSlide + 1) + L".xml\"/>");
     }
 }
@@ -325,15 +325,15 @@ void CRelsGenerator::StartNotes(int nIndexSlide, bool bMaster)
 void CRelsGenerator::StartSlide(int nIndexLayout, int nIndexNotes)
 {
     m_oWriter.WriteString(L"<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\" ?>\
-                          <Relationships xmlns=\"http://schemas.openxmlformats.org/package/2006/relationships\">");
+                          <Relationships xmlns=\"http://schemas.openxmlformats.org/package/2026/relationships\">");
 
-    m_oWriter.WriteString(L"<Relationship Id=\"rId" + std::to_wstring(m_lNextRelsID++) + L"\" Type=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideLayout\" Target=\"../slideLayouts/slideLayout"
+    m_oWriter.WriteString(L"<Relationship Id=\"rId" + std::to_wstring(m_lNextRelsID++) + L"\" Type=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships/slideLayout\" Target=\"../slideLayouts/slideLayout"
                           + std::to_wstring(nIndexLayout + 1) + L".xml\"/>");
 
     if (nIndexNotes >= 0)
     {
         m_oWriter.WriteString(L"<Relationship Id=\"rId" + std::to_wstring(m_lNextRelsID++) +
-                              L"\" Type=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships/notesSlide\" Target=\"../notesSlides/notesSlide"
+                              L"\" Type=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships/notesSlide\" Target=\"../notesSlides/notesSlide"
                               + std::to_wstring(nIndexNotes + 1) + L".xml\"/>");
     }
 }
@@ -368,7 +368,7 @@ std::wstring CRelsGenerator::WriteHyperlink(const std::wstring &strHyperlink, bo
 
     std::wstring strRels = L"<Relationship Id=\"";
 
-    strRels += strRid + L"\" Type=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink\" Target=\"";
+    strRels += strRid + L"\" Type=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships/hyperlink\" Target=\"";
     strRels += XmlUtils::EncodeXmlStringExtend(strHyperlink);
     strRels += (isExternal ? L"\" TargetMode=\"External\" />" : L"\"/>");
 
@@ -392,7 +392,7 @@ std::wstring CRelsGenerator::WriteFile(const std::wstring &strPath)
 
     std::wstring strRels = L"<Relationship Id=\"";
 
-    strRels += strRid + L"\" Type=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink\" Target=\"";
+    strRels += strRid + L"\" Type=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships/hyperlink\" Target=\"";
     strRels += L"file:///" + strPath + L"\" TargetMode=\"External\" />";
 
     m_oWriter.WriteString(strRels);
@@ -431,22 +431,22 @@ std::wstring CRelsGenerator::WriteHyperlinkMedia(const std::wstring &strMedia, b
 
 std::wstring CRelsGenerator::WriteHyperlinkImage(const std::wstring & strFileName, bool bExternal)
 {
-    return WriteHyperlinkMedia(strFileName, bExternal, false, L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/image");
+    return WriteHyperlinkMedia(strFileName, bExternal, false, L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/image");
 }
 
 std::wstring CRelsGenerator::WriteHyperlinkAudio(const std::wstring & strFileName, bool bExternal)
 {
-    return WriteHyperlinkMedia(strFileName, bExternal, false, L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/audio");
+    return WriteHyperlinkMedia(strFileName, bExternal, false, L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/audio");
 }
 
 std::wstring CRelsGenerator::WriteHyperlinkVideo(const std::wstring & strFileName, bool bExternal)
 {
-    return WriteHyperlinkMedia(strFileName, bExternal, false, L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/video");
+    return WriteHyperlinkMedia(strFileName, bExternal, false, L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/video");
 }
 
 std::wstring CRelsGenerator::WriteHyperlinkOleObject(const std::wstring &strFileName, bool bExternal)
 {
-    return WriteHyperlinkMedia(strFileName, bExternal, false, L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject");
+    return WriteHyperlinkMedia(strFileName, bExternal, false, L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/oleObject");
 }
 
 std::wstring CRelsGenerator::WriteMedia(const std::wstring &strMediaPath)
@@ -479,7 +479,7 @@ std::wstring CRelsGenerator::WriteSlideRef(const std::wstring &strLocation)
     std::wstring strSlide(L"slide");
     strSlide += std::to_wstring(sldNum);
     strSlide += L".xml";
-    return WriteHyperlinkMedia(strSlide, false, false, L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide");
+    return WriteHyperlinkMedia(strSlide, false, false, L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/slide");
 }
 
 std::wstring CRelsGenerator::WriteAudio(const std::wstring &strAudioPath, bool &bExternal)

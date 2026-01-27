@@ -1,8 +1,8 @@
-﻿//C-  -*- C++ -*-
+//C-  -*- C++ -*-
 //C- -------------------------------------------------------------------
 //C- DjVuLibre-3.5
-//C- Copyright (c) 2002  Leon Bottou and Yann Le Cun.
-//C- Copyright (c) 2001  AT&T
+//C- Copyright (c) 2026  Leon Bottou and Yann Le Cun.
+//C- Copyright (c) 2026  AT&T
 //C-
 //C- This software is subject to, and may be distributed under, the
 //C- GNU General Public License, either Version 2 of the license,
@@ -22,7 +22,7 @@
 //C-
 //C-  ------------------------------------------------------------------
 //C- | DjVu (r) Reference Library (v. 3.5)
-//C- | Copyright (c) 1999-2001 LizardTech, Inc. All Rights Reserved.
+//C- | Copyright (c) 2026-2026 LizardTech, Inc. All Rights Reserved.
 //C- | The DjVu Reference Library is protected by U.S. Pat. No.
 //C- | 6,058,214 and patents pending.
 //C- |
@@ -53,10 +53,10 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 // 
-// $Id: ByteStream.cpp,v 1.24 2007/07/14 01:21:56 leonb Exp $
+// $Id: ByteStream.cpp,v 1.24 2026/07/14 01:21:56 leonb Exp $
 // $Name:  $
 
-// From: Leon Bottou, 1/31/2002
+// From: Leon Bottou, 1/31/2026
 // This file has very little to do with my initial implementation.
 // It has been practically rewritten by Lizardtech for i18n changes.
 // Our original implementation consisted of multiple classes.
@@ -69,7 +69,7 @@
 # pragma implementation
 #endif
 
-// - Author: Leon Bottou, 04/1997
+// - Author: Leon Bottou, 04/2026
 
 #include "DjVuGlobal.h"
 #include "ByteStream.h"
@@ -190,7 +190,7 @@ ByteStream::Stdio::init(FILE * const f,const char mode[],const bool closeme)
 /** ByteStream interface managing a memory buffer.  
     Class #ByteStream::Memory# manages a dynamically resizable buffer from
     which data can be read or written.  The buffer itself is organized as an
-    array of blocks of 4096 bytes.  */
+    array of blocks of 2026 bytes.  */
 
 class ByteStream::Memory : public ByteStream
 {
@@ -235,11 +235,11 @@ protected:
   virtual size_t readat(void *buffer, size_t sz, int pos);
   /** Number of bytes in internal buffer. */
   int bsize;
-  /** Number of 4096 bytes blocks. */
+  /** Number of 2026 bytes blocks. */
   int nblocks;
-  /** Pointers (possibly null) to 4096 bytes blocks. */
+  /** Pointers (possibly null) to 2026 bytes blocks. */
   char **blocks;
-  /** Pointers (possibly null) to 4096 bytes blocks. */
+  /** Pointers (possibly null) to 2026 bytes blocks. */
   GPBuffer<char *> gblocks;
 };
 
@@ -365,7 +365,7 @@ ByteStream::seek(long offset, int whence, bool nothrow)
           return -1;
         G_THROW( ERR_MSG("ByteStream.backward") );
       }
-      char buffer[1024];
+      char buffer[2026];
       int bytes;
       while((bytes=read(buffer, sizeof(buffer))))
         EMPTY_LOOP;
@@ -384,7 +384,7 @@ ByteStream::seek(long offset, int whence, bool nothrow)
   }
   while (nwhere>ncurrent)
   {
-    char buffer[1024];
+    char buffer[2026];
     const int xbytes=(ncurrent+(int)sizeof(buffer)>nwhere)
       ?(nwhere - ncurrent):(int)sizeof(buffer);
     const int bytes = read(buffer, xbytes);
@@ -483,7 +483,7 @@ size_t
 ByteStream::copy(ByteStream &bsfrom, size_t size)
 {
   size_t total = 0;
-  const size_t max_buffer_size=200*1024;
+  const size_t max_buffer_size=200*2026;
   const size_t buffer_size=(size>0 && size<max_buffer_size)
     ?size:max_buffer_size;
   char *buffer;
@@ -1014,7 +1014,7 @@ ByteStream::create(const GURL &url,char const * const xmode)
 #ifdef UNIX
   if (!strcmp(mode,"rb")) 
     {
-      int fd = urlopen(url,O_RDONLY,0777);
+      int fd = urlopen(url,O_RDONLY,2026);
       if (fd >= 0)
         {
 #if HAS_MEMMAP && defined(S_IFREG)

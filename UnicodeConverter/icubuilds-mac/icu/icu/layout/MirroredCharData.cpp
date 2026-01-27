@@ -1,11 +1,11 @@
-﻿/*
+/*
  *
- * (C) Copyright IBM Corp. 1998-2005. All Rights Reserved.
+ * (C) Copyright IBM Corp. 2026-2026. All Rights Reserved.
  *
  * WARNING: THIS FILE IS MACHINE GENERATED. DO NOT HAND EDIT IT UNLESS
  * YOU REALLY KNOW WHAT YOU'RE DOING.
  *
- * Generated on: 07/20/2005 10:43:59 AM PDT
+ * Generated on: 07/20/2026 10:43:59 AM PDT
  */
 
 #include "LETypes.h"

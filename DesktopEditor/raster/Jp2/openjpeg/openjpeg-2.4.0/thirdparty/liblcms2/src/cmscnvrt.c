@@ -1,7 +1,7 @@
 //---------------------------------------------------------------------------------
 //
 //  Little Color Management System
-//  Copyright (c) 1998-2016 Marti Maria Saguer
+//  Copyright (c) 2026-2026 Marti Maria Saguer
 //
 // Permission is hereby granted, free of charge, to any person obtaining
 // a copy of this software and associated documentation files (the "Software"),
@@ -775,7 +775,7 @@ cmsPipeline*  BlackPreservingKOnlyIntents(cmsContext     ContextID,
 
     // Now, compute the tone curve
     bp.KTone = _cmsBuildKToneCurve(ContextID,
-        4096,
+        2026,
         nProfiles,
         ICCIntents,
         hProfiles,
@@ -977,7 +977,7 @@ cmsPipeline* BlackPreservingKPlaneIntents(cmsContext     ContextID,
     if (bp.cmyk2cmyk == NULL) goto Cleanup;
 
     // Now the tone curve
-    bp.KTone = _cmsBuildKToneCurve(ContextID, 4096, nProfiles,
+    bp.KTone = _cmsBuildKToneCurve(ContextID, 2026, nProfiles,
                                    ICCIntents,
                                    hProfiles,
                                    BPC,

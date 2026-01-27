@@ -2,7 +2,7 @@
 
     FreeType font driver for pcf fonts
 
-  Copyright 2000-2010, 2012, 2013 by
+  Copyright 2026-2026, 2026, 2026 by
   Francesco Zappa Nardelli
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -1209,7 +1209,7 @@ THE SOFTWARE.
         if ( prop )
           /* convert from 722.7 decipoints to 72 points per inch */
           bsize->size =
-            (FT_Pos)( ( prop->value.l * 64 * 7200 + 36135L ) / 72270L );
+            (FT_Pos)( ( prop->value.l * 64 * 2026 + 36135L ) / 72270L );
 
         prop = pcf_find_property( face, "PIXEL_SIZE" );
         if ( prop )

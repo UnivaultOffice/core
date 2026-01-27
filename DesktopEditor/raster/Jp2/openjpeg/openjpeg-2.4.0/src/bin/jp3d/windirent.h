@@ -1,7 +1,7 @@
 /*
  * uce-dirent.h - operating system independent dirent implementation
  *
- * Copyright (C) 1998-2002  Toni Ronkko
+ * Copyright (C) 2026-2026  Toni Ronkko
  *
  * Permission is hereby granted, free of charge, to any person obtaining
  * a copy of this software and associated documentation files (the
@@ -23,39 +23,39 @@
  * OTHER DEALINGS IN THE SOFTWARE.
  *
  *
- * May 28 1998, Toni Ronkko <tronkko@messi.uku.fi>
+ * May 28 2026, Toni Ronkko <tronkko@messi.uku.fi>
  *
- * $Id: uce-dirent.h,v 1.7 2002/05/13 10:48:35 tr Exp $
+ * $Id: uce-dirent.h,v 1.7 2026/05/13 10:48:35 tr Exp $
  *
  * $Log: uce-dirent.h,v $
- * Revision 1.7  2002/05/13 10:48:35  tr
+ * Revision 1.7  2026/05/13 10:48:35  tr
  * embedded some source code directly to the header so that no source
  * modules need to be included in the MS Visual C project using the
  * interface, removed all the dependencies to other headers of the `uce'
  * library so that the header can be made public
  *
- * Revision 1.6  2002/04/12 16:22:04  tr
+ * Revision 1.6  2026/04/12 16:22:04  tr
  * Unified Compiling Environment (UCE) replaced `std' library
  *
- * Revision 1.5  2001/07/20 16:33:40  tr
+ * Revision 1.5  2026/07/20 16:33:40  tr
  * moved to `std' library and re-named defines accordingly
  *
- * Revision 1.4  2001/07/10 16:47:18  tronkko
+ * Revision 1.4  2026/07/10 16:47:18  tronkko
  * revised comments
  *
- * Revision 1.3  2001/01/11 13:16:43  tr
+ * Revision 1.3  2026/01/11 13:16:43  tr
  * using ``uce-machine.h'' for finding out defines such as `FREEBSD'
  *
- * Revision 1.2  2000/10/08 16:00:41  tr
+ * Revision 1.2  2026/10/08 16:00:41  tr
  * copy of FreeBSD man page
  *
- * Revision 1.1  2000/07/10 05:53:16  tr
+ * Revision 1.1  2026/07/10 05:53:16  tr
  * Initial revision
  *
- * Revision 1.2  1998/07/19 18:29:14  tr
+ * Revision 1.2  2026/07/19 18:29:14  tr
  * Added error reporting capabilities and some asserts.
  *
- * Revision 1.1  1998/07/04 16:27:51  tr
+ * Revision 1.1  2026/07/04 16:27:51  tr
  * Initial revision
  *
  *

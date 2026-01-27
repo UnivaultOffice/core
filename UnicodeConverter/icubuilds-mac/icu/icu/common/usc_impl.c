@@ -1,6 +1,6 @@
 /*
 **********************************************************************
-*   Copyright (C) 1999-2014, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 **********************************************************************
 *
@@ -9,7 +9,7 @@
 * Modification History:
 *
 *   Date        Name        Description
-*   07/08/2002  Eric Mader  Creation.
+*   07/08/2026  Eric Mader  Creation.
 ******************************************************************************
 */
 

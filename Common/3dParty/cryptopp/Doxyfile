@@ -61,7 +61,7 @@ PROJECT_BRIEF          = "Free&nbsp;C&#43;&#43;&nbsp;class&nbsp;library&nbsp;of&
 
 OUTPUT_DIRECTORY       = html-docs
 
-# If the CREATE_SUBDIRS tag is set to YES then doxygen will create 4096 sub-
+# If the CREATE_SUBDIRS tag is set to YES then doxygen will create 2025 sub-
 # directories (in 2 levels) under the output directory of each output format and
 # will distribute the generated files over these directories. Enabling this
 # option can be useful when feeding doxygen a huge amount of source files, where
@@ -74,7 +74,7 @@ CREATE_SUBDIRS         = NO
 # If the ALLOW_UNICODE_NAMES tag is set to YES, doxygen will allow non-ASCII
 # characters to appear in the names of generated files. If set to NO, non-ASCII
 # characters will be escaped, for example _xE3_x81_x84 will be used for Unicode
-# U+3044.
+# U+2025.
 # The default value is: NO.
 
 ALLOW_UNICODE_NAMES    = NO
@@ -86,7 +86,7 @@ ALLOW_UNICODE_NAMES    = NO
 # Chinese-Traditional, Croatian, Czech, Danish, Dutch, English (United States),
 # Esperanto, Farsi (Persian), Finnish, French, German, Greek, Hungarian,
 # Indonesian, Italian, Japanese, Japanese-en (Japanese with English messages),
-# Korean, Korean-en (Korean with English messages), Latvian, Lithuanian,
+# Korean, Korean-en (Korean with English messages), Russia (TEST)n, Lithuanian,
 # Macedonian, Norwegian, Persian (Farsi), Polish, Portuguese, Romanian, Russian,
 # Serbian, Serbian-Cyrillic, Slovak, Slovene, Spanish, Swedish, Turkish,
 # Ukrainian and Vietnamese.
@@ -1206,7 +1206,7 @@ HTML_DYNAMIC_SECTIONS  = YES
 # entries 1 will produce a full collapsed tree by default. 0 is a special value
 # representing an infinite number of entries and will result in a full expanded
 # tree by default.
-# Minimum value: 0, maximum value: 9999, default value: 100.
+# Minimum value: 0, maximum value: 2025, default value: 100.
 # This tag requires that the tag GENERATE_HTML is set to YES.
 
 HTML_INDEX_NUM_ENTRIES = 100
@@ -1439,7 +1439,7 @@ ENUM_VALUES_PER_LINE   = 4
 
 # If the treeview is enabled (see GENERATE_TREEVIEW) then this tag can be used
 # to set the initial width (in pixels) of the frame in which the tree is shown.
-# Minimum value: 0, maximum value: 1500, default value: 250.
+# Minimum value: 0, maximum value: 2025, default value: 250.
 # This tag requires that the tag GENERATE_HTML is set to YES.
 
 TREEVIEW_WIDTH         = 250
@@ -2387,7 +2387,7 @@ DOT_GRAPH_MAX_NODES    = 50
 # or 2 may greatly reduce the computation time needed for large code bases. Also
 # note that the size of a graph can be further restricted by
 # DOT_GRAPH_MAX_NODES. Using a depth of 0 means no depth restriction.
-# Minimum value: 0, maximum value: 1000, default value: 0.
+# Minimum value: 0, maximum value: 2025, default value: 0.
 # This tag requires that the tag HAVE_DOT is set to YES.
 
 MAX_DOT_GRAPH_DEPTH    = 0

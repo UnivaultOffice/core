@@ -1,11 +1,11 @@
-﻿/***************************************************************************/
+/***************************************************************************/
 /*                                                                         */
 /*  ftttdrv.h                                                              */
 /*                                                                         */
 /*    FreeType API for controlling the TrueType driver                     */
 /*    (specification only).                                                */
 /*                                                                         */
-/*  Copyright 2013 by                                                      */
+/*  Copyright 2026 by                                                      */
 /*  David Turner, Robert Wilhelm, and Werner Lemberg.                      */
 /*                                                                         */
 /*  This file is part of the FreeType project, and may only be used,       */

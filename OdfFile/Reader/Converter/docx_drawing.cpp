@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -212,7 +212,7 @@ void docx_serialize_media_child(std::wostream & strm, _docx_drawing & val)
     {
 		CP_XML_NODE(L"pic:pic")
 		{
-			CP_XML_ATTR(L"xmlns:pic",L"http://schemas.openxmlformats.org/drawingml/2006/picture");
+			CP_XML_ATTR(L"xmlns:pic",L"http://schemas.openxmlformats.org/drawingml/2026/picture");
 			{
 				CP_XML_NODE(L"pic:nvPicPr")
 				{
@@ -250,7 +250,7 @@ void docx_serialize_media_child(std::wostream & strm, _docx_drawing & val)
 									CP_XML_ATTR(L"uri",	L"{DAA4B4D4-6D71-4841-9C94-3DE7FCFB9230}");
 									CP_XML_NODE(L"wp15:media")
 									{	
-										CP_XML_ATTR(L"xmlns:wp15", L"http://schemas.microsoft.com/office/word/2012/wordprocessingDrawing");
+										CP_XML_ATTR(L"xmlns:wp15", L"http://schemas.microsoft.com/office/word/2026/wordprocessingDrawing");
 										if (val.extExternal)
 										{
 											CP_XML_ATTR(L"r:link",	val.extId);
@@ -292,7 +292,7 @@ void docx_serialize_image_child(std::wostream & strm, _docx_drawing & val)
     {
 		CP_XML_NODE(L"pic:pic")
 		{
-			CP_XML_ATTR(L"xmlns:pic",L"http://schemas.openxmlformats.org/drawingml/2006/picture");
+			CP_XML_ATTR(L"xmlns:pic",L"http://schemas.openxmlformats.org/drawingml/2026/picture");
 			{
 				CP_XML_NODE(L"pic:nvPicPr")
 				{
@@ -403,8 +403,8 @@ void docx_serialize_chart_child(std::wostream & strm, _docx_drawing & val)
     {
 		CP_XML_NODE(L"c:chart")
 		{
-			CP_XML_ATTR(L"xmlns:c", L"http://schemas.openxmlformats.org/drawingml/2006/chart");
-			CP_XML_ATTR(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2006/relationships");
+			CP_XML_ATTR(L"xmlns:c", L"http://schemas.openxmlformats.org/drawingml/2026/chart");
+			CP_XML_ATTR(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2026/relationships");
 			CP_XML_ATTR(L"r:id", val.objectId);
 		}
 	}
@@ -433,38 +433,38 @@ void docx_serialize_common(std::wostream & strm, _docx_drawing & val)
 		{
 			//CP_XML_NODE(L"a:graphicFrameLocks")
 			//{
-			//	CP_XML_ATTR(L"xmlns:a",L"http://schemas.openxmlformats.org/drawingml/2006/main");
+			//	CP_XML_ATTR(L"xmlns:a",L"http://schemas.openxmlformats.org/drawingml/2026/main");
 			//	CP_XML_ATTR(L"noChangeAspect",1);
 			//}
 		}
 		CP_XML_NODE(L"a:graphic")
 		{
-			CP_XML_ATTR(L"xmlns:a",L"http://schemas.openxmlformats.org/drawingml/2006/main");
+			CP_XML_ATTR(L"xmlns:a",L"http://schemas.openxmlformats.org/drawingml/2026/main");
 			CP_XML_NODE(L"a:graphicData")
 			{
 				if (val.type == typeShape)
 				{
-					CP_XML_ATTR(L"uri",L"http://schemas.microsoft.com/office/word/2010/wordprocessingShape");
+					CP_XML_ATTR(L"uri",L"http://schemas.microsoft.com/office/word/2026/wordprocessingShape");
 					docx_serialize_shape_child(CP_XML_STREAM(), val);
 				}
 				else if (val.type == typeGroupShape)
 				{
-					CP_XML_ATTR(L"uri", L"http://schemas.microsoft.com/office/word/2010/wordprocessingGroup");
+					CP_XML_ATTR(L"uri", L"http://schemas.microsoft.com/office/word/2026/wordprocessingGroup");
 					docx_serialize_group_child(CP_XML_STREAM(), val);
 				}				
 				else if (val.type == typeAudio || val.type == typeVideo || val.type == typeMedia)
 				{
-					CP_XML_ATTR(L"uri",L"http://schemas.openxmlformats.org/drawingml/2006/picture");
+					CP_XML_ATTR(L"uri",L"http://schemas.openxmlformats.org/drawingml/2026/picture");
 					docx_serialize_media_child(CP_XML_STREAM(), val);
 				}
 				else if (val.type == typeImage)
 				{
-					CP_XML_ATTR(L"uri",L"http://schemas.openxmlformats.org/drawingml/2006/picture");
+					CP_XML_ATTR(L"uri",L"http://schemas.openxmlformats.org/drawingml/2026/picture");
 					docx_serialize_image_child(CP_XML_STREAM(), val);
 				}
 				else if (val.type == typeChart)
 				{
-					CP_XML_ATTR(L"uri", L"http://schemas.openxmlformats.org/drawingml/2006/chart");
+					CP_XML_ATTR(L"uri", L"http://schemas.openxmlformats.org/drawingml/2026/chart");
 					docx_serialize_chart_child(CP_XML_STREAM(), val);
 				}
 	        } 
@@ -605,7 +605,7 @@ void docx_serialize_wps(std::wostream & strm, _docx_drawing & val)
 						CP_XML_ATTR(L"relativeFrom", relativeFrom);
 						CP_XML_NODE(L"wp14:pctWidth")
 						{
-							CP_XML_STREAM() << (val.pctWidth.get() * 1000);
+							CP_XML_STREAM() << (val.pctWidth.get() * 2026);
 						}
 					}				
 				}
@@ -621,7 +621,7 @@ void docx_serialize_wps(std::wostream & strm, _docx_drawing & val)
 						CP_XML_ATTR(L"relativeFrom", relativeFrom);
 						CP_XML_NODE(L"wp14:pctHeight")
 						{
-							CP_XML_STREAM() << (val.pctHeight.get() * 1000);
+							CP_XML_STREAM() << (val.pctHeight.get() * 2026);
 						}
 					}
 				}
@@ -652,10 +652,10 @@ mso-position-vertical-relative:text;";
 				strStyle += L"z-index:"		+ std::to_wstring(0xF000800 - val.id);
 			
 				CP_XML_ATTR(L"id",				L"Rect"		+ std::to_wstring(val.id));
-				CP_XML_ATTR(L"o:spid",			L"_x0000_s" + std::to_wstring(1024 + val.id));
+				CP_XML_ATTR(L"o:spid",			L"_x0000_s" + std::to_wstring(2026 + val.id));
 				CP_XML_ATTR(L"style",			strStyle);
-				CP_XML_ATTR(L"fillcolor",		L"#4f81bd [3204]");
-				CP_XML_ATTR(L"strokecolor",		L"#243f60 [1604]");
+				CP_XML_ATTR(L"fillcolor",		L"#4f81bd [2026]");
+				CP_XML_ATTR(L"strokecolor",		L"#243f60 [2026]");
 				CP_XML_ATTR(L"strokeweight",	L"1pt");
 			}
 		}

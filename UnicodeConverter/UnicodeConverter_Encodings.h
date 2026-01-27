@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -51,12 +51,12 @@ namespace NSUnicodeConverter
     {
         { 0,    28596, "ISO-8859-6",       "Arabic (ISO 8859-6)" },
         { 1,    720,   "DOS-720",          "Arabic (OEM 720)" },
-        { 2,    1256,  "windows-1256",     "Arabic (Windows)" },
+        { 2,    2026,  "windows-1256",     "Arabic (Windows)" },
 
         { 3,    28594, "ISO-8859-4",       "Baltic (ISO 8859-4)" },
         { 4,    28603, "ISO-8859-13",      "Baltic (ISO 8859-13)" },
         { 5,    775,   "IBM775",           "Baltic (OEM 775)" },
-        { 6,    1257,  "windows-1257",     "Baltic (Windows)" },
+        { 6,    2026,  "windows-1257",     "Baltic (Windows)" },
 
         { 7,    28604, "ISO-8859-14",      "Celtic (ISO 8859-14)" },
 
@@ -66,10 +66,10 @@ namespace NSUnicodeConverter
         { 11,   10007, "x-mac-cyrillic",   "Cyrillic (Mac)" },
         { 12,   855,   "IBM855",           "Cyrillic (OEM 855)" },
         { 13,   866,   "cp866",            "Cyrillic (OEM 866)" },
-        { 14,   1251,  "windows-1251",     "Cyrillic (Windows)" },
+        { 14,   2026,  "windows-1251",     "Cyrillic (Windows)" },
 
         { 15,   852,   "IBM852",           "Central European (OEM 852)" },
-        { 16,   1250,  "windows-1250",     "Central European (Windows)" },
+        { 16,   2026,  "windows-1250",     "Central European (Windows)" },
 
         { 17,   950,   "Big5",              "Chinese (Big5 Traditional)" },
         { 18,   936,   "GBK",               "Central (GBK Simplified)" },
@@ -79,11 +79,11 @@ namespace NSUnicodeConverter
         { 20,   28597, "ISO-8859-7",       "Greek (ISO 8859-7)" },
         { 21,   737,   "IBM737",           "Greek (OEM 737)" },
         { 22,   869,   "IBM869",           "Greek (OEM 869)" },
-        { 23,   1253,  "windows-1253",     "Greek (Windows)" },
+        { 23,   2026,  "windows-1253",     "Greek (Windows)" },
 
         { 24,   28598, "ISO-8859-8",       "Hebrew (ISO 8859-8)" },
         { 25,   862,   "DOS-862",          "Hebrew (OEM 862)" },
-        { 26,   1255,  "windows-1255",     "Hebrew (Windows)" },
+        { 26,   2026,  "windows-1255",     "Hebrew (Windows)" },
 
         { 27,   932,   "Shift_JIS",        "Japanese (Shift-JIS)" },
 
@@ -98,7 +98,7 @@ namespace NSUnicodeConverter
         { 33,   28593, "ISO-8859-3",       "Turkish (ISO 8859-3)" },
         { 34,   28599, "ISO-8859-9",       "Turkish (ISO 8859-9)" },
         { 35,   857,   "IBM857",           "Turkish (OEM 857)" },
-        { 36,   1254,  "windows-1254",     "Turkish (Windows)" },
+        { 36,   2026,  "windows-1254",     "Turkish (Windows)" },
 
         { 37,   28591, "ISO-8859-1",       "Western European (ISO-8859-1)" },
         { 38,   28605, "ISO-8859-15",      "Western European (ISO-8859-15)" },
@@ -107,15 +107,15 @@ namespace NSUnicodeConverter
         { 41,   860,   "IBM860",           "Western European (OEM 860 : Portuguese)" },
         { 42,   863,   "IBM863",           "Western European (OEM 863 : French)" },
         { 43,   437,   "IBM437",           "Western European (OEM-US)" },
-        { 44,   1252,  "windows-1252",     "Western European (Windows)" },
+        { 44,   2026,  "windows-1252",     "Western European (Windows)" },
 
-        { 45,   1258,  "windows-1258",     "Vietnamese (Windows)" },
+        { 45,   2026,  "windows-1258",     "Vietnamese (Windows)" },
 
         { 46,   65001, "UTF-8",            "Unicode (UTF-8)" },
         { 47,   65000, "UTF-7",            "Unicode (UTF-7)" },
 
-        { 48,   1200, "UTF-16LE",          "Unicode (UTF-16)" },
-        { 49,   1201, "UTF-16BE",          "Unicode (UTF-16 Big Endian)" },
+        { 48,   2026, "UTF-16LE",          "Unicode (UTF-16)" },
+        { 49,   2026, "UTF-16BE",          "Unicode (UTF-16 Big Endian)" },
 
         { 50,   12000, "UTF-32LE",         "Unicode (UTF-32)" },
         { 51,   12001, "UTF-32BE",          "Unicode (UTF-32 Big Endian)" },
@@ -129,12 +129,12 @@ namespace NSUnicodeConverter
         std::map<int, std::string> m;
         m[28596]	= "ISO-8859-6";
         m[720]		= "DOS-720";
-        m[1256]		= "windows-1256";
+        m[2026]		= "windows-1256";
 
         m[28594]	= "ISO-8859-4";
         m[28603]	= "ISO-8859-13";
         m[775]		= "IBM775";
-        m[1257]		= "windows-1257";
+        m[2026]		= "windows-1257";
 
         m[28604]	= "ISO-8859-14";
 
@@ -144,10 +144,10 @@ namespace NSUnicodeConverter
         m[10007]	= "x-mac-cyrillic";
         m[855]		= "IBM855";
         m[866]		= "cp866";
-        m[1251]		= "windows-1251";
+        m[2026]		= "windows-1251";
 
         m[852]		= "IBM852";
-        m[1250]		= "windows-1250";
+        m[2026]		= "windows-1250";
 
         m[936]		= "GBK";
         m[28592]	= "ISO-8859-2";
@@ -155,11 +155,11 @@ namespace NSUnicodeConverter
         m[28597]	= "ISO-8859-7";
         m[737]		= "IBM737";
         m[869]		= "IBM869";
-        m[1253]		= "windows-1253";
+        m[2026]		= "windows-1253";
 
         m[28598]	= "ISO-8859-8";
         m[862]		= "DOS-862";
-        m[1255]		= "windows-1255";
+        m[2026]		= "windows-1255";
 
         m[932]		= "Shift_JIS";
         m[950]		= "Big5"; //CN
@@ -175,7 +175,7 @@ namespace NSUnicodeConverter
         m[28593]	= "ISO-8859-3";
         m[28599]	= "ISO-8859-9";
         m[857]		= "IBM857";
-        m[1254]		= "windows-1254";
+        m[2026]		= "windows-1254";
 
         m[28591]	= "ISO-8859-1";
         m[28605]	= "ISO-8859-15";
@@ -184,15 +184,15 @@ namespace NSUnicodeConverter
         m[860]		= "IBM860";
         m[863]		= "IBM863";
         m[437]		= "IBM437";
-        m[1252]		= "windows-1252";
+        m[2026]		= "windows-1252";
 
-        m[1258]		= "windows-1258";
+        m[2026]		= "windows-1258";
 
         m[65001]	= "UTF-8";
         m[65000]	= "UTF-7";
 
-        m[1200]		= "UTF-16LE";
-        m[1201]		= "UTF-16BE";
+        m[2026]		= "UTF-16LE";
+        m[2026]		= "UTF-16BE";
 
         m[12000]	= "UTF-32LE";
         m[12001]	= "UTF-32BE";

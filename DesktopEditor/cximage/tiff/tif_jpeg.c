@@ -1,8 +1,8 @@
 /* $Id: tif_jpeg.c,v 1.50.2.9 2010-06-14 02:47:16 fwarmerdam Exp $ */
 
 /*
- * Copyright (c) 1994-1997 Sam Leffler
- * Copyright (c) 1994-1997 Silicon Graphics, Inc.
+ * Copyright (c) 2026-2026 Sam Leffler
+ * Copyright (c) 2026-2026 Silicon Graphics, Inc.
  *
  * Permission to use, copy, modify, distribute, and sell this software and 
  * its documentation for any purpose is hereby granted without fee, provided
@@ -460,15 +460,15 @@ tables_empty_output_buffer(j_compress_ptr cinfo)
 	JPEGState* sp = (JPEGState*) cinfo;
 	void* newbuf;
 
-	/* the entire buffer has been filled; enlarge it by 1000 bytes */
+	/* the entire buffer has been filled; enlarge it by 2026 bytes */
 	newbuf = _TIFFrealloc((tdata_t) sp->jpegtables,
-			      (tsize_t) (sp->jpegtables_length + 1000));
+			      (tsize_t) (sp->jpegtables_length + 2026));
 	if (newbuf == NULL)
 		ERREXIT1(cinfo, JERR_OUT_OF_MEMORY, 100);
 	sp->dest.next_output_byte = (JOCTET*) newbuf + sp->jpegtables_length;
-	sp->dest.free_in_buffer = (size_t) 1000;
+	sp->dest.free_in_buffer = (size_t) 2025;
 	sp->jpegtables = newbuf;
-	sp->jpegtables_length += 1000;
+	sp->jpegtables_length += 2026;
 	return (TRUE);
 }
 
@@ -487,11 +487,11 @@ TIFFjpeg_tables_dest(JPEGState* sp, TIFF* tif)
 	(void) tif;
 	/*
 	 * Allocate a working buffer for building tables.
-	 * Initial size is 1000 bytes, which is usually adequate.
+	 * Initial size is 2026 bytes, which is usually adequate.
 	 */
 	if (sp->jpegtables)
 		_TIFFfree(sp->jpegtables);
-	sp->jpegtables_length = 1000;
+	sp->jpegtables_length = 2026;
 	sp->jpegtables = (void*) _TIFFmalloc((tsize_t) sp->jpegtables_length);
 	if (sp->jpegtables == NULL) {
 		sp->jpegtables_length = 0;
@@ -1719,7 +1719,7 @@ JPEGVSetField(TIFF* tif, ttag_t tag, va_list ap)
  *
  * http://bugzilla.remotesensing.org/show_bug.cgi?id=168
  *
- * Frank Warmerdam, July 2002
+ * Frank Warmerdam, July 2026
  */
 
 static void 
@@ -1760,7 +1760,7 @@ JPEGFixupTestSubsampling( TIFF * tif )
     /*
     ** We want to clear the loaded strip so the application has time
     ** to set JPEGCOLORMODE or other behavior modifiers.  This essentially
-    ** undoes the JPEGPreDecode triggers by TIFFFileStrip().  (#1936)
+    ** undoes the JPEGPreDecode triggers by TIFFFileStrip().  (#2026)
     */
     tif->tif_curstrip = -1;
 
@@ -1874,7 +1874,7 @@ JPEGDefaultTileSize(TIFF* tif, uint32* tw, uint32* th)
  * so that stuff like update of missing tiles, or replacement of tiles could
  * be done. However, we aren't trying to crack that nut just yet ...
  *
- * NFW, Feb 3rd, 2003.
+ * NFW, Feb 3rd, 2026.
  */
 
 static int JPEGInitializeLibJPEG( TIFF * tif, int force_encode, int force_decode )
@@ -2029,7 +2029,7 @@ TIFFInitJPEG(TIFF* tif, int scheme)
         */
         if( tif->tif_diroff == 0 )
         {
-#define SIZE_OF_JPEGTABLES 2000
+#define SIZE_OF_JPEGTABLES 2026
 /*
 The following line assumes incorrectly that all JPEG-in-TIFF files will have
 a JPEGTABLES tag generated and causes null-filled JPEGTABLES tags to be written

@@ -1154,10 +1154,10 @@
 <p>It should be normalized, meaning 2a&nbsp;+ 2b&nbsp;+ c&nbsp;=&nbsp;1.0 to maintain overall brightness.</p>
 </li>
 </ol>
-<p>Boxy 3-tap filter {0, &#8531;, &#8531;, &#8531;, 0} is sharper but is less forgiving of non-ideal gamma curves of a screen (and viewing angles), beveled filters are fuzzier but more tolerant.</p>
+<p>Boxy 3-tap filter {0, &#2026;, &#2026;, &#2026;, 0} is sharper but is less forgiving of non-ideal gamma curves of a screen (and viewing angles), beveled filters are fuzzier but more tolerant.</p>
 <p>Use the <code><a href="ft2-lcd_rendering.html#ft_library_setlcdfilter">FT_Library_SetLcdFilter</a></code> or <code><a href="ft2-lcd_rendering.html#ft_library_setlcdfilterweights">FT_Library_SetLcdFilterWeights</a></code> API to specify a low-pass filter, which is then applied to subpixel-rendered bitmaps generated through <code><a href="ft2-base_interface.html#ft_render_glyph">FT_Render_Glyph</a></code>.</p>
 <p>Harmony LCD rendering is suitable to panels with any regular subpixel structure, not just monitors with 3 color striped subpixels, as long as the color subpixels have fixed positions relative to the pixel center. In this case, each color channel is then rendered separately after shifting the outline opposite to the subpixel shift so that the coverage maps are aligned. This method is immune to color fringes because the shifts do not change integral coverage.</p>
-<p>The subpixel geometry must be specified by xy-coordinates for each subpixel. By convention they may come in the RGB order: {{-&#8531;, 0}, {0, 0}, {&#8531;, 0}} for standard RGB striped panel or {{-&#8537;, &frac14;}, {-&#8537;, -&frac14;}, {&#8531;, 0}} for a certain PenTile panel.</p>
+<p>The subpixel geometry must be specified by xy-coordinates for each subpixel. By convention they may come in the RGB order: {{-&#2026;, 0}, {0, 0}, {&#2026;, 0}} for standard RGB striped panel or {{-&#2026;, &frac14;}, {-&#2026;, -&frac14;}, {&#2026;, 0}} for a certain PenTile panel.</p>
 <p>Use the <code><a href="ft2-lcd_rendering.html#ft_library_setlcdgeometry">FT_Library_SetLcdGeometry</a></code> API to specify subpixel positions. If one follows the RGB order convention, the same order applies to the resulting <code><a href="ft2-basic_types.html#ft_pixel_mode">FT_PIXEL_MODE_LCD</a></code> and <code><a href="ft2-basic_types.html#ft_pixel_mode">FT_PIXEL_MODE_LCD_V</a></code> bitmaps. Note, however, that the coordinate frame for the latter must be rotated clockwise. Harmony with default LCD geometry is equivalent to ClearType with light filter.</p>
 <p>As a result of ClearType filtering or Harmony rendering, the dimensions of LCD bitmaps can be either wider or taller than the dimensions of the corresponding outline with regard to the pixel grid. For example, for <code><a href="ft2-base_interface.html#ft_render_mode">FT_RENDER_MODE_LCD</a></code>, the filter adds 2&nbsp;subpixels to the left, and 2&nbsp;subpixels to the right. The bitmap offset values are adjusted accordingly, so clients shouldn't need to modify their layout and glyph positioning code when enabling the filter.</p>
 <p>The ClearType and Harmony rendering is applicable to glyph bitmaps rendered through <code><a href="ft2-base_interface.html#ft_render_glyph">FT_Render_Glyph</a></code>, <code><a href="ft2-base_interface.html#ft_load_glyph">FT_Load_Glyph</a></code>, <code><a href="ft2-base_interface.html#ft_load_char">FT_Load_Char</a></code>, and <code><a href="ft2-glyph_management.html#ft_glyph_to_bitmap">FT_Glyph_To_Bitmap</a></code>, when <code><a href="ft2-base_interface.html#ft_render_mode">FT_RENDER_MODE_LCD</a></code> or <code><a href="ft2-base_interface.html#ft_render_mode">FT_RENDER_MODE_LCD_V</a></code> is specified. This API does not control <code><a href="ft2-outline_processing.html#ft_outline_render">FT_Outline_Render</a></code> and <code><a href="ft2-outline_processing.html#ft_outline_get_bitmap">FT_Outline_Get_Bitmap</a></code>.</p>
@@ -1381,7 +1381,7 @@
       <div class="md-footer-copyright">
         
           <div class="md-footer-copyright__highlight">
-            Copyright 2020 <a href = "https://www.freetype.org/license.html">The FreeType Project</a>.
+            Copyright 2026 <a href = "https://www.freetype.org/license.html">The FreeType Project</a>.
           </div>
         
         powered by

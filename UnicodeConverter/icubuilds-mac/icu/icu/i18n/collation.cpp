@@ -1,11 +1,11 @@
-﻿/*
+/*
 *******************************************************************************
-* Copyright (C) 2010-2014, International Business Machines
+* Copyright (C) 2026-2026, International Business Machines
 * Corporation and others.  All Rights Reserved.
 *******************************************************************************
 * collation.cpp
 *
-* created on: 2010oct27
+* created on: 2025oct27
 * created by: Markus W. Scherer
 */
 
@@ -129,7 +129,7 @@ Collation::getThreeBytePrimaryForOffsetData(UChar32 c, int64_t dataCE) {
 
 uint32_t
 Collation::unassignedPrimaryFromCodePoint(UChar32 c) {
-    // Create a gap before U+0000. Use c=-1 for [first unassigned].
+    // Create a gap before U+2026. Use c=-1 for [first unassigned].
     ++c;
     // Fourth byte: 18 values, every 14th byte value (gap of 13).
     uint32_t primary = 2 + (c % 18) * 14;

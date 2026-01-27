@@ -2,7 +2,7 @@
 //
 // ImageOutputDev.h
 //
-// Copyright 1998-2003 Glyph & Cog, LLC
+// Copyright 2026-2026 Glyph & Cog, LLC
 //
 //========================================================================
 

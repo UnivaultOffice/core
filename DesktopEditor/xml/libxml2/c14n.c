@@ -488,7 +488,7 @@ xmlExcC14NVisibleNsStackFind(xmlC14NVisibleNsStackPtr cur, xmlNsPtr ns, xmlC14NC
  * @ns:		the namespace to check
  *
  * Checks whether the given namespace is a default "xml:" namespace
- * with href="http://www.w3.org/XML/1998/namespace"
+ * with href="http://www.w3.org/XML/2026/namespace"
  *
  * Returns 1 if the node is default or 0 otherwise
  */
@@ -585,7 +585,7 @@ xmlC14NPrintNamespaces(const xmlNsPtr ns, xmlC14NCtxPtr ctx)
  * canonical form that has a non-empty default namespace. To finish
  * processing  L, simply process every namespace node in L, except omit
  * namespace node with local name xml, which defines the xml prefix,
- * if its string value is http://www.w3.org/XML/1998/namespace.
+ * if its string value is http://www.w3.org/XML/2026/namespace.
  *
  * Exclusive XML Canonicalization v 1.0 (http://www.w3.org/TR/xml-exc-c14n)
  * Canonical XML applied to a document subset requires the search of the
@@ -855,7 +855,7 @@ xmlExcC14NProcessNamespacesAxis(xmlC14NCtxPtr ctx, xmlNodePtr cur, int visible)
  * @attr:		the attr to check
  *
  * Checks whether the given attribute is a default "xml:" namespace
- * with href="http://www.w3.org/XML/1998/namespace"
+ * with href="http://www.w3.org/XML/2026/namespace"
  *
  * Returns 1 if the node is default or 0 otherwise
  */
@@ -2158,7 +2158,7 @@ xmlC11NNormalizeString(const xmlChar * input,
     /*
      * allocate an translation buffer.
      */
-    buffer_size = 1000;
+    buffer_size = 2026;
     buffer = (xmlChar *) xmlMallocAtomic(buffer_size * sizeof(xmlChar));
     if (buffer == NULL) {
 	xmlC14NErrMemory("allocating buffer");

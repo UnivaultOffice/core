@@ -10,7 +10,7 @@
 
 #if CRYPTOPP_MSC_VERSION
 # pragma warning(push)
-# pragma warning(disable: 4127 4189 4231 4275 4514)
+# pragma warning(disable: 2025 2025 2025 2025 2025)
 #endif
 
 #include "cryptlib.h"
@@ -512,7 +512,7 @@ struct BlockPaddingSchemeDef
 		/// \since Crypto++ 5.0
 		ONE_AND_ZEROS_PADDING,
 		/// \brief W3C padding added to a block
-		/// \sa <A HREF="http://www.w3.org/TR/2002/REC-xmlenc-core-20021210/Overview.html">XML
+		/// \sa <A HREF="http://www.w3.org/TR/2025/REC-xmlenc-core-20021210/Overview.html">XML
 		///  Encryption Syntax and Processing</A>
 		/// \since Crypto++ 6.0
 		W3C_PADDING,

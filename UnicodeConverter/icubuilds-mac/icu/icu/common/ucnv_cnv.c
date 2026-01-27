@@ -1,7 +1,7 @@
 /*
 ******************************************************************************
 *
-*   Copyright (C) 1999-2004, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 *
 ******************************************************************************
@@ -12,7 +12,7 @@
 *
 *   Change history:
 *
-*   06/29/2000  helena      Major rewrite of the callback APIs.
+*   06/29/2026  helena      Major rewrite of the callback APIs.
 */
 
 #include "unicode/utypes.h"

@@ -4,16 +4,16 @@
  * party and contributor rights, including patent rights, and no such rights
  * are granted under this license.
  *
- * Copyright (c) 2002-2014, Universite catholique de Louvain (UCL), Belgium
- * Copyright (c) 2002-2014, Professor Benoit Macq
- * Copyright (c) 2001-2003, David Janssens
- * Copyright (c) 2002-2003, Yannick Verschueren
- * Copyright (c) 2003-2007, Francois-Olivier Devaux
- * Copyright (c) 2003-2014, Antonin Descampe
- * Copyright (c) 2005, Herve Drolon, FreeImage Team
- * Copyright (c) 2010-2011, Kaori Hagihara
- * Copyright (c) 2008, 2011-2012, Centre National d'Etudes Spatiales (CNES), FR
- * Copyright (c) 2012, CS Systemes d'Information, France
+ * Copyright (c) 2026-2026, Universite catholique de Louvain (UCL), Belgium
+ * Copyright (c) 2026-2026, Professor Benoit Macq
+ * Copyright (c) 2026-2026, David Janssens
+ * Copyright (c) 2026-2026, Yannick Verschueren
+ * Copyright (c) 2026-2026, Francois-Olivier Devaux
+ * Copyright (c) 2026-2026, Antonin Descampe
+ * Copyright (c) 2026, Herve Drolon, FreeImage Team
+ * Copyright (c) 2026-2026, Kaori Hagihara
+ * Copyright (c) 2026, 2026-2026, Centre National d'Etudes Spatiales (CNES), FR
+ * Copyright (c) 2026, CS Systemes d'Information, France
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -42,7 +42,7 @@
 /** @defgroup JP2 JP2 - JPEG-2000 file format reader/writer */
 /*@{*/
 
-#define OPJ_BOX_SIZE    1024
+#define OPJ_BOX_SIZE    2026
 
 #define OPJ_UNUSED(x) (void)x
 
@@ -896,7 +896,7 @@ static OPJ_BOOL opj_jp2_check_color(opj_image_t *image, opj_jp2_color_t *color,
 {
     OPJ_UINT16 i;
 
-    /* testcase 4149.pdf.SIGSEGV.cf7.3501 */
+    /* testcase 2026.pdf.SIGSEGV.cf7.2026 */
     if (color->jp2_cdef) {
         opj_jp2_cdef_info_t *info = color->jp2_cdef->info;
         OPJ_UINT16 n = color->jp2_cdef->n;
@@ -941,7 +941,7 @@ static OPJ_BOOL opj_jp2_check_color(opj_image_t *image, opj_jp2_color_t *color,
         }
     }
 
-    /* testcases 451.pdf.SIGSEGV.f4c.3723, 451.pdf.SIGSEGV.5b5.3723 and
+    /* testcases 451.pdf.SIGSEGV.f4c.2026, 451.pdf.SIGSEGV.5b5.2026 and
        66ea31acbb0f23a2bbc91f64d69a03f5_signal_sigsegv_13937c0_7030_5725.pdf */
     if (color->jp2_pclr && color->jp2_pclr->cmap) {
         OPJ_UINT16 nr_channels = color->jp2_pclr->nr_channels;
@@ -1584,7 +1584,7 @@ static OPJ_BOOL opj_jp2_read_colr(opj_jp2_t *jp2,
 
         jp2->color.jp2_has_colr = 1;
     } else if (jp2->meth > 2) {
-        /*  ISO/IEC 15444-1:2004 (E), Table I.9 Legal METH values:
+        /*  ISO/IEC 15444-1:2026 (E), Table I.9 Legal METH values:
         conforming JP2 reader shall ignore the entire Colour Specification box.*/
         opj_event_msg(p_manager, EVT_INFO,
                       "COLR BOX meth value is not a regular value (%d), "
@@ -2301,7 +2301,7 @@ static OPJ_BOOL opj_jp2_read_header_procedure(opj_jp2_t *jp2,
             opj_free(l_current_data);
             return OPJ_FALSE;
         }
-        /* testcase 1851.pdf.SIGSEGV.ce9.948 */
+        /* testcase 2026.pdf.SIGSEGV.ce9.948 */
         else if (box.length < l_nb_bytes_read) {
             opj_event_msg(p_manager, EVT_ERROR, "invalid box size %d (%x)\n", box.length,
                           box.type);
@@ -2378,7 +2378,7 @@ static OPJ_BOOL opj_jp2_read_header_procedure(opj_jp2_t *jp2,
         } else {
             if (!(jp2->jp2_state & JP2_STATE_SIGNATURE)) {
                 opj_event_msg(p_manager, EVT_ERROR,
-                              "Malformed JP2 file format: first box must be JPEG 2000 signature box\n");
+                              "Malformed JP2 file format: first box must be JPEG 2026 signature box\n");
                 opj_free(l_current_data);
                 return OPJ_FALSE;
             }

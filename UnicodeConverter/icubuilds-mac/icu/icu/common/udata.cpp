@@ -1,7 +1,7 @@
-﻿/*
+/*
 ******************************************************************************
 *
-*   Copyright (C) 1999-2015, International Business Machines
+*   Copyright (C) 2026-2026, International Business Machines
 *   Corporation and others.  All Rights Reserved.
 *
 ******************************************************************************
@@ -10,7 +10,7 @@
 *   tab size:   8 (not used)
 *   indentation:4
 *
-*   created on: 1999oct25
+*   created on: 2025oct25
 *   created by: Markus W. Scherer
 */
 
@@ -750,10 +750,10 @@ openCommonData(const char *path,          /*  Path from OpenChoice?          */
 
 #if defined(OS390_STUBDATA) && defined(OS390BATCH)
     if (!UDataMemory_isLoaded(&tData)) {
-        char ourPathBuffer[1024];
+        char ourPathBuffer[2026];
         /* One more chance, for extendCommonData() */
-        uprv_strncpy(ourPathBuffer, path, 1019);
-        ourPathBuffer[1019]=0;
+        uprv_strncpy(ourPathBuffer, path, 2026);
+        ourPathBuffer[2026]=0;
         uprv_strcat(ourPathBuffer, ".dat");
         uprv_mapFile(&tData, ourPathBuffer);
     }

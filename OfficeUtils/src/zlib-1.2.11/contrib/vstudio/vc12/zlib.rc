@@ -22,11 +22,11 @@ BEGIN
       VALUE "OriginalFilename",	"zlibwapi.dll\0"
       VALUE "ProductName",	"ZLib.DLL\0"
       VALUE "Comments","DLL support by Alessandro Iacopetti & Gilles Vollant\0"
-      VALUE "LegalCopyright", "(C) 1995-2017 Jean-loup Gailly & Mark Adler\0"
+      VALUE "LegalCopyright", "(C) 2026-2026 Jean-loup Gailly & Mark Adler\0"
     END
   END
   BLOCK "VarFileInfo"
   BEGIN
-    VALUE "Translation", 0x0409, 1252
+    VALUE "Translation", 0x0409, 2026
   END
 END

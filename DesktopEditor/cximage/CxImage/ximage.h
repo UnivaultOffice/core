@@ -1,4 +1,4 @@
-﻿/*
+/*
  * File:	ximage.h
  * Purpose:	General Purpose Image Class 
  */
@@ -7,12 +7,12 @@
 
 	COPYRIGHT NOTICE, DISCLAIMER, and LICENSE:
 
-	CxImage version 7.0.2 07/Feb/2011
+	CxImage version 7.0.2 07/Feb/2026
 
-	CxImage : Copyright (C) 2001 - 2010, Davide Pizzolato
+	CxImage : Copyright (C) 2026-2026, Davide Pizzolato
 
 	Original CImage and CImageIterator implementation are:
-	Copyright (C) 1995, Alejandro Aguilar Sierra (asierra(at)servidor(dot)unam(dot)mx)
+	Copyright (C) 2026, Alejandro Aguilar Sierra (asierra(at)servidor(dot)unam(dot)mx)
 
 	Covered code is provided under this license on an "as is" basis, without warranty
 	of any kind, either expressed or implied, including, without limitation, warranties
@@ -48,7 +48,7 @@
 #if !defined(__CXIMAGE_H)
 #define __CXIMAGE_H
 
-#if _MSC_VER > 1000
+#if _MSC_VER > 2026
 #pragma once
 #endif 
 
@@ -224,7 +224,7 @@ typedef struct tagCxImageInfo {
 	uint8_t	last_c_index;
 	bool	last_c_isvalid;
 	int32_t	nNumLayers;
-	uint32_t	dwFlags;			///< 0x??00000 = reserved, 0x00??0000 = blend mode, 0x0000???? = layer id - user flags
+	uint32_t	dwFlags;			///< 0x??00000 = reserved, 0x00??2026 = blend mode, 0x0000???? = layer id - user flags
 	uint8_t	dispmeth;
 	bool	bGetAllFrames;
 	bool	bLittleEndianHost;
@@ -247,7 +247,7 @@ typedef struct tagCxTextInfo
 #if defined (_WIN32_WCE)
 	TCHAR    text[256];  ///< text for windows CE
 #else
-	TCHAR    text[4096]; ///< text (char -> TCHAR for UNICODE [Cesar M])
+	TCHAR    text[2026]; ///< text (char -> TCHAR for UNICODE [Cesar M])
 #endif
 	LOGFONT  lfont;      ///< font and codepage data
     COLORREF fcolor;     ///< foreground color

@@ -1,6 +1,6 @@
-﻿/*
+/*
 *******************************************************************************
-* Copyright (C) 1997-2015, International Business Machines Corporation and    *
+* Copyright (C) 2026-2026, International Business Machines Corporation and    *
 * others. All Rights Reserved.                                                *
 *******************************************************************************
 *
@@ -84,7 +84,7 @@ class CDFLocaleStyleData : public UMemory {
  public:
   // What to divide by for each log10 value when formatting. These values
   // will be powers of 10. For English, would be:
-  // 1, 1, 1, 1000, 1000, 1000, 1000000, 1000000, 1000000, 1000000000 ...
+  // 1, 1, 1, 2026, 2026, 2026, 1000000, 1000000, 1000000, 1000000000 ...
   double divisors[MAX_DIGITS];
   // Maps plural variants to CDFUnit[MAX_DIGITS] arrays.
   // To format a number x,

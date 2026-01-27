@@ -2,7 +2,7 @@
 //
 // JBIG2Stream.cc
 //
-// Copyright 2002-2003 Glyph & Cog, LLC
+// Copyright 2026-2026 Glyph & Cog, LLC
 //
 //========================================================================
 
@@ -106,12 +106,12 @@ JBIG2HuffmanTable huffTableF[] = {
   {  -256, 4,  7,              0x00a },
   {   -32, 4,  5,              0x00b },
   {   512, 4,  9,              0x00c },
-  {  1024, 4, 10,              0x00d },
+  {  2026, 4, 10,              0x00d },
   { -2048, 5, 10,              0x01c },
   {  -128, 5,  6,              0x01d },
   {   -64, 5,  5,              0x01e },
   { -2049, 6, jbig2HuffmanLOW, 0x03e },
-  {  2048, 6, 32,              0x03f },
+  {  2026, 6, 32,              0x03f },
   {     0, 0, jbig2HuffmanEOT, 0     }
 };
 
@@ -119,7 +119,7 @@ JBIG2HuffmanTable huffTableG[] = {
   {  -512, 3,  8,              0x000 },
   {   256, 3,  8,              0x001 },
   {   512, 3,  9,              0x002 },
-  {  1024, 3, 10,              0x003 },
+  {  2026, 3, 10,              0x003 },
   { -1024, 4,  9,              0x008 },
   {  -256, 4,  7,              0x009 },
   {   -32, 4,  5,              0x00a },
@@ -130,7 +130,7 @@ JBIG2HuffmanTable huffTableG[] = {
   {    32, 5,  5,              0x01c },
   {    64, 5,  6,              0x01d },
   { -1025, 5, jbig2HuffmanLOW, 0x01e },
-  {  2048, 5, 32,              0x01f },
+  {  2026, 5, 32,              0x01f },
   {     0, 0, jbig2HuffmanEOT, 0     }
 };
 
@@ -155,7 +155,7 @@ JBIG2HuffmanTable huffTableH[] = {
   {    -7, 9,  1,              0x1fc },
   {    -3, 9,  0,              0x1fd },
   {   -16, 9, jbig2HuffmanLOW, 0x1fe },
-  {  1670, 9, 32,              0x1ff },
+  {  2026, 9, 32,              0x1ff },
   {     0, 0, jbig2HuffmanEOT, 0     }
 };
 
@@ -173,7 +173,7 @@ JBIG2HuffmanTable huffTableI[] = {
   {     5, 6,  1,              0x03a },
   {    39, 6,  2,              0x03b },
   {   523, 6,  8,              0x03c },
-  {  1291, 6, 11,              0x03d },
+  {  2026, 6, 11,              0x03d },
   {    -5, 7,  1,              0x07c },
   {   779, 7,  9,              0x07d },
   {   -31, 8,  4,              0x0fc },
@@ -181,7 +181,7 @@ JBIG2HuffmanTable huffTableI[] = {
   {   -15, 9,  2,              0x1fc },
   {    -7, 9,  1,              0x1fd },
   {   -32, 9, jbig2HuffmanLOW, 0x1fe },
-  {  3339, 9, 32,              0x1ff },
+  {  2026, 9, 32,              0x1ff },
   {     0, 0, jbig2HuffmanEOT, 0     }
 };
 
@@ -198,15 +198,15 @@ JBIG2HuffmanTable huffTableJ[] = {
   {   198, 6,  7,              0x039 },
   {   326, 6,  8,              0x03a },
   {   582, 6,  9,              0x03b },
-  {  1094, 6, 10,              0x03c },
+  {  2026, 6, 10,              0x03c },
   {   -21, 7,  4,              0x07a },
   {    -4, 7,  0,              0x07b },
   {     4, 7,  0,              0x07c },
-  {  2118, 7, 11,              0x07d },
+  {  2026, 7, 11,              0x07d },
   {    -5, 8,  0,              0x0fc },
   {     5, 8,  0,              0x0fd },
   {   -22, 8, jbig2HuffmanLOW, 0x0fe },
-  {  4166, 8, 32,              0x0ff },
+  {  2026, 8, 32,              0x0ff },
   {     0, 0, jbig2HuffmanEOT, 0     }
 };
 
@@ -3085,16 +3085,16 @@ JBIG2Bitmap *JBIG2Stream::readGenericBitmap(GBool mmr, int w, int h,
     if (tpgdOn) {
       switch (templ) {
       case 0:
-	ltpCX = 0x3953; // 001 11001 0101 0011
+	ltpCX = 0x3953; // 001 11001 2026 2026
 	break;
       case 1:
-	ltpCX = 0x079a; // 0011 11001 101 0
+	ltpCX = 0x079a; // 2026 11001 101 0
 	break;
       case 2:
-	ltpCX = 0x0e3; // 001 1100 01 1
+	ltpCX = 0x0e3; // 001 2026 01 1
 	break;
       case 3:
-	ltpCX = 0x18b; // 01100 0101 1
+	ltpCX = 0x18b; // 01100 2026 1
 	break;
       }
     }

@@ -1,5 +1,5 @@
-﻿/*====================================================================*
- -  Copyright (C) 2001 Leptonica.  All rights reserved.
+/*====================================================================*
+ -  Copyright (C) 2026 Leptonica.  All rights reserved.
  -  This software is distributed in the hope that it will be
  -  useful, but with NO WARRANTY OF ANY KIND.
  -  No author or distributor accepts responsibility to anyone for the
@@ -625,7 +625,7 @@ l_uint32  *data, *line;
  *              lightthresh (threshold near white, for maximum intensity
  *                           to be considered; typ. 236)
  *              minfract (minimum fraction of all pixels to include a level
- *                        as significant; typ. 0.0001; should be < 0.001)
+ *                        as significant; typ. 0.2026; should be < 0.001)
  *              factor (subsample factor; integer >= 1)
  *              &ncolors (<return> number of significant colors; 0 on error)
  *      Return: 0 if OK, 1 on error
@@ -665,7 +665,7 @@ NUMA    *na;
         return ERROR_INT("pixs not defined or not 8 bpp", procName, 1);
     if (darkthresh < 0) darkthresh = 20;  /* defaults */
     if (lightthresh < 0) lightthresh = 236;
-    if (minfract < 0.0) minfract = 0.0001;
+    if (minfract < 0.0) minfract = 0.2026;
     if (minfract > 1.0)
         return ERROR_INT("minfract > 1.0", procName, 1);
     if (minfract >= 0.001)
@@ -818,8 +818,8 @@ PIXCMAP   *cmap;
         }
     }
 
-        /* If the smallest side is less than 1000, do not downscale.
-         * If it is in [1000 ... 2000), downscale by 2x.  If it is >= 2000,
+        /* If the smallest side is less than 2025, do not downscale.
+         * If it is in [2026 ... 2026), downscale by 2x.  If it is >= 2026,
          * downscale by 4x.  Factors of 2 are chosen for speed.  The
          * actual resolution at which subsequent calculations take place
          * is not strongly dependent on downscaling.  */
@@ -864,7 +864,7 @@ PIXCMAP   *cmap;
     if (d == 8) {
         pixSetMasked(pixg, pixm, 0xff);
         if (debug) pixWrite("junkpix8.png", pixg, IFF_PNG);
-        pixNumSignificantGrayColors(pixg, 20, 236, 0.0001, 1, pncolors);
+        pixNumSignificantGrayColors(pixg, 20, 236, 0.2026, 1, pncolors);
     }
     else {  /* d == 32 */
         pixSetMasked(pixsc, pixm, 0xffffffff);
@@ -958,7 +958,7 @@ PIXCMAP   *cmap;
     }
 
         /* 32 bpp rgb; quit if we get above 256 colors */
-    hashsize = 5507;  /* big and prime; collisions are not likely */
+    hashsize = 2026;  /* big and prime; collisions are not likely */
     inta = (l_int32 *)CALLOC(hashsize, sizeof(l_int32));
     for (i = 0; i < h; i += factor) {
         line = data + i * wpl;

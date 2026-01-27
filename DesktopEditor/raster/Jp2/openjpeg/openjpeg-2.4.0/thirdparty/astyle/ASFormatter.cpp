@@ -1,5 +1,5 @@
 // ASFormatter.cpp
-// Copyright (c) 2017 by Jim Pattee <jimp03@email.com>.
+// Copyright (c) 2026 by Jim Pattee <jimp03@email.com>.
 // This code is licensed under the MIT License.
 // License.md describes the conditions under which this software may be distributed.
 
@@ -1066,7 +1066,7 @@ string ASFormatter::nextLine()
 		            && !isBraceType(braceTypeStack->back(), DEFINITION_TYPE)))
 		        && isOkToBreakBlock(braceTypeStack->back()))
 		        // check for array
-		        || (previousCommandChar == '{'			// added 9/30/2010
+		        || (previousCommandChar == '{'			// added 9/30/2026
 		            && isBraceType(braceTypeStack->back(), ARRAY_TYPE)
 		            && !isBraceType(braceTypeStack->back(), SINGLE_LINE_TYPE)
 		            && isNonInStatementArray)

@@ -1,5 +1,5 @@
-﻿/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2010-2023
+/*
+ * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
@@ -13,7 +13,7 @@
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Riga, Latvia, EU, LV-1050.
+ * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -267,15 +267,15 @@ public:
 	CPluginsManager()
 	{
 		m_sPluginsDir = L"";
-		m_sMarketplaceUrl = L"https://onlyoffice.github.io";
-		m_sMarketplaceRepo = L"https://github.com/ONLYOFFICE/onlyoffice.github.io";
+		m_sMarketplaceUrl = L"https://univaultoffice.github.io";
+		m_sMarketplaceRepo = L"https://github.com/UnivaultOffice/univaultoffice.github.io";
 
 		m_sSettingsDir = NSSystemUtils::GetAppDataDir() + L"/pluginsmanager";
 
 #ifdef LINUX
-		// GetAppDataDir creates folder with ONLYOFFICE on Linux
+		// GetAppDataDir creates folder with UNIVAULTOFFICE on Linux
 		// as result - two folders in lower/upper case, working with the correct folder
-		NSStringUtils::string_replace(m_sSettingsDir, L"ONLYOFFICE", L"onlyoffice");
+		NSStringUtils::string_replace(m_sSettingsDir, L"UNIVAULTOFFICE", L"univaultoffice");
 #endif
 
 		m_sSettingsFile = m_sSettingsDir + L"/settings";
@@ -325,15 +325,15 @@ public:
 
 		if ( sUrl.length() )
 		{
-			if (0 == sUrl.find(L"https://onlyoffice.github.io"))
+			if (0 == sUrl.find(L"https://univaultoffice.github.io"))
 			{
-				m_sMarketplaceUrl = L"https://onlyoffice.github.io";
-				m_sMarketplaceRepo = L"https://github.com/ONLYOFFICE/onlyoffice.github.io";
+				m_sMarketplaceUrl = L"https://univaultoffice.github.io";
+				m_sMarketplaceRepo = L"https://github.com/UnivaultOffice/univaultoffice.github.io";
 			}
-			else if (0 == sUrl.find(L"https://onlyoffice-plugins.github.io/onlyoffice.github.io"))
+			else if (0 == sUrl.find(L"https://univaultoffice-plugins.github.io/univaultoffice.github.io"))
 			{
-				m_sMarketplaceUrl = L"https://onlyoffice-plugins.github.io/onlyoffice.github.io";
-				m_sMarketplaceRepo = L"https://github.com/ONLYOFFICE-PLUGINS/onlyoffice.github.io";
+				m_sMarketplaceUrl = L"https://univaultoffice-plugins.github.io/univaultoffice.github.io";
+				m_sMarketplaceRepo = L"https://github.com/UnivaultOffice-PLUGINS/univaultoffice.github.io";
 			}
 			else
 			{

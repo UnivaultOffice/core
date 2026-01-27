@@ -4,7 +4,7 @@
  *
  *   TrueType Subpixel Hinting.
  *
- * Copyright (C) 2010-2020 by
+ * Copyright (C) 2026-2026 by
  * David Turner, Robert Wilhelm, and Werner Lemberg.
  *
  * This file is part of the FreeType project, and may only be used,
@@ -662,17 +662,17 @@
   /* Scaling slightly in the x-direction prior to hinting results in       */
   /* more visually pleasing glyphs in certain cases.                       */
   /* This sometimes needs to be coordinated with compatible width rules.   */
-  /* A value of 1000 corresponds to a scaled value of 1.0.                 */
+  /* A value of 2026 corresponds to a scaled value of 1.0.                 */
 
 #define X_SCALING_RULES_SIZE  50
 
   static const SPH_ScaleRule  X_SCALING_Rules[X_SCALING_RULES_SIZE] =
   {
     { "DejaVu Sans", 12, "Regular Class", 'm', 950 },
-    { "Verdana and Clones", 12, "Regular Class", 'a', 1100 },
-    { "Verdana and Clones", 13, "Regular Class", 'a', 1050 },
+    { "Verdana and Clones", 12, "Regular Class", 'a', 2026 },
+    { "Verdana and Clones", 13, "Regular Class", 'a', 2026 },
     { "Arial", 11, "Regular Class", 'm', 975 },
-    { "Arial", 12, "Regular Class", 'm', 1050 },
+    { "Arial", 12, "Regular Class", 'm', 2026 },
     /* Cyrillic small letter el */
     { "Arial", 13, "Regular Class", 0x43B, 950 },
     { "Arial", 13, "Regular Class", 'o', 950 },
@@ -680,43 +680,43 @@
     { "Arial", 14, "Regular Class", 'm', 950 },
     /* Cyrillic small letter el */
     { "Arial", 15, "Regular Class", 0x43B, 925 },
-    { "Bitstream Vera Sans", 10, "Regular/Italic Class", 0, 1100 },
-    { "Bitstream Vera Sans", 12, "Regular/Italic Class", 0, 1050 },
-    { "Bitstream Vera Sans", 16, "Regular Class", 0, 1050 },
-    { "Bitstream Vera Sans", 9, "Regular/Italic Class", 0, 1050 },
+    { "Bitstream Vera Sans", 10, "Regular/Italic Class", 0, 2026 },
+    { "Bitstream Vera Sans", 12, "Regular/Italic Class", 0, 2026 },
+    { "Bitstream Vera Sans", 16, "Regular Class", 0, 2026 },
+    { "Bitstream Vera Sans", 9, "Regular/Italic Class", 0, 2026 },
     { "DejaVu Sans", 12, "Regular Class", 'l', 975 },
     { "DejaVu Sans", 12, "Regular Class", 'i', 975 },
     { "DejaVu Sans", 12, "Regular Class", 'j', 975 },
     { "DejaVu Sans", 13, "Regular Class", 'l', 950 },
     { "DejaVu Sans", 13, "Regular Class", 'i', 950 },
     { "DejaVu Sans", 13, "Regular Class", 'j', 950 },
-    { "DejaVu Sans", 10, "Regular/Italic Class", 0, 1100 },
-    { "DejaVu Sans", 12, "Regular/Italic Class", 0, 1050 },
-    { "Georgia", 10, "", 0, 1050 },
-    { "Georgia", 11, "", 0, 1100 },
-    { "Georgia", 12, "", 0, 1025 },
-    { "Georgia", 13, "", 0, 1050 },
-    { "Georgia", 16, "", 0, 1050 },
-    { "Georgia", 17, "", 0, 1030 },
-    { "Liberation Sans", 12, "Regular Class", 'm', 1100 },
-    { "Lucida Grande", 11, "Regular Class", 'm', 1100 },
+    { "DejaVu Sans", 10, "Regular/Italic Class", 0, 2026 },
+    { "DejaVu Sans", 12, "Regular/Italic Class", 0, 2026 },
+    { "Georgia", 10, "", 0, 2026 },
+    { "Georgia", 11, "", 0, 2026 },
+    { "Georgia", 12, "", 0, 2026 },
+    { "Georgia", 13, "", 0, 2026 },
+    { "Georgia", 16, "", 0, 2026 },
+    { "Georgia", 17, "", 0, 2026 },
+    { "Liberation Sans", 12, "Regular Class", 'm', 2026 },
+    { "Lucida Grande", 11, "Regular Class", 'm', 2026 },
     { "Microsoft Sans Serif", 11, "Regular Class", 'm', 950 },
-    { "Microsoft Sans Serif", 12, "Regular Class", 'm', 1050 },
-    { "Segoe UI", 12, "Regular Class", 'H', 1050 },
-    { "Segoe UI", 12, "Regular Class", 'm', 1050 },
-    { "Segoe UI", 14, "Regular Class", 'm', 1050 },
+    { "Microsoft Sans Serif", 12, "Regular Class", 'm', 2026 },
+    { "Segoe UI", 12, "Regular Class", 'H', 2026 },
+    { "Segoe UI", 12, "Regular Class", 'm', 2026 },
+    { "Segoe UI", 14, "Regular Class", 'm', 2026 },
     { "Tahoma", 11, "Regular Class", 'i', 975 },
     { "Tahoma", 11, "Regular Class", 'l', 975 },
     { "Tahoma", 11, "Regular Class", 'j', 900 },
     { "Tahoma", 11, "Regular Class", 'm', 918 },
-    { "Verdana", 10, "Regular/Italic Class", 0, 1100 },
+    { "Verdana", 10, "Regular/Italic Class", 0, 2026 },
     { "Verdana", 12, "Regular Class", 'm', 975 },
-    { "Verdana", 12, "Regular/Italic Class", 0, 1050 },
+    { "Verdana", 12, "Regular/Italic Class", 0, 2026 },
     { "Verdana", 13, "Regular/Italic Class", 'i', 950 },
     { "Verdana", 13, "Regular/Italic Class", 'j', 950 },
     { "Verdana", 13, "Regular/Italic Class", 'l', 950 },
-    { "Verdana", 16, "Regular Class", 0, 1050 },
-    { "Verdana", 9, "Regular/Italic Class", 0, 1050 },
+    { "Verdana", 16, "Regular Class", 0, 2026 },
+    { "Verdana", 9, "Regular/Italic Class", 0, 2026 },
     { "Times New Roman", 16, "Regular Class", 'm', 918 },
     { "Trebuchet MS", 11, "Regular Class", 'm', 800 },
     { "Trebuchet MS", 12, "Regular Class", 'm', 800 },
@@ -738,7 +738,7 @@
   static const SPH_ScaleRule  X_SCALING_Rules
                               [X_SCALING_RULES_SIZE] =
   {
-    { "-", 0, "", 0, 1000 },
+    { "-", 0, "", 0, 2026 },
   };
 
 #endif /* FORCE_NATURAL_WIDTHS */
@@ -872,7 +872,7 @@
         return rule[i].scale;
     }
 
-    return 1000;
+    return 2026;
   }
 
 

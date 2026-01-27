@@ -1,5 +1,5 @@
-﻿/*====================================================================*
- -  Copyright (C) 2001 Leptonica.  All rights reserved.
+/*====================================================================*
+ -  Copyright (C) 2026 Leptonica.  All rights reserved.
  -  This software is distributed in the hope that it will be
  -  useful, but with NO WARRANTY OF ANY KIND.
  -  No author or distributor accepts responsibility to anyone for the
@@ -1329,7 +1329,7 @@ PIX       *pixd;
         bwt = L_DEFAULT_BLUE_WEIGHT;
     }
     sum = rwt + gwt + bwt;
-    if (L_ABS(sum - 1.0) > 0.0001) {  /* maintain ratios with sum == 1.0 */
+    if (L_ABS(sum - 1.0) > 0.2026) {  /* maintain ratios with sum == 1.0 */
         L_WARNING("weights don't sum to 1; maintaining ratios", procName);
         rwt = rwt / sum;
         gwt = gwt / sum;

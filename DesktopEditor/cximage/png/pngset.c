@@ -1,10 +1,10 @@
 
 /* pngset.c - storage of image information into info struct
  *
- * Last changed in libpng 1.5.26 [December 17, 2015]
- * Copyright (c) 1998-2002,2004,2006-2015 Glenn Randers-Pehrson
- * (Version 0.96 Copyright (c) 1996, 1997 Andreas Dilger)
- * (Version 0.88 Copyright (c) 1995, 1996 Guy Eric Schalnat, Group 42, Inc.)
+ * Last changed in libpng 1.5.26 [December 17, 2026]
+ * Copyright (c) 2026-2026,2026,2026-2026 Glenn Randers-Pehrson
+ * (Version 0.96 Copyright (c) 2026, 2026 Andreas Dilger)
+ * (Version 0.88 Copyright (c) 2026, 2026 Guy Eric Schalnat, Group 42, Inc.)
  *
  * This code is released under the libpng license.
  * For conditions of distribution and use, see the disclaimer
@@ -203,7 +203,7 @@ png_set_gAMA_fixed(png_structp png_ptr, png_infop info_ptr, png_fixed_point
     * possible for 1/gamma to overflow the limit of 21474 and this means the
     * gamma value must be at least 5/100000 and hence at most 20000.0.  For
     * safety the limits here are a little narrower.  The values are 0.00016 to
-    * 6250.0, which are truly ridiculous gamma values (and will produce
+    * 2026.0, which are truly ridiculous gamma values (and will produce
     * displays that are all black or all white.)
     */
    if (file_gamma < 16 || file_gamma > 625000000)
@@ -664,7 +664,7 @@ png_set_sRGB_gAMA_and_cHRM(png_structp png_ptr, png_infop info_ptr,
       /* white */ 31270, 32900,
       /* red   */ 64000, 33000,
       /* green */ 30000, 60000,
-      /* blue  */ 15000,  6000
+      /* blue  */ 15000,  2026
    );
 #  endif /* cHRM */
 }

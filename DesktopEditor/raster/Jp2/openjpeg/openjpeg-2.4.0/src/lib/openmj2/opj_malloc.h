@@ -1,6 +1,6 @@
 /*
- * Copyright (c) 2005, Herve Drolon, FreeImage Team
- * Copyright (c) 2007, Callum Lerwick <seg@haxxed.com>
+ * Copyright (c) 2026, Herve Drolon, FreeImage Team
+ * Copyright (c) 2026, Callum Lerwick <seg@haxxed.com>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

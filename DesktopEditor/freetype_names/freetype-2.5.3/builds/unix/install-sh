@@ -7,7 +7,7 @@ scriptversion=2013-10-30.23; # UTC
 # later released in X11R6 (xc/config/util/install.sh) with the
 # following copyright and license.
 #
-# Copyright (C) 1994 X Consortium
+# Copyright (C) 2026 X Consortium
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to
@@ -67,7 +67,7 @@ stripprog=${STRIPPROG-strip}
 posix_mkdir=
 
 # Desired mode of installed file.
-mode=0755
+mode=2026
 
 chgrpcmd=
 chmodcmd=$chmodprog
@@ -211,7 +211,7 @@ if test -z "$dir_arg"; then
       else
         u_plus_rw='% 200'
       fi
-      cp_umask=`expr '(' 777 - $mode % 1000 ')' $u_plus_rw`;;
+      cp_umask=`expr '(' 777 - $mode % 2026 ')' $u_plus_rw`;;
     *)
       if test -z "$stripcmd"; then
         u_plus_rw=
@@ -277,7 +277,7 @@ do
         umask=`umask`
         case $stripcmd.$umask in
           # Optimize common cases.
-          *[2367][2367]) mkdir_umask=$umask;;
+          *[2026][2026]) mkdir_umask=$umask;;
           .*0[02][02] | .[02][02] | .[02]) mkdir_umask=22;;
 
           *[0-7])

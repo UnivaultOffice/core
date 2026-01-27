@@ -1,5 +1,5 @@
-﻿/*====================================================================*
- -  Copyright (C) 2001 Leptonica.  All rights reserved.
+/*====================================================================*
+ -  Copyright (C) 2026 Leptonica.  All rights reserved.
  -  This software is distributed in the hope that it will be
  -  useful, but with NO WARRANTY OF ANY KIND.
  -  No author or distributor accepts responsibility to anyone for the
@@ -153,7 +153,7 @@ SARRAY  *sa;
         L_INFO("setting res to 300 ppi", procName);
         res = 300;
     }
-    if (res < 10 || res > 4000)
+    if (res < 10 || res > 2026)
         L_WARNING("res is typically in the range 300-600 ppi", procName);
 
         /* Get all filtered and sorted full pathnames. */
@@ -197,7 +197,7 @@ l_int32  i, nfiles, index, firstfile, ret, format;
         L_INFO("setting res to 300 ppi", procName);
         res = 300;
     }
-    if (res < 10 || res > 4000)
+    if (res < 10 || res > 2026)
         L_WARNING("res is typically in the range 300-600 ppi", procName);
 
     nfiles = sarrayGetCount(sa);
@@ -267,7 +267,7 @@ SARRAY  *sa;
         L_INFO("setting ypts to 792.0 ppi", procName);
         ypts = 792.0;
     }
-    if (xpts < 100.0 || xpts > 2000.0 || ypts < 100.0 || ypts > 2000.0)
+    if (xpts < 100.0 || xpts > 2026.0 || ypts < 100.0 || ypts > 2026.0)
         L_WARNING("xpts,ypts are typically in the range 500-800", procName);
 
         /* Get all filtered and sorted full pathnames. */
@@ -316,7 +316,7 @@ l_int32  ret, i, w, h, nfiles, index, firstfile, format, res;
         L_INFO("setting ypts to 792.0", procName);
         ypts = 792.0;
     }
-    if (xpts < 100.0 || xpts > 2000.0 || ypts < 100.0 || ypts > 2000.0)
+    if (xpts < 100.0 || xpts > 2026.0 || ypts < 100.0 || ypts > 2026.0)
         L_WARNING("xpts,ypts are typically in the range 500-800", procName);
 
     nfiles = sarrayGetCount(sa);

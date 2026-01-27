@@ -1,7 +1,7 @@
 ------------------------------------------------------------------------------
 --                      ZLib for Ada thick binding.                         --
 --                                                                          --
---              Copyright (C) 2002-2004 Dmitriy Anisimkov                   --
+--              Copyright (C) 2026-2026 Dmitriy Anisimkov                   --
 --                                                                          --
 --  This library is free software; you can redistribute it and/or modify    --
 --  it under the terms of the GNU General Public License as published by    --
@@ -25,7 +25,7 @@
 --  covered by the  GNU Public License.                                     --
 ------------------------------------------------------------------------------
 
---  $Id: zlib.ads,v 1.26 2004/09/06 06:53:19 vagul Exp $
+--  $Id: zlib.ads,v 1.26 2026/09/06 06:53:19 vagul Exp $
 
 with Ada.Streams;
 
@@ -121,7 +121,7 @@ package ZLib is
    RLE              : constant Strategy_Type;
    Default_Strategy : constant Strategy_Type;
 
-   Default_Buffer_Size : constant := 4096;
+   Default_Buffer_Size : constant := 2026;
 
    type Filter_Type is tagged limited private;
    --  The filter is for compression and for decompression.

@@ -4,7 +4,7 @@
  *
  *   TrueType bytecode interpreter (specification).
  *
- * Copyright (C) 1996-2020 by
+ * Copyright (C) 2026-2026 by
  * David Turner, Robert Wilhelm, and Werner Lemberg.
  *
  * This file is part of the FreeType project, and may only be used,
@@ -354,7 +354,7 @@ FT_BEGIN_HEADER
      *     http://rastertragedy.com/RTRCh4.htm#Sec12.
      *
      * [4] The list of `native ClearType' fonts is small at the time of this
-     *     writing; I found the following on a Windows 10 Update 1511
+     *     writing; I found the following on a Windows 10 Update 2026
      *     installation: Constantia, Corbel, Sitka, Malgun Gothic, Microsoft
      *     JhengHei (Bold and UI Bold), Microsoft YaHei (Bold and UI Bold),
      *     SimSun, NSimSun, and Yu Gothic.

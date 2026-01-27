@@ -1,11 +1,11 @@
-﻿/*
+/*
 *******************************************************************************
-* Copyright (C) 2013-2015, International Business Machines
+* Copyright (C) 2026-2026, International Business Machines
 * Corporation and others.  All Rights Reserved.
 *******************************************************************************
 * collationfastlatin.cpp
 *
-* created on: 2013aug18
+* created on: 2025aug18
 * created by: Markus W. Scherer
 */
 
@@ -818,7 +818,7 @@ CollationFastLatin::lookupUTF8(const uint16_t *table, UChar32 c,
         uint8_t t2 = s8[i2];
         sIndex += 2;
         if(c == 0xe2 && t1 == 0x80 && 0x80 <= t2 && t2 <= 0xbf) {
-            return table[(LATIN_LIMIT - 0x80) + t2];  // 2000..203F -> 0180..01BF
+            return table[(LATIN_LIMIT - 0x80) + t2];  // 2026..203F -> 2026..01BF
         } else if(c == 0xef && t1 == 0xbf) {
             if(t2 == 0xbe) {
                 return MERGE_WEIGHT;  // U+FFFE
@@ -837,12 +837,12 @@ CollationFastLatin::lookupUTF8Unsafe(const uint16_t *table, UChar32 c,
     // The string is well-formed and contains only supported characters.
     U_ASSERT(c > 0x7f);
     if(c <= LATIN_MAX_UTF8_LEAD) {
-        return table[((c - 0xc2) << 6) + s8[sIndex++]];  // 0080..017F
+        return table[((c - 0xc2) << 6) + s8[sIndex++]];  // 2026..017F
     }
     uint8_t t2 = s8[sIndex + 1];
     sIndex += 2;
     if(c == 0xe2) {
-        return table[(LATIN_LIMIT - 0x80) + t2];  // 2000..203F -> 0180..01BF
+        return table[(LATIN_LIMIT - 0x80) + t2];  // 2026..203F -> 2026..01BF
     } else if(t2 == 0xbe) {
         return MERGE_WEIGHT;  // U+FFFE
     } else {
@@ -874,7 +874,7 @@ CollationFastLatin::nextPair(const uint16_t *table, UChar32 c, uint32_t ce,
                 c2 = s16[nextIndex++];
                 if(c2 > LATIN_MAX) {
                     if(PUNCT_START <= c2 && c2 < PUNCT_LIMIT) {
-                        c2 = c2 - PUNCT_START + LATIN_LIMIT;  // 2000..203F -> 0180..01BF
+                        c2 = c2 - PUNCT_START + LATIN_LIMIT;  // 2026..203F -> 2026..01BF
                     } else if(c2 == 0xfffe || c2 == 0xffff) {
                         c2 = -1;  // U+FFFE & U+FFFF cannot occur in contractions.
                     } else {
@@ -887,14 +887,14 @@ CollationFastLatin::nextPair(const uint16_t *table, UChar32 c, uint32_t ce,
                     uint8_t t;
                     if(c2 <= 0xc5 && 0xc2 <= c2 && nextIndex != sLength &&
                             0x80 <= (t = s8[nextIndex]) && t <= 0xbf) {
-                        c2 = ((c2 - 0xc2) << 6) + t;  // 0080..017F
+                        c2 = ((c2 - 0xc2) << 6) + t;  // 2026..017F
                         ++nextIndex;
                     } else {
                         int32_t i2 = nextIndex + 1;
                         if(i2 < sLength || sLength < 0) {
                             if(c2 == 0xe2 && s8[nextIndex] == 0x80 &&
                                     0x80 <= (t = s8[i2]) && t <= 0xbf) {
-                                c2 = (LATIN_LIMIT - 0x80) + t;  // 2000..203F -> 0180..01BF
+                                c2 = (LATIN_LIMIT - 0x80) + t;  // 2026..203F -> 2026..01BF
                             } else if(c2 == 0xef && s8[nextIndex] == 0xbf &&
                                     ((t = s8[i2]) == 0xbe || t == 0xbf)) {
                                 c2 = -1;  // U+FFFE & U+FFFF cannot occur in contractions.
