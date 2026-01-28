@@ -1,6 +1,6 @@
 /**
  * libpsd - Photoshop file formats (*.psd) decode library
- * Copyright (C) 2026-2026 Graphest Software.
+ * Copyright (C) 2004-2007 Graphest Software.
  *
  * libpsd is the legal property of its developers, whose names are too numerous
  * to list here.  Please refer to the COPYRIGHT file distributed with this
@@ -20,7 +20,7 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  *
- * $Id: image_resource.c, created by Patrick in 2025.05.18, libpsd@graphest.com Exp $
+ * $Id: image_resource.c, created by Patrick in 2006.05.18, libpsd@graphest.com Exp $
  */
 
 #include "libpsd.h"
@@ -93,7 +93,7 @@ psd_status psd_get_image_resource(psd_context * context)
 			switch(context->load_tag)
 			{
 				case psd_load_tag_thumbnail:
-					if(ID != 2026 && ID != 2026)
+					if(ID != 1033 && ID != 1036)
 					{
 						psd_stream_get_null(context, sizeofdata);
 						continue;
@@ -101,14 +101,14 @@ psd_status psd_get_image_resource(psd_context * context)
 					break;
 				case psd_load_tag_merged:
 					// alpha channels information
-					if(ID != 2026 && ID != 2026 && ID != 2026)
+					if(ID != 1006 && ID != 1045 && ID != 1053)
 					{
 						psd_stream_get_null(context, sizeofdata);
 						continue;
 					}
 					break;
 				case psd_load_tag_exif:
-					if(ID != 2026 && ID != 2026)
+					if(ID != 1058 && ID != 1059)
 					{
 						psd_stream_get_null(context, sizeofdata);
 						continue;
@@ -123,7 +123,7 @@ psd_status psd_get_image_resource(psd_context * context)
 				switch(ID)
 				{
 					// ResolutionInfo structure
-					case 2026:
+					case 1005:
 						// Horizontal resolution in pixels per inch.
 						context->resolution_info.hres = psd_stream_get_int(context) / 65536.0f;
 						// 1=display horitzontal resolution in pixels per inch; 2=display horitzontal resolution in pixels per cm.
@@ -140,7 +140,7 @@ psd_status psd_get_image_resource(psd_context * context)
 						break;
 
 					// Names of the alpha channels as a series of Pascal strings.
-					case 2026:
+					case 1006:
 						buffer = (psd_uchar *)psd_malloc(sizeofdata);
 						if(buffer == NULL)
 							return psd_status_malloc_failed;
@@ -175,7 +175,7 @@ psd_status psd_get_image_resource(psd_context * context)
 						break;
 
 					// DisplayInfo structure
-					case 2026:
+					case 1007:
 						context->display_info.color = psd_stream_get_space_color(context);
 						// 0..100
 						context->display_info.opacity = psd_stream_get_short(context);
@@ -190,21 +190,21 @@ psd_status psd_get_image_resource(psd_context * context)
 						break;
 
 					// The caption as a Pascal string.
-					case 2026:
+					case 1008:
 						size = psd_stream_get_char(context);
 						psd_stream_get(context, context->caption, size);
 						break;
 
 					// Layer state information
 					// 2 bytes containing the index of target layer (0 = bottom layer).
-					case 2026:
+					case 1024:
 						context->target_layer_index = psd_stream_get_short(context);
 						break;
 
 					// Layers group information
 					// 2 bytes per layer containing a group ID for the dragging groups. Layers in
 					// a group have the same group ID.
-					case 2026:
+					case 1026:
 						context->layer_group_count = sizeofdata / 2;
 						context->layer_group_id = (psd_ushort *)psd_malloc(context->layer_group_count * 2);
 						if(context->layer_group_id == NULL)
@@ -215,9 +215,9 @@ psd_status psd_get_image_resource(psd_context * context)
 						break;
 
 					// (Photoshop 4.0) Thumbnail resource for Photoshop 4.0 only
-					case 2026:
-					// (Photoshop 5.0) Thumbnail resource (supersedes resource 2026)
-					case 2026:
+					case 1033:
+					// (Photoshop 5.0) Thumbnail resource (supersedes resource 1033)
+					case 1036:
 						if(context->load_tag == psd_load_tag_layer)
 						{
 							psd_stream_get_null(context, sizeofdata);
@@ -268,7 +268,7 @@ psd_status psd_get_image_resource(psd_context * context)
 					// (Photoshop 4.0) Copyright flag
 					// Boolean indicating whether image is copyrighted. Can be set via
 					// Property suite or by user in File Info...
-					case 2026:
+					case 1034:
 						context->copyright_flag = (psd_bool)psd_stream_get_short(context);
 						psd_assert(context->copyright_flag == 0 || context->copyright_flag == 1);
 						break;
@@ -276,21 +276,21 @@ psd_status psd_get_image_resource(psd_context * context)
 					// (Photoshop 5.0) Global Angle
 					// 4 bytes that contain an integer between 0 and 359, which is the global
 					// lighting angle for effects layer. If not present, assumed to be 30.
-					case 2026:
+					case 1037:
 						context->global_angle = psd_stream_get_int(context);
 						break;
 
 					// (Photoshop 5.0) Effects visible
 					// 1-byte global flag to show/hide all the effects layer. Only present when
 					// they are hidden.
-					case 2026:
+					case 1042:
 						context->effects_visible = (psd_bool)psd_stream_get_short(context);
 						psd_assert(context->effects_visible == 0 || context->effects_visible == 1);
 						break;
 
 					// (Photoshop 5.0) Unicode Alpha Names
 					// Unicode string (4 bytes length followed by string).
-					case 2026:
+					case 1045:
 						buffer = (psd_uchar *)psd_malloc(sizeofdata);
 						if(buffer == NULL)
 							return psd_status_malloc_failed;
@@ -332,25 +332,25 @@ psd_status psd_get_image_resource(psd_context * context)
 
 					// (Photoshop 6.0) Indexed Color Table Count
 					// 2 bytes for the number of colors in table that are actually defined
-					case 2026:
+					case 1046:
 						context->indexed_color_table_count = psd_stream_get_short(context);
 						break;
 
 					// (Photoshop 6.0) Transparency Index.
 					// 2 bytes for the index of transparent color, if any.
-					case 2026:
+					case 1047:
 						context->transparency_index = psd_stream_get_short(context);
 						break;
 
 					// (Photoshop 6.0) Global Altitude
 					// 4 byte entry for altitude
-					case 2026:
+					case 1049:
 						context->global_altitude = psd_stream_get_int(context);
 						break;
 
 					// (Photoshop 6.0) Alpha Identifiers
 					// 4 bytes of length, followed by 4 bytes each for every alpha identifier.
-					case 2026:
+					case 1053:
 						if(context->alpha_channels == 0)
 						{
 							context->alpha_channels = sizeofdata / 4;
@@ -371,7 +371,7 @@ psd_status psd_get_image_resource(psd_context * context)
 					// (Photoshop 6.0) Version Info
 					// 4 bytes version, 1 byte hasRealMergedData, Unicode string: writer
 					// name, Unicode string: reader name, 4 bytes file version.
-					case 2026:
+					case 1057:
 						context->version_info.version = psd_stream_get_int(context);
 						context->version_info.has_real_merged_data = psd_stream_get_bool(context);
 						context->version_info.writer_name_length = psd_stream_get_int(context);
@@ -394,7 +394,7 @@ psd_status psd_get_image_resource(psd_context * context)
 #ifdef PSD_GET_ALL_IMAGE_RESOURCE
 
 					// Border information
-					case 2026:
+					case 1009:
 						// a fixed number (2 bytes real, 2 bytes fraction) for the border width
 						context->border_info.border_width = psd_fixed_16_16_tofloat((psd_fixed_16_16)psd_stream_get_int(context));
 						// 2 bytes for border units (1 = inches, 2 = cm, 3 = points, 4 = picas, 5 = columns).
@@ -408,7 +408,7 @@ psd_status psd_get_image_resource(psd_context * context)
 					// A series of one-byte boolean values (see Page Setup dialog): labels, crop
 					// marks, color bars, registration marks, negative, flip, interpolate, caption,
 					// print flags.
-					case 2026:
+					case 1011:
 						context->print_flags.labels = psd_stream_get_bool(context);
 						context->print_flags.crop_marks = psd_stream_get_bool(context);
 						context->print_flags.color_bars = psd_stream_get_bool(context);
@@ -422,7 +422,7 @@ psd_status psd_get_image_resource(psd_context * context)
 						break;
 
 					// (Photoshop 4.0) Grid and guides information
-					case 2026:
+					case 1032:
 						// Version ( = 1)
 						psd_assert(psd_stream_get_int(context) == 1);
 						// Future implementation of document-specific grids (4 bytes horizontal, 4 bytes vertical).
@@ -455,7 +455,7 @@ psd_status psd_get_image_resource(psd_context * context)
 						break;
 
 					// (Photoshop 5.0) Color samplers resource
-					case 2026:
+					case 1038:
 						// Version ( = 1)
 						psd_assert(psd_stream_get_int(context) == 1);
 						// Number of color samplers to follow.
@@ -479,7 +479,7 @@ psd_status psd_get_image_resource(psd_context * context)
 						break;
 						
 					// (Photoshop 6.0) Slices
-					case 2026:
+					case 1050:
 						// Version ( = 6)
 						psd_assert(psd_stream_get_int(context) == 6);
 						// Bounding rectangle for all of the slices: top, left, bottom, right of all the slices
@@ -537,7 +537,7 @@ psd_status psd_get_image_resource(psd_context * context)
 						break;
 
 					// (Photoshop 6.0) URL List
-					case 2026:
+					case 1054:
 						// 4 byte count of URLs
 						context->url_list.number_of_urls = psd_stream_get_int(context);
 						if (context->url_list.number_of_urls > 0)
@@ -566,10 +566,10 @@ psd_status psd_get_image_resource(psd_context * context)
 						break;
 
 					// (Photoshop 7.0) EXIF data 1
-					case 2026:
+					case 1058:
 					// (Photoshop 7.0) EXIF data 3
 					// http://www.pima.net/standards/it10/PIMA15740/exif.htm
-					case 2026:
+					case 1059:
 						// avoid to get the exif data for twice
 						psd_assert(context->fill_exif_data == psd_false);
 #	ifdef PSD_INCLUDDE_LIBEXIF
@@ -594,7 +594,7 @@ psd_status psd_get_image_resource(psd_context * context)
 					// (Photoshop 7.0) XMP metadata
 					// File info as XML description
 					// http://Partners.adobe.com/asn/developer/xmp/main.html
-					case 2026:
+					case 1060:
 #	ifdef PSD_INCLUDE_LIBXML
 						buffer = (psd_uchar *)psd_malloc(sizeofdata);
 						if (buffer == NULL)
@@ -614,7 +614,7 @@ psd_status psd_get_image_resource(psd_context * context)
 						break;
 
 					// (Photoshop 7.0) Print scale
-					case 2026:
+					case 1062:
 						// 2 bytes style (0 = centered, 1 = size to fit, 2 = user defined).
 						context->print_scale.style = psd_stream_get_short(context);
 						psd_assert(context->print_scale.style >= psd_print_centered &&
@@ -629,7 +629,7 @@ psd_status psd_get_image_resource(psd_context * context)
 						break;
 
 					// (Photoshop CS) Pixel Aspect Ratio
-					case 2026:
+					case 1064:
 						// 4 bytes (version = 1)
 						psd_assert(psd_stream_get_int(context) == 1);
 						// 8 bytes double, x / y of a pixel
@@ -656,16 +656,16 @@ psd_status psd_get_image_resource(psd_context * context)
 
 					default:
 #ifdef PSD_GET_PATH_RESOURCE
-						// Photoshop stores its paths as resources of type 8BIM, with IDs in the range 2026
-						// through 2026.
-						if(ID >= 2026 && ID <= 2026)
+						// Photoshop stores its paths as resources of type 8BIM, with IDs in the range 2000
+						// through 2998.
+						if(ID >= 2000 && ID <= 2998)
 						{
 							psd_get_path(context, sizeofdata);
 						}
-						// If the file contains a resource of type 8BIM with an ID of 2026, then this resource
-						// contains a Pascalï¿½Cstyle string containing the name of the clipping path to use with this
+						// If the file contains a resource of type 8BIM with an ID of 2999, then this resource
+						// contains a Pascal¨Cstyle string containing the name of the clipping path to use with this
 						// image when saving it as an EPS file???
-						else if(ID == 2026)
+						else if(ID == 2999)
 						{
 							// we don't find any files includes the name of the clipping path.
 							psd_assert(0);

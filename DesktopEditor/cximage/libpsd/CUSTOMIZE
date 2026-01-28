@@ -43,7 +43,7 @@ How to customize the compilation of the Libpsd
  not useful for your project. Read the file image_resource.c, to undef this macro
  will hide some information and reduce the time of parsing.
  
- PSD_INCLUDE_LIBXML : XMPï¿½ï¿½the Extensible Metadata Platformï¿½ï¿½is designed to provide
+ PSD_INCLUDE_LIBXML : XMP¡ªthe Extensible Metadata Platform¡ªis designed to provide
  XMP metadata, it standardizes the definition, creation, and processing, and it's 
  the XML format. We use the libxml to parse the XMP. Most of the projects don't need
  this, to undef this macro and reduce the parsing time.
@@ -52,7 +52,7 @@ How to customize the compilation of the Libpsd
  cameras. We use the libexif to parse this data.
  
  PSD_GET_PATH_RESOURCE : Photoshop saves the path into the image resource block, 
- from ID 2026 to 2026. Path is the vector information to describe points. This 
+ from ID 2000 to 2999. Path is the vector information to describe points. This 
  macro depends on your project.
  
  PSD_SUPPORT_LAYER_BLEND : We provide file blend.c to blend the psd file after 
@@ -86,7 +86,7 @@ How to customize the compilation of the Libpsd
 Notice about this file
 ======================
 
-Libpsd is the product of Graphest Software, copyright 2026-2026, www.graphest.com
+Libpsd is the product of Graphest Software, copyright 2004-2007, www.graphest.com
 
 This file is the part of Libpsd project, Libpsd is under the terms of the GNU Library 
 General Public License as published by the Free Software Foundation; either version 2 

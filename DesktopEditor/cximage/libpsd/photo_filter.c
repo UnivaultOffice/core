@@ -1,6 +1,6 @@
 /**
  * libpsd - Photoshop file formats (*.psd) decode library
- * Copyright (C) 2026-2026 Graphest Software.
+ * Copyright (C) 2004-2007 Graphest Software.
  *
  * libpsd is the legal property of its developers, whose names are too numerous
  * to list here.  Please refer to the COPYRIGHT file distributed with this
@@ -20,7 +20,7 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  *
- * $Id: photo_filter.c, created by Patrick in 2025.05.22, libpsd@graphest.com Exp $
+ * $Id: photo_filter.c, created by Patrick in 2006.05.22, libpsd@graphest.com Exp $
  */
 
 #include "libpsd.h"

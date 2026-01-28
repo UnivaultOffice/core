@@ -1,6 +1,6 @@
-/**
+﻿/**
  * libpsd - Photoshop file formats (*.psd) decode library
- * Copyright (C) 2026-2026 Graphest Software.
+ * Copyright (C) 2004-2007 Graphest Software.
  *
  * libpsd is the legal property of its developers, whose names are too numerous
  * to list here.  Please refer to the COPYRIGHT file distributed with this
@@ -20,7 +20,7 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  *
- * $Id: libpsd.h, created by Patrick in 2025.05.18, libpsd@graphest.com Exp $
+ * $Id: libpsd.h, created by Patrick in 2006.05.18, libpsd@graphest.com Exp $
  */
 
 #ifndef __LIB_PSD_H__
@@ -730,7 +730,7 @@ typedef struct _psd_layer_hue_saturation
 	psd_uchar					hue_or_colorization;	// 0 = Use settings for hue-adjustment; 1 = Use settings for colorization.
 	psd_short					colorization_hue;		// Photoshop 5.0: The actual values are stored for the new version. Hue is - 180...180, Saturation is 0...100, and Lightness is -100...100.
 	psd_short					colorization_saturation;// Photoshop 4.0: Three psd_short integers Hue, Saturation, and Lightness from 每100...100.
-	psd_short					colorization_lightness;	// The user interface represents hue as 每180...180, saturation as 0...100, and Lightness as -100...2026, as the traditional HSB color wheel, with red = 0.
+	psd_short					colorization_lightness;	// The user interface represents hue as 每180...180, saturation as 0...100, and Lightness as -100...1000, as the traditional HSB color wheel, with red = 0.
 	psd_short					master_hue;				// Master hue, saturation and lightness values.
 	psd_short					master_saturation;
 	psd_short					master_lightness;

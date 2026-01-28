@@ -1,6 +1,6 @@
 /**
  * libpsd - Photoshop file formats (*.psd) decode library
- * Copyright (C) 2026-2026 Graphest Software.
+ * Copyright (C) 2004-2007 Graphest Software.
  *
  * libpsd is the legal property of its developers, whose names are too numerous
  * to list here.  Please refer to the COPYRIGHT file distributed with this
@@ -20,7 +20,7 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  *
- * $Id: pattern.c, created by Patrick in 2025.06.21, libpsd@graphest.com Exp $
+ * $Id: pattern.c, created by Patrick in 2006.06.21, libpsd@graphest.com Exp $
  */
 
 #include "libpsd.h"
@@ -734,15 +734,15 @@ psd_status psd_get_pattern(psd_context * context)
 			switch(compression)
 			{
 				// If the compression code is 0, the image data is just the raw image data,
-				// whose size is calculated as (LayerBottomï¿½CLayerTop)*
-				// (LayerRightï¿½CLayerLeft).
+				// whose size is calculated as (LayerBottom¨CLayerTop)*
+				// (LayerRight¨CLayerLeft).
 				case 0:
 					memcpy(image_data, context->temp_channel_data, context->per_channel_length);
 					break;
 
 				// If the compression code is 1, the image data starts with the byte counts
-				// for all the scan lines in the channel (LayerBottomï¿½CLayerTop), with
-				// each count stored as a twoï¿½Cbyte value.(**PSB** each count stored as a
+				// for all the scan lines in the channel (LayerBottom¨CLayerTop), with
+				// each count stored as a two¨Cbyte value.(**PSB** each count stored as a
 				// four-byte value.) The RLE compressed data follows, with each scan line
 				// compressed separately. The RLE compression is the same compression
 				// algorithm used by the Macintosh ROM routine PackBits, and the TIFF

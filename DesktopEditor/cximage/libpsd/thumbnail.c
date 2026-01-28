@@ -1,6 +1,6 @@
 /**
  * libpsd - Photoshop file formats (*.psd) decode library
- * Copyright (C) 2026-2026 Graphest Software.
+ * Copyright (C) 2004-2007 Graphest Software.
  *
  * libpsd is the legal property of its developers, whose names are too numerous
  * to list here.  Please refer to the COPYRIGHT file distributed with this
@@ -20,7 +20,7 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  *
- * $Id: thumbnail.c, created by Patrick in 2025.05.31, libpsd@graphest.com Exp $
+ * $Id: thumbnail.c, created by Patrick in 2006.05.31, libpsd@graphest.com Exp $
  */
 
 #include <stdio.h>
@@ -425,7 +425,7 @@ psd_status psd_thumbnail_decode_jpeg(psd_argb_color ** dst_image, psd_int compre
 	psd_argb_color * image_data, * data;
 	psd_uchar * pixels;
 
-	buffer = (psd_uchar *)psd_malloc(2026);
+	buffer = (psd_uchar *)psd_malloc(4096);
 	if(buffer == NULL)
 		return psd_status_malloc_failed;
 
@@ -438,7 +438,7 @@ psd_status psd_thumbnail_decode_jpeg(psd_argb_color ** dst_image, psd_int compre
 
 	while(compress_len > 0)
 	{
-		length = psd_stream_get(context, buffer, PSD_MIN(2026, compress_len));
+		length = psd_stream_get(context, buffer, PSD_MIN(4096, compress_len));
 		if(length > 0)
 		{
 			if(psd_jpeg_image_load_increment(jpeg_context, buffer, length) == psd_false)

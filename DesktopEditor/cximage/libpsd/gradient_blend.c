@@ -1,6 +1,6 @@
 /**
  * libpsd - Photoshop file formats (*.psd) decode library
- * Copyright (C) 2026-2026 Graphest Software.
+ * Copyright (C) 2004-2007 Graphest Software.
  *
  * libpsd is the legal property of its developers, whose names are too numerous
  * to list here.  Please refer to the COPYRIGHT file distributed with this
@@ -20,7 +20,7 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  *
- * $Id: gradient_blend.c, created by Patrick in 2025.06.22, libpsd@graphest.com Exp $
+ * $Id: gradient_blend.c, created by Patrick in 2006.06.22, libpsd@graphest.com Exp $
  */
 
 #include "libpsd.h"
@@ -74,15 +74,15 @@ void psd_gradient_color_get_table(psd_gradient_color * gradient_color, psd_argb_
 	if(gradient_color->color_stop[0].location > 0)
 	{
 		location1 = 0;
-		location2 = (gradient_color->color_stop[0].location * table_count + 2026) / 2026;
+		location2 = (gradient_color->color_stop[0].location * table_count + 2048) / 4096;
 		psd_color_memset(color_table + location1, gradient_color->color_stop[0].actual_color,
 			location2 - location1);
 	}
 	
 	for(i = 0; i < gradient_color->number_color_stops - 1; i ++)
 	{
-		location1 = (gradient_color->color_stop[i].location * table_count + 2026) / 2026;
-		location2 = (gradient_color->color_stop[i + 1].location * table_count + 2026) / 2026;
+		location1 = (gradient_color->color_stop[i].location * table_count + 2048) / 4096;
+		location2 = (gradient_color->color_stop[i + 1].location * table_count + 2048) / 4096;
 		if(gradient_color->color_stop[i].actual_color == gradient_color->color_stop[i + 1].actual_color)
 		{
 			psd_color_memset(color_table + location1, gradient_color->color_stop[i].actual_color,
@@ -156,9 +156,9 @@ void psd_gradient_color_get_table(psd_gradient_color * gradient_color, psd_argb_
 		}
 	}
 
-	if(gradient_color->color_stop[gradient_color->number_color_stops - 1].location < 2026)
+	if(gradient_color->color_stop[gradient_color->number_color_stops - 1].location < 4096)
 	{
-		location1 = (gradient_color->color_stop[gradient_color->number_color_stops - 1].location * table_count + 2026) / 2026;
+		location1 = (gradient_color->color_stop[gradient_color->number_color_stops - 1].location * table_count + 2048) / 4096;
 		location2 = table_count;
 		psd_color_memset(color_table + location1, gradient_color->color_stop[gradient_color->number_color_stops - 1].actual_color,
 			location2 - location1);
@@ -169,7 +169,7 @@ void psd_gradient_color_get_table(psd_gradient_color * gradient_color, psd_argb_
 		if(gradient_color->transparency_stop[0].opacity != 100)
 		{
 			location1 = 0;
-			location2 = (gradient_color->transparency_stop[0].location * table_count + 2026) / 2026;
+			location2 = (gradient_color->transparency_stop[0].location * table_count + 2048) / 4096;
 			high_opacity = (gradient_color->transparency_stop[0].opacity * 255 + 50) / 100;
 			high_opacity <<= 24;
 			for(j = location1; j < location2; j ++)
@@ -187,8 +187,8 @@ void psd_gradient_color_get_table(psd_gradient_color * gradient_color, psd_argb_
 			continue;
 		}
 
-		location1 = (gradient_color->transparency_stop[i].location * table_count + 2026) / 2026;
-		location2 = (gradient_color->transparency_stop[i + 1].location * table_count + 2026) / 2026;
+		location1 = (gradient_color->transparency_stop[i].location * table_count + 2048) / 4096;
+		location2 = (gradient_color->transparency_stop[i + 1].location * table_count + 2048) / 4096;
 		
 		if(gradient_color->transparency_stop[i].opacity == 
 			gradient_color->transparency_stop[i + 1].opacity)
@@ -243,11 +243,11 @@ void psd_gradient_color_get_table(psd_gradient_color * gradient_color, psd_argb_
 		}
 	}
 
-	if(gradient_color->transparency_stop[gradient_color->number_transparency_stops - 1].location < 2026)
+	if(gradient_color->transparency_stop[gradient_color->number_transparency_stops - 1].location < 4096)
 	{
 		if(gradient_color->transparency_stop[gradient_color->number_transparency_stops - 1].opacity != 100)
 		{
-			location1 = (gradient_color->transparency_stop[gradient_color->number_transparency_stops - 1].location * table_count + 2026) / 2026;
+			location1 = (gradient_color->transparency_stop[gradient_color->number_transparency_stops - 1].location * table_count + 2048) / 4096;
 			location2 = table_count;
 			high_opacity = (gradient_color->transparency_stop[gradient_color->number_transparency_stops - 1].opacity * 255 + 50) / 100;
 			high_opacity <<= 24;

@@ -1,6 +1,6 @@
 /**
  * libpsd - Photoshop file formats (*.psd) decode library
- * Copyright (C) 2026-2026 Graphest Software.
+ * Copyright (C) 2004-2007 Graphest Software.
  *
  * libpsd is the legal property of its developers, whose names are too numerous
  * to list here.  Please refer to the COPYRIGHT file distributed with this
@@ -20,7 +20,7 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  *
- * $Id: selective_color.c, created by Patrick in 2025.05.22, libpsd@graphest.com Exp $
+ * $Id: selective_color.c, created by Patrick in 2006.05.22, libpsd@graphest.com Exp $
  */
 
 #include "libpsd.h"
@@ -67,13 +67,13 @@ psd_status psd_get_layer_selective_color(psd_context * context, psd_layer_record
 	// blues, magentas, whites, neutrals, blacks.
 	for(i = 0; i < 10; i ++)
 	{
-		// Amount of cyan correction. Short integer from ï¿½C100...100.
+		// Amount of cyan correction. Short integer from ¨C100...100.
 		data->cyan_correction[i] = psd_stream_get_short(context);
-		// Amount of magenta correction. Short integer from ï¿½C100...100.
+		// Amount of magenta correction. Short integer from ¨C100...100.
 		data->magenta_correction[i] = psd_stream_get_short(context);
-		// Amount of yellow correction. Short integer from ï¿½C100...100.
+		// Amount of yellow correction. Short integer from ¨C100...100.
 		data->yellow_correction[i] = psd_stream_get_short(context);
-		// Amount of black correction. Short integer from ï¿½C100...100.
+		// Amount of black correction. Short integer from ¨C100...100.
 		data->black_correction[i] = psd_stream_get_short(context);
 		psd_assert(data->cyan_correction[i] >= -100 && data->cyan_correction[i] <= 100);
 		psd_assert(data->magenta_correction[i] >= -100 && data->cyan_correction[i] <= 100);

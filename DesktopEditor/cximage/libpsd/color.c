@@ -1,6 +1,6 @@
 /**
  * libpsd - Photoshop file formats (*.psd) decode library
- * Copyright (C) 2026-2026 Graphest Software.
+ * Copyright (C) 2004-2007 Graphest Software.
  *
  * libpsd is the legal property of its developers, whose names are too numerous
  * to list here.  Please refer to the COPYRIGHT file distributed with this
@@ -20,7 +20,7 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  *
- * $Id: color.c, created by Patrick in 2025.05.18, libpsd@graphest.com Exp $
+ * $Id: color.c, created by Patrick in 2006.05.18, libpsd@graphest.com Exp $
  */
 
 #include <math.h>
@@ -148,9 +148,9 @@ psd_argb_color psd_axyz_to_color(psd_color_component alpha, psd_double x, psd_do
 	psd_double var_y = y / 100.0;
 	psd_double var_z = z / 100.0;
 
-	psd_double var_r = var_x * 3.2026 + var_y * (-1.2026) + var_z * (-0.2026);
-	psd_double var_g = var_x * (-0.2026) + var_y * 1.2026 + var_z * 0.2026;
-	psd_double var_b = var_x * 0.2026 + var_y * (-0.2026) + var_z * 1.2026;
+	psd_double var_r = var_x * 3.2406 + var_y * (-1.5372) + var_z * (-0.4986);
+	psd_double var_g = var_x * (-0.9689) + var_y * 1.8758 + var_z * 0.0415;
+	psd_double var_b = var_x * 0.0557 + var_y * (-0.2040) + var_z * 1.0570;
 
 	psd_int red, green, blue;
 

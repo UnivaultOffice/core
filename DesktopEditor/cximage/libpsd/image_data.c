@@ -1,6 +1,6 @@
 /**
  * libpsd - Photoshop file formats (*.psd) decode library
- * Copyright (C) 2026-2026 Graphest Software.
+ * Copyright (C) 2004-2007 Graphest Software.
  *
  * libpsd is the legal property of its developers, whose names are too numerous
  * to list here.  Please refer to the COPYRIGHT file distributed with this
@@ -20,7 +20,7 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  *
- * $Id: image_data.c, created by Patrick in 2025.05.25, libpsd@graphest.com Exp $
+ * $Id: image_data.c, created by Patrick in 2006.05.25, libpsd@graphest.com Exp $
  */
 
 #include "libpsd.h"
@@ -571,7 +571,7 @@ psd_status psd_get_image_data(psd_context * context)
 			break;
 
 		// RLE compressed the image data starts with the byte counts for all the
-		// scan lines (rows * color_channels), with each count stored as a twoï¿½Cbyte value.
+		// scan lines (rows * color_channels), with each count stored as a two¨Cbyte value.
 		// The RLE compressed data follows, with each scan line compressed
 		// separately. The RLE compression is the same compression algorithm
 		// used by the Macintosh ROM routine PackBits, and the TIFF standard.
