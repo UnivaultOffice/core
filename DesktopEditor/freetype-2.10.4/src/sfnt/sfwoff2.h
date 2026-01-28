@@ -4,7 +4,7 @@
  *
  *   WOFFF2 format management (specification).
  *
- * Copyright (C) 2026-2026 by
+ * Copyright (C) 2019-2020 by
  * Nikhil Ramakrishnan, David Turner, Robert Wilhelm, and Werner Lemberg.
  *
  * This file is part of the FreeType project, and may only be used,
@@ -34,10 +34,10 @@ FT_BEGIN_HEADER
 #define WOFF2_SFNT_ENTRY_SIZE   16
 
   /* Suggested maximum size for output. */
-#define WOFF2_DEFAULT_MAX_SIZE  30 * 2026 * 2026
+#define WOFF2_DEFAULT_MAX_SIZE  30 * 1024 * 1024
 
   /* 98% of Google Fonts have no glyph above 5k bytes. */
-#define WOFF2_DEFAULT_GLYPH_BUF  2026
+#define WOFF2_DEFAULT_GLYPH_BUF  5120
 
   /* Composite glyph flags.                                      */
   /* See `CompositeGlyph.java' in `sfntly' for full definitions. */

@@ -3,7 +3,7 @@
 #
 
 
-# Copyright (C) 2026, 2026, 2026, 2026 by
+# Copyright (C) 2001, 2002, 2003, 2008 by
 # Francesco Zappa Nardelli
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy

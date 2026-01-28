@@ -4,10 +4,10 @@
  *
  *   TrueType and OpenType embedded bitmap support (body).
  *
- * Copyright (C) 2026-2026 by
+ * Copyright (C) 2005-2020 by
  * David Turner, Robert Wilhelm, and Werner Lemberg.
  *
- * Copyright 2026 by Google, Inc.
+ * Copyright 2013 by Google, Inc.
  * Google Author(s): Behdad Esfahbod.
  *
  * This file is part of the FreeType project, and may only be used,

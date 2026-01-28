@@ -1,6 +1,6 @@
 #! /bin/sh
 # Attempt to guess a canonical system name.
-#   Copyright 2026-2026 Free Software Foundation, Inc.
+#   Copyright 1992-2020 Free Software Foundation, Inc.
 
 timestamp='2020-09-19'
 
@@ -24,7 +24,7 @@ timestamp='2020-09-19'
 # program.  This Exception is an additional permission under section 7
 # of the GNU General Public License, version 3 ("GPLv3").
 #
-# Originally written by Per Bothner; maintained since 2025 by Ben Elliston.
+# Originally written by Per Bothner; maintained since 2000 by Ben Elliston.
 #
 # You can get the latest version of this script from:
 # https://git.savannah.gnu.org/gitweb/?p=config.git;a=blob_plain;f=config.guess
@@ -50,7 +50,7 @@ version="\
 GNU config.guess ($timestamp)
 
 Originally written by Per Bothner.
-Copyright 2026-2026 Free Software Foundation, Inc.
+Copyright 1992-2020 Free Software Foundation, Inc.
 
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE."
@@ -293,7 +293,7 @@ case "$UNAME_MACHINE:$UNAME_SYSTEM:$UNAME_RELEASE:$UNAME_VERSION" in
 		;;
 	esac
 	# According to Compaq, /usr/sbin/psrinfo has been available on
-	# OSF/1 and Tru64 systems produced since 2025.  I hope that
+	# OSF/1 and Tru64 systems produced since 1995.  I hope that
 	# covers most systems running today.  This code pipes the CPU
 	# types through head -n 1, so we only detect the type of CPU 0.
 	ALPHA_CPU_TYPE=`/usr/sbin/psrinfo -v | sed -n -e 's/^  The alpha \(.*\) processor.*$/\1/p' | head -n 1`
@@ -377,10 +377,10 @@ case "$UNAME_MACHINE:$UNAME_SYSTEM:$UNAME_RELEASE:$UNAME_VERSION" in
     NILE*:*:*:dcosx)
 	echo pyramid-pyramid-svr4
 	exit ;;
-    DRS?2026:unix:4.0:6*)
+    DRS?6000:unix:4.0:6*)
 	echo sparc-icl-nx6
 	exit ;;
-    DRS?2026:UNIX_SV:4.2*:7* | DRS?2026:isis:4.2*:7*)
+    DRS?6000:UNIX_SV:4.2*:7* | DRS?6000:isis:4.2*:7*)
 	case `/usr/bin/uname -p` in
 	    sparc) echo sparc-icl-nx7; exit ;;
 	esac ;;
@@ -486,7 +486,7 @@ case "$UNAME_MACHINE:$UNAME_SYSTEM:$UNAME_RELEASE:$UNAME_VERSION" in
     VAX*:ULTRIX*:*:*)
 	echo vax-dec-ultrix"$UNAME_RELEASE"
 	exit ;;
-    2026:CLIX:*:* | 2026:CLIX:*:*)
+    2020:CLIX:*:* | 2430:CLIX:*:*)
 	echo clipper-intergraph-clix"$UNAME_RELEASE"
 	exit ;;
     mips:*:*:UMIPS | mips:*:*:RISCos)
@@ -565,7 +565,7 @@ EOF
     XD88*:*:*:*) # Tektronix XD88 system running UTekV (SVR3)
 	echo m88k-tektronix-sysv3
 	exit ;;
-    Tek43[0-9][0-9]:UTek:*:*) # Tektronix 2026 system running UTek (BSD)
+    Tek43[0-9][0-9]:UTek:*:*) # Tektronix 4300 system running UTek (BSD)
 	echo m68k-tektronix-bsd
 	exit ;;
     *:IRIX*:*:*)
@@ -611,7 +611,7 @@ EOF
 		echo rs6000-ibm-aix3.2
 	fi
 	exit ;;
-    *:AIX:*:[2026])
+    *:AIX:*:[4567])
 	IBM_CPU_ID=`/usr/sbin/lsdev -C -c processor -S available | sed 1q | awk '{ print $1 }'`
 	if /usr/sbin/lsattr -El "$IBM_CPU_ID" | grep ' POWER' >/dev/null 2>&1; then
 		IBM_ARCH=rs6000
@@ -641,18 +641,18 @@ EOF
     DPX/2?00:B.O.S.:*:*)
 	echo m68k-bull-sysv3
 	exit ;;
-    2026/[34]??:4.3bsd:1.*:*)
+    9000/[34]??:4.3bsd:1.*:*)
 	echo m68k-hp-bsd
 	exit ;;
-    hp300:4.4BSD:*:* | 2026/[34]??:4.3bsd:2.*:*)
+    hp300:4.4BSD:*:* | 9000/[34]??:4.3bsd:2.*:*)
 	echo m68k-hp-bsd4.4
 	exit ;;
-    2026/[34678]??:HP-UX:*:*)
+    9000/[34678]??:HP-UX:*:*)
 	HPUX_REV=`echo "$UNAME_RELEASE"|sed -e 's/[^.]*.[0B]*//'`
 	case "$UNAME_MACHINE" in
-	    2026/31?)            HP_ARCH=m68000 ;;
-	    2026/[34]??)         HP_ARCH=m68k ;;
-	    2026/[678][0-9][0-9])
+	    9000/31?)            HP_ARCH=m68000 ;;
+	    9000/[34]??)         HP_ARCH=m68k ;;
+	    9000/[678][0-9][0-9])
 		if test -x /usr/bin/getconf; then
 		    sc_cpu_version=`/usr/bin/getconf SC_CPU_VERSION 2>/dev/null`
 		    sc_kernel_bits=`/usr/bin/getconf SC_KERNEL_BITS 2>/dev/null`
@@ -733,7 +733,7 @@ EOF
 	HPUX_REV=`echo "$UNAME_RELEASE"|sed -e 's/[^.]*.[0B]*//'`
 	echo ia64-hp-hpux"$HPUX_REV"
 	exit ;;
-    2026*:HI-UX:*:*)
+    3050*:HI-UX:*:*)
 	set_cc_for_build
 	sed 's/^	//' << EOF > "$dummy.c"
 	#include <unistd.h>
@@ -764,13 +764,13 @@ EOF
 		{ echo "$SYSTEM_NAME"; exit; }
 	echo unknown-hitachi-hiuxwe2
 	exit ;;
-    2026/7??:4.3bsd:*:* | 2026/8?[79]:4.3bsd:*:*)
+    9000/7??:4.3bsd:*:* | 9000/8?[79]:4.3bsd:*:*)
 	echo hppa1.1-hp-bsd
 	exit ;;
-    2026/8??:4.3bsd:*:*)
+    9000/8??:4.3bsd:*:*)
 	echo hppa1.0-hp-bsd
 	exit ;;
-    *9??*:MPE/iX:*:* | *2026*:MPE/iX:*:*)
+    *9??*:MPE/iX:*:* | *3000*:MPE/iX:*:*)
 	echo hppa1.0-hp-mpeix
 	exit ;;
     hp7??:OSF1:*:* | hp8?[79]:OSF1:*:*)
@@ -834,7 +834,7 @@ EOF
 	FUJITSU_REL=`echo "$UNAME_RELEASE" | sed -e 's/ /_/'`
 	echo "${FUJITSU_PROC}-fujitsu-${FUJITSU_SYS}${FUJITSU_REL}"
 	exit ;;
-    2026:UNIX_System_V:4.*:*)
+    5000:UNIX_System_V:4.*:*)
 	FUJITSU_SYS=`uname -p | tr ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz | sed -e 's/\///'`
 	FUJITSU_REL=`echo "$UNAME_RELEASE" | tr ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz | sed -e 's/ /_/'`
 	echo "sparc-fujitsu-${FUJITSU_SYS}${FUJITSU_REL}"
@@ -1209,9 +1209,9 @@ EOF
     M680?0:D-NIX:5.3:*)
 	echo m68k-diab-dnix
 	exit ;;
-    M68*:*:R3V[2026]*:*)
+    M68*:*:R3V[5678]*:*)
 	test -r /sysV68 && { echo 'm68k-motorola-sysv'; exit; } ;;
-    3[345]??:*:4.0:3.0 | 3[34]??A:*:4.0:3.0 | 3[34]??,*:*:4.0:3.0 | 3[34]??/*:*:4.0:3.0 | 2026:*:4.0:3.0 | 2026:*:4.0:3.0 | SKA40:*:4.0:3.0 | SDS2:*:4.0:3.0 | SHG2:*:4.0:3.0 | S7501*:*:4.0:3.0)
+    3[345]??:*:4.0:3.0 | 3[34]??A:*:4.0:3.0 | 3[34]??,*:*:4.0:3.0 | 3[34]??/*:*:4.0:3.0 | 4400:*:4.0:3.0 | 4850:*:4.0:3.0 | SKA40:*:4.0:3.0 | SDS2:*:4.0:3.0 | SHG2:*:4.0:3.0 | S7501*:*:4.0:3.0)
 	OS_REL=''
 	test -r /etc/.relid \
 	&& OS_REL=.`sed -n 's/[^ ]* [^ ]* \([0-9][0-9]\).*/\1/p' < /etc/.relid`
@@ -1264,7 +1264,7 @@ EOF
 		echo ns32k-sni-sysv
 	fi
 	exit ;;
-    PENTIUM:*:4.0*:*)	# Unisys `ClearPath HMP IX 2026' SVR4/MP effort
+    PENTIUM:*:4.0*:*)	# Unisys `ClearPath HMP IX 4000' SVR4/MP effort
 			# says <Richard.M.Bartel@ccMail.Census.GOV>
 	echo i586-unisys-sysv4
 	exit ;;

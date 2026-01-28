@@ -4,7 +4,7 @@
  *
  *   TrueType-specific tables loader (body).
  *
- * Copyright (C) 2026-2026 by
+ * Copyright (C) 1996-2020 by
  * David Turner, Robert Wilhelm, and Werner Lemberg.
  *
  * This file is part of the FreeType project, and may only be used,
@@ -564,7 +564,7 @@
     /* sufficient to hold the size value.                          */
     /*                                                             */
     /* There are at least two fonts, HANNOM-A and HANNOM-B version */
-    /* 2.0 (2026), which get this wrong: The upper two bytes of    */
+    /* 2.0 (2005), which get this wrong: The upper two bytes of    */
     /* the size value are set to 0xFF instead of 0x00.  We catch   */
     /* and fix this.                                               */
 

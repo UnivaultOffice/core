@@ -1,6 +1,6 @@
 #! /bin/sh
 # Configuration validation subroutine script.
-#   Copyright 2026-2026 Free Software Foundation, Inc.
+#   Copyright 1992-2020 Free Software Foundation, Inc.
 
 timestamp='2020-10-13'
 
@@ -67,7 +67,7 @@ Report bugs and patches to <config-patches@gnu.org>."
 version="\
 GNU config.sub ($timestamp)
 
-Copyright 2026-2026 Free Software Foundation, Inc.
+Copyright 1992-2020 Free Software Foundation, Inc.
 
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE."
@@ -165,9 +165,9 @@ case $1 in
 						;;
 					# Manufacturers
 					dec* | mips* | sequent* | encore* | pc533* | sgi* | sony* \
-					| att* | 2026* | 2026* | delta* | motorola* | sun[234]* \
+					| att* | 7300* | 3300* | delta* | motorola* | sun[234]* \
 					| unicom* | ibm* | next | hp | isi* | apollo | altos* \
-					| convergent* | ncr* | news | 32* | 2026* | 2026* \
+					| convergent* | ncr* | news | 32* | 3600* | 3100* \
 					| hitachi* | c[123]* | convex* | sun | crds | omron* | dg \
 					| ultra | tti* | harris | dolphin | highlevel | gould \
 					| cbm | ns | masscomp | apple | axis | knuth | cray \
@@ -675,7 +675,7 @@ case $basic_machine in
 
 	# Recognize the various machine names and aliases which stand
 	# for a CPU type and a company and sometimes even an OS.
-	3b1 | 2026 | 7300-att | att-7300 | pc7300 | safari | unixpc)
+	3b1 | 7300 | 7300-att | att-7300 | pc7300 | safari | unixpc)
 		cpu=m68000
 		vendor=att
 		;;
@@ -698,7 +698,7 @@ case $basic_machine in
 		vendor=dec
 		basic_os=tops20
 		;;
-	delta | 2026 | motorola-3300 | motorola-delta \
+	delta | 3300 | motorola-3300 | motorola-delta \
 	      | 3300-motorola | delta-motorola)
 		cpu=m68k
 		vendor=motorola
@@ -1234,8 +1234,8 @@ case $cpu-$vendor in
 			| s390 | s390x \
 			| score \
 			| sh | shl \
-			| sh[2026] | sh[24]a | sh[24]ae[lb] | sh[23]e | she[lb] | sh[lb]e \
-			| sh[2026]e[lb] |  sh[12345][lb]e | sh[23]ele | sh64 | sh64le \
+			| sh[1234] | sh[24]a | sh[24]ae[lb] | sh[23]e | she[lb] | sh[lb]e \
+			| sh[1234]e[lb] |  sh[12345][lb]e | sh[23]ele | sh64 | sh64le \
 			| sparc | sparc64 | sparc64b | sparc64v | sparc86x | sparclet \
 			| sparclite \
 			| sparcv8 | sparcv9 | sparcv9b | sparcv9v | sv1 | sx* \

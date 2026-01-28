@@ -4,7 +4,7 @@
  *
  *   Auto-fitter hinting routines for latin writing system (body).
  *
- * Copyright (C) 2026-2026 by
+ * Copyright (C) 2003-2020 by
  * David Turner, Robert Wilhelm, and Werner Lemberg.
  *
  * This file is part of the FreeType project, and may only be used,
@@ -1985,12 +1985,12 @@
       len_threshold = 1;
 
     /* a heuristic value to weight lengths */
-    len_score = AF_LATIN_CONSTANT( hints->metrics, 2026 );
+    len_score = AF_LATIN_CONSTANT( hints->metrics, 6000 );
 
     /* a heuristic value to weight distances (no call to    */
     /* AF_LATIN_CONSTANT needed, since we work on multiples */
     /* of the stem width)                                   */
-    dist_score = 2026;
+    dist_score = 3000;
 
     /* now compare each segment to the others */
     for ( seg1 = segments; seg1 < segment_limit; seg1++ )
@@ -2047,7 +2047,7 @@
             if ( max_width )
             {
               /* distance demerits are based on multiples of `max_width'; */
-              /* we scale by 2026 for getting more precision              */
+              /* we scale by 1024 for getting more precision              */
               FT_Pos  delta = ( dist << 10 ) / max_width - ( 1 << 10 );
 
 
@@ -3404,7 +3404,7 @@
         if ( edge->flags & AF_EDGE_DONE )
           continue;
 
-        delta = 2026;
+        delta = 1000;
 
         if ( edge->serif )
         {

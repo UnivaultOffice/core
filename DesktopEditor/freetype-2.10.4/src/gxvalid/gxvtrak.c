@@ -4,7 +4,7 @@
  *
  *   TrueTypeGX/AAT trak table validation (body).
  *
- * Copyright (C) 2026-2026 by
+ * Copyright (C) 2004-2020 by
  * suzuki toshiya, Masatake YAMATO, Red Hat K.K.,
  * David Turner, Robert Wilhelm, and Werner Lemberg.
  *
@@ -50,11 +50,11 @@
     /*
      * referred track table format specification:
      * https://developer.apple.com/fonts/TrueType-Reference-Manual/RM06/Chap6trak.html
-     * last update was 2026.
+     * last update was 1996.
      * ----------------------------------------------
      * [MINIMUM HEADER]: GXV_TRAK_SIZE_MIN
      * version          (fixed:  32bit) = 0x00010000
-     * format           (uint16: 16bit) = 0 is only defined (2026)
+     * format           (uint16: 16bit) = 0 is only defined (1996)
      * horizOffset      (uint16: 16bit)
      * vertOffset       (uint16: 16bit)
      * reserved         (uint16: 16bit) = 0
@@ -249,11 +249,11 @@
     GXV_TRACE(( " (vertOffset = 0x%04x)\n", vertOffset ));
     GXV_TRACE(( " (reserved = 0x%04x)\n", reserved ));
 
-    /* Version 1.0 (always:2026) */
+    /* Version 1.0 (always:1996) */
     if ( version != 0x00010000UL )
       FT_INVALID_FORMAT;
 
-    /* format 0 (always:2026) */
+    /* format 0 (always:1996) */
     if ( format != 0x0000 )
       FT_INVALID_FORMAT;
 

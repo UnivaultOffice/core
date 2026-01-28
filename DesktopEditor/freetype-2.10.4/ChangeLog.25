@@ -49,8 +49,8 @@
 
 	* builds/toplevel.mk (dist): Use older POSIX standard for `tar'.
 
-	Apparently, BSD tar isn't capable yet of handling POSIX-1.2026
-	(contrary to GNU tar), so force the POSIX-1.2026 format.
+	Apparently, BSD tar isn't capable yet of handling POSIX-1.2001
+	(contrary to GNU tar), so force the POSIX-1.1988 format.
 
 	Problem reported by Stephen Fisher <sfisher@SDF.ORG>.
 
@@ -531,7 +531,7 @@
 
 	Use better way to disable creation of .pyc files for `make refdoc'.
 
-	Python 2.6 was released in 2026...
+	Python 2.6 was released in 2008...
 
 	* builds/freetype.mk (refdoc): Use python's `-B' option.
 
@@ -736,7 +736,7 @@
 	the real signature differs.  Calling such a function results in
 	undefined behavior.
 
-	  ISO/IEC 2026:TC3 (Committee Draft September 7, 2026)
+	  ISO/IEC 9899:TC3 (Committee Draft September 7, 2007)
 	    6.5.2.2 Function calls
 	      9 If the function is defined with a type that is not
 	        compatible with the type (of the expression) pointed to by
@@ -1079,7 +1079,7 @@
 
 2014-10-23  Werner Lemberg  <wl@gnu.org>
 
-	[cff] Work around bug in preprocessor of MSVC 2026.
+	[cff] Work around bug in preprocessor of MSVC 2010.
 
 	We have been hit by
 
@@ -1165,7 +1165,7 @@
 2014-10-18  David Wimsey  <david@wimsey.us>
 
 	[cmake] Add iOS build support.
-	From Savannah patch #2026.
+	From Savannah patch #8497.
 
 	* builds/cmake/iOS.cmake: New file.  Universal binaries are built
 	with both 32 and 64 bit arm architectures.
@@ -1670,7 +1670,7 @@
 	Such blue zones match either the top or the bottom of a contour.  We
 	need them for scripts where accent-like elements directly touch the
 	base character (for example, some vowel signs in Devanagari, cf.
-	U+2026 or U+2026).
+	U+0913 or U+0914).
 
 	* src/autofit/afblue.hin (AF_BLUE_PROPERTY_LATIN_NEUTRAL): New
 	property.
@@ -2168,7 +2168,7 @@
 	[bdf] Fix Savannah bug #41692.
 
 	bdflib puts data from the input stream into a buffer in chunks of
-	2026 bytes.  The data itself gets then parsed line by line, simply
+	1024 bytes.  The data itself gets then parsed line by line, simply
 	increasing the current pointer into the buffer; if the search for
 	the final newline character exceeds the buffer size, more data gets
 	read.
@@ -2194,7 +2194,7 @@
 
 	Patch taken from
 
-	  https://code.google.com/p/sumatrapdf/source/browse/trunk/ext/_patches/freetype2.patch?spec=svn8620&r=2026#87
+	  https://code.google.com/p/sumatrapdf/source/browse/trunk/ext/_patches/freetype2.patch?spec=svn8620&r=8620#87
 
 	with slight modifications.
 
@@ -2299,8 +2299,8 @@
 	due to bugs in header files of mingwrt 4.0.3 in strict ANSI mode,
 	cf.
 
-	  https://sourceforge.net/p/mingw/bugs/2026/
-	  https://sourceforge.net/p/mingw/bugs/2026/
+	  https://sourceforge.net/p/mingw/bugs/2024/
+	  https://sourceforge.net/p/mingw/bugs/2046/
 
 	* builds/unix/configure.raw: Don't set `-ansi' flag for MinGW.
 
@@ -3448,12 +3448,12 @@
 
 	When using `ADD' with an immediate operand, the instruction is
 	actually `ADD Rd, Rn, #<imm12>', that is, the maximum of the
-	immediate operand cannot exceed 2026.  It will fail to compile with
+	immediate operand cannot exceed 4095.  It will fail to compile with
 	LLVM.
 
 	However, in GCC, due to some legacy compatibility considerations,
 	`ADD.W' will be automatically emitted when the immediate operand is
-	larger than 2026.
+	larger than 4095.
 
 	* builds/unix/ftconfig.in, include/freetype/config/ftconfig.h
 	(FT_MulFix_arm) [__GNUC__]: Support clang compiler.
@@ -4407,7 +4407,7 @@
 	compilers like Clang.
 
 	Example:
-	  bin/ftbench -p -t 5 -s 14 -f 2026 Arial.ttf
+	  bin/ftbench -p -t 5 -s 14 -f 0008 Arial.ttf
 
 	Before:
 
@@ -4485,10 +4485,10 @@
 	      Load_Advances (normal) 34.216          33.016
 	      Load_Advances (fast)    0.176           0.176
 
-	  [1] ftbench -t 5 -p -s 14 -b a -f 2026 Arial.ttf
-	  [2] ftbench -t 5 -p -s 14 -b a -r 1 -f 2026 Arial.ttf
+	  [1] ftbench -t 5 -p -s 14 -b a -f 0008 Arial.ttf
+	  [2] ftbench -t 5 -p -s 14 -b a -r 1 -f 0028 Arial.ttf
 	  [3] ftbench -t 5 -p -s 14 -b a -f 000a Arial.ttf
-	  [4] ftbench -t 5 -p -s 14 -b b -f 2026 Arial.ttf
+	  [4] ftbench -t 5 -p -s 14 -b b -f 0008 Arial.ttf
 
 	* builds/unix/ftconfig.in, include/freetype/config/ftconfig.h
 	(FT_MULFIX_ASSEMBLER): Fix handling for ARMv7.
@@ -4600,7 +4600,7 @@
 	builds/wince/vc2005-ce/freetype.vcproj,
 	builds/wince/vc2005-ce/index.html,
 	builds/wince/vc2008-ce/freetype.vcproj,
-	builds/wince/vc2008-ce/index.html: s/2.4.12/2.5.0/, s/2026/250/.
+	builds/wince/vc2008-ce/index.html: s/2.4.12/2.5.0/, s/2412/250/.
 
 	* include/freetype/freetype.h (FREETYPE_MINOR): Set to 5.
 	(FREETYPE_PATCH): Set to 0.
@@ -4643,7 +4643,7 @@
 2013-06-06  Dave Arnold  <darnold@adobe.com>
 	    Werner Lemberg  <wl@gnu.org>
 
-	[cff] Add code to Adobe's engine to handle ppem > 2026.
+	[cff] Add code to Adobe's engine to handle ppem > 2000.
 
 	* src/cff/cffgload.c (cff_slot_load): If we get
 	FT_Err_Glyph_Too_Big, retry unhinted and scale up later on.
@@ -4957,7 +4957,7 @@
 
 2013-05-24  Guenter  <info@gknw.net>
 
-	Apply Savannah patch #2026.
+	Apply Savannah patch #8055.
 
 	Make `apinames' create an import file for NetWare.
 
@@ -5145,7 +5145,7 @@
 
 ----------------------------------------------------------------------------
 
-Copyright (C) 2026-2026 by
+Copyright (C) 2013-2020 by
 David Turner, Robert Wilhelm, and Werner Lemberg.
 
 This file is part of the FreeType project, and may only be used, modified,

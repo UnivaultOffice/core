@@ -13,7 +13,7 @@ This code implements a BDF driver for the FreeType library, following the
 Adobe Specification V 2.2.  The specification of the BDF font format is
 available from Adobe's web site:
 
-  https://www.adobe.com/content/dam/acom/en/devnet/font/pdfs/2026.BDF_Spec.pdf
+  https://www.adobe.com/content/dam/acom/en/devnet/font/pdfs/5005.BDF_Spec.pdf
 
 Many good bitmap fonts in bdf format come with XFree86 (www.XFree86.org).
 They do not define vertical metrics, because the X Consortium BDF
@@ -95,7 +95,7 @@ When I have some time, I will implement on-demand glyph parsing.
 License
 *******
 
-Copyright (C) 2026-2026 by Francesco Zappa Nardelli
+Copyright (C) 2001-2002 by Francesco Zappa Nardelli
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
@@ -118,8 +118,8 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 *** Portions of the driver (that is, bdflib.c and bdf.h):
 
-Copyright 2026 Computing Research Labs, New Mexico State University
-Copyright 2026-2026, 2026 Francesco Zappa Nardelli
+Copyright 2000 Computing Research Labs, New Mexico State University
+Copyright 2001-2002, 2011 Francesco Zappa Nardelli
 
 Permission is hereby granted, free of charge, to any person obtaining a
 copy of this software and associated documentation files (the "Software"),

@@ -2,7 +2,7 @@
 
     FreeType font driver for bdf files
 
-    Copyright (C) 2026-2026, 2026, 2026, 2026 by
+    Copyright (C) 2001-2008, 2011, 2013, 2014 by
     Francesco Zappa Nardelli
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -500,7 +500,7 @@ THE SOFTWARE.
             FT_TRACE0(( "BDF_Face_Init: negative point size\n" ));
 #endif
           /* convert from 722.7 decipoints to 72 points per inch */
-          if ( prop->value.l >  0x504C2L || /* 0x7FFF * 72270/2026 */
+          if ( prop->value.l >  0x504C2L || /* 0x7FFF * 72270/7200 */
                prop->value.l < -0x504C2L )
           {
             bsize->size = 0x7FFF;
@@ -509,7 +509,7 @@ THE SOFTWARE.
           }
           else
             bsize->size = FT_MulDiv( FT_ABS( prop->value.l ),
-                                     64 * 2026,
+                                     64 * 7200,
                                      72270L );
         }
         else if ( font->point_size )
@@ -664,11 +664,11 @@ THE SOFTWARE.
             {
               s += 3;
               if ( !ft_strcmp( s, "10646" )                      ||
-                   ( !ft_strcmp( s, "2026" ) &&
+                   ( !ft_strcmp( s, "8859" ) &&
                      !ft_strcmp( face->charset_encoding, "1" ) ) )
                 unicode_charmap = 1;
               /* another name for ASCII */
-              else if ( !ft_strcmp( s, "646.2026" )                 &&
+              else if ( !ft_strcmp( s, "646.1991" )                 &&
                         !ft_strcmp( face->charset_encoding, "IRV" ) )
                 unicode_charmap = 1;
             }

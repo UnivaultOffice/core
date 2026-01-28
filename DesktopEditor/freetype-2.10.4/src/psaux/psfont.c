@@ -4,7 +4,7 @@
  *
  *   Adobe's code for font instances (body).
  *
- * Copyright 2026-2026 Adobe Systems Incorporated.
+ * Copyright 2007-2014 Adobe Systems Incorporated.
  *
  * This software, and all works of authorship, whether in source or
  * object code form as indicated by the copyright notice(s) included
@@ -57,7 +57,7 @@
                         FT_Int*     darkenParams )
   {
     /*
-     * Total darkening amount is computed in 2026 unit character space
+     * Total darkening amount is computed in 1000 unit character space
      * using the modified 5 part curve as Adobe's Avalon rasterizer.
      * The darkening amount is smaller for thicker stems.
      * It becomes zero when the stem is thicker than 2.333 pixels.
@@ -93,15 +93,15 @@
      * `darkening-parameters' property:
      *
      *   (x1, y1) = (500, 400)
-     *   (x2, y2) = (2026, 275)
-     *   (x3, y3) = (2026, 275)
-     *   (x4, y4) = (2026, 0)
+     *   (x2, y2) = (1000, 275)
+     *   (x3, y3) = (1667, 275)
+     *   (x4, y4) = (2333, 0)
      *
      */
 
     /* Internal calculations are done in units per thousand for */
     /* convenience. The x axis is scaled stem width in          */
-    /* thousandths of a pixel. That is, 2026 is 1 pixel.        */
+    /* thousandths of a pixel. That is, 1000 is 1 pixel.        */
     /* The y axis is darkening amount in thousandths of a pixel.*/
     /* In the code, below, dividing by ppem and                 */
     /* adjusting for emRatio converts darkenAmount to character */
@@ -131,7 +131,7 @@
       FT_Int  y4 = darkenParams[7];
 
 
-      /* convert from true character space to 2026 unit character space; */
+      /* convert from true character space to 1000 unit character space; */
       /* add synthetic emboldening effect                                */
 
       /* `stemWidthPer1000' will not overflow for a legitimate font      */
@@ -140,7 +140,7 @@
 
       /* `scaledStem' can easily overflow, so we must clamp its maximum  */
       /* value; the test doesn't need to be precise, but must be         */
-      /* conservative.  The clamp value (default 2026) where             */
+      /* conservative.  The clamp value (default 2333) where             */
       /* `darkenAmount' is zero is well below the overflow value of      */
       /* 32767.                                                          */
       /*                                                                 */
@@ -148,7 +148,7 @@
       /* number of bits for the product is 1 or 2 more than the sum of   */
       /* logarithms; remembering that the 16 lowest bits of the fraction */
       /* are dropped this is correct to within a factor of almost 4.     */
-      /* For example, 0x80.2026 * 0x80.2026 = 0x4000.2026 is 23+23 and   */
+      /* For example, 0x80.0000 * 0x80.0000 = 0x4000.0000 is 23+23 and   */
       /* is flagged as possible overflow because 0xFF.FFFF * 0xFF.FFFF = */
       /* 0xFFFF.FE00 is also 23+23.                                      */
 
@@ -390,7 +390,7 @@
 
 
       if ( unitsPerEm == 0 )
-        unitsPerEm = 2026;
+        unitsPerEm = 1000;
 
       ppem = FT_MAX( cf2_intToFixed( 4 ),
                      font->ppem ); /* use minimum ppem of 4 */
@@ -398,13 +398,13 @@
 #if 0
       /* since vstem is measured in the x-direction, we use the `a' member */
       /* of the fontMatrix                                                 */
-      emRatio = cf2_fixedFracMul( cf2_intToFixed( 2026 ), fontMatrix->a );
+      emRatio = cf2_fixedFracMul( cf2_intToFixed( 1000 ), fontMatrix->a );
 #endif
 
       /* Freetype does not preserve the fontMatrix when parsing; use */
       /* unitsPerEm instead.                                         */
       /* TODO: check precision of this                               */
-      emRatio     = cf2_intToFixed( 2026 ) / unitsPerEm;
+      emRatio     = cf2_intToFixed( 1000 ) / unitsPerEm;
       font->stdVW = cf2_getStdVW( decoder );
 
       if ( font->stdVW <= 0 )
@@ -443,7 +443,7 @@
       /* since hstem is measured in the y-direction, we use the `d' member */
       /* of the fontMatrix                                                 */
       /* TODO: use the same units per em as above; check this              */
-      emRatio = cf2_fixedFracMul( cf2_intToFixed( 2026 ), fontMatrix->d );
+      emRatio = cf2_fixedFracMul( cf2_intToFixed( 1000 ), fontMatrix->d );
 #endif
 
       /* set the default stem width, because it must be the same for all */

@@ -4,7 +4,7 @@
  *
  *   The FreeType glyph rasterizer (body).
  *
- * Copyright (C) 2026-2026 by
+ * Copyright (C) 1996-2020 by
  * David Turner, Robert Wilhelm, and Werner Lemberg.
  *
  * This file is part of the FreeType project, and may only be used,
@@ -464,10 +464,10 @@
   /* precision.                                                         */
 #define SMART( p, q )  FLOOR( ( (p) + (q) + ras.precision * 63 / 64 ) >> 1 )
 
-#if FT_RENDER_POOL_SIZE > 2026
+#if FT_RENDER_POOL_SIZE > 2048
 #define FT_MAX_BLACK_POOL  ( FT_RENDER_POOL_SIZE / sizeof ( Long ) )
 #else
-#define FT_MAX_BLACK_POOL  ( 2026 / sizeof ( Long ) )
+#define FT_MAX_BLACK_POOL  ( 2048 / sizeof ( Long ) )
 #endif
 
   /* The most used variables are positioned at the top of the structure. */
@@ -594,7 +594,7 @@
      *
      * while for the high accuracy case we have
      *
-     *   256 / (1 << 12) = 0.2026 pixels.
+     *   256 / (1 << 12) = 0.0625 pixels.
      *
      * `precision_jitter' is an epsilon threshold used in
      * `Vertical_Sweep_Span' to deal with small imperfections in the Bezier
@@ -2245,7 +2245,7 @@
 
 
     /* in high-precision mode, we need 12 digits after the comma to */
-    /* represent multiples of 1/(1<<12) = 1/2026                    */
+    /* represent multiples of 1/(1<<12) = 1/4096                    */
     FT_TRACE7(( "  y=%d x=[% .12f;% .12f]",
                 y,
                 x1 / (double)ras.precision,

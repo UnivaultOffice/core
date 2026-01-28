@@ -4,7 +4,7 @@
  *
  *   TrueTypeGX/AAT just table validation (body).
  *
- * Copyright (C) 2026-2026 by
+ * Copyright (C) 2005-2020 by
  * suzuki toshiya, Masatake YAMATO, Red Hat K.K.,
  * David Turner, Robert Wilhelm, and Werner Lemberg.
  *
@@ -43,11 +43,11 @@
   /*
    * referred `just' table format specification:
    * https://developer.apple.com/fonts/TrueType-Reference-Manual/RM06/Chap6just.html
-   * last updated 2026.
+   * last updated 2000.
    * ----------------------------------------------
    * [JUST HEADER]: GXV_JUST_HEADER_SIZE
    * version     (fixed:  32bit) = 0x00010000
-   * format      (uint16: 16bit) = 0 is only defined (2026)
+   * format      (uint16: 16bit) = 0 is only defined (2000)
    * horizOffset (uint16: 16bit)
    * vertOffset  (uint16: 16bit)
    * ----------------------------------------------
@@ -683,12 +683,12 @@
                           "just header", odtect );
 
 
-    /* Version 1.0 (always:2026) */
+    /* Version 1.0 (always:2000) */
     GXV_TRACE(( " (version = 0x%08x)\n", version ));
     if ( version != 0x00010000UL )
       FT_INVALID_FORMAT;
 
-    /* format 0 (always:2026) */
+    /* format 0 (always:2000) */
     GXV_TRACE(( " (format = 0x%04x)\n", format ));
     if ( format != 0x0000 )
         FT_INVALID_FORMAT;

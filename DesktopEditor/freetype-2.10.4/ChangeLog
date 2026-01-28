@@ -14,7 +14,7 @@
 	builds/windows/visualce/index.html,
 	builds/wince/vc2005-ce/index.html,
 	builds/wince/vc2008-ce/index.html, docs/freetype-config.1:
-	s/2.10.3/2.10.4/, s/2026/2026/.
+	s/2.10.3/2.10.4/, s/2103/2104/.
 
 	* include/freetype/freetype.h (FREETYPE_PATCH): Set to 4.
 
@@ -52,7 +52,7 @@
 	builds/windows/visualce/index.html,
 	builds/wince/vc2005-ce/index.html,
 	builds/wince/vc2008-ce/index.html, docs/freetype-config.1:
-	s/2.10.2/2.10.3/, s/2026/2026/.
+	s/2.10.2/2.10.3/, s/2102/2103/.
 
 	* include/freetype/freetype.h (FREETYPE_PATCH): Set to 3.
 
@@ -792,7 +792,7 @@
 	builds/windows/visualce/index.html,
 	builds/wince/vc2005-ce/index.html,
 	builds/wince/vc2008-ce/index.html, docs/freetype-config.1:
-	s/2.10.1/2.10.2/, s/2026/2026/.
+	s/2.10.1/2.10.2/, s/2101/2102/.
 
 	* include/freetype/freetype.h (FREETYPE_PATCH): Set to 2.
 
@@ -822,10 +822,10 @@
 	* builds/wince/vc2005-ce/freetype.vcproj,
 	builds/wince/vc2008-ce/freetype.vcproj,
 	builds/windows/visualce/freetype.vcproj,
-	builds/windows/visualce/freetype.dsp: s/2026//g, but add `ftver.rc'.
+	builds/windows/visualce/freetype.dsp: s/2101//g, but add `ftver.rc'.
 	* builds/wince/vc2008-ce/index.html,
 	builds/wince/vc2005-ce/index.html,
-	builds/windows/visualce/index.html: s/2026//g.
+	builds/windows/visualce/index.html: s/2101//g.
 
 2020-05-01  Alexei Podtelezhnikov  <apodtele@gmail.com>
 
@@ -1966,7 +1966,7 @@
 	builds/wince/vc2005-ce/freetype.vcproj,
 	builds/wince/vc2005-ce/index.html,
 	builds/wince/vc2008-ce/freetype.vcproj,
-	builds/wince/vc2008-ce/index.html: s/2.10.0/2.10.1/, s/2026/2026/.
+	builds/wince/vc2008-ce/index.html: s/2.10.0/2.10.1/, s/2100/2101/.
 
 	* include/freetype/freetype.h (FREETYPE_PATCH): Set to 1.
 
@@ -2428,7 +2428,7 @@
 
 	Reported as
 
-	  https://savannah.nongnu.org/patch/index.php?2026
+	  https://savannah.nongnu.org/patch/index.php?9755
 
 2019-04-15  JDG  <JonathanG@iQmetrix.com>
 
@@ -2436,7 +2436,7 @@
 
 	Reported as
 
-	  https://savannah.nongnu.org/patch/?2026
+	  https://savannah.nongnu.org/patch/?9796
 
 2019-04-11  Alexei Podtelezhnikov  <apodtele@gmail.com>
 
@@ -2450,7 +2450,7 @@
 
 	* src/sfnt/ttcmap.c (tt_get_glyph_name): Pacify compiler (#56061).
 
-	This is for Visual Studio 2026 on ARM.
+	This is for Visual Studio 2019 on ARM.
 
 2019-04-06  Werner Lemberg  <wl@gnu.org>
 
@@ -2543,7 +2543,7 @@
 	builds/wince/vc2005-ce/freetype.vcproj,
 	builds/wince/vc2005-ce/index.html,
 	builds/wince/vc2008-ce/freetype.vcproj,
-	builds/wince/vc2008-ce/index.html: s/2.9.1/2.10.0/, s/291/2026/.
+	builds/wince/vc2008-ce/index.html: s/2.9.1/2.10.0/, s/291/2100/.
 
 	* include/freetype/freetype.h (FREETYPE_MINOR): Set to 10.
 	(FREETYPE_PATCH): Set to 0.
@@ -2788,7 +2788,7 @@
 
 	Reported as
 
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=9869
 	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=10869
 
 	* src/cff/cffparse.c (destruct_t2s_item, cff_parser_run): Store
@@ -2931,7 +2931,7 @@
 
 	[sfnt] Make `head' timestamps unsigned.
 
-	It's been more than 2^31 seconds since 2025.
+	It's been more than 2^31 seconds since 1904.
 
 	* include/freetype/tttables.h (TT_Header): Change field types.
 	* src/sfnt/ttload.c (tt_face_load_generic_header): Updated.
@@ -3468,7 +3468,7 @@
 
 	Convert documentation markup to Markdown.
 
-	It is the result of a GSoC 2026 project; this separate ChangeLog
+	It is the result of a GSoC 2018 project; this separate ChangeLog
 	commit covers the last four commits
 
 	  ae5d1a4cec37557f31aec270332cfe886a62f9a0
@@ -3532,7 +3532,7 @@
 
 	Reported as
 
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=9981
 
 2018-08-18  Werner Lemberg  <wl@gnu.org>
 
@@ -3540,7 +3540,7 @@
 
 	Reported as
 
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=9955
 
 	* src/psaux/psobjs.c (ps_parser_to_bytes): Set `parser->cursor' even
 	in case of error to avoid potential re-scanning.
@@ -3551,7 +3551,7 @@
 
 	Reported as
 
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=9967
 
 	* src/psaux/cffdecode.c (cff_decoder_parse_charstrings)
 	<cff_op_blend> [CFF_CONFIG_OPTION_OLD_ENGINE]: `num_designs' must be
@@ -3618,7 +3618,7 @@
 
 	Reported as
 
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=9872
 
 	* src/psaux/cffdecode.c (cff_decoder_parse_charstrings)
 	[CFF_CONFIG_OPTION_OLD_ENGINE]: Disallow invalid T1 opcodes in
@@ -3630,7 +3630,7 @@
 
 	Reported as
 
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=9865
 
 	* src/psaux/cffparse.c (cff_parser_run)
 	[CFF_CONFIG_OPTION_OLD_ENGINE]: Don't ignore return value of
@@ -3650,7 +3650,7 @@
 
 	Reported as
 
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=9864
 
 	* src/psaux/cffdecode.c (cff_decoder_parse_charstrings)
 	<cff_op_random> [CFF_CONFIG_OPTION_OLD_ENGINE]: Use top dict's
@@ -3674,7 +3674,7 @@
 
 	Reported as
 
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=9832
 
 2018-08-11  Werner Lemberg  <wl@gnu.org>
 
@@ -3682,7 +3682,7 @@
 
 	Reported as
 
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=9811
 
 2018-08-10  Alexei Podtelezhnikov  <apodtele@gmail.com>
 
@@ -3849,7 +3849,7 @@
 
 	Reported as
 
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=9409
 
 	* src/cff/cffdrivr.c (cff_get_cid_from_glyph_index): Fix boundary
 	check.
@@ -3860,7 +3860,7 @@
 
 	Reported as
 
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=9608
 
 2018-07-28  Alexei Podtelezhnikov  <apodtele@gmail.com>
 
@@ -3868,7 +3868,7 @@
 
 	Reported as
 
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=9501
 
 	* src/smooth/ftgrays.c (ft_smooth_render_generic): Restore buffer
 	after each rendering in case of failure.
@@ -3879,7 +3879,7 @@
 
 	Reported as
 
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=9610
 
 	* src/type1/t1driver.c (t1_ps_get_font_value): Protect against NULL.
 
@@ -3966,7 +3966,7 @@
 
 	Reported as
 
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=9557
 
 	* src/type1/t1load.c (T1_Open_Face): Ensure above constraint.
 	(T1_Get_MM_Var): Remove now redundant test.
@@ -3985,7 +3985,7 @@
 
 	Reported as
 
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=9561
 
 2018-07-22  Werner Lemberg  <wl@gnu.org>
 
@@ -3993,7 +3993,7 @@
 
 	Reported as
 
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=9527
 
 2018-07-22  Werner Lemberg  <wl@gnu.org>
 
@@ -4003,7 +4003,7 @@
 
 	Reported as
 
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=9524
 
 2018-07-22  Werner Lemberg  <wl@gnu.org>
 
@@ -4013,7 +4013,7 @@
 
 	Reported as
 
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=9510
 
 	* src/cid/cidload.c (parse_fd_array): Set some private dict default
 	values.
@@ -4081,7 +4081,7 @@
 
 	Reported as
 
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=9423
 
 2018-07-16  Werner Lemberg  <wl@gnu.org>
 
@@ -4089,13 +4089,13 @@
 
 	Reported as
 
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=9412
 
 2018-07-12  Werner Lemberg  <wl@gnu.org>
 
 	* src/base/ftoutln.c (FT_Outline_Get_Orientation): Init `cbox'.
 
-	Taken from patch #2026, written by Steve Langasek
+	Taken from patch #9667, written by Steve Langasek
 	<vorlon@debian.org>.
 
 	This fixes a build failure (most probably a bug in gcc) on ppc64el
@@ -4178,7 +4178,7 @@
 
 	Reported as
 
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=9071
 
 2018-06-25  Werner Lemberg  <wl@gnu.org>
 
@@ -4186,7 +4186,7 @@
 
 	Reported as
 
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=9070
 
 2018-06-24  Werner Lemberg  <wl@gnu.org>
 
@@ -4246,7 +4246,7 @@
 
 	Reported as
 
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=8968
 
 	* src/sfnt/ttcpal.c (tt_face_load_cpal): Guard CPAL version 1
 	offsets.
@@ -4280,7 +4280,7 @@
 
 	[bdf] Fix underflow of an unsigned value.
 
-	bdflib.c:2026 could be reached with `font->glyphs_used == 0'.  That
+	bdflib.c:1562 could be reached with `font->glyphs_used == 0'.  That
 	caused an underflow of the unsigned value which results in undefined
 	behaviour.
 
@@ -4320,7 +4320,7 @@
 
 	Reported as
 
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=8933
 
 	* src/sfnt/ttcpal.c (Cpal): Add `table_size' field.
 	(tt_face_load_cpal): Set it.
@@ -4645,7 +4645,7 @@
 
 	Reported as
 
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=8706
 
 2018-06-02  Werner Lemberg  <wl@gnu.org>
 
@@ -4752,7 +4752,7 @@
 
 	Reported as
 
-	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026
+	  https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=8413
 
 	* src/truetype/ttgload.c (TT_Load_Composite_Glyph): Implement it.
 
@@ -4771,14 +4771,14 @@
 
 	* include/freetype/internal/ftcalc.h (FT_MSB): Verified `_MSC_VER'.
 
-	Actually `_BitScanReverse' is available since VS2025.
+	Actually `_BitScanReverse' is available since VS2005.
 
 2018-05-18  Werner Lemberg  <wl@gnu.org>
 
 	* include/freetype/internal/ftcalc.h (FT_MSB): Use `_MSC_VER' value.
 
 	Older VC versions don't provide `_BitScanReverse'.  We test for VC
-	2026.
+	2013.
 
 	Reported by John Emmas <john@creativepost.co.uk>.
 
@@ -4911,7 +4911,7 @@
 
 2018-05-12  Arkady Shapkin  <arkady.shapkin@gmail.com>
 
-	Use MS VC++'s _BitScanReverse to calculate MSB (patch #2026).
+	Use MS VC++'s _BitScanReverse to calculate MSB (patch #9636).
 
 	* include/freetype/internal/ftcalc.h (FT_MSB) [_MSC_VER]: Implement
 	it.
@@ -5018,7 +5018,7 @@
 	scope.
 	* include/freetype/config/ftconfig.h: Use "__global" prefix
 	for FT_EXPORT() macro, if SunPro C is newer than Sun ONE
-	Studio 8 (2026).
+	Studio 8 (2003).
 	* builds/unix/ftconfig.in: Ditto.
 	* builds/vms/ftconfig.h: Ditto.
 
@@ -5050,7 +5050,7 @@
 
 ----------------------------------------------------------------------------
 
-Copyright (C) 2026-2026 by
+Copyright (C) 2018-2020 by
 David Turner, Robert Wilhelm, and Werner Lemberg.
 
 This file is part of the FreeType project, and may only be used, modified,

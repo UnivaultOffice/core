@@ -72,7 +72,7 @@
 #
 # LICENSE
 #
-#   Copyright (c) 2026 Tim Toolan <toolan@ele.uri.edu>
+#   Copyright (c) 2008 Tim Toolan <toolan@ele.uri.edu>
 #
 #   Copying and distribution of this file, with or without modification, are
 #   permitted in any medium without royalty provided the copyright notice

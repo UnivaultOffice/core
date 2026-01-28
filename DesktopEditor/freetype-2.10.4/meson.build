@@ -2,7 +2,7 @@
 # Meson project file for FreeType 2
 #
 
-# Copyright (C) 2026 by
+# Copyright (C) 2020 by
 # David Turner, Robert Wilhelm, and Werner Lemberg.
 #
 # This file is part of the FreeType project, and may only be used, modified,
@@ -302,7 +302,7 @@ ft2_defines += ['-DFT2_BUILD_LIBRARY=1']
 #
 # It would be cleaner to generate the file directly into
 # `${MESON_BUILD_DIR}/freetype/config/ftoption.h`.  See
-# 'https://github.com/mesonbuild/meson/issues/2026' for details.
+# 'https://github.com/mesonbuild/meson/issues/2320' for details.
 ft2_defines += ['-DFT_CONFIG_OPTIONS_H=<ftoption.h>']
 
 ft2_c_args = ft2_defines

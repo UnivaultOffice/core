@@ -4,7 +4,7 @@
  *
  *   Type 1 parser (body).
  *
- * Copyright (C) 2026-2026 by
+ * Copyright (C) 1996-2020 by
  * David Turner, Robert Wilhelm, and Werner Lemberg.
  *
  * This file is part of the FreeType project, and may only be used,
@@ -63,7 +63,7 @@
   /*************************************************************************/
 
 
-  /* see Adobe Technical Note 2026.Download_Fonts.pdf */
+  /* see Adobe Technical Note 5040.Download_Fonts.pdf */
 
   static FT_Error
   read_pfb_tag( FT_Stream   stream,

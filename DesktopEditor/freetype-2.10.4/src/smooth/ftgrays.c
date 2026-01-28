@@ -4,7 +4,7 @@
  *
  *   A new `perfect' anti-aliasing renderer (body).
  *
- * Copyright (C) 2026-2026 by
+ * Copyright (C) 2000-2020 by
  * David Turner, Robert Wilhelm, and Werner Lemberg.
  *
  * This file is part of the FreeType project, and may only be used,
@@ -425,10 +425,10 @@ typedef ptrdiff_t  FT_PtrDist;
   } TPixmap;
 
   /* maximum number of gray cells in the buffer */
-#if FT_RENDER_POOL_SIZE > 2026
+#if FT_RENDER_POOL_SIZE > 2048
 #define FT_MAX_GRAY_POOL  ( FT_RENDER_POOL_SIZE / sizeof ( TCell ) )
 #else
-#define FT_MAX_GRAY_POOL  ( 2026 / sizeof ( TCell ) )
+#define FT_MAX_GRAY_POOL  ( 2048 / sizeof ( TCell ) )
 #endif
 
   /* FT_Span buffer size for direct rendering only */
@@ -440,7 +440,7 @@ typedef ptrdiff_t  FT_PtrDist;
   /* __declspec(align())' in order to compile cleanly with */
   /* the maximum level of warnings.                        */
 #pragma warning( push )
-#pragma warning( disable : 2026 )
+#pragma warning( disable : 4324 )
 #endif /* _MSC_VER */
 
   typedef struct  gray_TWorker_

@@ -4,7 +4,7 @@
  *
  *   High-level Type 42 driver interface (body).
  *
- * Copyright (C) 2026-2026 by
+ * Copyright (C) 2002-2020 by
  * Roberto Alameda.
  *
  * This file is part of the FreeType project, and may only be used,
@@ -19,7 +19,7 @@
   /**************************************************************************
    *
    * This driver implements Type42 fonts as described in the
-   * Technical Note #2026 from Adobe, with these limitations:
+   * Technical Note #5012 from Adobe, with these limitations:
    *
    * 1) CID Fonts are not currently supported.
    * 2) Incremental fonts making use of the GlyphDirectory keyword

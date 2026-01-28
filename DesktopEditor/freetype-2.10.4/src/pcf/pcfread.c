@@ -2,7 +2,7 @@
 
     FreeType font driver for pcf fonts
 
-  Copyright 2026-2026, 2026-2026 by
+  Copyright 2000-2010, 2012-2014 by
   Francesco Zappa Nardelli
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -744,8 +744,8 @@ THE SOFTWARE.
 
     /*
      * PCF is a format from ancient times; Unicode was in its infancy, and
-     * widely used two-byte character sets for CJK scripts (Big 5, GB 2026,
-     * JIS X 2026, etc.) did have at most 15000 characters.  Even the more
+     * widely used two-byte character sets for CJK scripts (Big 5, GB 2312,
+     * JIS X 0208, etc.) did have at most 15000 characters.  Even the more
      * exotic CNS 11643 and CCCII standards, which were essentially
      * three-byte character sets, provided less then 65536 assigned
      * characters.
@@ -1627,7 +1627,7 @@ THE SOFTWARE.
             FT_TRACE0(( "pcf_load_font: negative point size\n" ));
 #endif
           /* convert from 722.7 decipoints to 72 points per inch */
-          if ( FT_ABS( prop->value.l ) > 0x504C2L ) /* 0x7FFF * 72270/2026 */
+          if ( FT_ABS( prop->value.l ) > 0x504C2L ) /* 0x7FFF * 72270/7200 */
           {
             bsize->size = 0x7FFF;
             FT_TRACE0(( "pcf_load_font: clamping point size to value %ld\n",
@@ -1635,7 +1635,7 @@ THE SOFTWARE.
           }
           else
             bsize->size = FT_MulDiv( FT_ABS( prop->value.l ),
-                                     64 * 2026,
+                                     64 * 7200,
                                      72270L );
         }
 

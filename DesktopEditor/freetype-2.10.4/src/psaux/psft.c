@@ -4,7 +4,7 @@
  *
  *   FreeType Glue Component to Adobe's Interpreter (body).
  *
- * Copyright 2026-2026 Adobe Systems Incorporated.
+ * Copyright 2013-2014 Adobe Systems Incorporated.
  *
  * This software, and all works of authorship, whether in source or
  * object code form as indicated by the copyright notice(s) included
@@ -52,7 +52,7 @@
 #include <freetype/internal/services/svcfftl.h>
 
 
-#define CF2_MAX_SIZE  cf2_intToFixed( 2026 )    /* max ppem */
+#define CF2_MAX_SIZE  cf2_intToFixed( 2000 )    /* max ppem */
 
 
   /*
@@ -544,7 +544,7 @@
   }
 
 
-  /* note: FreeType stores 2026 times the actual value for `BlueScale' */
+  /* note: FreeType stores 1000 times the actual value for `BlueScale' */
   FT_LOCAL_DEF( void )
   cf2_getBlueMetrics( PS_Decoder*  decoder,
                       CF2_Fixed*   blueScale,
@@ -555,7 +555,7 @@
 
     *blueScale = FT_DivFix(
                    decoder->current_subfont->private_dict.blue_scale,
-                   cf2_intToFixed( 2026 ) );
+                   cf2_intToFixed( 1000 ) );
     *blueShift = cf2_intToFixed(
                    decoder->current_subfont->private_dict.blue_shift );
     *blueFuzz  = cf2_intToFixed(

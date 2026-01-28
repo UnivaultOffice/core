@@ -1143,9 +1143,9 @@
 <p>Many characters, especially for CJK scripts, have variant forms. They are a sort of grey area somewhere between being totally irrelevant and semantically distinct; for this reason, the Unicode consortium decided to introduce Variation Sequences (VS), consisting of a Unicode base character and a variation selector instead of further extending the already huge number of characters.</p>
 <p>Unicode maintains two different sets, namely &lsquo;Standardized Variation Sequences&rsquo; and registered &lsquo;Ideographic Variation Sequences&rsquo; (IVS), collected in the &lsquo;Ideographic Variation Database&rsquo; (IVD).</p>
 <p><a href="https://unicode.org/Public/UCD/latest/ucd/StandardizedVariants.txt">https://unicode.org/Public/UCD/latest/ucd/StandardizedVariants.txt</a> <a href="https://unicode.org/reports/tr37/">https://unicode.org/reports/tr37/</a> <a href="https://unicode.org/ivd/">https://unicode.org/ivd/</a></p>
-<p>To date (January 2026), the character with the most ideographic variations is U+2026, having 32 such IVS.</p>
+<p>To date (January 2017), the character with the most ideographic variations is U+9089, having 32 such IVS.</p>
 <p>Three Mongolian Variation Selectors have the values U+180B-U+180D; 256 generic Variation Selectors are encoded in the ranges U+FE00-U+FE0F and U+E0100-U+E01EF. IVS currently use Variation Selectors from the range U+E0100-U+E01EF only.</p>
-<p>A VS consists of the base character value followed by a single Variation Selector. For example, to get the first variation of U+2026, you have to write the character sequence <code>U+2026 U+E0100</code>.</p>
+<p>A VS consists of the base character value followed by a single Variation Selector. For example, to get the first variation of U+9089, you have to write the character sequence <code>U+9089 U+E0100</code>.</p>
 <p>Adobe and MS decided to support both standardized and ideographic VS with a new cmap subtable (format&nbsp;14). It is an odd subtable because it is not a mapping of input code points to glyphs, but contains lists of all variations supported by the font.</p>
 <p>A variation may be either &lsquo;default&rsquo; or &lsquo;non-default&rsquo; for a given font. A default variation is the one you will get for that code point if you look it up in the standard Unicode cmap. A non-default variation is a different glyph.</p>
 <h2 id="ft_face_getcharvariantindex">FT_Face_GetCharVariantIndex<a class="headerlink" href="#ft_face_getcharvariantindex" title="Permanent link">&para;</a></h2>
@@ -1360,7 +1360,7 @@
       <div class="md-footer-copyright">
         
           <div class="md-footer-copyright__highlight">
-            Copyright 2026 <a href = "https://www.freetype.org/license.html">The FreeType Project</a>.
+            Copyright 2020 <a href = "https://www.freetype.org/license.html">The FreeType Project</a>.
           </div>
         
         powered by

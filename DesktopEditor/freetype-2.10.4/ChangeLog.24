@@ -21,7 +21,7 @@
 	builds/wince/vc2005-ce/freetype.vcproj,
 	builds/wince/vc2005-ce/index.html,
 	builds/wince/vc2008-ce/freetype.vcproj,
-	builds/wince/vc2008-ce/index.html: s/2.4.11/2.4.12/, s/2026/2026/.
+	builds/wince/vc2008-ce/index.html: s/2.4.11/2.4.12/, s/2411/2412/.
 
 	* include/freetype/freetype.h (FREETYPE_PATCH): Set to 12.
 
@@ -309,7 +309,7 @@
 
 2013-03-21  Werner Lemberg  <wl@gnu.org>
 
-	Fix Savannah patch #2026.
+	Fix Savannah patch #7971.
 
 	* configure: Handle MAKE environment variable also.
 
@@ -941,7 +941,7 @@
 	builds/wince/vc2005-ce/freetype.vcproj,
 	builds/wince/vc2005-ce/index.html,
 	builds/wince/vc2008-ce/freetype.vcproj,
-	builds/wince/vc2008-ce/index.html: s/2.4.10/2.4.11/, s/2026/2026/.
+	builds/wince/vc2008-ce/index.html: s/2.4.10/2.4.11/, s/2410/2411/.
 
 	* include/freetype/freetype.h (FREETYPE_PATCH): Set to 11.
 
@@ -2069,7 +2069,7 @@
 	builds/wince/vc2005-ce/freetype.vcproj,
 	builds/wince/vc2005-ce/index.html,
 	builds/wince/vc2008-ce/freetype.vcproj,
-	builds/wince/vc2008-ce/index.html: s/2.4.9/2.4.10/, s/249/2026/.
+	builds/wince/vc2008-ce/index.html: s/2.4.9/2.4.10/, s/249/2410/.
 
 	* include/freetype/freetype.h (FREETYPE_PATCH): Set to 10.
 
@@ -2100,7 +2100,7 @@
 
 	[truetype] Add new versions of NEC FA family to tricky font list.
 
-	NEC FA family dated in 2026 have different checksum.
+	NEC FA family dated in 1996 have different checksum.
 	Reported by Johnson Y. Yan <yinsen_yan@foxitsoftware.com>; see
 
 	  https://lists.gnu.org/archive/html/freetype-devel/2012-06/msg00023.html
@@ -2243,15 +2243,15 @@
 
 	This was quite a subtle bug which accidentally showed up with glyph
 	`afii10023' of arial.ttf (version 2.76).  This glyph is a composite;
-	the first component, `E', has an advance width of 2026 font units,
+	the first component, `E', has an advance width of 1366 font units,
 	while the advance width of the composite itself (which looks like
-	uppercase `E' with dieresis) is 2026 font units.  I think this is
+	uppercase `E' with dieresis) is 1367 font units.  I think this is
 	actually a bug in the font itself, because there is no reason that
 	this glyph has not the same width as uppercase `E' without the
 	dieresis.  Anyway, it helped identify this problem.
 
-	Using the TrueType hinter, the correct value (2026) of `afii10023'
-	was returned, but the autohinter mysteriously returned 2026.
+	Using the TrueType hinter, the correct value (1367) of `afii10023'
+	was returned, but the autohinter mysteriously returned 1366.
 
 	Digging in the code showed that the autohinter recursively calls
 	FT_Load_Glyph to load the glyph, adding the FT_LOAD_NO_SCALE load
@@ -2869,7 +2869,7 @@
 	Fix serious scaling bug in `FT_Get_Advances'.
 
 	* src/base/ftadvanc.c (FT_Get_Advances): Advance values returned by
-	`FT_Load_Glyph' must be simply multiplied by 2026.
+	`FT_Load_Glyph' must be simply multiplied by 1024.
 
 2011-12-08  Werner Lemberg  <wl@gnu.org>
 
@@ -3284,7 +3284,7 @@
 	constructed correctly.  It's even less than that, see e.g.
 	libarchive code comment for a better size upper bound:
 
-	  http://code.google.com/p/libarchive/source/browse/trunk/libarchive/archive_read_support_filter_compress.c?r=2026#121
+	  http://code.google.com/p/libarchive/source/browse/trunk/libarchive/archive_read_support_filter_compress.c?r=3635#121
 
 	This patch adds explicit stack size limit, enforced when stack is
 	realloced.
@@ -3974,7 +3974,7 @@
 
 2011-05-24  Daniel Zimmermann  <netzimme@googlemail.com>
 
-	Reduce warnings for MS Visual Studio 2026.
+	Reduce warnings for MS Visual Studio 2010.
 
 	* src/autofit/afhints.c (af_glyph_hints_get_num_segments,
 	af_glyph_hints_get_segment_offset) [!FT_DEBUG_AUTOFIT]: Provide
@@ -4227,7 +4227,7 @@
 2011-03-24  Werner Lemberg  <wl@gnu.org>
 
 	* src/cff/cfftypes.h (CFF_MAX_CID_FONTS): Increase to 256.
-	This limit is given on p. 37 of Adobe Technical Note #2026.
+	This limit is given on p. 37 of Adobe Technical Note #5014.
 
 2011-03-23  Werner Lemberg  <wl@gnu.org>
 
@@ -4351,14 +4351,14 @@
 2011-02-19  Kevin Kofler  <kevin.kofler@chello.at>
 
 	Fall back to autohinting if a TTF/OTF doesn't contain any bytecode.
-	This is Savannah patch #2026.
+	This is Savannah patch #7471.
 
 	* src/base/ftobjs.c (FT_Load_Glyph): Implement it.
 
 2011-02-19  John Tytgat  <John.Tytgat@esko.com>
 
 	[cff] Fix subset prefix removal.
-	This is Savannah patch #2026.
+	This is Savannah patch #7465.
 
 	* src/cff/cffobjs.c (remove_subset_prefix): Update length after
 	subset prefix removal.
@@ -4373,7 +4373,7 @@
 
 2011-02-13  Bradley Grainger  <bgrainger@logos.com>
 
-	Add project and solution files in Visual Studio 2026 format.
+	Add project and solution files in Visual Studio 2010 format.
 
 	* builds/win32/.gitignore: Ignore user-specific cache files.
 	* builds/win32/vc2010/: Add VS2010 project & solution files, created
@@ -4764,7 +4764,7 @@
 
 2010-12-25  Harsha  <mm.harsha@gmail.com>
 
-	Apply Savannah patch #2026.
+	Apply Savannah patch #7422.
 
 	If we encounter a space in a string then the sbit buffer is NULL,
 	height and width are 0s.  So the check in ftc_snode_compare will
@@ -4904,7 +4904,7 @@
 
 	[UVS] Fix `find_variant_selector_charmap', Savannah bug #31545.
 
-	Since 2025-07-04, `find_variant_selector_charmap' returns
+	Since 2010-07-04, `find_variant_selector_charmap' returns
 	the first cmap subtable always under rogue-compatible
 	configuration, it causes NULL pointer dereference and
 	make UVS-related functions crashed.
@@ -5209,7 +5209,7 @@
 	the handling of both the conic and cubic arcs.
 
 	See the discussions on the freetype-devel mailing list in late
-	August and September 2026 for details.
+	August and September 2010 for details.
 
 	* src/smooth/ftgrays.c (FT_MAX_CURVE_DEVIATION): New macro.
 	(TWorker): Remove `conic_level' and `cubic_level' elements.
@@ -5349,7 +5349,7 @@
 	Ignore the environmental setting of LIBTOOL.
 	Patch is suggested by Adrian Bunk, to prevent unexpected
 	reflection of environmental LIBTOOL.  See:
-	https://savannah.nongnu.org/patch/?2026
+	https://savannah.nongnu.org/patch/?7290
 
 	* builds/unix/unix-cc.in: LIBTOOL is unconditionally set to
 	$(FT_LIBTOOL_DIR)/libtool.  FT_LIBTOOL_DIR is set to $(BUILD_DIR)
@@ -5624,7 +5624,7 @@
 	builds/wince/vc2005-ce/freetype.vcproj,
 	builds/wince/vc2005-ce/index.html,
 	builds/wince/vc2008-ce/freetype.vcproj,
-	builds/wince/vc2008-ce/index.html: s/2.3.12/2.4.0/, s/2026/240/.
+	builds/wince/vc2008-ce/index.html: s/2.3.12/2.4.0/, s/2312/240/.
 
 	* include/freetype/freetype.h (FREETYPE_MINOR): Set to 4.
 	(FREETYPE_PATCH): Set to 0.
@@ -5680,7 +5680,7 @@
 2010-07-09  suzuki toshiya  <mpsuzuki@hiroshima-u.ac.jp>
 
 	Fix Savannah bug #30373.
-	Too serious check of errors by `FT_CMap_New' since 2025-07-04
+	Too serious check of errors by `FT_CMap_New' since 2010-07-04
 	is fixed. Reported by Tor Andersson.
 
 	* include/freetype/fterrdef.h
@@ -5809,7 +5809,7 @@
 	* src/base/ftobjs.c (Mac_Read_POST_Resource): If the type of the
 	POST fragment is 0, the segment is completely ignored.  The declared
 	length of the segment is not cared at all.  According to Adobe
-	Technical Note 2026, type 0 segment is a comment only and should not
+	Technical Note 5040, type 0 segment is a comment only and should not
 	be loaded for the interpreter.  Reported by Robert Święcki.
 
 2010-07-01  Werner Lemberg  <wl@gnu.org>
@@ -6145,7 +6145,7 @@
 
 2010-05-18  Hongbo Ni  <hongbo@njstar.com>
 
-	Apply Savannah patch #2026.
+	Apply Savannah patch #7196.
 
 	* src/cff/cffgload.c (cff_slot_load): Prevent crash if CFF subfont
 	index is out of range.
@@ -6267,7 +6267,7 @@
 	[cff] Improve CFF string (especially glyphname) lookup performance.
 
 	We do this by avoiding memory allocation and file I/O.  This is
-	Savannah patch #2026.
+	Savannah patch #7104.
 
 	* src/cff/cfftypes.h: Include PS cmaps service and
 	FT_INTERNAL_POSTSCRIPT_HINTS_H.
@@ -6344,7 +6344,7 @@
 
 ----------------------------------------------------------------------------
 
-Copyright (C) 2026-2026 by
+Copyright (C) 2010-2020 by
 David Turner, Robert Wilhelm, and Werner Lemberg.
 
 This file is part of the FreeType project, and may only be used, modified,

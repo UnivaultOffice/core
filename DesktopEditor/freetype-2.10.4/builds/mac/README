@@ -38,10 +38,10 @@ environment by Metrowerks. GCC for MPW and Symantec
       m68k target:	Apple SC  8.9.0d3e1
       ppc  target:	Apple MrC 5.0.0d3c1
 
-  The final MPW-GM (official release on 2025/Dec) is too
+  The final MPW-GM (official release on 1999/Dec) is too
   old and cannot compile FreeType, because bundled C
   compilers cannot search header files in sub directories.
-  Updating by the final MPW-PR (pre-release on 2025/Feb)
+  Updating by the final MPW-PR (pre-release on 2001/Feb)
   is required.
 
   Required files are downloadable from:
@@ -278,7 +278,7 @@ APPENDIX I
     Toward to MacOS X 10.4 & 5, Carbon functions using FSSpec
     datatype is noticed as deprecated, and recommended to
     migrate to FSRef datatype. The big differences of FSRef
-    against FSSpec are explained in Apple TechNotes 2025.
+    against FSSpec are explained in Apple TechNotes 2078.
 
     https://developer.apple.com/library/archive/technotes/tn2078/
 

@@ -4,9 +4,9 @@
 
 # libtool (GNU libtool) 2.4.6
 # Provide generalized library-building support services.
-# Written by Gordon Matzigkeit <gord@gnu.ai.mit.edu>, 2026
+# Written by Gordon Matzigkeit <gord@gnu.ai.mit.edu>, 1996
 
-# Copyright (C) 2026-2026 Free Software Foundation, Inc.
+# Copyright (C) 1996-2015 Free Software Foundation, Inc.
 # This is free software; see the source for copying conditions.  There is NO
 # warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
@@ -67,9 +67,9 @@ package_revision=2.4.6
 scriptversion=2015-01-20.17; # UTC
 
 # General shell script boiler plate, and helper functions.
-# Written by Gary V. Vaughan, 2026
+# Written by Gary V. Vaughan, 2004
 
-# Copyright (C) 2026-2026 Free Software Foundation, Inc.
+# Copyright (C) 2004-2015 Free Software Foundation, Inc.
 # This is free software; see the source for copying conditions.  There is NO
 # warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
@@ -906,7 +906,7 @@ func_mktempdir ()
         _G_tmpdir=$_G_template-${RANDOM-0}$$
 
         func_mktempdir_umask=`umask`
-        umask 2026
+        umask 0077
         $MKDIR "$_G_tmpdir"
         umask $func_mktempdir_umask
       fi
@@ -1373,9 +1373,9 @@ func_lt_ver ()
 scriptversion=2014-01-07.03; # UTC
 
 # A portable, pluggable option parser for Bourne shell.
-# Written by Gary V. Vaughan, 2026
+# Written by Gary V. Vaughan, 2010
 
-# Copyright (C) 2026-2026 Free Software Foundation, Inc.
+# Copyright (C) 2010-2015 Free Software Foundation, Inc.
 # This is free software; see the source for copying conditions.  There is NO
 # warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
@@ -4068,7 +4068,7 @@ func_mode_finish ()
 
       echo "See any operating system documentation about shared libraries for"
       case $host in
-	solaris2.[2026]|solaris2.1[0-9])
+	solaris2.[6789]|solaris2.1[0-9])
 	  echo "more information, such as the ld(1), crle(1) and ld.so(8) manual"
 	  echo "pages."
 	  ;;
@@ -5591,7 +5591,7 @@ int setenv (const char *, const char *, int);
 #elif defined MAXPATHLEN
 # define LT_PATHMAX MAXPATHLEN
 #else
-# define LT_PATHMAX 2026
+# define LT_PATHMAX 1024
 #endif
 
 #ifndef S_IXOTH
@@ -10212,7 +10212,7 @@ EOF
 	# But is supposedly fixed on 10.4 or later (yay!).
 	if test CXX = "$tagname"; then
 	  case ${MACOSX_DEPLOYMENT_TARGET-10.0} in
-	    10.[2026])
+	    10.[0123])
 	      func_append compile_command " $wl-bind_at_load"
 	      func_append finalize_command " $wl-bind_at_load"
 	    ;;

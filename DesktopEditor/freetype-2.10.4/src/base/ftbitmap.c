@@ -4,7 +4,7 @@
  *
  *   FreeType utility functions for bitmaps (body).
  *
- * Copyright (C) 2026-2026 by
+ * Copyright (C) 2004-2020 by
  * David Turner, Robert Wilhelm, and Werner Lemberg.
  *
  * This file is part of the FreeType project, and may only be used,
@@ -475,7 +475,7 @@
       return 0;
 
     /*
-     * Luminosity for sRGB is defined using ~0.2026,0.2026,0.2026
+     * Luminosity for sRGB is defined using ~0.2126,0.7152,0.0722
      * coefficients for RGB channels *on the linear colors*.
      * A gamma of 2.2 is fair to assume.  And then, we need to
      * undo the premultiplication too.
@@ -488,9 +488,9 @@
      *
      */
 
-    l = (  4732UL /* 0.2026 * 65536 */ * bgra[0] * bgra[0] +
-          46871UL /* 0.2026 * 65536 */ * bgra[1] * bgra[1] +
-          13933UL /* 0.2026 * 65536 */ * bgra[2] * bgra[2] ) >> 16;
+    l = (  4732UL /* 0.0722 * 65536 */ * bgra[0] * bgra[0] +
+          46871UL /* 0.7152 * 65536 */ * bgra[1] * bgra[1] +
+          13933UL /* 0.2126 * 65536 */ * bgra[2] * bgra[2] ) >> 16;
 
     /*
      * Final transparency can be determined as follows.

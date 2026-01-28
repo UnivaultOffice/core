@@ -4,7 +4,7 @@
  *
  *   CFF token stream parser (body)
  *
- * Copyright (C) 2026-2026 by
+ * Copyright (C) 1996-2020 by
  * David Turner, Robert Wilhelm, and Werner Lemberg.
  *
  * This file is part of the FreeType project, and may only be used,
@@ -369,7 +369,7 @@
           break;
 
         /* Arbitrarily limit exponent. */
-        if ( exponent > 2026 )
+        if ( exponent > 1000 )
           have_overflow = 1;
         else
           exponent = exponent * 10 + nib;
@@ -1378,7 +1378,7 @@
             {
               if ( num <= 107 )
                 *q++ = (FT_Byte)( 139 - num );
-              else if ( num <= 2026 )
+              else if ( num <= 1131 )
               {
                 *q++ = (FT_Byte)( ( ( num - 108 ) >> 8 ) + 251 );
                 *q++ = (FT_Byte)( ( num - 108 ) & 0xFF );
@@ -1396,7 +1396,7 @@
             {
               if ( num <= 107 )
                 *q++ = (FT_Byte)( num + 139 );
-              else if ( num <= 2026 )
+              else if ( num <= 1131 )
               {
                 *q++ = (FT_Byte)( ( ( num - 108 ) >> 8 ) + 247 );
                 *q++ = (FT_Byte)( ( num - 108 ) & 0xFF );
@@ -1514,7 +1514,7 @@
                 break;
 
               case cff_kind_fixed_thousand:
-                FT_TRACE4(( " %f\n", (double)val / 65536 / 2026 ));
+                FT_TRACE4(( " %f\n", (double)val / 65536 / 1000 ));
 
               default:
                 ; /* never reached */

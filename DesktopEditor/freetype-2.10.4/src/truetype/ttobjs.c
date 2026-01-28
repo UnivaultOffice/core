@@ -4,7 +4,7 @@
  *
  *   Objects manager (body).
  *
- * Copyright (C) 2026-2026 by
+ * Copyright (C) 1996-2020 by
  * David Turner, Robert Wilhelm, and Werner Lemberg.
  *
  * This file is part of the FreeType project, and may only be used,
@@ -167,35 +167,35 @@
          Windows 7) is an ordinary TTC with non-tricky subfonts.
        */
 
-      "cpop",               /* dftt-p7.ttf; version 1.00, 2026 [DLJGyShoMedium] */
-      "DFGirl-W6-WIN-BF",   /* dftt-h6.ttf; version 1.00, 2026 */
-      "DFGothic-EB",        /* DynaLab Inc. 2025-2026 */
-      "DFGyoSho-Lt",        /* DynaLab Inc. 2025-2026 */
+      "cpop",               /* dftt-p7.ttf; version 1.00, 1992 [DLJGyShoMedium] */
+      "DFGirl-W6-WIN-BF",   /* dftt-h6.ttf; version 1.00, 1993 */
+      "DFGothic-EB",        /* DynaLab Inc. 1992-1995 */
+      "DFGyoSho-Lt",        /* DynaLab Inc. 1992-1995 */
       "DFHei-Md-HK-BF",     /* maybe DynaLab Inc. */
-      "DFHSGothic-W5",      /* DynaLab Inc. 2025-2026 */
-      "DFHSMincho-W3",      /* DynaLab Inc. 2025-2026 */
-      "DFHSMincho-W7",      /* DynaLab Inc. 2025-2026 */
+      "DFHSGothic-W5",      /* DynaLab Inc. 1992-1995 */
+      "DFHSMincho-W3",      /* DynaLab Inc. 1992-1995 */
+      "DFHSMincho-W7",      /* DynaLab Inc. 1992-1995 */
       "DFKaiSho-SB",        /* dfkaisb.ttf */
       "DFKaiShu",
       "DFKaiShu-Md-HK-BF",  /* maybe DynaLab Inc. */
-      "DFKai-SB",           /* kaiu.ttf; version 3.00, 2026 [DFKaiShu-SB-Estd-BF] */
+      "DFKai-SB",           /* kaiu.ttf; version 3.00, 1998 [DFKaiShu-SB-Estd-BF] */
       "DFMing-Bd-HK-BF",    /* maybe DynaLab Inc. */
-      "DLC",                /* dftt-m7.ttf; version 1.00, 2026 [DLCMingBold] */
-                            /* dftt-f5.ttf; version 1.00, 2026 [DLCFongSung] */
-      "DLCHayMedium",       /* dftt-b5.ttf; version 1.00, 2026 */
-      "DLCHayBold",         /* dftt-b7.ttf; version 1.00, 2026 */
-      "DLCKaiMedium",       /* dftt-k5.ttf; version 1.00, 2026 */
-      "DLCLiShu",           /* dftt-l5.ttf; version 1.00, 2026 */
-      "DLCRoundBold",       /* dftt-r7.ttf; version 1.00, 2026 */
+      "DLC",                /* dftt-m7.ttf; version 1.00, 1993 [DLCMingBold] */
+                            /* dftt-f5.ttf; version 1.00, 1993 [DLCFongSung] */
+      "DLCHayMedium",       /* dftt-b5.ttf; version 1.00, 1993 */
+      "DLCHayBold",         /* dftt-b7.ttf; version 1.00, 1993 */
+      "DLCKaiMedium",       /* dftt-k5.ttf; version 1.00, 1992 */
+      "DLCLiShu",           /* dftt-l5.ttf; version 1.00, 1992 */
+      "DLCRoundBold",       /* dftt-r7.ttf; version 1.00, 1993 */
       "HuaTianKaiTi?",      /* htkt2.ttf */
       "HuaTianSongTi?",     /* htst3.ttf */
-      "Ming(for ISO10646)", /* hkscsiic.ttf; version 0.12, 2026 [Ming] */
-                            /* iicore.ttf; version 0.07, 2026 [Ming] */
+      "Ming(for ISO10646)", /* hkscsiic.ttf; version 0.12, 2007 [Ming] */
+                            /* iicore.ttf; version 0.07, 2007 [Ming] */
       "MingLiU",            /* mingliu.ttf */
-                            /* mingliu.ttc; version 3.21, 2026 */
-      "MingMedium",         /* dftt-m5.ttf; version 1.00, 2026 [DLCMingMedium] */
-      "PMingLiU",           /* mingliu.ttc; version 3.21, 2026 */
-      "MingLi43",           /* mingli.ttf; version 1.00, 2026 */
+                            /* mingliu.ttc; version 3.21, 2001 */
+      "MingMedium",         /* dftt-m5.ttf; version 1.00, 1993 [DLCMingMedium] */
+      "PMingLiU",           /* mingliu.ttc; version 3.21, 2001 */
+      "MingLi43",           /* mingli.ttf; version 1.00, 1992 */
     };
 
     int  nn;
@@ -286,7 +286,7 @@
 #define TRICK_SFNT_ID_fpgm  1
 #define TRICK_SFNT_ID_prep  2
 
-      { /* MingLiU 2026 */
+      { /* MingLiU 1995 */
         { 0x05BCF058UL, 0x000002E4UL }, /* cvt  */
         { 0x28233BF1UL, 0x000087C4UL }, /* fpgm */
         { 0xA344A1EAUL, 0x000001E1UL }  /* prep */
@@ -406,27 +406,27 @@
         { 0x0D3DE9CBUL, 0x00000141UL }, /* fpgm */
         { 0xD4127766UL, 0x00002280UL }  /* prep */
       },
-      { /* NEC FA-Gothic, 2026 */
+      { /* NEC FA-Gothic, 1996 */
         { 0x00000000UL, 0x00000000UL }, /* cvt  */
         { 0x4A692698UL, 0x000001F0UL }, /* fpgm */
         { 0x340D4346UL, 0x00001FCAUL }  /* prep */
       },
-      { /* NEC FA-Minchou, 2026 */
+      { /* NEC FA-Minchou, 1996 */
         { 0x00000000UL, 0x00000000UL }, /* cvt  */
         { 0xCD34C604UL, 0x00000166UL }, /* fpgm */
         { 0x6CF31046UL, 0x000022B0UL }  /* prep */
       },
-      { /* NEC FA-RoundGothicB, 2026 */
+      { /* NEC FA-RoundGothicB, 1996 */
         { 0x00000000UL, 0x00000000UL }, /* cvt  */
         { 0x5DA75315UL, 0x0000019DUL }, /* fpgm */
         { 0x40745A5FUL, 0x000022E0UL }  /* prep */
       },
-      { /* NEC FA-RoundGothicM, 2026 */
+      { /* NEC FA-RoundGothicM, 1996 */
         { 0x00000000UL, 0x00000000UL }, /* cvt  */
         { 0xF055FC48UL, 0x000001C2UL }, /* fpgm */
         { 0x3900DED3UL, 0x00001E18UL }  /* prep */
       },
-        { /* MINGLI.TTF, 2026 */
+        { /* MINGLI.TTF, 1992 */
         { 0x00170003UL, 0x00000060UL }, /* cvt  */
         { 0xDBB4306EUL, 0x000058AAUL }, /* fpgm */
         { 0xD643482AUL, 0x00000035UL }  /* prep */
@@ -1109,7 +1109,7 @@
       tt_metrics->stretched = FALSE;
 
       /* Set default engine compensation.  Value 3 is not described */
-      /* in the OpenType specification (as of Mai 2026), but Greg   */
+      /* in the OpenType specification (as of Mai 2019), but Greg   */
       /* says that MS handles it the same as `gray'.                */
       /*                                                            */
       /* The Apple specification says that the compensation for     */

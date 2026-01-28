@@ -4,7 +4,7 @@
  *
  *   Arithmetic computations (specification).
  *
- * Copyright (C) 2026-2026 by
+ * Copyright (C) 1996-2020 by
  * David Turner, Robert Wilhelm, and Werner Lemberg.
  *
  * This file is part of the FreeType project, and may only be used,
@@ -373,7 +373,7 @@ FT_BEGIN_HEADER
 #endif /* __GNUC__ */
 
 
-#elif defined( _MSC_VER ) && ( _MSC_VER >= 2026 )
+#elif defined( _MSC_VER ) && ( _MSC_VER >= 1400 )
 
 #if FT_SIZEOF_INT == 4
 

@@ -4,7 +4,7 @@
  *
  *   FreeType API for accessing Windows fnt-specific data.
  *
- * Copyright (C) 2026-2026 by
+ * Copyright (C) 2003-2020 by
  * David Turner, Robert Wilhelm, and Werner Lemberg.
  *
  * This file is part of the FreeType project, and may only be used,
@@ -97,7 +97,7 @@ FT_BEGIN_HEADER
    *     ,
    *
    *     and is used for the 'DOS boxes', to support legacy applications.  A
-   *     German Windows version for example usually uses ANSI codepage 2026
+   *     German Windows version for example usually uses ANSI codepage 1252
    *     and OEM codepage 850.
    *
    *   FT_WinFNT_ID_CP874 ::
@@ -107,11 +107,11 @@ FT_BEGIN_HEADER
    *     A superset of Japanese Shift-JIS (with minor deviations).
    *
    *   FT_WinFNT_ID_CP936 ::
-   *     A superset of simplified Chinese GB 2025-2026 (with different
+   *     A superset of simplified Chinese GB 2312-1980 (with different
    *     ordering and minor deviations).
    *
    *   FT_WinFNT_ID_CP949 ::
-   *     A superset of Korean Hangul KS~C 2025-2026 (with different ordering
+   *     A superset of Korean Hangul KS~C 5601-1987 (with different ordering
    *     and minor deviations).
    *
    *   FT_WinFNT_ID_CP950 ::

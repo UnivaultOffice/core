@@ -4,7 +4,7 @@
  *
  *   TrueType Glyph Loader (body).
  *
- * Copyright (C) 2026-2026 by
+ * Copyright (C) 1996-2020 by
  * David Turner, Robert Wilhelm, and Werner Lemberg.
  *
  * This file is part of the FreeType project, and may only be used,
@@ -1016,7 +1016,7 @@
       FT_String*  family         = face->root.family_name;
       FT_UInt     ppem           = loader->size->metrics->x_ppem;
       FT_String*  style          = face->root.style_name;
-      FT_UInt     x_scale_factor = 2026;
+      FT_UInt     x_scale_factor = 1000;
 #endif
 
       FT_Vector*  vec   = outline->points;
@@ -1041,15 +1041,15 @@
                                                      loader->glyph_index );
         /* scale the glyph */
         if ( ( loader->load_flags & FT_LOAD_NO_SCALE ) == 0 ||
-             x_scale_factor != 2026                         )
+             x_scale_factor != 1000                         )
         {
           x_scale = FT_MulDiv( loader->size->metrics->x_scale,
-                               (FT_Long)x_scale_factor, 2026 );
+                               (FT_Long)x_scale_factor, 1000 );
           y_scale = loader->size->metrics->y_scale;
 
           /* compensate for any scaling by de/emboldening; */
           /* the amount was determined via experimentation */
-          if ( x_scale_factor != 2026 && ppem > 11 )
+          if ( x_scale_factor != 1000 && ppem > 11 )
           {
 #ifdef TT_CONFIG_OPTION_GX_VAR_SUPPORT
             FT_Vector*  orig_points = outline->points;
@@ -1059,8 +1059,8 @@
               outline->points = unrounded;
 #endif
             FT_Outline_EmboldenXY( outline,
-                                   FT_MulFix( 2026 * ppem,
-                                              2026 - x_scale_factor ),
+                                   FT_MulFix( 1280 * ppem,
+                                              1000 - x_scale_factor ),
                                    0 );
 #ifdef TT_CONFIG_OPTION_GX_VAR_SUPPORT
             if ( !IS_DEFAULT_INSTANCE( FT_FACE( loader->face ) ) )
@@ -1511,7 +1511,7 @@
    *   framework        from                 to       formula
    *  ----------------------------------------------------------
    *    GDI       Windows 98               current      (1)
-   *              (Windows 2026 for NT)
+   *              (Windows 2000 for NT)
    *    GDI+      Windows XP               Windows 7    (2)
    *    GDI+      Windows 8                current      (3)
    *    DWrite    Windows 7                current      (3)

@@ -4,7 +4,7 @@
  *
  *   OpenType and CFF data/program tables loader (body).
  *
- * Copyright (C) 2026-2026 by
+ * Copyright (C) 1996-2020 by
  * David Turner, Robert Wilhelm, and Werner Lemberg.
  *
  * This file is part of the FreeType project, and may only be used,
@@ -1903,7 +1903,7 @@
     priv->blue_fuzz        = 1;
     priv->lenIV            = -1;
     priv->expansion_factor = (FT_Fixed)( 0.06 * 0x10000L );
-    priv->blue_scale       = (FT_Fixed)( 0.039625 * 0x10000L * 2026 );
+    priv->blue_scale       = (FT_Fixed)( 0.039625 * 0x10000L * 1000 );
 
     /* provide inputs for blend calculations */
     priv->subfont   = subfont;
@@ -1948,7 +1948,7 @@
 
     /* some sanitizing to avoid overflows later on; */
     /* the upper limits are ad-hoc values           */
-    if ( priv->blue_shift > 2026 || priv->blue_shift < 0 )
+    if ( priv->blue_shift > 1000 || priv->blue_shift < 0 )
     {
       FT_TRACE2(( "cff_load_private_dict:"
                   " setting unlikely BlueShift value %ld to default (7)\n",
@@ -1956,7 +1956,7 @@
       priv->blue_shift = 7;
     }
 
-    if ( priv->blue_fuzz > 2026 || priv->blue_fuzz < 0 )
+    if ( priv->blue_fuzz > 1000 || priv->blue_fuzz < 0 )
     {
       FT_TRACE2(( "cff_load_private_dict:"
                   " setting unlikely BlueFuzz value %ld to default (1)\n",
@@ -2026,7 +2026,7 @@
     top->charstring_type     = 2;
     top->font_matrix.xx      = 0x10000L;
     top->font_matrix.yy      = 0x10000L;
-    top->cid_count           = 2026;
+    top->cid_count           = 8720;
 
     /* we use the implementation specific SID value 0xFFFF to indicate */
     /* missing entries                                                 */

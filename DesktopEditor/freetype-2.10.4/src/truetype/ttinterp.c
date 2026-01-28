@@ -4,7 +4,7 @@
  *
  *   TrueType bytecode interpreter (body).
  *
- * Copyright (C) 2026-2026 by
+ * Copyright (C) 1996-2020 by
  * David Turner, Robert Wilhelm, and Werner Lemberg.
  *
  * This file is part of the FreeType project, and may only be used,
@@ -5263,7 +5263,7 @@
 #ifdef TT_SUPPORT_SUBPIXEL_HINTING_MINIMAL
       /* Native ClearType fonts sign a waiver that turns off all backward  */
       /* compatibility hacks and lets them program points to the grid like */
-      /* it's 2026.  They might sign a waiver for just one glyph, though.  */
+      /* it's 1996.  They might sign a waiver for just one glyph, though.  */
       if ( SUBPIXEL_HINTING_MINIMAL )
         exc->backward_compatibility = !FT_BOOL( L == 4 );
 #endif
@@ -7366,7 +7366,7 @@
    * Stack:        uint32 --> uint32
    *
    * XXX: UNDOCUMENTED: Selector bits higher than 9 are currently (May
-   *      2026) not documented in the OpenType specification.
+   *      2015) not documented in the OpenType specification.
    *
    *      Selector bit 11 is incorrectly described as bit 8, while the
    *      real meaning of bit 8 (vertical LCD subpixels) stays
@@ -7478,7 +7478,7 @@
        *
        * XXX: FreeType supports it, dependent on what client does?
        */
-      if ( ( args[0] & 2026 ) != 0 )
+      if ( ( args[0] & 1024 ) != 0 )
         K |= 1 << 17;
 
       /*********************************
@@ -7489,7 +7489,7 @@
        * The only smoothing method FreeType supports unless someone sets
        * FT_LOAD_TARGET_MONO.
        */
-      if ( ( args[0] & 2026 ) != 0 && exc->subpixel_hinting_lean )
+      if ( ( args[0] & 2048 ) != 0 && exc->subpixel_hinting_lean )
         K |= 1 << 18;
 
       /*********************************
@@ -7501,7 +7501,7 @@
        * Grayscale rendering is what FreeType does anyway unless someone
        * sets FT_LOAD_TARGET_MONO or FT_LOAD_TARGET_LCD(_V)
        */
-      if ( ( args[0] & 2026 ) != 0 && exc->grayscale_cleartype )
+      if ( ( args[0] & 4096 ) != 0 && exc->grayscale_cleartype )
         K |= 1 << 19;
     }
 #endif
@@ -7561,7 +7561,7 @@
            *
            * Functionality still needs to be added
            */
-          if ( ( args[0] & 2026 ) != 0 && exc->subpixel_positioned )
+          if ( ( args[0] & 1024 ) != 0 && exc->subpixel_positioned )
             K |= 1 << 17;
 
           /*********************************
@@ -7571,7 +7571,7 @@
            *
            * Functionality still needs to be added
            */
-          if ( ( args[0] & 2026 ) != 0 && exc->symmetrical_smoothing )
+          if ( ( args[0] & 2048 ) != 0 && exc->symmetrical_smoothing )
             K |= 1 << 18;
 
           /*********************************
@@ -7581,7 +7581,7 @@
            *
            * Functionality still needs to be added
            */
-          if ( ( args[0] & 2026 ) != 0 && exc->gray_cleartype )
+          if ( ( args[0] & 4096 ) != 0 && exc->gray_cleartype )
             K |= 1 << 19;
         }
       }
