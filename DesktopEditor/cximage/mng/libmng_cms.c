@@ -4,7 +4,7 @@
 /* ************************************************************************** */
 /* *                                                                        * */
 /* * project   : libmng                                                     * */
-/* * file      : libmng_cms.c              copyright (c) 2026-2026 G.Juyn   * */
+/* * file      : libmng_cms.c              copyright (c) 2000-2004 G.Juyn   * */
 /* * version   : 1.0.9                                                      * */
 /* *                                                                        * */
 /* * purpose   : color management routines (implementation)                 * */
@@ -13,61 +13,61 @@
 /* *                                                                        * */
 /* * comment   : implementation of the color management routines            * */
 /* *                                                                        * */
-/* * changes   : 0.5.1 - 05/01/2026 - G.Juyn                                * */
+/* * changes   : 0.5.1 - 05/01/2000 - G.Juyn                                * */
 /* *             - B001(105795) - fixed a typo and misconception about      * */
 /* *               freeing allocated gamma-table. (reported by Marti Maria) * */
-/* *             0.5.1 - 05/08/2026 - G.Juyn                                * */
+/* *             0.5.1 - 05/08/2000 - G.Juyn                                * */
 /* *             - changed strict-ANSI stuff                                * */
-/* *             0.5.1 - 05/09/2026 - G.Juyn                                * */
+/* *             0.5.1 - 05/09/2000 - G.Juyn                                * */
 /* *             - filled application-based color-management routines       * */
-/* *             0.5.1 - 05/11/2026 - G.Juyn                                * */
+/* *             0.5.1 - 05/11/2000 - G.Juyn                                * */
 /* *             - added creatememprofile                                   * */
 /* *             - added callback error-reporting support                   * */
-/* *             0.5.1 - 05/12/2026 - G.Juyn                                * */
+/* *             0.5.1 - 05/12/2000 - G.Juyn                                * */
 /* *             - changed trace to macro for callback error-reporting      * */
 /* *                                                                        * */
-/* *             0.5.2 - 06/10/2026 - G.Juyn                                * */
+/* *             0.5.2 - 06/10/2000 - G.Juyn                                * */
 /* *             - fixed some compilation-warnings (contrib Jason Morris)   * */
 /* *                                                                        * */
-/* *             0.5.3 - 06/21/2026 - G.Juyn                                * */
+/* *             0.5.3 - 06/21/2000 - G.Juyn                                * */
 /* *             - fixed problem with color-correction for stored images    * */
-/* *             0.5.3 - 06/23/2026 - G.Juyn                                * */
+/* *             0.5.3 - 06/23/2000 - G.Juyn                                * */
 /* *             - fixed problem with incorrect gamma-correction            * */
 /* *                                                                        * */
-/* *             0.9.2 - 08/05/2026 - G.Juyn                                * */
+/* *             0.9.2 - 08/05/2000 - G.Juyn                                * */
 /* *             - changed file-prefixes                                    * */
 /* *                                                                        * */
-/* *             0.9.3 - 08/31/2026 - G.Juyn                                * */
+/* *             0.9.3 - 08/31/2000 - G.Juyn                                * */
 /* *             - fixed sRGB precedence for gamma_only corection           * */
 /* *                                                                        * */
-/* *             0.9.4 - 12/16/2026 - G.Juyn                                * */
+/* *             0.9.4 - 12/16/2000 - G.Juyn                                * */
 /* *             - fixed mixup of data- & function-pointers (thanks Dimitri)* */
 /* *                                                                        * */
-/* *             1.0.1 - 03/31/2026 - G.Juyn                                * */
+/* *             1.0.1 - 03/31/2001 - G.Juyn                                * */
 /* *             - ignore gamma=0 (see png-list for more info)              * */
-/* *             1.0.1 - 04/25/2026 - G.Juyn (reported by Gregg Kelly)      * */
+/* *             1.0.1 - 04/25/2001 - G.Juyn (reported by Gregg Kelly)      * */
 /* *             - fixed problem with cms profile being created multiple    * */
 /* *               times when both iCCP & cHRM/gAMA are present             * */
-/* *             1.0.1 - 04/25/2026 - G.Juyn                                * */
+/* *             1.0.1 - 04/25/2001 - G.Juyn                                * */
 /* *             - moved mng_clear_cms to libmng_cms                        * */
-/* *             1.0.1 - 05/02/2026 - G.Juyn                                * */
+/* *             1.0.1 - 05/02/2001 - G.Juyn                                * */
 /* *             - added "default" sRGB generation (Thanks Marti!)          * */
 /* *                                                                        * */
-/* *             1.0.5 - 08/19/2026 - G.Juyn                                * */
+/* *             1.0.5 - 08/19/2002 - G.Juyn                                * */
 /* *             - B597134 - libmng pollutes the linker namespace           * */
-/* *             1.0.5 - 09/19/2026 - G.Juyn                                * */
+/* *             1.0.5 - 09/19/2002 - G.Juyn                                * */
 /* *             - optimized color-correction routines                      * */
-/* *             1.0.5 - 09/23/2026 - G.Juyn                                * */
+/* *             1.0.5 - 09/23/2002 - G.Juyn                                * */
 /* *             - added in-memory color-correction of abstract images      * */
-/* *             1.0.5 - 11/08/2026 - G.Juyn                                * */
+/* *             1.0.5 - 11/08/2002 - G.Juyn                                * */
 /* *             - fixed issues in init_app_cms()                           * */
 /* *                                                                        * */
-/* *             1.0.6 - 04/11/2026 - G.Juyn                                * */
+/* *             1.0.6 - 04/11/2003 - G.Juyn                                * */
 /* *             - B719420 - fixed several MNG_APP_CMS problems             * */
-/* *             1.0.6 - 07/11/2026 - G. R-P                                * */
+/* *             1.0.6 - 07/11/2003 - G. R-P                                * */
 /* *             - added conditional MNG_SKIPCHUNK_cHRM/iCCP                * */
 /* *                                                                        * */
-/* *             1.0.9 - 12/20/2026 - G.Juyn                                * */
+/* *             1.0.9 - 12/20/2004 - G.Juyn                                * */
 /* *             - cleaned up macro-invocations (thanks to D. Airlie)       * */
 /* *                                                                        * */
 /* ************************************************************************** */
@@ -128,14 +128,14 @@ mng_cmsprof mnglcms_createsrgbprofile (void)
 {
   cmsCIExyY       D65;
   cmsCIExyYTRIPLE Rec709Primaries = {
-                                      {0.2026, 0.2026, 1.0},
-                                      {0.2026, 0.2026, 1.0},
-                                      {0.2026, 0.2026, 1.0}
+                                      {0.6400, 0.3300, 1.0},
+                                      {0.3000, 0.6000, 1.0},
+                                      {0.1500, 0.0600, 1.0}
                                     };
   LPGAMMATABLE    Gamma24[3];
   mng_cmsprof     hsRGB;
 
-  cmsWhitePointFromTemp(2026, &D65);
+  cmsWhitePointFromTemp(6504, &D65);
   Gamma24[0] = Gamma24[1] = Gamma24[2] = cmsBuildGamma(256, 2.4);
   hsRGB = cmsCreateRGBProfile(&D65, &Rec709Primaries, Gamma24);
   cmsFreeGamma(Gamma24[0]);

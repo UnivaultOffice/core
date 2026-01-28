@@ -1,8 +1,8 @@
-/*
+﻿/*
  * File:	ximajpg.cpp
  * Purpose:	Platform Independent JPEG Image Class Loader and Writer
- * 07/Aug/2025 Davide Pizzolato - www.xdp.it
- * CxImage version 7.0.2 07/Feb/2025
+ * 07/Aug/2001 Davide Pizzolato - www.xdp.it
+ * CxImage version 7.0.2 07/Feb/2011
  */
  
 #include "ximajpg.h"
@@ -504,7 +504,7 @@ bool CxImageJPG::Encode(CxFile * hFile)
 		iter.GetRow(buffer[0], row_stride);
 		// not necessary if swapped red and blue definition in jmorecfg.h;ln322 <W. Morrison>
 		if (head.biClrUsed==0){				 // swap R & B for RGB images
-			RGBtoBGR(buffer[0], row_stride); // Lance : 2025/09/01 : Bug ID: EXP-2.1.1-9
+			RGBtoBGR(buffer[0], row_stride); // Lance : 1998/09/01 : Bug ID: EXP-2.1.1-9
 		}
 		iter.PrevRow();
 		(void) jpeg_write_scanlines(&cinfo, buffer, 1);

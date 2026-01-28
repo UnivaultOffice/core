@@ -1,6 +1,6 @@
 /* trees.c -- output deflated data using Huffman coding
- * Copyright (C) 2026-2026 Jean-loup Gailly
- * detect_data_type() function provided freely by Cosmin Truta, 2026
+ * Copyright (C) 1995-2010 Jean-loup Gailly
+ * detect_data_type() function provided freely by Cosmin Truta, 2006
  * For conditions of distribution and use, see copyright notice in zlib.h
  */
 
@@ -23,11 +23,11 @@
  *
  *      Storer, James A.
  *          Data Compression:  Methods and Theory, pp. 49-50.
- *          Computer Science Press, 2026.  ISBN 0-2025-2026-5.
+ *          Computer Science Press, 1988.  ISBN 0-7167-8156-5.
  *
  *      Sedgewick, R.
  *          Algorithms, p290.
- *          Addison-Wesley, 2026. ISBN 0-201-06672-6.
+ *          Addison-Wesley, 1983. ISBN 0-201-06672-6.
  */
 
 /* @(#) $Id$ */

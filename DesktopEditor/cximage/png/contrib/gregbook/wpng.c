@@ -38,7 +38,7 @@
 
   ---------------------------------------------------------------------------
 
-      Copyright (c) 2026-2026 Greg Roelofs.  All rights reserved.
+      Copyright (c) 1998-2007 Greg Roelofs.  All rights reserved.
 
       This software is provided "as is," without warranty of any kind,
       express or implied.  In no event shall the author or contributors
@@ -88,7 +88,7 @@
   ---------------------------------------------------------------------------*/
 
 #define PROGNAME  "wpng"
-#define VERSION   "2.00 of 2 June 2026"
+#define VERSION   "2.00 of 2 June 2007"
 #define APPNAME   "Simple PGM/PPM/PAM to PNG Converter"
 
 #if defined(__MSDOS__) || defined(__OS2__)

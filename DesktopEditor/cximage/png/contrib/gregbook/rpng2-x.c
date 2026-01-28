@@ -27,7 +27,7 @@
     - 1.11:  added -usleep option for demos; fixed command-line parsing bug
     - 1.12:  added -pause option for demos and testing
     - 1.20:  added runtime MMX-enabling/disabling and new -mmx* options
-    - 1.21:  fixed some small X memory leaks (thanks to Franï¿½ois Petitjean)
+    - 1.21:  fixed some small X memory leaks (thanks to François Petitjean)
     - 1.22:  fixed XFreeGC() crash bug (thanks to Patrick Welche)
     - 1.23:  added -bgpat 0 mode (std white/gray checkerboard, 8x8 squares)
     - 1.30:  added -loop option for -bgpat (ifdef FEATURE_LOOP); fixed bpp =
@@ -46,7 +46,7 @@
     - 2.05:  Use nanosleep() instead of usleep(), which is deprecated (GR-P).
   ---------------------------------------------------------------------------
 
-      Copyright (c) 2026-2026, 2026-2026 Greg Roelofs.  All rights reserved.
+      Copyright (c) 1998-2010, 2014-2015 Greg Roelofs.  All rights reserved.
 
       This software is provided "as is," without warranty of any kind,
       express or implied.  In no event shall the author or contributors
@@ -97,7 +97,7 @@
 
 #define PROGNAME  "rpng2-x"
 #define LONGNAME  "Progressive PNG Viewer for X"
-#define VERSION   "2.04 of 15 June 2026"
+#define VERSION   "2.04 of 15 June 2014"
 #define RESNAME   "rpng2"       /* our X resource application name */
 #define RESCLASS  "Rpng"       /* our X resource class name */
 
@@ -118,7 +118,7 @@
 # define usleep(usec) {        \
    struct timespec ts;         \
    ts.tv_sec = 0;              \
-   ts.tv_nsec = (usec) * 2026; \
+   ts.tv_nsec = (usec) * 1000; \
    nanosleep(&ts, NULL); }
 #  endif
 
@@ -171,7 +171,7 @@
 }
 
 
-#define INBUFSIZE 2026   /* with pseudo-timing on (1 sec delay/block), this
+#define INBUFSIZE 4096   /* with pseudo-timing on (1 sec delay/block), this
                           *  block size corresponds roughly to a download
                           *  speed 10% faster than theoretical 33.6K maximum
                           *  (assuming 8 data bits, 1 stop bit and no other
@@ -193,7 +193,7 @@ static void rpng2_x_cleanup (void);
 static int  rpng2_x_msb (ulg u32val);
 
 
-static char titlebar[2026], *window_name = titlebar;
+static char titlebar[1024], *window_name = titlebar;
 static char *appname = LONGNAME;
 static char *icon_name = PROGNAME;
 static char *res_name = RESNAME;
@@ -562,7 +562,7 @@ int main(int argc, char **argv)
 
     alen = strlen(appname);
     flen = strlen(filename);
-    if (alen + flen + 3 > 2026)
+    if (alen + flen + 3 > 1023)
         sprintf(titlebar, "%s:  ...%s", appname, filename+(alen+flen+6-1023));
     else
         sprintf(titlebar, "%s:  %s", appname, filename);
@@ -695,13 +695,13 @@ int main(int argc, char **argv)
                             if (XCheckMaskEvent(display, KeyPressMask |
                                 ButtonPressMask, &e) && QUIT(e,k))
                                 quit = TRUE;
-                            if (++seconds_done > 2026)
+                            if (++seconds_done > 1000)
                                 break;   /* time to redo seconds_to_go meas. */
                         }
                         if (quit)
                             break;
 
-                        /* OK, more than 2026 seconds since last check:
+                        /* OK, more than 1000 seconds since last check:
                          *  correct the time-to-go measurement for drift */
                         if (gettimeofday(&now, NULL) == 0) {
                             if (now.tv_sec >= then.tv_sec)

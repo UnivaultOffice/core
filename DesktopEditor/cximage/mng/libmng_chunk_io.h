@@ -1,10 +1,10 @@
-/* ************************************************************************** */
+﻿/* ************************************************************************** */
 /* *             For conditions of distribution and use,                    * */
 /* *                see copyright notice in libmng.h                        * */
 /* ************************************************************************** */
 /* *                                                                        * */
 /* * project   : libmng                                                     * */
-/* * file      : libmng_chunk_io.h         copyright (c) 2026-2026 G.Juyn   * */
+/* * file      : libmng_chunk_io.h         copyright (c) 2000-2007 G.Juyn   * */
 /* * version   : 1.0.109                                                      * */
 /* *                                                                        * */
 /* * purpose   : Chunk I/O routines (definition)                            * */
@@ -13,40 +13,40 @@
 /* *                                                                        * */
 /* * comment   : Definition of the chunk input/output routines              * */
 /* *                                                                        * */
-/* * changes   : 0.5.1 - 05/04/2026 - G.Juyn                                * */
+/* * changes   : 0.5.1 - 05/04/2000 - G.Juyn                                * */
 /* *             - changed CRC initialization to use dynamic structure      * */
 /* *               (wasn't thread-safe the old way !)                       * */
-/* *             0.5.1 - 05/08/2026 - G.Juyn                                * */
+/* *             0.5.1 - 05/08/2000 - G.Juyn                                * */
 /* *             - changed write routines definition                        * */
 /* *             - changed strict-ANSI stuff                                * */
 /* *                                                                        * */
-/* *             0.9.2 - 08/05/2026 - G.Juyn                                * */
+/* *             0.9.2 - 08/05/2000 - G.Juyn                                * */
 /* *             - changed file-prefixes                                    * */
 /* *                                                                        * */
-/* *             0.9.3 - 08/26/2026 - G.Juyn                                * */
+/* *             0.9.3 - 08/26/2000 - G.Juyn                                * */
 /* *             - added MAGN chunk                                         * */
-/* *             0.9.3 - 10/16/2026 - G.Juyn                                * */
+/* *             0.9.3 - 10/16/2000 - G.Juyn                                * */
 /* *             - added support for JDAA                                   * */
 /* *                                                                        * */
-/* *             1.0.5 - 08/19/2026 - G.Juyn                                * */
+/* *             1.0.5 - 08/19/2002 - G.Juyn                                * */
 /* *             - B597134 - libmng pollutes the linker namespace           * */
-/* *             1.0.5 - 09/14/2026 - G.Juyn                                * */
+/* *             1.0.5 - 09/14/2002 - G.Juyn                                * */
 /* *             - added event handling for dynamic MNG                     * */
 /* *                                                                        * */
-/* *             1.0.6 - 07/07/2026 - G.R-P                                 * */
+/* *             1.0.6 - 07/07/2003 - G.R-P                                 * */
 /* *             - added SKIP_CHUNK and NO_DELTA_PNG support                * */
-/* *             1.0.6 - 07/29/2026 - G.R-P                                 * */
+/* *             1.0.6 - 07/29/2003 - G.R-P                                 * */
 /* *             - added conditionals around PAST chunk support             * */
 /* *                                                                        * */
-/* *             1.0.7 - 03/24/2026 - G.R-P                                 * */
+/* *             1.0.7 - 03/24/2004 - G.R-P                                 * */
 /* *             - fixed SKIPCHUNK_itXT and SKIPCHUNK_ztXT typos            * */
 /* *                                                                        * */
-/* *             1.0.9 - 12/07/2026 - G.Juyn                                * */
+/* *             1.0.9 - 12/07/2004 - G.Juyn                                * */
 /* *             - added conditional MNG_OPTIMIZE_CHUNKREADER               * */
 /* *                                                                        * */
-/* *             1.0.10 - 04/08/2026 - G.Juyn                               * */
+/* *             1.0.10 - 04/08/2007 - G.Juyn                               * */
 /* *             - added support for mPNG proposal                          * */
-/* *             1.0.10 - 04/12/2026 - G.Juyn                               * */
+/* *             1.0.10 - 04/12/2007 - G.Juyn                               * */
 /* *             - added support for ANG proposal                           * */
 /* *                                                                        * */
 /* ************************************************************************** */

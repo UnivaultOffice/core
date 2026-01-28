@@ -1,10 +1,10 @@
-/* ************************************************************************** */
+﻿/* ************************************************************************** */
 /* *             For conditions of distribution and use,                    * */
 /* *                see copyright notice in libmng.h                        * */
 /* ************************************************************************** */
 /* *                                                                        * */
 /* * project   : libmng                                                     * */
-/* * file      : libmng_error.h            copyright (c) 2026-2026 G.Juyn   * */
+/* * file      : libmng_error.h            copyright (c) 2000-2002 G.Juyn   * */
 /* * version   : 1.0.5                                                      * */
 /* *                                                                        * */
 /* * purpose   : Error functions (definition)                               * */
@@ -13,35 +13,35 @@
 /* *                                                                        * */
 /* * comment   : Definition of the generic error-codes and functions        * */
 /* *                                                                        * */
-/* * changes   : 0.5.1 - 05/06/2026 - G.Juyn                                * */
+/* * changes   : 0.5.1 - 05/06/2000 - G.Juyn                                * */
 /* *             - added some errorcodes                                    * */
-/* *             0.5.1 - 05/08/2026 - G.Juyn                                * */
+/* *             0.5.1 - 05/08/2000 - G.Juyn                                * */
 /* *             - added some errorcodes                                    * */
 /* *             - changed strict-ANSI stuff                                * */
-/* *             0.5.1 - 05/11/2026 - G.Juyn                                * */
+/* *             0.5.1 - 05/11/2000 - G.Juyn                                * */
 /* *             - added application errorcodes (used with callbacks)       * */
 /* *             - moved chunk-access errorcodes to severity 5              * */
 /* *                                                                        * */
-/* *             0.5.2 - 05/20/2026 - G.Juyn                                * */
+/* *             0.5.2 - 05/20/2000 - G.Juyn                                * */
 /* *             - added JNG errorcodes                                     * */
-/* *             0.5.2 - 05/23/2026 - G.Juyn                                * */
+/* *             0.5.2 - 05/23/2000 - G.Juyn                                * */
 /* *             - added error tell-tale definition                         * */
-/* *             0.5.2 - 05/30/2026 - G.Juyn                                * */
+/* *             0.5.2 - 05/30/2000 - G.Juyn                                * */
 /* *             - added errorcodes for delta-image processing              * */
-/* *             0.5.2 - 06/06/2026 - G.Juyn                                * */
+/* *             0.5.2 - 06/06/2000 - G.Juyn                                * */
 /* *             - added errorcode for delayed buffer-processing            * */
 /* *             - moved errorcodes to "libmng.h"                           * */
 /* *                                                                        * */
-/* *             0.9.1 - 07/15/2026 - G.Juyn                                * */
+/* *             0.9.1 - 07/15/2000 - G.Juyn                                * */
 /* *             - added macro + routine to set returncode without          * */
 /* *               calling error callback                                   * */
 /* *                                                                        * */
-/* *             0.9.2 - 08/05/2026 - G.Juyn                                * */
+/* *             0.9.2 - 08/05/2000 - G.Juyn                                * */
 /* *             - changed file-prefixes                                    * */
 /* *                                                                        * */
-/* *             1.0.5 - 08/19/2026 - G.Juyn                                * */
+/* *             1.0.5 - 08/19/2002 - G.Juyn                                * */
 /* *             - B597134 - libmng pollutes the linker namespace           * */
-/* *             1.0.5 - 08/20/2026 - G.Juyn                                * */
+/* *             1.0.5 - 08/20/2002 - G.Juyn                                * */
 /* *             - added option for soft-handling of errors                 * */
 /* *                                                                        * */
 /* ************************************************************************** */

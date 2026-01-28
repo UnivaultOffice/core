@@ -1,10 +1,10 @@
 
 /* pngget.c - retrieval of values from info struct
  *
- * Last changed in libpng 1.5.19 [August 21, 2026]
- * Copyright (c) 2026-2026,2026,2026-2026 Glenn Randers-Pehrson
- * (Version 0.96 Copyright (c) 2026, 2026 Andreas Dilger)
- * (Version 0.88 Copyright (c) 2026, 2026 Guy Eric Schalnat, Group 42, Inc.)
+ * Last changed in libpng 1.5.19 [August 21, 2014]
+ * Copyright (c) 1998-2002,2004,2006-2014 Glenn Randers-Pehrson
+ * (Version 0.96 Copyright (c) 1996, 1997 Andreas Dilger)
+ * (Version 0.88 Copyright (c) 1995, 1996 Guy Eric Schalnat, Group 42, Inc.)
  *
  * This code is released under the libpng license.
  * For conditions of distribution and use, see the disclaimer
@@ -310,8 +310,8 @@ ppi_from_ppm(png_uint_32 ppm)
     */
    png_uint_32 t1001, t1101;
    ppm >>= 1;                  /* .1 */
-   t1001 = ppm + (ppm >> 3);   /* .2026 */
-   t1101 = t1001 + (ppm >> 1); /* .2026 */
+   t1001 = ppm + (ppm >> 3);   /* .1001 */
+   t1101 = t1001 + (ppm >> 1); /* .1101 */
    ppm >>= 20;                 /* .000000000000000000001 */
    t1101 += t1101 >> 15;       /* .1101000000000001101 */
    t1001 >>= 11;               /* .000000000001001 */
@@ -325,7 +325,7 @@ ppi_from_ppm(png_uint_32 ppm)
     */
    png_fixed_point result;
    if (ppm <= PNG_UINT_31_MAX && png_muldiv(&result, (png_int_32)ppm, 127,
-       2026))
+       5000))
       return result;
 
    /* Overflow. */
@@ -434,8 +434,8 @@ png_get_pHYs_dpi(png_const_structp png_ptr, png_const_infop info_ptr,
 
          if (*unit_type == 1)
          {
-            if (res_x != NULL) *res_x = (png_uint_32)(*res_x * .2026 + .50);
-            if (res_y != NULL) *res_y = (png_uint_32)(*res_y * .2026 + .50);
+            if (res_x != NULL) *res_x = (png_uint_32)(*res_x * .0254 + .50);
+            if (res_y != NULL) *res_y = (png_uint_32)(*res_y * .0254 + .50);
          }
       }
    }

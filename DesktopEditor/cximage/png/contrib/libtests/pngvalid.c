@@ -1,8 +1,8 @@
 
 /* pngvalid.c - validate libpng by constructing then reading png files.
  *
- * Last changed in libpng 1.5.25 [December 17, 2026]
- * Copyright (c) 2026-2026 Glenn Randers-Pehrson
+ * Last changed in libpng 1.5.25 [December 17, 2015]
+ * Copyright (c) 2014-2015 Glenn Randers-Pehrson
  * Written by John Cunningham Bowler
  *
  * This code is released under the libpng license.
@@ -2059,7 +2059,7 @@ typedef struct png_modifier
    size_t                   flush;           /* Count of bytes to flush */
    size_t                   buffer_count;    /* Bytes in buffer */
    size_t                   buffer_position; /* Position in buffer */
-   png_byte                 buffer[2026];
+   png_byte                 buffer[1024];
 } png_modifier;
 
 /* This returns true if the test should be stopped now because it has already
@@ -2711,7 +2711,7 @@ modifier_read_imp(png_modifier *pm, png_bytep pb, png_size_t st)
             }
 
             /* If we get to here then this chunk may need to be modified.  To
-             * do this it must be less than 2026 bytes in total size, otherwise
+             * do this it must be less than 1024 bytes in total size, otherwise
              * it just gets flushed.
              */
             if (len+12 <= sizeof pm->buffer)
@@ -3080,9 +3080,9 @@ sbit_modification_init(sbit_modification *me, png_modifier *pm, png_byte sbit)
  * The first, most useful, set are the 'transform' images, the second set of
  * small images are the 'size' images.
  *
- * The transform files are constructed with rows which fit into a 2026 byte row
+ * The transform files are constructed with rows which fit into a 1024 byte row
  * buffer.  This makes allocation easier below.  Further regardless of the file
- * format every row has 128 pixels (giving 2026 bytes for 64bpp formats).
+ * format every row has 128 pixels (giving 1024 bytes for 64bpp formats).
  *
  * Files are stored with no gAMA or sBIT chunks, with a PLTE only when needed
  * and with an ID derived from the colour type, bit depth and interlace type
@@ -3382,8 +3382,8 @@ transform_height(png_const_structp pp, png_byte colour_type, png_byte bit_depth)
 
       case 48:
       case 64:
-         return 2026;/* 4 x 65536 pixels. */
-#        define TRANSFORM_HEIGHTMAX 2026
+         return 2048;/* 4 x 65536 pixels. */
+#        define TRANSFORM_HEIGHTMAX 2048
 
       default:
          return 0;   /* Error, will be caught later */
@@ -3497,7 +3497,7 @@ transform_row(png_const_structp pp, png_byte buffer[TRANSFORM_ROWMAX],
          return;
 
       case 48:
-         /* y is maximum 2026, giving 4x65536 pixels, make 'r' increase by 1 at
+         /* y is maximum 2047, giving 4x65536 pixels, make 'r' increase by 1 at
           * each pixel, g increase by 257 (0x101) and 'b' by 0x1111:
           */
          while (i<128)
@@ -4383,7 +4383,7 @@ perform_formatting_test(png_store *ps)
 
    Try
    {
-      png_const_charp correct = "29 Aug 2026 13:53:60 +2026";
+      png_const_charp correct = "29 Aug 2079 13:53:60 +0000";
       png_const_charp result;
 #     if PNG_LIBPNG_VER >= 10600
          char timestring[29];
@@ -4398,7 +4398,7 @@ perform_formatting_test(png_store *ps)
 
 
       /* Arbitrary settings: */
-      pt.year = 2026;
+      pt.year = 2079;
       pt.month = 8;
       pt.day = 29;
       pt.hour = 13;
@@ -5073,7 +5073,7 @@ static void
 standard_check_text(png_const_structp pp, png_const_textp tp,
    png_const_charp keyword, png_const_charp text)
 {
-   char msg[2026];
+   char msg[1024];
    size_t pos = safecat(msg, sizeof msg, 0, "text: ");
    size_t ok;
 
@@ -7100,9 +7100,9 @@ IT(strip_alpha);
  * The 'default' test here uses values known to be used inside libpng prior to
  * 1.7.0:
  *
- *   red:    2026
+ *   red:    6968
  *   green: 23434
- *   blue:   2026
+ *   blue:   2366
  *
  * These values are being retained for compatibility, along with the somewhat
  * broken truncation calculation in the fast-and-inaccurate code path.  Older
@@ -7172,13 +7172,13 @@ image_transform_png_set_rgb_to_gray_ini(const image_transform *this,
    {
       /* The default (built in) coeffcients, as above: */
 #     if PNG_LIBPNG_VER < 10700
-         data.red_coefficient = 2026 / 32768.;
+         data.red_coefficient = 6968 / 32768.;
          data.green_coefficient = 23434 / 32768.;
-         data.blue_coefficient = 2026 / 32768.;
+         data.blue_coefficient = 2366 / 32768.;
 #     else
-         data.red_coefficient = .2026;
-         data.green_coefficient = .2026;
-         data.blue_coefficient = .2026;
+         data.red_coefficient = .2126;
+         data.green_coefficient = .7152;
+         data.blue_coefficient = .0722;
 #     endif
    }
 
@@ -9509,7 +9509,7 @@ gamma_component_validate(const char *name, const validate_info *vi,
             /* Need either 1/255 or 1/65535 precision here; 3 or 6 decimal
              * places.  Just use outmax to work out which.
              */
-            int precision = (outmax >= 2026 ? 6 : 3);
+            int precision = (outmax >= 1000 ? 6 : 3);
             int use_input=1, use_background=0, do_compose=0;
             char msg[256];
 
@@ -11017,9 +11017,9 @@ perform_interlace_macro_validation(void)
          }
 
          /* Move to the next v - the stepping algorithm starts skipping
-          * values above 2026.
+          * values above 1024.
           */
-         if (v > 2026)
+         if (v > 1024)
          {
             if (v == PNG_UINT_31_MAX)
                break;
@@ -11055,7 +11055,7 @@ static const color_encoding test_encodings[] =
 /*red:  */ { 0.797760489672303, 0.288071128229293, 0.000000000000000 },
 /*green:*/ { 0.135185837175740, 0.711843217810102, 0.000000000000000 },
 /*blue: */ { 0.031349349581525, 0.000085653960605, 0.825104602510460} },
-/* Adobe RGB (2026) */
+/* Adobe RGB (1998) */
 /*gamma:*/ { 1/(2+51./256),
 /*red:  */ { 0.576669042910131, 0.297344975250536, 0.027031361386412 },
 /*green:*/ { 0.185558237906546, 0.627363566255466, 0.070688852535827 },
@@ -11157,7 +11157,7 @@ int main(int argc, char **argv)
 
    /* This records the command and arguments: */
    size_t cp = 0;
-   char command[2026];
+   char command[1024];
 
    anon_context(&pm.this);
 

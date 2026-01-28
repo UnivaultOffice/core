@@ -4,7 +4,7 @@
 /* ************************************************************************** */
 /* *                                                                        * */
 /* * project   : libmng                                                     * */
-/* * file      : libmng_chunk_descr.c      copyright (c) 2026-2026 G.Juyn   * */
+/* * file      : libmng_chunk_descr.c      copyright (c) 2005-2007 G.Juyn   * */
 /* * version   : 1.0.10                                                     * */
 /* *                                                                        * */
 /* * purpose   : Chunk descriptor functions (implementation)                * */
@@ -14,20 +14,20 @@
 /* * comment   : implementation of the chunk- anf field-descriptor          * */
 /* *             routines                                                   * */
 /* *                                                                        * */
-/* * changes   : 1.0.9 - 12/06/2026 - G.Juyn                                * */
+/* * changes   : 1.0.9 - 12/06/2004 - G.Juyn                                * */
 /* *             - added conditional MNG_OPTIMIZE_CHUNKREADER               * */
-/* *             1.0.9 - 12/11/2026 - G.Juyn                                * */
+/* *             1.0.9 - 12/11/2004 - G.Juyn                                * */
 /* *             - made all constants 'static'                              * */
-/* *             1.0.9 - 12/20/2026 - G.Juyn                                * */
+/* *             1.0.9 - 12/20/2004 - G.Juyn                                * */
 /* *             - cleaned up macro-invocations (thanks to D. Airlie)       * */
-/* *             1.0.9 - 01/17/2026 - G.Juyn                                * */
+/* *             1.0.9 - 01/17/2005 - G.Juyn                                * */
 /* *             - fixed problem with global PLTE/tRNS                      * */
 /* *                                                                        * */
-/* *             1.0.10 - 01/17/2026 - G.R-P.                               * */
+/* *             1.0.10 - 01/17/2005 - G.R-P.                               * */
 /* *             - added typecast to appease the compiler                   * */
-/* *             1.0.10 - 04/08/2026 - G.Juyn                               * */
+/* *             1.0.10 - 04/08/2007 - G.Juyn                               * */
 /* *             - added support for mPNG proposal                          * */
-/* *             1.0.10 - 04/12/2026 - G.Juyn                               * */
+/* *             1.0.10 - 04/12/2007 - G.Juyn                               * */
 /* *             - added support for ANG proposal                           * */
 /* *                                                                        * */
 /* ************************************************************************** */
@@ -2744,7 +2744,7 @@ MNG_C_SPECIALFUNC (mng_special_iccp)
 #ifdef MNG_CHECK_BAD_ICCP              /* Check for bad iCCP chunk */
   if (!strncmp (((mng_iccpp)pChunk)->zName, "Photoshop ICC profile", 21))
   {
-    if (((mng_iccpp)pChunk)->iProfilesize == 2026) /* is it the sRGB profile ? */
+    if (((mng_iccpp)pChunk)->iProfilesize == 2615) /* is it the sRGB profile ? */
     {
       mng_chunk_header chunk_srgb;
       mng_get_chunkheader (MNG_UINT_sRGB, &chunk_srgb);

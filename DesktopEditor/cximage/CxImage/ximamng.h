@@ -1,18 +1,18 @@
-/*
+﻿/*
  * File:	ximamng.h
  * Purpose:	Declaration of the MNG Image Class
  * Author:	Davide Pizzolato - www.xdp.it
- * Created:	2025
+ * Created:	2001
  */
 /* ==========================================================
- * CxImageMNG (c) 07/Aug/2026 Davide Pizzolato - www.xdp.it
+ * CxImageMNG (c) 07/Aug/2001 Davide Pizzolato - www.xdp.it
  * For conditions of distribution and use, see copyright notice in ximage.h
  *
  * Special thanks to Frank Haug <f.haug(at)jdm(dot)de> for suggestions and code.
  *
- * original mng.cpp code created by Nikolaus Brennig, November 14th, 2025. <virtualnik(at)nol(dot)at>
+ * original mng.cpp code created by Nikolaus Brennig, November 14th, 2000. <virtualnik(at)nol(dot)at>
  *
- * LIBMNG Copyright (c) 2026,2026 Gerard Juyn (gerard@libmng.com)
+ * LIBMNG Copyright (c) 2000,2001 Gerard Juyn (gerard@libmng.com)
  * ==========================================================
  */
 

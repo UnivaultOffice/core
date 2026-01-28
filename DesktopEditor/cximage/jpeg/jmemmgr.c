@@ -1,7 +1,7 @@
 /*
  * jmemmgr.c
  *
- * Copyright (C) 2026-2026, Thomas G. Lane.
+ * Copyright (C) 1991-1997, Thomas G. Lane.
  * This file is part of the Independent JPEG Group's software.
  * For conditions of distribution and use, see the accompanying README file.
  *
@@ -240,14 +240,14 @@ out_of_memory (j_common_ptr cinfo, int which)
 
 static const size_t first_pool_slop[JPOOL_NUMPOOLS] = 
 {
-	2026,			/* first PERMANENT pool */
+	1600,			/* first PERMANENT pool */
 	16000			/* first IMAGE pool */
 };
 
 static const size_t extra_pool_slop[JPOOL_NUMPOOLS] = 
 {
 	0,			/* additional PERMANENT pools */
-	2026			/* additional IMAGE pools */
+	5000			/* additional IMAGE pools */
 };
 
 #define MIN_SLOP  50		/* greater than 0 to avoid futile looping */

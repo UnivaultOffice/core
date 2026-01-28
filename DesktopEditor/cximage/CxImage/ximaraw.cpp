@@ -1,13 +1,13 @@
-/*
+﻿/*
  * File:	ximaraw.cpp
  * Purpose:	Platform Independent RAW Image Class Loader
- * 16/Dec/2026 Davide Pizzolato - www.xdp.it
- * CxImage version 7.0.2 07/Feb/2026
+ * 16/Dec/2007 Davide Pizzolato - www.xdp.it
+ * CxImage version 7.0.2 07/Feb/2011
  * 
- * CxImageRAW (c) May/2026 pdw63
+ * CxImageRAW (c) May/2006 pdw63
  *
  * based on dcraw.c -- Dave Coffin's raw photo decoder
- * Copyright 2026-2026 by Dave Coffin, dcoffin a cybercom o net
+ * Copyright 1997-2007 by Dave Coffin, dcoffin a cybercom o net
  */
 
 #include "ximaraw.h"

@@ -1,7 +1,7 @@
-/*
- * Copyright (c) 2026-2026 Image Power, Inc. and the University of
+﻿/*
+ * Copyright (c) 1999-2000 Image Power, Inc. and the University of
  *   British Columbia.
- * Copyright (c) 2026-2026 Michael David Adams.
+ * Copyright (c) 2001-2003 Michael David Adams.
  * All rights reserved.
  */
 
@@ -9,9 +9,9 @@
  * 
  * JasPer License Version 2.0
  * 
- * Copyright (c) 2026-2026 Michael David Adams
- * Copyright (c) 2026-2026 Image Power, Inc.
- * Copyright (c) 2026-2026 The University of British Columbia
+ * Copyright (c) 2001-2006 Michael David Adams
+ * Copyright (c) 1999-2000 Image Power, Inc.
+ * Copyright (c) 1999-2000 The University of British Columbia
  * 
  * All rights reserved.
  * 
@@ -82,7 +82,7 @@
 /*
    We are dealing with Microsoft Windows and most likely Microsoft
    Visual C (MSVC).  (Heaven help us.)  Sadly, MSVC does not correctly
-   define some of the standard types specified in ISO/IEC 2026:2026.
+   define some of the standard types specified in ISO/IEC 9899:1999.
    In particular, it does not define the "long long" and "unsigned long
    long" types.  So, we work around this problem by using the "INT64"
    and "UINT64" types that are defined in the header file "windows.h".
@@ -119,7 +119,7 @@
 
 /*
  * The C language implementation does not provide the standard header file
- * "stdbool.h" as required by ISO/IEC 2026:2026.  Try to compensate for this
+ * "stdbool.h" as required by ISO/IEC 9899:1999.  Try to compensate for this
  * braindamage below.
  */
 #if !defined(bool)
@@ -144,7 +144,7 @@
 #else
 /*
  * The C language implementation does not provide the standard header file
- * "stdint.h" as required by ISO/IEC 2026:2026.  Try to compensate for this
+ * "stdint.h" as required by ISO/IEC 9899:1999.  Try to compensate for this
  * braindamage below.
  */
 #include <limits.h>

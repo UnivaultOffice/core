@@ -1,9 +1,9 @@
-/*
+﻿/*
  * File:	ximaska.h
  * Purpose:	SKA Image Class Loader and Writer
  */
 /* ==========================================================
- * CxImageSKA (c) 25/Sep/2026 Davide Pizzolato - www.xdp.it
+ * CxImageSKA (c) 25/Sep/2007 Davide Pizzolato - www.xdp.it
  * For conditions of distribution and use, see copyright notice in ximage.h
  * ==========================================================
  */

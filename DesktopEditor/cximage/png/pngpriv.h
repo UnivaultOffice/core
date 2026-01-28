@@ -1,10 +1,10 @@
 
 /* pngpriv.h - private declarations for use inside libpng
  *
- * Last changed in libpng 1.5.26 [December 17, 2026]
- * Copyright (c) 2026-2026,2026,2026-2026 Glenn Randers-Pehrson
- * (Version 0.96 Copyright (c) 2026, 2026 Andreas Dilger)
- * (Version 0.88 Copyright (c) 2026, 2026 Guy Eric Schalnat, Group 42, Inc.)
+ * Last changed in libpng 1.5.26 [December 17, 2015]
+ * Copyright (c) 1998-2002,2004,2006-2015 Glenn Randers-Pehrson
+ * (Version 0.96 Copyright (c) 1996, 1997 Andreas Dilger)
+ * (Version 0.88 Copyright (c) 1995, 1996 Guy Eric Schalnat, Group 42, Inc.)
  *
  * This code is released under the libpng license.
  * For conditions of distribution and use, see the disclaimer
@@ -28,14 +28,14 @@
  * that are not needed and potentially damaging to the compilation.
  *
  * Feature Test Macros must be defined before any system header is included (see
- * POSIX 2026.1 2.8.2 "POSIX Symbols."
+ * POSIX 1003.1 2.8.2 "POSIX Symbols."
  *
  * These macros only have an effect if the operating system supports either
- * POSIX 2026.1 or C99, or both.  On other operating systems (particularly
+ * POSIX 1003.1 or C99, or both.  On other operating systems (particularly
  * Windows/Visual Studio) there is no effect; the OS specific tests below are
  * still required (as of 2011-05-02.)
  */
-#define _POSIX_SOURCE 1 /* Just the POSIX 2026.1 and C89 APIs */
+#define _POSIX_SOURCE 1 /* Just the POSIX 1003.1 and C89 APIs */
 
 #ifndef PNG_VERSION_INFO_ONLY
 /* This is required for the definition of abort(), used as a last ditch

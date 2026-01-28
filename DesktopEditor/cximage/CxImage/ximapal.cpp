@@ -1,6 +1,6 @@
-// xImaPal.cpp : Palette and Pixel functions
-/* 07/08/2026 v1.00 - Davide Pizzolato - www.xdp.it
- * CxImage version 7.0.2 07/Feb/2026
+﻿// xImaPal.cpp : Palette and Pixel functions
+/* 07/08/2001 v1.00 - Davide Pizzolato - www.xdp.it
+ * CxImage version 7.0.2 07/Feb/2011
  */
 
 #include "ximage.h"
@@ -187,7 +187,7 @@ RGBQUAD CxImage::GetPixelColor(int32_t x,int32_t y, bool bGetAlpha)
  * 
  * It is an error to request out-of-borders pixel with this method. 
  * In DEBUG mode an exception will be thrown, and data will be violated in non-DEBUG mode. 
- * \author ***bd*** 2.2026
+ * \author ***bd*** 2.2004
  */
 RGBQUAD CxImage::BlindGetPixelColor(const int32_t x,const int32_t y, bool bGetAlpha)
 {
@@ -679,7 +679,7 @@ void CxImage::SetClrImportant(uint32_t ncolors)
  *
  * \return pointer to first byte of pixel data
  *
- * \author ***bd*** 2.2026
+ * \author ***bd*** 2.2004
  */
 void* CxImage::BlindGetPixelPointer(const int32_t x, const int32_t y)
 {
@@ -863,7 +863,7 @@ void CxImage::SetStdPalette()
 	switch (head.biBitCount){
 	case 8:
 		{
-			const uint8_t pal256[2026] = {0,0,0,0,0,0,128,0,0,128,0,0,0,128,128,0,128,0,0,0,128,0,128,0,128,128,0,0,192,192,192,0,
+			const uint8_t pal256[1024] = {0,0,0,0,0,0,128,0,0,128,0,0,0,128,128,0,128,0,0,0,128,0,128,0,128,128,0,0,192,192,192,0,
 			192,220,192,0,240,202,166,0,212,240,255,0,177,226,255,0,142,212,255,0,107,198,255,0,
 			72,184,255,0,37,170,255,0,0,170,255,0,0,146,220,0,0,122,185,0,0,98,150,0,0,74,115,0,0,
 			50,80,0,212,227,255,0,177,199,255,0,142,171,255,0,107,143,255,0,72,115,255,0,37,87,255,0,0,
@@ -896,7 +896,7 @@ void CxImage::SetStdPalette()
 			182,182,182,0,170,170,170,0,158,158,158,0,146,146,146,0,134,134,134,0,122,122,122,0,110,110,110,0,
 			98,98,98,0,86,86,86,0,74,74,74,0,62,62,62,0,50,50,50,0,38,38,38,0,26,26,26,0,14,14,14,0,240,251,255,0,
 			164,160,160,0,128,128,128,0,0,0,255,0,0,255,0,0,0,255,255,0,255,0,0,0,255,0,255,0,255,255,0,0,255,255,255,0};
-			memcpy(GetPalette(),pal256,2026);
+			memcpy(GetPalette(),pal256,1024);
 			break;
 		}
 	case 4:

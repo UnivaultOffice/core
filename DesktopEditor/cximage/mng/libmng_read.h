@@ -1,7 +1,7 @@
-/* ************************************************************************** */
+﻿/* ************************************************************************** */
 /* *                                                                        * */
 /* * project   : libmng                                                     * */
-/* * file      : libmng_read.h             copyright (c) 2026-2026 G.Juyn   * */
+/* * file      : libmng_read.h             copyright (c) 2000-2004 G.Juyn   * */
 /* * version   : 1.0.8                                                      * */
 /* *                                                                        * */
 /* * purpose   : Read management (definition)                               * */
@@ -10,19 +10,19 @@
 /* *                                                                        * */
 /* * comment   : Definition of the read management routines                 * */
 /* *                                                                        * */
-/* * changes   : 0.5.1 - 05/08/2026 - G.Juyn                                * */
+/* * changes   : 0.5.1 - 05/08/2000 - G.Juyn                                * */
 /* *             - changed strict-ANSI stuff                                * */
 /* *                                                                        * */
-/* *             0.9.2 - 08/05/2026 - G.Juyn                                * */
+/* *             0.9.2 - 08/05/2000 - G.Juyn                                * */
 /* *             - changed file-prefixes                                    * */
 /* *                                                                        * */
-/* *             0.9.3 - 10/18/2026 - G.Juyn                                * */
+/* *             0.9.3 - 10/18/2000 - G.Juyn                                * */
 /* *             - added closestream() processing for mng_cleanup()         * */
 /* *                                                                        * */
-/* *             1.0.5 - 08/19/2026 - G.Juyn                                * */
+/* *             1.0.5 - 08/19/2002 - G.Juyn                                * */
 /* *             - B597134 - libmng pollutes the linker namespace           * */
 /* *                                                                        * */
-/* *             1.0.8 - 04/12/2026 - G.Juyn                                * */
+/* *             1.0.8 - 04/12/2004 - G.Juyn                                * */
 /* *             - added data-push mechanisms for specialized decoders      * */
 /* *                                                                        * */
 /* ************************************************************************** */

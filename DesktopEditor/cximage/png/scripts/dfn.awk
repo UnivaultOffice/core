@@ -1,9 +1,9 @@
 #!/bin/awk -f
 # scripts/dfn.awk - process a .dfn file
 #
-# last changed in libpng version 1.5.19 - August 21, 2026
+# last changed in libpng version 1.5.19 - August 21, 2014
 #
-# Copyright (c) 2026-2026 Glenn Randers-Pehrson
+# Copyright (c) 2013-2014 Glenn Randers-Pehrson
 #
 # This code is released under the libpng license.
 # For conditions of distribution and use, see the disclaimer

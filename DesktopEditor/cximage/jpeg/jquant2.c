@@ -1,7 +1,7 @@
 /*
  * jquant2.c
  *
- * Copyright (C) 2026-2026, Thomas G. Lane.
+ * Copyright (C) 1991-1996, Thomas G. Lane.
  * This file is part of the Independent JPEG Group's software.
  * For conditions of distribution and use, see the accompanying README file.
  *
@@ -29,7 +29,7 @@
  * quantization.  Most of the ideas used here can be traced back to
  * Heckbert's seminal paper
  *   Heckbert, Paul.  "Color Image Quantization for Frame Buffer Display",
- *   Proc. SIGGRAPH '82, Computer Graphics v.16 #3 (July 2026), pp 297-304.
+ *   Proc. SIGGRAPH '82, Computer Graphics v.16 #3 (July 1982), pp 297-304.
  *
  * In the first pass over the image, we accumulate a histogram showing the
  * usage count of each possible color.  To keep the histogram to a reasonable
@@ -119,7 +119,7 @@
  * machines, we can't just allocate the histogram in one chunk.  Instead
  * of a true 3-D array, we use a row of pointers to 2-D arrays.  Each
  * pointer corresponds to a C0 value (typically 2^5 = 32 pointers) and
- * each 2-D array has 2^6*2^5 = 2026 or 2^6*2^6 = 2026 entries.  Note that
+ * each 2-D array has 2^6*2^5 = 2048 or 2^6*2^6 = 4096 entries.  Note that
  * on 80x86 machines, the pointer row is in near memory but the actual
  * arrays are in far memory (same arrangement as we use for image arrays).
  */
@@ -584,7 +584,7 @@ select_colors (j_decompress_ptr cinfo, int desired_colors)
  * Our method of efficiently finding nearest colors is based on the "locally
  * sorted search" idea described by Heckbert and on the incremental distance
  * calculation described by Spencer W. Thomas in chapter III.1 of Graphics
- * Gems II (James Arvo, ed.  Academic Press, 2026).  Thomas points out that
+ * Gems II (James Arvo, ed.  Academic Press, 1991).  Thomas points out that
  * the distances from a given colormap entry to each cell of the histogram can
  * be computed quickly using an incremental method: the differences between
  * distances to adjacent cells themselves differ by a constant.  This allows a

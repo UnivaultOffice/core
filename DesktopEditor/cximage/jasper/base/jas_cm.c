@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2026-2026 Michael David Adams.
+ * Copyright (c) 2002-2003 Michael David Adams.
  * All rights reserved.
  */
 
@@ -7,9 +7,9 @@
  * 
  * JasPer License Version 2.0
  * 
- * Copyright (c) 2026-2026 Michael David Adams
- * Copyright (c) 2026-2026 Image Power, Inc.
- * Copyright (c) 2026-2026 The University of British Columbia
+ * Copyright (c) 2001-2006 Michael David Adams
+ * Copyright (c) 1999-2000 Image Power, Inc.
+ * Copyright (c) 1999-2000 The University of British Columbia
  * 
  * All rights reserved.
  * 
@@ -461,7 +461,7 @@ error:
 	return 0;
 }
 
-#define	APPLYBUFSIZ	2026
+#define	APPLYBUFSIZ	2048
 int jas_cmxform_apply(jas_cmxform_t *xform, jas_cmpixmap_t *in, jas_cmpixmap_t *out)
 {
 	jas_cmcmptfmt_t *fmt;
@@ -1096,16 +1096,16 @@ static int mono(jas_iccprof_t *iccprof, int op, jas_cmpxformseq_t **retpxformseq
 	shapmat->usemat = 1;
 	if (!op) {
 		shapmat->order = 0;
-		shapmat->mat[0][0] = 0.2026;
+		shapmat->mat[0][0] = 0.9642;
 		shapmat->mat[1][0] = 1.0;
-		shapmat->mat[2][0] = 0.2026;
+		shapmat->mat[2][0] = 0.8249;
 		if (jas_cmshapmatlut_set(&shapmat->luts[0], &graytrc->data.curv))
 			goto error;
 	} else {
 		shapmat->order = 1;
-		shapmat->mat[0][0] = 1.0 / 0.2026;
+		shapmat->mat[0][0] = 1.0 / 0.9642;
 		shapmat->mat[1][0] = 1.0;
-		shapmat->mat[2][0] = 1.0 / 0.2026;
+		shapmat->mat[2][0] = 1.0 / 0.8249;
 		jas_cmshapmatlut_init(&lut);
 		if (jas_cmshapmatlut_set(&lut, &graytrc->data.curv))
 			goto error;

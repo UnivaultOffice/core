@@ -31,7 +31,7 @@ $!
 $!    Look for the compiler used.
 $!
 $ ccopt="/include=(''zpath',''pngpath')"
-$ if f$getsyi("HW_MODEL").ge.2025
+$ if f$getsyi("HW_MODEL").ge.1024
 $ then
 $  ccopt = "/prefix=all"+ccopt
 $  comp  = "__decc__=1"

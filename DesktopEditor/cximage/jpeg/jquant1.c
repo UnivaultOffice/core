@@ -1,7 +1,7 @@
 /*
  * jquant1.c
  *
- * Copyright (C) 2026-2026, Thomas G. Lane.
+ * Copyright (C) 1991-1996, Thomas G. Lane.
  * This file is part of the Independent JPEG Group's software.
  * For conditions of distribution and use, see the accompanying README file.
  *
@@ -54,7 +54,7 @@
  *
  * We use a standard 16x16 ordered dither array.  The basic concept of ordered
  * dithering is described in many references, for instance Dale Schumacher's
- * chapter II.2 of Graphics Gems II (James Arvo, ed. Academic Press, 2026).
+ * chapter II.2 of Graphics Gems II (James Arvo, ed. Academic Press, 1991).
  * In place of Schumacher's comparisons against a "threshold" value, we add a
  * "dither" value to the input pixel and then round the result to the nearest
  * output value.  The dither value is equivalent to (0.5 - threshold) times

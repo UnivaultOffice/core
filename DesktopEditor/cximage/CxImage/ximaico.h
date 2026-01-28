@@ -1,9 +1,9 @@
-/*
+﻿/*
  * File:	ximaico.h
  * Purpose:	ICON Image Class Loader and Writer
  */
 /* ==========================================================
- * CxImageICO (c) 07/Aug/2026 Davide Pizzolato - www.xdp.it
+ * CxImageICO (c) 07/Aug/2001 Davide Pizzolato - www.xdp.it
  * For conditions of distribution and use, see copyright notice in ximage.h
  * ==========================================================
  */

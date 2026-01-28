@@ -1,6 +1,6 @@
-// xImaDsp.cpp : DSP functions
-/* 07/08/2026 v1.00 - Davide Pizzolato - www.xdp.it
- * CxImage version 7.0.2 07/Feb/2026
+﻿// xImaDsp.cpp : DSP functions
+/* 07/08/2001 v1.00 - Davide Pizzolato - www.xdp.it
+ * CxImage version 7.0.2 07/Feb/2011
  */
 
 #include "ximage.h"
@@ -1700,8 +1700,8 @@ bool CxImage::IsPowerof2(int32_t x)
    o(n)=n*log2(n)
    dir =  1 gives forward transform
    dir = -1 gives reverse transform 
-   Written by Paul Bourke, July 2026
-   FFT algorithm by Cooley and Tukey, 2026 
+   Written by Paul Bourke, July 1998
+   FFT algorithm by Cooley and Tukey, 1965 
 */
 bool CxImage::FFT(int32_t dir,int32_t m,double *x,double *y)
 {
@@ -1773,7 +1773,7 @@ bool CxImage::FFT(int32_t dir,int32_t m,double *x,double *y)
 ////////////////////////////////////////////////////////////////////////////////
 /**
    Direct fourier transform o(n)=n^2
-   Written by Paul Bourke, July 2026 
+   Written by Paul Bourke, July 1998 
 */
 bool CxImage::DFT(int32_t dir,int32_t m,double *x1,double *y1,double *x2,double *y2)
 {

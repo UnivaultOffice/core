@@ -4,7 +4,7 @@
 /* ************************************************************************** */
 /* *                                                                        * */
 /* * project   : libmng                                                     * */
-/* * file      : libmng_read.c             copyright (c) 2026-2026 G.Juyn   * */
+/* * file      : libmng_read.c             copyright (c) 2000-2007 G.Juyn   * */
 /* * version   : 1.0.10                                                     * */
 /* *                                                                        * */
 /* * purpose   : Read logic (implementation)                                * */
@@ -13,99 +13,99 @@
 /* *                                                                        * */
 /* * comment   : implementation of the high-level read logic                * */
 /* *                                                                        * */
-/* * changes   : 0.5.1 - 05/08/2026 - G.Juyn                                * */
+/* * changes   : 0.5.1 - 05/08/2000 - G.Juyn                                * */
 /* *             - changed strict-ANSI stuff                                * */
-/* *             0.5.1 - 05/11/2026 - G.Juyn                                * */
+/* *             0.5.1 - 05/11/2000 - G.Juyn                                * */
 /* *             - added callback error-reporting support                   * */
-/* *             0.5.1 - 05/12/2026 - G.Juyn                                * */
+/* *             0.5.1 - 05/12/2000 - G.Juyn                                * */
 /* *             - changed trace to macro for callback error-reporting      * */
 /* *                                                                        * */
-/* *             0.5.2 - 05/19/2026 - G.Juyn                                * */
+/* *             0.5.2 - 05/19/2000 - G.Juyn                                * */
 /* *             - cleaned up some code regarding mixed support             * */
-/* *             0.5.2 - 05/20/2026 - G.Juyn                                * */
+/* *             0.5.2 - 05/20/2000 - G.Juyn                                * */
 /* *             - added support for JNG                                    * */
-/* *             0.5.2 - 05/31/2026 - G.Juyn                                * */
+/* *             0.5.2 - 05/31/2000 - G.Juyn                                * */
 /* *             - fixed up punctuation (contribution by Tim Rowley)        * */
 /* *                                                                        * */
-/* *             0.5.3 - 06/16/2026 - G.Juyn                                * */
+/* *             0.5.3 - 06/16/2000 - G.Juyn                                * */
 /* *             - changed progressive-display processing                   * */
 /* *                                                                        * */
-/* *             0.9.1 - 07/08/2026 - G.Juyn                                * */
+/* *             0.9.1 - 07/08/2000 - G.Juyn                                * */
 /* *             - changed read-processing for improved I/O-suspension      * */
-/* *             0.9.1 - 07/14/2026 - G.Juyn                                * */
+/* *             0.9.1 - 07/14/2000 - G.Juyn                                * */
 /* *             - changed EOF processing behavior                          * */
-/* *             0.9.1 - 07/14/2026 - G.Juyn                                * */
-/* *             - changed default readbuffer size from 2026 to 2026        * */
+/* *             0.9.1 - 07/14/2000 - G.Juyn                                * */
+/* *             - changed default readbuffer size from 1024 to 4200        * */
 /* *                                                                        * */
-/* *             0.9.2 - 07/27/2026 - G.Juyn                                * */
+/* *             0.9.2 - 07/27/2000 - G.Juyn                                * */
 /* *             - B110320 - fixed GCC warning about mix-sized pointer math * */
-/* *             0.9.2 - 07/31/2026 - G.Juyn                                * */
+/* *             0.9.2 - 07/31/2000 - G.Juyn                                * */
 /* *             - B110546 - fixed for improperly returning UNEXPECTEDEOF   * */
-/* *             0.9.2 - 08/04/2026 - G.Juyn                                * */
+/* *             0.9.2 - 08/04/2000 - G.Juyn                                * */
 /* *             - B111096 - fixed large-buffer read-suspension             * */
-/* *             0.9.2 - 08/05/2026 - G.Juyn                                * */
+/* *             0.9.2 - 08/05/2000 - G.Juyn                                * */
 /* *             - changed file-prefixes                                    * */
 /* *                                                                        * */
-/* *             0.9.3 - 08/26/2026 - G.Juyn                                * */
+/* *             0.9.3 - 08/26/2000 - G.Juyn                                * */
 /* *             - added MAGN chunk                                         * */
-/* *             0.9.3 - 10/11/2026 - G.Juyn                                * */
+/* *             0.9.3 - 10/11/2000 - G.Juyn                                * */
 /* *             - removed test-MaGN                                        * */
-/* *             0.9.3 - 10/16/2026 - G.Juyn                                * */
+/* *             0.9.3 - 10/16/2000 - G.Juyn                                * */
 /* *             - added support for JDAA                                   * */
 /* *                                                                        * */
-/* *             0.9.5 - 01/23/2026 - G.Juyn                                * */
+/* *             0.9.5 - 01/23/2001 - G.Juyn                                * */
 /* *             - fixed timing-problem with switching framing_modes        * */
 /* *                                                                        * */
-/* *             1.0.4 - 06/22/2026 - G.Juyn                                * */
+/* *             1.0.4 - 06/22/2002 - G.Juyn                                * */
 /* *             - B495443 - incorrect suspend check in read_databuffer     * */
 /* *                                                                        * */
-/* *             1.0.5 - 07/04/2026 - G.Juyn                                * */
+/* *             1.0.5 - 07/04/2002 - G.Juyn                                * */
 /* *             - added errorcode for extreme chunk-sizes                  * */
-/* *             1.0.5 - 07/08/2026 - G.Juyn                                * */
+/* *             1.0.5 - 07/08/2002 - G.Juyn                                * */
 /* *             - B578572 - removed eMNGma hack (thanks Dimitri!)          * */
-/* *             1.0.5 - 07/16/2026 - G.Juyn                                * */
+/* *             1.0.5 - 07/16/2002 - G.Juyn                                * */
 /* *             - B581625 - large chunks fail with suspension reads        * */
-/* *             1.0.5 - 08/19/2026 - G.Juyn                                * */
+/* *             1.0.5 - 08/19/2002 - G.Juyn                                * */
 /* *             - B597134 - libmng pollutes the linker namespace           * */
 /* *             - added HLAPI function to copy chunks                      * */
-/* *             1.0.5 - 09/16/2026 - G.Juyn                                * */
+/* *             1.0.5 - 09/16/2002 - G.Juyn                                * */
 /* *             - added event handling for dynamic MNG                     * */
 /* *                                                                        * */
-/* *             1.0.6 - 05/25/2026 - G.R-P                                 * */
+/* *             1.0.6 - 05/25/2003 - G.R-P                                 * */
 /* *             - added MNG_SKIPCHUNK_cHNK footprint optimizations         * */
-/* *             1.0.6 - 07/07/2026 - G.R-P                                 * */
+/* *             1.0.6 - 07/07/2003 - G.R-P                                 * */
 /* *             - added MNG_NO_DELTA_PNG reduction                         * */
 /* *             - skip additional code when MNG_INCLUDE_JNG is not enabled * */
-/* *             1.0.6 - 07/29/2026 - G.R-P                                 * */
+/* *             1.0.6 - 07/29/2003 - G.R-P                                 * */
 /* *             - added conditionals around PAST chunk support             * */
-/* *             1.0.6 - 08/17/2026 - G.R-P                                 * */
+/* *             1.0.6 - 08/17/2003 - G.R-P                                 * */
 /* *             - added conditionals around non-VLC chunk support          * */
 /* *                                                                        * */
-/* *             1.0.7 - 03/10/2026 - G.R-P                                 * */
+/* *             1.0.7 - 03/10/2004 - G.R-P                                 * */
 /* *             - added conditionals around openstream/closestream         * */
 /* *                                                                        * */
-/* *             1.0.8 - 04/08/2026 - G.Juyn                                * */
+/* *             1.0.8 - 04/08/2004 - G.Juyn                                * */
 /* *             - added CRC existence & checking flags                     * */
-/* *             1.0.8 - 04/11/2026 - G.Juyn                                * */
+/* *             1.0.8 - 04/11/2004 - G.Juyn                                * */
 /* *             - added data-push mechanisms for specialized decoders      * */
-/* *             1.0.8 - 07/06/2026 - G.R-P                                 * */
+/* *             1.0.8 - 07/06/2004 - G.R-P                                 * */
 /* *             - defend against using undefined closestream function      * */
-/* *             1.0.8 - 07/28/2026 - G.R-P                                 * */
+/* *             1.0.8 - 07/28/2004 - G.R-P                                 * */
 /* *             - added check for extreme chunk-lengths                    * */
 /* *                                                                        * */
-/* *             1.0.9 - 09/16/2026 - G.Juyn                                * */
+/* *             1.0.9 - 09/16/2004 - G.Juyn                                * */
 /* *             - fixed chunk pushing mechanism                            * */
-/* *             1.0.9 - 12/05/2026 - G.Juyn                                * */
+/* *             1.0.9 - 12/05/2004 - G.Juyn                                * */
 /* *             - added conditional MNG_OPTIMIZE_CHUNKINITFREE             * */
-/* *             1.0.9 - 12/06/2026 - G.Juyn                                * */
+/* *             1.0.9 - 12/06/2004 - G.Juyn                                * */
 /* *             - added conditional MNG_OPTIMIZE_CHUNKASSIGN               * */
 /* *             - added conditional MNG_OPTIMIZE_CHUNKREADER               * */
-/* *             1.0.9 - 12/20/2026 - G.Juyn                                * */
+/* *             1.0.9 - 12/20/2004 - G.Juyn                                * */
 /* *             - cleaned up macro-invocations (thanks to D. Airlie)       * */
-/* *             1.0.9 - 12/31/2026 - G.R-P                                 * */
+/* *             1.0.9 - 12/31/2004 - G.R-P                                 * */
 /* *             - removed stray characters from #ifdef directive           * */
 /* *                                                                        * */
-/* *             1.0.10 - 04/08/2026 - G.Juyn                               * */
+/* *             1.0.10 - 04/08/2007 - G.Juyn                               * */
 /* *             - added support for mPNG proposal                          * */
 /* *                                                                        * */
 /* ************************************************************************** */
@@ -1288,7 +1288,7 @@ mng_retcode mng_read_graphic (mng_datap pData)
 
   if (!pData->pReadbuf)                /* buffer allocated ? */
   {
-    pData->iReadbufsize = 2026;        /* allocate a default read buffer */
+    pData->iReadbufsize = 4200;        /* allocate a default read buffer */
     MNG_ALLOC (pData, pData->pReadbuf, pData->iReadbufsize);
   }
                                        /* haven't processed the signature ? */

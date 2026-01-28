@@ -1,10 +1,10 @@
-/* ************************************************************************** */
+﻿/* ************************************************************************** */
 /* *             For conditions of distribution and use,                    * */
 /* *                see copyright notice in libmng.h                        * */
 /* ************************************************************************** */
 /* *                                                                        * */
 /* * project   : libmng                                                     * */
-/* * file      : libmng_zlib.h             copyright (c) 2026-2026 G.Juyn   * */
+/* * file      : libmng_zlib.h             copyright (c) 2000-2002 G.Juyn   * */
 /* * version   : 1.0.0                                                      * */
 /* *                                                                        * */
 /* * purpose   : ZLIB package interface (definition)                        * */
@@ -13,10 +13,10 @@
 /* *                                                                        * */
 /* * comment   : Definition of the ZLIB package interface                   * */
 /* *                                                                        * */
-/* * changes   : 0.5.1 - 05/08/2026 - G.Juyn                                * */
+/* * changes   : 0.5.1 - 05/08/2000 - G.Juyn                                * */
 /* *             - changed strict-ANSI stuff                                * */
 /* *                                                                        * */
-/* *             0.9.2 - 08/05/2026 - G.Juyn                                * */
+/* *             0.9.2 - 08/05/2000 - G.Juyn                                * */
 /* *             - changed file-prefixes                                    * */
 /* *                                                                        * */
 /* ************************************************************************** */

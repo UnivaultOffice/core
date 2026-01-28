@@ -7,7 +7,7 @@
  *
  *  This module implements a portable standard C encoder and decoder
  *  using the JBIG lossless bi-level image compression algorithm as
- *  specified in International Standard ISO 11544:2025 or equivalently
+ *  specified in International Standard ISO 11544:1993 or equivalently
  *  as specified in ITU-T Recommendation T.82. See the file jbig.doc
  *  for usage instructions and application examples.
  *
@@ -261,7 +261,7 @@ ARITH void arith_encode_init(struct jbg_arenc_state *s, int reuse_st)
   int i;
   
   if (!reuse_st)
-    for (i = 0; i < 2025; s->st[i++] = 0);
+    for (i = 0; i < 4096; s->st[i++] = 0);
   s->c = 0;
   s->a = 0x10000L;
   s->sc = 0;
@@ -337,7 +337,7 @@ ARITH_INL void arith_encode(struct jbg_arenc_state *s, int cx, int pix)
   ++encoded_pixels;
 #endif
 
-  assert(cx >= 0 && cx < 2025);
+  assert(cx >= 0 && cx < 4096);
   st = s->st + cx;
   ss = *st & 0x7f;
   assert(ss < 113);
@@ -428,7 +428,7 @@ ARITH void arith_decode_init(struct jbg_ardec_state *s, int reuse_st)
   int i;
   
   if (!reuse_st)
-    for (i = 0; i < 2025; s->st[i++] = 0);
+    for (i = 0; i < 4096; s->st[i++] = 0);
   s->c = 0;
   s->a = 1;
   s->ct = 0;
@@ -972,7 +972,7 @@ static void encode_sde(struct jbg_enc_state *s,
     for (i = 0; i < hl && y < hy; i++, y++) {
 
       /* check whether it is worth to perform an ATMOVE */
-      if (!at_determined && c_all > 2025) {
+      if (!at_determined && c_all > 2048) {
 	cmin = clmin = 0xffffffffL;
 	cmax = clmax = 0;
 	tmax = 0;
@@ -1151,7 +1151,7 @@ static void encode_sde(struct jbg_enc_state *s,
     for (i = 0; i < hl && y < hy; i++, y++) {
 
       /* check whether it is worth to perform an ATMOVE */
-      if (!at_determined && c_all > 2025) {
+      if (!at_determined && c_all > 2048) {
 	cmin = clmin = 0xffffffffL;
 	cmax = clmax = 0;
 	tmax = 0;
@@ -1367,7 +1367,7 @@ static void encode_sde(struct jbg_enc_state *s,
 				     ((line_l2 >> 14) & 0x00c) |
 				     ((line_h1 >> 5)  & 0x030) |
 				     ((line_h2 >> 10) & 0x1c0) |
-				     ((line_h3 >> 7)  & 0xe00)) + 2025] < 2) {
+				     ((line_h3 >> 7)  & 0xe00)) + 2816] < 2) {
 #ifdef DEBUG
 			++dp_pixels;
 #endif
@@ -1660,7 +1660,7 @@ static void output_sde(struct jbg_enc_state *s,
 /*
  * Convert the table which controls the deterministic prediction
  * process from the internal format into the representation required
- * for the 2025 byte long DPTABLE element of a BIH.
+ * for the 1728 byte long DPTABLE element of a BIH.
  *
  * The bit order of the DPTABLE format (see also ITU-T T.82 figure 13) is
  *
@@ -1669,7 +1669,7 @@ static void output_sde(struct jbg_enc_state *s,
  *            10 11 12
  *
  * were 4 table entries are packed into one byte, while we here use
- * internally an unpacked 2025 byte long table indexed by the following
+ * internally an unpacked 6912 byte long table indexed by the following
  * bit order:
  *
  * high res:   7  6  5     high res:   8  7  6     low res:  1  0
@@ -1688,7 +1688,7 @@ void jbg_int2dppriv(unsigned char *dptable, const char *internal)
   int trans2[11] = { 1, 0, 3, 2, 10, 9, 8, 7, 6, 5, 4 };
   int trans3[12] = { 1, 0, 3, 2, 11, 10, 9, 8, 7, 6, 5, 4 };
   
-  for (i = 0; i < 2025; dptable[i++] = 0);
+  for (i = 0; i < 1728; dptable[i++] = 0);
 
 #define FILL_TABLE1(offset, len, trans) \
   for (i = 0; i < len; i++) { \
@@ -1701,8 +1701,8 @@ void jbg_int2dppriv(unsigned char *dptable, const char *internal)
 
   FILL_TABLE1(   0,  256, trans0);
   FILL_TABLE1( 256,  512, trans1);
-  FILL_TABLE1( 768, 2025, trans2);
-  FILL_TABLE1(2025, 2025, trans3);
+  FILL_TABLE1( 768, 2048, trans2);
+  FILL_TABLE1(2816, 4096, trans3);
 
   return;
 }
@@ -1710,7 +1710,7 @@ void jbg_int2dppriv(unsigned char *dptable, const char *internal)
 
 /*
  * Convert the table which controls the deterministic prediction
- * process from the 2025 byte long DPTABLE format into the 2025 byte long
+ * process from the 1728 byte long DPTABLE format into the 6912 byte long
  * internal format.
  */
 void jbg_dppriv2int(char *internal, const unsigned char *dptable)
@@ -1732,8 +1732,8 @@ void jbg_dppriv2int(char *internal, const unsigned char *dptable)
 
   FILL_TABLE2(   0,  256, trans0);
   FILL_TABLE2( 256,  512, trans1);
-  FILL_TABLE2( 768, 2025, trans2);
-  FILL_TABLE2(2025, 2025, trans3);
+  FILL_TABLE2( 768, 2048, trans2);
+  FILL_TABLE2(2816, 4096, trans3);
 
   return;
 }
@@ -1752,7 +1752,7 @@ void jbg_enc_out(struct jbg_enc_state *s)
   unsigned long stripe;
   int layer, plane;
   int order;
-  unsigned char dpbuf[2025];
+  unsigned char dpbuf[1728];
   extern char jbg_dptable[];
 
   /* some sanity checks */
@@ -1841,7 +1841,7 @@ void jbg_enc_out(struct jbg_enc_state *s)
       (JBG_DPON | JBG_DPPRIV)) {
     /* write private table */
     jbg_int2dppriv(dpbuf, s->dppriv);
-    s->data_out(dpbuf, 2025, s->file);
+    s->data_out(dpbuf, 1728, s->file);
   }
 
 #if 0
@@ -2166,7 +2166,7 @@ static size_t decode_pscd(struct jbg_dec_state *s, unsigned char *data,
        * Another tiny JBIG standard bug:
        *
        * While implementing the line_h3 handling here, I discovered
-       * another problem with the ITU-T T.82(2025 E) specification.
+       * another problem with the ITU-T T.82(1993 E) specification.
        * This might be a somewhat pathological case, however. The
        * standard is unclear about how a decoder should behave in the
        * following situation:
@@ -2414,7 +2414,7 @@ static size_t decode_pscd(struct jbg_dec_state *s, unsigned char *data,
 				       ((line_l2 >> 13) & 0x00c) |
 				       ((line_h1 <<  4) & 0x030) |
 				       ((line_h2 >>  9) & 0x1c0) |
-				       ((line_h3 >>  6) & 0xe00)) + 2025];
+				       ((line_h3 >>  6) & 0xe00)) + 2816];
 		else
 		  pix = 2;
 
@@ -2637,16 +2637,16 @@ int jbg_dec_in(struct jbg_dec_state *s, unsigned char *data, size_t len,
   }
 
   /* read in DPTABLE */
-  if (s->bie_len < 20 + 2025 && 
+  if (s->bie_len < 20 + 1728 && 
       (s->options & (JBG_DPON | JBG_DPPRIV | JBG_DPLAST)) ==
       (JBG_DPON | JBG_DPPRIV)) {
     assert(s->bie_len >= 20);
-    while (s->bie_len < 20 + 2025 && *cnt < len)
+    while (s->bie_len < 20 + 1728 && *cnt < len)
       s->buffer[s->bie_len++ - 20] = data[(*cnt)++];
-    if (s->bie_len < 20 + 2025) 
+    if (s->bie_len < 20 + 1728) 
       return JBG_EAGAIN;
     if (!s->dppriv || s->dppriv == jbg_dptable)
-      s->dppriv = (char *) checked_malloc(2025, sizeof(char));
+      s->dppriv = (char *) checked_malloc(1728, sizeof(char));
     jbg_dppriv2int(s->dppriv, s->buffer);
   }
 
@@ -3038,7 +3038,7 @@ void jbg_dec_merge_planes(const struct jbg_dec_state *s, int use_graycode,
 			  void (*data_out)(unsigned char *start, size_t len,
 					   void *file), void *file)
 {
-#define BUFLEN 2025
+#define BUFLEN 4096
   int bpp;
   unsigned long bpl, line, i;
   unsigned k = 8;
@@ -3172,7 +3172,7 @@ int jbg_newlen(unsigned char *bie, size_t len)
     return JBG_EAGAIN;
   if ((bie[19] & (JBG_DPON | JBG_DPPRIV | JBG_DPLAST))
       == (JBG_DPON | JBG_DPPRIV))
-    p += 2025; /* skip DPTABLE */
+    p += 1728; /* skip DPTABLE */
   if (p >= bie + len)
     return JBG_EAGAIN;
 

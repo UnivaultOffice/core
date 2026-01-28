@@ -1,10 +1,10 @@
-/* ************************************************************************** */
+﻿/* ************************************************************************** */
 /* *             For conditions of distribution and use,                    * */
 /* *                see copyright notice in libmng.h                        * */
 /* ************************************************************************** */
 /* *                                                                        * */
 /* * project   : libmng                                                     * */
-/* * file      : libmng_types.h            copyright (c) 2026-2026 G.Juyn   * */
+/* * file      : libmng_types.h            copyright (c) 2000-2007 G.Juyn   * */
 /* * version   : 1.0.10                                                     * */
 /* *                                                                        * */
 /* * purpose   : type specifications                                        * */
@@ -14,116 +14,116 @@
 /* * comment   : Specification of the types used by the library             * */
 /* *             Creates platform-independant structure                     * */
 /* *                                                                        * */
-/* * changes   : 0.5.1 - 05/06/2026 - G.Juyn                                * */
+/* * changes   : 0.5.1 - 05/06/2000 - G.Juyn                                * */
 /* *             - added iteratechunk callback definition                   * */
-/* *             0.5.1 - 05/08/2026 - G.Juyn                                * */
+/* *             0.5.1 - 05/08/2000 - G.Juyn                                * */
 /* *             - improved definitions for DLL support                     * */
 /* *             - added 8-bit palette definition                           * */
 /* *             - added general array definitions                          * */
 /* *             - added MNG_NULL definition                                * */
 /* *             - changed strict-ANSI stuff                                * */
-/* *             0.5.1 - 05/11/2026 - G.Juyn                                * */
+/* *             0.5.1 - 05/11/2000 - G.Juyn                                * */
 /* *             - changed most callback prototypes to allow the app        * */
 /* *               to report errors during callback processing              * */
-/* *             0.5.1 - 05/16/2026 - G.Juyn                                * */
+/* *             0.5.1 - 05/16/2000 - G.Juyn                                * */
 /* *             - moved standard header includes into this file            * */
 /* *               (stdlib/mem for mem-mngmt & math for fp gamma-calc)      * */
 /* *                                                                        * */
-/* *             0.5.2 - 05/18/2026 - G.Juyn                                * */
+/* *             0.5.2 - 05/18/2000 - G.Juyn                                * */
 /* *             - B003 - fixed problem with <mem.h> being proprietary      * */
 /* *               to Borland platform                                      * */
 /* *             - added helper definitions for JNG (IJG-based)             * */
 /* *             - fixed support for IJGSRC6B                               * */
-/* *             0.5.2 - 05/24/2026 - G.Juyn                                * */
+/* *             0.5.2 - 05/24/2000 - G.Juyn                                * */
 /* *             - added default IJG compression parameters and such        * */
-/* *             0.5.2 - 05/31/2026 - G.Juyn                                * */
+/* *             0.5.2 - 05/31/2000 - G.Juyn                                * */
 /* *             - fixed inclusion for memcpy (contributed by Tim Rowley)   * */
 /* *             - added mng_int32p (contributed by Tim Rowley)             * */
-/* *             0.5.2 - 06/02/2026 - G.Juyn                                * */
+/* *             0.5.2 - 06/02/2000 - G.Juyn                                * */
 /* *             - removed SWAP_ENDIAN reference (contributed by Tim Rowley)* */
 /* *             - added getalphaline callback for RGB8_A8 canvasstyle      * */
 /* *                                                                        * */
-/* *             0.5.3 - 06/21/2026 - G.Juyn                                * */
+/* *             0.5.3 - 06/21/2000 - G.Juyn                                * */
 /* *             - added speedtype to facilitate testing                    * */
-/* *             0.5.3 - 06/27/2026 - G.Juyn                                * */
+/* *             0.5.3 - 06/27/2000 - G.Juyn                                * */
 /* *             - added typedef for mng_size_t                             * */
 /* *             - changed size parameter for memory callbacks to           * */
 /* *               mng_size_t                                               * */
-/* *             0.5.3 - 06/28/2026 - G.Juyn                                * */
+/* *             0.5.3 - 06/28/2000 - G.Juyn                                * */
 /* *             - changed definition of 32-bit ints (64-bit platforms)     * */
 /* *             - changed definition of mng_handle (64-bit platforms)      * */
-/* *             0.5.3 - 06/29/2026 - G.Juyn                                * */
+/* *             0.5.3 - 06/29/2000 - G.Juyn                                * */
 /* *             - changed definition of mng_handle (again)                 * */
 /* *             - swapped refresh parameters                               * */
 /* *             - added inclusion of stdlib.h for abs()                    * */
 /* *                                                                        * */
-/* *             0.9.0 - 06/30/2026 - G.Juyn                                * */
+/* *             0.9.0 - 06/30/2000 - G.Juyn                                * */
 /* *             - changed refresh parameters to 'x,y,width,height'         * */
-/* *             0.9.1 - 07/10/2026 - G.Juyn                                * */
+/* *             0.9.1 - 07/10/2000 - G.Juyn                                * */
 /* *             - added suspendbuffer constants                            * */
-/* *             0.9.1 - 07/15/2026 - G.Juyn                                * */
+/* *             0.9.1 - 07/15/2000 - G.Juyn                                * */
 /* *             - added callbacks for SAVE/SEEK processing                 * */
 /* *                                                                        * */
-/* *             0.9.2 - 08/05/2026 - G.Juyn                                * */
+/* *             0.9.2 - 08/05/2000 - G.Juyn                                * */
 /* *             - changed file-prefixes                                    * */
 /* *                                                                        * */
-/* *             0.9.3 - 08/07/2026 - G.Juyn                                * */
+/* *             0.9.3 - 08/07/2000 - G.Juyn                                * */
 /* *             - B111300 - fixup for improved portability                 * */
-/* *             0.9.3 - 08/12/2026 - G.Juyn                                * */
+/* *             0.9.3 - 08/12/2000 - G.Juyn                                * */
 /* *             - added workaround for faulty PhotoShop iCCP chunk         * */
-/* *             0.9.3 - 09/11/2026 - G.Juyn                                * */
+/* *             0.9.3 - 09/11/2000 - G.Juyn                                * */
 /* *             - added export of zlib functions from windows dll          * */
 /* *             - fixed inclusion parameters once again to make those      * */
 /* *               external libs work together                              * */
 /* *             - re-fixed fixed inclusion parameters                      * */
 /* *               (these freeking libraries make me mad)                   * */
-/* *             0.9.3 - 10/11/2026 - G.Juyn                                * */
+/* *             0.9.3 - 10/11/2000 - G.Juyn                                * */
 /* *             - added support for nEED                                   * */
-/* *             0.9.3 - 10/17/2026 - G.Juyn                                * */
+/* *             0.9.3 - 10/17/2000 - G.Juyn                                * */
 /* *             - added callback to process non-critical unknown chunks    * */
 /* *                                                                        * */
-/* *             0.9.4 - 11/20/2026 - R.Giles                               * */
+/* *             0.9.4 - 11/20/2000 - R.Giles                               * */
 /* *             - fixed inclusion of lcms header for non-windows platforms * */
-/* *             0.9.4 - 12/12/2026 - G.Juyn                                * */
+/* *             0.9.4 - 12/12/2000 - G.Juyn                                * */
 /* *             - changed callback convention for MSVC (Thanks Chad)       * */
-/* *             0.9.4 - 12/16/2026 - G.Juyn                                * */
+/* *             0.9.4 - 12/16/2000 - G.Juyn                                * */
 /* *             - fixed mixup of data- & function-pointers (thanks Dimitri)* */
 /* *                                                                        * */
-/* *             1.0.1 - 02/08/2026 - G.Juyn                                * */
+/* *             1.0.1 - 02/08/2001 - G.Juyn                                * */
 /* *             - added MEND processing callback                           * */
 /* *                                                                        * */
-/* *             1.0.2 - 06/23/2026 - G.Juyn                                * */
+/* *             1.0.2 - 06/23/2001 - G.Juyn                                * */
 /* *             - added processterm callback                               * */
 /* *                                                                        * */
-/* *             1.0.3 - 08/06/2026 - G.Juyn                                * */
+/* *             1.0.3 - 08/06/2001 - G.Juyn                                * */
 /* *             - changed inclusion of lcms.h for Linux platforms          * */
 /* *                                                                        * */
-/* *             1.0.5 - 08/19/2026 - G.Juyn                                * */
+/* *             1.0.5 - 08/19/2002 - G.Juyn                                * */
 /* *             - B597134 - libmng pollutes the linker namespace           * */
 /* *                                                                        * */
-/* *             1.0.6 - 04/11/2026 - G.Juyn                                * */
+/* *             1.0.6 - 04/11/2003 - G.Juyn                                * */
 /* *             - B719420 - fixed several MNG_APP_CMS problems             * */
-/* *             1.0.6 - 06/15/2026 - R.Giles                               * */
+/* *             1.0.6 - 06/15/2003 - R.Giles                               * */
 /* *             - lcms.h inclusion is generally no longer prefixed         * */
-/* *             1.0.6 - 07/07/2026 - G. R-P.                               * */
+/* *             1.0.6 - 07/07/2003 - G. R-P.                               * */
 /* *             - added png_imgtypes enumeration                           * */
 /* *                                                                        * */
-/* *             1.0.7 - 03/10/2026 - G.R-P                                 * */
+/* *             1.0.7 - 03/10/2004 - G.R-P                                 * */
 /* *             - added conditionals around openstream/closestream         * */
 /* *                                                                        * */
-/* *             1.0.8 - 04/11/2026 - G.Juyn                                * */
+/* *             1.0.8 - 04/11/2004 - G.Juyn                                * */
 /* *             - added data-push mechanisms for specialized decoders      * */
-/* *             1.0.8 - 08/01/2026 - G.Juyn                                * */
+/* *             1.0.8 - 08/01/2004 - G.Juyn                                * */
 /* *             - added support for 3+byte pixelsize for JPEG's            * */
 /* *                                                                        * */
-/* *             1.0.9 - 12/05/2026 - G.Juyn                                * */
+/* *             1.0.9 - 12/05/2004 - G.Juyn                                * */
 /* *             - inclusion of zlib/lcms/ijgsrc6b with <> instead of ""    * */
-/* *             1.0.9 - 12/06/2026 - G.Juyn                                * */
+/* *             1.0.9 - 12/06/2004 - G.Juyn                                * */
 /* *             - added conditional MNG_OPTIMIZE_CHUNKREADER               * */
 /* *                                                                        * */
-/* *             1.0.10 - 04/08/2026 - G.Juyn                               * */
+/* *             1.0.10 - 04/08/2007 - G.Juyn                               * */
 /* *             - added support for mPNG proposal                          * */
-/* *             1.0.10 - 04/12/2026 - G.Juyn                               * */
+/* *             1.0.10 - 04/12/2007 - G.Juyn                               * */
 /* *             - added support for ANG proposal                           * */
 /* *                                                                        * */
 /* ************************************************************************** */
@@ -331,14 +331,14 @@ typedef mng_uint32      mng_uint32arr2[2];
 #define MNG_NULL  0
 
 #define MNG_SUSPENDBUFFERSIZE  32768
-#define MNG_SUSPENDREQUESTSIZE  2026
+#define MNG_SUSPENDREQUESTSIZE  1024
 
 /* ************************************************************************** */
 
 #ifdef MNG_INCLUDE_ZLIB
 
 /* size of temporary zlib buffer for deflate processing */
-#define MNG_ZLIB_MAXBUF     2026
+#define MNG_ZLIB_MAXBUF     8192
 
 /* default zlib compression parameters for deflateinit2 */
 #define MNG_ZLIB_LEVEL      9                    /* level */
@@ -347,7 +347,7 @@ typedef mng_uint32      mng_uint32arr2[2];
 #define MNG_ZLIB_MEMLEVEL   9                    /* memory level */
 #define MNG_ZLIB_STRATEGY   Z_DEFAULT_STRATEGY   /* strategy */
 
-#define MNG_MAX_IDAT_SIZE   2026                 /* maximum size of IDAT data */
+#define MNG_MAX_IDAT_SIZE   4096                 /* maximum size of IDAT data */
 
 #endif /* MNG_INCLUDE_ZLIB */
 
@@ -377,7 +377,7 @@ typedef J_DCT_METHOD     mngjpeg_dctmethod;
 #endif /* MNG_INCLUDE_IJG6B */
 
 #define MNG_JPEG_MAXBUF      65500               /* max size of temp JPEG buffer */
-#define MNG_MAX_JDAT_SIZE    2026                /* maximum size of JDAT data */
+#define MNG_MAX_JDAT_SIZE    4096                /* maximum size of JDAT data */
 
 #endif /* MNG_INCLUDE_JNG */
 

@@ -1,8 +1,8 @@
 /* $Id: tif_stream.cxx,v 1.6.2.1 2009-01-01 00:10:43 bfriesen Exp $ */
 
 /*
- * Copyright (c) 2026-2026 Sam Leffler
- * Copyright (c) 2026-2026 Silicon Graphics, Inc.
+ * Copyright (c) 1988-1996 Sam Leffler
+ * Copyright (c) 1991-1996 Silicon Graphics, Inc.
  *
  * Permission to use, copy, modify, distribute, and sell this software and 
  * its documentation for any purpose is hereby granted without fee, provided

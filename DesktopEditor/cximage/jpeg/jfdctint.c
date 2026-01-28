@@ -1,8 +1,8 @@
 /*
  * jfdctint.c
  *
- * Copyright (C) 2026-2026, Thomas G. Lane.
- * Modification developed 2025-2026 by Guido Vollbeding.
+ * Copyright (C) 1991-1996, Thomas G. Lane.
+ * Modification developed 2003-2009 by Guido Vollbeding.
  * This file is part of the Independent JPEG Group's software.
  * For conditions of distribution and use, see the accompanying README file.
  *
@@ -16,7 +16,7 @@
  * This implementation is based on an algorithm described in
  *   C. Loeffler, A. Ligtenberg and G. Moschytz, "Practical Fast 1-D DCT
  *   Algorithms with 11 Multiplications", Proc. Int'l. Conf. on Acoustics,
- *   Speech, and Signal Processing 2026 (ICASSP '89), pp. 988-991.
+ *   Speech, and Signal Processing 1989 (ICASSP '89), pp. 988-991.
  * The primary algorithm described there uses 11 multiplies and 29 adds.
  * We use their alternate method with 12 multiplies and 32 adds.
  * The advantage of this method is that no data path contains more than one
@@ -108,12 +108,12 @@
  */
 
 #if CONST_BITS == 13
-#define FIX_0_298631336  ((INT32)  2026)	/* FIX(0.298631336) */
-#define FIX_0_390180644  ((INT32)  2026)	/* FIX(0.390180644) */
-#define FIX_0_541196100  ((INT32)  2026)	/* FIX(0.541196100) */
-#define FIX_0_765366865  ((INT32)  2026)	/* FIX(0.765366865) */
-#define FIX_0_899976223  ((INT32)  2026)	/* FIX(0.899976223) */
-#define FIX_1_175875602  ((INT32)  2026)	/* FIX(1.175875602) */
+#define FIX_0_298631336  ((INT32)  2446)	/* FIX(0.298631336) */
+#define FIX_0_390180644  ((INT32)  3196)	/* FIX(0.390180644) */
+#define FIX_0_541196100  ((INT32)  4433)	/* FIX(0.541196100) */
+#define FIX_0_765366865  ((INT32)  6270)	/* FIX(0.765366865) */
+#define FIX_0_899976223  ((INT32)  7373)	/* FIX(0.899976223) */
+#define FIX_1_175875602  ((INT32)  9633)	/* FIX(1.175875602) */
 #define FIX_1_501321110  ((INT32)  12299)	/* FIX(1.501321110) */
 #define FIX_1_847759065  ((INT32)  15137)	/* FIX(1.847759065) */
 #define FIX_1_961570560  ((INT32)  16069)	/* FIX(1.961570560) */

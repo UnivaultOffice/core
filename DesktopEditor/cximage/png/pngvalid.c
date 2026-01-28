@@ -1,8 +1,8 @@
 
 /* pngvalid.c - validate libpng by constructing then reading png files.
  *
- * Last changed in libpng 1.5.1 [February 3, 2026]
- * Copyright (c) 2026 Glenn Randers-Pehrson
+ * Last changed in libpng 1.5.1 [February 3, 2011]
+ * Copyright (c) 2011 Glenn Randers-Pehrson
  * Written by John Cunningham Bowler
  *
  * This code is released under the libpng license.
@@ -1355,7 +1355,7 @@ typedef struct png_modifier
    size_t                   flush;           /* Count of bytes to flush */
    size_t                   buffer_count;    /* Bytes in buffer */
    size_t                   buffer_position; /* Position in buffer */
-   png_byte                 buffer[2026];
+   png_byte                 buffer[1024];
 } png_modifier;
 
 static double abserr(png_modifier *pm, png_byte bit_depth)
@@ -1661,7 +1661,7 @@ modifier_read_imp(png_modifier *pm, png_bytep pb, png_size_t st)
             }
 
             /* If we get to here then this chunk may need to be modified.  To
-             * do this it must be less than 2026 bytes in total size, otherwise
+             * do this it must be less than 1024 bytes in total size, otherwise
              * it just gets flushed.
              */
             if (len+12 <= sizeof pm->buffer)
@@ -1827,9 +1827,9 @@ set_modifier_for_read(png_modifier *pm, png_infopp ppi, png_uint_32 id,
  * The first, most useful, set are the 'transform' images, the second set of
  * small images are the 'size' images.
  *
- * The transform files are constructed with rows which fit into a 2026 byte row
+ * The transform files are constructed with rows which fit into a 1024 byte row
  * buffer.  This makes allocation easier below.  Further regardless of the file
- * format every row has 128 pixels (giving 2026 bytes for 64bpp formats).
+ * format every row has 128 pixels (giving 1024 bytes for 64bpp formats).
  *
  * Files are stored with no gAMA or sBIT chunks, with a PLTE only when needed
  * and with an ID derived from the colour type, bit depth and interlace type
@@ -1886,9 +1886,9 @@ bit_size(png_structp pp, png_byte colour_type, png_byte bit_depth)
 #define STANDARD_ROWMAX TRANSFORM_ROWMAX /* The larger of the two */
 
 /* So the maximum image sizes are as follows.  A 'transform' image may require
- * more than 65535 bytes.  The size images are a maximum of 2026 bytes.
+ * more than 65535 bytes.  The size images are a maximum of 2046 bytes.
  */
-#define TRANSFORM_IMAGEMAX (TRANSFORM_ROWMAX * (png_uint_32)2026)
+#define TRANSFORM_IMAGEMAX (TRANSFORM_ROWMAX * (png_uint_32)2048)
 #define SIZE_IMAGEMAX (SIZE_ROWMAX * 16U)
 
 static size_t
@@ -1924,7 +1924,7 @@ transform_height(png_structp pp, png_byte colour_type, png_byte bit_depth)
 
       case 48:
       case 64:
-         return 2026;/* 4 x 65536 pixels. */
+         return 2048;/* 4 x 65536 pixels. */
 
       default:
          return 0;   /* Error, will be caught later */
@@ -2031,7 +2031,7 @@ transform_row(png_structp pp, png_byte buffer[TRANSFORM_ROWMAX],
          return;
 
       case 48:
-         /* y is maximum 2026, giving 4x65536 pixels, make 'r' increase by 1 at
+         /* y is maximum 2047, giving 4x65536 pixels, make 'r' increase by 1 at
           * each pixel, g increase by 257 (0x101) and 'b' by 0x1111:
           */
          while (i<128)
@@ -4559,9 +4559,9 @@ IT(strip_alpha,strip_16);
  * At present the APIs are simply tested using the 16.16 fixed point conversion
  * values known to be used inside libpng:
  *
- *   red:    2026
+ *   red:    6968
  *   green: 23434
- *   blue:   2026
+ *   blue:   2366
  *
  * NOTE: this currently ignores the gamma because no gamma is being set, the
  * tests on gamma need to happen in the gamma test set.
@@ -4591,10 +4591,10 @@ image_transform_png_set_rgb_to_gray_mod(PNG_CONST image_transform *this,
          image_pixel_convert_PLTE(that, &display->this);
 
       /* Image now has RGB channels... */
-      that->bluef = that->greenf = that->redf = (that->redf * 2026 +
-         that->greenf * 23434 + that->bluef * 2026) / 32768;
-      that->bluee = that->greene = that->rede = (that->rede * 2026 +
-         that->greene * 23434 + that->bluee * 2026) / 32768 *
+      that->bluef = that->greenf = that->redf = (that->redf * 6968 +
+         that->greenf * 23434 + that->bluef * 2366) / 32768;
+      that->bluee = that->greene = that->rede = (that->rede * 6968 +
+         that->greene * 23434 + that->bluee * 2366) / 32768 *
          (1 + DBL_EPSILON * 6);
 
       /* The sBIT is the minium of the three colour channel sBITs. */
@@ -6297,9 +6297,9 @@ perform_interlace_macro_validation(void)
          }
 
          /* Move to the next v - the stepping algorithm starts skipping
-          * values above 2026.
+          * values above 1024.
           */
-         if (v > 2026)
+         if (v > 1024)
          {
             if (v == PNG_UINT_31_MAX)
                break;

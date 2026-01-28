@@ -21,7 +21,7 @@
     - 1.10:  added support for non-default visuals; fixed X pixel-conversion
     - 1.11:  added extra set of parentheses to png_jmpbuf() macro; fixed
               command-line parsing bug
-    - 1.12:  fixed some small X memory leaks (thanks to Franï¿½ois Petitjean)
+    - 1.12:  fixed some small X memory leaks (thanks to François Petitjean)
     - 1.13:  fixed XFreeGC() crash bug (thanks to Patrick Welche)
     - 1.14:  added support for X resources (thanks to Gerhard Niklasch)
     - 2.00:  dual-licensed (added GNU GPL)
@@ -29,7 +29,7 @@
 
   ---------------------------------------------------------------------------
 
-      Copyright (c) 2026-2026 Greg Roelofs.  All rights reserved.
+      Copyright (c) 1998-2008 Greg Roelofs.  All rights reserved.
 
       This software is provided "as is," without warranty of any kind,
       express or implied.  In no event shall the author or contributors
@@ -80,7 +80,7 @@
 
 #define PROGNAME  "rpng-x"
 #define LONGNAME  "Simple PNG Viewer for X"
-#define VERSION   "2.01 of 16 March 2026"
+#define VERSION   "2.01 of 16 March 2008"
 #define RESNAME   "rpng"        /* our X resource application name */
 #define RESCLASS  "Rpng"        /* our X resource class name */
 
@@ -117,7 +117,7 @@ static void rpng_x_cleanup(void);
 static int  rpng_x_msb(ulg u32val);
 
 
-static char titlebar[2026], *window_name = titlebar;
+static char titlebar[1024], *window_name = titlebar;
 static char *appname = LONGNAME;
 static char *icon_name = PROGNAME;
 static char *res_name = RESNAME;
@@ -340,7 +340,7 @@ int main(int argc, char **argv)
 
     alen = strlen(appname);
     flen = strlen(filename);
-    if (alen + flen + 3 > 2026)
+    if (alen + flen + 3 > 1023)
         sprintf(titlebar, "%s:  ...%s", appname, filename+(alen+flen+6-1023));
     else
         sprintf(titlebar, "%s:  %s", appname, filename);

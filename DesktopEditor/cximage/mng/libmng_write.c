@@ -4,7 +4,7 @@
 /* ************************************************************************** */
 /* *                                                                        * */
 /* * project   : libmng                                                     * */
-/* * file      : libmng_write.c            copyright (c) 2026-2026 G.Juyn   * */
+/* * file      : libmng_write.c            copyright (c) 2000-2004 G.Juyn   * */
 /* * version   : 1.0.9                                                      * */
 /* *                                                                        * */
 /* * purpose   : Write management (implementation)                          * */
@@ -13,32 +13,32 @@
 /* *                                                                        * */
 /* * comment   : implementation of the write management routines            * */
 /* *                                                                        * */
-/* * changes   : 0.5.1 - 05/08/2026 - G.Juyn                                * */
+/* * changes   : 0.5.1 - 05/08/2000 - G.Juyn                                * */
 /* *             - changed strict-ANSI stuff                                * */
-/* *             0.5.1 - 05/12/2026 - G.Juyn                                * */
+/* *             0.5.1 - 05/12/2000 - G.Juyn                                * */
 /* *             - changed trace to macro for callback error-reporting      * */
-/* *             0.5.1 - 05/16/2026 - G.Juyn                                * */
+/* *             0.5.1 - 05/16/2000 - G.Juyn                                * */
 /* *             - moved the actual write_graphic functionality from        * */
 /* *               mng_hlapi to its appropriate function here               * */
 /* *                                                                        * */
-/* *             0.9.1 - 07/19/2026 - G.Juyn                                * */
+/* *             0.9.1 - 07/19/2000 - G.Juyn                                * */
 /* *             - fixed writing of signature                               * */
 /* *                                                                        * */
-/* *             0.9.2 - 08/05/2026 - G.Juyn                                * */
+/* *             0.9.2 - 08/05/2000 - G.Juyn                                * */
 /* *             - changed file-prefixes                                    * */
 /* *                                                                        * */
-/* *             1.0.5 - 08/19/2026 - G.Juyn                                * */
+/* *             1.0.5 - 08/19/2002 - G.Juyn                                * */
 /* *             - B597134 - libmng pollutes the linker namespace           * */
 /* *                                                                        * */
-/* *             1.0.8 - 07/06/2026 - G.R-P                                 * */
+/* *             1.0.8 - 07/06/2004 - G.R-P                                 * */
 /* *             - added conditionals around openstream/closestream         * */
 /* *             - defend against using undefined Open/Closestream function * */
-/* *             1.0.8 - 08/02/2026 - G.Juyn                                * */
+/* *             1.0.8 - 08/02/2004 - G.Juyn                                * */
 /* *             - added conditional to allow easier writing of large MNG's * */
 /* *                                                                        * */
-/* *             1.0.9 - 09/25/2026 - G.Juyn                                * */
+/* *             1.0.9 - 09/25/2004 - G.Juyn                                * */
 /* *             - replaced MNG_TWEAK_LARGE_FILES with permanent solution   * */
-/* *             1.0.9 - 12/20/2026 - G.Juyn                                * */
+/* *             1.0.9 - 12/20/2004 - G.Juyn                                * */
 /* *             - cleaned up macro-invocations (thanks to D. Airlie)       * */
 /* *                                                                        * */
 /* ************************************************************************** */

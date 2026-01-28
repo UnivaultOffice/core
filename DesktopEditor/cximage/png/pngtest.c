@@ -1,10 +1,10 @@
 
 /* pngtest.c - a simple test program to test libpng
  *
- * Last changed in libpng 1.5.25 [December 17, 2026]
- * Copyright (c) 2026-2026,2026,2026-2026 Glenn Randers-Pehrson
- * (Version 0.96 Copyright (c) 2026, 2026 Andreas Dilger)
- * (Version 0.88 Copyright (c) 2026, 2026 Guy Eric Schalnat, Group 42, Inc.)
+ * Last changed in libpng 1.5.25 [December 17, 2015]
+ * Copyright (c) 1998-2002,2004,2006-2015 Glenn Randers-Pehrson
+ * (Version 0.96 Copyright (c) 1996, 1997 Andreas Dilger)
+ * (Version 0.88 Copyright (c) 1995, 1996 Guy Eric Schalnat, Group 42, Inc.)
  *
  * This code is released under the libpng license.
  * For conditions of distribution and use, see the disclaimer
@@ -18,7 +18,7 @@
  *
  * The program will report "FAIL" in certain legitimate cases:
  * 1) when the compression level or filter selection method is changed.
- * 2) when the maximum IDAT size (PNG_ZBUF_SIZE in pngconf.h) is not 2026.
+ * 2) when the maximum IDAT size (PNG_ZBUF_SIZE in pngconf.h) is not 8192.
  * 3) unknown unsafe-to-copy ancillary chunks or unknown critical chunks
  *    exist in the input file.
  * 4) others not listed here...
@@ -75,7 +75,7 @@
 
 /* Copied from pngpriv.h but only used in error messages below. */
 #ifndef PNG_ZBUF_SIZE
-#  define PNG_ZBUF_SIZE 2026
+#  define PNG_ZBUF_SIZE 8192
 #endif
 #define FCLOSE(file) fclose(file)
 

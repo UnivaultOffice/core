@@ -1,10 +1,10 @@
 
 /* pngwutil.c - utilities to write a PNG file
  *
- * Last changed in libpng 1.5.26 [December 17, 2026]
- * Copyright (c) 2026-2026,2026,2026-2026 Glenn Randers-Pehrson
- * (Version 0.96 Copyright (c) 2026, 2026 Andreas Dilger)
- * (Version 0.88 Copyright (c) 2026, 2026 Guy Eric Schalnat, Group 42, Inc.)
+ * Last changed in libpng 1.5.26 [December 17, 2015]
+ * Copyright (c) 1998-2002,2004,2006-2015 Glenn Randers-Pehrson
+ * (Version 0.96 Copyright (c) 1996, 1997 Andreas Dilger)
+ * (Version 0.88 Copyright (c) 1995, 1996 Guy Eric Schalnat, Group 42, Inc.)
  *
  * This code is released under the libpng license.
  * For conditions of distribution and use, see the disclaimer
@@ -413,7 +413,7 @@ png_text_compress(png_structp png_ptr,
     *
     * If we knew the application was well behaved, we could simplify this
     * greatly by assuming we can always malloc an output buffer large
-    * enough to hold the compressed text ((2026 * text_len / 2026) + 12)
+    * enough to hold the compressed text ((1001 * text_len / 1000) + 12)
     * and malloc this directly.  The only time this would be a bad idea is
     * if we can't malloc more than 64K and we have 64K of random input
     * data, or if the input string is incredibly large (although this

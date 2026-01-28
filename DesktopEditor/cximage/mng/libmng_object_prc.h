@@ -1,10 +1,10 @@
-/* ************************************************************************** */
+﻿/* ************************************************************************** */
 /* *             For conditions of distribution and use,                    * */
 /* *                see copyright notice in libmng.h                        * */
 /* ************************************************************************** */
 /* *                                                                        * */
 /* * project   : libmng                                                     * */
-/* * file      : libmng_object_prc.h       copyright (c) 2026-2026 G.Juyn   * */
+/* * file      : libmng_object_prc.h       copyright (c) 2000-2007 G.Juyn   * */
 /* * version   : 1.0.10                                                     * */
 /* *                                                                        * */
 /* * purpose   : Object processing routines (definition)                    * */
@@ -13,58 +13,58 @@
 /* *                                                                        * */
 /* * comment   : Definition of the internal object processing routines      * */
 /* *                                                                        * */
-/* * changes   : 0.5.1 - 05/08/2026 - G.Juyn                                * */
+/* * changes   : 0.5.1 - 05/08/2000 - G.Juyn                                * */
 /* *             - changed strict-ANSI stuff                                * */
 /* *                                                                        * */
-/* *             0.5.2 - 05/24/2026 - G.Juyn                                * */
+/* *             0.5.2 - 05/24/2000 - G.Juyn                                * */
 /* *             - added support for global color-chunks in animation       * */
 /* *             - added support for global PLTE,tRNS,bKGD in animation     * */
 /* *             - added SAVE & SEEK animation objects                      * */
-/* *             0.5.2 - 05/29/2026 - G.Juyn                                * */
+/* *             0.5.2 - 05/29/2000 - G.Juyn                                * */
 /* *             - changed ani_object create routines not to return the     * */
 /* *               created object (wasn't necessary)                        * */
 /* *             - added compression/filter/interlace fields to             * */
 /* *               object-buffer for delta-image processing                 * */
 /* *                                                                        * */
-/* *             0.5.3 - 06/22/2026 - G.Juyn                                * */
+/* *             0.5.3 - 06/22/2000 - G.Juyn                                * */
 /* *             - added support for PPLT chunk                             * */
 /* *                                                                        * */
-/* *             0.9.2 - 08/05/2026 - G.Juyn                                * */
+/* *             0.9.2 - 08/05/2000 - G.Juyn                                * */
 /* *             - changed file-prefixes                                    * */
 /* *                                                                        * */
-/* *             0.9.3 - 08/26/2026 - G.Juyn                                * */
+/* *             0.9.3 - 08/26/2000 - G.Juyn                                * */
 /* *             - added MAGN chunk                                         * */
-/* *             0.9.3 - 10/17/2026 - G.Juyn                                * */
+/* *             0.9.3 - 10/17/2000 - G.Juyn                                * */
 /* *             - added routine to discard "invalid" objects               * */
 /* *                                                                        * */
-/* *             1.0.5 - 08/19/2026 - G.Juyn                                * */
+/* *             1.0.5 - 08/19/2002 - G.Juyn                                * */
 /* *             - B597134 - libmng pollutes the linker namespace           * */
-/* *             1.0.5 - 09/13/2026 - G.Juyn                                * */
+/* *             1.0.5 - 09/13/2002 - G.Juyn                                * */
 /* *             - fixed read/write of MAGN chunk                           * */
-/* *             1.0.5 - 09/15/2026 - G.Juyn                                * */
+/* *             1.0.5 - 09/15/2002 - G.Juyn                                * */
 /* *             - added event handling for dynamic MNG                     * */
-/* *             1.0.5 - 09/20/2026 - G.Juyn                                * */
+/* *             1.0.5 - 09/20/2002 - G.Juyn                                * */
 /* *             - added support for PAST                                   * */
-/* *             1.0.5 - 09/23/2026 - G.Juyn                                * */
+/* *             1.0.5 - 09/23/2002 - G.Juyn                                * */
 /* *             - added in-memory color-correction of abstract images      * */
-/* *             1.0.5 - 10/07/2026 - G.Juyn                                * */
+/* *             1.0.5 - 10/07/2002 - G.Juyn                                * */
 /* *             - fixed DISC support                                       * */
 /* *                                                                        * */
-/* *             1.0.6 - 07/07/2026 - G.R-P                                 * */
+/* *             1.0.6 - 07/07/2003 - G.R-P                                 * */
 /* *             - added conditionals around Delta-PNG code                 * */
 /* *             - added SKIPCHUNK feature                                  * */
-/* *             1.0.6 - 07/29/2026 - G.R-P                                 * */
+/* *             1.0.6 - 07/29/2003 - G.R-P                                 * */
 /* *             - added conditionals around PAST chunk support             * */
 /* *                                                                        * */
-/* *             1.0.7 - 03/24/2026 - G.R-P                                 * */
+/* *             1.0.7 - 03/24/2004 - G.R-P                                 * */
 /* *             - added more SKIPCHUNK conditionals                        * */
 /* *                                                                        * */
-/* *             1.0.9 - 12/05/2026 - G.Juyn                                * */
+/* *             1.0.9 - 12/05/2004 - G.Juyn                                * */
 /* *             - added conditional MNG_OPTIMIZE_OBJCLEANUP                * */
 /* *                                                                        * */
-/* *             1.0.10 - 04/08/2026 - G.Juyn                               * */
+/* *             1.0.10 - 04/08/2007 - G.Juyn                               * */
 /* *             - added support for mPNG proposal                          * */
-/* *             1.0.10 - 04/12/2026 - G.Juyn                               * */
+/* *             1.0.10 - 04/12/2007 - G.Juyn                               * */
 /* *             - added support for ANG proposal                           * */
 /* *                                                                        * */
 /* ************************************************************************** */

@@ -18,7 +18,7 @@
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
 #ifdef _WIN32
 LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
-#pragma code_page(2026)
+#pragma code_page(1252)
 #endif //_WIN32
 
 #ifdef APSTUDIO_INVOKED
@@ -109,9 +109,9 @@ STYLE DS_MODALFRAME | WS_POPUP
 FONT 8, "MS Sans Serif"
 BEGIN
     DEFPUSHBUTTON   "OK",IDOK,68,67,50,14
-    CTEXT           "VisualPng 1.0  -  June 2026",IDC_STATIC,49,14,88,8
+    CTEXT           "VisualPng 1.0  -  June 2000",IDC_STATIC,49,14,88,8
     LTEXT           "a PNG image viewer",IDC_STATIC,60,30,66,8
-    LTEXT           "(c) Willem van Schaik, 2026",IDC_STATIC,48,52,90,8
+    LTEXT           "(c) Willem van Schaik, 2000",IDC_STATIC,48,52,90,8
     LTEXT           "to demonstrate the use of libpng in Visual C",
                     IDC_STATIC,25,38,136,8
 END

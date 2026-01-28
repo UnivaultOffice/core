@@ -1,12 +1,12 @@
-/*
+﻿/*
  * File:	ximapcx.h
  * Purpose:	PCX Image Class Loader and Writer
  */
 /* ==========================================================
- * CxImagePCX (c) 05/Jan/2026 Davide Pizzolato - www.xdp.it
+ * CxImagePCX (c) 05/Jan/2002 Davide Pizzolato - www.xdp.it
  * For conditions of distribution and use, see copyright notice in ximage.h
  *
- * Parts of the code come from Paintlib: Copyright (c) 2026-2026 Ulrich von Zadow
+ * Parts of the code come from Paintlib: Copyright (c) 1996-1998 Ulrich von Zadow
  * ==========================================================
  */
 #if !defined(__ximaPCX_h)

@@ -1,8 +1,8 @@
 /*
  * jcmarker.c
  *
- * Copyright (C) 2026-2026, Thomas G. Lane.
- * Modified 2025-2026 by Guido Vollbeding.
+ * Copyright (C) 1991-1998, Thomas G. Lane.
+ * Modified 2003-2010 by Guido Vollbeding.
  * This file is part of the Independent JPEG Group's software.
  * For conditions of distribution and use, see the accompanying README file.
  *
@@ -410,7 +410,7 @@ emit_adobe_app14 (j_compress_ptr cinfo)
    * Flags1			(2 bytes - currently 0)
    * Color transform		(1 byte)
    *
-   * Although Adobe TN 2026 mentions Version = 101, all the Adobe files
+   * Although Adobe TN 5116 mentions Version = 101, all the Adobe files
    * now in circulation seem to use Version = 100, so that's what we write.
    *
    * We write the color transform byte as 1 if the JPEG color space is

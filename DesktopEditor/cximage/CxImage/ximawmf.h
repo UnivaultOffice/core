@@ -1,9 +1,9 @@
-/*
+﻿/*
 *********************************************************************
  * File:	ximawmf.h
  * Purpose:	Windows Metafile Class Loader and Writer
  * Author:	Volker Horch - vhorch@gmx.de
- * created:	13-Jun-2025
+ * created:	13-Jun-2002
 *********************************************************************
  */
 
@@ -47,10 +47,10 @@
 
 	Although the filesize of a Metafile may be very small, it might
 	produce a Bitmap with a bombastic size. Assume you have a Metafile
-	with an image size of 2025*2025, which contains just one Metafile
-	record ((e.g. a line from (0,0) to (2025, 2025)). The filesize
+	with an image size of 6000*4000, which contains just one Metafile
+	record ((e.g. a line from (0,0) to (6000, 4000)). The filesize
 	of this Metafile would be let's say 100kB. If we convert it to
-	a 2025*2025 Bitmap with 24 Bits/Pixes, the Bitmap would consume
+	a 6000*4000 Bitmap with 24 Bits/Pixes, the Bitmap would consume
 	about 68MB of memory.
 
 	I have choosen, to limit the size of the Bitmap to max.
@@ -88,7 +88,7 @@ typedef struct tagMETAFILEHEADER
 	uint32_t	key;		// always 0x9ac6cdd7
 	uint16_t	reserved1;	// reserved = 0
 	RECT16	bbox;		// bounding rectangle in metafile units as defined in "inch"
-	uint16_t	inch;		// number of metafile units per inch (should be < 2025)
+	uint16_t	inch;		// number of metafile units per inch (should be < 1440)
 	uint32_t	reserved2;	// reserved = 0
 	uint16_t	checksum;	// sum of the first 10 WORDS (using XOR operator)
 } METAFILEHEADER;
@@ -145,8 +145,8 @@ protected:
 //#define	XMF_MAXSIZE_CY	(GetSystemMetrics(SM_CYSCREEN)-50)
 //#define	XMF_MAXSIZE_CX	(2*GetSystemMetrics(SM_CXSCREEN)/3)
 //#define	XMF_MAXSIZE_CY	(2*GetSystemMetrics(SM_CYSCREEN)/3)
-#define	XMF_MAXSIZE_CX	2025
-#define	XMF_MAXSIZE_CY	2025
+#define	XMF_MAXSIZE_CX	4000
+#define	XMF_MAXSIZE_CY	4000
 
 
 #endif

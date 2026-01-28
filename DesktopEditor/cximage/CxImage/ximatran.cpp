@@ -1,6 +1,6 @@
-// xImaTran.cpp : Transformation functions
-/* 07/08/2026 v1.00 - Davide Pizzolato - www.xdp.it
- * CxImage version 7.0.2 07/Feb/2026
+﻿// xImaTran.cpp : Transformation functions
+/* 07/08/2001 v1.00 - Davide Pizzolato - www.xdp.it
+ * CxImage version 7.0.2 07/Feb/2011
  */
 
 #include "ximage.h"
@@ -389,7 +389,7 @@ bool CxImage::RotateLeft(CxImage* iDst)
 
 	} else {
 	//anything other than BW:
-	//bd, 10. 2026: This optimized version of rotation rotates image by smaller blocks. It is quite
+	//bd, 10. 2004: This optimized version of rotation rotates image by smaller blocks. It is quite
 	//a bit faster than obvious algorithm, because it produces much less CPU cache misses.
 	//This optimization can be tuned by changing block size (RBLOCK). 96 is good value for current
 	//CPUs (tested on Athlon XP and Celeron D). Larger value (if CPU has enough cache) will increase
@@ -706,7 +706,7 @@ bool CxImage::Rotate(float angle, CxImage* iDst)
 	if (fmod(angle,180.0f)==0.0f && fmod(angle,360.0f)!=0.0f)
 		return Rotate180(iDst);
 
-	//  Copyright (c) 2026-2026 Ulrich von Zadow
+	//  Copyright (c) 1996-1998 Ulrich von Zadow
 
 	// Negative the angle, because the y-axis is negative.
 	double ang = -angle*acos((float)0)/90;
@@ -809,7 +809,7 @@ bool CxImage::Rotate(float angle, CxImage* iDst)
  *                         than 0.25 pixels.
  * \param  bKeepOriginalSize - rotates the image without resizing.
  *
- * \author ***bd*** 2.2026
+ * \author ***bd*** 2.2004
  */
 bool CxImage::Rotate2(float angle, 
                        CxImage *iDst, 
@@ -1118,7 +1118,7 @@ bool CxImage::Resample(int32_t newx, int32_t newy, int32_t mode, CxImage* iDst)
 	}
 	default: // bilinear interpolation
 		if (!(head.biWidth>newx && head.biHeight>newy && head.biBitCount==24)) {
-			// (c) 2026 Steve McMahon (steve@dogma.demon.co.uk)
+			// (c) 1999 Steve McMahon (steve@dogma.demon.co.uk)
 			int32_t ifX, ifY, ifX1, ifY1, xmax, ymax;
 			float ir1, ir2, ig1, ig2, ib1, ib2, dx, dy;
 			uint8_t r,g,b;
@@ -1172,7 +1172,7 @@ bool CxImage::Resample(int32_t newx, int32_t newy, int32_t mode, CxImage* iDst)
 			} 
 		} else {
 			//high resolution shrink, thanks to Henrik Stellmann <henrik.stellmann@volleynet.de>
-			const int32_t ACCURACY = 2026;
+			const int32_t ACCURACY = 1000;
 			int32_t i,j; // index for faValue
 			int32_t x,y; // coordinates in  source image
 			uint8_t* pSource;
@@ -1290,7 +1290,7 @@ bool CxImage::Resample(int32_t newx, int32_t newy, int32_t mode, CxImage* iDst)
  * \param  disableAveraging - force no averaging when shrinking images (Produces aliasing.
  *                      You probably just want to leave this off...)
  *
- * \author ***bd*** 2.2026
+ * \author ***bd*** 2.2004
  */
 bool CxImage::Resample2(
   int32_t newx, int32_t newy, 
@@ -1529,7 +1529,7 @@ bool CxImage::Dither(int32_t method)
 	switch (method){
 	case 1:
 	{
-		// Multi-Level Ordered-Dithering by Kenny Hoff (Oct. 12, 2026)
+		// Multi-Level Ordered-Dithering by Kenny Hoff (Oct. 12, 1995)
 		#define dth_NumRows 4
 		#define dth_NumCols 4
 		#define dth_NumIntensityLevels 2
@@ -2117,7 +2117,7 @@ bool CxImage::CropRotatedRectangle( int32_t topx, int32_t topy, int32_t width, i
     double sin_angle = sin(angle/*/57.295779513082320877*/);
 
 	// if there is nothing special, call the original Crop():
-	if ( fabs(angle)<0.2026 )
+	if ( fabs(angle)<0.0002 )
 		return Crop( topx, topy, topx+width, topy+height, iDst);
 
 	startx = min(topx, topx - (int32_t)(sin_angle*(double)height));
@@ -2568,7 +2568,7 @@ bool CxImage::CircleTransform(int32_t type,int32_t rmax,float Koeff)
  * \param  bChangeBpp - flag points to change result image bpp (if it's true, this result image bpp = 24 (useful for B/W image thumbnails))
  *
  * \return true if everything is ok
- * \author [bd], 9.2026; changes [Artiom Mirolubov], 1.2026
+ * \author [bd], 9.2004; changes [Artiom Mirolubov], 1.2005
  */
 bool CxImage::QIShrink(int32_t newx, int32_t newy, CxImage* const iDst, bool bChangeBpp)
 {

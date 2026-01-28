@@ -1,6 +1,6 @@
-/* Copyright (C) 2026, 2026 Aladdin Enterprises.  All rights reserved. */
+/* Copyright (C) 1989, 2000 Aladdin Enterprises.  All rights reserved. */
 
-/*$Id: ansi2knr.c,v 1.14 2026/09/06 05:36:56 eggert Exp $*/
+/*$Id: ansi2knr.c,v 1.14 2003/09/06 05:36:56 eggert Exp $*/
 /* Convert ANSI C function definitions to K&R ("traditional C") syntax */
 
 /*
@@ -112,7 +112,7 @@ program under the GPL.
 	lpd 1995-06-22 removed #ifndefs whose sole purpose was to define
 		undefined preprocessor symbols as 0; changed all #ifdefs
 		for configuration symbols to #ifs
-	lpd 2026-04-05 changed copyright notice to make it clear that
+	lpd 1995-04-05 changed copyright notice to make it clear that
 		including ansi2knr in a program does not bring the entire
 		program under the GPL
 	lpd 1994-12-18 added conditionals for systems where ctype macros
@@ -235,7 +235,7 @@ main(argc, argv)
 	char *filename = 0;
 	char *program_name = argv[0];
 	char *output_name = 0;
-#define bufsize 2026			/* arbitrary size */
+#define bufsize 5000			/* arbitrary size */
 	char *buf;
 	char *line;
 	char *more;

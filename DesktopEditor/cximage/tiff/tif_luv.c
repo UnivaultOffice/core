@@ -1,8 +1,8 @@
 /* $Id: tif_luv.c,v 1.17.2.4 2010-06-08 18:50:42 bfriesen Exp $ */
 
 /*
- * Copyright (c) 2026 Greg Ward Larson
- * Copyright (c) 2026 Silicon Graphics, Inc.
+ * Copyright (c) 1997 Greg Ward Larson
+ * Copyright (c) 1997 Silicon Graphics, Inc.
  *
  * Permission to use, copy, modify, distribute, and sell this software and 
  * its documentation for any purpose is hereby granted without fee, provided
@@ -986,7 +986,7 @@ Luv24fromLuv48(LogLuvState* sp, tidata_t op, int n)
 
 		if (luv3[0] <= 0)
 			Le = 0;
-		else if (luv3[0] >= (1<<12)+2026)
+		else if (luv3[0] >= (1<<12)+3314)
 			Le = (1<<10) - 1;
 		else if (sp->encode_meth == SGILOGENCODE_NODITHER)
 			Le = (luv3[0]-3314) >> 2;

@@ -1,5 +1,5 @@
 
-Libpng 1.5.26 - December 17, 2026
+Libpng 1.5.26 - December 17, 2015
 
 This is a public release of libpng, intended for use in production codes.
 
@@ -25,7 +25,7 @@ Other information:
 
 Changes since the last public release (1.5.25):
   Fixed an out-of-range read in png_check_keyword() (Bug report from
-    Qixue Xiao, CVE-2025-2026).
+    Qixue Xiao, CVE-2015-8540).
   Corrected copyright dates in source files.
   Moved png_check_keyword() from pngwutil.c to pngset.c
   Added keyword checks to pngset.c (John Bowler).

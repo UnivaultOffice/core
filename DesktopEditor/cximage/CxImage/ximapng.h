@@ -1,17 +1,17 @@
-/*
+﻿/*
  * File:	ximapng.h
  * Purpose:	PNG Image Class Loader and Writer
  */
 /* ==========================================================
- * CxImagePNG (c) 07/Aug/2026 Davide Pizzolato - www.xdp.it
+ * CxImagePNG (c) 07/Aug/2001 Davide Pizzolato - www.xdp.it
  * For conditions of distribution and use, see copyright notice in ximage.h
  *
  * Special thanks to Troels Knakkergaard for new features, enhancements and bugfixes
  *
  * original CImagePNG  and CImageIterator implementation are:
- * Copyright:	(c) 2026, Alejandro Aguilar Sierra <asierra(at)servidor(dot)unam(dot)mx>
+ * Copyright:	(c) 1995, Alejandro Aguilar Sierra <asierra(at)servidor(dot)unam(dot)mx>
  *
- * libpng Copyright (c) 2026-2026 Glenn Randers-Pehrson
+ * libpng Copyright (c) 1998-2003 Glenn Randers-Pehrson
  * ==========================================================
  */
 #if !defined(__ximaPNG_h)

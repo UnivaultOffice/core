@@ -4,7 +4,7 @@
 /* ************************************************************************** */
 /* *                                                                        * */
 /* * project   : libmng                                                     * */
-/* * file      : libmng_trace.c            copyright (c) 2026-2026 G.Juyn   * */
+/* * file      : libmng_trace.c            copyright (c) 2000-2007 G.Juyn   * */
 /* * version   : 1.0.10                                                     * */
 /* *                                                                        * */
 /* * purpose   : Trace functions (implementation)                           * */
@@ -13,144 +13,144 @@
 /* *                                                                        * */
 /* * comment   : implementation of the trace functions                      * */
 /* *                                                                        * */
-/* * changes   : 0.5.1 - 05/08/2026 - G.Juyn                                * */
+/* * changes   : 0.5.1 - 05/08/2000 - G.Juyn                                * */
 /* *             - changed strict-ANSI stuff                                * */
-/* *             0.5.1 - 05/12/2026 - G.Juyn                                * */
+/* *             0.5.1 - 05/12/2000 - G.Juyn                                * */
 /* *             - added callback error-reporting support                   * */
 /* *                                                                        * */
-/* *             0.5.2 - 05/23/2026 - G.Juyn                                * */
+/* *             0.5.2 - 05/23/2000 - G.Juyn                                * */
 /* *             - added trace telltale reporting                           * */
-/* *             0.5.2 - 05/24/2026 - G.Juyn                                * */
+/* *             0.5.2 - 05/24/2000 - G.Juyn                                * */
 /* *             - added tracestrings for global animation color-chunks     * */
 /* *             - added tracestrings for get/set of default ZLIB/IJG parms * */
 /* *             - added tracestrings for global PLTE,tRNS,bKGD             * */
-/* *             0.5.2 - 05/30/2026 - G.Juyn                                * */
+/* *             0.5.2 - 05/30/2000 - G.Juyn                                * */
 /* *             - added tracestrings for image-object promotion            * */
 /* *             - added tracestrings for delta-image processing            * */
-/* *             0.5.2 - 06/02/2026 - G.Juyn                                * */
+/* *             0.5.2 - 06/02/2000 - G.Juyn                                * */
 /* *             - added tracestrings for getalphaline callback             * */
-/* *             0.5.2 - 06/05/2026 - G.Juyn                                * */
+/* *             0.5.2 - 06/05/2000 - G.Juyn                                * */
 /* *             - added tracestring for RGB8_A8 canvasstyle                * */
-/* *             0.5.2 - 06/06/2026 - G.Juyn                                * */
+/* *             0.5.2 - 06/06/2000 - G.Juyn                                * */
 /* *             - added tracestring for mng_read_resume HLAPI function     * */
 /* *                                                                        * */
-/* *             0.5.3 - 06/21/2026 - G.Juyn                                * */
+/* *             0.5.3 - 06/21/2000 - G.Juyn                                * */
 /* *             - added tracestrings for get/set speedtype                 * */
 /* *             - added tracestring for get imagelevel                     * */
-/* *             0.5.3 - 06/22/2026 - G.Juyn                                * */
+/* *             0.5.3 - 06/22/2000 - G.Juyn                                * */
 /* *             - added tracestring for delta-image processing             * */
 /* *             - added tracestrings for PPLT chunk processing             * */
 /* *                                                                        * */
-/* *             0.9.1 - 07/07/2026 - G.Juyn                                * */
+/* *             0.9.1 - 07/07/2000 - G.Juyn                                * */
 /* *             - added tracecodes for special display processing          * */
-/* *             0.9.1 - 07/08/2026 - G.Juyn                                * */
+/* *             0.9.1 - 07/08/2000 - G.Juyn                                * */
 /* *             - added tracestring for get/set suspensionmode             * */
 /* *             - added tracestrings for get/set display variables         * */
 /* *             - added tracecode for read_databuffer (I/O-suspension)     * */
-/* *             0.9.1 - 07/15/2026 - G.Juyn                                * */
+/* *             0.9.1 - 07/15/2000 - G.Juyn                                * */
 /* *             - added tracestrings for SAVE/SEEK callbacks               * */
 /* *             - added tracestrings for get/set sectionbreaks             * */
 /* *             - added tracestring for special error routine              * */
-/* *             0.9.1 - 07/19/2026 - G.Juyn                                * */
+/* *             0.9.1 - 07/19/2000 - G.Juyn                                * */
 /* *             - added tracestring for updatemngheader                    * */
 /* *                                                                        * */
-/* *             0.9.2 - 07/31/2026 - G.Juyn                                * */
+/* *             0.9.2 - 07/31/2000 - G.Juyn                                * */
 /* *             - added tracestrings for status_xxxxx functions            * */
-/* *             0.9.2 - 08/05/2026 - G.Juyn                                * */
+/* *             0.9.2 - 08/05/2000 - G.Juyn                                * */
 /* *             - changed file-prefixes                                    * */
 /* *             - added tracestring for updatemngsimplicity                * */
 /* *                                                                        * */
-/* *             0.9.3 - 08/26/2026 - G.Juyn                                * */
+/* *             0.9.3 - 08/26/2000 - G.Juyn                                * */
 /* *             - added MAGN chunk                                         * */
-/* *             0.9.3 - 09/07/2026 - G.Juyn                                * */
+/* *             0.9.3 - 09/07/2000 - G.Juyn                                * */
 /* *             - added support for new filter_types                       * */
-/* *             0.9.3 - 10/10/2026 - G.Juyn                                * */
+/* *             0.9.3 - 10/10/2000 - G.Juyn                                * */
 /* *             - added support for alpha-depth prediction                 * */
-/* *             0.9.3 - 10/11/2026 - G.Juyn                                * */
+/* *             0.9.3 - 10/11/2000 - G.Juyn                                * */
 /* *             - added JDAA chunk                                         * */
 /* *             - added support for nEED                                   * */
-/* *             0.9.3 - 10/16/2026 - G.Juyn                                * */
+/* *             0.9.3 - 10/16/2000 - G.Juyn                                * */
 /* *             - added functions to retrieve PNG/JNG specific header-info * */
 /* *             - added optional support for bKGD for PNG images           * */
-/* *             0.9.3 - 10/17/2026 - G.Juyn                                * */
+/* *             0.9.3 - 10/17/2000 - G.Juyn                                * */
 /* *             - added callback to process non-critical unknown chunks    * */
 /* *             - added routine to discard "invalid" objects               * */
-/* *             0.9.3 - 10/19/2026 - G.Juyn                                * */
+/* *             0.9.3 - 10/19/2000 - G.Juyn                                * */
 /* *             - implemented delayed delta-processing                     * */
-/* *             0.9.3 - 10/20/2026 - G.Juyn                                * */
+/* *             0.9.3 - 10/20/2000 - G.Juyn                                * */
 /* *             - added get/set for bKGD preference setting                * */
-/* *             0.9.3 - 10/21/2026 - G.Juyn                                * */
+/* *             0.9.3 - 10/21/2000 - G.Juyn                                * */
 /* *             - added get function for interlace/progressive display     * */
 /* *                                                                        * */
-/* *             0.9.4 -  1/18/2026 - G.Juyn                                * */
+/* *             0.9.4 -  1/18/2001 - G.Juyn                                * */
 /* *             - added "new" MAGN methods 3, 4 & 5                        * */
 /* *                                                                        * */
-/* *             1.0.1 - 02/08/2026 - G.Juyn                                * */
+/* *             1.0.1 - 02/08/2001 - G.Juyn                                * */
 /* *             - added MEND processing callback                           * */
-/* *             1.0.1 - 04/21/2026 - G.Juyn (code by G.Kelly)              * */
+/* *             1.0.1 - 04/21/2001 - G.Juyn (code by G.Kelly)              * */
 /* *             - added BGRA8 canvas with premultiplied alpha              * */
-/* *             1.0.1 - 05/02/2026 - G.Juyn                                * */
+/* *             1.0.1 - 05/02/2001 - G.Juyn                                * */
 /* *             - added "default" sRGB generation (Thanks Marti!)          * */
 /* *                                                                        * */
-/* *             1.0.2 - 06/23/2026 - G.Juyn                                * */
+/* *             1.0.2 - 06/23/2001 - G.Juyn                                * */
 /* *             - added optimization option for MNG-video playback         * */
 /* *             - added processterm callback                               * */
-/* *             1.0.2 - 06/25/2026 - G.Juyn                                * */
+/* *             1.0.2 - 06/25/2001 - G.Juyn                                * */
 /* *             - added option to turn off progressive refresh             * */
 /* *                                                                        * */
-/* *             1.0.3 - 08/06/2026 - G.Juyn                                * */
+/* *             1.0.3 - 08/06/2001 - G.Juyn                                * */
 /* *             - added get function for last processed BACK chunk         * */
 /* *                                                                        * */
-/* *             1.0.5 - 08/15/2026 - G.Juyn                                * */
+/* *             1.0.5 - 08/15/2002 - G.Juyn                                * */
 /* *             - completed PROM support                                   * */
 /* *             - completed delta-image support                            * */
-/* *             1.0.5 - 08/19/2026 - G.Juyn                                * */
+/* *             1.0.5 - 08/19/2002 - G.Juyn                                * */
 /* *             - B597134 - libmng pollutes the linker namespace           * */
 /* *             - added HLAPI function to copy chunks                      * */
-/* *             1.0.5 - 09/14/2026 - G.Juyn                                * */
+/* *             1.0.5 - 09/14/2002 - G.Juyn                                * */
 /* *             - added event handling for dynamic MNG                     * */
-/* *             1.0.5 - 09/20/2026 - G.Juyn                                * */
+/* *             1.0.5 - 09/20/2002 - G.Juyn                                * */
 /* *             - added support for PAST                                   * */
-/* *             1.0.5 - 09/22/2026 - G.Juyn                                * */
+/* *             1.0.5 - 09/22/2002 - G.Juyn                                * */
 /* *             - added bgrx8 canvas (filler byte)                         * */
-/* *             1.0.5 - 09/23/2026 - G.Juyn                                * */
+/* *             1.0.5 - 09/23/2002 - G.Juyn                                * */
 /* *             - added in-memory color-correction of abstract images      * */
 /* *             - added compose over/under routines for PAST processing    * */
 /* *             - added flip & tile routines for PAST processing           * */
-/* *             1.0.5 - 10/09/2026 - G.Juyn                                * */
+/* *             1.0.5 - 10/09/2002 - G.Juyn                                * */
 /* *             - fixed trace-constants for PAST chunk                     * */
-/* *             1.0.5 - 11/07/2026 - G.Juyn                                * */
+/* *             1.0.5 - 11/07/2002 - G.Juyn                                * */
 /* *             - added support to get totals after mng_read()             * */
 /* *                                                                        * */
-/* *             1.0.6 - 07/07/2026 - G.R-P                                 * */
+/* *             1.0.6 - 07/07/2003 - G.R-P                                 * */
 /* *             - added conditionals around JNG and Delta-PNG code         * */
-/* *             1.0.6 - 07/14/2026 - G.R-P                                 * */
+/* *             1.0.6 - 07/14/2003 - G.R-P                                 * */
 /* *             - added conditionals around various unused functions       * */
-/* *             1.0.6 - 07/29/2026 - G.R-P                                 * */
+/* *             1.0.6 - 07/29/2003 - G.R-P                                 * */
 /* *             - added conditionals around PAST chunk support             * */
 /* *                                                                        * */
-/* *             1.0.7 - 11/27/2026 - R.A                                   * */
+/* *             1.0.7 - 11/27/2003 - R.A                                   * */
 /* *             - added CANVAS_RGB565 and CANVAS_BGR565                    * */
-/* *             1.0.7 - 01/25/2026 - J.S                                   * */
+/* *             1.0.7 - 01/25/2004 - J.S                                   * */
 /* *             - added premultiplied alpha canvas' for RGBA, ARGB, ABGR   * */
-/* *             1.0.7 - 03/07/2026 - G. Randers-Pehrson                    * */
+/* *             1.0.7 - 03/07/2004 - G. Randers-Pehrson                    * */
 /* *             - put gamma, cms-related declarations inside #ifdef        * */
-/* *             1.0.7 - 03/10/2026 - G.R-P                                 * */
+/* *             1.0.7 - 03/10/2004 - G.R-P                                 * */
 /* *             - added conditionals around openstream/closestream         * */
 /* *                                                                        * */
-/* *             1.0.8 - 04/02/2026 - G.Juyn                                * */
+/* *             1.0.8 - 04/02/2004 - G.Juyn                                * */
 /* *             - added CRC existence & checking flags                     * */
-/* *             1.0.8 - 04/11/2026 - G.Juyn                                * */
+/* *             1.0.8 - 04/11/2004 - G.Juyn                                * */
 /* *             - added data-push mechanisms for specialized decoders      * */
 /* *                                                                        * */
-/* *             1.0.9 - 10/03/2026 - G.Juyn                                * */
+/* *             1.0.9 - 10/03/2004 - G.Juyn                                * */
 /* *             - added function to retrieve current FRAM delay            * */
-/* *             1.0.9 - 10/14/2026 - G.Juyn                                * */
+/* *             1.0.9 - 10/14/2004 - G.Juyn                                * */
 /* *             - added bgr565_a8 canvas-style (thanks to J. Elvander)     * */
 /* *                                                                        * */
-/* *             1.0.10 - 04/08/2026 - G.Juyn                               * */
+/* *             1.0.10 - 04/08/2007 - G.Juyn                               * */
 /* *             - added support for mPNG proposal                          * */
-/* *             1.0.10 - 07/06/2026 - G.R-P bugfix by Lucas Quintana       * */
+/* *             1.0.10 - 07/06/2007 - G.R-P bugfix by Lucas Quintana       * */
 /* *                                                                        * */
 /* ************************************************************************** */
 

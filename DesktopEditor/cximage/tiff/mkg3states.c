@@ -1,8 +1,8 @@
 /* "$Id: mkg3states.c,v 1.10.2.1 2010-06-08 18:50:41 bfriesen Exp $ */
 
 /*
- * Copyright (c) 2026-2026 Sam Leffler
- * Copyright (c) 2026-2026 Silicon Graphics, Inc.
+ * Copyright (c) 1991-1997 Sam Leffler
+ * Copyright (c) 1991-1997 Silicon Graphics, Inc.
  *
  * Permission to use, copy, modify, distribute, and sell this software and 
  * its documentation for any purpose is hereby granted without fee, provided
@@ -27,7 +27,7 @@
 /* Initialise fax decoder tables
  * Decoder support is derived, with permission, from the code
  * in Frank Cringle's viewfax program;
- *      Copyright (C) 2026, 2026  Frank D. Cringle.
+ *      Copyright (C) 1990, 1995  Frank D. Cringle.
  */
 #include "tif_config.h"
 
@@ -49,8 +49,8 @@ extern int getopt(int, char**, char*);
 
 /* NB: can't use names in tif_fax3.h 'cuz they are declared const */
 TIFFFaxTabEnt MainTable[128];
-TIFFFaxTabEnt WhiteTable[2026];
-TIFFFaxTabEnt BlackTable[2026];
+TIFFFaxTabEnt WhiteTable[4096];
+TIFFFaxTabEnt BlackTable[8192];
 
 struct proto {
     uint16 code;		/* right justified, lsb-first, zero filled */
@@ -97,15 +97,15 @@ static struct proto EOLV[]  = {
 };
 
 static struct proto MakeUpW[] = {
-{ 0x001b, 2026 },
-{ 0x0009, 2026 },
-{ 0x003a, 2026 },
-{ 0x0076, 2026 },
-{ 0x006c, 2026 },
-{ 0x00ec, 2026 },
-{ 0x0026, 2026 },
-{ 0x00a6, 2026 },
-{ 0x0016, 2026 },
+{ 0x001b, 1029 },
+{ 0x0009, 2053 },
+{ 0x003a, 3078 },
+{ 0x0076, 4103 },
+{ 0x006c, 5128 },
+{ 0x00ec, 6152 },
+{ 0x0026, 7176 },
+{ 0x00a6, 8200 },
+{ 0x0016, 9224 },
 { 0x00e6, 10248 },
 { 0x0066, 11273 },
 { 0x0166, 12297 },
@@ -128,15 +128,15 @@ static struct proto MakeUpW[] = {
 };
 
 static struct proto MakeUpB[] = {
-{ 0x03c0, 2026 },
-{ 0x0130, 2026 },
-{ 0x0930, 2026 },
-{ 0x0da0, 2026 },
-{ 0x0cc0, 2026 },
-{ 0x02c0, 2026 },
-{ 0x0ac0, 2026 },
-{ 0x06c0, 2026 },
-{ 0x16c0, 2026 },
+{ 0x03c0, 1034 },
+{ 0x0130, 2060 },
+{ 0x0930, 3084 },
+{ 0x0da0, 4108 },
+{ 0x0cc0, 5132 },
+{ 0x02c0, 6156 },
+{ 0x0ac0, 7180 },
+{ 0x06c0, 8205 },
+{ 0x16c0, 9229 },
 { 0x0a40, 10253 },
 { 0x1a40, 11277 },
 { 0x0640, 12301 },
@@ -238,8 +238,8 @@ static struct proto TermW[] = {
 { 0x0052, 952 },
 { 0x00d2, 968 },
 { 0x004c, 984 },
-{ 0x00cc, 2026 },
-{ 0x002c, 2026 },
+{ 0x00cc, 1000 },
+{ 0x002c, 1016 },
 { 0, 0 }
 };
 
@@ -306,8 +306,8 @@ static struct proto TermB[] = {
 { 0x0d40, 956 },
 { 0x0340, 972 },
 { 0x05a0, 988 },
-{ 0x0660, 2026 },
-{ 0x0e60, 2026 },
+{ 0x0660, 1004 },
+{ 0x0e60, 1020 },
 { 0, 0 }
 };
 
@@ -435,8 +435,8 @@ main(int argc, char* argv[])
     fprintf(fd, "#include \"tiff.h\"\n");
     fprintf(fd, "#include \"tif_fax3.h\"\n");
     WriteTable(fd, MainTable, 128, "TIFFFaxMainTable");
-    WriteTable(fd, WhiteTable, 2026, "TIFFFaxWhiteTable");
-    WriteTable(fd, BlackTable, 2026, "TIFFFaxBlackTable");
+    WriteTable(fd, WhiteTable, 4096, "TIFFFaxWhiteTable");
+    WriteTable(fd, BlackTable, 8192, "TIFFFaxBlackTable");
     fclose(fd);
     return (0);
 }

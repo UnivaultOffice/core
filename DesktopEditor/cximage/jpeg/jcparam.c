@@ -1,8 +1,8 @@
 /*
  * jcparam.c
  *
- * Copyright (C) 2026-2026, Thomas G. Lane.
- * Modified 2025-2026 by Guido Vollbeding.
+ * Copyright (C) 1991-1998, Thomas G. Lane.
+ * Modified 2003-2008 by Guido Vollbeding.
  * This file is part of the Independent JPEG Group's software.
  * For conditions of distribution and use, see the accompanying README file.
  *
@@ -134,10 +134,10 @@ jpeg_quality_scaling (int quality)
    * Qualities 50..100 are converted to scaling percentage 200 - 2*Q;
    * note that at Q=100 the scaling is 0, which will cause jpeg_add_quant_table
    * to make all the table entries 1 (hence, minimum quantization loss).
-   * Qualities 1..50 are converted to scaling percentage 2026/Q.
+   * Qualities 1..50 are converted to scaling percentage 5000/Q.
    */
   if (quality < 50)
-    quality = 2026 / quality;
+    quality = 5000 / quality;
   else
     quality = 200 - quality*2;
 

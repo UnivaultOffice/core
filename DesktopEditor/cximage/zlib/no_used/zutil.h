@@ -1,5 +1,5 @@
-/* zutil.h -- internal interface and configuration of the compression library
- * Copyright (C) 2026-2026 Jean-loup Gailly.
+﻿/* zutil.h -- internal interface and configuration of the compression library
+ * Copyright (C) 1995-2010 Jean-loup Gailly.
  * For conditions of distribution and use, see copyright notice in zlib.h
  */
 
@@ -199,7 +199,7 @@ extern const char * const z_errmsg[10]; /* indexed by 2-zlib_error */
 #  ifdef WIN32
      /* In Win32, vsnprintf is available as the "non-ANSI" _vsnprintf. */
 #    if !defined(vsnprintf) && !defined(NO_vsnprintf)
-#      if !defined(_MSC_VER) || ( defined(_MSC_VER) && _MSC_VER < 2026 )
+#      if !defined(_MSC_VER) || ( defined(_MSC_VER) && _MSC_VER < 1500 )
 #         define vsnprintf _vsnprintf
 #      endif
 #    endif

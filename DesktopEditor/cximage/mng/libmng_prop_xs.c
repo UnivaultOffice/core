@@ -4,7 +4,7 @@
 /* ************************************************************************** */
 /* *                                                                        * */
 /* * project   : libmng                                                     * */
-/* * file      : libmng_prop_xs.c          copyright (c) 2026-2026 G.Juyn   * */
+/* * file      : libmng_prop_xs.c          copyright (c) 2000-2006 G.Juyn   * */
 /* * version   : 1.0.10                                                     * */
 /* *                                                                        * */
 /* * purpose   : property get/set interface (implementation)                * */
@@ -13,105 +13,105 @@
 /* *                                                                        * */
 /* * comment   : implementation of the property get/set functions           * */
 /* *                                                                        * */
-/* * changes   : 0.5.1 - 05/08/2026 - G.Juyn                                * */
+/* * changes   : 0.5.1 - 05/08/2000 - G.Juyn                                * */
 /* *             - fixed calling convention                                 * */
 /* *             - changed strict-ANSI stuff                                * */
-/* *             0.5.1 - 05/11/2026 - G.Juyn                                * */
+/* *             0.5.1 - 05/11/2000 - G.Juyn                                * */
 /* *             - added set_outputprofile2 & set_srgbprofile2              * */
-/* *             0.5.1 - 05/12/2026 - G.Juyn                                * */
+/* *             0.5.1 - 05/12/2000 - G.Juyn                                * */
 /* *             - changed trace to macro for callback error-reporting      * */
 /* *                                                                        * */
-/* *             0.5.2 - 05/23/2026 - G.Juyn                                * */
+/* *             0.5.2 - 05/23/2000 - G.Juyn                                * */
 /* *             - changed inclusion of cms-routines                        * */
-/* *             0.5.2 - 05/24/2026 - G.Juyn                                * */
+/* *             0.5.2 - 05/24/2000 - G.Juyn                                * */
 /* *             - added support for get/set default zlib/IJG parms         * */
-/* *             0.5.2 - 05/31/2026 - G.Juyn                                * */
+/* *             0.5.2 - 05/31/2000 - G.Juyn                                * */
 /* *             - fixed up punctuation (contribution by Tim Rowley)        * */
-/* *             0.5.2 - 06/05/2026 - G.Juyn                                * */
+/* *             0.5.2 - 06/05/2000 - G.Juyn                                * */
 /* *             - added support for RGB8_A8 canvasstyle                    * */
 /* *                                                                        * */
-/* *             0.5.3 - 06/21/2026 - G.Juyn                                * */
+/* *             0.5.3 - 06/21/2000 - G.Juyn                                * */
 /* *             - added get/set for speedtype to facilitate testing        * */
 /* *             - added get for imagelevel during processtext callback     * */
-/* *             0.5.3 - 06/26/2026 - G.Juyn                                * */
+/* *             0.5.3 - 06/26/2000 - G.Juyn                                * */
 /* *             - changed userdata variable to mng_ptr                     * */
-/* *             0.5.3 - 06/29/2026 - G.Juyn                                * */
+/* *             0.5.3 - 06/29/2000 - G.Juyn                                * */
 /* *             - fixed incompatible return-types                          * */
 /* *                                                                        * */
-/* *             0.9.1 - 07/08/2026 - G.Juyn                                * */
+/* *             0.9.1 - 07/08/2000 - G.Juyn                                * */
 /* *             - added get routines for internal display variables        * */
 /* *             - added get/set routines for suspensionmode variable       * */
-/* *             0.9.1 - 07/15/2026 - G.Juyn                                * */
+/* *             0.9.1 - 07/15/2000 - G.Juyn                                * */
 /* *             - added get/set routines for sectionbreak variable         * */
 /* *                                                                        * */
-/* *             0.9.2 - 07/31/2026 - G.Juyn                                * */
+/* *             0.9.2 - 07/31/2000 - G.Juyn                                * */
 /* *             - added status_xxxx functions                              * */
-/* *             0.9.2 - 08/05/2026 - G.Juyn                                * */
+/* *             0.9.2 - 08/05/2000 - G.Juyn                                * */
 /* *             - changed file-prefixes                                    * */
 /* *                                                                        * */
-/* *             0.9.3 - 10/10/2026 - G.Juyn                                * */
+/* *             0.9.3 - 10/10/2000 - G.Juyn                                * */
 /* *             - added support for alpha-depth prediction                 * */
-/* *             0.9.3 - 10/16/2026 - G.Juyn                                * */
+/* *             0.9.3 - 10/16/2000 - G.Juyn                                * */
 /* *             - added functions to retrieve PNG/JNG specific header-info * */
-/* *             0.9.3 - 10/20/2026 - G.Juyn                                * */
+/* *             0.9.3 - 10/20/2000 - G.Juyn                                * */
 /* *             - added get/set for bKGD preference setting                * */
-/* *             0.9.3 - 10/21/2026 - G.Juyn                                * */
+/* *             0.9.3 - 10/21/2000 - G.Juyn                                * */
 /* *             - added get function for interlace/progressive display     * */
 /* *                                                                        * */
-/* *             1.0.1 - 04/21/2026 - G.Juyn (code by G.Kelly)              * */
+/* *             1.0.1 - 04/21/2001 - G.Juyn (code by G.Kelly)              * */
 /* *             - added BGRA8 canvas with premultiplied alpha              * */
-/* *             1.0.1 - 05/02/2026 - G.Juyn                                * */
+/* *             1.0.1 - 05/02/2001 - G.Juyn                                * */
 /* *             - added "default" sRGB generation (Thanks Marti!)          * */
 /* *                                                                        * */
-/* *             1.0.2 - 06/23/2026 - G.Juyn                                * */
+/* *             1.0.2 - 06/23/2001 - G.Juyn                                * */
 /* *             - added optimization option for MNG-video playback         * */
-/* *             1.0.2 - 06/25/2026 - G.Juyn                                * */
+/* *             1.0.2 - 06/25/2001 - G.Juyn                                * */
 /* *             - added option to turn off progressive refresh             * */
 /* *                                                                        * */
-/* *             1.0.3 - 08/06/2026 - G.Juyn                                * */
+/* *             1.0.3 - 08/06/2001 - G.Juyn                                * */
 /* *             - added get function for last processed BACK chunk         * */
 /* *                                                                        * */
-/* *             1.0.4 - 06/22/2026 - G.Juyn                                * */
+/* *             1.0.4 - 06/22/2002 - G.Juyn                                * */
 /* *             - B495442 - invalid returnvalue in mng_get_suspensionmode  * */
 /* *                                                                        * */
-/* *             1.0.5 - 09/14/2026 - G.Juyn                                * */
+/* *             1.0.5 - 09/14/2002 - G.Juyn                                * */
 /* *             - added event handling for dynamic MNG                     * */
-/* *             1.0.5 - 09/22/2026 - G.Juyn                                * */
+/* *             1.0.5 - 09/22/2002 - G.Juyn                                * */
 /* *             - added bgrx8 canvas (filler byte)                         * */
-/* *             1.0.5 - 11/07/2026 - G.Juyn                                * */
+/* *             1.0.5 - 11/07/2002 - G.Juyn                                * */
 /* *             - added support to get totals after mng_read()             * */
 /* *                                                                        * */
-/* *             1.0.6 - 05/11/2026 - G. Juyn                               * */
+/* *             1.0.6 - 05/11/2003 - G. Juyn                               * */
 /* *             - added conditionals around canvas update routines         * */
-/* *             1.0.6 - 07/07/2026 - G.R-P                                 * */
+/* *             1.0.6 - 07/07/2003 - G.R-P                                 * */
 /* *             - added conditionals around some JNG-supporting code       * */
-/* *             1.0.6 - 07/11/2026 - G.R-P                                 * */
+/* *             1.0.6 - 07/11/2003 - G.R-P                                 * */
 /* *             - added conditionals zlib and jpeg property accessors      * */
-/* *             1.0.6 - 07/14/2026 - G.R-P                                 * */
+/* *             1.0.6 - 07/14/2003 - G.R-P                                 * */
 /* *             - added conditionals around various unused functions       * */
 /* *                                                                        * */
-/* *             1.0.7 - 11/27/2026 - R.A                                   * */
+/* *             1.0.7 - 11/27/2003 - R.A                                   * */
 /* *             - added CANVAS_RGB565 and CANVAS_BGR565                    * */
-/* *             1.0.7 - 12/06/2026 - R.A                                   * */
+/* *             1.0.7 - 12/06/2003 - R.A                                   * */
 /* *             - added CANVAS_RGBA565 and CANVAS_BGRA565                  * */
-/* *             1.0.7 - 01/25/2026 - J.S                                   * */
+/* *             1.0.7 - 01/25/2004 - J.S                                   * */
 /* *             - added premultiplied alpha canvas' for RGBA, ARGB, ABGR   * */
-/* *             1.0.7 - 03/07/2026 - G.R-P.                                * */
+/* *             1.0.7 - 03/07/2004 - G.R-P.                                * */
 /* *             - put gamma, cms-related functions inside #ifdef           * */
 /* *                                                                        * */
-/* *             1.0.8 - 04/02/2026 - G.Juyn                                * */
+/* *             1.0.8 - 04/02/2004 - G.Juyn                                * */
 /* *             - added CRC existence & checking flags                     * */
 /* *                                                                        * */
-/* *             1.0.9 - 09/18/2026 - G.R-P.                                * */
+/* *             1.0.9 - 09/18/2004 - G.R-P.                                * */
 /* *             - added some MNG_SUPPORT_WRITE conditionals                * */
-/* *             1.0.9 - 10/03/2026 - G.Juyn                                * */
+/* *             1.0.9 - 10/03/2004 - G.Juyn                                * */
 /* *             - added function to retrieve current FRAM delay            * */
-/* *             1.0.9 - 10/14/2026 - G.Juyn                                * */
+/* *             1.0.9 - 10/14/2004 - G.Juyn                                * */
 /* *             - added bgr565_a8 canvas-style (thanks to J. Elvander)     * */
-/* *             1.0.9 - 12/20/2026 - G.Juyn                                * */
+/* *             1.0.9 - 12/20/2004 - G.Juyn                                * */
 /* *             - cleaned up macro-invocations (thanks to D. Airlie)       * */
 /* *                                                                        * */
-/* *             1.0.10 - 03/07/2026 - (thanks to W. Manthey)               * */
+/* *             1.0.10 - 03/07/2006 - (thanks to W. Manthey)               * */
 /* *             - added CANVAS_RGB555 and CANVAS_BGR555                    * */
 /* *                                                                        * */
 /* ************************************************************************** */

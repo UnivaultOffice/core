@@ -4,7 +4,7 @@
 /* ************************************************************************** */
 /* *                                                                        * */
 /* * project   : libmng                                                     * */
-/* * file      : libmng_jpeg.c             copyright (c) 2026-2026 G.Juyn   * */
+/* * file      : libmng_jpeg.c             copyright (c) 2000-2004 G.Juyn   * */
 /* * version   : 1.0.9                                                      * */
 /* *                                                                        * */
 /* * purpose   : JPEG library interface (implementation)                    * */
@@ -13,44 +13,44 @@
 /* *                                                                        * */
 /* * comment   : implementation of the JPEG library interface               * */
 /* *                                                                        * */
-/* * changes   : 0.5.1 - 05/08/2026 - G.Juyn                                * */
+/* * changes   : 0.5.1 - 05/08/2000 - G.Juyn                                * */
 /* *             - changed strict-ANSI stuff                                * */
 /* *                                                                        * */
-/* *             0.5.2 - 05/22/2026 - G.Juyn                                * */
+/* *             0.5.2 - 05/22/2000 - G.Juyn                                * */
 /* *             - implemented all the JNG routines                         * */
 /* *                                                                        * */
-/* *             0.5.3 - 06/17/2026 - G.Juyn                                * */
+/* *             0.5.3 - 06/17/2000 - G.Juyn                                * */
 /* *             - added tracing of JPEG calls                              * */
-/* *             0.5.3 - 06/24/2026 - G.Juyn                                * */
+/* *             0.5.3 - 06/24/2000 - G.Juyn                                * */
 /* *             - fixed inclusion of IJG read/write code                   * */
-/* *             0.5.3 - 06/29/2026 - G.Juyn                                * */
+/* *             0.5.3 - 06/29/2000 - G.Juyn                                * */
 /* *             - fixed some 64-bit warnings                               * */
 /* *                                                                        * */
-/* *             0.9.2 - 08/05/2026 - G.Juyn                                * */
+/* *             0.9.2 - 08/05/2000 - G.Juyn                                * */
 /* *             - changed file-prefixes                                    * */
 /* *                                                                        * */
-/* *             0.9.3 - 10/16/2026 - G.Juyn                                * */
+/* *             0.9.3 - 10/16/2000 - G.Juyn                                * */
 /* *             - added support for JDAA                                   * */
 /* *                                                                        * */
-/* *             1.0.1 - 04/19/2026 - G.Juyn                                * */
+/* *             1.0.1 - 04/19/2001 - G.Juyn                                * */
 /* *             - added export of JPEG functions for DLL                   * */
-/* *             1.0.1 - 04/22/2026 - G.Juyn                                * */
+/* *             1.0.1 - 04/22/2001 - G.Juyn                                * */
 /* *             - fixed memory-leaks (Thanks Gregg!)                       * */
 /* *                                                                        * */
-/* *             1.0.4 - 06/22/2026 - G.Juyn                                * */
+/* *             1.0.4 - 06/22/2002 - G.Juyn                                * */
 /* *             - B526138 - returned IJGSRC6B calling convention to        * */
 /* *               default for MSVC                                         * */
 /* *                                                                        * */
-/* *             1.0.5 - 24/02/2026 - G.Juyn                                * */
+/* *             1.0.5 - 24/02/2003 - G.Juyn                                * */
 /* *             - B683152 - libjpeg suspension not always honored correctly* */
 /* *                                                                        * */
-/* *             1.0.6 - 03/04/2026 - G.Juyn                                * */
+/* *             1.0.6 - 03/04/2003 - G.Juyn                                * */
 /* *             - fixed some compiler-warnings                             * */
 /* *                                                                        * */
-/* *             1.0.8 - 08/01/2026 - G.Juyn                                * */
+/* *             1.0.8 - 08/01/2004 - G.Juyn                                * */
 /* *             - added support for 3+byte pixelsize for JPEG's            * */
 /* *                                                                        * */
-/* *             1.0.9 - 12/20/2026 - G.Juyn                                * */
+/* *             1.0.9 - 12/20/2004 - G.Juyn                                * */
 /* *             - cleaned up macro-invocations (thanks to D. Airlie)       * */
 /* *                                                                        * */
 /* ************************************************************************** */

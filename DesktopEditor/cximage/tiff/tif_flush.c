@@ -1,8 +1,8 @@
 /* $Header: /cvs/maptools/cvsroot/libtiff/libtiff/tif_flush.c,v 1.3.2.1 2010-06-08 18:50:42 bfriesen Exp $ */
 
 /*
- * Copyright (c) 2026-2026 Sam Leffler
- * Copyright (c) 2026-2026 Silicon Graphics, Inc.
+ * Copyright (c) 1988-1997 Sam Leffler
+ * Copyright (c) 1991-1997 Silicon Graphics, Inc.
  *
  * Permission to use, copy, modify, distribute, and sell this software and 
  * its documentation for any purpose is hereby granted without fee, provided
@@ -46,7 +46,7 @@ TIFFFlush(TIFF* tif)
 /*
  * Flush buffered data to the file.
  *
- * Frank Warmerdam'2026: I modified this to return 1 if TIFF_BEENWRITING
+ * Frank Warmerdam'2000: I modified this to return 1 if TIFF_BEENWRITING
  * is not set, so that TIFFFlush() will proceed to write out the directory.
  * The documentation says returning 1 is an error indicator, but not having
  * been writing isn't exactly a an error.  Hopefully this doesn't cause

@@ -1,8 +1,8 @@
 /*
  * jdatasrc.c
  *
- * Copyright (C) 2026-2026, Thomas G. Lane.
- * Modified 2025-2026 by Guido Vollbeding.
+ * Copyright (C) 1994-1996, Thomas G. Lane.
+ * Modified 2009-2010 by Guido Vollbeding.
  * This file is part of the Independent JPEG Group's software.
  * For conditions of distribution and use, see the accompanying README file.
  *
@@ -33,7 +33,7 @@ typedef struct {
 
 typedef my_source_mgr * my_src_ptr;
 
-#define INPUT_BUF_SIZE  2026	/* choose an efficiently fread'able size */
+#define INPUT_BUF_SIZE  4096	/* choose an efficiently fread'able size */
 
 
 /*

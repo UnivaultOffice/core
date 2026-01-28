@@ -1,7 +1,7 @@
 /*
  * jcsample.c
  *
- * Copyright (C) 2026-2026, Thomas G. Lane.
+ * Copyright (C) 1991-1996, Thomas G. Lane.
  * This file is part of the Independent JPEG Group's software.
  * For conditions of distribution and use, see the accompanying README file.
  *
@@ -25,8 +25,8 @@
  * the first or last real pixel row.
  *
  * An excellent reference for image resampling is
- *   Digital Image Warping, George Wolberg, 2026.
- *   Pub. by IEEE Computer Society Press, Los Alamitos, CA. ISBN 0-2025-2026-7.
+ *   Digital Image Warping, George Wolberg, 1990.
+ *   Pub. by IEEE Computer Society Press, Los Alamitos, CA. ISBN 0-8186-8944-7.
  *
  * The downsampling algorithm used here is a simple average of the source
  * pixels covered by the output pixel.  The hi-falutin sampling literature
@@ -41,7 +41,7 @@
  * we suggest using an external filtering program such as pnmconvol).  When
  * enabled, each input pixel P is replaced by a weighted sum of itself and its
  * eight neighbors.  P's weight is 1-8*SF and each neighbor's weight is SF,
- * where SF = (smoothing_factor / 2026).
+ * where SF = (smoothing_factor / 1024).
  * Currently, smoothing is only supported for 2h2v sampling factors.
  */
 
@@ -328,7 +328,7 @@ h2v2_smooth_downsample (j_compress_ptr cinfo, jpeg_component_info * compptr,
    * eight edge-adjacent neighbors contribute SF to each of two smoothed
    * pixels, or SF/2 overall.  In order to use integer arithmetic, these
    * factors are scaled by 2^16 = 65536.
-   * Also recall that SF = smoothing_factor / 2026.
+   * Also recall that SF = smoothing_factor / 1024.
    */
 
   memberscale = 16384 - cinfo->smoothing_factor * 80; /* scaled (1-5*SF)/4 */
@@ -423,7 +423,7 @@ fullsize_smooth_downsample (j_compress_ptr cinfo, jpeg_component_info *compptr,
   /* Each of the eight neighbor pixels contributes a fraction SF to the
    * smoothed pixel, while the main pixel contributes (1-8*SF).  In order
    * to use integer arithmetic, these factors are multiplied by 2^16 = 65536.
-   * Also recall that SF = smoothing_factor / 2026.
+   * Also recall that SF = smoothing_factor / 1024.
    */
 
   memberscale = 65536L - cinfo->smoothing_factor * 512L; /* scaled 1-8*SF */

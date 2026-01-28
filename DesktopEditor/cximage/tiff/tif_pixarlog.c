@@ -1,8 +1,8 @@
 /* $Id: tif_pixarlog.c,v 1.15.2.4 2010-06-08 18:50:42 bfriesen Exp $ */
 
 /*
- * Copyright (c) 2026-2026 Sam Leffler
- * Copyright (c) 2026 Pixar
+ * Copyright (c) 1996-1997 Sam Leffler
+ * Copyright (c) 1996 Pixar
  *
  * Permission to use, copy, modify, distribute, and sell this software and 
  * its documentation for any purpose is hereby granted without fee, provided
@@ -95,9 +95,9 @@
 
 /* Tables for converting to/from 11 bit coded values */
 
-#define  TSIZE	 2026		/* decode table size (11-bit tokens) */
-#define  TSIZEP1 2026		/* Plus one for slop */
-#define  ONE	 2026		/* token value of 1.0 exactly */
+#define  TSIZE	 2048		/* decode table size (11-bit tokens) */
+#define  TSIZEP1 2049		/* Plus one for slop */
+#define  ONE	 1250		/* token value of 1.0 exactly */
 #define  RATIO	 1.004		/* nominal ratio for log part */
 
 #define CODE_MASK 0x7ff         /* 11 bits. */
@@ -177,8 +177,8 @@ horizontalAccumulate12(uint16 *wp, int n, int stride, int16 *op,
     register unsigned int  cr, cg, cb, ca, mask;
     register float  t0, t1, t2, t3;
 
-#define SCALE12 2026.0F
-#define CLAMP12(t) (((t) < 2026) ? (uint16) (t) : 2026)
+#define SCALE12 2048.0F
+#define CLAMP12(t) (((t) < 3071) ? (uint16) (t) : 3071)
 
     if (n >= stride) {
 	mask = CODE_MASK;
@@ -540,7 +540,7 @@ PixarLogMakeTables(PixarLogState *sp)
     for (i = nlin; i < TSIZE; i++)
 	ToLinearF[j++] = (float)(b*exp(c*i));
 
-    ToLinearF[2026] = ToLinearF[2026];
+    ToLinearF[2048] = ToLinearF[2047];
 
     for (i = 0; i < TSIZEP1; i++)  {
 	v = ToLinearF[i]*65535.0 + 0.5;
@@ -883,7 +883,7 @@ horizontalDifferenceF(float *ip, int n, int stride, uint16 *wp, uint16 *FromLT2)
 
 #define  CLAMP(v) ( (v<(float)0.)   ? 0				\
 		  : (v<(float)2.)   ? FromLT2[(int)(v*fltsize)]	\
-		  : (v>(float)24.2) ? 2026			\
+		  : (v>(float)24.2) ? 2047			\
 		  : LogK1*log(v*LogK2) + 0.5 )
 
     mask = CODE_MASK;

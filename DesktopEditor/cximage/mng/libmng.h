@@ -1,8 +1,8 @@
-/* ************************************************************************** */
+﻿/* ************************************************************************** */
 /* *                                                                        * */
 /* * COPYRIGHT NOTICE:                                                      * */
 /* *                                                                        * */
-/* * Copyright (c) 2026-2026 Gerard Juyn                                    * */
+/* * Copyright (c) 2000-2007 Gerard Juyn                                    * */
 /* * [You may insert additional notices after this sentence if you modify   * */
 /* *  this source]                                                          * */
 /* *                                                                        * */
@@ -102,7 +102,7 @@
 /* ************************************************************************** */
 /* *                                                                        * */
 /* * project   : libmng                                                     * */
-/* * file      : libmng.h                  copyright (c) 2026-2026 G.Juyn   * */
+/* * file      : libmng.h                  copyright (c) 2000-2007 G.Juyn   * */
 /* * version   : 1.0.10                                                     * */
 /* *                                                                        * */
 /* * purpose   : main application interface                                 * */
@@ -112,186 +112,186 @@
 /* * comment   : The main application interface. An application should not  * */
 /* *             need access to any of the other modules!                   * */
 /* *                                                                        * */
-/* * changes   : 0.5.1 - 05/06/2026 - G.Juyn                                * */
+/* * changes   : 0.5.1 - 05/06/2000 - G.Juyn                                * */
 /* *             - changed chunk iteration function                         * */
-/* *             0.5.1 - 05/08/2026 - G.Juyn                                * */
+/* *             0.5.1 - 05/08/2000 - G.Juyn                                * */
 /* *             - added chunk access functions                             * */
 /* *             - added version control constants & functions              * */
 /* *             - changed strict-ANSI stuff                                * */
-/* *             0.5.1 - 05/11/2026 - G.Juyn                                * */
+/* *             0.5.1 - 05/11/2000 - G.Juyn                                * */
 /* *             - added set_outputprofile2 & set_srgbprofile2              * */
 /* *             - added empty-chunk put-routines                           * */
-/* *             0.5.1 - 05/12/2026 - G.Juyn                                * */
+/* *             0.5.1 - 05/12/2000 - G.Juyn                                * */
 /* *             - added version_dll & VERSION_DLL (for consistency)        * */
 /* *             - added version control explanatory text & samples         * */
-/* *             0.5.1 - 05/15/2026 - G.Juyn                                * */
+/* *             0.5.1 - 05/15/2000 - G.Juyn                                * */
 /* *             - added getimgdata & putimgdata functions                  * */
 /* *                                                                        * */
-/* *             0.5.2 - 05/16/2026 - G.Juyn                                * */
+/* *             0.5.2 - 05/16/2000 - G.Juyn                                * */
 /* *             - changed the version parameters (obviously)               * */
-/* *             0.5.2 - 05/18/2026 - G.Juyn                                * */
+/* *             0.5.2 - 05/18/2000 - G.Juyn                                * */
 /* *             - complimented constants for chunk-property values         * */
-/* *             0.5.2 - 05/23/2026 - G.Juyn                                * */
+/* *             0.5.2 - 05/23/2000 - G.Juyn                                * */
 /* *             - fixed MNG_UINT_pHYg value                                * */
-/* *             0.5.2 - 05/24/2026 - G.Juyn                                * */
+/* *             0.5.2 - 05/24/2000 - G.Juyn                                * */
 /* *             - added support for get/set default zlib/IJG parms         * */
-/* *             0.5.2 - 06/02/2026 - G.Juyn                                * */
+/* *             0.5.2 - 06/02/2000 - G.Juyn                                * */
 /* *             - added MNG_BIGENDIAN_SUPPORT (contributed by Tim Rowley)  * */
 /* *             - separated configuration-options into "mng_conf.h"        * */
 /* *             - added RGB8_A8 canvasstyle                                * */
 /* *             - added getalphaline callback for RGB8_A8 canvasstyle      * */
-/* *             0.5.2 - 06/06/2026 - G.Juyn                                * */
+/* *             0.5.2 - 06/06/2000 - G.Juyn                                * */
 /* *             - moved errorcodes from "mng_error.h"                      * */
 /* *             - added mng_read_resume function to support                * */
 /* *               read-suspension                                          * */
 /* *                                                                        * */
-/* *             0.5.3 - 06/16/2026 - G.Juyn                                * */
+/* *             0.5.3 - 06/16/2000 - G.Juyn                                * */
 /* *             - changed the version parameters (obviously)               * */
-/* *             0.5.3 - 06/21/2026 - G.Juyn                                * */
+/* *             0.5.3 - 06/21/2000 - G.Juyn                                * */
 /* *             - added get/set for speedtype to facilitate testing        * */
 /* *             - added get for imagelevel during processtext callback     * */
-/* *             0.5.3 - 06/24/2026 - G.Juyn                                * */
+/* *             0.5.3 - 06/24/2000 - G.Juyn                                * */
 /* *             - fixed inclusion of IJG read/write code                   * */
-/* *             0.5.3 - 06/26/2026 - G.Juyn                                * */
+/* *             0.5.3 - 06/26/2000 - G.Juyn                                * */
 /* *             - changed userdata variable to mng_ptr                     * */
 /* *                                                                        * */
-/* *             0.9.0 - 06/30/2026 - G.Juyn                                * */
+/* *             0.9.0 - 06/30/2000 - G.Juyn                                * */
 /* *             - changed refresh parameters to 'x,y,width,height'         * */
 /* *                                                                        * */
-/* *             0.9.1 - 07/06/2026 - G.Juyn                                * */
+/* *             0.9.1 - 07/06/2000 - G.Juyn                                * */
 /* *             - added MNG_NEEDTIMERWAIT errorcode                        * */
 /* *             - changed comments to indicate modified behavior for       * */
 /* *               timer & suspension breaks                                * */
-/* *             0.9.1 - 07/08/2026 - G.Juyn                                * */
+/* *             0.9.1 - 07/08/2000 - G.Juyn                                * */
 /* *             - added get routines for internal display variables        * */
 /* *             - added get/set routines for suspensionmode variable       * */
-/* *             0.9.1 - 07/15/2026 - G.Juyn                                * */
+/* *             0.9.1 - 07/15/2000 - G.Juyn                                * */
 /* *             - added callbacks for SAVE/SEEK processing                 * */
 /* *             - added get/set routines for sectionbreak variable         * */
 /* *             - added NEEDSECTIONWAIT errorcode                          * */
-/* *             0.9.1 - 07/19/2026 - G.Juyn                                * */
+/* *             0.9.1 - 07/19/2000 - G.Juyn                                * */
 /* *             - added function to set frame-/layer-count & playtime      * */
 /* *             - added errorcode for updatemngheader if not a MNG         * */
 /* *                                                                        * */
-/* *             0.9.2 - 07/31/2026 - G.Juyn                                * */
+/* *             0.9.2 - 07/31/2000 - G.Juyn                                * */
 /* *             - fixed problem with trace-functions improperly wrapped    * */
 /* *             - added status_xxxx functions                              * */
-/* *             0.9.2 - 08/05/2026 - G.Juyn                                * */
+/* *             0.9.2 - 08/05/2000 - G.Juyn                                * */
 /* *             - changed file-prefixes                                    * */
 /* *             - added function to set simplicity field                   * */
 /* *                                                                        * */
-/* *             0.9.3 - 08/09/2026 - G.Juyn                                * */
+/* *             0.9.3 - 08/09/2000 - G.Juyn                                * */
 /* *             - added check for simplicity-bits in MHDR                  * */
-/* *             0.9.3 - 08/12/2026 - G.Juyn                                * */
+/* *             0.9.3 - 08/12/2000 - G.Juyn                                * */
 /* *             - added workaround for faulty PhotoShop iCCP chunk         * */
-/* *             0.9.3 - 08/26/2026 - G.Juyn                                * */
+/* *             0.9.3 - 08/26/2000 - G.Juyn                                * */
 /* *             - added MAGN chunk                                         * */
-/* *             0.9.3 - 09/07/2026 - G.Juyn                                * */
+/* *             0.9.3 - 09/07/2000 - G.Juyn                                * */
 /* *             - added support for new filter_types                       * */
-/* *             0.9.3 - 10/10/2026 - G.Juyn                                * */
+/* *             0.9.3 - 10/10/2000 - G.Juyn                                * */
 /* *             - added support for alpha-depth prediction                 * */
-/* *             0.9.3 - 10/11/2026 - G.Juyn                                * */
+/* *             0.9.3 - 10/11/2000 - G.Juyn                                * */
 /* *             - fixed processing of unknown critical chunks              * */
 /* *             - removed test-MaGN                                        * */
 /* *             - added PNG/MNG spec version indicators                    * */
 /* *             - added support for nEED                                   * */
-/* *             0.9.3 - 10/16/2026 - G.Juyn                                * */
+/* *             0.9.3 - 10/16/2000 - G.Juyn                                * */
 /* *             - added functions to retrieve PNG/JNG specific header-info * */
 /* *             - added JDAA chunk                                         * */
-/* *             0.9.3 - 10/17/2026 - G.Juyn                                * */
+/* *             0.9.3 - 10/17/2000 - G.Juyn                                * */
 /* *             - added callback to process non-critical unknown chunks    * */
-/* *             0.9.3 - 10/20/2026 - G.Juyn                                * */
+/* *             0.9.3 - 10/20/2000 - G.Juyn                                * */
 /* *             - added errocode for delayed delta-processing              * */
 /* *             - added get/set for bKGD preference setting                * */
-/* *             0.9.3 - 10/21/2026 - G.Juyn                                * */
+/* *             0.9.3 - 10/21/2000 - G.Juyn                                * */
 /* *             - added get function for interlace/progressive display     * */
 /* *                                                                        * */
-/* *             0.9.4 - 01/18/2026 - G.Juyn                                * */
+/* *             0.9.4 - 01/18/2001 - G.Juyn                                * */
 /* *             - added errorcode for MAGN methods                         * */
 /* *             - removed test filter-methods 1 & 65                       * */
 /* *                                                                        * */
-/* *             1.0.0 - 02/05/2026 - G.Juyn                                * */
+/* *             1.0.0 - 02/05/2001 - G.Juyn                                * */
 /* *             - version numbers (obviously)                              * */
 /* *                                                                        * */
-/* *             1.0.1 - 02/08/2026 - G.Juyn                                * */
+/* *             1.0.1 - 02/08/2001 - G.Juyn                                * */
 /* *             - added MEND processing callback                           * */
-/* *             1.0.1 - 04/21/2026 - G.Juyn (code by G.Kelly)              * */
+/* *             1.0.1 - 04/21/2001 - G.Juyn (code by G.Kelly)              * */
 /* *             - added BGRA8 canvas with premultiplied alpha              * */
-/* *             1.0.1 - 05/02/2026 - G.Juyn                                * */
+/* *             1.0.1 - 05/02/2001 - G.Juyn                                * */
 /* *             - added "default" sRGB generation (Thanks Marti!)          * */
 /* *                                                                        * */
-/* *             1.0.2 - 06/23/2026 - G.Juyn                                * */
+/* *             1.0.2 - 06/23/2001 - G.Juyn                                * */
 /* *             - added optimization option for MNG-video playback         * */
 /* *             - added processterm callback                               * */
-/* *             1.0.2 - 06/25/2026 - G.Juyn                                * */
+/* *             1.0.2 - 06/25/2001 - G.Juyn                                * */
 /* *             - added late binding errorcode (not used internally)       * */
 /* *             - added option to turn off progressive refresh             * */
 /* *                                                                        * */
-/* *             1.0.3 - 08/06/2026 - G.Juyn                                * */
+/* *             1.0.3 - 08/06/2001 - G.Juyn                                * */
 /* *             - added get function for last processed BACK chunk         * */
 /* *                                                                        * */
-/* *             1.0.5 - 07/04/2026 - G.Juyn                                * */
+/* *             1.0.5 - 07/04/2002 - G.Juyn                                * */
 /* *             - added errorcode for extreme chunk-sizes                  * */
-/* *             1.0.5 - 08/07/2026 - G.Juyn                                * */
+/* *             1.0.5 - 08/07/2002 - G.Juyn                                * */
 /* *             - added test-option for PNG filter method 193 (=no filter) * */
-/* *             1.0.5 - 08/15/2026 - G.Juyn                                * */
+/* *             1.0.5 - 08/15/2002 - G.Juyn                                * */
 /* *             - completed PROM support                                   * */
 /* *             - completed delta-image support                            * */
-/* *             1.0.5 - 08/19/2026 - G.Juyn                                * */
+/* *             1.0.5 - 08/19/2002 - G.Juyn                                * */
 /* *             - added HLAPI function to copy chunks                      * */
-/* *             1.0.5 - 09/14/2026 - G.Juyn                                * */
+/* *             1.0.5 - 09/14/2002 - G.Juyn                                * */
 /* *             - added event handling for dynamic MNG                     * */
 /* *             - added 'supports' call to check function availability     * */
-/* *             1.0.5 - 09/15/2026 - G.Juyn                                * */
+/* *             1.0.5 - 09/15/2002 - G.Juyn                                * */
 /* *             - fixed LOOP iteration=0 special case                      * */
-/* *             1.0.5 - 09/20/2026 - G.Juyn                                * */
+/* *             1.0.5 - 09/20/2002 - G.Juyn                                * */
 /* *             - added support for PAST                                   * */
-/* *             1.0.5 - 09/22/2026 - G.Juyn                                * */
+/* *             1.0.5 - 09/22/2002 - G.Juyn                                * */
 /* *             - added bgrx8 canvas (filler byte)                         * */
-/* *             1.0.5 - 10/07/2026 - G.Juyn                                * */
+/* *             1.0.5 - 10/07/2002 - G.Juyn                                * */
 /* *             - added check for TERM placement during create/write       * */
 /* *             - added beta version function & constant                   * */
-/* *             1.0.5 - 11/07/2026 - G.Juyn                                * */
+/* *             1.0.5 - 11/07/2002 - G.Juyn                                * */
 /* *             - added support to get totals after mng_read()             * */
 /* *                                                                        * */
-/* *             1.0.6 - 07/07/2026 - G. Randers-Pehrson                    * */
+/* *             1.0.6 - 07/07/2003 - G. Randers-Pehrson                    * */
 /* *             - added support for reducing the footprint of libmng       * */
 /* *               by macros that optionally skip unused chunks, remove     * */
 /* *               16-bit sample support, remove Delta support, and         * */
 /* *               remove JNG support, to accomodate Mozilla/Firebird.      * */
-/* *             1.0.6 - 07/14/2026 - G. Randers-Pehrson                    * */
+/* *             1.0.6 - 07/14/2003 - G. Randers-Pehrson                    * */
 /* *             - further optional removal of unused functions             * */
 /* *                                                                        * */
-/* *             1.0.7 - 11/27/2026 - R.A                                   * */
+/* *             1.0.7 - 11/27/2003 - R.A                                   * */
 /* *             - added CANVAS_RGB565 and CANVAS_BGR565                    * */
-/* *             1.0.7 - 12/06/2026 - R.A                                   * */
+/* *             1.0.7 - 12/06/2003 - R.A                                   * */
 /* *             - added CANVAS_RGBA565 and CANVAS_BGRA565                  * */
-/* *             1.0.7 - 01/25/2026 - J.S                                   * */
+/* *             1.0.7 - 01/25/2004 - J.S                                   * */
 /* *             - added premultiplied alpha canvas' for RGBA, ARGB, ABGR   * */
-/* *             1.0.7 - 03/07/2026 - G. Randers-Pehrson                    * */
+/* *             1.0.7 - 03/07/2004 - G. Randers-Pehrson                    * */
 /* *             - put gamma, cms-related declarations inside #ifdef        * */
-/* *             1.0.7 - 03/10/2026 - G.R-P                                 * */
+/* *             1.0.7 - 03/10/2004 - G.R-P                                 * */
 /* *             - added conditionals around openstream/closestream         * */
 /* *                                                                        * */
-/* *             1.0.8 - 04/02/2026 - G.Juyn                                * */
+/* *             1.0.8 - 04/02/2004 - G.Juyn                                * */
 /* *             - added CRC existence & checking flags                     * */
-/* *             1.0.8 - 04/12/2026 - G.Juyn                                * */
+/* *             1.0.8 - 04/12/2004 - G.Juyn                                * */
 /* *             - added data-push mechanisms for specialized decoders      * */
-/* *             1.0.8 - 06/05/2026 - G.R-P                                 * */
+/* *             1.0.8 - 06/05/2004 - G.R-P                                 * */
 /* *             - define MNG_INCLUDE_ZLIB when MNG_USE_ZLIB_CRC is defined * */
 /* *                                                                        * */
-/* *             1.0.9 - 10/03/2026 - G.Juyn                                * */
+/* *             1.0.9 - 10/03/2004 - G.Juyn                                * */
 /* *             - added function to retrieve current FRAM delay            * */
-/* *             1.0.9 - 10/14/2026 - G.Juyn                                * */
+/* *             1.0.9 - 10/14/2004 - G.Juyn                                * */
 /* *             - added bgr565_a8 canvas-style (thanks to J. Elvander)     * */
-/* *             1.0.9 - 10/17/2026 - G.Juyn                                * */
+/* *             1.0.9 - 10/17/2004 - G.Juyn                                * */
 /* *             - fixed PPLT getchunk/putchunk routines                    * */
 /* *                                                                        * */
-/* *             1.0.10 - 03/07/2026 - (thanks to W. Manthey)               * */
+/* *             1.0.10 - 03/07/2006 - (thanks to W. Manthey)               * */
 /* *             - added CANVAS_RGB555 and CANVAS_BGR555                    * */
-/* *             1.0.10 - 04/08/2026 - G.Juyn                               * */
+/* *             1.0.10 - 04/08/2007 - G.Juyn                               * */
 /* *             - added support for mPNG proposal                          * */
-/* *             1.0.10 - 04/12/2026 - G.Juyn                               * */
+/* *             1.0.10 - 04/12/2007 - G.Juyn                               * */
 /* *             - added support for ANG proposal                           * */
 /* *                                                                        * */
 /* ************************************************************************** */
@@ -2432,72 +2432,72 @@ MNG_EXT mng_retcode MNG_DECL mng_updatemngsimplicity (mng_handle        hHandle,
 
 #define MNG_INTERNALERROR    (mng_retcode)999  /* internal inconsistancy      */
 
-#define MNG_INVALIDSIG       (mng_retcode)2026 /* invalid graphics file       */
-#define MNG_INVALIDCRC       (mng_retcode)2026 /* crc check failed            */
-#define MNG_INVALIDLENGTH    (mng_retcode)2026 /* chunklength mystifies me    */
-#define MNG_SEQUENCEERROR    (mng_retcode)2026 /* invalid chunk sequence      */
-#define MNG_CHUNKNOTALLOWED  (mng_retcode)2026 /* completely out-of-place     */
-#define MNG_MULTIPLEERROR    (mng_retcode)2026 /* only one occurence allowed  */
-#define MNG_PLTEMISSING      (mng_retcode)2026 /* indexed-color requires PLTE */
-#define MNG_IDATMISSING      (mng_retcode)2026 /* IHDR-block requires IDAT    */
-#define MNG_CANNOTBEEMPTY    (mng_retcode)2026 /* must contain some data      */
-#define MNG_GLOBALLENGTHERR  (mng_retcode)2026 /* global data incorrect       */
-#define MNG_INVALIDBITDEPTH  (mng_retcode)2026 /* bitdepth out-of-range       */
-#define MNG_INVALIDCOLORTYPE (mng_retcode)2026 /* colortype out-of-range      */
-#define MNG_INVALIDCOMPRESS  (mng_retcode)2026 /* compression method invalid  */
-#define MNG_INVALIDFILTER    (mng_retcode)2026 /* filter method invalid       */
-#define MNG_INVALIDINTERLACE (mng_retcode)2026 /* interlace method invalid    */
-#define MNG_NOTENOUGHIDAT    (mng_retcode)2026 /* ran out of compressed data  */
-#define MNG_PLTEINDEXERROR   (mng_retcode)2026 /* palette-index out-of-range  */
-#define MNG_NULLNOTFOUND     (mng_retcode)2026 /* couldn't find null-separator*/
-#define MNG_KEYWORDNULL      (mng_retcode)2026 /* keyword cannot be empty     */
-#define MNG_OBJECTUNKNOWN    (mng_retcode)2026 /* the object can't be found   */
-#define MNG_OBJECTEXISTS     (mng_retcode)2026 /* the object already exists   */
-#define MNG_TOOMUCHIDAT      (mng_retcode)2026 /* got too much compressed data*/
-#define MNG_INVSAMPLEDEPTH   (mng_retcode)2026 /* sampledepth out-of-range    */
-#define MNG_INVOFFSETSIZE    (mng_retcode)2026 /* invalid offset-size         */
-#define MNG_INVENTRYTYPE     (mng_retcode)2026 /* invalid entry-type          */
-#define MNG_ENDWITHNULL      (mng_retcode)2026 /* may not end with NULL       */
-#define MNG_INVIMAGETYPE     (mng_retcode)2026 /* invalid image_type          */
-#define MNG_INVDELTATYPE     (mng_retcode)2026 /* invalid delta_type          */
-#define MNG_INVALIDINDEX     (mng_retcode)2026 /* index-value invalid         */
-#define MNG_TOOMUCHJDAT      (mng_retcode)2026 /* got too much compressed data*/
-#define MNG_JPEGPARMSERR     (mng_retcode)2026 /* JHDR/JPEG parms do not match*/
-#define MNG_INVFILLMETHOD    (mng_retcode)2026 /* invalid fill_method         */
-#define MNG_OBJNOTCONCRETE   (mng_retcode)2026 /* object must be concrete     */
-#define MNG_TARGETNOALPHA    (mng_retcode)2026 /* object has no alpha-channel */
-#define MNG_MNGTOOCOMPLEX    (mng_retcode)2026 /* can't handle complexity     */
-#define MNG_UNKNOWNCRITICAL  (mng_retcode)2026 /* unknown critical chunk found*/
-#define MNG_UNSUPPORTEDNEED  (mng_retcode)2026 /* nEED requirement unsupported*/
-#define MNG_INVALIDDELTA     (mng_retcode)2026 /* Delta operation illegal     */
-#define MNG_INVALIDMETHOD    (mng_retcode)2026 /* invalid MAGN method         */
-#define MNG_IMPROBABLELENGTH (mng_retcode)2026 /* impropable chunk length     */
-#define MNG_INVALIDBLOCK     (mng_retcode)2026 /* invalid delta block         */
-#define MNG_INVALIDEVENT     (mng_retcode)2026 /* invalid event_type          */
-#define MNG_INVALIDMASK      (mng_retcode)2026 /* invalid mask_type           */
-#define MNG_NOMATCHINGLOOP   (mng_retcode)2026 /* ENDL without matching LOOP  */
-#define MNG_SEEKNOTFOUND     (mng_retcode)2026 /* EvNT points to unknown SEEK */
-#define MNG_OBJNOTABSTRACT   (mng_retcode)2026 /* object must be abstract     */
-#define MNG_TERMSEQERROR     (mng_retcode)2026 /* TERM in wrong place         */
-#define MNG_INVALIDFIELDVAL  (mng_retcode)2026 /* invalid fieldvalue (generic)*/
-#define MNG_INVALIDWIDTH     (mng_retcode)2026 /* invalid frame/image width   */
-#define MNG_INVALIDHEIGHT    (mng_retcode)2026 /* invalid frame/image height  */
+#define MNG_INVALIDSIG       (mng_retcode)1025 /* invalid graphics file       */
+#define MNG_INVALIDCRC       (mng_retcode)1027 /* crc check failed            */
+#define MNG_INVALIDLENGTH    (mng_retcode)1028 /* chunklength mystifies me    */
+#define MNG_SEQUENCEERROR    (mng_retcode)1029 /* invalid chunk sequence      */
+#define MNG_CHUNKNOTALLOWED  (mng_retcode)1030 /* completely out-of-place     */
+#define MNG_MULTIPLEERROR    (mng_retcode)1031 /* only one occurence allowed  */
+#define MNG_PLTEMISSING      (mng_retcode)1032 /* indexed-color requires PLTE */
+#define MNG_IDATMISSING      (mng_retcode)1033 /* IHDR-block requires IDAT    */
+#define MNG_CANNOTBEEMPTY    (mng_retcode)1034 /* must contain some data      */
+#define MNG_GLOBALLENGTHERR  (mng_retcode)1035 /* global data incorrect       */
+#define MNG_INVALIDBITDEPTH  (mng_retcode)1036 /* bitdepth out-of-range       */
+#define MNG_INVALIDCOLORTYPE (mng_retcode)1037 /* colortype out-of-range      */
+#define MNG_INVALIDCOMPRESS  (mng_retcode)1038 /* compression method invalid  */
+#define MNG_INVALIDFILTER    (mng_retcode)1039 /* filter method invalid       */
+#define MNG_INVALIDINTERLACE (mng_retcode)1040 /* interlace method invalid    */
+#define MNG_NOTENOUGHIDAT    (mng_retcode)1041 /* ran out of compressed data  */
+#define MNG_PLTEINDEXERROR   (mng_retcode)1042 /* palette-index out-of-range  */
+#define MNG_NULLNOTFOUND     (mng_retcode)1043 /* couldn't find null-separator*/
+#define MNG_KEYWORDNULL      (mng_retcode)1044 /* keyword cannot be empty     */
+#define MNG_OBJECTUNKNOWN    (mng_retcode)1045 /* the object can't be found   */
+#define MNG_OBJECTEXISTS     (mng_retcode)1046 /* the object already exists   */
+#define MNG_TOOMUCHIDAT      (mng_retcode)1047 /* got too much compressed data*/
+#define MNG_INVSAMPLEDEPTH   (mng_retcode)1048 /* sampledepth out-of-range    */
+#define MNG_INVOFFSETSIZE    (mng_retcode)1049 /* invalid offset-size         */
+#define MNG_INVENTRYTYPE     (mng_retcode)1050 /* invalid entry-type          */
+#define MNG_ENDWITHNULL      (mng_retcode)1051 /* may not end with NULL       */
+#define MNG_INVIMAGETYPE     (mng_retcode)1052 /* invalid image_type          */
+#define MNG_INVDELTATYPE     (mng_retcode)1053 /* invalid delta_type          */
+#define MNG_INVALIDINDEX     (mng_retcode)1054 /* index-value invalid         */
+#define MNG_TOOMUCHJDAT      (mng_retcode)1055 /* got too much compressed data*/
+#define MNG_JPEGPARMSERR     (mng_retcode)1056 /* JHDR/JPEG parms do not match*/
+#define MNG_INVFILLMETHOD    (mng_retcode)1057 /* invalid fill_method         */
+#define MNG_OBJNOTCONCRETE   (mng_retcode)1058 /* object must be concrete     */
+#define MNG_TARGETNOALPHA    (mng_retcode)1059 /* object has no alpha-channel */
+#define MNG_MNGTOOCOMPLEX    (mng_retcode)1060 /* can't handle complexity     */
+#define MNG_UNKNOWNCRITICAL  (mng_retcode)1061 /* unknown critical chunk found*/
+#define MNG_UNSUPPORTEDNEED  (mng_retcode)1062 /* nEED requirement unsupported*/
+#define MNG_INVALIDDELTA     (mng_retcode)1063 /* Delta operation illegal     */
+#define MNG_INVALIDMETHOD    (mng_retcode)1064 /* invalid MAGN method         */
+#define MNG_IMPROBABLELENGTH (mng_retcode)1065 /* impropable chunk length     */
+#define MNG_INVALIDBLOCK     (mng_retcode)1066 /* invalid delta block         */
+#define MNG_INVALIDEVENT     (mng_retcode)1067 /* invalid event_type          */
+#define MNG_INVALIDMASK      (mng_retcode)1068 /* invalid mask_type           */
+#define MNG_NOMATCHINGLOOP   (mng_retcode)1069 /* ENDL without matching LOOP  */
+#define MNG_SEEKNOTFOUND     (mng_retcode)1070 /* EvNT points to unknown SEEK */
+#define MNG_OBJNOTABSTRACT   (mng_retcode)1071 /* object must be abstract     */
+#define MNG_TERMSEQERROR     (mng_retcode)1072 /* TERM in wrong place         */
+#define MNG_INVALIDFIELDVAL  (mng_retcode)1073 /* invalid fieldvalue (generic)*/
+#define MNG_INVALIDWIDTH     (mng_retcode)1074 /* invalid frame/image width   */
+#define MNG_INVALIDHEIGHT    (mng_retcode)1075 /* invalid frame/image height  */
 
-#define MNG_INVALIDCNVSTYLE  (mng_retcode)2026 /* can't make anything of this */
-#define MNG_WRONGCHUNK       (mng_retcode)2026 /* accessing the wrong chunk   */
-#define MNG_INVALIDENTRYIX   (mng_retcode)2026 /* accessing the wrong entry   */
-#define MNG_NOHEADER         (mng_retcode)2026 /* must have had header first  */
-#define MNG_NOCORRCHUNK      (mng_retcode)2026 /* can't find parent chunk     */
-#define MNG_NOMHDR           (mng_retcode)2026 /* no MNG header available     */
+#define MNG_INVALIDCNVSTYLE  (mng_retcode)2049 /* can't make anything of this */
+#define MNG_WRONGCHUNK       (mng_retcode)2050 /* accessing the wrong chunk   */
+#define MNG_INVALIDENTRYIX   (mng_retcode)2051 /* accessing the wrong entry   */
+#define MNG_NOHEADER         (mng_retcode)2052 /* must have had header first  */
+#define MNG_NOCORRCHUNK      (mng_retcode)2053 /* can't find parent chunk     */
+#define MNG_NOMHDR           (mng_retcode)2054 /* no MNG header available     */
 
-#define MNG_IMAGETOOLARGE    (mng_retcode)2026 /* input-image way too big     */
-#define MNG_NOTANANIMATION   (mng_retcode)2026 /* file not a MNG              */
-#define MNG_FRAMENRTOOHIGH   (mng_retcode)2026 /* frame-nr out-of-range       */
-#define MNG_LAYERNRTOOHIGH   (mng_retcode)2026 /* layer-nr out-of-range       */
-#define MNG_PLAYTIMETOOHIGH  (mng_retcode)2026 /* playtime out-of-range       */
-#define MNG_FNNOTIMPLEMENTED (mng_retcode)2026 /* function not yet available  */
+#define MNG_IMAGETOOLARGE    (mng_retcode)4097 /* input-image way too big     */
+#define MNG_NOTANANIMATION   (mng_retcode)4098 /* file not a MNG              */
+#define MNG_FRAMENRTOOHIGH   (mng_retcode)4099 /* frame-nr out-of-range       */
+#define MNG_LAYERNRTOOHIGH   (mng_retcode)4100 /* layer-nr out-of-range       */
+#define MNG_PLAYTIMETOOHIGH  (mng_retcode)4101 /* playtime out-of-range       */
+#define MNG_FNNOTIMPLEMENTED (mng_retcode)4102 /* function not yet available  */
 
-#define MNG_IMAGEFROZEN      (mng_retcode)2026 /* stopped displaying          */
+#define MNG_IMAGEFROZEN      (mng_retcode)8193 /* stopped displaying          */
 
 #define MNG_LCMS_NOHANDLE    1                 /* LCMS returned NULL handle   */
 #define MNG_LCMS_NOMEM       2                 /* LCMS returned NULL gammatab */
@@ -2556,7 +2556,7 @@ MNG_EXT mng_retcode MNG_DECL mng_updatemngsimplicity (mng_handle        hHandle,
 #define MNG_CANVAS_PIXELTYPE(C)  (C & 0x000000FFL)
 #define MNG_CANVAS_BITDEPTH(C)   (C & 0x00000100L)
 #define MNG_CANVAS_HASALPHA(C)   (C & 0x00001000L)
-#define MNG_CANVAS_ALPHAFIRST(C) (C & 0x00002026L)
+#define MNG_CANVAS_ALPHAFIRST(C) (C & 0x00002000L)
 #define MNG_CANVAS_ALPHASEPD(C)  (C & 0x00004000L)
 #define MNG_CANVAS_ALPHAPM(C)    (C & 0x00008000L)
 #define MNG_CANVAS_HASFILLER(C)  (C & 0x00010000L)

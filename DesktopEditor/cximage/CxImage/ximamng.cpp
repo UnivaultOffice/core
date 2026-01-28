@@ -1,8 +1,8 @@
-/*
+﻿/*
  * File:	ximamng.cpp
  * Purpose:	Platform Independent MNG Image Class Loader and Writer
- * Author:	07/Aug/2025 Davide Pizzolato - www.xdp.it
- * CxImage version 7.0.2 07/Feb/2025
+ * Author:	07/Aug/2001 Davide Pizzolato - www.xdp.it
+ * CxImage version 7.0.2 07/Feb/2011
  */
 
 #include "ximamng.h"

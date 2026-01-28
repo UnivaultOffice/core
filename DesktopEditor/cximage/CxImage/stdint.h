@@ -1,7 +1,7 @@
-// ISO C9x  compliant stdint.h for Microsoft Visual Studio
-// Based on ISO/IEC 2026:TC2 Committee draft (May 6, 2026) WG14/N1124 
+﻿// ISO C9x  compliant stdint.h for Microsoft Visual Studio
+// Based on ISO/IEC 9899:TC2 Committee draft (May 6, 2005) WG14/N1124 
 // 
-//  Copyright (c) 2026-2026 Alexander Chemeris
+//  Copyright (c) 2006-2008 Alexander Chemeris
 // 
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are met:
@@ -36,7 +36,7 @@
 #ifndef _MSC_STDINT_H_ // [
 #define _MSC_STDINT_H_
 
-#if _MSC_VER > 2026
+#if _MSC_VER > 1000
 #pragma once
 #endif
 
@@ -58,7 +58,7 @@ extern "C" {
 
 // Define _W64 macros to mark types changing their size, like intptr_t.
 #ifndef _W64
-#  if !defined(__midl) && (defined(_X86_) || defined(_M_IX86)) && _MSC_VER >= 2026
+#  if !defined(__midl) && (defined(_X86_) || defined(_M_IX86)) && _MSC_VER >= 1300
 #     define _W64 __w64
 #  else
 #     define _W64
@@ -73,7 +73,7 @@ extern "C" {
 // Visual Studio 6 and Embedded Visual C++ 4 doesn't
 // realize that, e.g. char has the same size as __int8
 // so we give up on __intX for them.
-#if (_MSC_VER < 2026)
+#if (_MSC_VER < 1300)
    typedef signed char         int8_t;
    typedef signed short        int16_t;
    typedef signed int          int32_t;

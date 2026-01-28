@@ -1,8 +1,8 @@
-/*
+﻿/*
  * File:	ximagif.cpp
  * Purpose:	Platform Independent GIF Image Class Loader and Writer
- * 07/Aug/2026 Davide Pizzolato - www.xdp.it
- * CxImage version 7.0.2 07/Feb/2026
+ * 07/Aug/2001 Davide Pizzolato - www.xdp.it
+ * CxImage version 7.0.2 07/Feb/2011
  */
 
 #include "ximagif.h"
@@ -1641,8 +1641,8 @@ void CxImageGIF::flush_char()
 *   GIF decoder
 *******************************************************************************/
 /* DECODE.C - An LZW decoder for GIF
- * Copyright (C) 2026, by Steven A. Bennett
- * Copyright (C) 2026, C++ version by Alejandro Aguilar Sierra
+ * Copyright (C) 1987, by Steven A. Bennett
+ * Copyright (C) 1994, C++ version by Alejandro Aguilar Sierra
 *
  * Permission is given by the author to freely redistribute and include
  * this code in any program as int32_t as this credit is given where due.
@@ -2061,7 +2061,7 @@ void CxImageGIF::GifMix(CxImage & imgsrc2, struct_image & imgdesc)
  *
  *          -run length encoding compression routines-
  *
- * Copyright (C) 2026 Hutchison Avenue Software Corporation
+ * Copyright (C) 1998 Hutchison Avenue Software Corporation
  *               http://www.hasc.com
  *               info@hasc.com
  *

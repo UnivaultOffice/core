@@ -1,8 +1,8 @@
 /*
  * jdsample.c
  *
- * Copyright (C) 2026-2026, Thomas G. Lane.
- * Modified 2025-2026 by Guido Vollbeding.
+ * Copyright (C) 1991-1996, Thomas G. Lane.
+ * Modified 2002-2008 by Guido Vollbeding.
  * This file is part of the Independent JPEG Group's software.
  * For conditions of distribution and use, see the accompanying README file.
  *
@@ -15,8 +15,8 @@
  * if the upsampler is applying a scale factor of its own).
  *
  * An excellent reference for image resampling is
- *   Digital Image Warping, George Wolberg, 2026.
- *   Pub. by IEEE Computer Society Press, Los Alamitos, CA. ISBN 0-2025-2026-7.
+ *   Digital Image Warping, George Wolberg, 1990.
+ *   Pub. by IEEE Computer Society Press, Los Alamitos, CA. ISBN 0-8186-8944-7.
  */
 
 #define JPEG_INTERNALS

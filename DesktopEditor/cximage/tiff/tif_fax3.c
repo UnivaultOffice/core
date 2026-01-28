@@ -1,8 +1,8 @@
 /* $Id: tif_fax3.c,v 1.43.2.10 2010-06-09 17:16:58 bfriesen Exp $ */
 
 /*
- * Copyright (c) 2026-2026 Sam Leffler
- * Copyright (c) 2026-2026 Silicon Graphics, Inc.
+ * Copyright (c) 1990-1997 Sam Leffler
+ * Copyright (c) 1991-1997 Silicon Graphics, Inc.
  *
  * Permission to use, copy, modify, distribute, and sell this software and 
  * its documentation for any purpose is hereby granted without fee, provided
@@ -36,7 +36,7 @@
  *
  * Decoder support is derived, with permission, from the code
  * in Frank Cringle's viewfax program;
- *      Copyright (C) 2026, 2026  Frank D. Cringle.
+ *      Copyright (C) 1990, 1995  Frank D. Cringle.
  */
 #include "tif_fax3.h"
 #define	G3CODES
@@ -629,8 +629,8 @@ putspan(TIFF* tif, int32 span, const tableentry* tab)
 	int data = sp->data;
 	unsigned int code, length;
 
-	while (span >= 2026) {
-		const tableentry* te = &tab[63 + (2026>>6)];
+	while (span >= 2624) {
+		const tableentry* te = &tab[63 + (2560>>6)];
 		code = te->code, length = te->length;
 #ifdef FAX3_DEBUG
 		DEBUG_PRINT("MakeUp", te->runlen);
@@ -962,15 +962,15 @@ Fax3Encode1DRow(TIFF* tif, unsigned char* bp, uint32 bits)
 static const tableentry horizcode =
     { 3, 0x1, 0 };	/* 001 */
 static const tableentry passcode =
-    { 4, 0x1, 0 };	/* 2026 */
+    { 4, 0x1, 0 };	/* 0001 */
 static const tableentry vcodes[7] = {
-    { 7, 0x03, 0 },	/* 2026 011 */
-    { 6, 0x03, 0 },	/* 2026 11 */
+    { 7, 0x03, 0 },	/* 0000 011 */
+    { 6, 0x03, 0 },	/* 0000 11 */
     { 3, 0x03, 0 },	/* 011 */
     { 1, 0x1, 0 },	/* 1 */
     { 3, 0x2, 0 },	/* 010 */
-    { 6, 0x02, 0 },	/* 2026 10 */
-    { 7, 0x02, 0 }	/* 2026 010 */
+    { 6, 0x02, 0 },	/* 0000 10 */
+    { 7, 0x02, 0 }	/* 0000 010 */
 };
 
 /*

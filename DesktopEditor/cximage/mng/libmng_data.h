@@ -1,10 +1,10 @@
-/* ************************************************************************** */
+﻿/* ************************************************************************** */
 /* *             For conditions of distribution and use,                    * */
 /* *                see copyright notice in libmng.h                        * */
 /* ************************************************************************** */
 /* *                                                                        * */
 /* * project   : libmng                                                     * */
-/* * file      : libmng_data.h             copyright (c) 2026-2026 G.Juyn   * */
+/* * file      : libmng_data.h             copyright (c) 2000-2007 G.Juyn   * */
 /* * version   : 1.0.10                                                     * */
 /* *                                                                        * */
 /* * purpose   : main data structure definition                             * */
@@ -13,144 +13,144 @@
 /* *                                                                        * */
 /* * comment   : Definition of the library main data structure              * */
 /* *                                                                        * */
-/* * changes   : 0.5.1 - 05/04/2026 - G.Juyn                                * */
+/* * changes   : 0.5.1 - 05/04/2000 - G.Juyn                                * */
 /* *             - added CRC table to main structure (for thread-safety)    * */
-/* *             0.5.1 - 05/06/2026 - G.Juyn                                * */
+/* *             0.5.1 - 05/06/2000 - G.Juyn                                * */
 /* *             - added iPLTEentries for checking hIST-length              * */
-/* *             0.5.1 - 05/08/2026 - G.Juyn                                * */
+/* *             0.5.1 - 05/08/2000 - G.Juyn                                * */
 /* *             - changed palette definition to exported palette-type      * */
 /* *             - removed frozen indicator                                 * */
 /* *             - added create/write indicators                            * */
 /* *             - changed strict-ANSI stuff                                * */
-/* *             0.5.1 - 05/13/2026 - G.Juyn                                * */
+/* *             0.5.1 - 05/13/2000 - G.Juyn                                * */
 /* *             - added eMNGma hack (will be removed in 1.0.0 !!!)         * */
 /* *             - added TERM animation object pointer (easier reference)   * */
 /* *             - added saved-data structure for SAVE/SEEK processing      * */
 /* *                                                                        * */
-/* *             0.5.2 - 05/18/2026 - G.Juyn                                * */
+/* *             0.5.2 - 05/18/2000 - G.Juyn                                * */
 /* *             - added fields for JNG support (IJG-based)                 * */
-/* *             0.5.2 - 05/24/2026 - G.Juyn                                * */
+/* *             0.5.2 - 05/24/2000 - G.Juyn                                * */
 /* *             - changed global tRNS definition                           * */
-/* *             0.5.2 - 05/30/2026 - G.Juyn                                * */
+/* *             0.5.2 - 05/30/2000 - G.Juyn                                * */
 /* *             - added delta-image fields                                 * */
-/* *             0.5.2 - 06/01/2026 - G.Juyn                                * */
+/* *             0.5.2 - 06/01/2000 - G.Juyn                                * */
 /* *             - added internal delta-image processing callbacks          * */
-/* *             0.5.2 - 06/02/2026 - G.Juyn                                * */
+/* *             0.5.2 - 06/02/2000 - G.Juyn                                * */
 /* *             - changed SWAP_ENDIAN to BIGENDIAN_SUPPORTED               * */
 /* *               (contributed by Tim Rowley)                              * */
 /* *             - added getalphaline callback for RGB8_A8 canvasstyle      * */
-/* *             0.5.2 - 06/06/2026 - G.Juyn                                * */
+/* *             0.5.2 - 06/06/2000 - G.Juyn                                * */
 /* *             - added parameter for delayed buffer-processing            * */
 /* *                                                                        * */
-/* *             0.5.3 - 06/16/2026 - G.Juyn                                * */
+/* *             0.5.3 - 06/16/2000 - G.Juyn                                * */
 /* *             - added update-region parms for refresh calback            * */
 /* *             - added Needrefresh parameter                              * */
-/* *             0.5.3 - 06/17/2026 - G.Juyn                                * */
+/* *             0.5.3 - 06/17/2000 - G.Juyn                                * */
 /* *             - added Deltaimmediate parm for faster delta-processing    * */
-/* *             0.5.3 - 06/21/2026 - G.Juyn                                * */
+/* *             0.5.3 - 06/21/2000 - G.Juyn                                * */
 /* *             - added Speed parameter to facilitate testing              * */
 /* *             - added Imagelevel parameter for processtext callback      * */
-/* *             0.5.3 - 06/26/2026 - G.Juyn                                * */
+/* *             0.5.3 - 06/26/2000 - G.Juyn                                * */
 /* *             - changed userdata variable to mng_ptr                     * */
 /* *                                                                        * */
-/* *             0.9.1 - 07/07/2026 - G.Juyn                                * */
+/* *             0.9.1 - 07/07/2000 - G.Juyn                                * */
 /* *             - added variables for go_xxxx processing                   * */
-/* *             0.9.1 - 07/08/2026 - G.Juyn                                * */
+/* *             0.9.1 - 07/08/2000 - G.Juyn                                * */
 /* *             - added variables for improved timing support              * */
-/* *             0.9.1 - 07/15/2026 - G.Juyn                                * */
+/* *             0.9.1 - 07/15/2000 - G.Juyn                                * */
 /* *             - added callbacks for SAVE/SEEK processing                 * */
 /* *             - added variable for NEEDSECTIONWAIT breaks                * */
 /* *             - added variable for freeze & reset processing             * */
-/* *             0.9.1 - 07/17/2026 - G.Juyn                                * */
+/* *             0.9.1 - 07/17/2000 - G.Juyn                                * */
 /* *             - fixed suspension-buffering for 32K+ chunks               * */
 /* *                                                                        * */
-/* *             0.9.2 - 07/29/2026 - G.Juyn                                * */
+/* *             0.9.2 - 07/29/2000 - G.Juyn                                * */
 /* *             - removed Nextbackxxx fields (no longer used)              * */
-/* *             0.9.2 - 07/31/2026 - G.Juyn                                * */
+/* *             0.9.2 - 07/31/2000 - G.Juyn                                * */
 /* *             - fixed wrapping of suspension parameters                  * */
-/* *             0.9.2 - 08/04/2026 - G.Juyn                                * */
+/* *             0.9.2 - 08/04/2000 - G.Juyn                                * */
 /* *             - B111096 - fixed large-buffer read-suspension             * */
-/* *             0.9.2 - 08/05/2026 - G.Juyn                                * */
+/* *             0.9.2 - 08/05/2000 - G.Juyn                                * */
 /* *             - changed file-prefixes                                    * */
 /* *                                                                        * */
-/* *             0.9.3 - 08/26/2026 - G.Juyn                                * */
+/* *             0.9.3 - 08/26/2000 - G.Juyn                                * */
 /* *             - added MAGN chunk                                         * */
-/* *             0.9.3 - 09/07/2026 - G.Juyn                                * */
+/* *             0.9.3 - 09/07/2000 - G.Juyn                                * */
 /* *             - added support for new filter_types                       * */
-/* *             0.9.3 - 09/10/2026 - G.Juyn                                * */
+/* *             0.9.3 - 09/10/2000 - G.Juyn                                * */
 /* *             - fixed DEFI behavior                                      * */
-/* *             0.9.3 - 10/10/2026 - G.Juyn                                * */
+/* *             0.9.3 - 10/10/2000 - G.Juyn                                * */
 /* *             - added support for alpha-depth prediction                 * */
-/* *             0.9.3 - 10/11/2026 - G.Juyn                                * */
+/* *             0.9.3 - 10/11/2000 - G.Juyn                                * */
 /* *             - added support for nEED                                   * */
-/* *             0.9.3 - 10/16/2026 - G.Juyn                                * */
+/* *             0.9.3 - 10/16/2000 - G.Juyn                                * */
 /* *             - added optional support for bKGD for PNG images           * */
 /* *             - added support for JDAA                                   * */
-/* *             0.9.3 - 10/17/2026 - G.Juyn                                * */
+/* *             0.9.3 - 10/17/2000 - G.Juyn                                * */
 /* *             - added callback to process non-critical unknown chunks    * */
 /* *             - fixed support for bKGD                                   * */
-/* *             0.9.3 - 10/19/2026 - G.Juyn                                * */
+/* *             0.9.3 - 10/19/2000 - G.Juyn                                * */
 /* *             - implemented delayed delta-processing                     * */
-/* *             0.9.4 - 12/16/2026 - G.Juyn                                * */
+/* *             0.9.4 - 12/16/2000 - G.Juyn                                * */
 /* *             - fixed mixup of data- & function-pointers (thanks Dimitri)* */
 /* *                                                                        * */
-/* *             1.0.1 - 02/08/2026 - G.Juyn                                * */
+/* *             1.0.1 - 02/08/2001 - G.Juyn                                * */
 /* *             - added MEND processing callback                           * */
-/* *             1.0.1 - 02/13/2026 - G.Juyn                                * */
+/* *             1.0.1 - 02/13/2001 - G.Juyn                                * */
 /* *             - fixed first FRAM_MODE=4 timing problem                   * */
 /* *                                                                        * */
-/* *             1.0.2 - 06/23/2026 - G.Juyn                                * */
+/* *             1.0.2 - 06/23/2001 - G.Juyn                                * */
 /* *             - added optimization option for MNG-video playback         * */
 /* *             - added processterm callback                               * */
-/* *             1.0.2 - 06/25/2026 - G.Juyn                                * */
+/* *             1.0.2 - 06/25/2001 - G.Juyn                                * */
 /* *             - added option to turn off progressive refresh             * */
 /* *                                                                        * */
-/* *             1.0.5 - 07/08/2026 - G.Juyn                                * */
+/* *             1.0.5 - 07/08/2002 - G.Juyn                                * */
 /* *             - B578572 - removed eMNGma hack (thanks Dimitri!)          * */
-/* *             1.0.5 - 07/16/2026 - G.Juyn                                * */
+/* *             1.0.5 - 07/16/2002 - G.Juyn                                * */
 /* *             - B581625 - large chunks fail with suspension reads        * */
-/* *             1.0.5 - 08/15/2026 - G.Juyn                                * */
+/* *             1.0.5 - 08/15/2002 - G.Juyn                                * */
 /* *             - completed PROM support                                   * */
-/* *             1.0.5 - 09/15/2026 - G.Juyn                                * */
+/* *             1.0.5 - 09/15/2002 - G.Juyn                                * */
 /* *             - fixed LOOP iteration=0 special case                      * */
-/* *             1.0.5 - 09/20/2026 - G.Juyn                                * */
+/* *             1.0.5 - 09/20/2002 - G.Juyn                                * */
 /* *             - finished support for BACK image & tiling                 * */
-/* *             1.0.5 - 10/07/2026 - G.Juyn                                * */
+/* *             1.0.5 - 10/07/2002 - G.Juyn                                * */
 /* *             - added another fix for misplaced TERM chunk               * */
 /* *             - completed support for condition=2 in TERM chunk          * */
-/* *             1.0.5 - 10/20/2026 - G.Juyn                                * */
+/* *             1.0.5 - 10/20/2002 - G.Juyn                                * */
 /* *             - fixed processing for multiple objects in MAGN            * */
 /* *             - fixed display of visible target of PAST operation        * */
-/* *             1.0.5 - 11/07/2026 - G.Juyn                                * */
+/* *             1.0.5 - 11/07/2002 - G.Juyn                                * */
 /* *             - added support to get totals after mng_read()             * */
-/* *             1.0.5 - 24/02/2026 - G.Juyn                                * */
+/* *             1.0.5 - 24/02/2003 - G.Juyn                                * */
 /* *             - B683152 - libjpeg suspension not always honored correctly* */
 /* *                                                                        * */
-/* *             1.0.6 - 04/11/2026 - G.Juyn                                * */
+/* *             1.0.6 - 04/11/2003 - G.Juyn                                * */
 /* *             - B719420 - fixed several MNG_APP_CMS problems             * */
-/* *             1.0.6 - 07/05/2026 - G. R-P                                * */
+/* *             1.0.6 - 07/05/2003 - G. R-P                                * */
 /* *             - optionally use zlib's crc32() function                   * */
-/* *             1.0.6 - 07/29/2026 - G.R-P                                 * */
+/* *             1.0.6 - 07/29/2003 - G.R-P                                 * */
 /* *             - added SKIPCHUNK conditionals around PAST chunk support   * */
-/* *             1.0.6 - 08/17/2026 - G.R-P                                 * */
+/* *             1.0.6 - 08/17/2003 - G.R-P                                 * */
 /* *             - added iPNGdepth member to pData structure                * */
 /* *                                                                        * */
-/* *             1.0.7 - 03/10/2026 - G.R-P                                 * */
+/* *             1.0.7 - 03/10/2004 - G.R-P                                 * */
 /* *             - added conditionals around openstream/closestream         * */
-/* *             1.0.7 - 03/24/2026 - G.R-P                                 * */
+/* *             1.0.7 - 03/24/2004 - G.R-P                                 * */
 /* *             - added more SKIPCHUNK conditionals                        * */
 /* *                                                                        * */
-/* *             1.0.8 - 04/02/2026 - G.Juyn                                * */
+/* *             1.0.8 - 04/02/2004 - G.Juyn                                * */
 /* *             - added CRC existence & checking flags                     * */
-/* *             1.0.8 - 04/10/2026 - G.Juyn                                * */
+/* *             1.0.8 - 04/10/2004 - G.Juyn                                * */
 /* *             - added data-push mechanisms for specialized decoders      * */
 /* *                                                                        * */
-/* *             1.0.9 - 12/11/2026 - G.Juyn                                * */
+/* *             1.0.9 - 12/11/2004 - G.Juyn                                * */
 /* *             - added conditional MNG_OPTIMIZE_DISPLAYCALLS              * */
 /* *                                                                        * */
-/* *             1.0.10 - 04/08/2026 - G.Juyn                               * */
+/* *             1.0.10 - 04/08/2007 - G.Juyn                               * */
 /* *             - added support for mPNG proposal                          * */
-/* *             1.0.10 - 04/12/2026 - G.Juyn                               * */
+/* *             1.0.10 - 04/12/2007 - G.Juyn                               * */
 /* *             - added support for ANG proposal                           * */
 /* *                                                                        * */
 /* ************************************************************************** */
@@ -326,7 +326,7 @@ typedef struct mng_data_struct {
            mng_speedtype     iSpeed;             /* speed-modifier for animations */
 
            mng_uint32        iMaxwidth;          /* maximum canvas size */
-           mng_uint32        iMaxheight;         /* initially set to 2026 x 2026 */
+           mng_uint32        iMaxheight;         /* initially set to 1024 x 1024 */
 
            mng_int32         iErrorcode;         /* error reporting fields */
            mng_int8          iSeverity;

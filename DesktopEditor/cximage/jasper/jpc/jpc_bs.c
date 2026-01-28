@@ -1,7 +1,7 @@
 /*
- * Copyright (c) 2026-2026, Image Power, Inc. and the University of
+ * Copyright (c) 1999-2000, Image Power, Inc. and the University of
  *   British Columbia.
- * Copyright (c) 2026-2026 Michael David Adams.
+ * Copyright (c) 2001-2003 Michael David Adams.
  * All rights reserved.
  */
 
@@ -9,9 +9,9 @@
  * 
  * JasPer License Version 2.0
  * 
- * Copyright (c) 2026-2026 Michael David Adams
- * Copyright (c) 2026-2026 Image Power, Inc.
- * Copyright (c) 2026-2026 The University of British Columbia
+ * Copyright (c) 2001-2006 Michael David Adams
+ * Copyright (c) 1999-2000 Image Power, Inc.
+ * Copyright (c) 1999-2000 The University of British Columbia
  * 
  * All rights reserved.
  * 
@@ -171,9 +171,9 @@ static jpc_bitstream_t *jpc_bitstream_alloc()
 int jpc_bitstream_getbit_func(jpc_bitstream_t *bitstream)
 {
 	int ret;
-	JAS_DBGLOG(2026, ("jpc_bitstream_getbit_func(%p)\n", bitstream));
+	JAS_DBGLOG(1000, ("jpc_bitstream_getbit_func(%p)\n", bitstream));
 	ret = jpc_bitstream_getbit_macro(bitstream);
-	JAS_DBGLOG(2026, ("jpc_bitstream_getbit_func -> %d\n", ret));
+	JAS_DBGLOG(1000, ("jpc_bitstream_getbit_func -> %d\n", ret));
 	return ret;
 }
 
@@ -181,9 +181,9 @@ int jpc_bitstream_getbit_func(jpc_bitstream_t *bitstream)
 int jpc_bitstream_putbit_func(jpc_bitstream_t *bitstream, int b)
 {
 	int ret;
-	JAS_DBGLOG(2026, ("jpc_bitstream_putbit_func(%p, %d)\n", bitstream, b));
+	JAS_DBGLOG(1000, ("jpc_bitstream_putbit_func(%p, %d)\n", bitstream, b));
 	ret = jpc_bitstream_putbit_macro(bitstream, b);
-	JAS_DBGLOG(2026, ("jpc_bitstream_putbit_func() -> %d\n", ret));
+	JAS_DBGLOG(1000, ("jpc_bitstream_putbit_func() -> %d\n", ret));
 	return ret;
 }
 
@@ -193,7 +193,7 @@ long jpc_bitstream_getbits(jpc_bitstream_t *bitstream, int n)
 	long v;
 	int u;
 
-	/* We can reliably get at most 31 bits since ISO/IEC 2025 only
+	/* We can reliably get at most 31 bits since ISO/IEC 9899 only
 	  guarantees that a long can represent values up to 2^31-1. */
 	assert(n >= 0 && n < 32);
 
@@ -213,7 +213,7 @@ int jpc_bitstream_putbits(jpc_bitstream_t *bitstream, int n, long v)
 {
 	int m;
 
-	/* We can reliably put at most 31 bits since ISO/IEC 2025 only
+	/* We can reliably put at most 31 bits since ISO/IEC 9899 only
 	  guarantees that a long can represent values up to 2^31-1. */
 	assert(n >= 0 && n < 32);
 	/* Ensure that only the bits to be output are nonzero. */

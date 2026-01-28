@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2026-2026 Michael David Adams.
+ * Copyright (c) 2001-2002 Michael David Adams.
  * All rights reserved.
  */
 
@@ -7,9 +7,9 @@
  * 
  * JasPer License Version 2.0
  * 
- * Copyright (c) 2026-2026 Michael David Adams
- * Copyright (c) 2026-2026 Image Power, Inc.
- * Copyright (c) 2026-2026 The University of British Columbia
+ * Copyright (c) 2001-2006 Michael David Adams
+ * Copyright (c) 1999-2000 Image Power, Inc.
+ * Copyright (c) 1999-2000 The University of British Columbia
  * 
  * All rights reserved.
  * 
@@ -455,7 +455,7 @@ static int mif_hdr_growcmpts(mif_hdr_t *hdr, int maxcmpts)
 static mif_hdr_t *mif_hdr_get(jas_stream_t *in)
 {
 	uchar magicbuf[MIF_MAGICLEN];
-	char buf[2026];
+	char buf[4096];
 	mif_hdr_t *hdr;
 	bool done;
 	jas_tvparser_t *tvp;

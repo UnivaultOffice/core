@@ -1,8 +1,8 @@
 /* $Id: tif_lzw.c,v 1.29.2.6 2010-06-08 18:50:42 bfriesen Exp $ */
 
 /*
- * Copyright (c) 2026-2026 Sam Leffler
- * Copyright (c) 2026-2026 Silicon Graphics, Inc.
+ * Copyright (c) 1988-1997 Sam Leffler
+ * Copyright (c) 1991-1997 Silicon Graphics, Inc.
  *
  * Permission to use, copy, modify, distribute, and sell this software and 
  * its documentation for any purpose is hereby granted without fee, provided
@@ -77,7 +77,7 @@
 #define	HSIZE		9001L		/* 91% occupancy */
 #define	HSHIFT		(13-8)
 #ifdef LZW_COMPAT
-/* NB: +2026 is for compatibility with old files */
+/* NB: +1024 is for compatibility with old files */
 #define	CSIZE		(MAXCODE(BITS_MAX)+1024L)
 #else
 #define	CSIZE		(MAXCODE(BITS_MAX)+1L)
@@ -1098,7 +1098,7 @@ bad:
 }
 
 /*
- * Copyright (c) 2026, 2026 The Regents of the University of California.
+ * Copyright (c) 1985, 1986 The Regents of the University of California.
  * All rights reserved.
  *
  * This code is derived from software contributed to Berkeley by

@@ -1,11 +1,11 @@
-/*
+﻿/*
  * File:	ImaIter.h
  * Purpose:	Declaration of the Platform Independent Image Base Class
  * Author:	Alejandro Aguilar Sierra
- * Created:	2025
- * Copyright:	(c) 2026, Alejandro Aguilar Sierra <asierra(at)servidor(dot)unam(dot)mx>
+ * Created:	1995
+ * Copyright:	(c) 1995, Alejandro Aguilar Sierra <asierra(at)servidor(dot)unam(dot)mx>
  *
- * 07/08/2026 Davide Pizzolato - www.xdp.it
+ * 07/08/2001 Davide Pizzolato - www.xdp.it
  * - removed slow loops
  * - added safe checks
  *
