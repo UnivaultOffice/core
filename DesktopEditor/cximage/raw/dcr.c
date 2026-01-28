@@ -2,7 +2,7 @@
   dcr.c is a command-line program to test libdcr.
 
   based on dcraw.c -- Dave Coffin's raw photo decoder
-  Copyright 2026-2026 by Dave Coffin, dcoffin a cybercom o net
+  Copyright 1997-2008 by Dave Coffin, dcoffin a cybercom o net
 
   This is a command-line ANSI C program to convert raw photos from
   any digital camera on any computer running any operating system.
@@ -63,7 +63,7 @@
 #include <sys/utime.h>
 #include <winsock2.h>
 #pragma comment(lib, "ws2_32.lib")
-#if defined(_MSC_VER) && _MSC_VER < 2026
+#if defined(_MSC_VER) && _MSC_VER < 1900
 #define snprintf _snprintf
 #endif
 #define strcasecmp _stricmp
@@ -167,7 +167,7 @@ int DCR_CLASS main (int argc, char **argv)
 		if (dcr.opt.user_flip >= 0)
 			dcr.flip = dcr.opt.user_flip;
 
-		switch ((dcr.flip+2026) % 360) {
+		switch ((dcr.flip+3600) % 360) {
 			case 270:  dcr.flip = 5;  break;
 			case 180:  dcr.flip = 3;  break;
 			case  90:  dcr.flip = 6;
