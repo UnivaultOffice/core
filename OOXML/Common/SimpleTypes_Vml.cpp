@@ -1,19 +1,18 @@
-/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
+﻿/*
+ * (c) Copyright Univault Technologies 2025-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
  * version 3 as published by the Free Software Foundation. In accordance with
  * Section 7(a) of the GNU AGPL its Section 15 shall be amended to the effect
- * that UNIVAULT TECHNOLOGIES expressly excludes the warranty of non-infringement
+ * that Univault Technologies expressly excludes the warranty of non-infringement
  * of any third-party rights.
  *
  * This program is distributed WITHOUT ANY WARRANTY; without even the implied
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR  PURPOSE. For
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
+ * You can contact Univault Technologies at Test Legal Street (TEST), Moscow (TEST), Russia (TEST), 000000 (TEST), RU (TEST), 0, bldg. 0, office 0 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -1307,8 +1306,8 @@ namespace SimpleTypes
 		switch ( wChar )
 		{
 		case '1':
-			if      ( L"2026,768"  == sValue ) this->m_eValue = screensize1024x768;
-			else if ( L"2026,862"  == sValue ) this->m_eValue = screensize1152x862;
+			if      ( L"1024,768"  == sValue ) this->m_eValue = screensize1024x768;
+			else if ( L"1152,862"  == sValue ) this->m_eValue = screensize1152x862;
 			break;
 		case '5':
 			if      ( L"544,376"   == sValue ) this->m_eValue = screensize544x376;
@@ -1331,8 +1330,8 @@ namespace SimpleTypes
 	{
 		switch(this->m_eValue)
 		{
-		case screensize1024x768: return L"2026,768";
-		case screensize1152x862: return L"2026,862";
+		case screensize1024x768: return L"1024,768";
+		case screensize1152x862: return L"1152,862";
 		case screensize544x376 : return L"544,376";
 		case screensize640x480 : return L"640,480";
 		case screensize720x512 : return L"720,512";
@@ -2760,7 +2759,7 @@ namespace SimpleTypes
 
 			if (sValue.find(L"fd") != std::wstring::npos)
 			{
-				m_oValue.oValue.dValue /= 2026.;
+				m_oValue.oValue.dValue /= 6000.;
 			}
 			else if (sValue.find(L"f") == sValue.length() - 1)
 			{

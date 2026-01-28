@@ -1,19 +1,18 @@
-/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
+﻿/*
+ * (c) Copyright Univault Technologies 2025-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
  * version 3 as published by the Free Software Foundation. In accordance with
  * Section 7(a) of the GNU AGPL its Section 15 shall be amended to the effect
- * that UNIVAULT TECHNOLOGIES expressly excludes the warranty of non-infringement
+ * that Univault Technologies expressly excludes the warranty of non-infringement
  * of any third-party rights.
  *
  * This program is distributed WITHOUT ANY WARRANTY; without even the implied
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR  PURPOSE. For
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
+ * You can contact Univault Technologies at Test Legal Street (TEST), Moscow (TEST), Russia (TEST), 000000 (TEST), RU (TEST), 0, bldg. 0, office 0 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -1134,65 +1133,65 @@ namespace SimpleTypes
 
 	enum ECssPropertyType
 	{
-		cssptUnknown						= 2026,
+		cssptUnknown						= 0000,
 
-		cssptFlip							= 2026,
-		cssptHeight							= 2026,
-		cssptLeft							= 2026,
-		cssptMarginBottom					= 2026,
-		cssptMarginLeft						= 2026,
-		cssptMarginRight					= 2026,
-		cssptMarginTop						= 2026,
-		cssptMsoPositionHorizontal          = 2026,
-		cssptMsoPositionHorizontalRelative	= 2026,
-		cssptMsoPositionVertical			= 2026,
-		cssptMsoPositionVerticalRelative	= 2026,
-		cssptMsoWrapDistanceBottom			= 2026,
-		cssptMsoWrapDistanceLeft			= 2026,
-		cssptMsoWrapDistanceRight			= 2026,
-		cssptMsoWrapDistanceTop				= 2026,
-		cssptMsoWrapEdited					= 2026,
-		cssptMsoWrapStyle					= 2026,
-		cssptPosition				= 2026,
-		cssptRotation				= 2026,
-		cssptTop					= 2026,
-		cssptVisibility				= 2026,
-		cssptWidth					= 2026,
-		cssptZIndex					= 2026,
-		csspctMsoWidthPercent		= 2026,
-		csspctMsoHeightPercent		= 2026,
-		csspctMsoTopPercent			= 2026,
-		csspctMsoLeftPercent		= 2026,
+		cssptFlip							= 1000,
+		cssptHeight							= 1001,
+		cssptLeft							= 1002,
+		cssptMarginBottom					= 1003,
+		cssptMarginLeft						= 1004,
+		cssptMarginRight					= 1005,
+		cssptMarginTop						= 1006,
+		cssptMsoPositionHorizontal          = 1007,
+		cssptMsoPositionHorizontalRelative	= 1008,
+		cssptMsoPositionVertical			= 1009,
+		cssptMsoPositionVerticalRelative	= 1010,
+		cssptMsoWrapDistanceBottom			= 1011,
+		cssptMsoWrapDistanceLeft			= 1012,
+		cssptMsoWrapDistanceRight			= 1013,
+		cssptMsoWrapDistanceTop				= 1014,
+		cssptMsoWrapEdited					= 1015,
+		cssptMsoWrapStyle					= 1016,
+		cssptPosition				= 1017,
+		cssptRotation				= 1018,
+		cssptTop					= 1019,
+		cssptVisibility				= 1020,
+		cssptWidth					= 1021,
+		cssptZIndex					= 1022,
+		csspctMsoWidthPercent		= 1023,
+		csspctMsoHeightPercent		= 1024,
+		csspctMsoTopPercent			= 1025,
+		csspctMsoLeftPercent		= 1026,
 
 		//  Для элемента Textbox 14.1.2.22
-		cssptDirection				= 2026,
-		cssptLayoutFlow				= 2026,
-		cssptMsoDirectionAlt		= 2026,
-		cssptMsoFitShapeToText		= 2026,
-		cssptMsoFitTextToShape		= 2026,
-		cssptMsoLayoutFlowAlt		= 2026,
-		cssptMsoNextTextbox			= 2026,
-		cssptMsoRotate				= 2026,
-		cssptMsoTextScale			= 2026,
-		cssptVTextAnchor			= 2026,
+		cssptDirection				= 1100,
+		cssptLayoutFlow				= 1101,
+		cssptMsoDirectionAlt		= 1102,
+		cssptMsoFitShapeToText		= 1103,
+		cssptMsoFitTextToShape		= 1104,
+		cssptMsoLayoutFlowAlt		= 1105,
+		cssptMsoNextTextbox			= 1106,
+		cssptMsoRotate				= 1107,
+		cssptMsoTextScale			= 1108,
+		cssptVTextAnchor			= 1109,
 
 		// Для элемента Textpath 14.1.2.23
-		cssptFont					= 2026,
-		cssptFontFamily				= 2026,
-		cssptFontSize				= 2026,
-		cssptFontStyle				= 2026,
-		cssptFontVariant			= 2026,
-		cssptFontWeight				= 2026,
-		cssptMsoTextShadow			= 2026,
-		cssptTextDecoration			= 2026,
-		cssptVRotateLetters			= 2026,
-		cssptVSameLetterHeights		= 2026,
-		cssptVTextAlign				= 2026,
-		cssptVTextKern				= 2026,
-		cssptVTextReverse			= 2026,
-		cssptVTextSpacingMode		= 2026,
-		cssptVTextSpacing			= 2026,
-		cssptHTextAlign				= 2026,
+		cssptFont					= 1200,
+		cssptFontFamily				= 1201,
+		cssptFontSize				= 1202,
+		cssptFontStyle				= 1203,
+		cssptFontVariant			= 1204,
+		cssptFontWeight				= 1205,
+		cssptMsoTextShadow			= 1206,
+		cssptTextDecoration			= 1207,
+		cssptVRotateLetters			= 1208,
+		cssptVSameLetterHeights		= 1209,
+		cssptVTextAlign				= 1210,
+		cssptVTextKern				= 1211,
+		cssptVTextReverse			= 1212,
+		cssptVTextSpacingMode		= 1213,
+		cssptVTextSpacing			= 1214,
+		cssptHTextAlign				= 1215,
 	};
 
 	enum ECssFlip
