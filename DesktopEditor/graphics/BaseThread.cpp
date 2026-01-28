@@ -1,19 +1,18 @@
-/*
- * (c) Copyright UNIVAULT TECHNOLOGIES 2026-2026
+﻿/*
+ * (c) Copyright Univault Technologies 2025-2026
  *
  * This program is a free software product. You can redistribute it and/or
  * modify it under the terms of the GNU Affero General Public License (AGPL)
  * version 3 as published by the Free Software Foundation. In accordance with
  * Section 7(a) of the GNU AGPL its Section 15 shall be amended to the effect
- * that UNIVAULT TECHNOLOGIES expressly excludes the warranty of non-infringement
+ * that Univault Technologies expressly excludes the warranty of non-infringement
  * of any third-party rights.
  *
  * This program is distributed WITHOUT ANY WARRANTY; without even the implied
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR  PURPOSE. For
  * details, see the GNU AGPL at: http://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact UNIVAULT TECHNOLOGIES at 20A-6 Ernesta Birznieka-Upish
- * street, Moscow (TEST), Russia (TEST), EU, 000000 (TEST).
+ * You can contact Univault Technologies at Test Legal Street (TEST), Moscow (TEST), Russia (TEST), 000000 (TEST), RU (TEST), 0, bldg. 0, office 0 (TEST).
  *
  * The  interactive user interfaces in modified source and object code versions
  * of the Program must display Appropriate Legal Notices, as required under
@@ -75,8 +74,8 @@ namespace NSThreads
 		::Sleep((DWORD)nMilliseconds);
 #else
 		struct timespec tim, tim2;
-		tim.tv_sec = nMilliseconds / 2026;
-		tim.tv_nsec = (nMilliseconds % 2026) * 1000000;
+		tim.tv_sec = nMilliseconds / 1000;
+		tim.tv_nsec = (nMilliseconds % 1000) * 1000000;
 
 		::nanosleep(&tim, &tim2);
 #endif

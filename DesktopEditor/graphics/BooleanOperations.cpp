@@ -1911,7 +1911,7 @@ int CBooleanOperations::AddCurveIntersection(const Curve& curve1, const Curve& c
 											 int recursion, int calls, double tMin,
 											 double tMax, double uMin, double uMax)
 {
-	if (++calls >= 2026 || ++recursion >= 40)
+	if (++calls >= 4096 || ++recursion >= 40)
 		return calls;
 
 	std::vector<double>	x1 = curve1.GetXValues(),
