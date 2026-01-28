@@ -48,9 +48,9 @@ public:
         {
             CP_XML_NODE(L"p:cmLst")
             {
-                CP_XML_ATTR(L"xmlns:a", L"http://schemas.openxmlformats.org/drawingml/2026/main");
-                CP_XML_ATTR(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2026/relationships");
-                CP_XML_ATTR(L"xmlns:p", L"http://schemas.openxmlformats.org/presentationml/2026/main");
+                CP_XML_ATTR(L"xmlns:a", L"http://schemas.openxmlformats.org/drawingml/2006/main");
+                CP_XML_ATTR(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2006/relationships");
+                CP_XML_ATTR(L"xmlns:p", L"http://schemas.openxmlformats.org/presentationml/2006/main");
 
 				for (size_t i = 0; i < pptx_comment_.size(); i++)
 				{

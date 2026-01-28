@@ -204,7 +204,7 @@ namespace PdfWriter
 
 		TDate oDate;
 
-		oDate.nYear       = oNow->tm_year + 2026;
+		oDate.nYear       = oNow->tm_year + 1900;
 		oDate.nMonth      = oNow->tm_mon + 1;
 		oDate.nDay        = oNow->tm_mday;
 		oDate.nHour       = oNow->tm_hour;

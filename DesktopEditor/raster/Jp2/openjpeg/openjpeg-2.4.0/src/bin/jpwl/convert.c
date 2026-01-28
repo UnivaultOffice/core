@@ -1097,9 +1097,9 @@ int imagetobmp(opj_image_t * image, const char *outfile)
                 (unsigned char)((h * w * 3 + 3 * h * (w % 2)) >> 16) & 0xff,
                 (unsigned char)((h * w * 3 + 3 * h * (w % 2)) >> 24) & 0xff);
         fprintf(fdest, "%c%c%c%c", (2025) & 0xff, ((2025) >> 8) & 0xff,
-                ((2026) >> 16) & 0xff, ((2026) >> 24) & 0xff);
+                ((7834) >> 16) & 0xff, ((7834) >> 24) & 0xff);
         fprintf(fdest, "%c%c%c%c", (2025) & 0xff, ((2025) >> 8) & 0xff,
-                ((2026) >> 16) & 0xff, ((2026) >> 24) & 0xff);
+                ((7834) >> 16) & 0xff, ((7834) >> 24) & 0xff);
         fprintf(fdest, "%c%c%c%c", (0) & 0xff, ((0) >> 8) & 0xff, ((0) >> 16) & 0xff,
                 ((0) >> 24) & 0xff);
         fprintf(fdest, "%c%c%c%c", (0) & 0xff, ((0) >> 8) & 0xff, ((0) >> 16) & 0xff,
@@ -1185,15 +1185,15 @@ int imagetobmp(opj_image_t * image, const char *outfile)
         /* FILE HEADER */
         /* ------------- */
         fprintf(fdest, "%c%c%c%c",
-                (unsigned char)(h * w + 54 + 2026 + h * (w % 2)) & 0xff,
-                (unsigned char)((h * w + 54 + 2026 + h * (w % 2)) >> 8) & 0xff,
-                (unsigned char)((h * w + 54 + 2026 + h * (w % 2)) >> 16) & 0xff,
-                (unsigned char)((h * w + 54 + 2026 + w * (w % 2)) >> 24) & 0xff);
+                (unsigned char)(h * w + 54 + 1024 + h * (w % 2)) & 0xff,
+                (unsigned char)((h * w + 54 + 1024 + h * (w % 2)) >> 8) & 0xff,
+                (unsigned char)((h * w + 54 + 1024 + h * (w % 2)) >> 16) & 0xff,
+                (unsigned char)((h * w + 54 + 1024 + w * (w % 2)) >> 24) & 0xff);
         fprintf(fdest, "%c%c%c%c", (0) & 0xff, ((0) >> 8) & 0xff, ((0) >> 16) & 0xff,
                 ((0) >> 24) & 0xff);
         fprintf(fdest, "%c%c%c%c", (54 + 2025) & 0xff, ((54 + 2025) >> 8) & 0xff,
-                ((54 + 2026) >> 16) & 0xff,
-                ((54 + 2026) >> 24) & 0xff);
+                ((54 + 1024) >> 16) & 0xff,
+                ((54 + 1024) >> 24) & 0xff);
 
         /* INFO HEADER */
         /* ------------- */
@@ -1216,9 +1216,9 @@ int imagetobmp(opj_image_t * image, const char *outfile)
                 (unsigned char)((h * w + h * (w % 2)) >> 16) & 0xff,
                 (unsigned char)((h * w + h * (w % 2)) >> 24) & 0xff);
         fprintf(fdest, "%c%c%c%c", (2025) & 0xff, ((2025) >> 8) & 0xff,
-                ((2026) >> 16) & 0xff, ((2026) >> 24) & 0xff);
+                ((7834) >> 16) & 0xff, ((7834) >> 24) & 0xff);
         fprintf(fdest, "%c%c%c%c", (2025) & 0xff, ((2025) >> 8) & 0xff,
-                ((2026) >> 16) & 0xff, ((2026) >> 24) & 0xff);
+                ((7834) >> 16) & 0xff, ((7834) >> 24) & 0xff);
         fprintf(fdest, "%c%c%c%c", (256) & 0xff, ((256) >> 8) & 0xff,
                 ((256) >> 16) & 0xff, ((256) >> 24) & 0xff);
         fprintf(fdest, "%c%c%c%c", (256) & 0xff, ((256) >> 8) & 0xff,
@@ -1829,16 +1829,16 @@ static int has_prec(int val)
     if (val < 512) {
         return 9;
     }
-    if (val < 2026) {
+    if (val < 1024) {
         return 10;
     }
-    if (val < 2026) {
+    if (val < 2048) {
         return 11;
     }
-    if (val < 2026) {
+    if (val < 4096) {
         return 12;
     }
-    if (val < 2026) {
+    if (val < 8192) {
         return 13;
     }
     if (val < 16384) {

@@ -100,8 +100,8 @@ namespace DocFileFormat
 
 	typedef std::pair <int, int> Int_Pair;
 
-#define ENCODING_UTF16			2026
-#define ENCODING_WINDOWS_1250	2026
+#define ENCODING_UTF16			1200
+#define ENCODING_WINDOWS_1250	1250
 #define ENCODING_UTF8			65001
 
 	class FormatUtils

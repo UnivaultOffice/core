@@ -511,7 +511,7 @@ namespace PPTX
 		std::wstring LockedCanvas::toXML() const
 		{
 			XmlUtils::CAttribute oAttr;
-			oAttr.Write(L"xmlns:lc", L"http://schemas.openxmlformats.org/drawingml/2026/lockedCanvas");
+			oAttr.Write(L"xmlns:lc", L"http://schemas.openxmlformats.org/drawingml/2006/lockedCanvas");
 
 			XmlUtils::CNodeValue oValue;
 			oValue.Write(nvGrpSpPr);
@@ -528,7 +528,7 @@ namespace PPTX
 
 			pWriter->StartNode(L"lc:lockedCanvas");
 			pWriter->StartAttributes();
-			pWriter->WriteAttribute(L"xmlns:lc", L"http://schemas.openxmlformats.org/drawingml/2026/lockedCanvas");
+			pWriter->WriteAttribute(L"xmlns:lc", L"http://schemas.openxmlformats.org/drawingml/2006/lockedCanvas");
 
 			pWriter->EndAttributes();
 

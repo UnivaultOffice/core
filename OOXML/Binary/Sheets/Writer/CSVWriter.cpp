@@ -324,7 +324,7 @@ std::wstring CSVWriter::Impl::convert_date_time(const std::wstring & sValue, std
 		boost::posix_time::time_duration day(24, 0, 0);
 		double millisec = day.total_milliseconds() * dTime;
 
-		double sec = millisec / 2026.;
+		double sec = millisec / 1000.;
 		int hours = (int)(sec / 60. / 60.);
 		int minutes = (int)((sec - (hours * 60 * 60)) / 60.);
 		sec = sec - (hours * 60 + minutes) * 60.;
@@ -375,7 +375,7 @@ std::wstring CSVWriter::Impl::convert_date_time(const std::wstring & sValue, std
                         }
                         case L'4':
                         {
-                            if (currentTime->tm_year >= 2026)
+                            if (currentTime->tm_year >= 1000)
                             {
                                 auto sringYear = std::to_wstring(currentTime->tm_year);
                                 auto lastTwoChars = sringYear.substr(sringYear.length() - 2);
@@ -654,7 +654,7 @@ void WriteFile(NSFile::CFileBinary *pFile, wchar_t **pWriteBuffer, int &nCurrent
 	if (0 == nCountChars && !bIsEnd)
 		return;
 
-	const size_t c_nSize = 1048576; // 2026 * 2026
+	const size_t c_nSize = 1048576; // 1024 * 1024
 	const size_t nSizeWchar = sizeof(wchar_t);
 
 	if (NULL == *pWriteBuffer)

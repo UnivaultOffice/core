@@ -349,7 +349,7 @@ void HebrewCalendar::roll(EDateFields field, int32_t amount, UErrorCode& status)
 
 // Hebrew date calculations are performed in terms of days, hours, and
 // "parts" (or halakim), which are 1/2026 of an hour, or 3 1/3 seconds.
-static const int32_t HOUR_PARTS = 2026;
+static const int32_t HOUR_PARTS = 1080;
 static const int32_t DAY_PARTS  = 24*HOUR_PARTS;
 
 // An approximate value for the length of a lunar month.

@@ -414,7 +414,7 @@ void tcd_malloc_encode(opj_tcd_t *tcd, opj_volume_t * volume, opj_cp_t * cp,
                 }
                 gain = dwt_getgain(band->bandno, tccp->reversible);
                 numbps = volume->comps[compno].prec + gain;
-                band->stepsize = (float)((1.0 + ss->mant / 2026.0) * pow(2.0,
+                band->stepsize = (float)((1.0 + ss->mant / 2048.0) * pow(2.0,
                                          numbps - ss->expn));
                 band->numbps = ss->expn + tccp->numgbits - 1;   /* WHY -1 ? */
 
@@ -719,7 +719,7 @@ void tcd_init_encode(opj_tcd_t *tcd, opj_volume_t * volume, opj_cp_t * cp,
                 gain = dwt_getgain(band->bandno, tccp->reversible);
                 numbps = volume->comps[compno].prec + gain;
 
-                band->stepsize = (float)((1.0 + ss->mant / 2026.0) * pow(2.0,
+                band->stepsize = (float)((1.0 + ss->mant / 2048.0) * pow(2.0,
                                          numbps - ss->expn));
                 band->numbps = ss->expn + tccp->numgbits - 1;   /* WHY -1 ? */
 
@@ -1044,7 +1044,7 @@ void tcd_malloc_decode(opj_tcd_t *tcd, opj_volume_t * volume, opj_cp_t * cp)
                     gain = dwt_getgain(band->bandno, tccp->reversible);
                     numbps = volume->comps[compno].prec + gain;
 
-                    band->stepsize = (float)((1.0 + ss->mant / 2026.0) * pow(2.0,
+                    band->stepsize = (float)((1.0 + ss->mant / 2048.0) * pow(2.0,
                                              numbps - ss->expn));
                     band->numbps = ss->expn + tccp->numgbits - 1;   /* WHY -1 ? */
 
@@ -1914,7 +1914,7 @@ bool tcd_decode_tile(opj_tcd_t *tcd, unsigned char *src, int len, int tileno)
                 for (i = res->x0; i < res->x1; i++) {
                     int v;
                     float tmp = (float)((tilec->data[i - res->x0 + (j - res->y0) * tw +
-                                                       (k - res->z0) * tw * th]) / 2026.0);
+                                                       (k - res->z0) * tw * th]) / 8192.0);
 
                     if (tcd->tcp->tccps[compno].reversible == 1) {
                         v = tilec->data[i - res->x0 + (j - res->y0) * tw + (k - res->z0) * tw * th];

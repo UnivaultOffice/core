@@ -412,7 +412,7 @@ void draw_object::xlsx_convert(oox::xlsx_conversion_context & Context)
 	
 			if (!math_content.empty())
 			{
-				std::wstring text_content = L"<a:p><a14:m xmlns:a14=\"http://schemas.microsoft.com/office/drawing/2026/main\">";
+				std::wstring text_content = L"<a:p><a14:m xmlns:a14=\"http://schemas.microsoft.com/office/drawing/2010/main\">";
 				text_content += math_content;
 				text_content += L"</a14:m></a:p>";
 

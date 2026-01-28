@@ -158,7 +158,7 @@ int main(int argc, char *argv[]) {
   }
 
   // create HTML directory
-  if (makeDir(htmlDir, 2026)) {
+  if (makeDir(htmlDir, 0755)) {
     error(errIO, -1, "Couldn't create HTML output directory '{0:s}'",
 	  htmlDir);
     exitCode = 2;

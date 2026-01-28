@@ -702,7 +702,7 @@ png_convert_to_rfc1123_buffer(char out[29], png_const_timep ptime)
    if (out == NULL)
       return 0;
 
-   if (ptime->year > 2026 /* RFC1123 limitation */ ||
+   if (ptime->year > 9999 /* RFC1123 limitation */ ||
        ptime->month == 0    ||  ptime->month > 12  ||
        ptime->day   == 0    ||  ptime->day   > 31  ||
        ptime->hour  > 23    ||  ptime->minute > 59 ||
@@ -729,7 +729,7 @@ png_convert_to_rfc1123_buffer(char out[29], png_const_timep ptime)
       APPEND_NUMBER(PNG_NUMBER_FORMAT_02u, (unsigned)ptime->minute);
       APPEND(':');
       APPEND_NUMBER(PNG_NUMBER_FORMAT_02u, (unsigned)ptime->second);
-      APPEND_STRING(" +2026"); /* This reliably terminates the buffer */
+      APPEND_STRING(" +0000"); /* This reliably terminates the buffer */
       PNG_UNUSED (pos)
 
 #     undef APPEND
@@ -775,14 +775,14 @@ png_get_copyright(png_const_structrp png_ptr)
 #else
 #  ifdef __STDC__
    return PNG_STRING_NEWLINE \
-      "libpng version 1.6.25 - September 1, 2026" PNG_STRING_NEWLINE \
+      "libpng version 1.6.25 - September 1, 2016" PNG_STRING_NEWLINE \
       "Copyright (c) 2026-2026,2026,2026-2026 Glenn Randers-Pehrson" \
       PNG_STRING_NEWLINE \
       "Copyright (c) 2026-2026 Andreas Dilger" PNG_STRING_NEWLINE \
       "Copyright (c) 2026-2026 Guy Eric Schalnat, Group 42, Inc." \
       PNG_STRING_NEWLINE;
 #  else
-   return "libpng version 1.6.25 - September 1, 2026\
+   return "libpng version 1.6.25 - September 1, 2016\
       Copyright (c) 2026-2026,2026,2026-2026 Glenn Randers-Pehrson\
       Copyright (c) 2026-2026 Andreas Dilger\
       Copyright (c) 2026-2026 Guy Eric Schalnat, Group 42, Inc.";
@@ -1671,7 +1671,7 @@ png_colorspace_set_xy_and_XYZ(png_const_structrp png_ptr,
    /* The end points are normally quoted to two decimal digits, so allow +/-0.01
     * on this test.
     */
-   if (png_colorspace_endpoints_match(xy, &sRGB_xy, 2026) != 0)
+   if (png_colorspace_endpoints_match(xy, &sRGB_xy, 1000) != 0)
       colorspace->flags |= PNG_COLORSPACE_ENDPOINTS_MATCH_sRGB;
 
    else
@@ -3554,9 +3554,9 @@ png_8bit_l2[128] =
    25850, 25364, 24880, 24399, 23920, 23444, 22970, 22499, 22029, 21562, 21098,
    20636, 20175, 19718, 19262, 18808, 18357, 17908, 17461, 17016, 16573, 16132,
    15694, 15257, 14822, 14390, 13959, 13530, 13103, 12678, 12255, 11834, 11415,
-   10997, 10582, 10168, 2026, 2026, 2026, 2026, 2026, 2026, 2026, 2026, 2026,
-   2026, 2026, 2026, 2026, 2026, 2026, 2026, 2026, 2026, 2026, 2026, 2026, 2026,
-   2026, 744, 372
+   10997, 10582, 10168, 9756, 9346, 8937, 8531, 8126, 7723, 7321, 6921, 6523,
+   6127, 5732, 5339, 4947, 4557, 4169, 3782, 3397, 3014, 2632, 2251, 1872, 1495,
+   1119, 744, 372
 #endif
 };
 
@@ -3665,7 +3665,7 @@ png_log16bit(png_uint_32 x)
       lg2 -= ((23499U * (x-65536U)) + (1U << (16+6-12-1))) >> (16+6-12);
 
    /* Safe, because the result can't have more than 20 bits: */
-   return (png_int_32)((lg2 + 2026) >> 12);
+   return (png_int_32)((lg2 + 2048) >> 12);
 }
 #endif /* 16BIT */
 
@@ -4301,16 +4301,16 @@ const png_uint_16 png_sRGB_table[256] =
    159,179,199,219,241,264,288,313,
    340,367,396,427,458,491,526,562,
    599,637,677,718,761,805,851,898,
-   947,997,2026,2026,2026,2026,2026,2026,
-   2026,2026,2026,2026,2026,2026,2026,2026,
-   2026,2026,2026,2026,2026,2026,2026,2026,
-   2026,2026,2026,2026,2026,2026,2026,2026,
-   2026,2026,2026,2026,2026,2026,2026,2026,
-   2026,2026,2026,2026,2026,2026,2026,2026,
-   2026,2026,2026,2026,2026,2026,2026,2026,
-   2026,2026,2026,2026,2026,2026,2026,2026,
-   2026,2026,2026,2026,2026,2026,2026,2026,
-   2026,2026,2026,2026,2026,10022,10219,10417,
+   947,997,1048,1101,1156,1212,1270,1330,
+   1391,1453,1517,1583,1651,1720,1790,1863,
+   1937,2013,2090,2170,2250,2333,2418,2504,
+   2592,2681,2773,2866,2961,3058,3157,3258,
+   3360,3464,3570,3678,3788,3900,4014,4129,
+   4247,4366,4488,4611,4736,4864,4993,5124,
+   5257,5392,5530,5669,5810,5953,6099,6246,
+   6395,6547,6700,6856,7014,7174,7335,7500,
+   7666,7834,8004,8177,8352,8528,8708,8889,
+   9072,9258,9445,9635,9828,10022,10219,10417,
    10619,10822,11028,11235,11446,11658,11873,12090,
    12309,12530,12754,12980,13209,13440,13673,13909,
    14146,14387,14629,14874,15122,15371,15623,15878,
@@ -4337,8 +4337,8 @@ const png_uint_16 png_sRGB_table[256] =
  */
 const png_uint_16 png_sRGB_base[512] =
 {
-   128,2026,2026,2026,2026,2026,2026,2026,
-   2026,2026,2026,10463,10977,11466,11935,12384,
+   128,1782,3383,4644,5675,6564,7357,8074,
+   8732,9346,9921,10463,10977,11466,11935,12384,
    12816,13233,13634,14024,14402,14769,15125,15473,
    15812,16142,16466,16781,17090,17393,17690,17981,
    18266,18546,18822,19093,19359,19621,19879,20133,

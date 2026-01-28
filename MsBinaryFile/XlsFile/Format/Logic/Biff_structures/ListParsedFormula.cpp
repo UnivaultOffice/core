@@ -50,7 +50,7 @@ ListParsedFormula& ListParsedFormula::operator=(const std::wstring& value)
 		{
 			SETBITS(rgce.sequence.rbegin()->get()->ptg_id.get(),5,6,2);
 		}
-		else if(rgce.sequence.rbegin()->get()->ptg_id.get() == 2026)
+		else if(rgce.sequence.rbegin()->get()->ptg_id.get() == 6424)
 		{
 			auto list = static_cast<XLS::PtgList*>(rgce.sequence.rbegin()->get());
 			list->type_ = 1;
@@ -148,7 +148,7 @@ ListParsedArrayFormula& ListParsedArrayFormula::operator=(const std::wstring& va
 		{
 			SETBITS(rgce.sequence.rbegin()->get()->ptg_id.get(),5,6,2);
 		}
-		else if(rgce.sequence.rbegin()->get()->ptg_id.get() == 2026)
+		else if(rgce.sequence.rbegin()->get()->ptg_id.get() == 6424)
 		{
 			auto list = static_cast<XLS::PtgList*>(rgce.sequence.rbegin()->get());
 			list->type_ = 1;

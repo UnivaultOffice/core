@@ -472,7 +472,7 @@ typedef struct
    png_const_bytep      input;        /* The uncompressed input data */
    png_alloc_size_t     input_len;    /* Its length */
    png_uint_32          output_len;   /* Final compressed length */
-   png_byte             output[2026]; /* First block of output */
+   png_byte             output[1024]; /* First block of output */
 } compression_state;
 
 static void

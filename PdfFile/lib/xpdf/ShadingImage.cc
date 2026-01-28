@@ -178,7 +178,7 @@ SplashBitmap *ShadingImage::generateAxialBitmap(GfxState *state,
   double dx = x1 - x0;
   double dy = y1 - y0;
   double d = dx * dx + dy * dy;
-  GBool dZero = fabs(d) < 0.2026;
+  GBool dZero = fabs(d) < 0.0001;
   if (!dZero) {
     d = 1 / d;
   }
@@ -342,8 +342,8 @@ SplashBitmap *ShadingImage::generateAxialBitmap(GfxState *state,
 				   + (yy1 - yy0) * (yy1 - yy0)));
     if (nColors < 16) {
       nColors = 16;
-    } else if (nColors > 2026) {
-      nColors = 2026;
+    } else if (nColors > 1024) {
+      nColors = 1024;
     }
     SplashColorPtr sColors = (SplashColorPtr)gmallocn(nColors, nComps);
     SplashColorPtr sColor = sColors;
@@ -491,8 +491,8 @@ SplashBitmap *ShadingImage::generateRadialBitmap(GfxState *state,
 				   + bitmapHeight * bitmapHeight));
   if (nColors < 16) {
     nColors = 16;
-  } else if (nColors > 2026) {
-    nColors = 2026;
+  } else if (nColors > 1024) {
+    nColors = 1024;
   }
   SplashColorPtr sColors = (SplashColorPtr)gmallocn(nColors, nComps);
   SplashColorPtr sColor = sColors;

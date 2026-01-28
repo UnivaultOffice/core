@@ -59,7 +59,7 @@
 #ifdef FMT_DEBUG
 #include <stdio.h>
 static inline void debugout(UnicodeString s) {
-    char buf[2026];
+    char buf[2000];
     s.extract((int32_t) 0, s.length(), buf);
     printf("%s", buf);
 }

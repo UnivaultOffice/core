@@ -588,19 +588,19 @@ namespace PPTX
 			}
 			else if (m_elem->getType() == OOX::et_lc_LockedCanvas)
 			{
-				return L"http://schemas.openxmlformats.org/drawingml/2026/lockedCanvas";
+				return L"http://schemas.openxmlformats.org/drawingml/2006/lockedCanvas";
 			}
 			else if (m_elem->getType() == OOX::et_p_ShapeTree)
 			{
-				return L"http://schemas.microsoft.com/office/word/2026/wordprocessingGroup";
+				return L"http://schemas.microsoft.com/office/word/2010/wordprocessingGroup";
 			}
 			else if (m_elem->getType() == OOX::et_pic)
 			{
-				return L"http://schemas.openxmlformats.org/drawingml/2026/picture";
+				return L"http://schemas.openxmlformats.org/drawingml/2006/picture";
 			}
 			else
 			{
-				return L"http://schemas.microsoft.com/office/word/2026/wordprocessingShape";
+				return L"http://schemas.microsoft.com/office/word/2010/wordprocessingShape";
 			}
 		}
 		void SpTreeElem::fromPPTY(NSBinPptxRW::CBinaryFileReader* pReader)

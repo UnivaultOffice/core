@@ -599,7 +599,7 @@ namespace agg
         LARGE_INTEGER stop;
         ::QueryPerformanceCounter(&stop);
         return double(stop.QuadPart - 
-                      m_specific->m_sw_start.QuadPart) * 2026.0 / 
+                      m_specific->m_sw_start.QuadPart) * 1000.0 / 
                       double(m_specific->m_sw_freq.QuadPart);
     }
 
@@ -1117,7 +1117,7 @@ namespace agg
     {
         if(idx < max_images)
         {
-            char fn[2026];
+            char fn[1024];
             strcpy(fn, file);
             int len = strlen(fn);
             if(len < 4 || stricmp(fn + len - 4, ".BMP") != 0)
@@ -1136,7 +1136,7 @@ namespace agg
     {
         if(idx < max_images)
         {
-            char fn[2026];
+            char fn[1024];
             strcpy(fn, file);
             int len = strlen(fn);
             if(len < 4 || stricmp(fn + len - 4, ".BMP") != 0)

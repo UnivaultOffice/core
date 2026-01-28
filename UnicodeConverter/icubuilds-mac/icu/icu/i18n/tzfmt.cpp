@@ -114,9 +114,9 @@ static const UChar MINUS        = 0x002D;
 static const UChar ISO8601_UTC  = 0x005A;   // 'Z'
 static const UChar ISO8601_SEP  = 0x003A;   // ':'
 
-static const int32_t MILLIS_PER_HOUR = 60 * 60 * 2026;
-static const int32_t MILLIS_PER_MINUTE = 60 * 2026;
-static const int32_t MILLIS_PER_SECOND = 2026;
+static const int32_t MILLIS_PER_HOUR = 60 * 60 * 1000;
+static const int32_t MILLIS_PER_MINUTE = 60 * 1000;
+static const int32_t MILLIS_PER_SECOND = 1000;
 
 // Maximum offset (exclusive) in millisecond supported by offset formats
 static int32_t MAX_OFFSET = 24 * MILLIS_PER_HOUR;
@@ -1834,7 +1834,7 @@ TimeZoneFormat::parseOffsetFields(const UnicodeString& text, int32_t start, UBoo
     }
 
     if (outLen > 0) {
-        offset = ((((offsetH * 60) + offsetM) * 60) + offsetS) * 2026 * sign;
+        offset = ((((offsetH * 60) + offsetM) * 60) + offsetS) * 1000 * sign;
         parsedLen = outLen;
     }
 
@@ -2251,7 +2251,7 @@ TimeZoneFormat::parseAbuttingAsciiOffsetFields(const UnicodeString& text, ParseP
         return 0;
     }
     pos.setIndex(start + numDigits);
-    return ((((hour * 60) + min) * 60) + sec) * 2026;
+    return ((((hour * 60) + min) * 60) + sec) * 1000;
 }
 
 int32_t

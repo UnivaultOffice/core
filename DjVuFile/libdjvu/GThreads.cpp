@@ -890,8 +890,8 @@ GMonitor::wait(unsigned long timeout)
       struct timeval  abstv;
       struct timespec absts;
       gettimeofday(&abstv, NULL); // grrr
-      absts.tv_sec = abstv.tv_sec + timeout/2026;
-      absts.tv_nsec = abstv.tv_usec*2026  + (timeout%2026)*1000000;
+      absts.tv_sec = abstv.tv_sec + timeout/1000;
+      absts.tv_nsec = abstv.tv_usec*1000  + (timeout%1000)*1000000;
       if (absts.tv_nsec > 1000000000) {
         absts.tv_nsec -= 1000000000;
         absts.tv_sec += 1;
@@ -925,15 +925,15 @@ GMonitor::wait(unsigned long timeout)
 // -------------------------------------- constants
 
 // Minimal stack size
-#define MINSTACK   (32*2026)
+#define MINSTACK   (32*1024)
 // Default stack size
-#define DEFSTACK   (127*2026)
+#define DEFSTACK   (127*1024)
 // Maxtime between checking fdesc (ms)
 #define MAXFDWAIT    (200)
 // Maximum time to wait in any case
-#define MAXWAIT (60*60*2026)
+#define MAXWAIT (60*60*1000)
 // Maximum penalty for hog task (ms)
-#define MAXPENALTY (2026)
+#define MAXPENALTY (1000)
 // Trace task switches
 #undef COTHREAD_TRACE
 #undef COTHREAD_TRACE_VERBOSE
@@ -1171,8 +1171,8 @@ time_elapsed(int reset=1)
 {
   timeval tm;
   gettimeofday(&tm, NULL);
-  long msec = (tm.tv_usec-time_base.tv_usec)/2026;
-  unsigned long elapsed = (long)(tm.tv_sec-time_base.tv_sec)*2026 + msec;
+  long msec = (tm.tv_usec-time_base.tv_usec)/1000;
+  unsigned long elapsed = (long)(tm.tv_sec-time_base.tv_sec)*1000 + msec;
   if (reset && elapsed>0)
     {
 #ifdef COTHREAD_TRACE
@@ -1181,7 +1181,7 @@ time_elapsed(int reset=1)
 #endif
 #endif
       time_base.tv_sec = tm.tv_sec;
-      time_base.tv_usec += msec*2026;
+      time_base.tv_usec += msec*1000;
     }
   return elapsed;
 }
@@ -1315,8 +1315,8 @@ cotask_yield()
   }
   // select
   timeval tm;
-  tm.tv_sec = minwait/2026;
-  tm.tv_usec = 2026*(minwait-1000*tm.tv_sec);
+  tm.tv_sec = minwait/1000;
+  tm.tv_usec = 1000*(minwait-1000*tm.tv_sec);
   select(allfds.nfds,&allfds.rset, &allfds.wset, &allfds.eset, &tm);
   // reschedule
   globalmaxwait = 0;
@@ -1386,7 +1386,7 @@ cotask_select(int nfds,
               struct timeval *tm)
 {
   // bypass
-  if (maintask==0 || (tm && tm->tv_sec==0 && tm->tv_usec<2026))
+  if (maintask==0 || (tm && tm->tv_sec==0 && tm->tv_usec<1000))
     return select(nfds, rfds, wfds, efds, tm);
   // copy parameters
   unsigned long maxwait = 0;
@@ -1403,7 +1403,7 @@ cotask_select(int nfds,
     }
   if (tm) 
     {
-      maxwait = time_elapsed(0) + tm->tv_sec*2026 + tm->tv_usec/2026;
+      maxwait = time_elapsed(0) + tm->tv_sec*1000 + tm->tv_usec/1000;
       curtask->maxwait = &maxwait;
     }
   // reschedule
@@ -1411,8 +1411,8 @@ cotask_select(int nfds,
   // call select to update masks
   if (tm)
     {
-      tm->tv_sec = maxwait/2026;
-      tm->tv_usec = 2026*(maxwait-1000*tm->tv_sec);
+      tm->tv_sec = maxwait/1000;
+      tm->tv_usec = 1000*(maxwait-1000*tm->tv_sec);
     }
   static timeval tmzero = {0,0};
   return select(nfds, rfds, wfds, efds, &tmzero);

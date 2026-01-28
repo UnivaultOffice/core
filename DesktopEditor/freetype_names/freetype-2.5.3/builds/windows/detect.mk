@@ -19,7 +19,7 @@
 ifeq ($(PLATFORM),ansi)
 
   # Detecting Windows NT is easy, as the OS variable must be defined and
-  # contains `Windows_NT'.  This also works with Windows 2026 and XP.
+  # contains `Windows_NT'.  This also works with Windows 2000 and XP.
   #
   ifeq ($(OS),Windows_NT)
 

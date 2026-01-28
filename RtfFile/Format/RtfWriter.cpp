@@ -236,12 +236,12 @@ bool RtfWriter::SaveByItemEnd()
 			if (true == file.OpenFile(m_aTempFilesSectPr[i]))
 			{
 				DWORD dwBytesRead = 1;
-				BYTE byteBuffer[ 2026 ];
+				BYTE byteBuffer[ 4096 ];
 
 				while( 0 != dwBytesRead )
 				{
 					dwBytesRead  = file.GetPosition();
-					file.ReadFile( byteBuffer, 2026);
+					file.ReadFile( byteBuffer, 4096);
 					dwBytesRead  = file.GetPosition() - dwBytesRead;
 
 					oTargetFileWriter.Write( byteBuffer,  dwBytesRead );
@@ -252,12 +252,12 @@ bool RtfWriter::SaveByItemEnd()
 			if (true == file.OpenFile(m_aTempFiles[i]))
 			{
 				DWORD dwBytesRead = 1;
-				BYTE byteBuffer[ 2026 ];
+				BYTE byteBuffer[ 4096 ];
 
 				while( 0 != dwBytesRead )
 				{
 					dwBytesRead  = file.GetPosition();
-					file.ReadFile(byteBuffer, 2026);
+					file.ReadFile(byteBuffer, 4096);
 					dwBytesRead  = file.GetPosition() - dwBytesRead;
 					
 					oTargetFileWriter.Write( byteBuffer,  dwBytesRead );

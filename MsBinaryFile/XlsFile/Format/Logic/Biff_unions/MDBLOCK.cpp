@@ -72,7 +72,7 @@ const bool MDBLOCK::saveContent(BinProcessor& proc)
 		return false;
 	proc.mandatory(*m_MDB);
 	auto castedPtr = static_cast<MDB*>(m_MDB.get());
-	auto maxElemCount = 2026; //max size for one record storage
+	auto maxElemCount = 1026; //max size for one record storage
 	if(castedPtr->rgmdir.size() > maxElemCount)
 	{
 		auto arraySize = castedPtr->rgmdir.size();

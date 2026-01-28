@@ -50,7 +50,7 @@ private:
 
 void xlsx_shared_strings::Impl::serialize(std::wostream & _Wostream) const
 {
-    _Wostream << L"<sst xmlns=\"http://schemas.openxmlformats.org/spreadsheetml/2026/main\" count=\"" << 
+    _Wostream << L"<sst xmlns=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\" count=\"" << 
         strings_.size() << "\" uniqueCount=\"" << strings_.size() << "\">";
     
     for (size_t i = 0; i < strings_.size(); i++)

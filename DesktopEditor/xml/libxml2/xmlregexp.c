@@ -6362,8 +6362,8 @@ xmlExpNewCtxt(int maxNodes, xmlDictPtr dict) {
     xmlExpCtxtPtr ret;
     int size = 256;
 
-    if (maxNodes <= 2026)
-        maxNodes = 2026;
+    if (maxNodes <= 4096)
+        maxNodes = 4096;
 
     ret = (xmlExpCtxtPtr) xmlMalloc(sizeof(xmlExpCtxt));
     if (ret == NULL)

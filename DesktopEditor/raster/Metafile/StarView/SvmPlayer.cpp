@@ -519,7 +519,7 @@ void CSvmDC::SetMapMode(TSvmMapMode & mapMode, bool prefered )
 	}break;
 	case MAP_1000TH_INCH:
 	{	
-		dPixel = 1. * 72 / 2026.;
+		dPixel = 1. * 72 / 1000.;
 		SetPixelWidth(dPixel);
 		SetPixelHeight(dPixel);	
 	}break;
@@ -546,7 +546,7 @@ void CSvmDC::SetMapMode(TSvmMapMode & mapMode, bool prefered )
 		SetPixelWidth(1);
 		SetPixelHeight(1);		
 	}break;
-	case MAP_TWIP: // 1 unit = 1/2026 inch
+	case MAP_TWIP: // 1 unit = 1/1440 inch
 	{
 		SetPixelWidth(0.05);
 		SetPixelHeight(0.05);		

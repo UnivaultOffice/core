@@ -229,7 +229,7 @@ public:
 			CP_XML_NODE(L"x14:dataValidations")
 			{
 				CP_XML_ATTR(L"count", mapActivateDataValidations.size());
-				CP_XML_ATTR(L"xmlns:xm", L"http://schemas.microsoft.com/office/excel/2026/main");
+				CP_XML_ATTR(L"xmlns:xm", L"http://schemas.microsoft.com/office/excel/2006/main");
 
 				for (std::map<std::wstring, xlsx_dataValidation_ptr>::iterator it = mapActivateDataValidations.begin();
 					it != mapActivateDataValidations.end(); ++it)

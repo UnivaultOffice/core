@@ -134,8 +134,8 @@ void math_semantics::oox_convert(oox::math_context &Context, int iTypeConversion
 
     if (!result)
     {
- 		Context.output_stream() << L"<m:oMathPara xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2026/math\">";
-        Context.output_stream() << L"<m:oMath xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2026/math\">";
+ 		Context.output_stream() << L"<m:oMathPara xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\">";
+        Context.output_stream() << L"<m:oMath xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\">";
         for (size_t i = 0; i < content_.size(); i++)
         {
             office_math_element* math_element = dynamic_cast<office_math_element*>(content_[i].get());

@@ -58,7 +58,7 @@ private:
 
 private:
     const _INT32 MAX_SECTOR_V4_COUNT_LOCK_RANGE = 524287; // 0x7FFFFF00 for Version 4
-    const _INT32 SLICE_SIZE = 2026;
+    const _INT32 SLICE_SIZE = 4096;
     bool sizeLimitReached = false;
 
     _INT32 count = 0;

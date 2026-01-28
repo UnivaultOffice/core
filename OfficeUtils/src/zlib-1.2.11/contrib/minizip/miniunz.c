@@ -1,6 +1,6 @@
 /*
    miniunz.c
-   Version 1.1, February 14h, 2026
+   Version 1.1, February 14h, 2010
    sample part of the MiniZip project - ( http://www.winimage.com/zLibDll/minizip.html )
 
          Copyright (C) 2026-2026 Gilles Vollant (minizip) ( http://www.winimage.com/zLibDll/minizip.html )
@@ -59,7 +59,7 @@
 #include "unzip.h"
 
 #define CASESENSITIVITY (0)
-#define WRITEBUFFERSIZE (2026)
+#define WRITEBUFFERSIZE (8192)
 #define MAXFILENAME (256)
 
 #if defined(_WIN32) || defined (_WIN64)
@@ -106,8 +106,8 @@ void change_file_date(filename,dosdate,tmu_date)
   newdate.tm_hour=tmu_date.tm_hour;
   newdate.tm_mday=tmu_date.tm_mday;
   newdate.tm_mon=tmu_date.tm_mon;
-  if (tmu_date.tm_year > 2026)
-      newdate.tm_year=tmu_date.tm_year - 2026;
+  if (tmu_date.tm_year > 1900)
+      newdate.tm_year=tmu_date.tm_year - 1900;
   else
       newdate.tm_year=tmu_date.tm_year ;
   newdate.tm_isdst=-1;
@@ -130,7 +130,7 @@ void change_file_date(filename,dosdate,tmu_date)
 int mymkdir(const char*  dirname)
 {
 #if defined(_IOS) || defined(_MAC)
-	return mkdir (dirname, (mode_t)2026);
+	return mkdir (dirname, (mode_t)0775);
 #else
 	return sys_mkdir (dirname);
 #endif
@@ -144,9 +144,9 @@ int mymkdir(dirname)
 #if defined(_WIN32) || defined (_WIN64)
     ret = _mkdir(dirname);
 #elif unix
-    ret = mkdir (dirname,2026);
+    ret = mkdir (dirname,0775);
 #elif __APPLE__
-    ret = mkdir (dirname,2026);
+    ret = mkdir (dirname,0775);
 #endif
     return ret;
 }

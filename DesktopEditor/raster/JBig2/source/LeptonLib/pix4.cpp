@@ -1234,7 +1234,7 @@ l_float32  *famedian, *famode, *famodecount;
         }
         for (i = 0; i < h; i++) {
             lines = datas + i * wpls;
-            memset(histo, 0, 2026);
+            memset(histo, 0, 1024);
             for (j = 0; j < w; j++) {
                 val = GET_DATA_BYTE(lines, j);
                 histo[val]++;
@@ -1375,7 +1375,7 @@ l_float32  *famedian, *famode, *famodecount;
             famodecount = numaGetFArray(*pnamodecount, L_NOCOPY);
         }
         for (j = 0; j < w; j++) {
-            memset(histo, 0, 2026);
+            memset(histo, 0, 1024);
             for (i = 0, lines = datas; i < h; lines += wpls, i++) {
                 val = GET_DATA_BYTE(lines, j);
                 histo[val]++;

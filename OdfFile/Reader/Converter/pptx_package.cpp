@@ -67,9 +67,9 @@ pptx_document::pptx_document()
    
 	rels_file_ptr relFile = rels_file::create(L".rels");
   
-	relFile->get_rels().add(relationship(L"rId1", L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/officeDocument",		L"ppt/presentation.xml"));
-    relFile->get_rels().add(relationship(L"rId2", L"http://schemas.openxmlformats.org/package/2026/relationships/metadata/core-properties",		L"docProps/core.xml"));
-    relFile->get_rels().add(relationship(L"rId3", L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/extended-properties",	L"docProps/app.xml"));
+	relFile->get_rels().add(relationship(L"rId1", L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument",		L"ppt/presentation.xml"));
+    relFile->get_rels().add(relationship(L"rId2", L"http://schemas.openxmlformats.org/package/2006/relationships/metadata/core-properties",		L"docProps/core.xml"));
+    relFile->get_rels().add(relationship(L"rId3", L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/extended-properties",	L"docProps/app.xml"));
    
 	get_rels_files().add_rel_file( relFile );
 }
@@ -138,7 +138,7 @@ void slides_files::write(const std::wstring & RootPath)
         if (rels_)
         {
             const std::wstring id = std::wstring(L"sId") + std::to_wstring( i + 1);
-            static const std::wstring kWSRel = L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/slide";
+            static const std::wstring kWSRel = L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide";
             const std::wstring fileRef = std::wstring(L"slides/") + fileName;
             rels_->add(id, kWSRel, fileRef);
         }
@@ -173,7 +173,7 @@ void notes_files::write(const std::wstring & RootPath)
         if (rels_)
         {
             const std::wstring id = std::wstring(L"nId") + std::to_wstring( i + 1);
-            static const std::wstring kWSRel = L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/notesSlide";
+            static const std::wstring kWSRel = L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/notesSlide";
             const std::wstring fileRef = std::wstring(L"notesSlides/") + fileName;
             rels_->add(id, kWSRel, fileRef);
         }
@@ -215,7 +215,7 @@ void slideMasters_files::write(const std::wstring & RootPath)
         if (rels_)
         {
             const std::wstring id = std::wstring(L"smId") + std::to_wstring( i + 1);
-            static const std::wstring kWSRel = L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/slideMaster";
+            static const std::wstring kWSRel = L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideMaster";
             const std::wstring fileRef = std::wstring(L"slideMasters/") + fileName;
             rels_->add(id, kWSRel, fileRef);
         }
@@ -249,7 +249,7 @@ void notesMaster_files::write(const std::wstring & RootPath)
         if (rels_)
         {
             const std::wstring id = std::wstring(L"nmId") + std::to_wstring( i + 1);
-            static const std::wstring kWSRel = L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/notesMaster";
+            static const std::wstring kWSRel = L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/notesMaster";
             const std::wstring fileRef = std::wstring(L"notesMasters/") + fileName;
             rels_->add(id, kWSRel, fileRef);
         }
@@ -462,7 +462,7 @@ void ppt_files::write(const std::wstring & RootPath)
     }
     if (authors_comments_)
     {
-		rels_files_.add( relationship( L"auId1",  L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/commentAuthors", L"commentAuthors.xml" ) );
+		rels_files_.add( relationship( L"auId1",  L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/commentAuthors", L"commentAuthors.xml" ) );
         authors_comments_->write( path );
     }
 	if (jsaProject_)

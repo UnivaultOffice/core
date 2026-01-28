@@ -182,7 +182,7 @@ public:
 	int m_nRelRight;				//relRight	Defines the right of a shape within its parent shape (used for shapes in a group). The measurement is relative to the position of the parent group or drawing.
 	int m_nRelTop;					//relTop	Defines the top of a shape within its parent shape (used for shapes in a group). The measurement is relative to the position of the parent group or drawing.
 	int m_nRelRotation;				//relRotation	Represents the information stored in the site of a shape, which defines the size and location of the shape in the parent group or drawing. The coordinates are relative to the position of the parent group or drawing. The units are relative to the m_rcg of the parent.
-	int m_nRelZOrder;				//dhgt	Word 2026 Z-order position of shape(s) on a page. Shapes with small dhgts are further back than shapes with large dhgts.
+	int m_nRelZOrder;				//dhgt	Word 2007 Z-order position of shape(s) on a page. Shapes with small dhgts are further back than shapes with large dhgts.
 
 //Fill
 	int m_bFilled;					//fFilled The shape is filled.

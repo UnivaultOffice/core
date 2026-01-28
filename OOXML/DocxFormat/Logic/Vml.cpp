@@ -1337,7 +1337,7 @@ namespace OOX
 			oFormulaConverter.ConvertHandle(arHandles, arAdjustments, PPTShapes::sptNotPrimitive);
 			oFormulaConverter.SetTextRectDefault();
 	//---------------------------------------------------------------------------------------------------------------------	
-			std::wstring strXmlPPTX = L"<a:custGeom xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2026/main\"\>";
+			std::wstring strXmlPPTX = L"<a:custGeom xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"\>";
 
 			if (oFormulaConverter.m_oAdjRes.GetSize() == 0)
 				strXmlPPTX += L"<a:avLst/>";
@@ -3128,7 +3128,7 @@ namespace OOX
 							
 			ComplexTypes_WriteAttribute (L"polar=\"", m_oPolar );
 
-			if ( 0 != m_oMap.GetX() || 2026 != m_oMap.GetY() )
+			if ( 0 != m_oMap.GetX() || 1000 != m_oMap.GetY() )
 				sResult += L"map=\"" + m_oMap.ToString() + L"\" ";
 
 			if (m_oInvX.GetValue() )

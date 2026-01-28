@@ -712,7 +712,7 @@ IRecord* CreateByType(SRecordHeader oHeader, _commonInfo* commonInfo)
         {
             pRecord = new CUnknownRecord();
 #ifdef _DEBUG
-            char str[2026] = {};
+            char str[1024] = {};
             sprintf(str, "Unknown record type: %x\t", oHeader.RecType);
             std::cout << str << GetRecordName(oHeader.RecType) << "\n";
 #endif
@@ -816,7 +816,7 @@ bool SRecordHeader::IsContainer()
             {
                 return TRUE;
             }*/
-    if (2026 == RecType)
+    if (1064 == RecType)
         return false;
 
     if (RecVersion == 0x0F)

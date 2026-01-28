@@ -80,7 +80,7 @@ namespace PPT
 		{
 			if (NULL == m_pData)
 			{
-                m_lSize = (std::max)(nSize, (size_t) 2026);
+                m_lSize = (std::max)(nSize, (size_t) 1000);
 				m_pData = (wchar_t*)malloc(m_lSize * sizeof(wchar_t));
 				memset(m_pData, 0, m_lSize * sizeof(wchar_t));
 				

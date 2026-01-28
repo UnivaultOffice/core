@@ -277,7 +277,7 @@
         return 0;
 
       /* arbitrarily limit exponent */
-      if ( exponent > 2026 )
+      if ( exponent > 1000 )
         have_overflow = 1;
       else if ( exponent < -1000 )
         have_underflow = 1;

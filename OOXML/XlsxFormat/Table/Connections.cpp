@@ -957,7 +957,7 @@ namespace OOX
 			if (m_oRangePr.IsInit())
 			{
 				writer.WriteString(L"<extLst>");
-				writer.WriteString(L"<ext uri=\"{DE250136-89BD-433C-8126-D09CA5730AF9}\" xmlns:x15=\"http://schemas.microsoft.com/office/spreadsheetml/2026/11/main\">");
+				writer.WriteString(L"<ext uri=\"{DE250136-89BD-433C-8126-D09CA5730AF9}\" xmlns:x15=\"http://schemas.microsoft.com/office/spreadsheetml/2010/11/main\">");
 				writer.WriteString(L"<x15:connection");
 				WritingStringNullableAttrString(L"id", m_oIdExt, *m_oIdExt)
 					writer.WriteString(L">");
@@ -1259,10 +1259,10 @@ namespace OOX
 		void CConnections::toXML(NSStringUtils::CStringBuilder& writer) const
 			{
 				writer.WriteString(L"<connections \
-xmlns=\"http://schemas.openxmlformats.org/spreadsheetml/2026/main\" \
-xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2026\" \
+xmlns=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\" \
+xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" \
 mc:Ignorable=\"xr16\" \
-xmlns:xr16=\"http://schemas.microsoft.com/office/spreadsheetml/2026/revision16\">");
+xmlns:xr16=\"http://schemas.microsoft.com/office/spreadsheetml/2017/revision16\">");
 
 				//WritingStringAttrInt(L"count", (int)m_arrItems.size());
 				//writer.WriteString(L">");

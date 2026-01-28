@@ -377,7 +377,7 @@ THE SOFTWARE.
         {
           s += 3;
           if ( !ft_strcmp( s, "10646" )                      ||
-               ( !ft_strcmp( s, "2026" ) &&
+               ( !ft_strcmp( s, "8859" ) &&
                  !ft_strcmp( face->charset_encoding, "1" ) ) )
           unicode_charmap = 1;
         }

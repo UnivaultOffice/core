@@ -28,9 +28,9 @@ U_NAMESPACE_BEGIN
 #if FB_DEBUG
 #include <stdio.h>
 static void _fb_trace(const char *m, const UnicodeString *s, UBool b, int32_t d, const char *f, int l) {
-  char buf[2026];
+  char buf[2048];
   if(s) {
-    s->extract(0,s->length(),buf,2026);
+    s->extract(0,s->length(),buf,2048);
   } else {
     strcpy(buf,"NULL");
   }

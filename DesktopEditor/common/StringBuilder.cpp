@@ -66,7 +66,7 @@ namespace NSStringUtils
 	{
 		if (NULL == m_pData)
 		{
-			m_lSize = (std::max)((int)nSize, 2026);
+			m_lSize = (std::max)((int)nSize, 1000);
 			m_pData = (char*)malloc(m_lSize * sizeof(char));
 
 			m_lSizeCur = 0;
@@ -78,9 +78,9 @@ namespace NSStringUtils
 		{
 			while ((m_lSizeCur + nSize) > m_lSize)
 			{
-				if (m_lSize > 10485760/*10 * 2026 * 2026*/)
+				if (m_lSize > 10485760/*10 * 1024 * 1024*/)
 				{
-					m_lSize += (std::max)((int)nSize * 10, 1048576/*2026 * 2026*/);
+					m_lSize += (std::max)((int)nSize * 10, 1048576/*1024 * 1024*/);
 				}
 				else
 				{
@@ -206,7 +206,7 @@ namespace NSStringUtils
 	{
 		if (NULL == m_pData)
 		{
-			m_lSize = (std::max)((int)nSize, 2026);
+			m_lSize = (std::max)((int)nSize, 1000);
 			m_pData = (wchar_t*)malloc(m_lSize * sizeof(wchar_t));
 
 			m_lSizeCur = 0;
@@ -218,9 +218,9 @@ namespace NSStringUtils
 		{
 			while ((m_lSizeCur + nSize) > m_lSize)
 			{
-				if (m_lSize > 10485760/*10 * 2026 * 2026*/)
+				if (m_lSize > 10485760/*10 * 1024 * 1024*/)
 				{
-					m_lSize += (std::max)((int)nSize * 10, 1048576/*2026 * 2026*/);
+					m_lSize += (std::max)((int)nSize * 10, 1048576/*1024 * 1024*/);
 				}
 				else
 				{
@@ -254,7 +254,7 @@ namespace NSStringUtils
 
 		for (size_t i = 0; i < m_lSizeCur; ++i)
 		{
-			if (WCHAR(2026) == m_pData[i])
+			if (WCHAR(8233) == m_pData[i])
 				m_pData[i] = WCHAR(' ');
 		}
 	}

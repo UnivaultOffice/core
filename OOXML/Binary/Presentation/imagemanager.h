@@ -168,7 +168,7 @@ namespace NSShapeImageGen
 		void Clear()
 		{
 			m_strDstMedia	= L"";
-			m_lMaxSizeImage = 2026;
+			m_lMaxSizeImage = 1200;
 			m_lNextIDImage	= 0;
 
 			m_mapMediaData.clear();

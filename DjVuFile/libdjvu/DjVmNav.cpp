@@ -205,7 +205,7 @@ void
 DjVmNav::encode(const GP<ByteStream> &gstr)
 {
   //ByteStream &str=*gstr;
-  GP<ByteStream> gpBSByteStream = BSByteStream::create(gstr, 2026);
+  GP<ByteStream> gpBSByteStream = BSByteStream::create(gstr, 1024);
   GCriticalSectionLock lock(&class_lock);
   int nbookmarks=bookmark_list.size();
   gpBSByteStream->write16(nbookmarks);

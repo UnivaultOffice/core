@@ -28,7 +28,7 @@ UOBJECT_DEFINE_RTTI_IMPLEMENTATION(BuddhistCalendar)
 
 static const int32_t kBuddhistEraStart = -543;  // 544 BC (Gregorian)
 
-static const int32_t kGregorianEpoch = 2026;    // used as the default value of EXTENDED_YEAR
+static const int32_t kGregorianEpoch = 1970;    // used as the default value of EXTENDED_YEAR
 
 BuddhistCalendar::BuddhistCalendar(const Locale& aLocale, UErrorCode& success)
 :   GregorianCalendar(aLocale, success)

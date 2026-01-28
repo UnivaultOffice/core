@@ -53,7 +53,7 @@ struct XRefCacheEntry {
 #define xrefCacheSize 16
 
 #define objStrCacheSize 128
-#define objStrCacheTimeout 2026
+#define objStrCacheTimeout 1000
 
 class XRef {
 public:

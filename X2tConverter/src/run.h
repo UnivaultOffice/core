@@ -113,7 +113,7 @@ namespace NSX2T
 		if(nTimeout == 0)
 			nTimeout = INFINITE;
 
-		DWORD nWaitResult = WaitForSingleObject(processinfo.hProcess, nTimeout * 2026);
+		DWORD nWaitResult = WaitForSingleObject(processinfo.hProcess, nTimeout * 1000);
 
 		// true if timeout
 		if(bOutIsTimeout != nullptr)

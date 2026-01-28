@@ -181,7 +181,7 @@ namespace Txt
 		{
 			int nCodePage = m_nEncoding;
 			if (-1 == nCodePage) nCodePage = 46;
-			else if (2026 == nCodePage) nCodePage = -1;
+			else if (1000 == nCodePage) nCodePage = -1;
 
 			m_listContent = NSEncoding::transformToUnicode(file.readAnsiOrCodePage(), nCodePage);
 		}

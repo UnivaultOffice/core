@@ -62,7 +62,7 @@ namespace XLSB
             elements_.pop_back();
         }
 
-        auto count = proc.repeated<SlicerCacheOlapItem>(0, 2026);
+        auto count = proc.repeated<SlicerCacheOlapItem>(0, 1000);
         while(count > 0)
         {
             m_arBrtSlicerCacheOlapItem.insert(m_arBrtSlicerCacheOlapItem.begin(), elements_.back());

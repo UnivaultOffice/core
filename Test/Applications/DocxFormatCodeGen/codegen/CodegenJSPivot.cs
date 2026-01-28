@@ -43,7 +43,7 @@ namespace codegen
         Dictionary<string, GenClassPivot> m_mapProcessedClasses = new Dictionary<string, GenClassPivot>();
         string gc_sEnumFromXmlPrefix = "FromXml_";
         string gc_sEnumToXmlPrefix = "ToXml_";
-        string gc_sNamespaceToXml = " xmlns=\\\"http://schemas.openxmlformats.org/spreadsheetml/2026/main\\\" xmlns:r=\\\"http://schemas.openxmlformats.org/officeDocument/2026/relationships\\\"";
+        string gc_sNamespaceToXml = " xmlns=\\\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\\\" xmlns:r=\\\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\\\"";
         string[] gc_numeric = { "Null", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine" };
 
         public void Process(string sOutputDir, List<GenClassPivot> aGenClasses)

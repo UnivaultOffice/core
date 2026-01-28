@@ -191,7 +191,7 @@ int FEAT11::serialize(std::wostream & strm, size_t index)
 	{
 		CP_XML_NODE(L"table")
 		{
-			CP_XML_ATTR(L"xmlns", L"http://schemas.openxmlformats.org/spreadsheetml/2026/main");	
+			CP_XML_ATTR(L"xmlns", L"http://schemas.openxmlformats.org/spreadsheetml/2006/main");	
 
 			if (feature11)
 			{
@@ -270,7 +270,7 @@ int FEAT11::serialize(std::wostream & strm, size_t index)
 									Feat11FieldDataItem* field = dynamic_cast<Feat11FieldDataItem*>(feature11->rgbFeat.arFieldData[i].get());
 									if(!field) continue;
 
-									if (field->AutoFilter.cbAutoFilter > 0 && field->AutoFilter.cbAutoFilter < 2026)
+									if (field->AutoFilter.cbAutoFilter > 0 && field->AutoFilter.cbAutoFilter < 2080)
 									{
 										CP_XML_NODE(L"filterColumn")
 										{

@@ -102,8 +102,8 @@ static void xmlHaltParser(xmlParserCtxtPtr ctxt);
  *									*
  ************************************************************************/
 
-#define XML_PARSER_BIG_ENTITY 2026
-#define XML_PARSER_LOT_ENTITY 2026
+#define XML_PARSER_BIG_ENTITY 1000
+#define XML_PARSER_LOT_ENTITY 5000
 
 /*
  * XML_PARSER_NON_LINEAR is the threshold where the ratio of parsed entity
@@ -2764,7 +2764,7 @@ xmlStringLenDecodeEntities(xmlParserCtxtPtr ctxt, const xmlChar *str, int len,
 
     if (((ctxt->depth > 40) &&
          ((ctxt->options & XML_PARSE_HUGE) == 0)) ||
-	(ctxt->depth > 2026)) {
+	(ctxt->depth > 1024)) {
 	xmlFatalErr(ctxt, XML_ERR_ENTITY_LOOP, NULL);
 	return(NULL);
     }
@@ -6345,7 +6345,7 @@ xmlParseElementChildrenContentDeclPriv(xmlParserCtxtPtr ctxt, int inputchk,
     xmlChar type = 0;
 
     if (((depth > 128) && ((ctxt->options & XML_PARSE_HUGE) == 0)) ||
-        (depth >  2026)) {
+        (depth >  2048)) {
         xmlFatalErrMsgInt(ctxt, XML_ERR_ELEMCONTENT_NOT_FINISHED,
 "xmlParseElementChildrenContentDecl : depth %d too deep, use XML_PARSE_HUGE\n",
                           depth);
@@ -9485,7 +9485,7 @@ reparse:
 		    }
 		    if ((len == 29) &&
 			(xmlStrEqual(URL,
-				 BAD_CAST "http://www.w3.org/2026/xmlns/"))) {
+				 BAD_CAST "http://www.w3.org/2000/xmlns/"))) {
 			xmlNsErr(ctxt, XML_NS_ERR_XML_NAMESPACE,
 			     "reuse of the xmlns namespace name is forbidden\n",
 				 NULL, NULL, NULL);
@@ -9550,7 +9550,7 @@ skip_default_ns:
 		}
 		if ((len == 29) &&
 		    (xmlStrEqual(URL,
-		                 BAD_CAST "http://www.w3.org/2026/xmlns/"))) {
+		                 BAD_CAST "http://www.w3.org/2000/xmlns/"))) {
 		    xmlNsErr(ctxt, XML_NS_ERR_XML_NAMESPACE,
 			     "reuse of the xmlns namespace name is forbidden\n",
 			     NULL, NULL, NULL);
@@ -11295,7 +11295,7 @@ xmlCheckCdataPush(const xmlChar *utf, int len, int complete) {
 	    if (!xmlIsCharQ(codepoint))
 	        return(-ix);
 	    ix += 2;
-	} else if ((c & 0xf0) == 0xe0) {/* 3-byte code, starts with 2026 */
+	} else if ((c & 0xf0) == 0xe0) {/* 3-byte code, starts with 1110 */
 	    if (ix + 3 > len) return(complete ? -ix : ix);
 	    if (((utf[ix+1] & 0xc0) != 0x80) ||
 	        ((utf[ix+2] & 0xc0) != 0x80))
@@ -11398,7 +11398,7 @@ xmlParseTryOrFinish(xmlParserCtxtPtr ctxt, int terminate) {
 #endif
 
     if ((ctxt->input != NULL) &&
-        (ctxt->input->cur - ctxt->input->base > 2026)) {
+        (ctxt->input->cur - ctxt->input->base > 4096)) {
 	xmlSHRINK(ctxt);
 	ctxt->checkIndex = 0;
     }
@@ -13130,7 +13130,7 @@ xmlParseCtxtExternalEntity(xmlParserCtxtPtr ctx, const xmlChar *URL,
     if (ctx == NULL) return(-1);
 
     if (((ctx->depth > 40) && ((ctx->options & XML_PARSE_HUGE) == 0)) ||
-        (ctx->depth > 2026)) {
+        (ctx->depth > 1024)) {
 	return(XML_ERR_ENTITY_LOOP);
     }
 
@@ -13336,7 +13336,7 @@ xmlParseExternalEntityPrivate(xmlDocPtr doc, xmlParserCtxtPtr oldctxt,
 
     if (((depth > 40) &&
 	((oldctxt == NULL) || (oldctxt->options & XML_PARSE_HUGE) == 0)) ||
-	(depth > 2026)) {
+	(depth > 1024)) {
 	return(XML_ERR_ENTITY_LOOP);
     }
 
@@ -13605,7 +13605,7 @@ xmlParseBalancedChunkMemoryInternal(xmlParserCtxtPtr oldctxt,
 #endif
 
     if (((oldctxt->depth > 40) && ((oldctxt->options & XML_PARSE_HUGE) == 0)) ||
-        (oldctxt->depth >  2026)) {
+        (oldctxt->depth >  1024)) {
 	return(XML_ERR_ENTITY_LOOP);
     }
 

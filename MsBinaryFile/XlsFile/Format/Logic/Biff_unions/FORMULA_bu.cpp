@@ -160,7 +160,7 @@ const bool FORMULA::saveContent(BinProcessor& proc)
     if(m_stringValCache.IsInit())
     {
         String strVal;
-        _UINT32 maxRecordSize = 2026;
+        _UINT32 maxRecordSize = 4112;
         auto cachePtr = m_stringValCache.GetPointer();
         if(cachePtr->getSize() <= maxRecordSize)
         {

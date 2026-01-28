@@ -118,13 +118,13 @@
  * The XML Schemas namespaces
  */
 static const xmlChar *xmlSchemaNs = (const xmlChar *)
-    "http://www.w3.org/2026/XMLSchema";
+    "http://www.w3.org/2001/XMLSchema";
 
 static const xmlChar *xmlSchemaInstanceNs = (const xmlChar *)
-    "http://www.w3.org/2026/XMLSchema-instance";
+    "http://www.w3.org/2001/XMLSchema-instance";
 
 static const xmlChar *xmlNamespaceNs = (const xmlChar *)
-    "http://www.w3.org/2026/xmlns/";
+    "http://www.w3.org/2000/xmlns/";
 
 /*
 * Come casting macros.
@@ -1384,7 +1384,7 @@ xmlSchemaGetComponentTargetNs(xmlSchemaBasicItemPtr item)
 	case XML_SCHEMA_TYPE_ATTRIBUTEGROUP:
 	    return (((xmlSchemaAttributeGroupPtr) item)->targetNamespace);
 	case XML_SCHEMA_TYPE_BASIC:
-	    return (BAD_CAST "http://www.w3.org/2026/XMLSchema");
+	    return (BAD_CAST "http://www.w3.org/2001/XMLSchema");
 	case XML_SCHEMA_TYPE_SIMPLE:
 	case XML_SCHEMA_TYPE_COMPLEX:
 	    return (((xmlSchemaTypePtr) item)->targetNamespace);
@@ -25581,7 +25581,7 @@ xmlSchemaVAttributesComplex(xmlSchemaValidCtxtPtr vctxt)
 			    snprintf((char *) prefix, 12, "p%d", counter++);
 			    ns = xmlSearchNs(defAttrOwnerElem->doc,
 				defAttrOwnerElem, BAD_CAST prefix);
-			    if (counter > 2026) {
+			    if (counter > 1000) {
 				VERROR_INT(
 				    "xmlSchemaVAttributesComplex",
 				    "could not compute a ns prefix for a "

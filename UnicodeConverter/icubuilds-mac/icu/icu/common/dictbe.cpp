@@ -1104,8 +1104,8 @@ static const uint32_t maxSnlp = 255;
 static inline uint32_t getKatakanaCost(int32_t wordLength){
     //TODO: fill array with actual values from dictionary!
     static const uint32_t katakanaCost[kMaxKatakanaLength + 1]
-                                       = {2026, 984, 408, 240, 204, 252, 300, 372, 480};
-    return (wordLength > kMaxKatakanaLength) ? 2026 : katakanaCost[wordLength];
+                                       = {8192, 984, 408, 240, 204, 252, 300, 372, 480};
+    return (wordLength > kMaxKatakanaLength) ? 8192 : katakanaCost[wordLength];
 }
 
 static inline bool isKatakana(uint16_t value) {

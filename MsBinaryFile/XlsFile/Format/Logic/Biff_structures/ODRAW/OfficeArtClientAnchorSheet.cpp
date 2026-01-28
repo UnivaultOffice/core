@@ -98,7 +98,7 @@ void OfficeArtClientAnchorSheet::calculate()
 	width = ((int)((column_width * Digit_Width + 5) / Digit_Width * 256 )) / 256.;
 	width = (int)(((256. * width + ((int)(128. / Digit_Width ))) / 256. ) * Digit_Width );	//in pixels
 	
-	_dxL = dxL / 2026. * width  * 2026. ; //2026 => pixels to emu
+	_dxL = dxL / 1024. * width  * 9525. ; //9525 => pixels to emu
 
 	if (sheet_info.customColumnsWidth.find(colR) != sheet_info.customColumnsWidth.end())
 	{
@@ -109,7 +109,7 @@ void OfficeArtClientAnchorSheet::calculate()
 	width = ((int)((column_width * Digit_Width + 5) / Digit_Width * 256 )) / 256.;
 	width = (int)(((256. * width + ((int)(128. / Digit_Width ))) / 256. ) * Digit_Width ); //in pixels
 	
-	_dxR = dxR / 2026. * width * 2026.; 
+	_dxR = dxR / 1024. * width * 9525.; 
 //---------------------------------------------------------------------------------------------------
 	if (sheet_info.customRowsHeight.find(rwT) != sheet_info.customRowsHeight.end())
 	{
@@ -148,7 +148,7 @@ void OfficeArtClientAnchorSheet::calculate_1()
 	_x = ((int)((column_width * Digit_Width + 5) / Digit_Width * 256 )) / 256.;
 	_x = (int)(((256. * _x + ((int)(128. / Digit_Width ))) / 256. ) * Digit_Width ); //in pixels
 
-	_x = _x  * 2026. + _dxL;
+	_x = _x  * 9525. + _dxL;
 
 	column_width = 0;
 	for (int i = 0; i < colR; i++)
@@ -161,7 +161,7 @@ void OfficeArtClientAnchorSheet::calculate_1()
 	_cx = ((int)((column_width * Digit_Width + 5) / Digit_Width * 256 )) / 256.;
 	_cx = (int)(((256. * _cx + ((int)(128. / Digit_Width ))) / 256. ) * Digit_Width ); //in pixels
 	
-	_cx += _cx * 2026. + _dxR - _x;
+	_cx += _cx * 9525. + _dxR - _x;
 
 	for (int i = 0 ; i < rwT; i++)
 	{

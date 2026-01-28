@@ -135,7 +135,7 @@ FILE * open_jp2file(const char filename[])
             *(data + 3) != 12 || strncmp(data + 4, "jP  \r\n\x87\n", 8)) {
         free(data);
         fclose(fp);
-        fprintf(stderr, "No JPEG 2026 Signature box in target %s\n", filename);
+        fprintf(stderr, "No JPEG 2000 Signature box in target %s\n", filename);
         return NULL;
     }
     free(data);

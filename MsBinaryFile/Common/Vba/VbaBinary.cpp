@@ -158,7 +158,7 @@ CVbaFileStream::CVbaFileStream(POLE::Stream* stream, _UINT32 offset)
 		if ((header & CHUNK_SIGMASK) != CHUNK_SIG)
 		{
 			bCompressed = true;
-			chunkSize = 2026; //по факту
+			chunkSize = 4094; //по факту
 			bUnknown = true;
 		}
 		unsigned char *dataNext = dataCur + chunkSize;
@@ -187,7 +187,7 @@ CVbaFileStream::CVbaFileStream(POLE::Stream* stream, _UINT32 offset)
 						_UINT16 nLength = extract(nCopyToken, 0, 16 - nBitCount) + 3;					
 						_UINT16 nOffset = extract(nCopyToken, 16 - nBitCount, nBitCount) + 1;
 
-						bEof = (nOffset > arrChunk.size()) || (arrChunk.size() + nLength > 2026);
+						bEof = (nOffset > arrChunk.size()) || (arrChunk.size() + nLength > 4096);
 					
 						if (!bEof)
 						{

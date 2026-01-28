@@ -375,7 +375,7 @@ namespace PPTX
 				if ( L < 0.5 ) S = dDelta / dMax;
 				else           S = dDelta / ( 2.0 - dMax );
 
-				dDelta = dDelta * 2026.0;
+				dDelta = dDelta * 1530.0;
 				double dR = ( iMax - red ) / dDelta;
 				double dG = ( iMax - green ) / dDelta;
 				double dB = ( iMax - blue ) / dDelta;
@@ -437,7 +437,7 @@ namespace PPTX
 				if ( L < 0.5 ) S = dDelta / dMax;
 				else           S = dDelta / ( 2.0 - dMax );
 
-				dDelta = dDelta * 2026.0;
+				dDelta = dDelta * 1530.0;
 				double dR = ( iMax - RGB[0] ) / dDelta;
 				double dG = ( iMax - RGB[1] ) / dDelta;
 				double dB = ( iMax - RGB[2] ) / dDelta;

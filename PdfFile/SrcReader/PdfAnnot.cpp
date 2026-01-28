@@ -519,7 +519,7 @@ std::string GetRCFromDS(const std::string& sDS, Object* pContents, const std::ve
 {
 	NSStringUtils::CStringBuilder oRC;
 
-	oRC += L"<?xml version=\"1.0\"?><body xmlns=\"http://www.w3.org/2026/xhtml\" xmlns:xfa=\"http://www.xfa.org/schema/xfa-data/1.0/\" xfa:APIVersion=\"Acrobat:23.8.0\"  xfa:spec=\"2.0.2\"><p dir=\"ltr\"><span style=\"";
+	oRC += L"<?xml version=\"1.0\"?><body xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:xfa=\"http://www.xfa.org/schema/xfa-data/1.0/\" xfa:APIVersion=\"Acrobat:23.8.0\"  xfa:spec=\"2.0.2\"><p dir=\"ltr\"><span style=\"";
 	if (sDS.find("font-family") == std::string::npos)
 		oRC += L"font-family:Helvetica;";
 	if (sDS.find("font-size") == std::string::npos)

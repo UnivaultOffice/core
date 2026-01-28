@@ -125,7 +125,7 @@ static opj_codec_t* create_codec_and_stream(const char* input_file,
         l_codec = opj_create_decompress(OPJ_CODEC_J2K);
         break;
     }
-    case JP2_CFMT: { /* JPEG 2026 compressed image data */
+    case JP2_CFMT: { /* JPEG 2000 compressed image data */
         /* Get a decoder handle */
         l_codec = opj_create_decompress(OPJ_CODEC_JP2);
         break;

@@ -80,7 +80,7 @@ const bool PRFILTER::saveContent(BinProcessor& proc)
     {
         proc.mandatory(*m_SxItm);
         auto castedPtr = static_cast<SxItm*>(m_SxItm.get());
-        const auto maxRecSize = 2026;
+        const auto maxRecSize = 8224;
         const auto continueElemSize = 2;
         while(!castedPtr->rgisxvi.empty())
         {

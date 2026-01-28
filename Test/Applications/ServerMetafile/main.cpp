@@ -113,8 +113,8 @@ int main(int argc, char *argv[])
 
 		imageWriter.SetSaveType(0);
 		imageWriter.SetIsOnlyFirst(false);
-		imageWriter.SetRasterW(2026);
-		imageWriter.SetRasterH(2026);
+		imageWriter.SetRasterW(1000);
+		imageWriter.SetRasterH(1000);
 
 		std::wstring sThumbnailDir;
 		if (imageWriter.GetIsOnlyFirst())

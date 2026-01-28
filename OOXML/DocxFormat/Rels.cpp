@@ -203,7 +203,7 @@ namespace OOX
 		oWriter.WriteString(L"<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>");
 
 		oWriter.WriteNodeBegin(L"Relationships", true );
-		oWriter.WriteAttribute(L"xmlns",L"http://schemas.openxmlformats.org/package/2026/relationships" );
+		oWriter.WriteAttribute(L"xmlns",L"http://schemas.openxmlformats.org/package/2006/relationships" );
 		oWriter.WriteNodeEnd(L"Relationships", true, false );
 
 		for (size_t i = 0; i < m_arRelations.size(); ++i)
@@ -228,12 +228,12 @@ namespace OOX
 
 		if (L"" == oPath.GetExtention())
 		{
-			if (oRelationShipType == L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/oleObject")
+			if (oRelationShipType == L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject")
 			{
 				strFileName += (strFileName.empty() ? L"" : L".bin");
 				pRel = new Rels::CRelationShip(rId, oRelationShipType, strDir + strFileName, bExternal);
 			}
-			else if (oRelationShipType == L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/image")
+			else if (oRelationShipType == L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/image")
 			{
 				strFileName += L".wmf";
 				pRel = new Rels::CRelationShip(rId, oRelationShipType, strDir + strFileName, bExternal);
@@ -262,12 +262,12 @@ namespace OOX
 
 		if ( L"" == oPath.GetExtention() )
 		{
-			if ( oType.RelationType() == L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/oleObject" )
+			if ( oType.RelationType() == L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject" )
 			{
 				strFileName += (strFileName.empty() ? L"" : L".bin");
 				pRel = new Rels::CRelationShip( rId, oType.RelationType(), strDir + strFileName, bExternal );
 			}
-			else if ( oType.RelationType() == L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/image" )
+			else if ( oType.RelationType() == L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/image" )
 			{
 				strFileName += L".wmf" ;
 				pRel = new Rels::CRelationShip( rId, oType.RelationType(), strDir + strFileName, bExternal );

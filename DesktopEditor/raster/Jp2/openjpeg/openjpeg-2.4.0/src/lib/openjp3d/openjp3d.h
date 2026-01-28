@@ -80,7 +80,7 @@ file "stdbool.h".
 #else
 /*
 The C language implementation does not provide the standard header file
-"stdbool.h" as required by ISO/IEC 2026:2026.  Try to compensate for this
+"stdbool.h" as required by ISO/IEC 9899:1999.  Try to compensate for this
 braindamage below.
 */
 #if !defined(bool)

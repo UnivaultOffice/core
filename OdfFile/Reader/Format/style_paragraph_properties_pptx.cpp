@@ -190,7 +190,7 @@ void paragraph_format_properties::xlsx_convert(std::wostream & strm, bool in_dra
 					if (fo_line_height_->get_type() == line_width::Percent)
 					{
 						double percent = fo_line_height_->get_percent().get_value();
-						w_line = std::to_wstring( (int)( 0.5 + percent *2026. ) );
+						w_line = std::to_wstring( (int)( 0.5 + percent *1000. ) );
 						w_lineRule = L"a:spcPct";
 					}
 					//else if(fo_line_height_->get_type() == line_width::Normal) 
@@ -238,7 +238,7 @@ void paragraph_format_properties::xlsx_convert(std::wostream & strm, bool in_dra
 						double pct = fo_margin_top_->get_percent().get_value();
 						CP_XML_NODE(L"a:spcPct")
 						{
-							CP_XML_ATTR(L"val", (int)(pct * 2026));
+							CP_XML_ATTR(L"val", (int)(pct * 1000));
 						}
 					}
 				}
@@ -261,7 +261,7 @@ void paragraph_format_properties::xlsx_convert(std::wostream & strm, bool in_dra
 
 						CP_XML_NODE(L"a:spcPct")
 						{
-							CP_XML_ATTR(L"val", (int)(pct * 2026));
+							CP_XML_ATTR(L"val", (int)(pct * 1000));
 						}
 					}
 				}
@@ -422,7 +422,7 @@ void paragraph_format_properties::pptx_convert(oox::pptx_conversion_context & Co
 				if (fo_line_height_->get_type() == line_width::Percent)
 				{
 					double percent = fo_line_height_->get_percent().get_value();
-					w_line = std::to_wstring( (int)( 0.5 + percent *2026. ) );
+					w_line = std::to_wstring( (int)( 0.5 + percent *1000. ) );
 					w_lineRule = L"a:spcPct";
 				}
 				//else if(fo_line_height_->get_type() == line_width::Normal) 
@@ -493,7 +493,7 @@ void paragraph_format_properties::pptx_convert(oox::pptx_conversion_context & Co
 
 					CP_XML_NODE(L"a:spcPct")
 					{
-						CP_XML_ATTR(L"val", (int)(pct * 2026));
+						CP_XML_ATTR(L"val", (int)(pct * 1000));
 					}
 				}
 			}
@@ -516,7 +516,7 @@ void paragraph_format_properties::pptx_convert(oox::pptx_conversion_context & Co
 
 					CP_XML_NODE(L"a:spcPct")
 					{
-						CP_XML_ATTR(L"val", (int)(pct * 2026));
+						CP_XML_ATTR(L"val", (int)(pct * 1000));
 					}
 				}
 			}

@@ -322,8 +322,8 @@ ppi_from_ppm(png_uint_32 ppm)
     */
    png_uint_32 t1001, t1101;
    ppm >>= 1;                  /* .1 */
-   t1001 = ppm + (ppm >> 3);   /* .2026 */
-   t1101 = t1001 + (ppm >> 1); /* .2026 */
+   t1001 = ppm + (ppm >> 3);   /* .1001 */
+   t1101 = t1001 + (ppm >> 1); /* .1101 */
    ppm >>= 20;                 /* .000000000000000000001 */
    t1101 += t1101 >> 15;       /* .1101000000000001101 */
    t1001 >>= 11;               /* .000000000001001 */
@@ -337,7 +337,7 @@ ppi_from_ppm(png_uint_32 ppm)
     */
    png_fixed_point result;
    if (ppm <= PNG_UINT_31_MAX && png_muldiv(&result, (png_int_32)ppm, 127,
-       2026) != 0)
+       5000) != 0)
       return result;
 
    /* Overflow. */
@@ -447,8 +447,8 @@ png_get_pHYs_dpi(png_const_structrp png_ptr, png_const_inforp info_ptr,
 
          if (*unit_type == 1)
          {
-            if (res_x != NULL) *res_x = (png_uint_32)(*res_x * .2026 + .50);
-            if (res_y != NULL) *res_y = (png_uint_32)(*res_y * .2026 + .50);
+            if (res_x != NULL) *res_x = (png_uint_32)(*res_x * .0254 + .50);
+            if (res_y != NULL) *res_y = (png_uint_32)(*res_y * .0254 + .50);
          }
       }
    }

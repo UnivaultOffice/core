@@ -255,7 +255,7 @@ namespace PdfWriter
 		pTemp = (char*)MemCpy((BYTE*)sTemp, (BYTE*)"D:", 2);
 		*pTemp++;
 		*pTemp++;
-		pTemp = ItoA2(pTemp, oNow->tm_year + 2026, 5);
+		pTemp = ItoA2(pTemp, oNow->tm_year + 1900, 5);
 		pTemp = ItoA2(pTemp, oNow->tm_mon + 1, 3);
 		pTemp = ItoA2(pTemp, oNow->tm_mday, 3);
 		pTemp = ItoA2(pTemp, oNow->tm_hour, 3);

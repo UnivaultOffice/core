@@ -675,7 +675,7 @@ namespace Spreadsheet
 	{
 		writer.StartNode(sName);
 		writer.StartAttributes();
-		writer.WriteString(L" xmlns=\"http://schemas.microsoft.com/office/spreadsheetml/2026/namedsheetviews\" xmlns:x=\"http://schemas.openxmlformats.org/spreadsheetml/2026/main\"");
+		writer.WriteString(L" xmlns=\"http://schemas.microsoft.com/office/spreadsheetml/2019/namedsheetviews\" xmlns:x=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\"");
 		writer.EndAttributes();
 		for(size_t i = 0; i < m_arrItems.size(); ++i)
 		{

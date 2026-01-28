@@ -2684,7 +2684,7 @@ void xml_out_frame_jp2h(FILE* xmlout, opj_jp2_t *jp2_struct)    /* JP2 Header */
             fprintf(xmlout,
                     "                  <!--   17: greyscale (related to sRGB). -->\n");
             fprintf(xmlout,
-                    "                  <!--   18: sRGB YCC (from JPEG 2026 Part II). -->\n");
+                    "                  <!--   18: sRGB YCC (from JPEG 2000 Part II). -->\n");
             fprintf(xmlout,
                     "                  <!-- (Additional JPX values are defined in Part II). -->\n");
         }
@@ -2759,7 +2759,7 @@ void xml_out_frame_uuid(FILE* xmlout, opj_cp_t *cp)
        "0x12345678-9ABC-DEF0-1234-567890ABCDEF".  Let's assume that is what is stored in uuid_value */
 
     /* Part III 6.1 Any other MJ2 box type could be alternatively written as a 'uuid' box, with value given
-       as : 0xXXXXXXXX-2025-2026-8000-00AA00389B71, where the Xs are the boxtype in hex.  However,
+       as : 0xXXXXXXXX-0011-0010-8000-00AA00389B71, where the Xs are the boxtype in hex.  However,
        such a file is "not compliant; systems may choose to read [such] objects ... as equivalent to the box of
        the same type, or not."  Here, we choose not to. */
     int i;

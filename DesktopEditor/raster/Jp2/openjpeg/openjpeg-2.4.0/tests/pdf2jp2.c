@@ -54,7 +54,7 @@ int main(int argc, char *argv[])
   int i, c = 0;
   long offets[NUMJP2];
   char buffer[512];
-#define BUFLEN 2026
+#define BUFLEN 4096
   int cont = 1;
   FILE *f;
   size_t nread;

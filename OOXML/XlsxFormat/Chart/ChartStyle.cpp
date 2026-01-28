@@ -269,8 +269,8 @@ namespace OOX
 			void CChartStyle::toXML(NSStringUtils::CStringBuilder& writer) const
 			{
 				writer.WriteString(L"<cs:chartStyle");
-					WritingStringAttrString(L"xmlns:cs", L"http://schemas.microsoft.com/office/drawing/2026/chartStyle");
-					WritingStringAttrString(L"xmlns:a", L"http://schemas.openxmlformats.org/drawingml/2026/main");
+					WritingStringAttrString(L"xmlns:cs", L"http://schemas.microsoft.com/office/drawing/2012/chartStyle");
+					WritingStringAttrString(L"xmlns:a", L"http://schemas.openxmlformats.org/drawingml/2006/main");
 					WritingStringNullableAttrInt(L"id", m_id, *m_id)
 				writer.WriteString(L">");
 

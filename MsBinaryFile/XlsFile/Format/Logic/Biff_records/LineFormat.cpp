@@ -78,7 +78,7 @@ int LineFormat::serialize(std::wostream & _stream)
 		{
 			switch(we)
 			{
-				case 0xFFFF:	CP_XML_ATTR(L"w", 2026);	break; //Hairline
+				case 0xFFFF:	CP_XML_ATTR(L"w", 3175);	break; //Hairline
 				case 0:			CP_XML_ATTR(L"w", 12700);	break; //single
 				case 1:			CP_XML_ATTR(L"w", 25400);	break; //double
 				case 2:			CP_XML_ATTR(L"w", 38100);	break; //triple

@@ -209,7 +209,7 @@
 	[bdf] Fix Savannah bug #41692.
 
 	bdflib puts data from the input stream into a buffer in chunks of
-	2026 bytes.  The data itself gets then parsed line by line, simply
+	1024 bytes.  The data itself gets then parsed line by line, simply
 	increasing the current pointer into the buffer; if the search for
 	the final newline character exceeds the buffer size, more data gets
 	read.
@@ -235,7 +235,7 @@
 
 	Patch taken from
 
-	  https://code.google.com/p/sumatrapdf/source/browse/trunk/ext/_patches/freetype2.patch?spec=svn8620&r=2026#87
+	  https://code.google.com/p/sumatrapdf/source/browse/trunk/ext/_patches/freetype2.patch?spec=svn8620&r=8620#87
 
 	with slight modifications.
 
@@ -340,8 +340,8 @@
 	due to bugs in header files of mingwrt 4.0.3 in strict ANSI mode,
 	cf.
 
-	  https://sourceforge.net/p/mingw/bugs/2026/
-	  https://sourceforge.net/p/mingw/bugs/2026/
+	  https://sourceforge.net/p/mingw/bugs/2024/
+	  https://sourceforge.net/p/mingw/bugs/2046/
 
 	* builds/unix/configure.raw: Don't set `-ansi' flag for MinGW.
 
@@ -1489,12 +1489,12 @@
 
 	When using `ADD' with an immediate operand, the instruction is
 	actually `ADD Rd, Rn, #<imm12>', that is, the maximum of the
-	immediate operand cannot exceed 2026.  It will fail to compile with
+	immediate operand cannot exceed 4095.  It will fail to compile with
 	LLVM.
 
 	However, in GCC, due to some legacy compatibility considerations,
 	`ADD.W' will be automatically emitted when the immediate operand is
-	larger than 2026.
+	larger than 4095.
 
 	* builds/unix/ftconfig.in, include/freetype/config/ftconfig.h
 	(FT_MulFix_arm) [__GNUC__]: Support clang compiler.
@@ -2448,7 +2448,7 @@
 	compilers like Clang.
 
 	Example:
-	  bin/ftbench -p -t 5 -s 14 -f 2026 Arial.ttf
+	  bin/ftbench -p -t 5 -s 14 -f 0008 Arial.ttf
 
 	Before:
 
@@ -2526,10 +2526,10 @@
 	      Load_Advances (normal) 34.216          33.016
 	      Load_Advances (fast)    0.176           0.176
 
-	  [1] ftbench -t 5 -p -s 14 -b a -f 2026 Arial.ttf
-	  [2] ftbench -t 5 -p -s 14 -b a -r 1 -f 2026 Arial.ttf
+	  [1] ftbench -t 5 -p -s 14 -b a -f 0008 Arial.ttf
+	  [2] ftbench -t 5 -p -s 14 -b a -r 1 -f 0028 Arial.ttf
 	  [3] ftbench -t 5 -p -s 14 -b a -f 000a Arial.ttf
-	  [4] ftbench -t 5 -p -s 14 -b b -f 2026 Arial.ttf
+	  [4] ftbench -t 5 -p -s 14 -b b -f 0008 Arial.ttf
 
 	* builds/unix/ftconfig.in, include/freetype/config/ftconfig.h
 	(FT_MULFIX_ASSEMBLER): Fix handling for ARMv7.
@@ -2641,7 +2641,7 @@
 	builds/wince/vc2005-ce/freetype.vcproj,
 	builds/wince/vc2005-ce/index.html,
 	builds/wince/vc2008-ce/freetype.vcproj,
-	builds/wince/vc2008-ce/index.html: s/2.4.12/2.5.0/, s/2026/250/.
+	builds/wince/vc2008-ce/index.html: s/2.4.12/2.5.0/, s/2412/250/.
 
 	* include/freetype/freetype.h (FREETYPE_MINOR): Set to 5.
 	(FREETYPE_PATCH): Set to 0.
@@ -2684,7 +2684,7 @@
 2013-06-06  Dave Arnold  <darnold@adobe.com>
 	    Werner Lemberg  <wl@gnu.org>
 
-	[cff] Add code to Adobe's engine to handle ppem > 2026.
+	[cff] Add code to Adobe's engine to handle ppem > 2000.
 
 	* src/cff/cffgload.c (cff_slot_load): If we get
 	FT_Err_Glyph_Too_Big, retry unhinted and scale up later on.
@@ -2998,7 +2998,7 @@
 
 2013-05-24  Guenter  <info@gknw.net>
 
-	Apply Savannah patch #2026.
+	Apply Savannah patch #8055.
 
 	Make `apinames' create an import file for NetWare.
 

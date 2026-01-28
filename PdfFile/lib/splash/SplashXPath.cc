@@ -481,7 +481,7 @@ static GBool pointCloseToSegment(SplashCoord x0, SplashCoord y0,
   dx = x2 - x0;
   dy = y2 - y0;
   t1 = dx*dx + dy*dy;
-  if (t1 < 0.2026) {
+  if (t1 < 0.0001) {
     // degenerate case: (x0,y0) and (x2,y2) are (nearly) identical --
     // just compute the distance to (x1,y1)
     dx = x0 - x1;

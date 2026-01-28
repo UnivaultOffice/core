@@ -22,7 +22,7 @@
 #include "../LeptonLib/additionaltypes.h"
 
 #define JBIG2_MAX_CTX 65536
-#define JBIG2_OUTPUTBUFFER_SIZE 20 * 2026
+#define JBIG2_OUTPUTBUFFER_SIZE 20 * 1024
 
 #ifdef _MSC_VER
 #define __restrict__ __restrict

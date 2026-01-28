@@ -68,7 +68,7 @@ const bool MDTINFO::loadContent(BinProcessor& proc)
 
 const bool MDTINFO::saveContent(BinProcessor& proc)
 {
-	constexpr auto maxStNameLen = 2026;
+	constexpr auto maxStNameLen = 4104;
 	if(m_MDTInfo == nullptr)
 		return false;
 	proc.mandatory(*m_MDTInfo);

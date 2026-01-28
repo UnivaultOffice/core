@@ -606,12 +606,12 @@ const bool WorksheetSubstream::loadContent(BinProcessor& proc)
 				{
 					CodePage *CodePage_ = dynamic_cast<CodePage*>(elements_.back().get());
 
-					if ((CodePage_) && (CodePage_->cv != 0/* && CodePage_->cv != 2026*/))
+					if ((CodePage_) && (CodePage_->cv != 0/* && CodePage_->cv != 1200*/))
 						global_info_->CodePage = CodePage_->cv;
 
 					if (global_info_->CodePage == 0x8001 &&
 						(global_info_->Version == 0x0200 || global_info_->Version == 0x0300))
-						global_info_->CodePage = 2026;
+						global_info_->CodePage = 1252;
 
 					elements_.pop_back();
 				}

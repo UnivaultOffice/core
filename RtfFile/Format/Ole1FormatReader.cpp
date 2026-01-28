@@ -396,7 +396,7 @@ void Ole1FormatReaderWriter::Write(BYTE *pData, int &Size)
 	if (!pData) return;
 	if (NativeDataSize < 1) return;
 
-	CDataStream stream(pData, NativeDataSize + 2026);
+	CDataStream stream(pData, NativeDataSize + 2048);
 
 	stream << Header.OLEVersion << Header.FormatID;
 

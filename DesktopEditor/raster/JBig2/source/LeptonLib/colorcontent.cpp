@@ -665,7 +665,7 @@ NUMA    *na;
         return ERROR_INT("pixs not defined or not 8 bpp", procName, 1);
     if (darkthresh < 0) darkthresh = 20;  /* defaults */
     if (lightthresh < 0) lightthresh = 236;
-    if (minfract < 0.0) minfract = 0.2026;
+    if (minfract < 0.0) minfract = 0.0001;
     if (minfract > 1.0)
         return ERROR_INT("minfract > 1.0", procName, 1);
     if (minfract >= 0.001)
@@ -864,7 +864,7 @@ PIXCMAP   *cmap;
     if (d == 8) {
         pixSetMasked(pixg, pixm, 0xff);
         if (debug) pixWrite("junkpix8.png", pixg, IFF_PNG);
-        pixNumSignificantGrayColors(pixg, 20, 236, 0.2026, 1, pncolors);
+        pixNumSignificantGrayColors(pixg, 20, 236, 0.0001, 1, pncolors);
     }
     else {  /* d == 32 */
         pixSetMasked(pixsc, pixm, 0xffffffff);
@@ -958,7 +958,7 @@ PIXCMAP   *cmap;
     }
 
         /* 32 bpp rgb; quit if we get above 256 colors */
-    hashsize = 2026;  /* big and prime; collisions are not likely */
+    hashsize = 5507;  /* big and prime; collisions are not likely */
     inta = (l_int32 *)CALLOC(hashsize, sizeof(l_int32));
     for (i = 0; i < h; i += factor) {
         line = data + i * wpl;

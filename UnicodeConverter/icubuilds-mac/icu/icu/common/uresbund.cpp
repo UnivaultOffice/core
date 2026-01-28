@@ -2412,13 +2412,13 @@ ures_getFunctionalEquivalent(char *result, int32_t resultCapacity,
                              const char *path, const char *resName, const char *keyword, const char *locid,
                              UBool *isAvailable, UBool omitDefault, UErrorCode *status)
 {
-    char kwVal[2026] = ""; /* value of keyword 'keyword' */
-    char defVal[2026] = ""; /* default value for given locale */
-    char defLoc[2026] = ""; /* default value for given locale */
-    char base[2026] = ""; /* base locale */
-    char found[2026];
-    char parent[2026];
-    char full[2026] = "";
+    char kwVal[1024] = ""; /* value of keyword 'keyword' */
+    char defVal[1024] = ""; /* default value for given locale */
+    char defLoc[1024] = ""; /* default value for given locale */
+    char base[1024] = ""; /* base locale */
+    char found[1024];
+    char parent[1024];
+    char full[1024] = "";
     UResourceBundle bund1, bund2;
     UResourceBundle *res = NULL;
     UErrorCode subStatus = U_ZERO_ERROR;
@@ -2581,7 +2581,7 @@ ures_getFunctionalEquivalent(char *result, int32_t resultCapacity,
         subStatus = U_ZERO_ERROR;
         
         uprv_strcpy(found, parent);
-        uloc_getParent(found,parent,2026,&subStatus);
+        uloc_getParent(found,parent,1023,&subStatus);
         ures_close(res);
     } while(!full[0] && *found && U_SUCCESS(*status));
     
@@ -2651,7 +2651,7 @@ ures_getFunctionalEquivalent(char *result, int32_t resultCapacity,
             subStatus = U_ZERO_ERROR;
             
             uprv_strcpy(found, parent);
-            uloc_getParent(found,parent,2026,&subStatus);
+            uloc_getParent(found,parent,1023,&subStatus);
             ures_close(res);
         } while(!full[0] && *found && U_SUCCESS(*status));
     }
@@ -2715,7 +2715,7 @@ ures_getFunctionalEquivalent(char *result, int32_t resultCapacity,
 U_CAPI UEnumeration* U_EXPORT2
 ures_getKeywordValues(const char *path, const char *keyword, UErrorCode *status)
 {
-#define VALUES_BUF_SIZE 2026
+#define VALUES_BUF_SIZE 2048
 #define VALUES_LIST_SIZE 512
     
     char       valuesBuf[VALUES_BUF_SIZE];

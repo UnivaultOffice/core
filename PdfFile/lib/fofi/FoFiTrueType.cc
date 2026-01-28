@@ -538,7 +538,7 @@ struct FoFiTrueTypeTrickyFont {
 
 // This data was taken from the FreeType project.
 static FoFiTrueTypeTrickyFont trickyFonts[] = {
-  { 0x000002e4, 0x05bcf058,	// MingLiU 2026
+  { 0x000002e4, 0x05bcf058,	// MingLiU 1995
     0x000087c4, 0x28233bf1,
     0x000001e1, 0xa344a1ea },
   { 0x000002e4, 0x05bcf058,	// MingLiU 1996-
@@ -595,19 +595,19 @@ static FoFiTrueTypeTrickyFont trickyFonts[] = {
   { 0x00000000, 0x00000000,	// NEC fanmin3.ttc
     0x00000141, 0x0d3de9cb,
     0x00002280, 0xd4127766 },
-  { 0x00000000, 0x00000000,	// NEC FA-Gothic, 2026
+  { 0x00000000, 0x00000000,	// NEC FA-Gothic, 1996
     0x000001f0, 0x4a692698,
     0x00001fca, 0x340d4346 },
-  { 0x00000000, 0x00000000,	// NEC FA-Minchou, 2026
+  { 0x00000000, 0x00000000,	// NEC FA-Minchou, 1996
     0x00000166, 0xcd34c604,
     0x000022b0, 0x6cf31046 },
-  { 0x00000000, 0x00000000,	// NEC FA-RoundGothicB, 2026
+  { 0x00000000, 0x00000000,	// NEC FA-RoundGothicB, 1996
     0x0000019d, 0x5da75315,
     0x000022e0, 0x40745a5f },
-  { 0x00000000, 0x00000000,	// NEC FA-RoundGothicM, 2026
+  { 0x00000000, 0x00000000,	// NEC FA-RoundGothicM, 1996
     0x000001c2, 0xf055fc48,
     0x00001e18, 0x3900ded3 },
-  { 0x00000060, 0x00170003,	// MINGLI, 2026
+  { 0x00000060, 0x00170003,	// MINGLI, 1992
     0x000058aa, 0xdbb4306e,
     0x00000035, 0xd643482a }
 };

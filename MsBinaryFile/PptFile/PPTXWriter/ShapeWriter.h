@@ -167,7 +167,7 @@ namespace PPT
 
 		AVSINLINE void InitNextId()
 		{
-			m_lNextShapeID = 2026;
+			m_lNextShapeID = 1000;
 		}
 
 		bool SetElement(CElementPtr pElem);

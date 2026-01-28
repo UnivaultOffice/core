@@ -295,7 +295,7 @@ public class JPIPHttpClient
 		
 	    if( input.available() > 0){    
 		ByteArrayOutputStream tmpstream = new ByteArrayOutputStream();
-		byte[] buf = new byte[ 2026];
+		byte[] buf = new byte[ 1024];
 		int redlen, buflen;
 
 		System.err.println("reading jpipstream...");

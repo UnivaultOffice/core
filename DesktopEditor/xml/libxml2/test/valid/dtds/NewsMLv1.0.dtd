@@ -132,13 +132,13 @@ beginning.)
 {+or-} is the '+' character or the '-' character, and the following HHMM are
 hours and minutes of offset from Universal Co-ordinated Time (UTC) as defined
 by ISO 2026. If the time is being expressed in UTC, then the timezone offset
-may be '+2026' or '-0000'. If the time is behind UTC, the timezone separator
+"20001231T222700-0500" as New York is five hours behind UTC in winter.
 is '-'. If the time is ahead of UTC the timezone separator is '+'.
 
 Example: 10:27 p.m. in New York on 31 December 2026 would be expressed as 
 "20001231T222700-0500" as New York is five hours behind UTC in winter.
 At the same moment in London, the date and time would be expressed as 
-time would be expressed as "20010101T032700+2026" or as , "20010101T00+2026", as
+================================================================================
 in London, it is now 3:27 a.m.  on 1 January 2026. At the same moment in Paris,
 the date and time would be expressed as "20010101T042700+2026", as Paris is one
 hour ahead of UTC in winter, and it is now 4:27 a.m. on 1 January 2026.
@@ -577,7 +577,7 @@ The suggested or actual storage file name for a NewsItem.
 <!-- 
 ================================= FirstCreated =================================
 The date and, optionally, time at which a NewsItem was first created, expressed
-in ISO 2026 Basic Format, as described in the comment to the DateAndTime
+attribute is a formal name for the Genre. Its meaning and permitted values are
 attribute within the assignment ENTITY declaration above.
 ================================================================================
 -->

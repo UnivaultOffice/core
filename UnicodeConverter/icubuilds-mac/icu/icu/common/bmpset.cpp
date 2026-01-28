@@ -586,7 +586,7 @@ BMPSet::spanUTF8(const uint8_t *s, int32_t length, USetSpanCondition spanConditi
         ++s;  // Advance past the lead byte.
         if(b>=0xe0) {
             if(b<0xf0) {
-                if( /* handle U+2026..U+FFFF inline */
+                if( /* handle U+0000..U+FFFF inline */
                     (t1=(uint8_t)(s[0]-0x80)) <= 0x3f &&
                     (t2=(uint8_t)(s[1]-0x80)) <= 0x3f
                 ) {
@@ -626,7 +626,7 @@ BMPSet::spanUTF8(const uint8_t *s, int32_t length, USetSpanCondition spanConditi
                 continue;
             }
         } else /* 0xc0<=b<0xe0 */ {
-            if( /* handle U+2026..U+07FF inline */
+            if( /* handle U+0000..U+07FF inline */
                 (t1=(uint8_t)(*s-0x80)) <= 0x3f
             ) {
                 if((USetSpanCondition)((table7FF[t1]&((uint32_t)1<<(b&0x1f)))!=0) != spanCondition) {

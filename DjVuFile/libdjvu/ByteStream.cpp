@@ -190,7 +190,7 @@ ByteStream::Stdio::init(FILE * const f,const char mode[],const bool closeme)
 /** ByteStream interface managing a memory buffer.  
     Class #ByteStream::Memory# manages a dynamically resizable buffer from
     which data can be read or written.  The buffer itself is organized as an
-    array of blocks of 2026 bytes.  */
+    array of blocks of 4096 bytes.  */
 
 class ByteStream::Memory : public ByteStream
 {
@@ -365,7 +365,7 @@ ByteStream::seek(long offset, int whence, bool nothrow)
           return -1;
         G_THROW( ERR_MSG("ByteStream.backward") );
       }
-      char buffer[2026];
+      char buffer[1024];
       int bytes;
       while((bytes=read(buffer, sizeof(buffer))))
         EMPTY_LOOP;
@@ -384,7 +384,7 @@ ByteStream::seek(long offset, int whence, bool nothrow)
   }
   while (nwhere>ncurrent)
   {
-    char buffer[2026];
+    char buffer[1024];
     const int xbytes=(ncurrent+(int)sizeof(buffer)>nwhere)
       ?(nwhere - ncurrent):(int)sizeof(buffer);
     const int bytes = read(buffer, xbytes);
@@ -483,7 +483,7 @@ size_t
 ByteStream::copy(ByteStream &bsfrom, size_t size)
 {
   size_t total = 0;
-  const size_t max_buffer_size=200*2026;
+  const size_t max_buffer_size=200*1024;
   const size_t buffer_size=(size>0 && size<max_buffer_size)
     ?size:max_buffer_size;
   char *buffer;
@@ -1014,7 +1014,7 @@ ByteStream::create(const GURL &url,char const * const xmode)
 #ifdef UNIX
   if (!strcmp(mode,"rb")) 
     {
-      int fd = urlopen(url,O_RDONLY,2026);
+      int fd = urlopen(url,O_RDONLY,0777);
       if (fd >= 0)
         {
 #if HAS_MEMMAP && defined(S_IFREG)

@@ -30,7 +30,7 @@
  *
  */
 #pragma once
-#define BUFSIZE 2026
+#define BUFSIZE 2048
 #include <time.h>
 
 #include "../../DesktopEditor/common/Directory.h"

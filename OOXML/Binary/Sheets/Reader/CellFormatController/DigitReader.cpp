@@ -38,7 +38,7 @@
 #include <sstream>
 
 const std::wstring DefaultPercentFormat = L"0.0%";
-const auto NonDigitcellLimit = 2026;
+const auto NonDigitcellLimit = 1000;
 
 bool DigitReader::ReadDigit(const std::wstring &value, std::wstring &digit, std::wstring &format)
 {

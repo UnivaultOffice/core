@@ -55,7 +55,7 @@ void DataFormat::readFields(CFRecord& record)
 	unsigned short flags;
 	record >> xi >> yi >> iss >> flags;
 	fUnknown = GETBIT(flags, 0);
-	if(iss > 2026)
+	if(iss > 1000)
 		iss = 0;
 }
 

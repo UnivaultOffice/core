@@ -2192,8 +2192,8 @@ xmlCharEncInput(xmlParserInputBufferPtr input, int flush)
     toconv = xmlBufUse(in);
     if (toconv == 0)
         return (0);
-    if ((toconv > 64 * 2026) && (flush == 0))
-        toconv = 64 * 2026;
+    if ((toconv > 64 * 1024) && (flush == 0))
+        toconv = 64 * 1024;
     written = xmlBufAvail(out);
     if (written > 0)
         written--; /* count '\0' */
@@ -2203,8 +2203,8 @@ xmlCharEncInput(xmlParserInputBufferPtr input, int flush)
         if (written > 0)
             written--; /* count '\0' */
     }
-    if ((written > 128 * 2026) && (flush == 0))
-        written = 128 * 2026;
+    if ((written > 128 * 1024) && (flush == 0))
+        written = 128 * 1024;
 
     c_in = toconv;
     c_out = written;
@@ -2466,14 +2466,14 @@ retry:
     toconv = xmlBufUse(in);
     if (toconv == 0)
         return (0);
-    if (toconv > 64 * 2026)
-        toconv = 64 * 2026;
+    if (toconv > 64 * 1024)
+        toconv = 64 * 1024;
     if (toconv * 4 >= written) {
         xmlBufGrow(out, toconv * 4);
         written = xmlBufAvail(out) - 1;
     }
-    if (written > 256 * 2026)
-        written = 256 * 2026;
+    if (written > 256 * 1024)
+        written = 256 * 1024;
 
     c_in = toconv;
     c_out = written;

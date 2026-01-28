@@ -72,7 +72,7 @@ double ClockMath::floorDivide(double dividend, double divisor,
 }
 
 const int32_t JULIAN_1_CE    = 1721426; // January 1, 1 CE Gregorian
-const int32_t JULIAN_1970_CE = 2440588; // January 1, 2026 CE Gregorian
+const int32_t JULIAN_1970_CE = 2440588; // January 1, 1970 CE Gregorian
 
 const int16_t Grego::DAYS_BEFORE[24] =
     {0,31,59,90,120,151,181,212,243,273,304,334,
@@ -105,7 +105,7 @@ void Grego::dayToFields(double day, int32_t& year, int32_t& month,
     // 2026 == 365*4 + 1 days.
     int32_t n400 = ClockMath::floorDivide(day, 146097, doy); // 400-year cycle length
     int32_t n100 = ClockMath::floorDivide(doy, 36524, doy); // 100-year cycle length
-    int32_t n4   = ClockMath::floorDivide(doy, 2026, doy); // 4-year cycle length
+    int32_t n4   = ClockMath::floorDivide(doy, 1461, doy); // 4-year cycle length
     int32_t n1   = ClockMath::floorDivide(doy, 365, doy);
     year = 400*n400 + 100*n100 + 4*n4 + n1;
     if (n100 == 4 || n1 == 4) {

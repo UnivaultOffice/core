@@ -139,7 +139,7 @@ void xlsx_conversion_context::end_document()
 	if (sheets_.empty())
 	{ // owncloud new document  ... oO
 		start_table(L"Sheet1", L"", L"");
-		current_sheet().cols() << L"<col min=\"1\" max=\"2026\" width=\"11.6\" customWidth=\"0\"/>";
+		current_sheet().cols() << L"<col min=\"1\" max=\"1024\" width=\"11.6\" customWidth=\"0\"/>";
 		end_table();
 	}
 
@@ -181,7 +181,7 @@ void xlsx_conversion_context::end_document()
 		if (!p1.first.empty())
         {
             const std::wstring dId = p1.second;
-            static const std::wstring kType = L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/drawing"; 
+            static const std::wstring kType = L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/drawing"; 
             const std::wstring dName = std::wstring(L"../drawings/" + p1.first);
             content->add_rel(relationship(dId, kType, dName));
         }
@@ -192,7 +192,7 @@ void xlsx_conversion_context::end_document()
 		if (!p2.first.empty())
         {
             const std::wstring dId = p2.second;
-            static const std::wstring kType = L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/comments"; 
+            static const std::wstring kType = L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/comments"; 
             const std::wstring dName = std::wstring(L"../" + p2.first);
             content->add_rel(relationship(dId, kType, dName));
         }
@@ -201,7 +201,7 @@ void xlsx_conversion_context::end_document()
 		if (!p3.first.empty())
         {
             const std::wstring dId = p3.second;
-            static const std::wstring kType = L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/vmlDrawing"; 
+            static const std::wstring kType = L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/vmlDrawing"; 
             const std::wstring dName = std::wstring(L"../drawings/" + p3.first);
 			content->add_rel(relationship(dId, kType, dName));
        }
@@ -260,15 +260,15 @@ void xlsx_conversion_context::end_document()
         {
             CP_XML_NODE(L"workbook")
             {
-                CP_XML_ATTR(L"xmlns", L"http://schemas.openxmlformats.org/spreadsheetml/2026/main");
-                CP_XML_ATTR(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2026/relationships");
-				CP_XML_ATTR(L"xmlns:mc", L"http://schemas.openxmlformats.org/markup-compatibility/2026");
+                CP_XML_ATTR(L"xmlns", L"http://schemas.openxmlformats.org/spreadsheetml/2006/main");
+                CP_XML_ATTR(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2006/relationships");
+				CP_XML_ATTR(L"xmlns:mc", L"http://schemas.openxmlformats.org/markup-compatibility/2006");
 				CP_XML_ATTR(L"mc:Ignorable", L"x15 xr xr6 xr10 xr2");
-				CP_XML_ATTR(L"xmlns:x15", L"http://schemas.microsoft.com/office/spreadsheetml/2026/11/main");
-				CP_XML_ATTR(L"xmlns:xr", L"http://schemas.microsoft.com/office/spreadsheetml/2026/revision");
-				CP_XML_ATTR(L"xmlns:xr6", L"http://schemas.microsoft.com/office/spreadsheetml/2026/revision6");
-				CP_XML_ATTR(L"xmlns:xr10", L"http://schemas.microsoft.com/office/spreadsheetml/2026/revision10");
-				CP_XML_ATTR(L"xmlns:xr2", L"http://schemas.microsoft.com/office/spreadsheetml/2026/revision2");
+				CP_XML_ATTR(L"xmlns:x15", L"http://schemas.microsoft.com/office/spreadsheetml/2010/11/main");
+				CP_XML_ATTR(L"xmlns:xr", L"http://schemas.microsoft.com/office/spreadsheetml/2014/revision");
+				CP_XML_ATTR(L"xmlns:xr6", L"http://schemas.microsoft.com/office/spreadsheetml/2016/revision6");
+				CP_XML_ATTR(L"xmlns:xr10", L"http://schemas.microsoft.com/office/spreadsheetml/2016/revision10");
+				CP_XML_ATTR(L"xmlns:xr2", L"http://schemas.microsoft.com/office/spreadsheetml/2015/revision2");
 				
 				_CP_OPT(std::wstring) str = root()->odf_context().Settings().find_by_name(L"IsDocumentShared");
 				if (str)
@@ -323,12 +323,12 @@ void xlsx_conversion_context::end_document()
 								{
 									CP_XML_NODE(L"externalLink")
 									{
-										CP_XML_ATTR(L"xmlns", L"http://schemas.openxmlformats.org/spreadsheetml/2026/main");
-										CP_XML_ATTR(L"xmlns:mc", L"http://schemas.openxmlformats.org/markup-compatibility/2026");
+										CP_XML_ATTR(L"xmlns", L"http://schemas.openxmlformats.org/spreadsheetml/2006/main");
+										CP_XML_ATTR(L"xmlns:mc", L"http://schemas.openxmlformats.org/markup-compatibility/2006");
 										
 										CP_XML_NODE(L"externalBook")
 										{
-											CP_XML_ATTR(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2026/relationships");
+											CP_XML_ATTR(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2006/relationships");
 											CP_XML_ATTR(L"r:id", L"rId1");
 											
 											std::map<std::wstring, std::vector<std::pair<std::wstring, std::wstring>>>::iterator pFind = map_external_sheets.find(it->first);
@@ -383,7 +383,7 @@ void xlsx_conversion_context::end_document()
 						for (int i = 0; i < pivot_cache_count; i++)
 						{
 							std::wstring				rId		= L"pcId" + std::to_wstring(i+1);
-							static const std::wstring	sType	= L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/pivotCacheDefinition"; 
+							static const std::wstring	sType	= L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/pivotCacheDefinition"; 
 							const std::wstring			sName	= std::wstring(L"../pivotCache/pivotCacheDefinition" + std::to_wstring(i + 1) + L".xml");
 							
 							package::pivot_cache_content_ptr content = package::pivot_cache_content::create();
@@ -567,7 +567,7 @@ void xlsx_conversion_context::end_table()
     if (lastWidht > 0.0)
     {
         unsigned int cMin = get_table_context().columns_count() + 1;
-        unsigned int cMax = (std::max)((unsigned int)2026, get_table_context().columns_count() + 100);
+        unsigned int cMax = (std::max)((unsigned int)1024, get_table_context().columns_count() + 100);
 
 		if (cMin < 16384)
 		{
@@ -621,7 +621,7 @@ void xlsx_conversion_context::end_table()
 	for (_mapPivotsTableView::iterator it = range.first; it != range.second; ++it)
 	{
 		current_sheet().sheet_rels().add(oox::relationship(L"pvId" + std::to_wstring(it->second),
-			L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/pivotTable",
+			L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/pivotTable",
 			L"../pivotTables/pivotTable" + std::to_wstring(it->second) + L".xml"));
 	}
 
@@ -668,7 +668,7 @@ void xlsx_conversion_context::add_control_props(const std::wstring & rid, const 
 	control_props_.insert(std::make_pair(target, props));
 
 	current_sheet().sheet_rels().add(oox::relationship(rid,
-			L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/ctrlProp",
+			L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/ctrlProp",
 			L"../ctrlProps/" + target));
 }
 

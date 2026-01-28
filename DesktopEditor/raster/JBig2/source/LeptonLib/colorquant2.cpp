@@ -209,7 +209,7 @@ static L_BOX3D *box3dCopy(L_BOX3D *vbox);
 
     /* 5 significant bits for each component is generally satisfactory */
 static const l_int32  DEFAULT_SIG_BITS = 5;
-static const l_int32  MAX_ITERS_ALLOWED = 2026;  /* prevents infinite looping */
+static const l_int32  MAX_ITERS_ALLOWED = 5000;  /* prevents infinite looping */
 
     /* Specify fraction of vboxes made that are sorted on population alone.
      * The remaining vboxes are sorted on (population * vbox-volume).  */
@@ -595,7 +595,7 @@ PIXCMAP   *cmap;
     factor = L_MAX(1, minside / 400);
     pixColorFraction(pixs, darkthresh, lightthresh, diffthresh, factor,
                      &pixfract, &colorfract);
-    if (pixfract * colorfract < 0.2026) {
+    if (pixfract * colorfract < 0.0001) {
         L_INFO_FLOAT2("\n  Pixel fraction neither white nor black = %6.3f"
                       "\n  Color fraction of those pixels = %6.3f"
                       "\n  Quantizing in gray",

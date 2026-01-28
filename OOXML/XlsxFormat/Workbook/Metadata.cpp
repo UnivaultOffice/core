@@ -1414,9 +1414,9 @@ namespace OOX
 		void CMetadata::toXML(NSStringUtils::CStringBuilder& writer) const
 		{
 			writer.WriteString(L"<metadata \
-xmlns=\"http://schemas.openxmlformats.org/spreadsheetml/2026/main\" \
-xmlns:xlrd=\"http://schemas.microsoft.com/office/spreadsheetml/2026/richdata\" \
-xmlns:xda=\"http://schemas.microsoft.com/office/spreadsheetml/2026/dynamicarray\">");
+xmlns=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\" \
+xmlns:xlrd=\"http://schemas.microsoft.com/office/spreadsheetml/2017/richdata\" \
+xmlns:xda=\"http://schemas.microsoft.com/office/spreadsheetml/2017/dynamicarray\">");
 
 			if (m_oMetadataTypes.IsInit())
 			{

@@ -330,7 +330,7 @@
              char**  extensions )
   {
     int          i, max;
-    char         buffer[2026];
+    char         buffer[1025];
     struct stat  statb;
 
 
@@ -417,7 +417,7 @@
   copyfont( struct fontlist*  item,
             char*             newfont )
   {
-    static char  buffer[2026];
+    static char  buffer[8096];
     FILE         *good, *new;
     int          len;
     int          i, err_cnt;
@@ -495,7 +495,7 @@
   {
     int         i        = getRandom( 0, fcnt - 1 );
     static int  test_num = 0;
-    char        buffer[2026];
+    char        buffer[1024];
 
 
     sprintf( buffer, "%s/test%d", results_dir, test_num++ );
@@ -661,7 +661,7 @@
     srandom( now );
 
     FindFonts( dirs, exts );
-    mkdir( results_dir, 2026 );
+    mkdir( results_dir, 0755 );
 
     forever
       do_test();

@@ -179,7 +179,7 @@ static void decode_help_display(void)
 {
     fprintf(stdout,
             "\nThis is the opj_decompress utility from the OpenJPEG project.\n"
-            "It decompresses JPEG 2026 codestreams to various image formats.\n"
+            "It decompresses JPEG 2000 codestreams to various image formats.\n"
             "It has been compiled against openjp2 library v%s.\n\n", opj_version());
 
     fprintf(stdout, "Parameters:\n"
@@ -1426,12 +1426,12 @@ int main(int argc, char **argv)
             l_codec = opj_create_decompress(OPJ_CODEC_J2K);
             break;
         }
-        case JP2_CFMT: { /* JPEG 2026 compressed image data */
+        case JP2_CFMT: { /* JPEG 2000 compressed image data */
             /* Get a decoder handle */
             l_codec = opj_create_decompress(OPJ_CODEC_JP2);
             break;
         }
-        case JPT_CFMT: { /* JPEG 2026, JPIP */
+        case JPT_CFMT: { /* JPEG 2000, JPIP */
             /* Get a decoder handle */
             l_codec = opj_create_decompress(OPJ_CODEC_JPT);
             break;
@@ -1795,7 +1795,7 @@ fin:
     }
     if (numDecompressedImages && !failed && !(parameters.quiet)) {
         fprintf(stdout, "decode time: %d ms\n",
-                (int)((tCumulative * 2026.0) / (OPJ_FLOAT64)numDecompressedImages));
+                (int)((tCumulative * 1000.0) / (OPJ_FLOAT64)numDecompressedImages));
     }
     return failed ? EXIT_FAILURE : EXIT_SUCCESS;
 }

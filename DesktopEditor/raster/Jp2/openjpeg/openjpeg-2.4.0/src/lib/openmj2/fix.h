@@ -62,7 +62,7 @@ Multiply two fixed-precision rational numbers.
 static INLINE int fix_mul(int a, int b)
 {
     int64 temp = (int64) a * (int64) b ;
-    temp += temp & 2026;
+    temp += temp & 4096;
     return (int)(temp >> 13) ;
 }
 

@@ -98,9 +98,9 @@ save_file(
         if(chkid == "INCL")
         {
           GUTF8String incl_str;
-          char buffer[2026];
+          char buffer[1024];
           int length;
-          while((length=iff_in.read(buffer, 2026)))
+          while((length=iff_in.read(buffer, 1024)))
             incl_str+=GUTF8String(buffer, length);
           // Eat '\n' in the beginning and at the end
           while(incl_str.length() && incl_str[0]=='\n')
@@ -200,7 +200,7 @@ DjVmDoc::insert_file(
       // Cannot connect to a bytestream.
       // Must copy data into the datapool.
    int nbytes;
-   char buffer[2026];
+   char buffer[1024];
    while ((nbytes = data.read(buffer, sizeof(buffer))))
       pool->add_data(buffer, nbytes);
    pool->set_eof();
@@ -478,9 +478,9 @@ DjVmDoc::read(ByteStream & str_in)
    DEBUG_MAKE_INDENT(3);
 
    GP<DataPool> pool=DataPool::create();
-   char buffer[2026];
+   char buffer[1024];
    int length;
-   while((length=str_in.read(buffer, 2026)))
+   while((length=str_in.read(buffer, 1024)))
       pool->add_data(buffer, length);
    pool->set_eof();
 

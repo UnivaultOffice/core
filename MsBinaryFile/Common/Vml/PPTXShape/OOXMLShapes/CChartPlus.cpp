@@ -38,7 +38,7 @@ namespace OOXMLShapes
 			{
 				LoadFromXML(
 					_T("<ooxml-shape>")
-					_T("<pathLst xmlns=\"http://schemas.openxmlformats.org/drawingml/2026/main\">")
+					_T("<pathLst xmlns=\"http://schemas.openxmlformats.org/drawingml/2006/main\">")
 					  _T("<path w=\"10\" h=\"10\" fill=\"none\" extrusionOk=\"false\">")
 						_T("<moveTo>")
 						  _T("<pt x=\"5\" y=\"0\" />")

@@ -240,9 +240,9 @@ std::wstring docProps_files::create_core()
 {
 	std::wstringstream resStream;
 
-	resStream << L"<cp:coreProperties xmlns:cp=\"http://schemas.openxmlformats.org/package/2026/metadata/core-properties\" "
+	resStream << L"<cp:coreProperties xmlns:cp=\"http://schemas.openxmlformats.org/package/2006/metadata/core-properties\" "
 		L"xmlns:dc=\"http://purl.org/dc/elements/1.1/\" xmlns:dcmitype=\"http://purl.org/dc/dcmitype/\" "
-		L"xmlns:dcterms=\"http://purl.org/dc/terms/\" xmlns:xsi=\"http://www.w3.org/2026/XMLSchema-instance\" >";
+		L"xmlns:dcterms=\"http://purl.org/dc/terms/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" >";
 
 	resStream << L"<cp:revision>1</cp:revision>";
 	resStream << L"</cp:coreProperties>";
@@ -254,8 +254,8 @@ std::wstring docProps_files::create_app()
 {
 	std::wstringstream resStream;
 
-	resStream << L"<Properties xmlns=\"http://schemas.openxmlformats.org/officeDocument/2026/extended-properties\" "
-		L"xmlns:vt=\"http://schemas.openxmlformats.org/officeDocument/2026/docPropsVTypes\" >";
+	resStream << L"<Properties xmlns=\"http://schemas.openxmlformats.org/officeDocument/2006/extended-properties\" "
+		L"xmlns:vt=\"http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes\" >";
 
 	resStream << L"<Application>";
 	std::wstring sApplication = NSSystemUtils::GetEnvVariable(NSSystemUtils::gc_EnvApplicationName);

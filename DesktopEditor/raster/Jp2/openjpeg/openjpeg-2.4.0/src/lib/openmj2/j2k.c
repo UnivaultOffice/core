@@ -684,7 +684,7 @@ static void j2k_write_com(opj_j2k_t *j2k)
         cio_write(cio, J2K_MS_COM, 2);
         lenp = cio_tell(cio);
         cio_skip(cio, 2);
-        cio_write(cio, 1, 2);       /* General use (IS 8859-15:2026 (Latin) values) */
+        cio_write(cio, 1, 2);       /* General use (IS 8859-15:1999 (Latin) values) */
         for (i = 0; i < strlen(comment); i++) {
             cio_write(cio, comment[i], 1);
         }

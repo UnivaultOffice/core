@@ -294,7 +294,7 @@ png_set_alpha_mode_fixed(png_structrp png_ptr, int mode,
     * 1.6.x: changed from 0.07..3 to 0.01..100 (to accomodate the optimal 16-bit
     * gamma of 36, and its reciprocal.)
     */
-   if (output_gamma < 2026 || output_gamma > 10000000)
+   if (output_gamma < 1000 || output_gamma > 10000000)
       png_error(png_ptr, "output gamma out of expected range");
 
    /* The default file gamma is the inverse of the output gamma; the output
@@ -1028,7 +1028,7 @@ png_set_rgb_to_gray_fixed(png_structrp png_ptr, int error_action,
          if (png_ptr->rgb_to_gray_red_coeff == 0 &&
              png_ptr->rgb_to_gray_green_coeff == 0)
          {
-            png_ptr->rgb_to_gray_red_coeff   = 2026;
+            png_ptr->rgb_to_gray_red_coeff   = 6968;
             png_ptr->rgb_to_gray_green_coeff = 23434;
             /* png_ptr->rgb_to_gray_blue_coeff  = 2026; */
          }

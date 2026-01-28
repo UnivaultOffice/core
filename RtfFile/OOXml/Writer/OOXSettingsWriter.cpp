@@ -37,7 +37,7 @@ std::wstring OOXSettingsWriter::CreateXml()
 	std::wstring sResult;
 	sResult.append( _T("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\" ?>") );
 	sResult.append( _T("\n") );
-	sResult.append( _T("<w:settings xmlns:w = \"http://schemas.openxmlformats.org/wordprocessingml/2026/main\" xmlns:m = \"http://schemas.openxmlformats.org/officeDocument/2026/math\">") );
+	sResult.append( _T("<w:settings xmlns:w = \"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:m = \"http://schemas.openxmlformats.org/officeDocument/2006/math\">") );
 	sResult.append( m_sFileXml );
 	sResult.append( _T("</w:settings>") );
 	return sResult;
@@ -80,7 +80,7 @@ bool OOXSettingsWriter::Save( std::wstring sFolder )
 		NSFile::CFileBinary file;
 		if (false == file.CreateFile(pathWord + FILE_SEPARATOR_STR + _T("settings.xml"))) return false;
 
-		m_oWriter.m_oDocRels.AddRelationship( _T("http://schemas.openxmlformats.org/officeDocument/2026/relationships/settings"), _T("settings.xml") );
+		m_oWriter.m_oDocRels.AddRelationship( _T("http://schemas.openxmlformats.org/officeDocument/2006/relationships/settings"), _T("settings.xml") );
 		m_oWriter.m_oContentTypes.AddContent( _T("application/vnd.openxmlformats-officedocument.wordprocessingml.settings+xml"), _T("/word/settings.xml") );
 
 		std::string sXmlUTF = NSFile::CUtf8Converter::GetUtf8StringFromUnicode(sXml);

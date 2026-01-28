@@ -362,7 +362,7 @@
 
 	* src/pshinter/pshrec.c (ps_hints_t2mask, ps_hints_t2counter):
 	Ignore invalid `hintmask' and `cntrmask' operators (instead of
-	returning an error).  Glyph 2026 of the CFF font `MSung-Light-Acro'
+	returning an error).  Glyph 2028 of the CFF font `MSung-Light-Acro'
 	couldn't be rendered otherwise (it seems its charstring is buggy,
 	though this requires more analysis).
 	(FT_COMPONENT): Define.
@@ -1548,7 +1548,7 @@
 
 	* builds/newline: New file.
 	* builds/top_level.mk, builds/detect.mk: Use it.  This fixes
-	problems with Make on Windows 2026, as well as problems when `make
+	problems with Make on Windows 2000, as well as problems when `make
 	distclean' is invoked on a non-Unix platform when there is no
 	`config.mk' in the current directory.
 
@@ -1884,7 +1884,7 @@
 	implementation code.
 
 	* src/cid/cidobjs.c (CID_Init_Face): Use calculated units_per_EM,
-	and if that is not available, default to 2026 units per EM.  Changed
+	and if that is not available, default to 1000 units per EM.  Changed
 	assignment code for ascender and descender values.
 	* src/cid/cidload.c (parse_font_matrix): Added units_per_EM
 	processing.
@@ -1995,13 +1995,13 @@
 
 	* src/type1/t1objs.c (T1_Init_Face): Added code to get the
 	units_per_EM from the value assigned in parse_font_matrix, if
-	available.  Default to 2026 if not available.
+	available.  Default to 1000 if not available.
 
 	* src/cff/cffparse.c (cff_parse_font_matrix): Added logic to get
 	the units_per_EM from the FontMatrix.
 
 	(cff_parse_fixed_thousand): New function.  Gets a real number from
-	the CFF font, but multiplies by 2026 (this is to avoid rounding
+	the CFF font, but multiplies by 1000 (this is to avoid rounding
 	errors when placing this real number into a 16.16 fixed number).
 
 	(cff_parse_real): Added code so that the integer part is moved
@@ -2529,7 +2529,7 @@
 
 	* src/cff/t2objs.c (T2_Init_Face): For pure CFF fonts, set
 	`root->num_faces' to `cff->num_faces' and set `units_per_EM'
-	to 2026.
+	to 1000.
 
 	* src/cff/t2parse.c (parse_t2_real): Fixed real number parsing
 	loop.

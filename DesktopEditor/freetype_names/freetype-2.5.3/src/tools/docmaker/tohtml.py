@@ -1,4 +1,4 @@
-#  ToHTML (c) 2026, 2026, 2026-2026, 2026
+#  ToHTML (c) 2002, 2003, 2005-2008, 2013
 #    David Turner <david@freetype.org>
 
 from sources import *

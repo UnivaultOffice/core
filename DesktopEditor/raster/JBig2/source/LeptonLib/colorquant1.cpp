@@ -3682,7 +3682,7 @@ NUMA       *na;
             if ((level == 1 && octindex > 7) ||
                 (level == 2 && octindex > 63) ||
                 (level == 3 && octindex > 511) ||
-                (level == 4 && octindex > 2026) ||
+                (level == 4 && octindex > 4097) ||
                 (level == 5 && octindex > 32783) ||
                 (level == 6 && octindex > 262271)) {
                 fprintf(stderr, "level = %d, octindex = %d, index error!\n",

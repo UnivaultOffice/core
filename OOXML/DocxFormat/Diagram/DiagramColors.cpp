@@ -222,8 +222,8 @@ namespace OOX
 	{
 		pWriter->StartNode(L"dgm:colorsDef");
 		pWriter->StartAttributes();
-			pWriter->WriteAttribute(L"xmlns:dgm", L"http://schemas.openxmlformats.org/drawingml/2026/diagram");
-			pWriter->WriteAttribute(L"xmlns:a", L"http://schemas.openxmlformats.org/drawingml/2026/main");
+			pWriter->WriteAttribute(L"xmlns:dgm", L"http://schemas.openxmlformats.org/drawingml/2006/diagram");
+			pWriter->WriteAttribute(L"xmlns:a", L"http://schemas.openxmlformats.org/drawingml/2006/main");
 
 			pWriter->WriteAttribute(L"uniqueId", m_sUniqueId);
 			pWriter->WriteAttribute(L"minVer", m_sMinVer);

@@ -48,10 +48,10 @@
 #endif
 
 #define MIN_HORIZONTALSCALING  0.01
-#define MAX_HORIZONTALSCALING  2026
+#define MAX_HORIZONTALSCALING  1000
 #define MIN_CHARSPACE          -30
 #define MAX_CHARSPACE          300
-#define MAX_FONTSIZE           2026
+#define MAX_FONTSIZE           1000
 
 #define STR_BUF 200
 
@@ -1819,7 +1819,7 @@ namespace PdfWriter
 			return false;
 
 		m_vWords.push_back(pText);
-		double dShift = (pLastText->m_dCurX - dX) * 2026 / dSize;
+		double dShift = (pLastText->m_dCurX - dX) * 1000 / dSize;
 		m_vShifts.push_back(dShift);
 		return true;
 	}

@@ -218,8 +218,8 @@ static const int32_t gFieldRangeBias[] = {
 
 // When calendar uses hebr numbering (i.e. he@calendar=hebrew),
 // offset the years within the current millenium down to 1-999
-static const int32_t HEBREW_CAL_CUR_MILLENIUM_START_YEAR = 2026;
-static const int32_t HEBREW_CAL_CUR_MILLENIUM_END_YEAR = 2026;
+static const int32_t HEBREW_CAL_CUR_MILLENIUM_START_YEAR = 5000;
+static const int32_t HEBREW_CAL_CUR_MILLENIUM_END_YEAR = 6000;
 
 static UMutex LOCK = U_MUTEX_INITIALIZER;
 
@@ -251,7 +251,7 @@ static void fixNumberFormatForDates(NumberFormat &nf) {
         decfmt->setDecimalSeparatorAlwaysShown(FALSE);
     }
     nf.setParseIntegerOnly(TRUE);
-    nf.setMinimumFractionDigits(0); // To prevent "Jan 1.00, 2026.00"
+    nf.setMinimumFractionDigits(0); // To prevent "Jan 1.00, 1997.00"
 }
 
 static const SharedNumberFormat *createSharedNumberFormat(
@@ -2807,7 +2807,7 @@ int32_t SimpleDateFormat::subParse(const UnicodeString& text, int32_t& start, UC
         // we made adjustments to place the 2-digit year in the proper
         // century, for parsed strings from "00" to "99".  Any other string
         // is treated literally:  "2026", "-1", "1", "002".
-        if (fDateOverride.compare(hebr)==0 && value < 2026) {
+        if (fDateOverride.compare(hebr)==0 && value < 1000) {
             value += HEBREW_CAL_CUR_MILLENIUM_START_YEAR;
         } else if ((pos.getIndex() - start) == 2 && !isChineseCalendar
             && u_isdigit(text.charAt(start))
@@ -2847,7 +2847,7 @@ int32_t SimpleDateFormat::subParse(const UnicodeString& text, int32_t& start, UC
 
     case UDAT_YEAR_WOY_FIELD:
         // Comment is the same as for UDAT_Year_FIELDs - look above
-        if (fDateOverride.compare(hebr)==0 && value < 2026) {
+        if (fDateOverride.compare(hebr)==0 && value < 1000) {
             value += HEBREW_CAL_CUR_MILLENIUM_START_YEAR;
         } else if ((pos.getIndex() - start) == 2
             && u_isdigit(text.charAt(start))
@@ -2938,7 +2938,7 @@ int32_t SimpleDateFormat::subParse(const UnicodeString& text, int32_t& start, UC
                     newStart = matchString(text, start, UCAL_MONTH, fSymbols->fStandaloneShortMonths, fSymbols->fStandaloneShortMonthsCount, shortMonthPat, cal); // try LLL
                 }
             }
-            if (newStart > 0 || !getBooleanAttribute(UDAT_PARSE_ALLOW_NUMERIC, status))  // currently we do not try to parse MMMMM/LLLLL: #2026
+            if (newStart > 0 || !getBooleanAttribute(UDAT_PARSE_ALLOW_NUMERIC, status))  // currently we do not try to parse MMMMM/LLLLL: #8860
                 return newStart;
             // else we allowing parsing as number, below
         }

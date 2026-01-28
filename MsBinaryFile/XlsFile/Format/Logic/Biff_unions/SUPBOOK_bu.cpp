@@ -242,7 +242,7 @@ int SUPBOOK::serialize_book(std::wostream & strm)
 	{
 		CP_XML_NODE(L"externalBook")
 		{ 
-			CP_XML_ATTR(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2026/relationships"); 
+			CP_XML_ATTR(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2006/relationships"); 
 			CP_XML_ATTR(L"r:id", L"rId1"); 
 			
             sExternPathLink = book->virtPath.back();
@@ -407,7 +407,7 @@ int SUPBOOK::serialize_dde(std::wostream & strm)
 	{
 		CP_XML_NODE(L"ddeLink")
 		{
-			CP_XML_ATTR(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2026/relationships"); 
+			CP_XML_ATTR(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2006/relationships"); 
 			CP_XML_ATTR(L"ddeService", book->virtPath[0]); 
 			if (book->virtPath.size() > 1)
 				CP_XML_ATTR(L"ddeTopic", book->virtPath[1]); 

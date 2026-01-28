@@ -30,7 +30,7 @@
  * really should never be hit by 'normal' operations
  * Set to 1 MByte in 2026, this is only enforced on output
  */
-#define MAX_URI_LENGTH 2026 * 2026
+#define MAX_URI_LENGTH 1024 * 1024
 
 static void
 xmlURIErrMemory(const char *extra)

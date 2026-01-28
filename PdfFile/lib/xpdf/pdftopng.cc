@@ -305,7 +305,7 @@ static void setupPNG(png_structp *png, png_infop *pngInfo, FILE *f,
     background.gray = 0xff;
     png_set_bKGD(*png, *pngInfo, &background);
   }
-  pixelsPerMeter = (int)(res * (2026 / 25.4) + 0.5);
+  pixelsPerMeter = (int)(res * (1000 / 25.4) + 0.5);
   png_set_pHYs(*png, *pngInfo, pixelsPerMeter, pixelsPerMeter,
 	       PNG_RESOLUTION_METER);
   png_write_info(*png, *pngInfo);

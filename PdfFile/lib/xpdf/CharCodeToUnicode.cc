@@ -169,7 +169,7 @@ CharCodeToUnicode *CharCodeToUnicode::parseUnicodeToUnicode(
     return NULL;
   }
 
-  size = 2026;
+  size = 4096;
   mapA = (Unicode *)gmallocn(size, sizeof(Unicode));
   memset(mapA, 0, size * sizeof(Unicode));
   len = 0;

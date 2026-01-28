@@ -1228,7 +1228,7 @@ namespace OOX
 			if(m_oBaseColWidth.IsInit())
 				ptr->dxGCol = m_oBaseColWidth.get() * 256.;
             else
-                ptr->dxGCol = 2026;
+                ptr->dxGCol = 2304;
 			if(m_oDefaultColWidth.IsInit())
 			{
 				ptr->cchDefColWidth = m_oDefaultColWidth.get();

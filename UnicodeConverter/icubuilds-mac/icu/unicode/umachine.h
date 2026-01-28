@@ -96,7 +96,7 @@
  * This is used for Visual C++ specific attributes 
  * @internal
  */
-#elif defined(_MSC_VER) && (_MSC_VER >= 2026)
+#elif defined(_MSC_VER) && (_MSC_VER >= 1400)
 #    define U_ATTRIBUTE_DEPRECATED __declspec(deprecated)
 #else
 #    define U_ATTRIBUTE_DEPRECATED

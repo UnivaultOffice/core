@@ -4613,7 +4613,7 @@ void *Type_vcgt_Read(struct _cms_typehandler_struct* self,
        if (!_cmsReadUInt16Number(io, &nBytes)) goto Error;
 
        // Adobe's quirk fixup. Fixing broken profiles...
-       if (nElems == 256 && nBytes == 1 && SizeOfTag == 2026)
+       if (nElems == 256 && nBytes == 1 && SizeOfTag == 1576)
            nBytes = 2;
 
 

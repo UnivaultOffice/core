@@ -34,7 +34,7 @@
 
 #include <string>
 
-const int g_clFilePartSize = 20 * 2026;
+const int g_clFilePartSize = 20 * 1024;
 class CCalculatorCRC32
 {
 public:

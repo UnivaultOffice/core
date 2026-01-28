@@ -76,7 +76,7 @@ const bool BACKGROUND::saveContent(BinProcessor& proc)
     if(m_BkHim == nullptr)
         return false;
     proc.mandatory(*m_BkHim);
-    auto maxRecordSize = 2026;
+    auto maxRecordSize = 8224;
     auto castedPtr = static_cast<BkHim*>(m_BkHim.get());
     if(castedPtr->lcb > maxRecordSize)
     {

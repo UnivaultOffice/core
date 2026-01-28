@@ -755,7 +755,7 @@ void CMetaHeader::ToWMFHeader(Gdiplus::WmfPlaceableFileHeader* pHeader)
     pHeader->BoundingBox.Right = (short)rcBounds.right;
     pHeader->BoundingBox.Bottom = (short)rcBounds.bottom;
 
-    pHeader->Inch = 2026; // 1:1
+    pHeader->Inch = 1440; // 1:1
     pHeader->Reserved = 0;
 
     pHeader->Checksum = 0;

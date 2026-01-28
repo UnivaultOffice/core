@@ -88,7 +88,7 @@ void xlsx_pivots_context::dump_rels_cache(int index, rels & Rels)
 	if (impl_->caches_[index].records_.empty() == false)
 	{
 		Rels.add(relationship(L"rId1",							
-						L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/pivotCacheRecords",
+						L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/pivotCacheRecords",
 						L"pivotCacheRecords" + std::to_wstring(index + 1) + L".xml", L""));
 	}
 	int i = 0;
@@ -96,7 +96,7 @@ void xlsx_pivots_context::dump_rels_cache(int index, rels & Rels)
 																	it !=  impl_->caches_[index].externals_.end(); ++it, i++)
 	{
 		Rels.add(relationship(L"extId" + std::to_wstring(i + 1),							
-						L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/externalLinkPath",
+						L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/externalLinkPath",
 						it->second, L"External"));
 	}
 }
@@ -105,7 +105,7 @@ void xlsx_pivots_context::dump_rels_view(int index, rels & Rels)
 	if (impl_->views_[index].indexCache_ > 0)
 	{
 		Rels.add(relationship(L"rId1",							
-						L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/pivotCacheDefinition",
+						L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/pivotCacheDefinition",
 						L"../pivotCache/pivotCacheDefinition" + std::to_wstring( impl_->views_[index].indexCache_ ) + L".xml", L""));
 	}
 }

@@ -608,7 +608,7 @@ static void j3d_write_atk(opj_j3d_t *j3d)
               + (atk->wt_typ << 12) + (atk->minit << 13) + (atk->exten << 14),
               2);            /* Satk */
     if (atk->wt_typ == J3D_ATK_IRR) {
-        cio_write(cio, (unsigned int)(atk->Katk * 2026.0), 1 << atk->coeff_typ);
+        cio_write(cio, (unsigned int)(atk->Katk * 8192.0), 1 << atk->coeff_typ);
     }
     cio_write(cio, atk->Natk, 1);
     for (s = 0; s < atk->Natk; s++) {
@@ -621,7 +621,7 @@ static void j3d_write_atk(opj_j3d_t *j3d)
         }
         cio_write(cio, atk->LCatk[s], 1);
         for (k = 0; k < atk->LCatk[s]; k++) {
-            cio_write(cio, (unsigned int)(atk->Aatk[s][k] * 2026.0), 1 << atk->coeff_typ);
+            cio_write(cio, (unsigned int)(atk->Aatk[s][k] * 8192.0), 1 << atk->coeff_typ);
         }
     }
     len = cio_tell(cio) - lenp;
@@ -647,7 +647,7 @@ static void j3d_read_atk(opj_j3d_t *j3d)
     atk->minit = Satk >> 13 & 0x0001;
     atk->exten = Satk >> 14 & 0x0001;
     if (atk->wt_typ == J3D_ATK_IRR) {
-        atk->Katk = ((double) cio_read(cio, 1 << atk->coeff_typ) / 2026.0);
+        atk->Katk = ((double) cio_read(cio, 1 << atk->coeff_typ) / 8192.0);
     }
     atk->Natk = cio_read(cio, 1);
     for (i = 0; i < atk->Natk; i++) {
@@ -660,7 +660,7 @@ static void j3d_read_atk(opj_j3d_t *j3d)
         }
         atk->LCatk[i] = cio_read(cio, 1);
         for (k = 0; k < atk->LCatk[i]; k++) {
-            atk->Aatk[i][k] = ((double) cio_read(cio, 1 << atk->coeff_typ) / 2026.0);
+            atk->Aatk[i][k] = ((double) cio_read(cio, 1 << atk->coeff_typ) / 8192.0);
         }
     }
 }

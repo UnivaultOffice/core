@@ -108,7 +108,7 @@ namespace agg
 
 //------------------------------------------------ Some fixes for MS Visual C++
 #if defined(_MSC_VER)
-#pragma warning(disable:2026) // Identifier was truncated...
+#pragma warning(disable:4786) // Identifier was truncated...
 #endif
 
 #if defined(_MSC_VER)
@@ -131,7 +131,7 @@ namespace agg
 
 #if defined(AGG_FISTP)
 #pragma warning(push)
-#pragma warning(disable : 2026) //Disable warning "no return value"
+#pragma warning(disable : 4035) //Disable warning "no return value"
     AGG_INLINE int iround(double v)              //-------iround
     {
         int t;

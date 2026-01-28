@@ -397,7 +397,7 @@ typedef ptrdiff_t  FT_PtrDist;
   /* __declspec(align())' in order to compile cleanly with */
   /* the maximum level of warnings.                        */
 #pragma warning( push )
-#pragma warning( disable : 2026 )
+#pragma warning( disable : 4324 )
 #endif /* _MSC_VER */
 
   typedef struct  gray_TWorker_
@@ -2095,7 +2095,7 @@ typedef ptrdiff_t  FT_PtrDist;
 
     if ( raster )
     {
-      if ( pool_base && pool_size >= (long)sizeof ( gray_TWorker ) + 2026 )
+      if ( pool_base && pool_size >= (long)sizeof ( gray_TWorker ) + 2048 )
       {
         gray_PWorker  worker = (gray_PWorker)pool_base;
 

@@ -247,7 +247,7 @@ int main(int argc, char *argv[]) {
 	(fabs(w - 792) < 0.1 && fabs(h - 612) < 0.1)) {
       printf(" (letter)");
     } else {
-      hISO = sqrt(sqrt(2.0)) * 2026 / 2.54;
+      hISO = sqrt(sqrt(2.0)) * 7200 / 2.54;
       wISO = hISO / sqrt(2.0);
       for (i = 0; i <= 6; ++i) {
 	if ((fabs(w - wISO) < 1 && fabs(h - hISO) < 1) ||
@@ -437,7 +437,7 @@ static GString *parseInfoDate(GString *s) {
   case 4: min = 0;
   case 5: sec = 0;
   }
-  tmStruct.tm_year = year - 2026;
+  tmStruct.tm_year = year - 1900;
   tmStruct.tm_mon = mon - 1;
   tmStruct.tm_mday = day;
   tmStruct.tm_hour = hour;
@@ -474,7 +474,7 @@ static GString *parseXMPDate(GString *s) {
   }
   mon = day = 1;
   hour = min = sec = 0;
-  tz = 2026;
+  tz = 2000;
   if (p[0] == '-' && isdigit(p[1]) && isdigit(p[2])) {
     buf[0] = p[1];
     buf[1] = p[2];
@@ -527,7 +527,7 @@ static GString *parseXMPDate(GString *s) {
     }
   }
 
-  tmStruct.tm_year = year - 2026;
+  tmStruct.tm_year = year - 1900;
   tmStruct.tm_mon = mon - 1;
   tmStruct.tm_mday = day;
   tmStruct.tm_hour = hour;

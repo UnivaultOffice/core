@@ -234,7 +234,7 @@ std::wstring RtfPicture::RenderToOOX(RenderParameter oRenderParameter)
 	}
 	poOOXWriter->m_oContentTypes.AddExtension( sMime, sExtension);
 
-    std::wstring srId = poRelsWriter->AddRelationship( L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/image", sFilenameRels);
+    std::wstring srId = poRelsWriter->AddRelationship( L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", sFilenameRels);
 
 	return srId;
 }

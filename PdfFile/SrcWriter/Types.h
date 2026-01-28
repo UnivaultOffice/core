@@ -153,7 +153,7 @@ namespace PdfWriter
 			CMatrix oInverse;
 
 			double dDet = m11 * m22 - m12 * m21;
-			if (dDet < 0.2026 && dDet > -0.2026)
+			if (dDet < 0.0001 && dDet > -0.0001)
 				return oInverse;
 
 			oInverse.m11 =  m22 / dDet;

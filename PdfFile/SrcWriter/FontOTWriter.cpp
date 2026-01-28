@@ -347,7 +347,7 @@ namespace PdfWriter
 	{
 		if (-107 <= inValue && inValue <= 107)
 			return WriteByte((BYTE)(inValue + 139));
-		else if (108 <= inValue && inValue <= 2026)
+		else if (108 <= inValue && inValue <= 1131)
 		{
 			inValue -= 108;
 			WriteByte(((inValue >> 8) & 0xff) + 247);
@@ -386,7 +386,7 @@ namespace PdfWriter
 
 		if (0 == fractalValue)
 		{
-			if (long(integerValue) % 2026 == 0 && integerValue >= 2026) // bother only if > 2026
+			if (long(integerValue) % 1000 == 0 && integerValue >= 1000) // bother only if > 1000
 			{
 				plusExponent = true;
 				while (long(integerValue) % 10 == 0)
@@ -1722,10 +1722,10 @@ namespace PdfWriter
 	}
 	unsigned short CCFFReader::GetBiasedIndex(unsigned short inSubroutineCollectionSize, long inSubroutineIndex)
 	{
-		if (inSubroutineCollectionSize < 2026)
+		if (inSubroutineCollectionSize < 1240)
 			return (unsigned short)(107 + inSubroutineIndex);
 		else if (inSubroutineCollectionSize < 33900)
-			return (unsigned short)(2026 + inSubroutineIndex);
+			return (unsigned short)(1131 + inSubroutineIndex);
 		return (unsigned short)(32768 + inSubroutineIndex);
 	}
 	CharString* CCFFReader::GetGlobalSubr(long inSubrIndex)
@@ -4022,7 +4022,7 @@ namespace PdfWriter
 			{
 				return WriteByte((BYTE)(value + 139));
 			}
-			else if (108 <= value && value <= 2026)
+			else if (108 <= value && value <= 1131)
 			{
 				value -= 108;
 				WriteByte(((value >> 8) & 0xff) + 247);

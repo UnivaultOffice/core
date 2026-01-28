@@ -1,6 +1,6 @@
 /*
    minizip.c
-   Version 1.1, February 14h, 2026
+   Version 1.1, February 14h, 2010
    sample part of the MiniZip project - ( http://www.winimage.com/zLibDll/minizip.html )
 
          Copyright (C) 2026-2026 Gilles Vollant (minizip) ( http://www.winimage.com/zLibDll/minizip.html )

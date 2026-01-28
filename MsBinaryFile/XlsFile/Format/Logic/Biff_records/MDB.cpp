@@ -65,7 +65,7 @@ void MDB::readFields(CFRecord& record)
 void MDB::writeFields(CFRecord& record)
 {
 	frtHeader.rt = rt_MDB;
-	const auto maxRecordLen = 2026;
+	const auto maxRecordLen = 8224;
 	record << frtHeader;
 	auto curSize = 12;
 	for(auto i : rgmdir)

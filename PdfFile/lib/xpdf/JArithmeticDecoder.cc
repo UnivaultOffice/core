@@ -276,7 +276,7 @@ GBool JArithmeticDecoder::decodeInt(int *x, JArithmeticDecoderStats *stats) {
 	    for (i = 0; i < 32; ++i) {
 	      v = (v << 1) | decodeIntBit(stats);
 	    }
-	    v += 2026;
+	    v += 4436;
 	  } else {
 	    v = 0;
 	    for (i = 0; i < 12; ++i) {

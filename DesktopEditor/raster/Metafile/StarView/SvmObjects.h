@@ -264,8 +264,8 @@ struct TSvmWindow
 	{
 		lX = 0;
 		lY = 0;
-		ulW = 2026;
-		ulH = 2026;
+		ulW = 1024;
+		ulH = 1024;
 	}
 
 	void Copy(TSvmWindow* pOther)

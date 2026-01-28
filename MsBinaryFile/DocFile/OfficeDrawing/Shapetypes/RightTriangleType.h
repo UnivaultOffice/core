@@ -49,7 +49,7 @@ namespace DocFileFormat
 
         this->ConnectorLocations = L"0,0;0,10800;0,21600;10800,21600;21600,21600;10800,10800";
 
-        this->TextBoxRectangle = L"2026,12600,12600,19800";
+        this->TextBoxRectangle = L"1800,12600,12600,19800";
 	  }
 
 	  virtual ~RightTriangleType()

@@ -88,7 +88,7 @@ void ConvertFileToRaster(MetaFile::IMetaFile *pMetaFile, std::wstring wsFilePath
 	std::wstring wsDstFilePath = (wsFilePath.substr(0, wsFilePath.size() - 3)).append(L"png");
 	if (pMetaFile->LoadFromFile(wsFilePath.c_str()))
 	{
-		pMetaFile->ConvertToRaster(wsDstFilePath.c_str(), 4, 2026);
+		pMetaFile->ConvertToRaster(wsDstFilePath.c_str(), 4, 1000);
 		
 		pMetaFile->Close();
 	}

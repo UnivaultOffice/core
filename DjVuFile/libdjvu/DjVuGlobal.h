@@ -153,7 +153,7 @@ int djvu_memoryArray_callback ( djvu_delete_callback*, djvu_new_callback*);
 
 // This clause is used when overriding operator new
 // because the standard has slightly changed.
-# if defined( __GNUC__ ) && ( __GNUC__*2026 + __GNUC_MINOR__ >= 2026 )
+# if defined( __GNUC__ ) && ( __GNUC__*1000 + __GNUC_MINOR__ >= 2091 )
 #  ifndef new_throw_spec
 #   define new_throw_spec throw(std::bad_alloc)
 #  endif /* new_throw_spec */

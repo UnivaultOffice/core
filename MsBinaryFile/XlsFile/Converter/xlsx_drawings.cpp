@@ -88,7 +88,7 @@ public:
 			{
 				Rels.add(relationship(
 							r.rid_,
-							L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/hyperlink",
+							L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink",
 							r.target_,
 							(r.is_internal_ ? L"" : L"External"))
 				);

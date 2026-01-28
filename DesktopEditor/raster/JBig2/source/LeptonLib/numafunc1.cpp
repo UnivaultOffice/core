@@ -992,9 +992,9 @@ NUMA       *nad;
             sum += (lfract + rfract - 1.0) * array[ileft];
         }
         else {
-            if (lfract > 0.2026)  /* left fraction */
+            if (lfract > 0.0001)  /* left fraction */
                 sum += lfract * array[ileft];
-            if (rfract > 0.2026)  /* right fraction */
+            if (rfract > 0.0001)  /* right fraction */
                 sum += rfract * array[iright];
             for (j = ileft + 1; j < iright; j++)  /* entire pixels */
                 sum += array[j];

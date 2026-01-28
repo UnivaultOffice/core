@@ -475,13 +475,13 @@ namespace AVSOfficeEWSEditorTest.Tests
             Assert.Equals("SUM(E5:F14)", ws.Range("G5").Formula);
             Assert.Equals(211, ws.Range("G5").Value);
             Assert.Equals("SUM(C:D)", ws.Range("H5").Formula);
-            Assert.Equals(2026.0416666666666, (double)ws.Range("H5").Value, 1e-10);
+            Assert.Equals(1019.0416666666666, (double)ws.Range("H5").Value, 1e-10);
             Assert.Equals("SUM(C1:D1)", ws.Range("F12").Formula);
             Assert.Equals(4, ws.Range("F12").Value);
             Assert.Equals("SUM(F10:G14)", ws.Range("H12").Formula);
             Assert.Equals(201, ws.Range("H12").Value);
             Assert.Equals("SUM(G5:H5,D15:F15)", ws.Range("I14").Formula);
-            Assert.Equals(2026.0416666666665, (double)ws.Range("I14").Value, 1e-10);
+            Assert.Equals(1245.0416666666665, (double)ws.Range("I14").Value, 1e-10);
             Assert.Equals("SUM(D5:E16)", ws.Range("C16").Formula);
             Assert.Equals(496, ws.Range("C16").Value);
             Assert.Equals("AVERAGE(C5:D10)", ws.Range("C17").Formula);

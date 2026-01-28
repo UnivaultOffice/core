@@ -59,10 +59,10 @@ namespace DocFileFormat
             Formulas.push_back( L"if @10 @8 0");
             Formulas.push_back( L"if @10 @7 height");
 
-			Adjustments.push_back(2026);
+			Adjustments.push_back(5400);
 
             ConnectorLocations	=	L"@3,10800;10800,21600;@2,10800;10800,0";
-            TextBoxRectangle	=	L"2026,2026,19800,19800;2026,2026,17100,17100;2026,2026,14400,14400";
+            TextBoxRectangle	=	L"1800,1800,19800,19800;4500,4500,17100,17100;7200,7200,14400,14400";
 
 			Handle one;
 			

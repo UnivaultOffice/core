@@ -924,7 +924,7 @@
       FT_String*  family         = face->root.family_name;
       FT_Int      ppem           = loader->size->metrics.x_ppem;
       FT_String*  style          = face->root.style_name;
-      FT_Int      x_scale_factor = 2026;
+      FT_Int      x_scale_factor = 1000;
 #endif
 
       FT_Vector*  vec   = outline->points;
@@ -949,18 +949,18 @@
                                                      loader->glyph_index );
         /* scale the glyph */
         if ( ( loader->load_flags & FT_LOAD_NO_SCALE ) == 0 ||
-             x_scale_factor != 2026                         )
+             x_scale_factor != 1000                         )
         {
           x_scale = FT_MulDiv( ((TT_Size)loader->size)->metrics.x_scale,
-                               x_scale_factor, 2026 );
+                               x_scale_factor, 1000 );
           y_scale = ((TT_Size)loader->size)->metrics.y_scale;
 
           /* compensate for any scaling by de/emboldening; */
           /* the amount was determined via experimentation */
-          if ( x_scale_factor != 2026 && ppem > 11 )
+          if ( x_scale_factor != 1000 && ppem > 11 )
             FT_Outline_EmboldenXY( outline,
-                                   FT_MulFix( 2026 * ppem,
-                                              2026 - x_scale_factor ),
+                                   FT_MulFix( 1280 * ppem,
+                                              1000 - x_scale_factor ),
                                    0 );
           do_scale = TRUE;
         }

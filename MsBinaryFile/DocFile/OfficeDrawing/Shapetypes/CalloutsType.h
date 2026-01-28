@@ -50,10 +50,10 @@ namespace DocFileFormat
             Formulas.push_back(L"sum @0 @1 0");
             Formulas.push_back(L"sum 21600 0 #0");
             Formulas.push_back(L"sum 21600 0 #1");
-            Formulas.push_back(L"if @0 2026 12600");
-            Formulas.push_back(L"if @0 2026 18000");
-            Formulas.push_back(L"if @1 2026 12600");
-            Formulas.push_back(L"if @1 2026 18000");
+            Formulas.push_back(L"if @0 3600 12600");
+            Formulas.push_back(L"if @0 9000 18000");
+            Formulas.push_back(L"if @1 3600 12600");
+            Formulas.push_back(L"if @1 9000 18000");
             Formulas.push_back(L"if @2 0 #0");
             Formulas.push_back(L"if @3 @10 0");
             Formulas.push_back(L"if #0 0 @11");
@@ -81,7 +81,7 @@ namespace DocFileFormat
             Formulas.push_back(L"val #0");
             Formulas.push_back(L"val #1");
 
-			Adjustments.push_back(2026);
+			Adjustments.push_back(1350);
 			Adjustments.push_back(25920);
 
             ConnectorLocations	=	L"10800,0;0,10800;10800,21600;21600,10800;@34,@35";
@@ -107,10 +107,10 @@ namespace DocFileFormat
             Formulas.push_back(L"sum @0 @1 0");
             Formulas.push_back(L"sum 21600 0 #0");
             Formulas.push_back(L"sum 21600 0 #1");
-            Formulas.push_back(L"if @0 2026 12600");
-            Formulas.push_back(L"if @0 2026 18000");
-            Formulas.push_back(L"if @1 2026 12600");
-            Formulas.push_back(L"if @1 2026 18000");
+            Formulas.push_back(L"if @0 3600 12600");
+            Formulas.push_back(L"if @0 9000 18000");
+            Formulas.push_back(L"if @1 3600 12600");
+            Formulas.push_back(L"if @1 9000 18000");
             Formulas.push_back(L"if @2 0 #0");
             Formulas.push_back(L"if @3 @10 0");
             Formulas.push_back(L"if #0 0 @11");
@@ -138,7 +138,7 @@ namespace DocFileFormat
             Formulas.push_back(L"val #0");
             Formulas.push_back(L"val #1");
 
-			Adjustments.push_back(2026);
+			Adjustments.push_back(1350);
 			Adjustments.push_back(25920);
             ConnectorLocations	=	L"10800,0;0,10800;10800,21600;21600,10800;@34,@35";
             TextBoxRectangle	=	L"791,791,20809,20809";
@@ -182,11 +182,11 @@ namespace DocFileFormat
             Formulas.push_back(L"if @20 #0 @13");
             Formulas.push_back(L"if @20 #1 @14");
 
-			Adjustments.push_back(2026);
+			Adjustments.push_back(1350);
 			Adjustments.push_back(25920);
 
-            ConnectorLocations	=	L"10800,0;2026,2026;0,10800;2026,18437;10800,21600;18437,18437;21600,10800;18437,2026;@21,@22";
-            TextBoxRectangle	=	L"2026,2026,18437,18437";
+            ConnectorLocations	=	L"10800,0;3163,3163;0,10800;3163,18437;10800,21600;18437,18437;21600,10800;18437,3163;@21,@22";
+            TextBoxRectangle	=	L"3163,3163,18437,18437";
 
 			Handle one;
             one.position		=	L"#0,#1";
@@ -244,11 +244,11 @@ namespace DocFileFormat
             Formulas.push_back(L"val #0");
             Formulas.push_back(L"val #1");
 
-			Adjustments.push_back(2026);
+			Adjustments.push_back(1350);
 			Adjustments.push_back(25920);
 
-            ConnectorLocations	=	L"67,10800;10800,21577;21582,10800;10800,2026;@38,@39";
-            TextBoxRectangle	=	L"2026,2026,17087,17337";
+            ConnectorLocations	=	L"67,10800;10800,21577;21582,10800;10800,1235;@38,@39";
+            TextBoxRectangle	=	L"2977,3262,17087,17337";
 
 			Handle one;
             one.position = L"#0,#1";
@@ -273,7 +273,7 @@ namespace DocFileFormat
 			Adjustments.push_back(-1800);
 			Adjustments.push_back(24300);
 			Adjustments.push_back(-1800);
-			Adjustments.push_back(2026);
+			Adjustments.push_back(4050);
 
             ConnectorLocations	=	L"@0,@1;10800,0;10800,21600;0,10800;21600,10800";
 
@@ -305,7 +305,7 @@ namespace DocFileFormat
 			Adjustments.push_back(-8280);
 			Adjustments.push_back(24300);
 			Adjustments.push_back(-1800);
-			Adjustments.push_back(2026);
+			Adjustments.push_back(4050);
 
             ConnectorLocations = L"@0,@1;10800,0;10800,21600;0,10800;21600,10800";
 
@@ -336,9 +336,9 @@ namespace DocFileFormat
 			Adjustments.push_back(-10080);
 			Adjustments.push_back(24300);
 			Adjustments.push_back(-3600);
-			Adjustments.push_back(2026);
+			Adjustments.push_back(4050);
 			Adjustments.push_back(-1800);
-			Adjustments.push_back(2026);
+			Adjustments.push_back(4050);
 
             ConnectorLocations	=	L"@0,@1;10800,0;10800,21600;0,10800;21600,10800";
 
@@ -371,9 +371,9 @@ namespace DocFileFormat
 			Adjustments.push_back(-10080);
 			Adjustments.push_back(24300);
 			Adjustments.push_back(-3600);
-			Adjustments.push_back(2026);
+			Adjustments.push_back(4050);
 			Adjustments.push_back(-1800);
-			Adjustments.push_back(2026);
+			Adjustments.push_back(4050);
 
             ConnectorLocations	=	L"@0,@1;10800,0;10800,21600;0,10800;21600,10800";
 
@@ -408,7 +408,7 @@ namespace DocFileFormat
 			Adjustments.push_back(-1800);
 			Adjustments.push_back(24300);
 			Adjustments.push_back(-1800);
-			Adjustments.push_back(2026);
+			Adjustments.push_back(4050);
             ConnectorLocations	=	L"@0,@1;10800,0;10800,21600;0,10800;21600,10800";
 
 			Handle one;
@@ -438,7 +438,7 @@ namespace DocFileFormat
 			Adjustments.push_back(-8280);
 			Adjustments.push_back(24300);
 			Adjustments.push_back(-1800);
-			Adjustments.push_back(2026);
+			Adjustments.push_back(4050);
 
             ConnectorLocations	=	L"@0,@1;10800,0;10800,21600;0,10800;21600,10800";
 
@@ -471,7 +471,7 @@ namespace DocFileFormat
 			Adjustments.push_back(-8280);
 			Adjustments.push_back(24300);
 			Adjustments.push_back(-1800);
-			Adjustments.push_back(2026);
+			Adjustments.push_back(4050);
 
             ConnectorLocations	=	L"@0,@1;10800,0;10800,21600;0,10800;21600,10800";
 
@@ -512,9 +512,9 @@ namespace DocFileFormat
 			Adjustments.push_back(25200);
 			Adjustments.push_back(21600);
 			Adjustments.push_back(25200);
-			Adjustments.push_back(2026);
+			Adjustments.push_back(4050);
 			Adjustments.push_back(23400);
-			Adjustments.push_back(2026);
+			Adjustments.push_back(4050);
 
             ConnectorLocations	=	L"@0,@1;10800,0;10800,21600;0,10800;21600,10800";
 
@@ -553,7 +553,7 @@ namespace DocFileFormat
 			Adjustments.push_back(-1800);
 			Adjustments.push_back(24300);
 			Adjustments.push_back(-1800);
-			Adjustments.push_back(2026);
+			Adjustments.push_back(4050);
 
             ConnectorLocations	=	L"@0,@1;10800,0;10800,21600;0,10800;21600,10800";
 
@@ -584,7 +584,7 @@ namespace DocFileFormat
 			Adjustments.push_back(-8280);
 			Adjustments.push_back(24300);
 			Adjustments.push_back(-1800);
-			Adjustments.push_back(2026);
+			Adjustments.push_back(4050);
 
             ConnectorLocations	=	L"@0,@1;10800,0;10800,21600;0,10800;21600,10800";
 
@@ -617,9 +617,9 @@ namespace DocFileFormat
 			Adjustments.push_back(-10080);
 			Adjustments.push_back(24300);
 			Adjustments.push_back(-3600);
-			Adjustments.push_back(2026);
+			Adjustments.push_back(4050);
 			Adjustments.push_back(-1800);
-			Adjustments.push_back(2026);
+			Adjustments.push_back(4050);
 
             ConnectorLocations	=	L"@0,@1;10800,0;10800,21600;0,10800;21600,10800";
 
@@ -660,9 +660,9 @@ namespace DocFileFormat
 			Adjustments.push_back(25200);
 			Adjustments.push_back(21600);
 			Adjustments.push_back(25200);
-			Adjustments.push_back(2026);
+			Adjustments.push_back(4050);
 			Adjustments.push_back(23400);
-			Adjustments.push_back(2026);
+			Adjustments.push_back(4050);
 
             ConnectorLocations	=	L"@0,@1;10800,0;10800,21600;0,10800;21600,10800";
 
@@ -701,7 +701,7 @@ namespace DocFileFormat
 			Adjustments.push_back(-8280);
 			Adjustments.push_back(24300);
 			Adjustments.push_back(-1800);
-			Adjustments.push_back(2026);
+			Adjustments.push_back(4050);
 
             ConnectorLocations	=	L"@0,@1;10800,0;10800,21600;0,10800;21600,10800";
 
@@ -732,7 +732,7 @@ namespace DocFileFormat
 			Adjustments.push_back(-8280);
 			Adjustments.push_back(24300);
 			Adjustments.push_back(-1800);
-			Adjustments.push_back(2026);
+			Adjustments.push_back(4050);
 
             ConnectorLocations	=	L"@0,@1;10800,0;10800,21600;0,10800;21600,10800";
 
@@ -765,9 +765,9 @@ namespace DocFileFormat
 			Adjustments.push_back(-10080);
 			Adjustments.push_back(24300);
 			Adjustments.push_back(-3600);
-			Adjustments.push_back(2026);
+			Adjustments.push_back(4050);
 			Adjustments.push_back(-1800);
-			Adjustments.push_back(2026);
+			Adjustments.push_back(4050);
 
             ConnectorLocations	=	L"@0,@1;10800,0;10800,21600;0,10800;21600,10800";
 
@@ -808,9 +808,9 @@ namespace DocFileFormat
 			Adjustments.push_back(25200);
 			Adjustments.push_back(21600);
 			Adjustments.push_back(25200);
-			Adjustments.push_back(2026);
+			Adjustments.push_back(4050);
 			Adjustments.push_back(23400);
-			Adjustments.push_back(2026);
+			Adjustments.push_back(4050);
 
             ConnectorLocations	=	L"@0,@1;10800,0;10800,21600;0,10800;21600,10800";
 

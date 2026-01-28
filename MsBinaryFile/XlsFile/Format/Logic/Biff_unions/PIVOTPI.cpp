@@ -73,7 +73,7 @@ const bool PIVOTPI::saveContent(BinProcessor& proc)
         return false;
     proc.mandatory(*m_SXPI);
     auto castedPtr = static_cast<SXPI*>(m_SXPI.get());
-    const auto maxRecSize = 2026;
+    const auto maxRecSize = 8224;
     const auto continueElemSize = 6;
     while(!castedPtr->m_arItems.empty())
     {

@@ -62,9 +62,9 @@ xlsx_document::xlsx_document()
 {
 	rels_file_ptr relFile = rels_file::create(L".rels");
 	
-	relFile->get_rels().add(relationship(L"rId1", L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/officeDocument", L"xl/workbook.xml"));
-    relFile->get_rels().add(relationship(L"rId2", L"http://schemas.openxmlformats.org/officedocument/2026/relationships/metadata/core-properties", L"docProps/core.xml"));
-    relFile->get_rels().add(relationship(L"rId3", L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/extended-properties", L"docProps/app.xml"));
+	relFile->get_rels().add(relationship(L"rId1", L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument", L"xl/workbook.xml"));
+    relFile->get_rels().add(relationship(L"rId2", L"http://schemas.openxmlformats.org/officedocument/2006/relationships/metadata/core-properties", L"docProps/core.xml"));
+    relFile->get_rels().add(relationship(L"rId3", L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/extended-properties", L"docProps/app.xml"));
    
 	get_rels_files().add_rel_file( relFile );
 	
@@ -182,19 +182,19 @@ void sheets_files::write(const std::wstring & RootPath)
 {
 	int id = 0;
 	write_(worksheets_,	id, RootPath, L"worksheet",	 L"sheet", 
-		L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/worksheet",
+		L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet",
 		L"application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml");
 	
 	write_(dialogsheets_,id, RootPath, L"dialogsheet", L"sheet", 
-		L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/dialogsheet",
+		L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/dialogsheet",
 		L"application/vnd.openxmlformats-officedocument.spreadsheetml.dialogsheet+xml");
 	
 	write_(chartsheets_, id, RootPath, L"chartsheet", L"sheet", 
-		L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/chartsheet",
+		L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/chartsheet",
 		L"application/vnd.openxmlformats-officedocument.spreadsheetml.chartsheet+xml");
 	
 	write_(macrosheets_, id, RootPath, L"macrosheet", L"intlsheet", 
-		L"http://schemas.microsoft.com/office/2026/relationships/xlIntlMacrosheet",
+		L"http://schemas.microsoft.com/office/2006/relationships/xlIntlMacrosheet",
 		L"application/vnd.ms-excel.intlmacrosheet+xml");
 }
 
@@ -281,7 +281,7 @@ void xl_files::write(const std::wstring & RootPath)
 	if (sharedStrings_)
     {
         sharedStrings_->write(path);
-        rels_files_.add( relationship( L"shId1",  L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/sharedStrings", L"sharedStrings.xml" ) );
+        rels_files_.add( relationship( L"shId1",  L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/sharedStrings", L"sharedStrings.xml" ) );
     
 		content_type & contentTypes = this->get_main_document()->content_type().get_content_type();
 		contentTypes.add_override(L"/xl/sharedStrings.xml", L"application/vnd.openxmlformats-officedocument.spreadsheetml.sharedStrings+xml");
@@ -290,7 +290,7 @@ void xl_files::write(const std::wstring & RootPath)
 	if (connections_)
 	{
         connections_->write(path);
-        rels_files_.add( relationship( L"cnId1",  L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/connections", L"connections.xml" ) );
+        rels_files_.add( relationship( L"cnId1",  L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/connections", L"connections.xml" ) );
 
 		contentTypes.add_override(L"/xl/connections.xml", L"application/vnd.openxmlformats-officedocument.spreadsheetml.connections+xml");
 	}
@@ -302,7 +302,7 @@ void xl_files::write(const std::wstring & RootPath)
     if (styles_)
     {
 		styles_->write(path);
-		rels_files_.add( relationship( L"stId1",  L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/styles", L"styles.xml" ) );
+		rels_files_.add( relationship( L"stId1",  L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles", L"styles.xml" ) );
     }
 
     if (workbook_)
@@ -311,7 +311,7 @@ void xl_files::write(const std::wstring & RootPath)
 	
 		if (bVbaProject)
 		{
-			rels_files_.add( relationship( L"vbId1",  L"http://schemas.microsoft.com/office/2026/relationships/vbaProject", L"vbaProject.bin" ) );
+			rels_files_.add( relationship( L"vbId1",  L"http://schemas.microsoft.com/office/2006/relationships/vbaProject", L"vbaProject.bin" ) );
 			contentTypes.add_override(L"/xl/vbaProject.bin", L"application/vnd.ms-office.vbaProject");
 		}
 		if (bMacrosEnabled)
@@ -325,7 +325,7 @@ void xl_files::write(const std::wstring & RootPath)
     }
 	if (bAttachedToolbars)
 	{
-		rels_files_.add( relationship( L"vbId2",  L"http://schemas.microsoft.com/office/2026/relationships/attachedToolbars", L"attachedToolbars.bin" ) );
+		rels_files_.add( relationship( L"vbId2",  L"http://schemas.microsoft.com/office/2006/relationships/attachedToolbars", L"attachedToolbars.bin" ) );
 		contentTypes.add_override(L"/xl/attachedToolbars.bin", L"application/vnd.ms-excel.attachedToolbars");
 	}
 
@@ -496,7 +496,7 @@ void xl_pivot_cache_files::write(const std::wstring & RootPath)
 		if (rels_) //for workbook
 		{
 			const std::wstring id = std::wstring(L"pcId") + std::to_wstring(i + 1);
-			static const std::wstring kWSRel = L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/pivotCacheDefinition";
+			static const std::wstring kWSRel = L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/pivotCacheDefinition";
 			const std::wstring fileRef = std::wstring(L"pivotCache/") + fileNameD;
 			rels_->add(id, kWSRel, fileRef);
 		}
@@ -689,7 +689,7 @@ void xl_customXml_files::write(const std::wstring & RootPath)
 			rels_file_ptr rels_file = rels_file::create(fileNameItem + L".rels");
 			
 			rels_file->get_rels().add(relationship(L"rId1", 
-				L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/customXmlProps", 
+				L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXmlProps", 
 				fileNameProps));
 			
 			rels_file->write(path_rels);
@@ -697,7 +697,7 @@ void xl_customXml_files::write(const std::wstring & RootPath)
         if (rels_)
         {
             const std::wstring id = std::wstring(L"cstId") + std::to_wstring(i + 1);
-            static const std::wstring kWSRel = L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/customXml";
+            static const std::wstring kWSRel = L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml";
             const std::wstring fileRef = std::wstring(L"../customXml/") + fileNameItem;
 
             rels_->add(id, kWSRel, fileRef);
@@ -736,7 +736,7 @@ void xl_theme_files::write(const std::wstring & RootPath)
         if (rels_)
         {
             const std::wstring id = std::wstring(L"thmId") + std::to_wstring(i + 1);
-            static const std::wstring kWSRel = L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/theme";
+            static const std::wstring kWSRel = L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme";
             const std::wstring fileRef = std::wstring(L"theme/") + fileName;
 
             rels_->add(id, kWSRel, fileRef);
@@ -779,7 +779,7 @@ void xl_externals_files::write(const std::wstring & RootPath)
         if (rels_)
         {
             const std::wstring id = std::wstring(L"extId") + std::to_wstring(i + 1);
-            static const std::wstring kWSRel = L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/externalLink";
+            static const std::wstring kWSRel = L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/externalLink";
             const std::wstring fileRef = std::wstring(L"externalLinks/") + fileName;
 
             rels_->add(id, kWSRel, fileRef);

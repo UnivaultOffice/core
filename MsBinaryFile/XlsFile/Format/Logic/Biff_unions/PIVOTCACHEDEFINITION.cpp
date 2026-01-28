@@ -149,8 +149,8 @@ int PIVOTCACHEDEFINITION::serialize_definitions(std::wostream & strm)
 	{
 		CP_XML_NODE(L"pivotCacheDefinition")
 		{          
-			CP_XML_ATTR(L"xmlns", L"http://schemas.openxmlformats.org/spreadsheetml/2026/main");
-            CP_XML_ATTR(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2026/relationships");
+			CP_XML_ATTR(L"xmlns", L"http://schemas.openxmlformats.org/spreadsheetml/2006/main");
+            CP_XML_ATTR(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2006/relationships");
 		
 			if (pivot_cache->m_arDBB.empty() && bSql)
 			{
@@ -237,8 +237,8 @@ int PIVOTCACHEDEFINITION::serialize_records(std::wostream & strm)
 	{
 		CP_XML_NODE(L"pivotCacheRecords")
 		{          
-			CP_XML_ATTR(L"xmlns", L"http://schemas.openxmlformats.org/spreadsheetml/2026/main");
-            CP_XML_ATTR(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2026/relationships");
+			CP_XML_ATTR(L"xmlns", L"http://schemas.openxmlformats.org/spreadsheetml/2006/main");
+            CP_XML_ATTR(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2006/relationships");
 		
 			if (!pivot_cache->m_arDBB.empty())
 			{

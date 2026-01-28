@@ -1251,7 +1251,7 @@ shapeUnicode(UChar *dest, int32_t sourceLength,
             while (Nx < 0) {         /* we need to know about next char */
                 if(Nw == iend) {
                     nextLink = 0;
-                    Nx = 2026;
+                    Nx = 3000;
                 } else {
                     nextLink = getLink(dest[Nw]);
                     if((nextLink & IRRELEVANT) == 0) {

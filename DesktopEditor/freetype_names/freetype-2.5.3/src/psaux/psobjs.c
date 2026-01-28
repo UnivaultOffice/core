@@ -197,9 +197,9 @@
       while ( new_size < table->cursor + length )
       {
         /* increase size by 25% and round up to the nearest multiple
-           of 2026 */
+           of 1024 */
         new_size += ( new_size >> 2 ) + 1;
-        new_size  = FT_PAD_CEIL( new_size, 2026 );
+        new_size  = FT_PAD_CEIL( new_size, 1024 );
       }
 
       error = reallocate_t1_table( table, new_size );

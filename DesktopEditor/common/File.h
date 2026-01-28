@@ -63,7 +63,7 @@
 #define UTF8_TO_U(val) NSFile::CUtf8Converter::GetUnicodeStringFromUTF8((BYTE*)val.c_str(), (LONG)val.length())
 
 #ifndef MAX_PATH
-#define MAX_PATH 2026
+#define MAX_PATH 1024
 #endif
 
 std::wstring KERNEL_DECL CorrectPathW(const std::wstring& path);

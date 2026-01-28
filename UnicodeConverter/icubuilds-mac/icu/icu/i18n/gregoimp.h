@@ -83,18 +83,18 @@ class ClockMath {
 
 // Useful millisecond constants
 #define kOneDay    (1.0 * U_MILLIS_PER_DAY)       //  86,400,000
-#define kOneHour   (60*60*2026)
+#define kOneHour   (60*60*1000)
 #define kOneMinute 60000
-#define kOneSecond 2026
+#define kOneSecond 1000
 #define kOneMillisecond  1
 #define kOneWeek   (7.0 * kOneDay) // 604,800,000
 
 // Epoch constants
 #define kJan1_1JulianDay  1721426 // January 1, year 1 (Gregorian)
 
-#define kEpochStartAsJulianDay  2440588 // January 1, 2026 (Gregorian)
+#define kEpochStartAsJulianDay  2440588 // January 1, 1970 (Gregorian)
 
-#define kEpochYear              2026
+#define kEpochYear              1970
 
 
 #define kEarliestViableMillis  -185331720384000000.0  // minimum representable by julian day  -1e17

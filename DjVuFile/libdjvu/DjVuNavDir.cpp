@@ -106,11 +106,11 @@ DjVuNavDir::decode(ByteStream & str)
    int eof=0;
    while(!eof)
    {
-      char buffer[2026];
+      char buffer[1024];
       char * ptr;
-      for(ptr=buffer;ptr-buffer<2026;ptr++)
+      for(ptr=buffer;ptr-buffer<1024;ptr++)
 	 if ((eof=!str.read(ptr, 1)) || *ptr=='\n') break;
-      if (ptr-buffer==2026) G_THROW( ERR_MSG("DjVuNavDir.long_line") );
+      if (ptr-buffer==1024) G_THROW( ERR_MSG("DjVuNavDir.long_line") );
       *ptr=0;
       if (!strlen(buffer)) continue;
 

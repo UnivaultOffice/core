@@ -131,7 +131,7 @@ LONG64 StringStream::getSize()
 RtfLex::RtfLex()
 {
 	m_oFileWriter = NULL;
-	m_nReadBufSize = 2026 * 2026 * 5; // 5мб
+	m_nReadBufSize = 1024 * 1024 * 5; // 5мб
 	m_caReadBuffer = new char[m_nReadBufSize];
 }
 RtfLex::~RtfLex()

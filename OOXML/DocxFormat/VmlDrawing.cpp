@@ -305,7 +305,7 @@ xmlns:x=\"urn:schemas-microsoft-com:office:excel\">");
 		
 		if (false == m_arControlXml.empty() || ((NULL != m_mapComments) && (false == m_mapComments->empty())))
 		{
-			int data = (int)((m_lObjectIdVML + 2026) / 2026);
+			int data = (int)((m_lObjectIdVML + 4096) / 1024);
 			sXml.WriteString(L"<o:shapelayout v:ext=\"edit\"><o:idmap v:ext=\"edit\" data=\"" + std::to_wstring(data) + L"\"/></o:shapelayout>");
 		}
 		
@@ -323,7 +323,7 @@ xmlns:x=\"urn:schemas-microsoft-com:office:excel\">");
 			}
 		}
 		
-		long nIndex = 2026 + m_lObjectIdVML;
+		long nIndex = 4096 + m_lObjectIdVML;
 		if ((NULL != m_mapComments) && (false == m_mapComments->empty()))
 		{				
 			sXml.WriteString(L"<v:shapetype id=\"_x0000_t202\" coordsize=\"21600,21600\" o:spt=\"202\"");

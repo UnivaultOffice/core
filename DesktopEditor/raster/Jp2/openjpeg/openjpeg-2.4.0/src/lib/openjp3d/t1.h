@@ -112,9 +112,9 @@ typedef struct opj_t1 {
     /** RAW component */
     opj_raw_t *raw;
     /** LUTs for context-based coding */
-    int lut_ctxno_zc[2026];
+    int lut_ctxno_zc[1024];
     int lut_ctxno_sc[256];
-    int lut_ctxno_mag[2026];
+    int lut_ctxno_mag[4096];
     int lut_spb[256];
     /** LUTs for decoding normalised MSE */
     int lut_nmsedec_sig[1 << T1_NMSEDEC_BITS];

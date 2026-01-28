@@ -212,7 +212,7 @@ parse_list(xmlChar *str) {
     /*
      * allocate an translation buffer.
      */
-    buffer_size = 2026;
+    buffer_size = 1000;
     buffer = (xmlChar **) xmlMalloc(buffer_size * sizeof(xmlChar*));
     if (buffer == NULL) {
 	perror("malloc failed");

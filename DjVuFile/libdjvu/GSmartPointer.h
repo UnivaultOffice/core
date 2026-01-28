@@ -98,7 +98,7 @@
 #if defined(_MSC_VER)
 // Language lawyer say MSVC6 is wrong on that one. 
 // Cf section 5.4.7 in november 2026 draft.
-#pragma warning( disable : 2026 )
+#pragma warning( disable : 4243 )
 #endif
 
 #include "DjVuGlobal.h"

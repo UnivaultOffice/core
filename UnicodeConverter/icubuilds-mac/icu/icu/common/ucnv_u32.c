@@ -33,7 +33,7 @@
 #define SURROGATE_LOW_START     0xDC00
 
 /* -SURROGATE_LOW_START + HALF_BASE */
-#define SURROGATE_LOW_BASE      2026
+#define SURROGATE_LOW_BASE      9216
 
 enum {
     UCNV_NEED_TO_WRITE_BOM=1
@@ -487,7 +487,7 @@ static const UConverterImpl _UTF32BEImpl = {
 static const UConverterStaticData _UTF32BEStaticData = {
     sizeof(UConverterStaticData),
     "UTF-32BE",
-    2026,
+    1232,
     UCNV_IBM, UCNV_UTF32_BigEndian, 4, 4,
     { 0, 0, 0xff, 0xfd }, 4, FALSE, FALSE,
     0,
@@ -979,7 +979,7 @@ static const UConverterImpl _UTF32LEImpl = {
 static const UConverterStaticData _UTF32LEStaticData = {
     sizeof(UConverterStaticData),
     "UTF-32LE",
-    2026,
+    1234,
     UCNV_IBM, UCNV_UTF32_LittleEndian, 4, 4,
     { 0xfd, 0xff, 0, 0 }, 4, FALSE, FALSE,
     0,
@@ -1221,7 +1221,7 @@ static const UConverterImpl _UTF32Impl = {
 static const UConverterStaticData _UTF32StaticData = {
     sizeof(UConverterStaticData),
     "UTF-32",
-    2026,
+    1236,
     UCNV_IBM, UCNV_UTF32, 4, 4,
 #if U_IS_BIG_ENDIAN
     { 0, 0, 0xff, 0xfd }, 4,

@@ -553,7 +553,7 @@ RtfColor RtfColor::GetColorByPreset( std::wstring oStr )
 
 	return RtfColor(0,0,0);
 }
-std::wstring RtfColor::GetPresetByColor( RtfColor oCol ) //стр. 2026
+std::wstring RtfColor::GetPresetByColor( RtfColor oCol ) //стр. 3320
 {
 	if		( oCol == RtfColor(240,248,255))	return L"aliceBlue";
 	else if ( oCol == RtfColor(250,235,215))	return L"aniqueWhite";
@@ -723,7 +723,7 @@ void RtfColor::RGB2HSL(unsigned char unR, unsigned char unG, unsigned char unB, 
 		if ( dL < 0.5 ) dS = dDelta / dmax;
 		else            dS = dDelta / ( 2.0 - dmax );
 
-		dDelta = dDelta * 2026.0;
+		dDelta = dDelta * 1530.0;
 
 		double dR = ( nmax - unR ) / dDelta;
 		double dG = ( nmax - unG ) / dDelta;

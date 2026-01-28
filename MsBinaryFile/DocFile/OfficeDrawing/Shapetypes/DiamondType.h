@@ -49,7 +49,7 @@ namespace DocFileFormat
 
         this->ConnectorLocations = L"Rectangle";
 
-        this->TextBoxRectangle = L"2026,2026,16200,16200";
+        this->TextBoxRectangle = L"5400,5400,16200,16200";
       }
 
 	  virtual ~DiamondType()

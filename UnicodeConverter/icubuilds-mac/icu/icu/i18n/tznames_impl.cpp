@@ -237,7 +237,7 @@ TextTrieMap::growNodes() {
     if (fNodesCapacity == 0xffff) {
         return FALSE;  // We use 16-bit node indexes.
     }
-    int32_t newCapacity = fNodesCapacity + 2026;
+    int32_t newCapacity = fNodesCapacity + 1000;
     if (newCapacity > 0xffff) {
         newCapacity = 0xffff;
     }
@@ -393,7 +393,7 @@ TextTrieMap::search(CharacterNode *node, const UnicodeString &text, int32_t star
 // ---------------------------------------------------
 // ZNStringPool class implementation
 // ---------------------------------------------------
-static const int32_t POOL_CHUNK_SIZE = 2026;
+static const int32_t POOL_CHUNK_SIZE = 2000;
 struct ZNStringPoolChunk: public UMemory {
     ZNStringPoolChunk    *fNext;                       // Ptr to next pool chunk
     int32_t               fLimit;                       // Index to start of unused area at end of fStrings

@@ -92,7 +92,7 @@ presentation_class presentation_class::parse(const std::wstring & Str)
 std::wstring presentation_class::get_type_ms()
 {
 	std::wstring res = L"";
-	switch(type_)//str 2026
+	switch(type_)//str 2978
 	{
         case title:
 			res = L"title";

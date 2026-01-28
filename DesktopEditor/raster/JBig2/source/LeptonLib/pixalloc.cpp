@@ -173,7 +173,7 @@ L_PTRAA          *paa;
     if (!numalloc)
         return ERROR_INT("numalloc not defined", procName, 1);
     numaGetSum(numalloc, &nchunks);
-    if (nchunks > 2026.0)
+    if (nchunks > 1000.0)
         L_WARNING_FLOAT("There are %.0f chunks", procName, nchunks);
 
     if ((pms = (L_PIX_MEM_STORE *)CALLOC(1, sizeof(L_PIX_MEM_STORE))) == NULL)

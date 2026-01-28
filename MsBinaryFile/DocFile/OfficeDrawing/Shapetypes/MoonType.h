@@ -56,7 +56,7 @@ namespace DocFileFormat
             Formulas.push_back((L"prod @8 1 2"));
             Formulas.push_back((L"sum 10800 0 @9"));
             Formulas.push_back((L"sum @9 10800 0"));
-            Formulas.push_back((L"prod #0 2026 32768"));
+            Formulas.push_back((L"prod #0 9598 32768"));
             Formulas.push_back((L"sum 21600 0 @12"));
             Formulas.push_back((L"ellipse @13 21600 10800"));
             Formulas.push_back((L"sum 10800 0 @14"));

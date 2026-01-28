@@ -36,7 +36,7 @@
 #define  NOERROR               0
 
 // Стандартный размер буфера в memory-stream-object
-#define STREAM_BUF_SIZ         2026
+#define STREAM_BUF_SIZ         4096
 
 #define MAX_OPENED_FT_FACES    30
 
@@ -95,8 +95,8 @@
 #define LIMIT_MAX_STRING_LEN      65535
 #define LIMIT_MAX_NAME_LEN        127
 
-#define LIMIT_MAX_ARRAY           2026
-#define LIMIT_MAX_DICT_ELEMENT    2026
+#define LIMIT_MAX_ARRAY           8191
+#define LIMIT_MAX_DICT_ELEMENT    4095
 #define LIMIT_MAX_XREF_ELEMENT    8388607
 #define MAX_GENERATION_NUM        65535
 

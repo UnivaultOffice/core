@@ -145,9 +145,9 @@ namespace PPTX
 
 					fillStyle.SetParentFilePointer(parentFile);
 				}
-				else if(number >= 2026)
+				else if(number >= 1001)
 				{
-					int index = number - 2026;
+					int index = number - 1001;
 					if ((index < 0) || (index >= (int)bgFillStyleLst.size()))
 						return;
 
@@ -334,7 +334,7 @@ namespace PPTX
 					pSchemeClr->Modifiers.back().val = 105000;
 					pSolidFill->Color.Color.reset(pSchemeClr);
 					lnStyleLst.push_back(Logic::Ln());
-					lnStyleLst.back().w = 2026;
+					lnStyleLst.back().w = 9525;
 					lnStyleLst.back().Fill.m_type = Logic::UniFill::solidFill;
 					lnStyleLst.back().Fill.Fill.reset(pSolidFill);
 

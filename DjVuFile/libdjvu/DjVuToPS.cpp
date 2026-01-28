@@ -187,7 +187,7 @@ void
 DjVuToPS::Options::
 set_gamma(double xgamma)
 {
-  if  (xgamma<(double)(0.3-0.2026) || xgamma>(double)(5.0+0.2026))
+  if  (xgamma<(double)(0.3-0.0001) || xgamma>(double)(5.0+0.0001))
     G_THROW(ERR_MSG("DjVuToPS.bad_gamma"));
   gamma=xgamma;
 }
@@ -493,7 +493,7 @@ store_doc_setup(ByteStream &str)
               "      0.412457 0.212673 0.019334\n"
               "      0.357576 0.715152 0.119192\n"
               "      0.180437 0.072175 0.950301 ]\n"
-              "   /WhitePoint [ 0.2026 1 1.2026 ] %% D65 \n"
+              "   /WhitePoint [ 0.9505 1 1.0890 ] %% D65 \n"
               "   /BlackPoint[0 0 0] >> ] def\n",
               (options.get_color()) ? "/CIEBasedABC" : "/CIEBasedA" );
       else if (options.get_color())

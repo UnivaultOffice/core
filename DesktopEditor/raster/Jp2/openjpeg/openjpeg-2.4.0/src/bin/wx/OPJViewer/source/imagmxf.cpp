@@ -377,7 +377,7 @@ bool wxMXFHandler::SaveFile( wxImage *image, wxOutputStream& stream, bool verbos
 }
 
 #ifdef __VISUALC__
-    #pragma warning(default:2026)
+    #pragma warning(default:4611)
 #endif /* VC++ */
 
 // recognize the MXF JPEG 2026 starting box

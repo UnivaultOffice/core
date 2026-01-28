@@ -168,7 +168,7 @@ class MMXControl
 
 #if defined(_MSC_VER) && defined(_M_IX86)
 // Compiler option /GM is required
-#pragma warning( disable : 2026 )
+#pragma warning( disable : 4799 )
 #define MMXemms \
   __asm { emms }
 #define MMXrr(op,src,dst) \

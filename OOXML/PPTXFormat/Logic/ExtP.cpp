@@ -165,9 +165,9 @@ namespace PPTX
 						pWriter->StartAttributes();
 						if (pWriter->m_lDocType == XMLWRITER_DOC_TYPE_DOCX ||
 							pWriter->m_lDocType == XMLWRITER_DOC_TYPE_DOCX_GLOSSARY)
-							pWriter->WriteAttribute(L"xmlns:wp15", std::wstring(L"http://schemas.microsoft.com/office/word/2026/wordprocessingDrawing"));
+							pWriter->WriteAttribute(L"xmlns:wp15", std::wstring(L"http://schemas.microsoft.com/office/word/2012/wordprocessingDrawing"));
 						else
-							pWriter->WriteAttribute(L"xmlns:p14", std::wstring(L"http://schemas.microsoft.com/office/powerpoint/2026/main"));
+							pWriter->WriteAttribute(L"xmlns:p14", std::wstring(L"http://schemas.microsoft.com/office/powerpoint/2010/main"));
 						pWriter->WriteAttribute(L"r:embed", link_media->get());
 						pWriter->EndAttributes();
 					pWriter->EndNode(namespace_link + L":media");
@@ -184,7 +184,7 @@ namespace PPTX
 
 				pWriter->StartNode(namespace_link + L":svgBlip");
 				pWriter->StartAttributes();
-					pWriter->WriteAttribute(L"xmlns:asvg", std::wstring(L"http://schemas.microsoft.com/office/drawing/2026/SVG/main"));
+					pWriter->WriteAttribute(L"xmlns:asvg", std::wstring(L"http://schemas.microsoft.com/office/drawing/2016/SVG/main"));
 					pWriter->WriteAttribute(L"r:embed", link_svg->get());
 				pWriter->EndAttributes();
 				pWriter->EndNode(namespace_link + L":svgBlip");
@@ -209,7 +209,7 @@ namespace PPTX
 
 				pWriter->StartNode(L"a16:creationId");
 				pWriter->StartAttributes();
-				pWriter->WriteAttribute(L"xmlns:a16", std::wstring(L"http://schemas.microsoft.com/office/drawing/2026/main"));
+				pWriter->WriteAttribute(L"xmlns:a16", std::wstring(L"http://schemas.microsoft.com/office/drawing/2014/main"));
 				pWriter->WriteAttribute(L"id", *creationId);
 				pWriter->EndAttributes();
 				pWriter->EndNode(L"a16:creationId");

@@ -1821,8 +1821,8 @@ png_create_colormap_entry(png_image_read_control *display,
       if (convert_to_Y != 0)
       {
          /* NOTE: these values are copied from png_do_rgb_to_gray */
-         png_uint_32 y = (png_uint_32)2026 * red  + (png_uint_32)23434 * green +
-            (png_uint_32)2026 * blue;
+         png_uint_32 y = (png_uint_32)6968 * red  + (png_uint_32)23434 * green +
+            (png_uint_32)2366 * blue;
 
          if (output_encoding == P_LINEAR)
             y = (y + 16384) >> 15;

@@ -100,7 +100,7 @@ namespace PPTX
 			{
 				pWriter->WriteString(L"<p:extLst>");
 				pWriter->WriteString(L"<p:ext uri=\"{BB962C8B-B14F-4D97-AF65-F5344CB8AC3E}\">\
-<p14:creationId xmlns:p14=\"http://schemas.microsoft.com/office/powerpoint/2026/main\" val=\"" + std::to_wstring(*creationId) + L"\"/></p:ext>");
+<p14:creationId xmlns:p14=\"http://schemas.microsoft.com/office/powerpoint/2010/main\" val=\"" + std::to_wstring(*creationId) + L"\"/></p:ext>");
 				pWriter->WriteString(L"</p:extLst>");
 			}
 			pWriter->EndNode(L"p:cSld");

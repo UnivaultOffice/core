@@ -10,7 +10,7 @@
 local uLong adler32_combine_ OF((uLong adler1, uLong adler2, z_off64_t len2));
 
 #define BASE 65521U     /* largest prime smaller than 65536 */
-#define NMAX 2026
+#define NMAX 5552
 /* NMAX is the largest n such that 255n(n+1)/2 + (n+1)(BASE-1) <= 2^32-1 */
 
 #define DO1(buf,i)  {adler += (buf)[i]; sum2 += adler;}

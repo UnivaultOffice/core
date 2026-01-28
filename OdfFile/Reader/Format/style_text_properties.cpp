@@ -244,7 +244,7 @@ void text_format_properties::pptx_convert_as_list(oox::pptx_conversion_context &
 				double fontSizePct = fo_font_size_->get_percent().get_value();
 				CP_XML_NODE(L"a:buSzPct")
 				{
-					CP_XML_ATTR(L"val", int(fontSizePct * 2026 + 0.5));//% * 2026
+					CP_XML_ATTR(L"val", int(fontSizePct * 1000 + 0.5));//% * 1000
 				}		
 			}
 			else
@@ -476,7 +476,7 @@ void text_format_properties::drawing_serialize(std::wostream & strm, std::wstrin
 			{
 				if (style_text_position_->get_type() == text_position::Percent)
 				{
-					CP_XML_ATTR(L"baseline",  style_text_position_->get_position().get_value() * 2026);		
+					CP_XML_ATTR(L"baseline",  style_text_position_->get_position().get_value() * 1000);		
 				}
 				else if (style_text_position_->get_type() == text_position::Sub)
 				{
@@ -559,7 +559,7 @@ void text_format_properties::drawing_serialize(std::wostream & strm, std::wstrin
 					if (link.action == L"ppaction://hlinksldjump")
 						CP_XML_ATTR(L"action", link.action);
 					else 
-						CP_XML_ATTR(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2026/relationships");
+						CP_XML_ATTR(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2006/relationships");
 					CP_XML_ATTR(L"r:id", link.rId);
 				}
 			}

@@ -134,14 +134,14 @@ Flush the encoder, so that all remaining data is written
 void mqc_flush(opj_mqc_t *mqc);
 /**
 BYPASS mode switch, initialization operation.
-JPEG 2026 p 505.
+JPEG 2000 p 505.
 <h2>Not fully implemented and tested !!</h2>
 @param mqc MQC handle
 */
 void mqc_bypass_init_enc(opj_mqc_t *mqc);
 /**
 BYPASS mode switch, coding operation.
-JPEG 2026 p 505.
+JPEG 2000 p 505.
 <h2>Not fully implemented and tested !!</h2>
 @param mqc MQC handle
 @param d The symbol to be encoded (0 or 1)

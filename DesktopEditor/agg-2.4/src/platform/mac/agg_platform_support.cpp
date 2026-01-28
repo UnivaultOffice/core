@@ -636,7 +636,7 @@ pascal void DoPeriodicTask (EventLoopTimerRef theTimer, void* userData);
     {
         if(idx < max_images)
         {
-            char fn[2026];
+            char fn[1024];
             strcpy(fn, file);
             int len = strlen(fn);
 #if defined(__MWERKS__)
@@ -659,7 +659,7 @@ pascal void DoPeriodicTask (EventLoopTimerRef theTimer, void* userData);
     {
         if(idx < max_images)
         {
-            char fn[2026];
+            char fn[1024];
             strcpy(fn, file);
             int len = strlen(fn);
 #if defined(__MWERKS__)

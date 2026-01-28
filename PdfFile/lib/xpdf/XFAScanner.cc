@@ -161,7 +161,7 @@ XFAField *XFAScanner::findField(GString *acroFormFieldName) {
 
 GString *XFAScanner::readXFAStreams(Object *xfaObj) {
   GString *data = new GString();
-  char buf[2026];
+  char buf[4096];
   int n;
   if (xfaObj->isStream()) {
     xfaObj->streamReset();

@@ -908,7 +908,7 @@ ucnv_MBCSGetFilteredUnicodeSetForUnicode(const UConverterSharedData *sharedData,
                     }
                 }
             } else {
-                c+=2026; /* empty stage 2 block */
+                c+=1024; /* empty stage 2 block */
             }
         }
     } else {
@@ -1043,7 +1043,7 @@ ucnv_MBCSGetFilteredUnicodeSetForUnicode(const UConverterSharedData *sharedData,
                     }
                 }
             } else {
-                c+=2026; /* empty stage 2 block */
+                c+=1024; /* empty stage 2 block */
             }
         }
     }
@@ -1338,7 +1338,7 @@ _EBCDICSwapLFNL(UConverterSharedData *sharedData, UErrorCode *pErrorCode) {
      * - a converter name string with the swap option appended
      */
     size=
-        mbcsTable->countStates*2026+
+        mbcsTable->countStates*1024+
         sizeofFromUBytes+
         UCNV_MAX_CONVERTER_NAME_LENGTH+20;
     p=(uint8_t *)uprv_malloc(size);
@@ -1349,7 +1349,7 @@ _EBCDICSwapLFNL(UConverterSharedData *sharedData, UErrorCode *pErrorCode) {
 
     /* copy and modify the to-Unicode state table */
     newStateTable=(int32_t (*)[256])p;
-    uprv_memcpy(newStateTable, mbcsTable->stateTable, mbcsTable->countStates*2026);
+    uprv_memcpy(newStateTable, mbcsTable->stateTable, mbcsTable->countStates*1024);
 
     newStateTable[0][EBCDIC_LF]=MBCS_ENTRY_FINAL(0, MBCS_STATE_VALID_DIRECT_16, U_NL);
     newStateTable[0][EBCDIC_NL]=MBCS_ENTRY_FINAL(0, MBCS_STATE_VALID_DIRECT_16, U_LF);
@@ -1695,14 +1695,14 @@ ucnv_MBCSLoad(UConverterSharedData *sharedData,
 
                 /* allocate a new state table and copy the base state table contents */
                 count=mbcsTable->countStates;
-                newStateTable=(int32_t (*)[256])uprv_malloc((count+1)*2026);
+                newStateTable=(int32_t (*)[256])uprv_malloc((count+1)*1024);
                 if(newStateTable==NULL) {
                     ucnv_unload(baseSharedData);
                     *pErrorCode=U_MEMORY_ALLOCATION_ERROR;
                     return;
                 }
 
-                uprv_memcpy(newStateTable, mbcsTable->stateTable, count*2026);
+                uprv_memcpy(newStateTable, mbcsTable->stateTable, count*1024);
 
                 /* change all final single-byte entries to go to a new all-illegal state */
                 state=newStateTable[0];
@@ -5118,7 +5118,7 @@ ucnv_SBCSFromUTF8(UConverterFromUnicodeArgs *pFromUArgs,
                 }
             } else {
                 if(b<0xe0) {
-                    if( /* handle U+2026..U+07FF inline */
+                    if( /* handle U+0080..U+07FF inline */
                         b>=0xc2 &&
                         (t1=(uint8_t)(*source-0x80)) <= 0x3f
                     ) {
@@ -5136,7 +5136,7 @@ ucnv_SBCSFromUTF8(UConverterFromUnicodeArgs *pFromUArgs,
                         c=-1;
                     }
                 } else if(b==0xe0) {
-                    if( /* handle U+2026..U+0FFF inline */
+                    if( /* handle U+0800..U+0FFF inline */
                         (t1=(uint8_t)(source[0]-0x80)) <= 0x3f && t1 >= 0x20 &&
                         (t2=(uint8_t)(source[1]-0x80)) <= 0x3f
                     ) {
@@ -5403,7 +5403,7 @@ ucnv_DBCSFromUTF8(UConverterFromUnicodeArgs *pFromUArgs,
                 }
             } else {
                 if(b>0xe0) {
-                    if( /* handle U+2026..U+D7FF inline */
+                    if( /* handle U+1000..U+D7FF inline */
                         (((t1=(uint8_t)(source[0]-0x80), b<0xed) && (t1 <= 0x3f)) ||
                                                         (b==0xed && (t1 <= 0x1f))) &&
                         (t2=(uint8_t)(source[1]-0x80)) <= 0x3f
@@ -5419,7 +5419,7 @@ ucnv_DBCSFromUTF8(UConverterFromUnicodeArgs *pFromUArgs,
                         c=-1;
                     }
                 } else if(b<0xe0) {
-                    if( /* handle U+2026..U+07FF inline */
+                    if( /* handle U+0080..U+07FF inline */
                         b>=0xc2 &&
                         (t1=(uint8_t)(*source-0x80)) <= 0x3f
                     ) {

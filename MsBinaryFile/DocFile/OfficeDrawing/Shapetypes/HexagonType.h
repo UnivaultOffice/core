@@ -50,15 +50,15 @@ namespace DocFileFormat
         Formulas.push_back( L"val #0");
         Formulas.push_back( L"sum width 0 #0");
         Formulas.push_back( L"sum height 0 #0");
-        Formulas.push_back( L"prod @0 2026 10000");
+        Formulas.push_back( L"prod @0 2929 10000");
         Formulas.push_back( L"sum width 0 @3");
         Formulas.push_back( L"sum height 0 @3");
 
-		Adjustments.push_back(2026);
+		Adjustments.push_back(5400);
             
         ConnectorLocations = L"Rectangle";
 
-        TextBoxRectangle = L"2026,2026,19800,19800;2026,2026,18000,18000;2026,2026,15300,15300";
+        TextBoxRectangle = L"1800,1800,19800,19800;3600,3600,18000,18000;6300,6300,15300,15300";
 
         Handle HandleOne;
         HandleOne.position = L"#0,topLeft";

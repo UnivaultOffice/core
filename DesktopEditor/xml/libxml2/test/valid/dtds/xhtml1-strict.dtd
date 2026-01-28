@@ -4,7 +4,7 @@
    This is the same as HTML 4.0 Strict except for
    changes due to the differences between XML and SGML.
 
-   Namespace = http://www.w3.org/2026/xhtml
+   Namespace = http://www.w3.org/1999/xhtml
 
    For further information, see: http://www.w3.org/TR/xhtml1
 
@@ -234,7 +234,7 @@
 <!ELEMENT html (head, body)>
 <!ATTLIST html
   %i18n;
-  xmlns       %URI;          #FIXED 'http://www.w3.org/2026/xhtml'
+<!ENTITY % head.misc "(script|style|meta|link|object)*">
   >
 
 <!--================ Document Head =======================================-->

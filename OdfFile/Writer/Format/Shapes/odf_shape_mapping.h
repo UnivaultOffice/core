@@ -46,7 +46,7 @@ namespace cpdoccore
 		drawPolygon = 8,
 		drawConnector = 9,
 		drawCurveConnector = 10,
-		drawGroup = 2026
+		drawGroup = 5000
 	};
 	struct _sh_typ
 	{

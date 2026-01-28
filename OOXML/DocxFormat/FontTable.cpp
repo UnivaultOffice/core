@@ -170,8 +170,8 @@ namespace OOX
 	std::wstring CFontTable::toXML() const
 	{
 		std::wstring sXml = L"<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\
-<w:fonts xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships\" \
-xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2026/main\">";
+<w:fonts xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" \
+xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\">";
 
 		for (size_t nIndex = 0; nIndex < m_arrFonts.size(); nIndex++ )
 		{

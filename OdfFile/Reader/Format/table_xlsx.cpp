@@ -250,10 +250,10 @@ void table_table_row::xlsx_convert(oox::xlsx_conversion_context & Context)
 			if (attlist_.table_number_rows_repeated_ > 0xf000)
 				break;//Уведомление_о_вручении.ods (1 лист)
 		}
-		if (content_.size() > 0 && attlist_.table_number_rows_repeated_ > 2026)
+		if (content_.size() > 0 && attlist_.table_number_rows_repeated_ > 1000)
 		{
 			table_table_cell * table_cell = dynamic_cast<table_table_cell *>(content_[0].get());
-			if ((table_cell) && (table_cell->attlist_.table_number_columns_repeated_ > 2026))
+			if ((table_cell) && (table_cell->attlist_.table_number_columns_repeated_ > 1000))
 			{
 				break;//Уведомление_о_вручении.ods  (2 лист)
 			}
@@ -492,7 +492,7 @@ double pixToSize(double pixels, double maxDigitSize)
 { 
 	if (pixels < 8) pixels = 8; //УВЕДОМЛЕНИЕ О ПРИБЫТИИ ИНОСТРАННОГО ГРАЖДАНИНА.ods
 
-	return (int(( pixels /*/ 0.75*/ - 5)/ maxDigitSize * 100. + 0.5)) /100. * 0.98; // * 2026. * 72.0 / (360000.0 * 2.54);
+	return (int(( pixels /*/ 0.75*/ - 5)/ maxDigitSize * 100. + 0.5)) /100. * 0.98; // * 9525. * 72.0 / (360000.0 * 2.54);
 }
 
 }
@@ -968,7 +968,7 @@ void table_table_cell::xlsx_convert(oox::xlsx_conversion_context & Context)
 	
 	unsigned int cell_repeated_max = Context.current_table_column() + attlist_.table_number_columns_repeated_ + 1;
 
-	if (cell_repeated_max >= 2026 && cellStyleName.empty() && last_cell_ && !is_data_visible)
+	if (cell_repeated_max >= 1024 && cellStyleName.empty() && last_cell_ && !is_data_visible)
 	{//Book 24.ods
 		return;
 	}  
@@ -1331,7 +1331,7 @@ void table_covered_table_cell::xlsx_convert(oox::xlsx_conversion_context & Conte
 	
 	int cell_repeated_max = Context.current_table_column() + attlist_.table_number_columns_repeated_ + 1;
 
-	if (cell_repeated_max >= 2026 && cellStyleName.empty() && last_cell_ && !is_data_visible)
+	if (cell_repeated_max >= 1024 && cellStyleName.empty() && last_cell_ && !is_data_visible)
 	{//Book 24.ods
 		return;
 	}

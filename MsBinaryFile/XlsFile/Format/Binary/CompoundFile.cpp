@@ -115,7 +115,7 @@ void CompoundFile::copy_stream(std::wstring streamNameOpen, std::wstring streamN
 	POLE::Stream *streamNew = new POLE::Stream(storageOut, streamNameCreate, true, size_stream);
 	if (!streamNew) return;
 
-	unsigned char buffer[2026];
+	unsigned char buffer[4096];
 	int bytesRead = 0;
 
 	while(true)
@@ -123,8 +123,8 @@ void CompoundFile::copy_stream(std::wstring streamNameOpen, std::wstring streamN
 		int bytesToRead = size_stream - bytesRead;
 		if (bytesToRead <= 0)
 			break;
-		if (bytesToRead > 2026)
-			bytesToRead = 2026;
+		if (bytesToRead > 4096)
+			bytesToRead = 4096;
 	
 		stream->read(buffer, bytesToRead);
 		streamNew->write(buffer, bytesToRead);

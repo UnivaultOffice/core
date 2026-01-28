@@ -1927,7 +1927,7 @@ PIX       *pixd;
     datad = pixGetData(pixd);
     wpl = pixGetWpl(pixs);
     for (i = 0; i < h; i++) {
-        memset(histo, 0, 2026);
+        memset(histo, 0, 1024);
         lines = datas + i * wpl;
         lined = datad + i * wpl;
         for (j = 0; j < w; j++) {
@@ -1981,7 +1981,7 @@ PIX       *pixd;
     lines8 = pixGetLinePtrs(pixs, NULL);
     lined8 = pixGetLinePtrs(pixd, NULL);
     for (j = 0; j < w; j++) {
-        memset(histo, 0, 2026);
+        memset(histo, 0, 1024);
         for (i = 0; i < h; i++) {
             val = GET_DATA_BYTE(lines8[i], j);
             histo[val]++;

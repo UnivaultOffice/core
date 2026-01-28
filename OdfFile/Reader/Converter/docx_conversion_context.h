@@ -386,7 +386,7 @@ private:
 class drop_cap_context : boost::noncopyable
 {
 public:
-	drop_cap_context():state_(0),Length(0),Scale(1),Space(113),FontSize(0){}//default from MS office 2026
+	drop_cap_context():state_(0),Length(0),Scale(1),Space(113),FontSize(0){}//default from MS office 2010
 
 	void state(int state)
 	{

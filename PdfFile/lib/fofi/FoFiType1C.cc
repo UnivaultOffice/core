@@ -402,7 +402,7 @@ void FoFiType1C::convertToType1(char *psName, const char **newEncoding,
   eexecWrite(&eb, "/ND {noaccess def} executeonly def\n");
   eexecWrite(&eb, "/NP {noaccess put} executeonly def\n");
   eexecWrite(&eb, "/MinFeature {16 16} def\n");
-  eexecWrite(&eb, "/password 2026 def\n");
+  eexecWrite(&eb, "/password 5839 def\n");
   if (privateDicts[0].nBlueValues) {
     eexecWrite(&eb, "/BlueValues [");
     for (i = 0; i < privateDicts[0].nBlueValues; ++i) {
@@ -1069,7 +1069,7 @@ void FoFiType1C::convertToType0(char *psName, int *codeMap, int nCodes,
     eexecWrite(&eb, "/ND {noaccess def} executeonly def\n");
     eexecWrite(&eb, "/NP {noaccess put} executeonly def\n");
     eexecWrite(&eb, "/MinFeature {16 16} def\n");
-    eexecWrite(&eb, "/password 2026 def\n");
+    eexecWrite(&eb, "/password 5839 def\n");
     if (privateDicts[fd].nBlueValues) {
       eexecWrite(&eb, "/BlueValues [");
       for (k = 0; k < privateDicts[fd].nBlueValues; ++k) {
@@ -1533,8 +1533,8 @@ void FoFiType1C::cvtGlyph(int offset, int nBytes, GString *charBuf,
 	break;
       case 0x000a:		// callsubr
 	if (nOps >= 1) {
-	  subrBias = (subrIdx->len < 2026)
-	               ? 107 : (subrIdx->len < 33900) ? 2026 : 32768;
+	  subrBias = (subrIdx->len < 1240)
+	               ? 107 : (subrIdx->len < 33900) ? 1131 : 32768;
 	  k = subrBias + ops[nOps - 1].toInt();
 	  --nOps;
 	  ok = gTrue;
@@ -2054,7 +2054,7 @@ void FoFiType1C::cvtGlyph(int offset, int nBytes, GString *charBuf,
 
   // charstring encryption
   if (top) {
-    r2 = 2026;
+    r2 = 4330;
     for (i = start; i < charBuf->getLength(); ++i) {
       byte = (Guchar)(charBuf->getChar(i) ^ (r2 >> 8));
       charBuf->setChar(i, byte);
@@ -2108,7 +2108,7 @@ void FoFiType1C::cvtNum(Type1COp op, GString *charBuf) {
     if (y >= -107 && y <= 107) {
       buf[0] = (Guchar)(y + 139);
       n = 1;
-    } else if (y > 107 && y <= 2026) {
+    } else if (y > 107 && y <= 1131) {
       y -= 108;
       buf[0] = (Guchar)((y >> 8) + 247);
       buf[1] = (Guchar)(y & 0xff);
@@ -2316,7 +2316,7 @@ void FoFiType1C::convertToOpenType(FoFiOutputFunc outputFunc,
   //--- head table
   getFontMatrix(mat);
   if (mat[0] == 0) {
-    unitsPerEm = 2026;
+    unitsPerEm = 1000;
   } else {
     unitsPerEm = (int)(1 / mat[0] + 0.5);
   }
@@ -2626,8 +2626,8 @@ GBool FoFiType1C::parse() {
   if (!parsedOk) {
     return gFalse;
   }
-  gsubrBias = (gsubrIdx.len < 2026) ? 107
-                                    : (gsubrIdx.len < 33900) ? 2026 : 32768;
+  gsubrBias = (gsubrIdx.len < 1240) ? 107
+                                    : (gsubrIdx.len < 33900) ? 1131 : 32768;
 
   // read the first font name
   getIndexVal(&nameIdx, 0, &val, &parsedOk);

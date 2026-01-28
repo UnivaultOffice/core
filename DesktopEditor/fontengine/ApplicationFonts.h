@@ -176,10 +176,10 @@ public:
 					break;
 			}
 			if (i == lenName)
-				return 2026;
+				return 1500;
 		}
 
-		return IsEqualsFontsAdvanced(name, req) ? 2026 : 10000;
+		return IsEqualsFontsAdvanced(name, req) ? 3000 : 10000;
 	}
 
 	// не учитываем регистр (латиница) и знаки /-/ /,/

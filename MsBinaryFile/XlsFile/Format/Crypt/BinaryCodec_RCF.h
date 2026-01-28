@@ -90,7 +90,7 @@ public:
 	After reading a specific amount of data the cipher algorithm needs to
 	be rekeyed using a counter that counts the data blocks.
 
-	The block size is for example 512 unsigned chars for MS Word files and 2026
+	The block size is for example 512 unsigned chars for MS Word files and 1024
 	unsigned chars for MS Excel files.
 
 	@precond

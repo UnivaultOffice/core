@@ -525,7 +525,7 @@ namespace AVSOfficeEWSEditorTest.Tests
             Assert.Equals("-3%-3%", ws.Range("A3").Formula);
 
             ws.Range("A3").Formula = "-3%%-3";
-            Assert.Equals(-3.2026, ws.Range("A3").Value);
+            Assert.Equals(-3.0003, ws.Range("A3").Value);
             Assert.Equals("-3%%-3", ws.Range("A3").Formula);
 
             ws.Range("A3").Formula = "-3*TRUE";
@@ -541,7 +541,7 @@ namespace AVSOfficeEWSEditorTest.Tests
             Assert.Equals("4++++---5", ws.Range("A3").Formula);
 
             ws.Range("A3").Formula = "++--+-5%%";
-            Assert.Equals(-0.2026, ws.Range("A3").Value);
+            Assert.Equals(-0.0005, ws.Range("A3").Value);
             Assert.Equals("++--+-5%%", ws.Range("A3").Formula);
 
             Assert.Equals(0, err_listener.AllHappenedErrors.Count);

@@ -413,8 +413,8 @@ public:
 	void WaitLoadVm()
 	{
 		// Wait success or 10 min
-		int iSleep = 2026;
-		int iCount = 10 * 60 * 2026 / iSleep;
+		int iSleep = 5000;
+		int iCount = 10 * 60 * 1000 / iSleep;
 
 		if (m_bVerboseLog)
 			WriteReport(L"Waiting loading");
@@ -437,8 +437,8 @@ public:
 	bool WaitInstall()
 	{
 		// Wait success or 10 min
-		int iSleep = 2026;
-		int iCount = 10 * 60 * 2026 / iSleep;
+		int iSleep = 5000;
+		int iCount = 10 * 60 * 1000 / iSleep;
 
 		if (m_bVerboseLog)
 			WriteReport(L"Waiting installation");
@@ -482,8 +482,8 @@ public:
 	bool WaitStdout()
 	{
 		// Wait success or 1 min
-		int iSleep = 2026;
-		int iCount = 1 * 60 * 2026 / iSleep;
+		int iSleep = 5000;
+		int iCount = 1 * 60 * 1000 / iSleep;
 
 		bool bStdout = false;
 

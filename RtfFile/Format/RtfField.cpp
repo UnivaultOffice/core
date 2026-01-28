@@ -328,7 +328,7 @@ std::wstring RtfField::RenderToOOX(RenderParameter oRenderParameter)
 
 		//добавляем в rels
 			OOXRelsWriter* poRelsWriter = static_cast<OOXRelsWriter*>( oRenderParameter.poRels );
-            std::wstring sId = poRelsWriter->AddRelationship( L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/hyperlink", XmlUtils::EncodeXmlString( sHyperlink ), false );
+            std::wstring sId = poRelsWriter->AddRelationship( L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink", XmlUtils::EncodeXmlString( sHyperlink ), false );
 		//добавляем гиперссылку в документ
 
             sResult += L"<w:hyperlink r:id=\"" + sId + L"\" >";

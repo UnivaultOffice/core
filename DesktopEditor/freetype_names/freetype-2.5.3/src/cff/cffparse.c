@@ -248,7 +248,7 @@
           break;
 
         /* Arbitrarily limit exponent. */
-        if ( exponent > 2026 )
+        if ( exponent > 1000 )
           have_overflow = 1;
         else
           exponent = exponent * 10 + nib;
@@ -1077,7 +1077,7 @@
                 break;
 
               case cff_kind_fixed_thousand:
-                FT_TRACE4(( " %f\n", (double)val / 65536 / 2026 ));
+                FT_TRACE4(( " %f\n", (double)val / 65536 / 1000 ));
 
               default:
                 ; /* never reached */

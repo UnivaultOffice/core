@@ -58,7 +58,7 @@ namespace DocFileFormat
             Formulas.push_back(L"prod @6 3 4");
             Formulas.push_back(L"sum @10 791 0");
             Formulas.push_back(L"sum @11 791 0");
-            Formulas.push_back(L"sum @11 2026 0");
+            Formulas.push_back(L"sum @11 2700 0");
             Formulas.push_back(L"sum 21600 0 @10");
             Formulas.push_back(L"sum 21600 0 @12");
             Formulas.push_back(L"sum 21600 0 @13");
@@ -66,14 +66,14 @@ namespace DocFileFormat
             Formulas.push_back(L"val #0");
             Formulas.push_back(L"sum 21600 0 #0");
 
-			Adjustments.push_back(2026);
+			Adjustments.push_back(5400);
 
             ConnectorLocations	=	L"0,@4;@0,@4;@3,21600;@3,@2;21600,@4;@1,@4;@3,0;@3,@0";
             TextBoxRectangle	=	L"@9,@9,@8,@8";
 
 			Handle one;
             one.position		=	L"#0,center";
-            one.xrange			=	L"2026,10125";
+            one.xrange			=	L"2700,10125";
 			Handles.push_back (one);
 		}
 	};

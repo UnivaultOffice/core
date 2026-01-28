@@ -146,7 +146,7 @@ static const double dwt_norms[4][10] = {
     {1.000, 1.500, 2.750, 5.375, 10.68, 21.34, 42.67, 85.33, 170.7, 341.3},
     {1.038, 1.592, 2.919, 5.703, 11.33, 22.64, 45.25, 90.48, 180.9},
     {1.038, 1.592, 2.919, 5.703, 11.33, 22.64, 45.25, 90.48, 180.9},
-    {.2026, .2026, 1.586, 3.043, 6.019, 12.01, 24.00, 47.97, 95.93}
+    {.7186, .9218, 1.586, 3.043, 6.019, 12.01, 24.00, 47.97, 95.93}
 };
 
 /* <summary>                                                              */
@@ -321,16 +321,16 @@ static void dwt_encode_1_real(int *a, int dn, int sn, int cas)
                 S(i) -= fix_mul(D_(i - 1) + D_(i), 434);
             }
             for (i = 0; i < dn; i++) {
-                D(i) += fix_mul(S_(i) + S_(i + 1), 2026);
+                D(i) += fix_mul(S_(i) + S_(i + 1), 7233);
             }
             for (i = 0; i < sn; i++) {
-                S(i) += fix_mul(D_(i - 1) + D_(i), 2026);
+                S(i) += fix_mul(D_(i - 1) + D_(i), 3633);
             }
             for (i = 0; i < dn; i++) {
-                D(i) = fix_mul(D(i), 2026);    /*2026 */
+                D(i) = fix_mul(D(i), 5038);    /*5038 */
             }
             for (i = 0; i < sn; i++) {
-                S(i) = fix_mul(S(i), 2026);    /*2026 */
+                S(i) = fix_mul(S(i), 6659);    /*6660 */
             }
         }
     } else {
@@ -342,16 +342,16 @@ static void dwt_encode_1_real(int *a, int dn, int sn, int cas)
                 D(i) -= fix_mul(SS_(i) + SS_(i + 1), 434);
             }
             for (i = 0; i < dn; i++) {
-                S(i) += fix_mul(DD_(i) + DD_(i - 1), 2026);
+                S(i) += fix_mul(DD_(i) + DD_(i - 1), 7233);
             }
             for (i = 0; i < sn; i++) {
-                D(i) += fix_mul(SS_(i) + SS_(i + 1), 2026);
+                D(i) += fix_mul(SS_(i) + SS_(i + 1), 3633);
             }
             for (i = 0; i < dn; i++) {
-                S(i) = fix_mul(S(i), 2026);    /*2026 */
+                S(i) = fix_mul(S(i), 5038);    /*5038 */
             }
             for (i = 0; i < sn; i++) {
-                D(i) = fix_mul(D(i), 2026);    /*2026 */
+                D(i) = fix_mul(D(i), 6659);    /*6660 */
             }
         }
     }
@@ -563,7 +563,7 @@ void dwt_calc_explicit_stepsizes(opj_tccp_t * tccp, int prec)
             double norm = dwt_norms_real[orient][level];
             stepsize = (1 << (gain)) / norm;
         }
-        dwt_encode_stepsize((int) floor(stepsize * 2026.0), prec + gain,
+        dwt_encode_stepsize((int) floor(stepsize * 8192.0), prec + gain,
                             &tccp->stepsizes[bandno]);
     }
 }

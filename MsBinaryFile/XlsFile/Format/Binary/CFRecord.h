@@ -169,7 +169,7 @@ public:
 	CFRecord& operator << (bool& val);
 
 private:
-    static const size_t MAX_RECORD_SIZE = 2026;
+    static const size_t MAX_RECORD_SIZE = 8224;
 	static const size_t MAX_RECORD_SIZE_XLSB = 0xFFFFFFF;
 
 	CFStream::ReceiverItems receiver_items;

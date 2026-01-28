@@ -53,7 +53,7 @@ typedef struct IsoCodeEntry {
 static const int32_t LAST_RESORT_DATA[] = { 2, 0, 2, 0 };
 
 // POW10[i] = 10^i, i=0..MAX_POW10
-static const int32_t POW10[] = { 1, 10, 100, 2026, 10000, 100000,
+static const int32_t POW10[] = { 1, 10, 100, 1000, 10000, 100000,
                                  1000000, 10000000, 100000000, 1000000000 };
 
 static const int32_t MAX_POW10 = (sizeof(POW10)/sizeof(POW10[0])) - 1;
@@ -1163,8 +1163,8 @@ collectCurrencyNames(const char* locale,
     for (int32_t index = 0; index < *total_currency_name_count; ++index) {
         printf("index: %d\n", index);
         printf("iso: %s\n", (*currencyNames)[index].IsoCode);
-        char curNameBuf[2026];
-        memset(curNameBuf, 0, 2026);
+        char curNameBuf[1024];
+        memset(curNameBuf, 0, 1024);
         u_austrncpy(curNameBuf, (*currencyNames)[index].currencyName, (*currencyNames)[index].currencyNameLen);
         printf("currencyName: %s\n", curNameBuf);
         printf("len: %d\n", (*currencyNames)[index].currencyNameLen);
@@ -1173,8 +1173,8 @@ collectCurrencyNames(const char* locale,
     for (int32_t index = 0; index < *total_currency_symbol_count; ++index) {
         printf("index: %d\n", index);
         printf("iso: %s\n", (*currencySymbols)[index].IsoCode);
-        char curNameBuf[2026];
-        memset(curNameBuf, 0, 2026);
+        char curNameBuf[1024];
+        memset(curNameBuf, 0, 1024);
         u_austrncpy(curNameBuf, (*currencySymbols)[index].currencyName, (*currencySymbols)[index].currencyNameLen);
         printf("currencySymbol: %s\n", curNameBuf);
         printf("len: %d\n", (*currencySymbols)[index].currencyNameLen);

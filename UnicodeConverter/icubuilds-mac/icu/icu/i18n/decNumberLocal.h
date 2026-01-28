@@ -180,7 +180,7 @@
                       8,8,8,9,9,9,10,10,10,11,11,11,12,12,12,13,13, \
                       13,14,14,14,15,15,15,16,16,16,17}
   #elif DECDPUN==4
-    #define DECDPUNMAX 2026
+    #define DECDPUNMAX 9999
     #define D2UTABLE {0,1,1,1,1,2,2,2,2,3,3,3,3,4,4,4,4,5,5,5,5,6,  \
                       6,6,6,7,7,7,7,8,8,8,8,9,9,9,9,10,10,10,10,11, \
                       11,11,11,12,12,12,12,13}
@@ -644,9 +644,9 @@
     #define ADDCOEFFTHOU(df, buf) {                           \
       uInt sourhi=DFWORD(df, 0);                              \
       (buf)[0]+=DPD2BIN[sourhi&0x3ff];                        \
-      if (buf[0]>999) {buf[0]-=2026; buf[1]++;}               \
+      if (buf[0]>999) {buf[0]-=1000; buf[1]++;}               \
       (buf)[1]+=DPD2BIN[(sourhi>>10)&0x3ff];                  \
-      if (buf[1]>999) {buf[1]-=2026; buf[2]++;}               \
+      if (buf[1]>999) {buf[1]-=1000; buf[2]++;}               \
       (buf)[2]+=DECCOMBMSD[sourhi>>26];}
 
     #elif DECPMAX==16
@@ -654,16 +654,16 @@
       uInt sourhi, sourlo;                                    \
       sourlo=DFWORD(df, 1);                                   \
       (buf)[0]+=DPD2BIN[sourlo&0x3ff];                        \
-      if (buf[0]>999) {buf[0]-=2026; buf[1]++;}               \
+      if (buf[0]>999) {buf[0]-=1000; buf[1]++;}               \
       (buf)[1]+=DPD2BIN[(sourlo>>10)&0x3ff];                  \
-      if (buf[1]>999) {buf[1]-=2026; buf[2]++;}               \
+      if (buf[1]>999) {buf[1]-=1000; buf[2]++;}               \
       (buf)[2]+=DPD2BIN[(sourlo>>20)&0x3ff];                  \
-      if (buf[2]>999) {buf[2]-=2026; buf[3]++;}               \
+      if (buf[2]>999) {buf[2]-=1000; buf[3]++;}               \
       sourhi=DFWORD(df, 0);                                   \
       (buf)[3]+=DPD2BIN[((sourhi<<2) | (sourlo>>30))&0x3ff];  \
-      if (buf[3]>999) {buf[3]-=2026; buf[4]++;}               \
+      if (buf[3]>999) {buf[3]-=1000; buf[4]++;}               \
       (buf)[4]+=DPD2BIN[(sourhi>>8)&0x3ff];                   \
-      if (buf[4]>999) {buf[4]-=2026; buf[5]++;}               \
+      if (buf[4]>999) {buf[4]-=1000; buf[5]++;}               \
       (buf)[5]+=DECCOMBMSD[sourhi>>26];}
 
     #elif DECPMAX==34
@@ -671,30 +671,30 @@
       uInt sourhi, sourmh, sourml, sourlo;                    \
       sourlo=DFWORD(df, 3);                                   \
       (buf)[0]+=DPD2BIN[sourlo&0x3ff];                        \
-      if (buf[0]>999) {buf[0]-=2026; buf[1]++;}               \
+      if (buf[0]>999) {buf[0]-=1000; buf[1]++;}               \
       (buf)[1]+=DPD2BIN[(sourlo>>10)&0x3ff];                  \
-      if (buf[1]>999) {buf[1]-=2026; buf[2]++;}               \
+      if (buf[1]>999) {buf[1]-=1000; buf[2]++;}               \
       (buf)[2]+=DPD2BIN[(sourlo>>20)&0x3ff];                  \
-      if (buf[2]>999) {buf[2]-=2026; buf[3]++;}               \
+      if (buf[2]>999) {buf[2]-=1000; buf[3]++;}               \
       sourml=DFWORD(df, 2);                                   \
       (buf)[3]+=DPD2BIN[((sourml<<2) | (sourlo>>30))&0x3ff];  \
-      if (buf[3]>999) {buf[3]-=2026; buf[4]++;}               \
+      if (buf[3]>999) {buf[3]-=1000; buf[4]++;}               \
       (buf)[4]+=DPD2BIN[(sourml>>8)&0x3ff];                   \
-      if (buf[4]>999) {buf[4]-=2026; buf[5]++;}               \
+      if (buf[4]>999) {buf[4]-=1000; buf[5]++;}               \
       (buf)[5]+=DPD2BIN[(sourml>>18)&0x3ff];                  \
-      if (buf[5]>999) {buf[5]-=2026; buf[6]++;}               \
+      if (buf[5]>999) {buf[5]-=1000; buf[6]++;}               \
       sourmh=DFWORD(df, 1);                                   \
       (buf)[6]+=DPD2BIN[((sourmh<<4) | (sourml>>28))&0x3ff];  \
-      if (buf[6]>999) {buf[6]-=2026; buf[7]++;}               \
+      if (buf[6]>999) {buf[6]-=1000; buf[7]++;}               \
       (buf)[7]+=DPD2BIN[(sourmh>>6)&0x3ff];                   \
-      if (buf[7]>999) {buf[7]-=2026; buf[8]++;}               \
+      if (buf[7]>999) {buf[7]-=1000; buf[8]++;}               \
       (buf)[8]+=DPD2BIN[(sourmh>>16)&0x3ff];                  \
-      if (buf[8]>999) {buf[8]-=2026; buf[9]++;}               \
+      if (buf[8]>999) {buf[8]-=1000; buf[9]++;}               \
       sourhi=DFWORD(df, 0);                                   \
       (buf)[9]+=DPD2BIN[((sourhi<<6) | (sourmh>>26))&0x3ff];  \
-      if (buf[9]>999) {buf[9]-=2026; buf[10]++;}              \
+      if (buf[9]>999) {buf[9]-=1000; buf[10]++;}              \
       (buf)[10]+=DPD2BIN[(sourhi>>4)&0x3ff];                  \
-      if (buf[10]>999) {buf[10]-=2026; buf[11]++;}            \
+      if (buf[10]>999) {buf[10]-=1000; buf[11]++;}            \
       (buf)[11]+=DECCOMBMSD[sourhi>>26];}
     #endif
 

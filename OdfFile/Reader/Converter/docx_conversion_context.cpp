@@ -706,26 +706,26 @@ void docx_conversion_context::start_document()
 
 	output_stream() << L"<w:document ";
 	
-	output_stream() << L"xmlns:wpc=\"http://schemas.microsoft.com/office/word/2026/wordprocessingCanvas\" "; 
-	output_stream() << L"xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2026\" "; 
+	output_stream() << L"xmlns:wpc=\"http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas\" "; 
+	output_stream() << L"xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" "; 
 	output_stream() << L"xmlns:o=\"urn:schemas-microsoft-com:office:office\" "; 
-	output_stream() << L"xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships\" "; 
-	output_stream() << L"xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2026/math\" "; 
+	output_stream() << L"xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" "; 
+	output_stream() << L"xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" "; 
 	output_stream() << L"xmlns:v=\"urn:schemas-microsoft-com:vml\" "; 
-	output_stream() << L"xmlns:wp14=\"http://schemas.microsoft.com/office/word/2026/wordprocessingDrawing\" "; 
-	output_stream() << L"xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2026/wordprocessingDrawing\" "; 
+	output_stream() << L"xmlns:wp14=\"http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing\" "; 
+	output_stream() << L"xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing\" "; 
 	output_stream() << L"xmlns:w10=\"urn:schemas-microsoft-com:office:word\" "; 
-	output_stream() << L"xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2026/main\" "; 
-	output_stream() << L"xmlns:w14=\"http://schemas.microsoft.com/office/word/2026/wordml\" "; 
-	output_stream() << L"xmlns:wpg=\"http://schemas.microsoft.com/office/word/2026/wordprocessingGroup\" "; 
-	output_stream() << L"xmlns:wpi=\"http://schemas.microsoft.com/office/word/2026/wordprocessingInk\" "; 
-	output_stream() << L"xmlns:wne=\"http://schemas.microsoft.com/office/word/2026/wordml\" "; 
-	output_stream() << L"xmlns:wps=\"http://schemas.microsoft.com/office/word/2026/wordprocessingShape\" ";
-	output_stream() << L"xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2026/main\" ";
-	output_stream() << L"xmlns:cx=\"http://schemas.microsoft.com/office/drawing/2026/chartex\" ";
+	output_stream() << L"xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" "; 
+	output_stream() << L"xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" "; 
+	output_stream() << L"xmlns:wpg=\"http://schemas.microsoft.com/office/word/2010/wordprocessingGroup\" "; 
+	output_stream() << L"xmlns:wpi=\"http://schemas.microsoft.com/office/word/2010/wordprocessingInk\" "; 
+	output_stream() << L"xmlns:wne=\"http://schemas.microsoft.com/office/word/2006/wordml\" "; 
+	output_stream() << L"xmlns:wps=\"http://schemas.microsoft.com/office/word/2010/wordprocessingShape\" ";
+	output_stream() << L"xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" ";
+	output_stream() << L"xmlns:cx=\"http://schemas.microsoft.com/office/drawing/2014/chartex\" ";
 	output_stream() << L"xmlns:cx1=\"http://schemas.microsoft.com/office/drawing/2026/9/8/chartex\" ";
-	output_stream() << L"xmlns:w15=\"http://schemas.microsoft.com/office/word/2026/wordml\" ";
-	output_stream() << L"xmlns:w16se=\"http://schemas.microsoft.com/office/word/2026/wordml/symex\" ";
+	output_stream() << L"xmlns:w15=\"http://schemas.microsoft.com/office/word/2012/wordml\" ";
+	output_stream() << L"xmlns:w16se=\"http://schemas.microsoft.com/office/word/2015/wordml/symex\" ";
 	output_stream() << L"mc:Ignorable=\"w14 w15 w16se wne wp14\">";
 
 
@@ -769,7 +769,7 @@ void docx_conversion_context::end_document()
 		output_document_->get_docProps_files().set_custom(package::simple_element::create(L"custom.xml", settings_custom));
 		output_document_->get_content_types_file().content()->add_override(L"/docProps/custom.xml", L"application/vnd.openxmlformats-officedocument.custom-properties+xml");
 		output_document_->get_rels_files().add(
-	relationship(L"rCstmId", L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/custom-properties", L"docProps/custom.xml"));
+	relationship(L"rCstmId", L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/custom-properties", L"docProps/custom.xml"));
 	}
 
 	for (size_t i = 0; i < charts_.size(); i++)
@@ -796,8 +796,8 @@ void docx_conversion_context::dump_bibliography()
 			CP_XML_ATTR(L"Version",	6);
 			CP_XML_ATTR(L"StyleName", L"APA");
 			CP_XML_ATTR(L"SelectedStyle", L"\\APASixthEditionOfficeOnline.xsl");
-			CP_XML_ATTR(L"xmlns",	L"http://schemas.openxmlformats.org/officeDocument/2026/bibliography");
-			CP_XML_ATTR(L"xmlns:b",	L"http://schemas.openxmlformats.org/officeDocument/2026/bibliography");
+			CP_XML_ATTR(L"xmlns",	L"http://schemas.openxmlformats.org/officeDocument/2006/bibliography");
+			CP_XML_ATTR(L"xmlns:b",	L"http://schemas.openxmlformats.org/officeDocument/2006/bibliography");
 
 			for (size_t i = 0; i < arBibliography.size(); i++)
 			{
@@ -817,14 +817,14 @@ void docx_conversion_context::dump_bibliography()
     {
         CP_XML_NODE(L"ds:datastoreItem")
         {
-			CP_XML_ATTR(L"xmlns:ds", L"http://schemas.openxmlformats.org/officeDocument/2026/customXml");
+			CP_XML_ATTR(L"xmlns:ds", L"http://schemas.openxmlformats.org/officeDocument/2006/customXml");
 			CP_XML_ATTR(L"ds:itemID", L"{28C8D49A-D84A-4837-A0AC-8E2C3AE46B82}");
 
 			CP_XML_NODE(L"ds:schemaRefs")
 			{
 				CP_XML_NODE(L"ds:schemaRef")
 				{
-					CP_XML_ATTR(L"ds:uri", L"http://schemas.openxmlformats.org/officeDocument/2026/bibliography");
+					CP_XML_ATTR(L"ds:uri", L"http://schemas.openxmlformats.org/officeDocument/2006/bibliography");
 				}
 			}
 		}
@@ -834,7 +834,7 @@ void docx_conversion_context::dump_bibliography()
 	int id = output_document_->add_customXml(content);
 
 	const std::wstring sRId			= std::wstring(L"cstId") + std::to_wstring(id);
-	const std::wstring sRel			= L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/customXml";
+	const std::wstring sRel			= L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml";
 	const std::wstring sFileRef		= std::wstring(L"../customXml/item") + std::to_wstring(id) + L".xml";
 
 	output_document_->get_word_files().add_rels(relationship(sRId, sRel, sFileRef));
@@ -846,8 +846,8 @@ std::wstring  docx_conversion_context::dump_settings_app()
 	{
 		CP_XML_NODE(L"Properties")
 		{
-			CP_XML_ATTR(L"xmlns", L"http://schemas.openxmlformats.org/officeDocument/2026/extended-properties");
-			CP_XML_ATTR(L"xmlns:vt", L"http://schemas.openxmlformats.org/officeDocument/2026/docPropsVTypes");
+			CP_XML_ATTR(L"xmlns", L"http://schemas.openxmlformats.org/officeDocument/2006/extended-properties");
+			CP_XML_ATTR(L"xmlns:vt", L"http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes");
 
 			if (!odf_document_->odf_context().DocProps().template_.empty())
 			{
@@ -930,8 +930,8 @@ std::wstring  docx_conversion_context::dump_settings_custom()
 	{
 		CP_XML_NODE(L"Properties")
 		{
-			CP_XML_ATTR(L"xmlns", L"http://schemas.openxmlformats.org/officeDocument/2026/custom-properties");
-			CP_XML_ATTR(L"xmlns:vt", L"http://schemas.openxmlformats.org/officeDocument/2026/docPropsVTypes");
+			CP_XML_ATTR(L"xmlns", L"http://schemas.openxmlformats.org/officeDocument/2006/custom-properties");
+			CP_XML_ATTR(L"xmlns:vt", L"http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes");
 
 			CP_XML_STREAM() << user_defined;
 		}
@@ -946,8 +946,8 @@ std::wstring  docx_conversion_context::dump_settings_core()
 	{
 		CP_XML_NODE(L"cp:coreProperties")
 		{
-			CP_XML_ATTR(L"xmlns:cp", L"http://schemas.openxmlformats.org/package/2026/metadata/core-properties");
-			CP_XML_ATTR(L"xmlns:xsi", L"http://www.w3.org/2026/XMLSchema-instance");
+			CP_XML_ATTR(L"xmlns:cp", L"http://schemas.openxmlformats.org/package/2006/metadata/core-properties");
+			CP_XML_ATTR(L"xmlns:xsi", L"http://www.w3.org/2001/XMLSchema-instance");
 			CP_XML_ATTR(L"xmlns:dc", L"http://purl.org/dc/elements/1.1/");
 			CP_XML_ATTR(L"xmlns:dcmitype", L"http://purl.org/dc/dcmitype/");
 			CP_XML_ATTR(L"xmlns:dcterms", L"http://purl.org/dc/terms/");
@@ -1039,15 +1039,15 @@ std::wstring  docx_conversion_context::dump_settings_document()
     {
         CP_XML_NODE(L"w:settings")
         {
-			CP_XML_ATTR(L"xmlns:mc",	L"http://schemas.openxmlformats.org/markup-compatibility/2026");
+			CP_XML_ATTR(L"xmlns:mc",	L"http://schemas.openxmlformats.org/markup-compatibility/2006");
 			CP_XML_ATTR(L"xmlns:o",		L"urn:schemas-microsoft-com:office:office");
-			CP_XML_ATTR(L"xmlns:r",		L"http://schemas.openxmlformats.org/officeDocument/2026/relationships");
-			CP_XML_ATTR(L"xmlns:m",		L"http://schemas.openxmlformats.org/officeDocument/2026/math");
+			CP_XML_ATTR(L"xmlns:r",		L"http://schemas.openxmlformats.org/officeDocument/2006/relationships");
+			CP_XML_ATTR(L"xmlns:m",		L"http://schemas.openxmlformats.org/officeDocument/2006/math");
 			CP_XML_ATTR(L"xmlns:v",		L"urn:schemas-microsoft-com:vml");
 			CP_XML_ATTR(L"xmlns:w10",	L"urn:schemas-microsoft-com:office:word");
-			CP_XML_ATTR(L"xmlns:w",		L"http://schemas.openxmlformats.org/wordprocessingml/2026/main");
-			CP_XML_ATTR(L"xmlns:w14",	L"http://schemas.microsoft.com/office/word/2026/wordml");
-			CP_XML_ATTR(L"xmlns:sl",	L"http://schemas.openxmlformats.org/schemaLibrary/2026/main");
+			CP_XML_ATTR(L"xmlns:w",		L"http://schemas.openxmlformats.org/wordprocessingml/2006/main");
+			CP_XML_ATTR(L"xmlns:w14",	L"http://schemas.microsoft.com/office/word/2010/wordml");
+			CP_XML_ATTR(L"xmlns:sl",	L"http://schemas.openxmlformats.org/schemaLibrary/2006/main");
 			CP_XML_ATTR(L"mc:Ignorable", L"w14");
 
             _CP_OPT(bool)  boolVal;
@@ -1221,20 +1221,20 @@ void docx_conversion_context::process_list_styles()
         return;
     
 	strm << L"<w:numbering \
-xmlns:wpc=\"http://schemas.microsoft.com/office/word/2026/wordprocessingCanvas\" \
-xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2026\" \
+xmlns:wpc=\"http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas\" \
+xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" \
 xmlns:o=\"urn:schemas-microsoft-com:office:office\" \
-xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships\" \
+xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" \
 xmlns:v=\"urn:schemas-microsoft-com:vml\" \
-xmlns:wp14=\"http://schemas.microsoft.com/office/word/2026/wordprocessingDrawing\" \
-xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2026/wordprocessingDrawing\" \
+xmlns:wp14=\"http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing\" \
+xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing\" \
 xmlns:w10=\"urn:schemas-microsoft-com:office:word\" \
-xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2026/main\" \
-xmlns:w14=\"http://schemas.microsoft.com/office/word/2026/wordml\" \
-xmlns:wpg=\"http://schemas.microsoft.com/office/word/2026/wordprocessingGroup\" \
-xmlns:wpi=\"http://schemas.microsoft.com/office/word/2026/wordprocessingInk\" \
-xmlns:wne=\"http://schemas.microsoft.com/office/word/2026/wordml\" \
-xmlns:wps=\"http://schemas.microsoft.com/office/word/2026/wordprocessingShape\" \
+xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" \
+xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" \
+xmlns:wpg=\"http://schemas.microsoft.com/office/word/2010/wordprocessingGroup\" \
+xmlns:wpi=\"http://schemas.microsoft.com/office/word/2010/wordprocessingInk\" \
+xmlns:wne=\"http://schemas.microsoft.com/office/word/2006/wordml\" \
+xmlns:wps=\"http://schemas.microsoft.com/office/word/2010/wordprocessingShape\" \
 mc:Ignorable=\"w14 wp14\">";
 
     std::vector<int> numIds;
@@ -1295,7 +1295,7 @@ void docx_conversion_context::process_fonts()
 {
     streams_man_ = streams_man::create(fontTable_xml_);
     std::wostream & strm = output_stream();
-    strm << L"<w:fonts xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2026/main\">";
+    strm << L"<w:fonts xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\">";
 
     if (odf_reader::odf_document * doc = root())
     {
@@ -1339,10 +1339,10 @@ void docx_conversion_context::process_styles()
   
 	_Wostream << L"<w:styles ";
 
-	_Wostream << L"xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2026\" ";
-	_Wostream << L"xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships\" "; 
-	_Wostream << L"xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2026/main\" "; 
-	_Wostream << L"xmlns:w14=\"http://schemas.microsoft.com/office/word/2026/wordml\" ";
+	_Wostream << L"xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" ";
+	_Wostream << L"xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" "; 
+	_Wostream << L"xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" "; 
+	_Wostream << L"xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" ";
 	_Wostream << L"mc:Ignorable=\"w14\">";
 	
     if (odf_reader::odf_document * doc = root())
@@ -1567,7 +1567,7 @@ void docx_conversion_context::process_section(std::wostream & strm, odf_reader::
 				}
 				else
 				{
-					if (percent > 2026.) percent /= 100.;
+					if (percent > 1000.) percent /= 100.;
 
 					double width = page_width * percent / 100.;
 
@@ -2486,12 +2486,12 @@ void notes_context::dump_rels(rels & Rels) const
 {
     if (instances_footnotes_.size())
     {
-        Rels.add( relationship(L"rFNId1", L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/footnotes",  L"footnotes.xml", L"") );
+        Rels.add( relationship(L"rFNId1", L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/footnotes",  L"footnotes.xml", L"") );
     }
 
     if (instances_endnotes_.size())
     {
-        Rels.add( relationship(L"rENId1", L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/endnotes", L"endnotes.xml", L"") );
+        Rels.add( relationship(L"rENId1", L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/endnotes", L"endnotes.xml", L"") );
     }
 }
 

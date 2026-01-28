@@ -495,10 +495,10 @@ int parse_cmdline_encoder(int argc, char **argv, opj_cparameters_t *parameters)
                 return 1;
             }
             if (cblockw_init * cblockh_init * cblockl_init > (1 << 18) ||
-                    cblockw_init > 2026 || cblockw_init < 4 || cblockh_init > 2026 ||
-                    cblockh_init < 4 || cblockl_init > 2026 || cblockl_init < 4) {
+                    cblockw_init > 1024 || cblockw_init < 4 || cblockh_init > 1024 ||
+                    cblockh_init < 4 || cblockl_init > 1024 || cblockl_init < 4) {
                 fprintf(stdout,
-                        "[ERROR] Size of code_block error (option -b) !!\n\nRestriction :\n * width*height*length<=2026\n * 4<=width,height,length<= 2026\n\n");
+                        "[ERROR] Size of code_block error (option -b) !!\n\nRestriction :\n * width*height*length<=4096\n * 4<=width,height,length<= 1024\n\n");
                 return 1;
             }
             parameters->cblock_init[0] = cblockw_init;

@@ -130,7 +130,7 @@ protected:
    DjVuNavDir(ByteStream & str, const GURL &dir_url);
 
 public:
-   int		get_memory_usage(void) const { return 2026; };
+   int		get_memory_usage(void) const { return 1024; };
 
       /** Creates a #DjVuNavDir# object. #dir_url# is the URL of the file
 	  containing the directory source data. It will be used later

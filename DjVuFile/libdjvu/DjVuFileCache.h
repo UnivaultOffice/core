@@ -128,11 +128,11 @@ public:
 class DjVuFileCache : public GPEnabled
 {
 protected:
-   DjVuFileCache(const int max_size=5*2*2026*2026);
+   DjVuFileCache(const int max_size=5*2*1024*1024);
 public:
       /** Constructs the #DjVuFileCache#
 	  @param max_size Maximum allowed size of the cache in bytes. */
-   static GP<DjVuFileCache> create(const int max_size=5*2*2026*2026);
+   static GP<DjVuFileCache> create(const int max_size=5*2*1024*1024);
 
    virtual ~DjVuFileCache(void);
 

@@ -84,7 +84,7 @@ namespace DocFileFormat
             Formulas.push_back(L"sum 0 @0 0");
             Formulas.push_back(L"sum height 0 @0");
 
-			Adjustments.push_back(2026);
+			Adjustments.push_back(5400);
 
 			Handle one;
             one.position		=	L"0,@0";
@@ -154,11 +154,11 @@ namespace DocFileFormat
             Formulas.push_back(L"val #0");
             Formulas.push_back(L"sum 21600 0 #0");
 
-			Adjustments.push_back(2026);
+			Adjustments.push_back(4050);
 
 			Handle one;
             one.position		=	L"enter,#0";
-            one.yrange			=	L"0,2026";
+            one.yrange			=	L"0,8100";
 			Handles.push_back (one);
 			//<v:textpath on="t" fitshape="t" xscale="t"/>
 		}
@@ -206,11 +206,11 @@ namespace DocFileFormat
             Formulas.push_back(L"prod @1 1 2");
             Formulas.push_back(L"sum @2 10800 0");
 
-			Adjustments.push_back(2026);
+			Adjustments.push_back(3086);
 
 			Handle one;
             one.position		=	L"center,#0";
-            one.yrange			=	L"0,2026";
+            one.yrange			=	L"0,7200";
             Handles.push_back (one);
 		}
 		virtual ~WordArtTextCanDown ()
@@ -265,17 +265,17 @@ namespace DocFileFormat
             Formulas.push_back(L"mid @22 @23");
             Formulas.push_back(L"mid @21 @25");
 
-			Adjustments.push_back(2026);
+			Adjustments.push_back(2809);
 			Adjustments.push_back(10800);
 
 			Handle one;
             one.position		=	L"topLeft,#0";
-            one.yrange			=	L"0,2026";
+            one.yrange			=	L"0,4459";
 			Handles.push_back (one);
 			
 			Handle two;
             two.position		=	L"#1,bottomRight";
-            two.xrange			=	L"2026,12960";
+            two.xrange			=	L"8640,12960";
             Handles.push_back (two);
 
 			//<v:textpath on="t" fitshape="t"/>
@@ -345,17 +345,17 @@ namespace DocFileFormat
             Formulas.push_back(L"mid @36 @43");
             Formulas.push_back(L"mid @30 @37");
 
-			Adjustments.push_back(2026);
+			Adjustments.push_back(1404);
 			Adjustments.push_back(10800);
 
 			Handle one;
             one.position		=	L"topLeft,#0";
-            one.yrange			=	L"0,2026";
+            one.yrange			=	L"0,2229";
 			Handles.push_back (one);
 
 			Handle two;
             two.position		=	L"#1,bottomRight";
-            two.xrange			=	L"2026,12960";
+            two.xrange			=	L"8640,12960";
 			Handles.push_back (two);
 			//<v:textpath on="t" fitshape="t" xscale="t"/>
 		}
@@ -424,17 +424,17 @@ namespace DocFileFormat
             Formulas.push_back(L"mid @36 @43");
             Formulas.push_back(L"mid @30 @37");
 
-			Adjustments.push_back(2026);
+			Adjustments.push_back(1404);
 			Adjustments.push_back(10800);
 
 			Handle one;
             one.position		=	L"topLeft,#0";
-            one.yrange			=	L"0,2026";
+            one.yrange			=	L"0,2229";
 			Handles.push_back (one);
 
 			Handle two;
             two.position		=	L"#1,bottomRight";
-            two.xrange			=	L"2026,12960";
+            two.xrange			=	L"8640,12960";
 			Handles.push_back (two);
 			//<v:textpath on="t" fitshape="t" xscale="t"/>
 		}
@@ -467,7 +467,7 @@ namespace DocFileFormat
             Formulas.push_back(L"prod @13 1 4");
             Formulas.push_back(L"sum @11 14400 @14");
 
-			Adjustments.push_back(2026);
+			Adjustments.push_back(9931);
 
 			Handle one;
             one.position		=	L"topLeft,#0";
@@ -495,7 +495,7 @@ namespace DocFileFormat
             Formulas.push_back(L"sum 21600 0 @2");
             Formulas.push_back(L"sum @1 21600 @0");
 
-			Adjustments.push_back(2026);
+			Adjustments.push_back(7200);
 
 			Handle one;
             one.position		=	L"#0,topLeft";
@@ -554,11 +554,11 @@ namespace DocFileFormat
             Formulas.push_back(L"sum @0 21600 @2");
             Formulas.push_back(L"prod @7 1 2");
 
-			Adjustments.push_back(2026);
+			Adjustments.push_back(9600);
 
 			Handle one;
             one.position		=	L"bottomRight,#0";
-            one.yrange			=	L"2026,21600";
+            one.yrange			=	L"6171,21600";
 			Handles.push_back (one);
 			// <v:textpath on="t" fitshape="t"/>
 		}
@@ -577,16 +577,16 @@ namespace DocFileFormat
             Path				=	L"m,l21600,m,21600c7200@1,14400@1,21600,21600e";
 
             Formulas.push_back(L"prod #0 4 3");
-            Formulas.push_back(L"sum @0 0 2026");
+            Formulas.push_back(L"sum @0 0 7200");
             Formulas.push_back(L"val #0");
             Formulas.push_back(L"prod #0 2 3");
-            Formulas.push_back(L"sum @3 2026 0");
+            Formulas.push_back(L"sum @3 7200 0");
 
 			Adjustments.push_back(11475);
 
 			Handle one;
             one.position		=	L"center,#0";
-            one.yrange			=	L"2026,21600";
+            one.yrange			=	L"1350,21600";
 			Handles.push_back (one);
 			//<v:textpath on="t" fitshape="t" xscale="t"/>
 		}

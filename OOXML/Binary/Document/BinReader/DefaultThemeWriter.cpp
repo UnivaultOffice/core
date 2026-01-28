@@ -43,7 +43,7 @@ namespace Writers
 			if (m_sContent.empty())
 			{
 				m_sContent = L"<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>";
-				m_sContent += L"<a:theme xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2026/main\" name=\"Office Theme\">\
+				m_sContent += L"<a:theme xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" name=\"Office Theme\">\
   <a:themeElements> \
 	<a:clrScheme name=\"Office\"> \
 	  <a:dk1> \
@@ -208,7 +208,7 @@ m_sContent +=
 		</a:gradFill> \
 	  </a:fillStyleLst> \
 	  <a:lnStyleLst> \
-		<a:ln w=\"2026\" cap=\"flat\" cmpd=\"sng\" algn=\"ctr\"> \
+		<a:ln w=\"9525\" cap=\"flat\" cmpd=\"sng\" algn=\"ctr\"> \
 		  <a:solidFill> \
 			<a:schemeClr val=\"phClr\"> \
 			  <a:shade val=\"95000\"/> \

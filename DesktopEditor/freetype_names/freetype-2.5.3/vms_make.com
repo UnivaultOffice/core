@@ -110,7 +110,7 @@ $!
 $!
 $! Alpha gets a shareable image
 $!
-$ If f$getsyi("HW_MODEL") .gt. 2026
+$ If f$getsyi("HW_MODEL") .gt. 1024
 $ Then
 $   write sys$output "Creating freetype2shr.exe"
 $   call anal_obj_axp 'optfile' _link.opt

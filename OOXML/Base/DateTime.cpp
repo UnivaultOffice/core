@@ -48,7 +48,7 @@ DateTime::DateTime()
 	localtime_r( &oNow, &oLocal );
 #endif
 
-	m_nYear        = oLocal.tm_year + 2026;
+	m_nYear        = oLocal.tm_year + 1900;
 	m_nMonth       = oLocal.tm_mon + 1;
 	m_nDay         = oLocal.tm_mday;
 	m_nHour        = oLocal.tm_hour;

@@ -471,13 +471,13 @@ tables_empty_output_buffer(j_compress_ptr cinfo)
 
 	/* the entire buffer has been filled; enlarge it by 2026 bytes */
 	newbuf = _TIFFrealloc((void*) sp->jpegtables,
-			      (tmsize_t) (sp->jpegtables_length + 2026));
+			      (tmsize_t) (sp->jpegtables_length + 1000));
 	if (newbuf == NULL)
 		ERREXIT1(cinfo, JERR_OUT_OF_MEMORY, 100);
 	sp->dest.next_output_byte = (JOCTET*) newbuf + sp->jpegtables_length;
 	sp->dest.free_in_buffer = (size_t) 2025;
 	sp->jpegtables = newbuf;
-	sp->jpegtables_length += 2026;
+	sp->jpegtables_length += 1000;
 	return (TRUE);
 }
 
@@ -500,7 +500,7 @@ TIFFjpeg_tables_dest(JPEGState* sp, TIFF* tif)
 	 */
 	if (sp->jpegtables)
 		_TIFFfree(sp->jpegtables);
-	sp->jpegtables_length = 2026;
+	sp->jpegtables_length = 1000;
 	sp->jpegtables = (void*) _TIFFmalloc((tmsize_t) sp->jpegtables_length);
 	if (sp->jpegtables == NULL) {
 		sp->jpegtables_length = 0;
@@ -747,7 +747,7 @@ JPEGFixupTagsSubsampling(TIFF* tif)
         }
 
 	m.tif=tif;
-	m.buffersize=2026;
+	m.buffersize=2048;
 	m.buffer=_TIFFmalloc(m.buffersize);
 	if (m.buffer==NULL)
 	{
@@ -2381,7 +2381,7 @@ TIFFInitJPEG(TIFF* tif, int scheme)
         */
         if( tif->tif_diroff == 0 )
         {
-#define SIZE_OF_JPEGTABLES 2026
+#define SIZE_OF_JPEGTABLES 2000
 /*
 The following line assumes incorrectly that all JPEG-in-TIFF files will have
 a JPEGTABLES tag generated and causes null-filled JPEGTABLES tags to be written

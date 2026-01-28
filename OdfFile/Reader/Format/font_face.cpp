@@ -286,10 +286,10 @@ void office_font_face_decls::docx_convert(oox::docx_conversion_context & Context
     std::wostream & strm = Context.output_stream();
     
     strm << L"<w:fonts \
-xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2026\" \
-xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships\" \
-xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2026/main\" \
-xmlns:w14=\"http://schemas.microsoft.com/office/word/2026/wordml\" \
+xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" \
+xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" \
+xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" \
+xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" \
 mc:Ignorable=\"w14\">";
 
  	for (size_t i = 0; i < style_font_face_.size(); i++)

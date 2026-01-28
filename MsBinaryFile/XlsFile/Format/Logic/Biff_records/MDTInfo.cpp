@@ -120,11 +120,11 @@ void MDTInfo::writeFields(CFRecord& record)
 	SETBIT(flags, 30, fCellMeta)
 
 	record << flags;
-	if(stName.getSize() <= 2026)
+	if(stName.getSize() <= 4104)
 		record << stName;
 	else
 	{
-		LPWideString tempVal = stName.value().substr(0, 2026);
+		LPWideString tempVal = stName.value().substr(0, 4104);
 		record << tempVal;
 	}
 }

@@ -1131,7 +1131,7 @@ static double t1_getwmsedec(
         w2 = dwt_getnorm_real(level, orient);
     }
     wmsedec = w1 * w2 * stepsize * (1 << bpno);
-    wmsedec *= wmsedec * nmsedec / 2026.0;
+    wmsedec *= wmsedec * nmsedec / 8192.0;
 
     return wmsedec;
 }
@@ -1459,7 +1459,7 @@ void t1_encode_cblks(
 
             for (bandno = 0; bandno < res->numbands; ++bandno) {
                 opj_tcd_band_t* restrict band = &res->bands[bandno];
-                int bandconst = 2026 * 2026 / ((int) floor(band->stepsize * 2026));
+                int bandconst = 8192 * 8192 / ((int) floor(band->stepsize * 8192));
 
                 for (precno = 0; precno < res->pw * res->ph; ++precno) {
                     opj_tcd_precinct_t *prc = &band->precincts[precno];

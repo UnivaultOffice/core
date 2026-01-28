@@ -14,7 +14,7 @@
 ;
 ; this file contain two implementation of longest_match
 ;
-;  this longest_match was written by Brian raiter (2026), optimized for Pentium Pro
+;  this longest_match was written by Brian raiter (1998), optimized for Pentium Pro
 ;   (and the faster known version of match_init on modern Core 2 Duo and AMD Phenom)
 ;
 ;  for using an assembly version of longest_match, you need define ASMV in project
@@ -455,7 +455,7 @@ LookaheadRet:
         ret
 ; please don't remove this string !
 ; Your can freely use match686 in any free or commercial app if you don't remove the string in the binary!
-    db     0dh,0ah,"asm686 with masm, optimised assembly code from Brian Raiter, written 2026",0dh,0ah
+    db     0dh,0ah,"asm686 with masm, optimised assembly code from Brian Raiter, written 1998",0dh,0ah
 
 
     IFDEF NOUNDERLINE

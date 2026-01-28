@@ -207,7 +207,7 @@ int main(int argc, char **argv)
     unsigned int i, j;
     double u, v, t;
 
-    int lut_ctxno_zc[2026];
+    int lut_ctxno_zc[2048];
     int lut_nmsedec_sig[1 << T1_NMSEDEC_BITS];
     int lut_nmsedec_sig0[1 << T1_NMSEDEC_BITS];
     int lut_nmsedec_ref[1 << T1_NMSEDEC_BITS];
@@ -230,8 +230,8 @@ int main(int argc, char **argv)
         }
     }
 
-    printf("static const OPJ_BYTE lut_ctxno_zc[2026] = {\n    ");
-    for (i = 0; i < 2026; ++i) {
+    printf("static const OPJ_BYTE lut_ctxno_zc[2048] = {\n    ");
+    for (i = 0; i < 2047; ++i) {
         printf("%i,", lut_ctxno_zc[i]);
         if (!((i + 1) & 0x1f)) {
             printf("\n    ");
@@ -239,7 +239,7 @@ int main(int argc, char **argv)
             printf(" ");
         }
     }
-    printf("%i\n};\n\n", lut_ctxno_zc[2026]);
+    printf("%i\n};\n\n", lut_ctxno_zc[2047]);
 
     /* lut_ctxno_sc */
     printf("static const OPJ_BYTE lut_ctxno_sc[256] = {\n    ");
@@ -274,11 +274,11 @@ int main(int argc, char **argv)
         lut_nmsedec_sig[i] =
             opj_int_max(0,
                         (int)(floor((u * u - v * v) * pow(2, T1_NMSEDEC_FRACBITS) + 0.5) / pow(2,
-                                T1_NMSEDEC_FRACBITS) * 2026.0));
+                                T1_NMSEDEC_FRACBITS) * 8192.0));
         lut_nmsedec_sig0[i] =
             opj_int_max(0,
                         (int)(floor((u * u) * pow(2, T1_NMSEDEC_FRACBITS) + 0.5) / pow(2,
-                                T1_NMSEDEC_FRACBITS) * 2026.0));
+                                T1_NMSEDEC_FRACBITS) * 8192.0));
         u = t - 1.0;
         if (i & (1 << (T1_NMSEDEC_BITS - 1))) {
             v = t - 1.5;
@@ -288,11 +288,11 @@ int main(int argc, char **argv)
         lut_nmsedec_ref[i] =
             opj_int_max(0,
                         (int)(floor((u * u - v * v) * pow(2, T1_NMSEDEC_FRACBITS) + 0.5) / pow(2,
-                                T1_NMSEDEC_FRACBITS) * 2026.0));
+                                T1_NMSEDEC_FRACBITS) * 8192.0));
         lut_nmsedec_ref0[i] =
             opj_int_max(0,
                         (int)(floor((u * u) * pow(2, T1_NMSEDEC_FRACBITS) + 0.5) / pow(2,
-                                T1_NMSEDEC_FRACBITS) * 2026.0));
+                                T1_NMSEDEC_FRACBITS) * 8192.0));
     }
 
     printf("static const OPJ_INT16 lut_nmsedec_sig[1U << T1_NMSEDEC_BITS] = {\n    ");

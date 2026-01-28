@@ -35,7 +35,7 @@
 
 #define local static            /* for local function definitions */
 #define MAXBITS 13              /* maximum code length */
-#define MAXWIN 2026             /* maximum window size */
+#define MAXWIN 4096             /* maximum window size */
 
 /* input and output state */
 struct state {

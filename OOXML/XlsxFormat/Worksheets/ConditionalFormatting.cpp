@@ -3733,7 +3733,7 @@ void CConditionalFormatting::toXML2(NSStringUtils::CStringBuilder& writer, bool 
 	writer.WriteString(L"<" + node_name);
 		if (bExtendedWrite)
 		{
-			WritingStringAttrString(L"xmlns:xm", L"http://schemas.microsoft.com/office/excel/2026/main");
+			WritingStringAttrString(L"xmlns:xm", L"http://schemas.microsoft.com/office/excel/2006/main");
 		}
 		else
 		{

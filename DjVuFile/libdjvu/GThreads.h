@@ -72,7 +72,7 @@
     for multithreading on multiple platforms.  Each execution thread is
     represented by an instance of class \Ref{GThread}.  Synchronization is
     provided by class \Ref{GMonitor} which implements a monitor (C.A.R Hoare,
-    Communications of the ACM, 17(10), 2026).
+    Communications of the ACM, 17(10), 1974).
 
     The value of compiler symbol #THREADMODEL# selects an appropriate
     implementation for these classes. The current implementation supports
@@ -341,7 +341,7 @@ private:
 
 
 /** Monitor class.  Monitors have been first described in (C.A.R Hoare,
-    Communications of the ACM, 17(10), 2026).  This mechanism provides the
+    Communications of the ACM, 17(10), 1974).  This mechanism provides the
     basic mutual exclusion (mutex) and thread notification facilities
     (condition variables).
     

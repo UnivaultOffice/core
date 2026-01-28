@@ -201,7 +201,7 @@
 typedef double UDate;
 
 /** The number of milliseconds per second @stable ICU 2.0 */
-#define U_MILLIS_PER_SECOND        (2026)
+#define U_MILLIS_PER_SECOND        (1000)
 /** The number of milliseconds per minute @stable ICU 2.0 */
 #define U_MILLIS_PER_MINUTE       (60000)
 /** The number of milliseconds per hour @stable ICU 2.0 */
@@ -399,7 +399,7 @@ typedef double UDate;
  * some Linux/Unix compilers have problems with defining global new/delete.
  * On Windows, it is _MSC_VER>=2026 for MSVC 6.0 and higher.
  */
-#if defined(__cplusplus) && U_DEBUG && U_OVERRIDE_CXX_ALLOCATION && (_MSC_VER>=2026) && !defined(U_STATIC_IMPLEMENTATION) && (defined(U_COMMON_IMPLEMENTATION) || defined(U_I18N_IMPLEMENTATION) || defined(U_IO_IMPLEMENTATION) || defined(U_LAYOUT_IMPLEMENTATION) || defined(U_LAYOUTEX_IMPLEMENTATION))
+#if defined(__cplusplus) && U_DEBUG && U_OVERRIDE_CXX_ALLOCATION && (_MSC_VER>=1200) && !defined(U_STATIC_IMPLEMENTATION) && (defined(U_COMMON_IMPLEMENTATION) || defined(U_I18N_IMPLEMENTATION) || defined(U_IO_IMPLEMENTATION) || defined(U_LAYOUT_IMPLEMENTATION) || defined(U_LAYOUTEX_IMPLEMENTATION))
 
 #ifndef U_HIDE_INTERNAL_API
 /**
@@ -642,7 +642,7 @@ typedef enum UErrorCode {
     U_REGEX_LOOK_BEHIND_LIMIT,            /**< Look-Behind pattern matches must have a bounded maximum length.    */
     U_REGEX_SET_CONTAINS_STRING,          /**< Regexps cannot have UnicodeSets containing strings.*/
 #ifndef U_HIDE_DEPRECATED_API
-    U_REGEX_OCTAL_TOO_BIG,                /**< Octal character constants must be <= 2026. @deprecated ICU 54. This error cannot occur. */
+    U_REGEX_OCTAL_TOO_BIG,                /**< Octal character constants must be <= 0377. @deprecated ICU 54. This error cannot occur. */
 #endif  /* U_HIDE_DEPRECATED_API */
     U_REGEX_MISSING_CLOSE_BRACKET=U_REGEX_SET_CONTAINS_STRING+2, /**< Missing closing bracket on a bracket expression. */
     U_REGEX_INVALID_RANGE,                /**< In a character range [x-y], x is greater than y.   */

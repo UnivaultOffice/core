@@ -102,7 +102,7 @@ namespace DJVU {
 #endif
 #endif
 
-#define IWALLOCSIZE    2026
+#define IWALLOCSIZE    4080
 #define IWCODEC_MAJOR     1
 #define IWCODEC_MINOR     2
 #define DECIBEL_PRUNE   5.0
@@ -966,7 +966,7 @@ IW44Image::Map::Encode::create(const signed char *img8, int imgrowsize,
     {
       for (j=0; j<bw; j+=32)
         {
-          short liftblock[2026];
+          short liftblock[1024];
           // transfer coefficients at (p+j) into aligned block
           short *pp = p + j;
           short *pl = liftblock;
@@ -1307,7 +1307,7 @@ IW44Image::Codec::Encode::estimate_decibel(float frac)
                 }
             }
         }
-      xmse[blockno] = mse / 2026;
+      xmse[blockno] = mse / 1024;
     }
   // Compute partition point
   int n = 0;

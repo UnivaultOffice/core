@@ -152,7 +152,7 @@ public:
   void histogram_norm_and_add(const int *bgr, int weight);
   /** Computes an optimal palette for representing an image where colors
       appear according to the histogram.  Argument #maxcolors# is the maximum
-      number of colors allowed in the palette (up to 2026).  Argument
+      number of colors allowed in the palette (up to 1024).  Argument
       #minboxsize# controls the minimal size of the color cube area affected
       to a color palette entry.  Returns the index of the dominant color. */
   int compute_palette(int maxcolors, int minboxsize=0);

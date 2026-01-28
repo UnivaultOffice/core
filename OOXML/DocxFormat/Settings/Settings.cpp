@@ -2522,7 +2522,7 @@ namespace Settings
 		
 		OOX::VmlOffice::CShapeDefaults *vDefault = new OOX::VmlOffice::CShapeDefaults();
 		vDefault->m_oExt.Init(); vDefault->m_oExt->SetValue(SimpleTypes::extEdit);
-		vDefault->m_oSpIdMax.SetValue(2026);
+		vDefault->m_oSpIdMax.SetValue(1026);
 		m_oShapeDefaults->m_arrItems.push_back(vDefault);
 
 		OOX::VmlOffice::CShapeLayout *vLayout = new OOX::VmlOffice::CShapeLayout();
@@ -3064,7 +3064,7 @@ namespace Settings
 	std::wstring CSettingsCustom::toXML()
 	{
 		std::wstring sXml;
-		sXml += L"<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><w:settings xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2026/main\">";
+		sXml += L"<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><w:settings xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\">";
 		if(m_oSdtGlobalColor.IsInit())
 		{
 			sXml += L"<w:SdtGlobalColor ";

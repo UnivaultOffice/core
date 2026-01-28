@@ -4,9 +4,9 @@
 "ProjectType" = "8:{978C614F-708E-4E1A-B201-565925725DBA}"
 "IsWebType" = "8:FALSE"
 "ProjectName" = "8:TeamlabDocControlServiceSetup"
-"LanguageId" = "3:2026"
-"CodePage" = "3:2026"
-"UILanguageId" = "3:2026"
+"LanguageId" = "3:1033"
+"CodePage" = "3:1252"
+"UILanguageId" = "3:1033"
 "SccProjectName" = "8:"
 "SccLocalPath" = "8:"
 "SccAuxPath" = "8:"
@@ -103,13 +103,13 @@
         {
             "LaunchCondition"
             {
-                "{A06ECF26-33A3-2025-2026-9B0E340D4F24}:_AAB2739104CA4DB697138559A2F8B0C0"
+                "{A06ECF26-33A3-4562-8140-9B0E340D4F24}:_AAB2739104CA4DB697138559A2F8B0C0"
                 {
                 "Name" = "8:.NET Framework"
                 "Message" = "8:[VSDNETMSG]"
                 "Version" = "8:2.0.50727"
                 "AllowLaterVersions" = "11:FALSE"
-                "InstallUrl" = "8:http://go.microsoft.com/fwlink/?LinkId=2026"
+                "InstallUrl" = "8:http://go.microsoft.com/fwlink/?LinkId=9832"
                 }
             }
         }
@@ -123,7 +123,7 @@
         {
             "{1525181F-901A-416C-8A58-119130FE478E}:_4751F0A6A3344532B55E1E8D634C4FCF"
             {
-            "Name" = "8:#2026"
+            "Name" = "8:#1916"
             "AlwaysCreate" = "11:FALSE"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
@@ -134,7 +134,7 @@
             }
             "{1525181F-901A-416C-8A58-119130FE478E}:_F93E4B07D398446EB67F2B65E9B16D7C"
             {
-            "Name" = "8:#2026"
+            "Name" = "8:#1919"
             "AlwaysCreate" = "11:FALSE"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
@@ -146,7 +146,7 @@
             "{3C67513D-01DD-4637-8A68-80971EB9504F}:_F99AF2CBAB404A59AAEC05FE551CE93C"
             {
             "DefaultLocation" = "8:[ProgramFilesFolder][Manufacturer]\\[ProductName]"
-            "Name" = "8:#2026"
+            "Name" = "8:#1925"
             "AlwaysCreate" = "11:FALSE"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
@@ -164,7 +164,7 @@
         }
         "MsiBootstrapper"
         {
-        "LangId" = "3:2026"
+        "LangId" = "3:1033"
         }
         "Product"
         {
@@ -172,7 +172,7 @@
         "ProductName" = "8:TeamlabDocControlService"
         "ProductCode" = "8:{61841A9E-FD45-4CE5-8AB0-691F62379D08}"
         "PackageCode" = "8:{777294B3-8689-4E3B-9DD7-F24F5C267BB3}"
-        "UpgradeCode" = "8:{7FF7474D-2025-2026-9862-718FE3AE29B2}"
+        "UpgradeCode" = "8:{7FF7474D-4691-4153-9862-718FE3AE29B2}"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
         "DetectNewerInstalledVersion" = "11:TRUE"
@@ -301,7 +301,7 @@
             }
             "{DF760B10-853B-4699-99F2-AFF7185B4A62}:_68BFD79DF3B945078D96FC6B8E73B6EE"
             {
-            "Name" = "8:#2026"
+            "Name" = "8:#1902"
             "Sequence" = "3:2"
             "Attributes" = "3:3"
                 "Dialogs"
@@ -318,8 +318,8 @@
                             "BannerBitmap"
                             {
                             "Name" = "8:BannerBitmap"
-                            "DisplayName" = "8:#2026"
-                            "Description" = "8:#2026"
+                            "DisplayName" = "8:#1001"
+                            "Description" = "8:#1101"
                             "Type" = "3:8"
                             "ContextData" = "8:Bitmap"
                             "Attributes" = "3:4"
@@ -332,7 +332,7 @@
             }
             "{DF760B10-853B-4699-99F2-AFF7185B4A62}:_6D7357047E3848DEB594F0F7D9672567"
             {
-            "Name" = "8:#2026"
+            "Name" = "8:#1900"
             "Sequence" = "3:1"
             "Attributes" = "3:1"
                 "Dialogs"
@@ -349,8 +349,8 @@
                             "BannerBitmap"
                             {
                             "Name" = "8:BannerBitmap"
-                            "DisplayName" = "8:#2026"
-                            "Description" = "8:#2026"
+                            "DisplayName" = "8:#1001"
+                            "Description" = "8:#1101"
                             "Type" = "3:8"
                             "ContextData" = "8:Bitmap"
                             "Attributes" = "3:4"
@@ -360,27 +360,27 @@
                             "CopyrightWarning"
                             {
                             "Name" = "8:CopyrightWarning"
-                            "DisplayName" = "8:#2026"
-                            "Description" = "8:#2026"
+                            "DisplayName" = "8:#1002"
+                            "Description" = "8:#1102"
                             "Type" = "3:3"
                             "ContextData" = "8:"
                             "Attributes" = "3:0"
                             "Setting" = "3:1"
-                            "Value" = "8:#2026"
-                            "DefaultValue" = "8:#2026"
+                            "Value" = "8:#1202"
+                            "DefaultValue" = "8:#1202"
                             "UsePlugInResources" = "11:TRUE"
                             }
                             "Welcome"
                             {
                             "Name" = "8:Welcome"
-                            "DisplayName" = "8:#2026"
-                            "Description" = "8:#2026"
+                            "DisplayName" = "8:#1003"
+                            "Description" = "8:#1103"
                             "Type" = "3:3"
                             "ContextData" = "8:"
                             "Attributes" = "3:0"
                             "Setting" = "3:1"
-                            "Value" = "8:#2026"
-                            "DefaultValue" = "8:#2026"
+                            "Value" = "8:#1203"
+                            "DefaultValue" = "8:#1203"
                             "UsePlugInResources" = "11:TRUE"
                             }
                         }
@@ -397,8 +397,8 @@
                             "BannerBitmap"
                             {
                             "Name" = "8:BannerBitmap"
-                            "DisplayName" = "8:#2026"
-                            "Description" = "8:#2026"
+                            "DisplayName" = "8:#1001"
+                            "Description" = "8:#1101"
                             "Type" = "3:8"
                             "ContextData" = "8:Bitmap"
                             "Attributes" = "3:4"
@@ -408,8 +408,8 @@
                             "InstallAllUsersVisible"
                             {
                             "Name" = "8:InstallAllUsersVisible"
-                            "DisplayName" = "8:#2026"
-                            "Description" = "8:#2026"
+                            "DisplayName" = "8:#1059"
+                            "Description" = "8:#1159"
                             "Type" = "3:5"
                             "ContextData" = "8:1;True=1;False=0"
                             "Attributes" = "3:0"
@@ -432,8 +432,8 @@
                             "BannerBitmap"
                             {
                             "Name" = "8:BannerBitmap"
-                            "DisplayName" = "8:#2026"
-                            "Description" = "8:#2026"
+                            "DisplayName" = "8:#1001"
+                            "Description" = "8:#1101"
                             "Type" = "3:8"
                             "ContextData" = "8:Bitmap"
                             "Attributes" = "3:4"
@@ -446,7 +446,7 @@
             }
             "{DF760B10-853B-4699-99F2-AFF7185B4A62}:_735C5B52833646409F9989F4EC4377F8"
             {
-            "Name" = "8:#2026"
+            "Name" = "8:#1901"
             "Sequence" = "3:1"
             "Attributes" = "3:2"
                 "Dialogs"
@@ -463,8 +463,8 @@
                             "BannerBitmap"
                             {
                             "Name" = "8:BannerBitmap"
-                            "DisplayName" = "8:#2026"
-                            "Description" = "8:#2026"
+                            "DisplayName" = "8:#1001"
+                            "Description" = "8:#1101"
                             "Type" = "3:8"
                             "ContextData" = "8:Bitmap"
                             "Attributes" = "3:4"
@@ -474,8 +474,8 @@
                             "ShowProgress"
                             {
                             "Name" = "8:ShowProgress"
-                            "DisplayName" = "8:#2026"
-                            "Description" = "8:#2026"
+                            "DisplayName" = "8:#1009"
+                            "Description" = "8:#1109"
                             "Type" = "3:5"
                             "ContextData" = "8:1;True=1;False=0"
                             "Attributes" = "3:0"
@@ -490,7 +490,7 @@
             }
             "{DF760B10-853B-4699-99F2-AFF7185B4A62}:_78D33479BF08450DB3F9F14DFBB7ED80"
             {
-            "Name" = "8:#2026"
+            "Name" = "8:#1900"
             "Sequence" = "3:2"
             "Attributes" = "3:1"
                 "Dialogs"
@@ -507,8 +507,8 @@
                             "BannerBitmap"
                             {
                             "Name" = "8:BannerBitmap"
-                            "DisplayName" = "8:#2026"
-                            "Description" = "8:#2026"
+                            "DisplayName" = "8:#1001"
+                            "Description" = "8:#1101"
                             "Type" = "3:8"
                             "ContextData" = "8:Bitmap"
                             "Attributes" = "3:4"
@@ -529,8 +529,8 @@
                             "BannerBitmap"
                             {
                             "Name" = "8:BannerBitmap"
-                            "DisplayName" = "8:#2026"
-                            "Description" = "8:#2026"
+                            "DisplayName" = "8:#1001"
+                            "Description" = "8:#1101"
                             "Type" = "3:8"
                             "ContextData" = "8:Bitmap"
                             "Attributes" = "3:4"
@@ -540,27 +540,27 @@
                             "CopyrightWarning"
                             {
                             "Name" = "8:CopyrightWarning"
-                            "DisplayName" = "8:#2026"
-                            "Description" = "8:#2026"
+                            "DisplayName" = "8:#1002"
+                            "Description" = "8:#1102"
                             "Type" = "3:3"
                             "ContextData" = "8:"
                             "Attributes" = "3:0"
                             "Setting" = "3:1"
-                            "Value" = "8:#2026"
-                            "DefaultValue" = "8:#2026"
+                            "Value" = "8:#1202"
+                            "DefaultValue" = "8:#1202"
                             "UsePlugInResources" = "11:TRUE"
                             }
                             "Welcome"
                             {
                             "Name" = "8:Welcome"
-                            "DisplayName" = "8:#2026"
-                            "Description" = "8:#2026"
+                            "DisplayName" = "8:#1003"
+                            "Description" = "8:#1103"
                             "Type" = "3:3"
                             "ContextData" = "8:"
                             "Attributes" = "3:0"
                             "Setting" = "3:1"
-                            "Value" = "8:#2026"
-                            "DefaultValue" = "8:#2026"
+                            "Value" = "8:#1203"
+                            "DefaultValue" = "8:#1203"
                             "UsePlugInResources" = "11:TRUE"
                             }
                         }
@@ -577,8 +577,8 @@
                             "BannerBitmap"
                             {
                             "Name" = "8:BannerBitmap"
-                            "DisplayName" = "8:#2026"
-                            "Description" = "8:#2026"
+                            "DisplayName" = "8:#1001"
+                            "Description" = "8:#1101"
                             "Type" = "3:8"
                             "ContextData" = "8:Bitmap"
                             "Attributes" = "3:4"
@@ -591,7 +591,7 @@
             }
             "{DF760B10-853B-4699-99F2-AFF7185B4A62}:_AC1BE71D1BA54283AA5EB949EA3ADFC3"
             {
-            "Name" = "8:#2026"
+            "Name" = "8:#1901"
             "Sequence" = "3:2"
             "Attributes" = "3:2"
                 "Dialogs"
@@ -608,8 +608,8 @@
                             "BannerBitmap"
                             {
                             "Name" = "8:BannerBitmap"
-                            "DisplayName" = "8:#2026"
-                            "Description" = "8:#2026"
+                            "DisplayName" = "8:#1001"
+                            "Description" = "8:#1101"
                             "Type" = "3:8"
                             "ContextData" = "8:Bitmap"
                             "Attributes" = "3:4"
@@ -619,8 +619,8 @@
                             "ShowProgress"
                             {
                             "Name" = "8:ShowProgress"
-                            "DisplayName" = "8:#2026"
-                            "Description" = "8:#2026"
+                            "DisplayName" = "8:#1009"
+                            "Description" = "8:#1109"
                             "Type" = "3:5"
                             "ContextData" = "8:1;True=1;False=0"
                             "Attributes" = "3:0"
@@ -641,7 +641,7 @@
             }
             "{DF760B10-853B-4699-99F2-AFF7185B4A62}:_FEB2B50C5CDA4285B6A7653992477FC8"
             {
-            "Name" = "8:#2026"
+            "Name" = "8:#1902"
             "Sequence" = "3:1"
             "Attributes" = "3:3"
                 "Dialogs"
@@ -658,8 +658,8 @@
                             "BannerBitmap"
                             {
                             "Name" = "8:BannerBitmap"
-                            "DisplayName" = "8:#2026"
-                            "Description" = "8:#2026"
+                            "DisplayName" = "8:#1001"
+                            "Description" = "8:#1101"
                             "Type" = "3:8"
                             "ContextData" = "8:Bitmap"
                             "Attributes" = "3:4"
@@ -669,14 +669,14 @@
                             "UpdateText"
                             {
                             "Name" = "8:UpdateText"
-                            "DisplayName" = "8:#2026"
-                            "Description" = "8:#2026"
+                            "DisplayName" = "8:#1058"
+                            "Description" = "8:#1158"
                             "Type" = "3:15"
                             "ContextData" = "8:"
                             "Attributes" = "3:0"
                             "Setting" = "3:1"
-                            "Value" = "8:#2026"
-                            "DefaultValue" = "8:#2026"
+                            "Value" = "8:#1258"
+                            "DefaultValue" = "8:#1258"
                             "UsePlugInResources" = "11:TRUE"
                             }
                         }

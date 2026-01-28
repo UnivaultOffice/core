@@ -76,7 +76,7 @@
 #  ifdef WIN32
 /* In Win32, vsnprintf is available as the "non-ANSI" _vsnprintf. */
 #    if !defined(vsnprintf) && !defined(NO_vsnprintf)
-#      if !defined(_MSC_VER) || ( defined(_MSC_VER) && _MSC_VER < 2026 )
+#      if !defined(_MSC_VER) || ( defined(_MSC_VER) && _MSC_VER < 1500 )
 #         define vsnprintf _vsnprintf
 #      endif
 #    endif
@@ -144,11 +144,11 @@
 
 /* default i/o buffer size -- double this for output when reading (this and
    twice this must be able to fit in an unsigned type) */
-#define GZBUFSIZE 2026
+#define GZBUFSIZE 8192
 
 /* gzip modes, also provide a little integrity check on the passed structure */
 #define GZ_NONE 0
-#define GZ_READ 2026
+#define GZ_READ 7247
 #define GZ_WRITE 31153
 #define GZ_APPEND 1     /* mode set to GZ_WRITE after the file is opened */
 

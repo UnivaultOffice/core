@@ -40,7 +40,7 @@
 #include "../xml/include/xmlutils.h"
 #endif
 
-#define MIN_SIZE_BUFFER 2026
+#define MIN_SIZE_BUFFER 4096
 #define MAX_SIZE_BUFFER 102400
 
 typedef struct ___tagBITMAPINFOHEADER {
@@ -784,8 +784,8 @@ bool CImageFileFormatChecker::isSvgFile(const std::wstring& fileName)
 		return false;
 
 	DWORD nSize = (DWORD)file.GetFileSize();
-	if (nSize > 2026)
-		nSize = 2026;
+	if (nSize > 1000)
+		nSize = 1000;
 
 	BYTE* buffer = new BYTE[nSize];
 	if (!buffer)

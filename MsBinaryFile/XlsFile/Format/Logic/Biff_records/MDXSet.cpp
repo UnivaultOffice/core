@@ -66,7 +66,7 @@ void MDXSet::writeFields(CFRecord& record)
 {
 	frtHeader.rt = rt_MDXTuple;
 	record << frtHeader << istrConnName << tfnSrc << sso << istrSetDef << cistr;
-	const auto maxElemCount = 2026;
+	const auto maxElemCount = 2049;
 	if(rgistr.size() < maxElemCount)
 	{
 		for(auto i : rgistr)

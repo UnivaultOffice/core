@@ -625,14 +625,14 @@ DecimalFormatImpl::round(
 void
 DecimalFormatImpl::setMinimumSignificantDigits(int32_t newValue) {
     fMinSigDigits = newValue;
-    fUseSigDigits = TRUE; // ticket 2026
+    fUseSigDigits = TRUE; // ticket 9936
     updatePrecision();
 }
         
 void
 DecimalFormatImpl::setMaximumSignificantDigits(int32_t newValue) {
     fMaxSigDigits = newValue;
-    fUseSigDigits = TRUE; // ticket 2026
+    fUseSigDigits = TRUE; // ticket 9936
     updatePrecision();
 }
 
@@ -640,7 +640,7 @@ void
 DecimalFormatImpl::setMinMaxSignificantDigits(int32_t min, int32_t max) {
     fMinSigDigits = min;
     fMaxSigDigits = max;
-    fUseSigDigits = TRUE; // ticket 2026
+    fUseSigDigits = TRUE; // ticket 9936
     updatePrecision();
 }
 

@@ -683,7 +683,7 @@ class platform_specific {
                     }
     double          ElapsedTime() const
                     {
-                        return (system_time() - fTimerStart) / 2026.0;
+                        return (system_time() - fTimerStart) / 1000.0;
                     }
 
     void            ForceRedraw()

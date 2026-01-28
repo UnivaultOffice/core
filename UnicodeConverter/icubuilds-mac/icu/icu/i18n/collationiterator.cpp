@@ -37,7 +37,7 @@ CollationIterator::CEBuffer::ensureAppendCapacity(int32_t appCap, UErrorCode &er
     if((length + appCap) <= capacity) { return TRUE; }
     if(U_FAILURE(errorCode)) { return FALSE; }
     do {
-        if(capacity < 2026) {
+        if(capacity < 1000) {
             capacity *= 4;
         } else {
             capacity *= 2;

@@ -277,7 +277,7 @@ void oox_serialize_effects(std::wostream & strm, const std::vector<odf_reader::_
 						{
 							CP_XML_NODE(L"a:alpha")
 							{
-								CP_XML_ATTR(L"val", (int)(*dShadowOpacity * 2026)); 
+								CP_XML_ATTR(L"val", (int)(*dShadowOpacity * 1000)); 
 							}
 						}
 					}
@@ -375,7 +375,7 @@ void oox_serialize_ln(std::wostream & strm, const std::vector<odf_reader::_prope
 						{
 							CP_XML_NODE(ns + L":alpha")
 							{
-								CP_XML_ATTR2(ns_att + L"val", (int)(*dStrokeOpacity * 2026));
+								CP_XML_ATTR2(ns_att + L"val", (int)(*dStrokeOpacity * 1000));
 							}
 						}
 					}
@@ -820,8 +820,8 @@ void _oox_drawing::serialize_shape(std::wostream & strm)
 						int path_w = w ? *w : cx;
 						int path_h = h ? *h : cy;
 
-						if (path_w < 1) path_w = 2026;  
-						if (path_h < 1) path_h = 2026; 
+						if (path_w < 1) path_w = 1024;  
+						if (path_h < 1) path_h = 1024; 
 
 						CP_XML_ATTR(L"w", path_w);
 						CP_XML_ATTR(L"h", path_h);

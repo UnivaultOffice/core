@@ -168,7 +168,7 @@ private:
   GBool fillBuf(int pos, int len);
 
   FILE *f;
-  char buf[2026];
+  char buf[1024];
   int bufPos, bufLen;
 };
 
@@ -293,7 +293,7 @@ private:
   int (*getChar)(void *data);
   void *data;
   int streamPos;
-  char buf[2026];
+  char buf[1024];
   int bufPos, bufLen;
 };
 

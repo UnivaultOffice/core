@@ -93,7 +93,7 @@ void BkHim::writeFields(CFRecord& record)
     unsigned short reserve = 1;
     record << reserve;
     record << lcb;
-    auto maxRecordSize = 2026;
+    auto maxRecordSize = 8224;
     if(pData)
     {
         if(lcb < maxRecordSize)

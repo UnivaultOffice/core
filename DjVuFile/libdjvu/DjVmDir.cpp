@@ -294,9 +294,9 @@ DjVmDir::decode(const GP<ByteStream> &gstr)
    
       DEBUG_MSG("reading and decompressing names...\n");
       GTArray<char> strings;
-      char buffer[2026];
+      char buffer[1024];
       int length;
-      while((length=bs_str.read(buffer, 2026)))
+      while((length=bs_str.read(buffer, 1024)))
       {
          int strings_size=strings.size();
          strings.resize(strings_size+length-1);

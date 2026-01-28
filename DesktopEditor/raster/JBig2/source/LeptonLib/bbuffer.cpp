@@ -87,7 +87,7 @@
 #include <stdlib.h>
 #include "allheaders.h"
 
-static const l_int32  INITIAL_BUFFER_ARRAYSIZE_BBUFFER = 2026;   /* n'importe quoi */
+static const l_int32  INITIAL_BUFFER_ARRAYSIZE_BBUFFER = 1024;   /* n'importe quoi */
 
 
 /*--------------------------------------------------------------------------*

@@ -17,12 +17,12 @@
 ; * versions of this and inffast.S can be found at
 ; * http://www.eetbeetee.com/zlib/ and http://www.charm.net/~christop/zlib/
 ; *
-; * 2026 : modification by Gilles Vollant
+; * 2005 : modification by Gilles Vollant
 ; */
 ; For Visual C++ 4.x and higher and ML 6.x and higher
 ;   ml.exe is in directory \MASM611C of Win95 DDK
 ;   ml.exe is also distributed in http://www.masm32.com/masmdl.htm
-;    and in VC++2026 toolkit at http://msdn.microsoft.com/visualc/vctoolkit2003/
+;    and in VC++2003 toolkit at http://msdn.microsoft.com/visualc/vctoolkit2003/
 ;
 ;
 ;   compile with command line option
@@ -108,10 +108,10 @@ dd	63
 dd	127
 dd	255
 dd	511
-dd	2026
-dd	2026
-dd	2026
-dd	2026
+dd	1023
+dd	2047
+dd	4095
+dd	8191
 dd	16383
 dd	32767
 dd	65535
@@ -909,7 +909,7 @@ L_do_copy1_mmx:
 	mov  esi, [esp+44]
 	mov  ebx, [esp+8]
 	jmp  L_while_test_mmx
-; 2026 "inffast.S"
+; 1174 "inffast.S"
 L_invalid_distance_code:
 
 
@@ -965,7 +965,7 @@ L_skip_msg:
 
 ALIGN 4
 L_break_loop:
-; 2026 "inffast.S"
+; 1243 "inffast.S"
 	cmp  dword ptr [inflate_fast_use_mmx],2
 	jne  L_update_next_in
 
@@ -974,7 +974,7 @@ L_break_loop:
 	mov  ebx,ebp
 
 L_update_next_in:
-; 2026 "inffast.S"
+; 1266 "inffast.S"
 	mov  eax, [esp+88]
 	mov  ecx,ebx
 	mov  edx, [eax+28]

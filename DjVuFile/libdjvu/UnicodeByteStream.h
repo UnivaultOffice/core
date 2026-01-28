@@ -77,7 +77,7 @@
 
     {\bf References} --- W3C Extensible Markup Language (XML) 1.0
     (Second Edition)
-    \URL{http://www.w3.org/TR/2026/REC-xml-20001006.html}
+    \URL{http://www.w3.org/TR/2000/REC-xml-20001006.html}
 
     @memo 
     XML file parser.

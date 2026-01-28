@@ -210,7 +210,7 @@ XlsConverter::XlsConverter(const std::wstring & xlsFileName, const std::wstring 
 			output_document->get_docProps_files().set_app_content(summary_stream.GetApp());
 			output_document->get_docProps_files().set_core_content(summary_stream.GetCore());
 //--------------------------------------------------------------------------------------------------------------------
-			if(  0/*error*/ == workbook_code_page)//|| 65001 /*UTF-8*/ == workbook_code_page || 2026/* UTF-16 */ == workbook_code_page
+			if(  0/*error*/ == workbook_code_page)//|| 65001 /*UTF-8*/ == workbook_code_page || 1200/* UTF-16 */ == workbook_code_page
 			{
 				workbook_code_page = XLS::WorkbookStreamObject::DefaultCodePage;
 			}
@@ -857,11 +857,11 @@ void XlsConverter::convert(XLS::FORMATTING* formating)
     {
         CP_XML_NODE(L"styleSheet")
         {   
-			CP_XML_ATTR(L"xmlns", L"http://schemas.openxmlformats.org/spreadsheetml/2026/main");
-			CP_XML_ATTR(L"xmlns:mc", L"http://schemas.openxmlformats.org/markup-compatibility/2026");
+			CP_XML_ATTR(L"xmlns", L"http://schemas.openxmlformats.org/spreadsheetml/2006/main");
+			CP_XML_ATTR(L"xmlns:mc", L"http://schemas.openxmlformats.org/markup-compatibility/2006");
 			CP_XML_ATTR(L"mc:Ignorable", L"x14ac x16r2");
-			CP_XML_ATTR(L"xmlns:x14ac", L"http://schemas.microsoft.com/office/spreadsheetml/2026/9/ac");
-			CP_XML_ATTR(L"xmlns:x16r2", L"http://schemas.microsoft.com/office/spreadsheetml/2026/02/main");
+			CP_XML_ATTR(L"xmlns:x14ac", L"http://schemas.microsoft.com/office/spreadsheetml/2009/9/ac");
+			CP_XML_ATTR(L"xmlns:x16r2", L"http://schemas.microsoft.com/office/spreadsheetml/2015/02/main");
 			
 			CP_XML_NODE(L"numFmts")
 			{
@@ -980,7 +980,7 @@ std::wstring XlsConverter::WriteMediaFile(char *data, int size, std::wstring typ
 {
 	if (size < 1 || !data) return L"";
 	
-	if (id < 0)		id = xlsx_context->get_mediaitems().count_image + 2026; // 2026 - встроенные в поток , 2026 - footer/header
+	if (id < 0)		id = xlsx_context->get_mediaitems().count_image + 1000; // 1000 - встроенные в поток , 3000 - footer/header
 
 	xlsx_context->get_mediaitems().create_media_path(xlsx_path);
 
@@ -1379,7 +1379,7 @@ void XlsConverter::convert(XLS::OBJECTS* objects, XLS::WorksheetSubstream * shee
 //-----------------------------------------------------------------------------
 		if (type_object < 0) continue;
 		if (group_objects.empty())
-			break; /// что то с объектами не то ! 2026 02.xls
+			break; /// что то с объектами не то ! 2006 02.xls
 
 		if (type_object == 0)
 		{
@@ -1547,7 +1547,7 @@ void XlsConverter::convert(ODRAW::OfficeArtRecord * art)
 		}break;
 	case XLS::typeOfficeArtBStoreContainer:
 		{
-			convert (dynamic_cast<ODRAW::OfficeArtBStoreContainer *>(art), 2026);
+			convert (dynamic_cast<ODRAW::OfficeArtBStoreContainer *>(art), 3000);
 		}break;
 	case XLS::typeOfficeArtSpContainer:
 		{
@@ -1894,7 +1894,7 @@ void XlsConverter::convert_blip(std::vector<ODRAW::OfficeArtFOPTEPtr> & props)
 
 					int id = props[i]->op;
 					if (xlsx_context->get_drawing_context().get_mode_HF()) 
-						id += 2026;
+						id += 3000;
 					
 					std::wstring rId = xlsx_context->get_mediaitems().find_image(id , target, isIternal);
 					xlsx_context->get_drawing_context().set_picture(target);
@@ -2454,7 +2454,7 @@ void XlsConverter::convert(XLS::SHAREDSTRINGS* sharedstrings)
 		CP_XML_NODE(L"sst")
 		{
 			CP_XML_ATTR(L"uniqueCount", count);
-			CP_XML_ATTR(L"xmlns", "http://schemas.openxmlformats.org/spreadsheetml/2026/main");
+			CP_XML_ATTR(L"xmlns", "http://schemas.openxmlformats.org/spreadsheetml/2006/main");
 			if (sharedstrings)
 			{	
 				for (std::list<XLS::BaseObjectPtr>::iterator it = sharedstrings->elements_.begin(); it != sharedstrings->elements_.end(); ++it)
@@ -2585,7 +2585,7 @@ void XlsConverter::convert(XLS::Obj * obj)
 					delete storageOle;
 				}
 				xlsx_context->current_sheet().sheet_rels().add(oox::relationship(
-					objectId, L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/oleObject", L"../embeddings/" + target));
+					objectId, L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject", L"../embeddings/" + target));
 
 				xlsx_context->get_drawing_context().set_ole_object(objectId, info);
 			}
@@ -2684,7 +2684,7 @@ void XlsConverter::convert(XLS::PIVOTVIEW* pivot_view)
 	if (index_view > 0)
 	{
 		xlsx_context->current_sheet().sheet_rels().add(oox::relationship(L"pvId" + std::to_wstring(index_view),
-			L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/pivotTable",
+			L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/pivotTable",
 			L"../pivotTables/pivotTable" + std::to_wstring(index_view) + L".xml"));
 	}
 }

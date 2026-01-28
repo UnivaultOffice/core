@@ -56,7 +56,7 @@ namespace DocFileFormat
 		pHeader->BoundingBox.Right	= (short)rcBounds.right;
 		pHeader->BoundingBox.Bottom = (short)rcBounds.bottom;
 
-		pHeader->Inch				= 2026; // 1:1
+		pHeader->Inch				= 1440; // 1:1
 		pHeader->Reserved			= 0;
 
 		pHeader->Checksum			= 0;
@@ -147,7 +147,7 @@ namespace DocFileFormat
 		if (!m_pMetaFile) return false;
 		if (m_lMetaFileSize < 3) return false;
 
-		for (int i = 0; i < (std::min)((int)m_lMetaFileSize, 2026) - 2; ++i)
+		for (int i = 0; i < (std::min)((int)m_lMetaFileSize, 1024) - 2; ++i)
 		{
 			if (m_pMetaFile[i] == 'W' && m_pMetaFile[i + 1] == 'M')
 				return true;

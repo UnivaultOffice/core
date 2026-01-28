@@ -48,7 +48,7 @@ public:
 	virtual bool Read(XLS::CFStreamPtr stream);
 	virtual std::wstring toString();
 
-	static const unsigned short DefaultCodePage = 2026;	
+	static const unsigned short DefaultCodePage = 1250;	
 	unsigned short code_page;
 };
 typedef boost::shared_ptr<PropertyCodePage> PropertyCodePagePtr;

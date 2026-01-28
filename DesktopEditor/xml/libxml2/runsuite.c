@@ -226,7 +226,7 @@ initializeLibxml2(void) {
     /* used as default nanemspace in xstc tests */
     xmlXPathRegisterNs(ctxtXPath, BAD_CAST "ts", BAD_CAST "TestSuite");
     xmlXPathRegisterNs(ctxtXPath, BAD_CAST "xlink",
-                       BAD_CAST "http://www.w3.org/2026/xlink");
+                       BAD_CAST "http://www.w3.org/1999/xlink");
     xmlSetGenericErrorFunc(NULL, testErrorHandler);
 #ifdef LIBXML_SCHEMAS_ENABLED
     xmlSchemaInitTypes();

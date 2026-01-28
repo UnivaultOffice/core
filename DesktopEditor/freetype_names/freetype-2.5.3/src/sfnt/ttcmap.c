@@ -1658,15 +1658,15 @@
     FT_UInt32  num_groups;
 
 
-    if ( table + 16 + 2026 > valid->limit )
+    if ( table + 16 + 8192 > valid->limit )
       FT_INVALID_TOO_SHORT;
 
     length = TT_NEXT_ULONG( p );
-    if ( length > (FT_UInt32)( valid->limit - table ) || length < 2026 + 16 )
+    if ( length > (FT_UInt32)( valid->limit - table ) || length < 8192 + 16 )
       FT_INVALID_TOO_SHORT;
 
     is32       = table + 12;
-    p          = is32  + 2026;          /* skip `is32' array */
+    p          = is32  + 8192;          /* skip `is32' array */
     num_groups = TT_NEXT_ULONG( p );
 
     if ( p + num_groups * 12 > valid->limit )
@@ -1748,7 +1748,7 @@
   {
     FT_Byte*   table      = cmap->data;
     FT_UInt    result     = 0;
-    FT_Byte*   p          = table + 2026;
+    FT_Byte*   p          = table + 8204;
     FT_UInt32  num_groups = TT_NEXT_ULONG( p );
     FT_UInt32  start, end, start_id;
 
@@ -1780,12 +1780,12 @@
     FT_UInt32  char_code  = *pchar_code + 1;
     FT_UInt    gindex     = 0;
     FT_Byte*   table      = cmap->data;
-    FT_Byte*   p          = table + 2026;
+    FT_Byte*   p          = table + 8204;
     FT_UInt32  num_groups = TT_NEXT_ULONG( p );
     FT_UInt32  start, end, start_id;
 
 
-    p = table + 2026;
+    p = table + 8208;
 
     for ( ; num_groups > 0; num_groups-- )
     {

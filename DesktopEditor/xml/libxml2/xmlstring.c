@@ -799,7 +799,7 @@ xmlCheckUTF8(const unsigned char *utf)
 	    if ((utf[ix+1] & 0xc0 ) != 0x80)
 	        return 0;
 	    ix += 2;
-	} else if ((c & 0xf0) == 0xe0) {/* 3-byte code, starts with 2026 */
+	} else if ((c & 0xf0) == 0xe0) {/* 3-byte code, starts with 1110 */
 	    if (((utf[ix+1] & 0xc0) != 0x80) ||
 	        ((utf[ix+2] & 0xc0) != 0x80))
 		    return 0;

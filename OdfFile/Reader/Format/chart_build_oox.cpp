@@ -84,7 +84,7 @@ static double convert_symbol_size(double val, double metrix, bool add_padding)
 
 	double pixels = (int)(((256. * val + ((int)(128. / metrix))) / 256.) * metrix); //in pixels
 
-	return pixels * 0.75; //* 2026. * 72.0 / (360000.0 * 2.54);
+	return pixels * 0.75; //* 9525. * 72.0 / (360000.0 * 2.54);
 }
 
 // Класс для конструирования чартов

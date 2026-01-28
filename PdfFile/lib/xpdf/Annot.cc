@@ -847,13 +847,13 @@ void Annot::generateTextAppearance()
 		if (!oAnnotObj.dictLookup("C", &obj1)->isArray() || !setFillColor(&obj1))
 			appearBuf->append("1 0.819611 0 rg");
 		obj1.free();
-		appearBuf->append(" 0 G 0 i 0.59 w 4 M 1 j 0 J [] 0 d 1 0 0 1 7.2026 1.2026 cm 0 0 m 6.691 11.152 11.31 14.196 v 10.773 15.201 9.626 16.892 8.155 17.587 c 2.293 10.706 -0.255 4.205 y -4.525 9.177 l -6.883 5.608 l h b");
+		appearBuf->append(" 0 G 0 i 0.59 w 4 M 1 j 0 J [] 0 d 1 0 0 1 7.1836 1.2061 cm 0 0 m 6.691 11.152 11.31 14.196 v 10.773 15.201 9.626 16.892 8.155 17.587 c 2.293 10.706 -0.255 4.205 y -4.525 9.177 l -6.883 5.608 l h b");
 	}
 	else if (oName.isName("Checkmark"))
 	{
 		yMin = yMax - 20;
 		xMax = xMin + 20;
-		appearBuf->append("q 0.396 0.396 0.396 rg 1 0 0 1 13.2026 16.5 cm 0 0 m -6.7 -10.23 l -8.81 -7 l -13.22 -7 l -6.29 -15 l 4.19 0 l h f Q");
+		appearBuf->append("q 0.396 0.396 0.396 rg 1 0 0 1 13.5151 16.5 cm 0 0 m -6.7 -10.23 l -8.81 -7 l -13.22 -7 l -6.29 -15 l 4.19 0 l h f Q");
 	}
 	else if (oName.isName("Circle"))
 	{
@@ -864,7 +864,7 @@ void Annot::generateTextAppearance()
 		gfxStateDict.dictAdd(copyString("ca"), obj1.isNum() ? obj1.copy(&obj2) : obj2.initReal(0.6));
 		gfxStateDict.dictAdd(copyString("CA"), obj1.isNum() ? obj1.copy(&obj2) : obj2.initReal(0.6));
 		obj1.free();
-		appearBuf->append("q 1 1 1 rg 0 i 1 w 4 M 1 j 0 J [] 0 d /GS1 gs 1 0 0 1 9.999 3.2026 cm 0 0 m -3.513 0 -6.36 2.85 -6.36 6.363 c -6.36 9.875 -3.513 12.724 0 12.724 c 3.514 12.724 6.363 9.875 6.363 6.363 c 6.363 2.85 3.514 0 0 0 c h f Q ");
+		appearBuf->append("q 1 1 1 rg 0 i 1 w 4 M 1 j 0 J [] 0 d /GS1 gs 1 0 0 1 9.999 3.6387 cm 0 0 m -3.513 0 -6.36 2.85 -6.36 6.363 c -6.36 9.875 -3.513 12.724 0 12.724 c 3.514 12.724 6.363 9.875 6.363 6.363 c 6.363 2.85 3.514 0 0 0 c h f Q ");
 		if (!oAnnotObj.dictLookup("C", &obj1)->isArray() || !setFillColor(&obj1))
 			appearBuf->append("1 0.819611 0 rg");
 		obj1.free();
@@ -892,7 +892,7 @@ void Annot::generateTextAppearance()
 		if (!oAnnotObj.dictLookup("C", &obj1)->isArray() || !setFillColor(&obj1))
 			appearBuf->append("1 0.819611 0 rg");
 		obj1.free();
-		appearBuf->append(" 0 G 0 i 0.59 w 4 M 1 j 0 J [] 0 d 1 0 0 1 18.2026 3.2026 cm 0 0 m -6.363 6.364 l 0 12.728 l -2.828 15.556 l -9.192 9.192 l -15.556 15.556 l -18.384 12.728 l -12.02 6.364 l -18.384 0 l -15.556 -2.828 l -9.192 3.535 l -2.828 -2.828 l h b");
+		appearBuf->append(" 0 G 0 i 0.59 w 4 M 1 j 0 J [] 0 d 1 0 0 1 18.6924 3.1357 cm 0 0 m -6.363 6.364 l 0 12.728 l -2.828 15.556 l -9.192 9.192 l -15.556 15.556 l -18.384 12.728 l -12.02 6.364 l -18.384 0 l -15.556 -2.828 l -9.192 3.535 l -2.828 -2.828 l h b");
 	}
 	else if (oName.isName("CrossHairs"))
 	{
@@ -903,7 +903,7 @@ void Annot::generateTextAppearance()
 		gfxStateDict.dictAdd(copyString("ca"), obj1.isNum() ? obj1.copy(&obj2) : obj2.initReal(0.6));
 		gfxStateDict.dictAdd(copyString("CA"), obj1.isNum() ? obj1.copy(&obj2) : obj2.initReal(0.6));
 		obj1.free();
-		appearBuf->append("q 1 1 1 rg 0 i 1 w 4 M 1 j 0 J [] 0 d /GS1 gs 1 0 0 1 9.2026 1.2026 cm 0 0 m -4.448 0 -8.053 3.604 -8.053 8.053 c -8.053 12.5 -4.448 16.106 0 16.106 c 4.447 16.106 8.054 12.5 8.054 8.053 c 8.054 3.604 4.447 0 0 0 c h f Q ");
+		appearBuf->append("q 1 1 1 rg 0 i 1 w 4 M 1 j 0 J [] 0 d /GS1 gs 1 0 0 1 9.9771 1.9443 cm 0 0 m -4.448 0 -8.053 3.604 -8.053 8.053 c -8.053 12.5 -4.448 16.106 0 16.106 c 4.447 16.106 8.054 12.5 8.054 8.053 c 8.054 3.604 4.447 0 0 0 c h f Q ");
 		if (!oAnnotObj.dictLookup("C", &obj1)->isArray() || !setFillColor(&obj1))
 			appearBuf->append("1 0.819611 0 rg");
 		obj1.free();
@@ -918,7 +918,7 @@ void Annot::generateTextAppearance()
 		gfxStateDict.dictAdd(copyString("ca"), obj1.isNum() ? obj1.copy(&obj2) : obj2.initReal(0.6));
 		gfxStateDict.dictAdd(copyString("CA"), obj1.isNum() ? obj1.copy(&obj2) : obj2.initReal(0.6));
 		obj1.free();
-		appearBuf->append("q 1 1 1 rg 0 i 1 w 4 M 1 j 0 J [] 0 d /GS1 gs 1 0 0 1 12.2026 10.2026 cm -2.146 9.403 m -7.589 9.403 -12.001 4.99 -12.001 -0.453 c -12.001 -5.895 -7.589 -10.309 -2.146 -10.309 c 3.296 -10.309 7.709 -5.895 7.709 -0.453 c 7.709 4.99 3.296 9.403 -2.146 9.403 c h f Q ");
+		appearBuf->append("q 1 1 1 rg 0 i 1 w 4 M 1 j 0 J [] 0 d /GS1 gs 1 0 0 1 12.1465 10.5137 cm -2.146 9.403 m -7.589 9.403 -12.001 4.99 -12.001 -0.453 c -12.001 -5.895 -7.589 -10.309 -2.146 -10.309 c 3.296 -10.309 7.709 -5.895 7.709 -0.453 c 7.709 4.99 3.296 9.403 -2.146 9.403 c h f Q ");
 		if (!oAnnotObj.dictLookup("C", &obj1)->isArray() || !setFillColor(&obj1))
 			appearBuf->append("1 0.819611 0 rg");
 		obj1.free();
@@ -932,7 +932,7 @@ void Annot::generateTextAppearance()
 		if (!oAnnotObj.dictLookup("C", &obj1)->isArray() || !setFillColor(&obj1))
 			appearBuf->append("1 0.819611 0 rg");
 		obj1.free();
-		appearBuf->append(" 0 i 0.59 w 4 M 0 j 0 J [] 0 d 1 0 0 1 8.2026 19.2026 cm 0 0 m -8.39 -19.719 l 8.388 -19.719 l h B");
+		appearBuf->append(" 0 i 0.59 w 4 M 0 j 0 J [] 0 d 1 0 0 1 8.5386 19.8545 cm 0 0 m -8.39 -19.719 l 8.388 -19.719 l h B");
 	}
 	else if (oName.isName("Key"))
 	{
@@ -976,7 +976,7 @@ void Annot::generateTextAppearance()
 		gfxStateDict.dictAdd(copyString("ca"), obj1.isNum() ? obj1.copy(&obj2) : obj2.initReal(0.6));
 		gfxStateDict.dictAdd(copyString("CA"), obj1.isNum() ? obj1.copy(&obj2) : obj2.initReal(0.6));
 		obj1.free();
-		appearBuf->append("q 1 1 1 rg 0 i 1 w 4 M 1 j 0 J [] 0 d /GS1 gs 1 0 0 1 19.2026 10.2026 cm 0 0 m 0 -5.336 -4.326 -9.662 -9.663 -9.662 c -14.998 -9.662 -19.324 -5.336 -19.324 0 c -19.324 5.335 -14.998 9.662 -9.663 9.662 c -4.326 9.662 0 5.335 0 0 c h f Q ");
+		appearBuf->append("q 1 1 1 rg 0 i 1 w 4 M 1 j 0 J [] 0 d /GS1 gs 1 0 0 1 19.6973 10.0005 cm 0 0 m 0 -5.336 -4.326 -9.662 -9.663 -9.662 c -14.998 -9.662 -19.324 -5.336 -19.324 0 c -19.324 5.335 -14.998 9.662 -9.663 9.662 c -4.326 9.662 0 5.335 0 0 c h f Q ");
 		if (!oAnnotObj.dictLookup("C", &obj1)->isArray() || !setFillColor(&obj1))
 			appearBuf->append("1 0.819611 0 rg");
 		obj1.free();
@@ -991,7 +991,7 @@ void Annot::generateTextAppearance()
 		gfxStateDict.dictAdd(copyString("ca"), obj1.isNum() ? obj1.copy(&obj2) : obj2.initReal(0.6));
 		gfxStateDict.dictAdd(copyString("CA"), obj1.isNum() ? obj1.copy(&obj2) : obj2.initReal(0.6));
 		obj1.free();
-		appearBuf->append("q 1 1 1 rg 0 i 1 w 4 M 1 j 0 J [] 0 d /GS1 gs 1 0 0 1 3.2026 11.2026 cm 6.214 -10.655 m 11.438 -10.655 15.673 -6.42 15.673 -1.196 c 15.673 4.027 11.438 8.262 6.214 8.262 c 0.991 8.262 -3.244 4.027 -3.244 -1.196 c -3.244 -6.42 0.991 -10.655 6.214 -10.655 c h f Q ");
+		appearBuf->append("q 1 1 1 rg 0 i 1 w 4 M 1 j 0 J [] 0 d /GS1 gs 1 0 0 1 3.7856 11.1963 cm 6.214 -10.655 m 11.438 -10.655 15.673 -6.42 15.673 -1.196 c 15.673 4.027 11.438 8.262 6.214 8.262 c 0.991 8.262 -3.244 4.027 -3.244 -1.196 c -3.244 -6.42 0.991 -10.655 6.214 -10.655 c h f Q ");
 		if (!oAnnotObj.dictLookup("C", &obj1)->isArray() || !setFillColor(&obj1))
 			appearBuf->append("1 0.819611 0 rg");
 		obj1.free();
@@ -1004,7 +1004,7 @@ void Annot::generateTextAppearance()
 		if (!oAnnotObj.dictLookup("C", &obj1)->isArray() || !setFillColor(&obj1))
 			appearBuf->append("1 0.819611 0 rg");
 		obj1.free();
-		appearBuf->append(" 0 G 0.59 w 4 M 0 j 0 J [] 0 d 1 0 0 1 1.2026 17.2026 cm 0 0 m 4.703 -8.703 l 0 -17 l 18.813 -8.703 l b");
+		appearBuf->append(" 0 G 0.59 w 4 M 0 j 0 J [] 0 d 1 0 0 1 1.1871 17.0000 cm 0 0 m 4.703 -8.703 l 0 -17 l 18.813 -8.703 l b");
 	}
 	else if (oName.isName("Star"))
 	{
@@ -1013,7 +1013,7 @@ void Annot::generateTextAppearance()
 		if (!oAnnotObj.dictLookup("C", &obj1)->isArray() || !setFillColor(&obj1))
 			appearBuf->append("1 0.819611 0 rg");
 		obj1.free();
-		appearBuf->append(" 0 G 0 i 0.59 w 4 M 1 j 0 J [] 0 d 1 0 0 1 9.999 18.2026 cm 0 0 m 3.051 -6.178 l 9.867 -7.168 l 4.934 -11.978 l 6.099 -18.768 l 0 -15.562 l -6.097 -18.768 l -4.933 -11.978 l -9.866 -7.168 l -3.048 -6.178 l b");
+		appearBuf->append(" 0 G 0 i 0.59 w 4 M 1 j 0 J [] 0 d 1 0 0 1 9.999 18.8838 cm 0 0 m 3.051 -6.178 l 9.867 -7.168 l 4.934 -11.978 l 6.099 -18.768 l 0 -15.562 l -6.097 -18.768 l -4.933 -11.978 l -9.866 -7.168 l -3.048 -6.178 l b");
 	}
 	else if (oName.isName("UpArrow"))
 	{
@@ -1022,7 +1022,7 @@ void Annot::generateTextAppearance()
 		if (!oAnnotObj.dictLookup("C", &obj1)->isArray() || !setFillColor(&obj1))
 			appearBuf->append("1 0.819611 0 rg");
 		obj1.free();
-		appearBuf->append(" 0 G 0 i 0.59 w 4 M 1 j 0 J [] 0 d 1 0 0 1 1.2026 6.2026 cm 0 0 m 4.009 0 l 4.009 -6.719 l 11.086 -6.719 l 11.086 0 l 14.963 0 l 7.499 13.081 l b");
+		appearBuf->append(" 0 G 0 i 0.59 w 4 M 1 j 0 J [] 0 d 1 0 0 1 1.1007 6.7185 cm 0 0 m 4.009 0 l 4.009 -6.719 l 11.086 -6.719 l 11.086 0 l 14.963 0 l 7.499 13.081 l b");
 	}
 	else if (oName.isName("UpLeftArrow"))
 	{
@@ -1031,7 +1031,7 @@ void Annot::generateTextAppearance()
 		if (!oAnnotObj.dictLookup("C", &obj1)->isArray() || !setFillColor(&obj1))
 			appearBuf->append("1 0.819611 0 rg");
 		obj1.free();
-		appearBuf->append(" 0 G 0 i 0.59 w 4 M 1 j 0 J [] 0 d 1 0 0 1 2.2026 1.2026 cm 0 0 m -2.74 15.16 l 12.345 12.389 l 9.458 9.493 l 14.027 4.91 l 7.532 -1.607 l 2.964 2.975 l b");
+		appearBuf->append(" 0 G 0 i 0.59 w 4 M 1 j 0 J [] 0 d 1 0 0 1 2.8335 1.7627 cm 0 0 m -2.74 15.16 l 12.345 12.389 l 9.458 9.493 l 14.027 4.91 l 7.532 -1.607 l 2.964 2.975 l b");
 	}
 
 	oAnnotObj.free(); oName.free();
@@ -1466,7 +1466,7 @@ void Annot::drawText(GString *text, GString *da, int quadding, double margin,
   fontSize = 14;
   i = 0;
   vBreaks = new GList();
-  double dX = 0, dWordWidth = 0, dKoef = fontSize / 2026.0;
+  double dX = 0, dWordWidth = 0, dKoef = fontSize / 1000.0;
   unsigned int unWordStartPos = 0;
   bool bLineStart = true, bWord = false, bFirstItemOnLine = true;
   while (i < text2->getLength())

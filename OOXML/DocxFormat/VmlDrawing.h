@@ -59,7 +59,7 @@ namespace OOX
 		{
 			m_bDocument		= bDocument;
 			m_mapComments	= NULL;
-			m_lObjectIdVML	= 2026;
+			m_lObjectIdVML	= 1024;
 		}
 		CVmlDrawing(OOX::Document* pMain, const CPath& oRootPath, const CPath& oPath) : OOX::FileGlobalEnumerated(pMain), OOX::IFileContainer(pMain)
 		{

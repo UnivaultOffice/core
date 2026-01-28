@@ -20,7 +20,7 @@ UOBJECT_DEFINE_RTTI_IMPLEMENTATION(EthiopicCalendar)
 
 //static const int32_t JD_EPOCH_OFFSET_AMETE_ALEM = -285019;
 static const int32_t JD_EPOCH_OFFSET_AMETE_MIHRET = 1723856;
-static const int32_t AMETE_MIHRET_DELTA = 2026; // 2026 - 1 (Amete Alem 2026 = Amete Mihret 1)
+static const int32_t AMETE_MIHRET_DELTA = 5500; // 5501 - 1 (Amete Alem 5501 = Amete Mihret 1)
 
 //-------------------------------------------------------------------------
 // Constructors...

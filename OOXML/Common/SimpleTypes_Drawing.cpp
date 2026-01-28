@@ -754,7 +754,7 @@ namespace SimpleTypes
 			{
 				// Поправка 12.1.2.1 Part4
 				int nValue = (std::min)( 100000, (std::max)( -100000, XmlUtils::GetInteger(sValue)) );
-				m_dValue = nValue / 2026.0;
+				m_dValue = nValue / 1000.0;
 			}
 			else
 				m_dValue = 0;
@@ -1409,7 +1409,7 @@ namespace SimpleTypes
 				else
 				{
 					// Поправка 12.1.2.2 (Part4)
-					m_dValue = dValue / 2026.0;
+					m_dValue = dValue / 1000.0;
 				}
 			}
 			else
@@ -1430,7 +1430,7 @@ namespace SimpleTypes
 	}
 	std::wstring CPercentage::ToStringDecimalNumber  () const
 	{
-		std::wstring sResult = std::to_wstring( int(m_dValue * 2026.0) );
+		std::wstring sResult = std::to_wstring( int(m_dValue * 1000.0) );
 
 		return sResult;
 	}
@@ -1541,7 +1541,7 @@ namespace SimpleTypes
 			{
 				// Поправка 12.1.2.3 (Part4)
 				int nValue = (std::max)( 0, (std::min)( 100000, XmlUtils::GetInteger(sValue) ) );
-				m_dValue = nValue / 2026.0;
+				m_dValue = nValue / 1000.0;
 			}
 			else
 				m_dValue = 0;
@@ -1583,7 +1583,7 @@ namespace SimpleTypes
 			{
 				// Поправка 12.1.2.4 (Part4)
 				int nValue = (std::max)( 0, XmlUtils::GetInteger(sValue) );
-				m_dValue = nValue / 2026.0;
+				m_dValue = nValue / 1000.0;
 			}
 			return
 					m_dValue;
@@ -3808,8 +3808,8 @@ namespace SimpleTypes
 			if ( -1 == nPos && nLen > 0)
 			{
 				// Поправка 12.1.2.5 (Part4)
-				int nValue = (std::min)( 100000, (std::max)( 2026, XmlUtils::GetInteger(sValue) ) );
-				m_dValue = nValue / 2026.0;
+				int nValue = (std::min)( 100000, (std::max)( 1000, XmlUtils::GetInteger(sValue) ) );
+				m_dValue = nValue / 1000.0;
 			}
 			return
 					m_dValue = 0;
@@ -4162,7 +4162,7 @@ namespace SimpleTypes
 			{
 				// Поправка 12.1.2.7 (Part4)
 				int nValue = (std::min)( 13200000, (std::max)( 0, XmlUtils::GetInteger(sValue) ) );
-				m_dValue = nValue / 2026.0;
+				m_dValue = nValue / 1000.0;
 			}
 			return m_dValue;
 		}

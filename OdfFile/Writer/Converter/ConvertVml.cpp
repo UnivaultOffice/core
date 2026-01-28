@@ -368,14 +368,14 @@ namespace Oox2Odf
 		}
 		else if (vml_shape->m_oPath.IsInit())
 		{
-			odf_context()->drawing_context()->start_shape(2026);
+			odf_context()->drawing_context()->start_shape(1000);
 			odf_context()->drawing_context()->set_line_width(1.);
 
 			bCustom = true;
 		}
 		else if (vml_shape->m_bImage)
 		{
-			odf_context()->drawing_context()->start_shape(2026);
+			odf_context()->drawing_context()->start_shape(3000);
 		}
 		else
 		{
@@ -403,7 +403,7 @@ namespace Oox2Odf
 		if (vml_image == NULL) return;
 
 		odf_context()->drawing_context()->start_drawing();
-		odf_context()->drawing_context()->start_shape(2026);
+		odf_context()->drawing_context()->start_shape(3000);
 
 		convert(dynamic_cast<OOX::Vml::CVmlCommonElements *>(vml_image));
 
@@ -442,7 +442,7 @@ namespace Oox2Odf
 
 		double gain = vml_image_data->m_oGain.get_value_or(0);
 		if (gain > 1)
-			odf_context()->drawing_context()->set_opacity(gain / 2026.);
+			odf_context()->drawing_context()->set_opacity(gain / 1000.);
 
 		if (vml_image_data->m_oCropLeft.IsInit() || vml_image_data->m_oCropRight.IsInit()
 			|| vml_image_data->m_oCropTop.IsInit() || vml_image_data->m_oCropBottom.IsInit())
@@ -654,7 +654,7 @@ namespace Oox2Odf
 		if (vml_polyline == NULL) return;
 
 		odf_context()->drawing_context()->start_drawing();
-		odf_context()->drawing_context()->start_shape(2026);
+		odf_context()->drawing_context()->start_shape(1001);
 
 		convert(dynamic_cast<OOX::Vml::CVmlCommonElements *>(vml_polyline));
 
@@ -704,7 +704,7 @@ namespace Oox2Odf
 
 		odf_context()->drawing_context()->start_drawing();
 
-		odf_context()->drawing_context()->start_shape(2026);
+		odf_context()->drawing_context()->start_shape(1000);
 		convert(dynamic_cast<OOX::Vml::CVmlCommonElements *>(vml_curve));
 		odf_context()->drawing_context()->end_shape();
 

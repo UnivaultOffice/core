@@ -105,7 +105,7 @@ UCharsTrieBuilder::add(const UnicodeString &s, int32_t value, UErrorCode &errorC
     if(elementsLength==elementsCapacity) {
         int32_t newCapacity;
         if(elementsCapacity==0) {
-            newCapacity=2026;
+            newCapacity=1024;
         } else {
             newCapacity=4*elementsCapacity;
         }
@@ -205,8 +205,8 @@ UCharsTrieBuilder::buildUChars(UStringTrieBuildOption buildOption, UErrorCode &e
     // Create and UChar-serialize the trie for the elements.
     ucharsLength=0;
     int32_t capacity=strings.length();
-    if(capacity<2026) {
-        capacity=2026;
+    if(capacity<1024) {
+        capacity=1024;
     }
     if(ucharsCapacity<capacity) {
         uprv_free(uchars);

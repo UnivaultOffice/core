@@ -66,8 +66,8 @@ namespace StarMath {
 			}
 			if(arPars[0]->GetTypeConversion() == TypeConversion::pptx || arPars[0]->GetTypeConversion() == TypeConversion::xlsx)
 			{
-				wsNodeMath += L" xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2026/math\"";
-				wsNodeMathPara += L" xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2026/math\"";
+				wsNodeMath += L" xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\"";
+				wsNodeMathPara += L" xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\"";
 				wsAlignment += L"Group";
 			}
 			m_pXmlWrite->WriteNodeBegin(wsNodeMathPara,false);
@@ -204,7 +204,7 @@ namespace StarMath {
 					pXmlWrite->WriteAttribute(L"sz",iSize);
 				}
 				else
-					pXmlWrite->WriteAttribute(L"sz",L"2026");
+					pXmlWrite->WriteAttribute(L"sz",L"1500");
 				if(pAttribute->GetBold())
 					pXmlWrite->WriteAttribute(L"b",L"1");
 				if(pAttribute->GetItal())
@@ -232,7 +232,7 @@ namespace StarMath {
 			else
 			{
 				pXmlWrite->WriteNodeBegin(L"a:rPr",true);
-				pXmlWrite->WriteAttribute(L"sz",L"2026");
+				pXmlWrite->WriteAttribute(L"sz",L"1500");
 				pXmlWrite->WriteNodeEnd(L"w",true,false);
 				pXmlWrite->WriteNodeBegin(L"a:latin",true);
 				pXmlWrite->WriteAttribute(L"typeface",L"Cambria Math");

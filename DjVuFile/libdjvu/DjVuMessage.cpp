@@ -154,7 +154,7 @@ RegOpenReadConfig ( HKEY hParentKey )
   if (RegOpenKeyEx(hParentKey, path, 0,
 		   KEY_READ, &hKey) == ERROR_SUCCESS )
   {
-    CHAR path[2026];
+    CHAR path[1024];
     CHAR *szPathValue = path;
     LPCSTR lpszEntry = "";
     DWORD dwCount = (sizeof(path)/sizeof(CHAR))-1;
@@ -175,7 +175,7 @@ static GURL
 GetModulePath( void )
 {
   const GUTF8String cwd(GOS::cwd());
-  CHAR path[2026];
+  CHAR path[1024];
   DWORD dwCount = (sizeof(path)/sizeof(CHAR))-1;
   GetModuleFileNameA(0, path, dwCount);
   GURL retval=GURL::Filename::Native(path).base();

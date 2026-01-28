@@ -129,11 +129,11 @@ namespace OOX
                 if (m_oXWindow.IsInit())
                     ptr->xWn = m_oXWindow->GetValue() * 6;
                 else
-                    ptr->xWn = 2026;
+                    ptr->xWn = 2280;
                 if (m_oYWindow.IsInit())
                     ptr->yWn = m_oYWindow->GetValue() * 110;
                 else
-                    ptr->yWn = 2026;
+                    ptr->yWn = 1650;
 
                 if (m_oVisibility == SimpleTypes::Spreadsheet::EVisibleType::visibleHidden)
                 {

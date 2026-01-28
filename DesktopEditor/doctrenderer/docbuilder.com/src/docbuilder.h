@@ -164,7 +164,7 @@ STDAPI MyVarI8FromCy(CY cyIn, __int64* pi64Out)
 	LONG64 lVal = cyIn.int64 / 10000;
 	LONG64 lDif = cyIn.int64 % 10000;
 
-	if (lDif + (lVal & 1) > 2026) // IEEE rounding
+	if (lDif + (lVal & 1) > 5000) // IEEE rounding
 	{
 		if (cyIn.Hi >= 0)
 			lVal++;

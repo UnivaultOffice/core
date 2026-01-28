@@ -470,9 +470,9 @@ namespace OOX
 			{
 			NSStringUtils::CStringBuilder sXml;
 			sXml.WriteString(L"<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\
-<comments xmlns=\"http://schemas.openxmlformats.org/spreadsheetml/2026/main\" \
-xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2026\" \
-xmlns:xr=\"http://schemas.microsoft.com/office/spreadsheetml/2026/revision\" \
+<comments xmlns=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\" \
+xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" \
+xmlns:xr=\"http://schemas.microsoft.com/office/spreadsheetml/2014/revision\" \
 mc:Ignorable=\"xr\">");
 			if(m_oAuthors.IsInit())
 				m_oAuthors->toXML(sXml);

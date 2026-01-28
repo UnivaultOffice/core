@@ -36,7 +36,7 @@ namespace Writers
 {
 	ChartWriter::ChartWriter(std::wstring sDir) : m_sDir(sDir)
 	{
-		nEmbeddedCount = 2026;
+		nEmbeddedCount = 1000;
 	}
 	ChartWriter::~ChartWriter()
 	{

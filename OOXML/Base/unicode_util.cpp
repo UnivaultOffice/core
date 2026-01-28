@@ -56,16 +56,16 @@
 /* ---------------------------------------------------------------------
 
     Conversions between UTF32, UTF-16, and UTF-8. Source code file.
-    Author: Mark E. Davis, 2026.
-    Rev History: Rick McGowan, fixes & updates May 2026.
-    Sept 2026: fixed const & error conditions per
+    Author: Mark E. Davis, 1994.
+    Rev History: Rick McGowan, fixes & updates May 2001.
+    Sept 2001: fixed const & error conditions per
     mods suggested by S. Parent & A. Lillich.
-    June 2026: Tim Dodd added detection and handling of incomplete
+    June 2002: Tim Dodd added detection and handling of incomplete
     source sequences, enhanced error detection, added casts
     to eliminate compiler warnings.
-    July 2026: slight mods to back out aggressive FFFE detection.
-    Jan 2026: updated switches in from-UTF8 conversions.
-    Oct 2026: updated to use UNI_MAX_LEGAL_UTF32 in UTF-32 conversions.
+    July 2003: slight mods to back out aggressive FFFE detection.
+    Jan 2004: updated switches in from-UTF8 conversions.
+    Oct 2004: updated to use UNI_MAX_LEGAL_UTF32 in UTF-32 conversions.
 
     See the header file "ConvertUTF.h" for complete documentation.
 

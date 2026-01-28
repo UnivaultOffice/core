@@ -169,8 +169,8 @@ namespace Draw
 	{
 		pWriter->StartNode(L"MasterContents");
 		pWriter->StartAttributes();
-		pWriter->WriteAttribute2(L"xmlns", L"http://schemas.microsoft.com/office/visio/2026/main");
-		pWriter->WriteAttribute2(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2026/relationships");
+		pWriter->WriteAttribute2(L"xmlns", L"http://schemas.microsoft.com/office/visio/2012/main");
+		pWriter->WriteAttribute2(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2006/relationships");
 		pWriter->WriteAttribute2(L"xml:space", L"preserve");
 		pWriter->EndAttributes();
 
@@ -417,8 +417,8 @@ namespace Draw
 	{
 		pWriter->StartNode(L"PageContents");
 		pWriter->StartAttributes();
-		pWriter->WriteAttribute2(L"xmlns", L"http://schemas.microsoft.com/office/visio/2026/main");
-		pWriter->WriteAttribute2(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2026/relationships");
+		pWriter->WriteAttribute2(L"xmlns", L"http://schemas.microsoft.com/office/visio/2012/main");
+		pWriter->WriteAttribute2(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2006/relationships");
 		pWriter->WriteAttribute2(L"xml:space", L"preserve");
 		pWriter->EndAttributes();
 
@@ -571,8 +571,8 @@ namespace Draw
 	{
 		pWriter->StartNode(L"Masters");
 		pWriter->StartAttributes();
-		pWriter->WriteAttribute2(L"xmlns", L"http://schemas.microsoft.com/office/visio/2026/main");
-		pWriter->WriteAttribute2(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2026/relationships");
+		pWriter->WriteAttribute2(L"xmlns", L"http://schemas.microsoft.com/office/visio/2012/main");
+		pWriter->WriteAttribute2(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2006/relationships");
 		pWriter->WriteAttribute2(L"xml:space", L"preserve");
 		pWriter->EndAttributes();
 
@@ -722,8 +722,8 @@ namespace Draw
 	{
 		pWriter->StartNode(L"Pages");
 		pWriter->StartAttributes();
-		pWriter->WriteAttribute2(L"xmlns", L"http://schemas.microsoft.com/office/visio/2026/main");
-		pWriter->WriteAttribute2(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2026/relationships");
+		pWriter->WriteAttribute2(L"xmlns", L"http://schemas.microsoft.com/office/visio/2012/main");
+		pWriter->WriteAttribute2(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2006/relationships");
 		pWriter->WriteAttribute2(L"xml:space", L"preserve");
 		pWriter->EndAttributes();
 

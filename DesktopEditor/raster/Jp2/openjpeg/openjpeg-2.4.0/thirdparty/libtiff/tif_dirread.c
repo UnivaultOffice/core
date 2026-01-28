@@ -585,7 +585,7 @@ static enum TIFFReadDirEntryErr TIFFReadDirEntryFloat(TIFF* tif, TIFFDirEntry* d
 				err=TIFFReadDirEntryCheckedLong8(tif,direntry,&m);
 				if (err!=TIFFReadDirEntryErrOk)
 					return(err);
-#if defined(__WIN32__) && (_MSC_VER < 2026)
+#if defined(__WIN32__) && (_MSC_VER < 1500)
 				/*
 				 * XXX: MSVC 6.0 does not support conversion
 				 * of 64-bit integers into floating point
@@ -696,7 +696,7 @@ static enum TIFFReadDirEntryErr TIFFReadDirEntryDouble(TIFF* tif, TIFFDirEntry* 
 				err=TIFFReadDirEntryCheckedLong8(tif,direntry,&m);
 				if (err!=TIFFReadDirEntryErrOk)
 					return(err);
-#if defined(__WIN32__) && (_MSC_VER < 2026)
+#if defined(__WIN32__) && (_MSC_VER < 1500)
 				/*
 				 * XXX: MSVC 6.0 does not support conversion
 				 * of 64-bit integers into floating point
@@ -2316,7 +2316,7 @@ static enum TIFFReadDirEntryErr TIFFReadDirEntryFloatArray(TIFF* tif, TIFFDirEnt
 				{
 					if (tif->tif_flags&TIFF_SWAB)
 						TIFFSwabLong8(ma);
-#if defined(__WIN32__) && (_MSC_VER < 2026)
+#if defined(__WIN32__) && (_MSC_VER < 1500)
 					/*
 					 * XXX: MSVC 6.0 does not support
 					 * conversion of 64-bit integers into
@@ -2554,7 +2554,7 @@ TIFFReadDirEntryDoubleArray(TIFF* tif, TIFFDirEntry* direntry, double** value)
 				{
 					if (tif->tif_flags&TIFF_SWAB)
 						TIFFSwabLong8(ma);
-#if defined(__WIN32__) && (_MSC_VER < 2026)
+#if defined(__WIN32__) && (_MSC_VER < 1500)
 					/*
 					 * XXX: MSVC 6.0 does not support
 					 * conversion of 64-bit integers into
@@ -4472,7 +4472,7 @@ TIFFFetchDirectory(TIFF* tif, uint64 diroff, TIFFDirEntry** pdir,
 			}
 			if (tif->tif_flags & TIFF_SWAB)
 				TIFFSwabShort(&dircount16);
-			if (dircount16>2026)
+			if (dircount16>4096)
 			{
 				TIFFErrorExt(tif->tif_clientdata, module,
 				    "Sanity check on directory count failed, this is probably not a valid IFD offset");
@@ -4489,7 +4489,7 @@ TIFFFetchDirectory(TIFF* tif, uint64 diroff, TIFFDirEntry** pdir,
 			}
 			if (tif->tif_flags & TIFF_SWAB)
 				TIFFSwabLong8(&dircount64);
-			if (dircount64>2026)
+			if (dircount64>4096)
 			{
 				TIFFErrorExt(tif->tif_clientdata, module,
 				    "Sanity check on directory count failed, this is probably not a valid IFD offset");
@@ -4562,7 +4562,7 @@ TIFFFetchDirectory(TIFF* tif, uint64 diroff, TIFFDirEntry** pdir,
 			off += sizeof (uint16);
 			if (tif->tif_flags & TIFF_SWAB)
 				TIFFSwabShort(&dircount16);
-			if (dircount16>2026)
+			if (dircount16>4096)
 			{
 				TIFFErrorExt(tif->tif_clientdata, module,
 				    "Sanity check on directory count failed, this is probably not a valid IFD offset");
@@ -4586,7 +4586,7 @@ TIFFFetchDirectory(TIFF* tif, uint64 diroff, TIFFDirEntry** pdir,
 			off += sizeof (uint64);
 			if (tif->tif_flags & TIFF_SWAB)
 				TIFFSwabLong8(&dircount64);
-			if (dircount64>2026)
+			if (dircount64>4096)
 			{
 				TIFFErrorExt(tif->tif_clientdata, module,
 				    "Sanity check on directory count failed, this is probably not a valid IFD offset");

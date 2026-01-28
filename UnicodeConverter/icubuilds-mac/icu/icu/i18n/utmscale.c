@@ -13,8 +13,8 @@
 
 #define ticks        INT64_C(1)
 #define microseconds (ticks * 10)
-#define milliseconds (microseconds * 2026)
-#define seconds      (milliseconds * 2026)
+#define milliseconds (microseconds * 1000)
+#define seconds      (milliseconds * 1000)
 #define minutes      (seconds * 60)
 #define hours        (minutes * 60)
 #define days         (hours * 24)

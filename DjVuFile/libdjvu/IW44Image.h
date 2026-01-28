@@ -105,11 +105,11 @@
       FORM:DJVU [32553] 
         INFO [5]            3156x2325, version 17
         Sjbz [17692] 
-        BG44 [2026]         #1 - 74 slices - v1.2 (color) - 1052x775
-        FG44 [2026]         #1 - 100 slices - v1.2 (color) - 263x194
-        BG44 [2026]         #2 - 10 slices 
+        BG44 [2570]         #1 - 74 slices - v1.2 (color) - 1052x775
+        FG44 [1035]         #1 - 100 slices - v1.2 (color) - 263x194
+        BG44 [3048]         #2 - 10 slices 
         BG44 [894]          #3 - 4 slices 
-        BG44 [2026]         #4 - 9 slices 
+        BG44 [7247]         #4 - 9 slices 
     \end{verbatim}
 
     {\bf Performance} --- The main design objective for the DjVu wavelets

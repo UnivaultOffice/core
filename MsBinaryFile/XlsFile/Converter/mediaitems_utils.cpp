@@ -52,15 +52,15 @@ std::wstring get_rel_type(external_items::Type type)
     switch (type)
     {
     case external_items::typeImage:
-        return L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/image";
+        return L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/image";
 	case external_items::typeChart:
-        return L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/chart";
+        return L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart";
 	case external_items::typeExternalLink:
-		return L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/externalLinkPath";
+		return L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/externalLinkPath";
 	case external_items::typeActiveX:
-		return L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/control";
+		return L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/control";
 	case external_items::typeControlProps:
-		return L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/ctrlProp";
+		return L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/ctrlProp";
 	default:
         return L"";
     }

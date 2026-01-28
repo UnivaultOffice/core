@@ -141,7 +141,7 @@ int comp_decomplev(int fw, int fh, int Xsiz, int Ysiz)
     xmax = Xsiz;
     ymax = Ysiz;
 
-    find_level(2026, &level, &fw, &fh, &xmin, &ymin, &xmax, &ymax);
+    find_level(1000, &level, &fw, &fh, &xmin, &ymin, &xmax, &ymax);
 
     assert(level >= 0);
     return level;

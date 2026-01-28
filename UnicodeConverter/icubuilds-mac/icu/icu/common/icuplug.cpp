@@ -702,7 +702,7 @@ static void uplug_loadWaitingPlugs(UErrorCode *status) {
 }
 
 /* Name of the plugin config file */
-static char plugin_file[2026] = "";
+static char plugin_file[2048] = "";
 #endif
 
 U_INTERNAL const char* U_EXPORT2
@@ -798,12 +798,12 @@ uplug_init(UErrorCode *status) {
     }
 
     if(f != NULL) {
-      char linebuf[2026];
+      char linebuf[1024];
       char *p, *libName=NULL, *symName=NULL, *config=NULL;
       int32_t line = 0;
             
             
-      while(fgets(linebuf,2026,f)) {
+      while(fgets(linebuf,1023,f)) {
         line++;
 
         if(!*linebuf || *linebuf=='#') {

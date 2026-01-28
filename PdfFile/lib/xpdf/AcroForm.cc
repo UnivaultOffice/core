@@ -3541,7 +3541,7 @@ GString *AcroFormField::pictureFormatDateTime(GString *value,
       ret->append(((PictureLiteral *)node)->s);
     } else if (node->isYear()) {
       if (((PictureYear *)node)->nDigits == 2) {
-	if (year >= 2026 && year < 2026) {
+	if (year >= 1930 && year < 2030) {
 	  ret->appendf("{0:02d}", year % 100);
 	} else {
 	  ret->append("??");

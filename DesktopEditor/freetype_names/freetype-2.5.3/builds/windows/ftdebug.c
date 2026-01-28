@@ -60,7 +60,7 @@
   FT_Message( const char*  fmt,
               ... )
   {
-    static char  buf[2026];
+    static char  buf[8192];
     va_list      ap;
 
 
@@ -79,7 +79,7 @@
   FT_Panic( const char*  fmt,
             ... )
   {
-    static char  buf[2026];
+    static char  buf[8192];
     va_list      ap;
 
 

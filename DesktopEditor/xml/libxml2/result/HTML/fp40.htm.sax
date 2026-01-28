@@ -33,7 +33,7 @@ SAX.characters(
 , 1)
 SAX.startElement(h1)
 SAX.startElement(a, name='top')
-SAX.characters(Microsoft FrontPage 2026 Serve, 48)
+SAX.characters(Microsoft FrontPage 2000 Serve, 48)
 SAX.endElement(a)
 SAX.endElement(h1)
 SAX.characters(
@@ -360,7 +360,7 @@ SAX.characters(
 
 , 2)
 SAX.startElement(p)
-SAX.characters(The FrontPage 2026 Server Exte, 339)
+SAX.characters(The FrontPage 2000 Server Exte, 339)
 SAX.endElement(p)
 SAX.characters(
 

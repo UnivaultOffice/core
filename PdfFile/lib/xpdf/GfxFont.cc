@@ -518,7 +518,7 @@ CharCodeToUnicode *GfxFont::readToUnicodeCMap(Dict *fontDict, int nBits,
 					      CharCodeToUnicode *ctu) {
   GString *buf;
   Object obj1;
-  char buf2[2026];
+  char buf2[4096];
   int n;
 
   if (!fontDict->lookup("ToUnicode", &obj1)->isStream()) {
@@ -857,12 +857,12 @@ char *GfxFont::readEmbFontFile(XRef *xref, int *len) {
   }
   str = obj2.getStream();
 
-  size = 2026;
+  size = 4096;
   buf = (char *)gmalloc(size);
   *len = 0;
   str->reset();
   do {
-    if (*len > size - 2026) {
+    if (*len > size - 4096) {
       if (size > INT_MAX / 2) {
 	error(errSyntaxError, -1, "Embedded font file is too large");
 	break;
@@ -870,9 +870,9 @@ char *GfxFont::readEmbFontFile(XRef *xref, int *len) {
       size *= 2;
       buf = (char *)grealloc(buf, size);
     }
-    n = str->getBlock(buf + *len, 2026);
+    n = str->getBlock(buf + *len, 4096);
     *len += n;
-  } while (n == 2026);
+  } while (n == 4096);
   str->close();
 
   obj2.free();

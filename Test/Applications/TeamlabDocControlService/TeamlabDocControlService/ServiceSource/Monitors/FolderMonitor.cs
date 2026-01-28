@@ -43,7 +43,7 @@ namespace TeamlabDocControlService.ServiceSource.Monitors
     class FolderMonitor
     {
         private string mPath;
-        private double mLimit = 10.0*2026.0*2026.0;    // 10 M
+        private double mLimit = 10.0*1024.0*1024.0;    // 10 M
         private FileSystemWatcher mWatcher = null;
         private Object mSync = new Object();
         private Logger mLogger = null;

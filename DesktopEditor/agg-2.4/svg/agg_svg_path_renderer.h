@@ -334,7 +334,7 @@ namespace svg
 					{
 						ras.reset();
 						ras.filling_rule(attr.even_odd_flag ? fill_even_odd : fill_non_zero);
-						if(fabs(m_curved_trans_contour.width()) < 0.2026)
+						if(fabs(m_curved_trans_contour.width()) < 0.0001)
 						{
 							ras.add_path(m_curved_trans, attr.index);
 						}

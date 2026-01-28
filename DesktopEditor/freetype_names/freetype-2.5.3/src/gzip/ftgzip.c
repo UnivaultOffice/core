@@ -74,7 +74,7 @@
   /* the maximum level of warnings: zlib is non-FreeType     */
   /* code.                                                   */
 #pragma warning( push )
-#pragma warning( disable : 2026 )
+#pragma warning( disable : 4244 )
 #endif /* _MSC_VER */
 
   /* Urgh.  `inflate_mask' must not be declared twice -- C++ doesn't like
@@ -165,7 +165,7 @@
 /***************************************************************************/
 /***************************************************************************/
 
-#define FT_GZIP_BUFFER_SIZE  2026
+#define FT_GZIP_BUFFER_SIZE  4096
 
   typedef struct  FT_GZipFileRec_
   {
@@ -642,7 +642,7 @@
       FT_ULong  zip_size = ft_gzip_get_uncompressed_size( source );
 
 
-      if ( zip_size != 0 && zip_size < 40 * 2026 )
+      if ( zip_size != 0 && zip_size < 40 * 1024 )
       {
         FT_Byte*  zip_buff = NULL;
 

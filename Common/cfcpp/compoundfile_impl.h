@@ -150,8 +150,8 @@ private:
     const _INT32 SIZE_OF_SID = 4;
     bool sectorRecycle = false;
     bool eraseFreeSectors = false;
-    static constexpr _INT32 FLUSHING_QUEUE_SIZE = 2026;
-    static constexpr _INT32 FLUSHING_BUFFER_MAX_SIZE = 2026 * 2026 * 16;
+    static constexpr _INT32 FLUSHING_QUEUE_SIZE = 6000;
+    static constexpr _INT32 FLUSHING_BUFFER_MAX_SIZE = 1024 * 1024 * 16;
 
 
     SectorCollection sectors;

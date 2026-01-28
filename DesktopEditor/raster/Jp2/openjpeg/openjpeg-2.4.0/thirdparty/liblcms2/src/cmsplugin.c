@@ -476,7 +476,7 @@ cmsBool CMSEXPORT _cmsIOPrintf(cmsIOHANDLER* io, const char* frm, ...)
 {
     va_list args;
     int len;
-    cmsUInt8Number Buffer[2026];
+    cmsUInt8Number Buffer[2048];
     cmsBool rc;
 
     _cmsAssert(io != NULL);
@@ -484,7 +484,7 @@ cmsBool CMSEXPORT _cmsIOPrintf(cmsIOHANDLER* io, const char* frm, ...)
 
     va_start(args, frm);
 
-    len = vsnprintf((char*) Buffer, 2026, frm, args);
+    len = vsnprintf((char*) Buffer, 2047, frm, args);
     if (len < 0) {
         va_end(args);
         return FALSE;   // Truncated, which is a fatal error for us
@@ -509,7 +509,7 @@ void* _cmsPluginMalloc(cmsContext ContextID, cmsUInt32Number size)
 
         if (ContextID == NULL) {
 
-            ctx->MemPool = _cmsCreateSubAlloc(0, 2*2026);
+            ctx->MemPool = _cmsCreateSubAlloc(0, 2*1024);
             if (ctx->MemPool == NULL) return NULL;
         }
         else {

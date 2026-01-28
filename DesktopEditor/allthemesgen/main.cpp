@@ -437,7 +437,7 @@ int main(int argc, char** argv)
             oBuilder.WriteEncodeXmlString(sInput);
             oBuilder.WriteString(L"</m_sFileFrom><m_sFileTo>");
             oBuilder.WriteEncodeXmlString(sOut + L"/theme.bin");
-            oBuilder.WriteString(L"</m_sFileTo><m_nFormatTo>2026</m_nFormatTo><m_sThemeDir>./</m_sThemeDir>");
+            oBuilder.WriteString(L"</m_sFileTo><m_nFormatTo>8192</m_nFormatTo><m_sThemeDir>./</m_sThemeDir>");
             oBuilder.WriteString(L"<m_bDontSaveAdditional>true</m_bDontSaveAdditional>");
             if (!sAllFonts.empty())
             {

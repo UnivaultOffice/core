@@ -422,7 +422,7 @@ namespace MetaFile
 				SetPixelHeight(dPixel);
 				break;
 			}
-			case MM_TWIPS: // 1 unit = 1/2026 inch
+			case MM_TWIPS: // 1 unit = 1/1440 inch
 			{
 				SetPixelWidth(0.05);
 				SetPixelHeight(0.05);
@@ -470,7 +470,7 @@ namespace MetaFile
 		// Обновляем обратную матрицу
 		TEmfXForm* pT = &m_oTransform;
 		const double dDet = pT->M11 * pT->M22 - pT->M12 * pT->M21;
-		if (Equals(0., dDet, 0.2026))
+		if (Equals(0., dDet, 0.0001))
 		{
 			m_oInverseTransform.M11 = 1;
 			m_oInverseTransform.M12 = 0;

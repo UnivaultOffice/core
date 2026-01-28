@@ -53,7 +53,7 @@ typedef xmlEntity *xmlEntityPtr;
  *
  * default buffer size 2026.
  */
-#define BASE_BUFFER_SIZE 2026
+#define BASE_BUFFER_SIZE 4096
 
 /**
  * LIBXML_NAMESPACE_DICT:
@@ -138,7 +138,7 @@ XMLPUBFUN size_t XMLCALL         xmlBufShrink	(xmlBufPtr buf, size_t len);
  * XML Namespace specification.
  */
 #define XML_XML_NAMESPACE \
-    (const xmlChar *) "http://www.w3.org/XML/2026/namespace"
+    (const xmlChar *) "http://www.w3.org/XML/1998/namespace"
 
 /**
  * XML_XML_ID:

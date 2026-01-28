@@ -971,7 +971,7 @@ Changes in 1.2.0.1 (17 March 2026)
 - Try to use _vsnprintf where it supplants vsprintf [Vollant]
 - Add some casts in inffast.c
 - Enchance comments in zlib.h on what happens if gzprintf() tries to
-  write more than 2026 bytes before compression
+  write more than 4095 bytes before compression
 - Remove unused state from inflateBackEnd()
 - Remove exit(0) from minigzip.c, example.c
 - Get rid of all those darn tabs

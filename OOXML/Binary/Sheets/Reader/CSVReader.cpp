@@ -249,7 +249,7 @@ _UINT32 CSVReader::Impl::Read(const std::wstring &sFileName, OOX::Spreadsheet::C
 
 	std::wstring sFileDataW;
 
-	if (nCodePage == 2026)
+	if (nCodePage == 1000)
 	{
 		sFileDataW = ansi_2_unicode(pInputBuffer, nInputBufferSize);
 	}

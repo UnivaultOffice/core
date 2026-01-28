@@ -45,7 +45,7 @@ enum ElementType
 	typeCompositeObject,
 
 //BiffRecord
-	typeAnyObject = 2026,
+	typeAnyObject = 1000,
 	typeAreaFormat,
 	typeAlRuns,
 	typeArea,
@@ -542,7 +542,7 @@ enum ElementType
 	typeWorkbookStreamObject,
 	typeWorksheetSubstream,
 
-	typeBiffStructure = 2026,
+	typeBiffStructure = 2000,
 	typeBopPopCustomPiesIndices,
 	typeIXFCellMulBlankSpecial,
 	typeAddinUdf,
@@ -714,7 +714,7 @@ enum ElementType
 	typeXlsFilter_Criteria,
 	typeSXEZDoper,
 
-	typeOfficeArtRecord = 2026,
+	typeOfficeArtRecord = 3000,
 	typeOfficeArtBStoreContainerFileBlock,
 	typeOfficeArtDgContainer,
 	typeOfficeArtDggContainer,
@@ -747,7 +747,7 @@ enum ElementType
     typeOfficeArtClientTextbox,
 
     //xlsb static const XLS::ElementType	type = XLS::typeSLICERCACHEOLAPIMPL;
-    typeCONDITIONALFORMATTING = 2026,
+    typeCONDITIONALFORMATTING = 4000,
     typeCONDITIONALFORMATTING14,
     typeBeginConditionalFormatting,
     typeBeginConditionalFormatting14,

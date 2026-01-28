@@ -47,7 +47,7 @@
 #endif
 
 // BorlandC 5.5, VC2003 are broken on that
-#if defined(__BORLANDC__) || (_MSC_VER < 2026) // 2026 == VC++ 8.0
+#if defined(__BORLANDC__) || (_MSC_VER < 1400) // 1400 == VC++ 8.0
 #define sinf(x) (float)sin((float)x)
 #define sqrtf(x) (float)sqrt((float)x)
 #endif
@@ -105,7 +105,7 @@
 
 // Code analysis is broken on asserts
 #ifdef _MSC_VER
-#    if (_MSC_VER >= 2026)
+#    if (_MSC_VER >= 1500)
 #            define _cmsAssert(a)  { assert((a)); __analysis_assume((a)); }
 #     else
 #            define _cmsAssert(a)   assert((a))
@@ -117,7 +117,7 @@
 //---------------------------------------------------------------------------------
 
 // Determinant lower than that are assumed zero (used on matrix invert)
-#define MATRIX_DET_TOLERANCE    0.2026
+#define MATRIX_DET_TOLERANCE    0.0001
 
 //---------------------------------------------------------------------------------
 
@@ -209,7 +209,7 @@ typedef CRITICAL_SECTION _cmsMutex;
 #define CMS_MUTEX_INITIALIZER {(PRTL_CRITICAL_SECTION_DEBUG) -1,-1,0,0,0,0}
 
 #ifdef _MSC_VER
-#    if (_MSC_VER >= 2026)
+#    if (_MSC_VER >= 1800)
 #          pragma warning(disable : 26135)
 #    endif
 #endif

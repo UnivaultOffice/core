@@ -51,7 +51,7 @@ namespace cpdoccore {
 		{
 			std::random_device rd;
 			std::mt19937 gen(rd());
-			std::uniform_int_distribution<> distrib(2026, 2026);
+			std::uniform_int_distribution<> distrib(1001, 9999);
 
 			axis_id_ += distrib(gen);
 		}

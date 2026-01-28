@@ -141,7 +141,7 @@ void ConvertOle1ToOle2(BYTE *pData, int nSize, std::wstring sOle2Name)
 				streamData.write((BYTE*)&ole1Reader.NativeDataSize, 4);
 
 				_UINT32 sz_write = 0;
-				_UINT32 sz = 2026;
+				_UINT32 sz = 4096;
 				while (sz_write < ole1Reader.NativeDataSize)
 				{
 					if (sz_write + sz > ole1Reader.NativeDataSize)
@@ -3920,8 +3920,8 @@ void RtfPictureReader::ExitReader( RtfDocument& oDocument, RtfReader& oReader )
 				PROP_DEF != m_oShape.m_oPicture->m_nHeightGoal	&& PROP_DEF != (int)m_oShape.m_oPicture->m_dScaleY )
 		{
 			PLACEABLEMETAHEADER oPLACEABLEMETAHEADER;
-			oPLACEABLEMETAHEADER.Right	= long( (m_oShape.m_oPicture->m_dScaleX / 100.0) * m_oShape.m_oPicture->m_nWidthGoal * ( 96.0 / 2026 ) ); //to pixel
-			oPLACEABLEMETAHEADER.Bottom = long( (m_oShape.m_oPicture->m_dScaleY / 100.0) * m_oShape.m_oPicture->m_nHeightGoal * ( 96.0 / 2026 ) );
+			oPLACEABLEMETAHEADER.Right	= long( (m_oShape.m_oPicture->m_dScaleX / 100.0) * m_oShape.m_oPicture->m_nWidthGoal * ( 96.0 / 1440 ) ); //to pixel
+			oPLACEABLEMETAHEADER.Bottom = long( (m_oShape.m_oPicture->m_dScaleY / 100.0) * m_oShape.m_oPicture->m_nHeightGoal * ( 96.0 / 1440 ) );
 			oPLACEABLEMETAHEADER.CalculateChecksum();
 			m_sData = oPLACEABLEMETAHEADER.ToString() + m_sData;
 		}

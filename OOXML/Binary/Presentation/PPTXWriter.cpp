@@ -1018,13 +1018,13 @@ namespace NSBinPptxRW
 
 
 			std::wstring strRELS = _T("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\
-<Relationships xmlns=\"http://schemas.openxmlformats.org/package/2026/relationships\">\
-<Relationship Id=\"rId3\" Type=\"http://schemas.openxmlformats.org/package/2026/relationships/metadata/core-properties\" Target=\"docProps/core.xml\"/>\
-<Relationship Id=\"rId1\" Type=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships/officeDocument\" Target=\"ppt/presentation.xml\"/>\
-<Relationship Id=\"rId2\" Type=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships/extended-properties\" Target=\"docProps/app.xml\"/>");
+<Relationships xmlns=\"http://schemas.openxmlformats.org/package/2006/relationships\">\
+<Relationship Id=\"rId3\" Type=\"http://schemas.openxmlformats.org/package/2006/relationships/metadata/core-properties\" Target=\"docProps/core.xml\"/>\
+<Relationship Id=\"rId1\" Type=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument\" Target=\"ppt/presentation.xml\"/>\
+<Relationship Id=\"rId2\" Type=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships/extended-properties\" Target=\"docProps/app.xml\"/>");
 			if (m_oCustomProperties.IsInit())
 			{
-				strRELS += L"<Relationship Id=\"rId4\" Type=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships/custom-properties\" Target=\"docProps/custom.xml\"/>";
+				strRELS += L"<Relationship Id=\"rId4\" Type=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships/custom-properties\" Target=\"docProps/custom.xml\"/>";
 			}
 			strRELS += L"</Relationships>";
 
@@ -1204,9 +1204,9 @@ namespace NSBinPptxRW
 
 			m_oViewProps.SlideViewPr->CSldViewPr.GuideLst.push_back(PPTX::nsViewProps::Guide());
 			m_oViewProps.SlideViewPr->CSldViewPr.GuideLst[0].orient = _T("horz");
-			m_oViewProps.SlideViewPr->CSldViewPr.GuideLst[0].pos = 2026;
+			m_oViewProps.SlideViewPr->CSldViewPr.GuideLst[0].pos = 2160;
 			m_oViewProps.SlideViewPr->CSldViewPr.GuideLst.push_back(PPTX::nsViewProps::Guide());
-			m_oViewProps.SlideViewPr->CSldViewPr.GuideLst[1].pos = 2026;
+			m_oViewProps.SlideViewPr->CSldViewPr.GuideLst[1].pos = 2880;
 
 			m_oViewProps.NotesTextViewPr = new PPTX::nsViewProps::NotesTextViewPr();
 			m_oViewProps.NotesTextViewPr->CViewPr.Origin.x = 0;
@@ -1249,8 +1249,8 @@ namespace NSBinPptxRW
 			std::wstring strThemeNotesNum = std::to_wstring(nIndexTheme);
 
 			std::wstring strVal = _T("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\
-								<Relationships xmlns=\"http://schemas.openxmlformats.org/package/2026/relationships\">\
-								<Relationship Id=\"rId1\" Type=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships/theme\" Target=\"../theme/theme") + strThemeNotesNum + _T(".xml\"/></Relationships>");
+								<Relationships xmlns=\"http://schemas.openxmlformats.org/package/2006/relationships\">\
+								<Relationship Id=\"rId1\" Type=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme\" Target=\"../theme/theme") + strThemeNotesNum + _T(".xml\"/></Relationships>");
 			NSFile::CFileBinary oFileRels;
 			oFileRels.CreateFile(pathNotesMasterRels.GetPath() + FILE_SEPARATOR_STR + _T("notesMaster1.xml.rels"));
 			oFileRels.WriteStringUTF8(strVal);

@@ -470,7 +470,7 @@ namespace cpdoccore {
 		std::pair<int, std::wstring> layout_id =
 			root()->odf_context().styleContainer().presentation_layouts().add_or_find(pageLayoutName, pageMasterName);
 
-		current_slide().Rels().add(relationship(layout_id.second, L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/slideLayout",
+		current_slide().Rels().add(relationship(layout_id.second, L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideLayout",
 			std::wstring(L"../slideLayouts/slideLayout") + std::to_wstring(layout_id.first) + L".xml"));
 
 		return true;
@@ -496,7 +496,7 @@ namespace cpdoccore {
 
 			root()->odf_context().styleContainer().presentation_masters().add_layout_to(layouts.content[layout_index].master_name, layouts.content[layout_index]);
 
-			current_layout().Rels().add(relationship(L"smId1"/*master_id.second*/, L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/slideMaster",
+			current_layout().Rels().add(relationship(L"smId1"/*master_id.second*/, L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideMaster",
 				std::wstring(L"../slideMasters/slideMaster") + std::to_wstring(master_id.first) + L".xml"));
 
 			//
@@ -611,12 +611,12 @@ namespace cpdoccore {
 	{
 		create_new_slideNotes();
 
-		current_slide().Rels().add(relationship(notes_.back()->rId(), L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/notesSlide",
+		current_slide().Rels().add(relationship(notes_.back()->rId(), L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/notesSlide",
 			L"../notesSlides/notesSlide" + std::to_wstring(notes_.size()) + L".xml"));
 
 		get_slide_context().start_slide();
 
-		current_notes().Rels().add(relationship(L"nId1", L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/slide",
+		current_notes().Rels().add(relationship(L"nId1", L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide",
 			L"../slides/slide" + std::to_wstring(slides_.size()) + L".xml"));
 
 		return true;
@@ -656,7 +656,7 @@ namespace cpdoccore {
 		for (size_t i = 0; i < notes_.size(); i++)
 		{
 			notes_[i]->Rels().add(relationship(L"nmId1",
-				L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/notesMaster",
+				L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/notesMaster",
 				L"../notesMasters/notesMaster1.xml"));
 		}
 	}

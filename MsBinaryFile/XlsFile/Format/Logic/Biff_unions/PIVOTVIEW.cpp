@@ -177,7 +177,7 @@ int PIVOTVIEW::serialize(std::wostream & strm)
 	{
 		CP_XML_NODE(L"pivotTableDefinition")
 		{ 
-			CP_XML_ATTR(L"xmlns", L"http://schemas.openxmlformats.org/spreadsheetml/2026/main");
+			CP_XML_ATTR(L"xmlns", L"http://schemas.openxmlformats.org/spreadsheetml/2006/main");
 			
 			CP_XML_ATTR(L"name",				view->stTable.value()); 
 			CP_XML_ATTR(L"cacheId",				indexCache); 

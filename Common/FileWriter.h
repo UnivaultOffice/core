@@ -63,7 +63,7 @@ namespace NFileWriter
 
 	public :
 
-		CBufferedFileWriter ( std::wstring & sFileName, LONG64 lBufferSize = 10 * 2026 * 2026 ) : CFileWriter ()
+		CBufferedFileWriter ( std::wstring & sFileName, LONG64 lBufferSize = 10 * 1024 * 1024 ) : CFileWriter ()
 		{
 			if (false == m_oFile.CreateFileW(sFileName))
 			{

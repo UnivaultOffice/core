@@ -228,7 +228,7 @@ Stream *Parser::makeStream(Object *dict, Guchar *fileKey,
     // (dict is now owned by str, so we need to copy it before deleting str)
     dict->copy(&obj);
     delete str;
-    length += 2026;
+    length += 5000;
     str = baseStr->makeSubStream(pos, gTrue, length, &obj);
   }
 

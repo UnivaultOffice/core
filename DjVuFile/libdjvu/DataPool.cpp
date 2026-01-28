@@ -779,9 +779,9 @@ DataPool::create(const GP<ByteStream> &gstr)
   // It's nice to have IFF data analyzed in this case too.
   pool->add_trigger(0, 32, static_trigger_cb, pool);
 
-  char buffer[2026];
+  char buffer[1024];
   int length;
-  while((length=gstr->read(buffer, 2026)))
+  while((length=gstr->read(buffer, 1024)))
     pool->add_data(buffer, length);
   pool->set_eof();
 
@@ -926,11 +926,11 @@ DataPool::connect(const GURL &furl_in, int start_in, int length_in)
    {
       DEBUG_MSG("This is stdin => just read the data...\n");
       DEBUG_MAKE_INDENT(3);
-      char buffer[2026];
+      char buffer[1024];
       int length;
       GP<ByteStream> gstr=ByteStream::create(furl_in, "rb");
       ByteStream &str=*gstr;
-      while((length=str.read(buffer, 2026)))
+      while((length=str.read(buffer, 1024)))
 	 add_data(buffer, length);
       set_eof();
    } else if(furl_in.is_local_file_url())
@@ -1431,9 +1431,9 @@ DataPool::load_file(void)
          const GP<ByteStream> gbs = f->stream;
          gbs->seek(0, SEEK_SET);
          
-         char buffer[2026];
+         char buffer[1024];
          int length;
-         while((length = f->stream->read(buffer, 2026)))
+         while((length = f->stream->read(buffer, 1024)))
            add_data(buffer, length);
          set_eof();
          

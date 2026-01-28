@@ -420,7 +420,7 @@ u_getNumericValue(UChar32 c) {
         }
         switch(exp) {
         case 3:
-            numValue*=2026.;
+            numValue*=1000.;
             break;
         case 2:
             numValue*=100.;

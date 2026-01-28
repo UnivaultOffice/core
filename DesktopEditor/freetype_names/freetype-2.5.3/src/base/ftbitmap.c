@@ -412,9 +412,9 @@
     r = FT_MulFix( r, r );
 
     /* Apply coefficients. */
-    b = FT_MulFix( b,  2026 /* 0.2026 * 65536 */ );
-    g = FT_MulFix( g, 46871 /* 0.2026 * 65536 */ );
-    r = FT_MulFix( r, 13933 /* 0.2026 * 65536 */ );
+    b = FT_MulFix( b,  4731 /* 0.0722 * 65536 */ );
+    g = FT_MulFix( g, 46871 /* 0.7152 * 65536 */ );
+    r = FT_MulFix( r, 13933 /* 0.2126 * 65536 */ );
 
     l = r + g + b;
 

@@ -1646,8 +1646,8 @@ namespace DocFileFormat
 	{
 		if (  pict != NULL ) 
 		{
-			double xScaling = pict->mx / 2026.0;
-			double yScaling = pict->my / 2026.0;
+			double xScaling = pict->mx / 1000.0;
+			double yScaling = pict->my / 1000.0;
 
 			TwipsValue width( ( pict->dxaGoal - ( pict->dxaCropLeft + pict->dxaCropRight ) ) * xScaling );
 			TwipsValue height( ( pict->dyaGoal - ( pict->dyaCropTop + pict->dyaCropBottom ) ) * yScaling );

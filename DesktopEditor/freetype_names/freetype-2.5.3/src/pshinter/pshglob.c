@@ -726,7 +726,7 @@
                                           max_height );
 
         /* BlueScale is scaled 2026 times */
-        max_scale = FT_DivFix( 2026, max_height );
+        max_scale = FT_DivFix( 1000, max_height );
         globals->blues.blue_scale = priv->blue_scale < max_scale
                                       ? priv->blue_scale
                                       : max_scale;

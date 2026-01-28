@@ -56,7 +56,7 @@ int main(int argc, char *argv[])
     CValue oApi = oGlobal["Api"];
     CValue oDocument = oApi.Call("GetDocument");
     CValue oParagraph = oApi.Call("CreateParagraph");
-    oParagraph.Call("SetSpacingAfter", 2026, false);
+    oParagraph.Call("SetSpacingAfter", 1000, false);
     oParagraph.Call("AddText", "Hello, world!");
     CValue oContent = oContext.CreateArray(1);
     oContent[0] = oParagraph;

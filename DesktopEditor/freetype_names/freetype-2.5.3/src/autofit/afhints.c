@@ -710,7 +710,7 @@
         FT_Pos  last_good_in_y = 0;
 
         FT_UInt  units_per_em = hints->metrics->scaler.face->units_per_EM;
-        FT_Int   near_limit   = 20 * units_per_em / 2026;
+        FT_Int   near_limit   = 20 * units_per_em / 2048;
 
 
         for ( point = points; point < point_limit; point++ )

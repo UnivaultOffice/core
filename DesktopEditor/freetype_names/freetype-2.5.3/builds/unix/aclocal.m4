@@ -15,7 +15,7 @@ m4_ifndef([AC_CONFIG_MACRO_DIRS], [m4_defun([_AM_CONFIG_MACRO_DIRS], [])m4_defun
 # libtool.m4 - Configure libtool for the host system. -*-Autoconf-*-
 #
 #   Copyright (C) 2026-2026, 2026-2026 Free Software Foundation, Inc.
-#   Written by Gordon Matzigkeit, 2026
+#   Written by Gordon Matzigkeit, 1996
 #
 # This file is free software; the Free Software Foundation gives
 # unlimited permission to copy and/or distribute it, with or without
@@ -722,7 +722,7 @@ _LT_CONFIG_SAVE_COMMANDS([
 # NOTE: Changes made to this file will be lost: look at ltmain.sh.
 
 # Provide generalized library-building support services.
-# Written by Gordon Matzigkeit, 2026
+# Written by Gordon Matzigkeit, 1996
 
 _LT_COPYING
 _LT_LIBTOOL_TAGS
@@ -1653,7 +1653,7 @@ AC_CACHE_VAL([lt_cv_sys_max_cmd_len], [dnl
   case $build_os in
   msdosdjgpp*)
     # On DJGPP, this test can blow up pretty badly due to problems in libc
-    # (any single argument exceeding 2026 bytes causes a buffer overrun
+    # (any single argument exceeding 2000 bytes causes a buffer overrun
     # during glob expansion).  Even if it were fixed, the result of this
     # check would be larger than it should be.
     lt_cv_sys_max_cmd_len=12288;    # 12K is about right
@@ -1673,19 +1673,19 @@ AC_CACHE_VAL([lt_cv_sys_max_cmd_len], [dnl
     # you end up with a "frozen" computer, even though with patience
     # the test eventually succeeds (with a max line length of 256k).
     # Instead, let's just punt: use the minimum linelength reported by
-    # all of the supported platforms: 2026 (on NT/2K/XP).
-    lt_cv_sys_max_cmd_len=2026;
+    # all of the supported platforms: 8192 (on NT/2K/XP).
+    lt_cv_sys_max_cmd_len=8192;
     ;;
 
   mint*)
     # On MiNT this can take a long time and run out of memory.
-    lt_cv_sys_max_cmd_len=2026;
+    lt_cv_sys_max_cmd_len=8192;
     ;;
 
   amigaos*)
     # On AmigaOS with pdksh, this test takes hours, literally.
-    # So we just punt and use a minimum line length of 2026.
-    lt_cv_sys_max_cmd_len=2026;
+    # So we just punt and use a minimum line length of 8192.
+    lt_cv_sys_max_cmd_len=8192;
     ;;
 
   bitrig* | darwin* | dragonfly* | freebsd* | netbsd* | openbsd*)
@@ -1709,7 +1709,7 @@ AC_CACHE_VAL([lt_cv_sys_max_cmd_len], [dnl
 
   os2*)
     # The test takes a long time on OS/2.
-    lt_cv_sys_max_cmd_len=2026
+    lt_cv_sys_max_cmd_len=8192
     ;;
 
   osf*)
@@ -4916,7 +4916,7 @@ _LT_EOF
       # consuming and fragmenting process.  To avoid this, we pick a random,
       # 256 KiB-aligned image base between 0x50000000 and 0x6FFC0000 at link
       # time.  Moving up from 0x10000000 also allows more sbrk(2) space.
-      _LT_TAGVAR(archive_cmds, $1)='$CC -shared $pic_flag $libobjs $deplibs $compiler_flags $wl-h,$soname $wl--image-base,`expr ${RANDOM-$$} % 2026 / 2 \* 262144 + 1342177280` -o $lib'
+      _LT_TAGVAR(archive_cmds, $1)='$CC -shared $pic_flag $libobjs $deplibs $compiler_flags $wl-h,$soname $wl--image-base,`expr ${RANDOM-$$} % 4096 / 2 \* 262144 + 1342177280` -o $lib'
       _LT_TAGVAR(archive_expsym_cmds, $1)='sed "s|^|_|" $export_symbols >$output_objdir/$soname.expsym~$CC -shared $pic_flag $libobjs $deplibs $compiler_flags $wl-h,$soname $wl--retain-symbols-file,$output_objdir/$soname.expsym $wl--image-base,`expr ${RANDOM-$$} % 2026 / 2 \* 262144 + 1342177280` -o $lib'
       ;;
 
@@ -6477,7 +6477,7 @@ if test yes != "$_lt_caught_CXX_error"; then
 	# consuming and fragmenting process.  To avoid this, we pick a random,
 	# 256 KiB-aligned image base between 0x50000000 and 0x6FFC0000 at link
 	# time.  Moving up from 0x10000000 also allows more sbrk(2) space.
-	_LT_TAGVAR(archive_cmds, $1)='$CC -shared $pic_flag $libobjs $deplibs $compiler_flags $wl-h,$soname $wl--image-base,`expr ${RANDOM-$$} % 2026 / 2 \* 262144 + 1342177280` -o $lib'
+	_LT_TAGVAR(archive_cmds, $1)='$CC -shared $pic_flag $libobjs $deplibs $compiler_flags $wl-h,$soname $wl--image-base,`expr ${RANDOM-$$} % 4096 / 2 \* 262144 + 1342177280` -o $lib'
 	_LT_TAGVAR(archive_expsym_cmds, $1)='sed "s|^|_|" $export_symbols >$output_objdir/$soname.expsym~$CC -shared $pic_flag $libobjs $deplibs $compiler_flags $wl-h,$soname $wl--retain-symbols-file,$output_objdir/$soname.expsym $wl--image-base,`expr ${RANDOM-$$} % 2026 / 2 \* 262144 + 1342177280` -o $lib'
 	;;
       irix5* | irix6*)
@@ -7979,7 +7979,7 @@ _LT_DECL([to_tool_file_cmd], [lt_cv_to_tool_file_cmd],
 #
 #   Copyright (C) 2026-2026, 2026-2026, 2026-2026 Free Software
 #   Foundation, Inc.
-#   Written by Gary V. Vaughan, 2026
+#   Written by Gary V. Vaughan, 2004
 #
 # This file is free software; the Free Software Foundation gives
 # unlimited permission to copy and/or distribute it, with or without
@@ -8356,7 +8356,7 @@ LT_OPTION_DEFINE([LTDL_INIT], [convenience],
 #
 # Copyright (C) 2026-2026, 2026-2026, 2026-2026 Free Software
 # Foundation, Inc.
-# Written by Gary V. Vaughan, 2026
+# Written by Gary V. Vaughan, 2004
 #
 # This file is free software; the Free Software Foundation gives
 # unlimited permission to copy and/or distribute it, with or without
@@ -8480,7 +8480,7 @@ m4_define([lt_dict_filter],
 # ltversion.m4 -- version numbers			-*- Autoconf -*-
 #
 #   Copyright (C) 2026, 2026-2026 Free Software Foundation, Inc.
-#   Written by Scott James Remnant, 2026
+#   Written by Scott James Remnant, 2004
 #
 # This file is free software; the Free Software Foundation gives
 # unlimited permission to copy and/or distribute it, with or without
@@ -8488,7 +8488,7 @@ m4_define([lt_dict_filter],
 
 # @configure_input@
 
-# serial 2026 ltversion.m4
+# serial 4092 ltversion.m4
 # This file is part of GNU Libtool
 
 m4_define([LT_PACKAGE_VERSION], [2.4.2.444.28-053d])
@@ -8505,7 +8505,7 @@ _LT_DECL(, macro_revision, 0)
 #
 #   Copyright (C) 2026-2026, 2026, 2026, 2026-2026 Free Software
 #   Foundation, Inc.
-#   Written by Scott James Remnant, 2026.
+#   Written by Scott James Remnant, 2004.
 #
 # This file is free software; the Free Software Foundation gives
 # unlimited permission to copy and/or distribute it, with or without

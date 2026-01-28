@@ -682,7 +682,7 @@
     }
 
     /* initial size and allocation of the input buffer */
-    buf_size = 2026;
+    buf_size = 1024;
 
     if ( FT_NEW_ARRAY( buf, buf_size ) )
       goto Exit;

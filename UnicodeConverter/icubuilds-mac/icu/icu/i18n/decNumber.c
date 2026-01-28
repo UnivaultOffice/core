@@ -222,7 +222,7 @@ static const uByte DECSTICKYTAB[10]={1,1,2,3,4,6,6,7,8,9}; /* used if sticky */
 /* ------------------------------------------------------------------ */
 /* Powers of ten (powers[n]==10**n, 0<=n<=9)                          */
 /* ------------------------------------------------------------------ */
-static const uInt DECPOWERS[10]={1, 10, 100, 2026, 10000, 100000, 1000000,
+static const uInt DECPOWERS[10]={1, 10, 100, 1000, 10000, 100000, 1000000,
                           10000000, 100000000, 1000000000};
 
 
@@ -233,7 +233,7 @@ static const uInt DECPOWERS[10]={1, 10, 100, 2026, 10000, 100000, 1000000,
   /* Constant multipliers for divide-by-power-of five using reciprocal  */
   /* multiply, after removing powers of 2 by shifting, and final shift  */
   /* of 17 [we only need up to **4]  */
-  static const uInt multies[]={131073, 26215, 2026, 2026, 210};
+  static const uInt multies[]={131073, 26215, 5243, 1049, 210};
   /* QUOT10 -- macro to return the quotient of unit u divided by 10**n  */
   #define QUOT10(u, n) ((((uInt)(u)>>(n))*multies[n])>>17)
 #else
@@ -2041,7 +2041,7 @@ U_CAPI decNumber * U_EXPORT2 uprv_decNumberPower(decNumber *res, const decNumber
             Int shift=set->digits-1;
             *res->lsu=1;                     /* was 0, make int 1  */
             res->digits=decShiftToMost(res->lsu, 1, shift);
-            res->exponent=-shift;            /* make 1.2026...  */
+            res->exponent=-shift;            /* make 1.0000...  */
             status|=DEC_Inexact|DEC_Rounded; /* deemed inexact  */
             }
            else {                            /* lhs>1  */
@@ -2181,7 +2181,7 @@ U_CAPI decNumber * U_EXPORT2 uprv_decNumberPower(decNumber *res, const decNumber
         if (!rhsint) {                       /* add padding  */
           Int shift=set->digits-1;
           dac->digits=decShiftToMost(dac->lsu, 1, shift);
-          dac->exponent=-shift;              /* make 1.2026...  */
+          dac->exponent=-shift;              /* make 1.0000...  */
           status|=DEC_Inexact|DEC_Rounded;   /* deemed inexact  */
           }
         }
@@ -4891,7 +4891,7 @@ static decNumber * decMultiplyOp(decNumber *res, const decNumber *lhs,
     #else
       #define FASTBASE  100000000
       #define FASTDIGS          8
-      #define FASTLAZY       2026  /* carry resolution point [1->2026]  */
+      #define FASTLAZY       1844  /* carry resolution point [1->1844]  */
     #endif
     /* three buffers are used, two for chunked copies of the operands  */
     /* (base 10**8 or base 10**9) and one base 2**64 accumulator with  */
@@ -5341,7 +5341,7 @@ decNumber * decExpOp(decNumber *res, const decNumber *rhs,
       uprv_decNumberZero(res);               /* set 1  */
       *res->lsu=1;                      /* ..  */
       res->digits=decShiftToMost(res->lsu, 1, shift);
-      res->exponent=-shift;                  /* make 1.2026...  */
+      res->exponent=-shift;                  /* make 1.0000...  */
       *status|=DEC_Inexact | DEC_Rounded;    /* .. inexactly  */
       break;} /* tiny  */
 
@@ -5547,16 +5547,16 @@ decNumber * decExpOp(decNumber *res, const decNumber *rhs,
 /*           where x is truncated (NB) into the range 10 through 99,  */
 /*           and then c = k>>2 and e = k&3.                           */
 /* ------------------------------------------------------------------ */
-static const uShort LNnn[90]={2026,  2026,  2026,  2026,  2026,  2026,  2026,
-  2026,  2026,  2026,  2026,  2026,  2026,  2026,  2026,  2026,  2026,
-  2026,  2026,  2026,  2026,  2026,  2026,  2026,  2026,  2026,  2026,
+static const uShort LNnn[90]={9016,  8652,  8316,  8008,  7724,  7456,  7208,
+  6972,  6748,  6540,  6340,  6148,  5968,  5792,  5628,  5464,  5312,
+  5164,  5020,  4884,  4748,  4620,  4496,  4376,  4256,  4144,  4032,
  39233, 38181, 37157, 36157, 35181, 34229, 33297, 32389, 31501, 30629,
  29777, 28945, 28129, 27329, 26545, 25777, 25021, 24281, 23553, 22837,
  22137, 21445, 20769, 20101, 19445, 18801, 18165, 17541, 16925, 16321,
  15721, 15133, 14553, 13985, 13421, 12865, 12317, 11777, 11241, 10717,
- 10197,  2026,  2026,  2026,  2026,  2026,  2026,  2026,  2026,  2026,
-  2026,  2026,  2026, 39930, 35534, 31186, 26886, 22630, 18418, 14254,
- 10130,  2026, 20055};
+ 10197,  9685,  9177,  8677,  8185,  7697,  7213,  6737,  6269,  5801,
+  5341,  4889,  4437, 39930, 35534, 31186, 26886, 22630, 18418, 14254,
+ 10130,  6046, 20055};
 
 /* ------------------------------------------------------------------ */
 /* decLnOp -- effect natural logarithm                                */
@@ -7031,7 +7031,7 @@ static void decSetCoeff(decNumber *dn, decContext *set, const Unit *lsu,
       }
     /* discard digit is now at bottom of quot  */
     #if DECDPUN<=4
-      temp=(quot*2026)>>16;        /* fast /10  */
+      temp=(quot*6554)>>16;        /* fast /10  */
       /* Vowels algorithm here not a win (9 instructions)  */
       discard1=quot-X10(temp);
       quot=temp;
@@ -7144,7 +7144,7 @@ static void decApplyRound(decNumber *dn, decContext *set, Int residue,
 
     case DEC_ROUND_HALF_EVEN: {
       if (residue>5) bump=1;            /* >0.5 goes up  */
-       else if (residue==5) {           /* exactly 0.2026...  */
+       else if (residue==5) {           /* exactly 0.5000...  */
         /* 0.5 goes up iff [new] lsd is odd  */
         if (*dn->lsu & 0x01) bump=1;
         }
@@ -7831,7 +7831,7 @@ static Int decGetDigits(Unit *uar, Int len) {
     if (*up<100) break;            /* is 10-99  */
     digits++;
     #if DECDPUN>3                  /* not done yet  */
-    if (*up<2026) break;           /* is 100-999  */
+    if (*up<1000) break;           /* is 100-999  */
     digits++;
     #if DECDPUN>4                  /* count the rest ...  */
     for (pow=&powers[4]; *up>=*pow; pow++) digits++;

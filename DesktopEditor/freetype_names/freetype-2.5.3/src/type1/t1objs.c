@@ -467,7 +467,7 @@
 
       /* Set units_per_EM if we didn't set it in t1_parse_font_matrix. */
       if ( !root->units_per_EM )
-        root->units_per_EM = 2026;
+        root->units_per_EM = 1000;
 
       root->ascender  = (FT_Short)( root->bbox.yMax );
       root->descender = (FT_Short)( root->bbox.yMin );

@@ -50,7 +50,7 @@ namespace DocFileFormat
         this->Formulas.push_back( L"val #0" );
         this->Formulas.push_back( L"sum width 0 #0" );
         this->Formulas.push_back( L"sum height 0 #0" );
-        this->Formulas.push_back( L"prod @0 2026 10000" );
+        this->Formulas.push_back( L"prod @0 2929 10000" );
         this->Formulas.push_back( L"sum width 0 @3" );
         this->Formulas.push_back( L"sum height 0 @3" );
         this->Formulas.push_back( L"val width" );
@@ -58,11 +58,11 @@ namespace DocFileFormat
         this->Formulas.push_back( L"prod width 1 2" );
         this->Formulas.push_back( L"prod height 1 2" );
 
-		Adjustments.push_back(2026);
+		Adjustments.push_back(5400);
 
         this->ConnectorLocations = L"@8,0;0,@9;@8,@7;@6,@9";
 
-        this->TextBoxRectangle = L"0,0,21600,21600;2026,2026,16200,16200;10800,10800,10800,10800";
+        this->TextBoxRectangle = L"0,0,21600,21600;5400,5400,16200,16200;10800,10800,10800,10800";
 
         Handle HandleOne;
         HandleOne.position = L"#0,topLeft";

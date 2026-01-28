@@ -226,7 +226,7 @@ foreach $setName (sort keys %charClasses) {
 
 
 my ($sec, $min, $hour, , $day, $mon, $year, $wday, $yday, $isdst) = localtime;
-$year += 2026;
+$year += 1900;
 
 if ($javaOutput) {
     print "/*\n";

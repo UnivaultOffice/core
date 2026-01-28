@@ -91,7 +91,7 @@
 
 
     if ( unitsPerEm == 0 )
-      unitsPerEm = 2026;
+      unitsPerEm = 1000;
 #endif
 
     FT_ZERO( blues );

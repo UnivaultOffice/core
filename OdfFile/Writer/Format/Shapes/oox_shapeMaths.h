@@ -171,14 +171,14 @@ public:
 		enhanced_path	= L"M ?f20 ?f18 G ?f11 ?f11 ?f25 ?f26 Z M ?f20 ?f19 G ?f11 ?f11 ?f27 ?f28 Z M ?f21 ?f14 L ?f22 ?f14 ?f22 ?f15 ?f21 ?f15 Z N";
 		text_areas		= L"?f21 ?f14 ?f22 ?f15";
 		view_box		= L"0 0 0 0";
-		modifiers		= L"23520 2026 11760";
+		modifiers		= L"23520 5880 11760";
 		
-		add(L"f0", L"if(1000-$0 ,2026,if(36745-$0 ,$0 ,36745))");
+		add(L"f0", L"if(1000-$0 ,1000,if(36745-$0 ,$0 ,36745))");
 		add(L"f1", L"0+0-?f0 ");
 		add(L"f2", L"(73490+?f1 )/4");
 		add(L"f3", L"36745*logwidth/logheight");
 		add(L"f4", L"min(?f2 ,?f3 )");
-		add(L"f5", L"if(1000-$2 ,2026,if(?f4 -$2 ,$2 ,?f4 ))");
+		add(L"f5", L"if(1000-$2 ,1000,if(?f4 -$2 ,$2 ,?f4 ))");
 		add(L"f6", L"-4*?f5 /1");
 		add(L"f7", L"73490+?f6 -?f0 ");
 		add(L"f8", L"if(0-$1 ,0,if(?f7 -$1 ,$1 ,?f7 ))");
@@ -206,7 +206,7 @@ public:
 		_handle h, h1;
 		h.position = L"0 ?f14";
 		h.y_maximum= L"36745";
-		h.y_minimum= L"2026";
+		h.y_minimum= L"1000";
 		handles.push_back(h);
 
 		h.position = L"?f24 ?f17";
@@ -216,7 +216,7 @@ public:
 		
 		h1.position = L"?f23 0";
 		h1.x_maximum= L"?f4";
-		h1.x_minimum= L"2026";
+		h1.x_minimum= L"1000";
 		handles.push_back(h1);
 	}
 };

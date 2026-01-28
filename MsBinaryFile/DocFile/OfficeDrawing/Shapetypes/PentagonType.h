@@ -42,9 +42,9 @@ namespace DocFileFormat
 		{
 			ShapeConcentricFill	=	true;
 			Joins				=	miter;
-            Path				=	L"m10800,l,2026,2026,21600r13200,l21600,8259xe";
+            Path				=	L"m10800,l,8259,4200,21600r13200,l21600,8259xe";
 
-            ConnectorLocations	=	L"10800,0;0,2026;2026,21600;10800,21600;17400,21600;21600,2026";
+            ConnectorLocations	=	L"10800,0;0,8259;4200,21600;10800,21600;17400,21600;21600,8259";
             
 			ConnectorAngles.push_back(270);
 			ConnectorAngles.push_back(180); 
@@ -53,7 +53,7 @@ namespace DocFileFormat
 			ConnectorAngles.push_back(90);
 			ConnectorAngles.push_back(0);
 
-            TextBoxRectangle	=	L"2026,2026,17400,21600";
+            TextBoxRectangle	=	L"4200,5077,17400,21600";
 		}
 
 		virtual ~PentagonType()

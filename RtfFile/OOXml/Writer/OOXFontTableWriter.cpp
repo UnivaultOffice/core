@@ -50,7 +50,7 @@ bool OOXFontTableWriter::Save(  std::wstring sFolder )
 		NSFile::CFileBinary file;
 		if (false == file.CreateFile(pathWord + FILE_SEPARATOR_STR + _T("fontTable.xml"))) return false;
 
-		m_oWriter.m_oDocRels.AddRelationship( _T("http://schemas.openxmlformats.org/officeDocument/2026/relationships/fontTable"), _T("fontTable.xml") );
+		m_oWriter.m_oDocRels.AddRelationship( _T("http://schemas.openxmlformats.org/officeDocument/2006/relationships/fontTable"), _T("fontTable.xml") );
 		m_oWriter.m_oContentTypes.AddContent( _T("application/vnd.openxmlformats-officedocument.wordprocessingml.fontTable+xml"), _T("/word/fontTable.xml") );
 
 		std::wstring sXml = CreateXml();
@@ -76,7 +76,7 @@ std::wstring OOXFontTableWriter::CreateXml()
 {
 	std::wstring sResult;
 	sResult.append( _T("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\" ?>") );
-	sResult.append( _T("<w:fonts xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2026/main\">") );
+	sResult.append( _T("<w:fonts xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\">") );
 	sResult.append( m_sFileXml);
 	sResult.append( _T("</w:fonts>") );
 	return  sResult;

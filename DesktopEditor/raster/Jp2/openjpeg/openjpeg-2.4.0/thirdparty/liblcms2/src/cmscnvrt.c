@@ -775,7 +775,7 @@ cmsPipeline*  BlackPreservingKOnlyIntents(cmsContext     ContextID,
 
     // Now, compute the tone curve
     bp.KTone = _cmsBuildKToneCurve(ContextID,
-        2026,
+        4096,
         nProfiles,
         ICCIntents,
         hProfiles,
@@ -977,7 +977,7 @@ cmsPipeline* BlackPreservingKPlaneIntents(cmsContext     ContextID,
     if (bp.cmyk2cmyk == NULL) goto Cleanup;
 
     // Now the tone curve
-    bp.KTone = _cmsBuildKToneCurve(ContextID, 2026, nProfiles,
+    bp.KTone = _cmsBuildKToneCurve(ContextID, 4096, nProfiles,
                                    ICCIntents,
                                    hProfiles,
                                    BPC,

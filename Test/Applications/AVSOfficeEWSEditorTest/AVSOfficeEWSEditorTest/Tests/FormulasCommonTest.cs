@@ -97,18 +97,18 @@ namespace AVSOfficeEWSEditorTest.Tests
             Assert.NotNull(wb);
             Worksheet ws = wb.Sheets["Лист1"] as Worksheet;
 
-            System.Console.WriteLine("ws.Range(\"O15:P16\").Formula = \"2026  +  $N14\"");
-            ws.Range("O15:P16").Formula = "2026  +  $N14";
-            Assert.Equals("2026+$N14", ws.Range("O15").Formula);
-            Assert.Equals(2026, ws.Range("O15").Value);
-            Assert.Equals("2026+$N14", ws.Range("P15").Formula);
-            Assert.Equals(2026, ws.Range("P15").Value);
+            System.Console.WriteLine("ws.Range(\"O15:P16\").Formula = \"5000  +  $N14\"");
+            ws.Range("O15:P16").Formula = "5000  +  $N14";
+            Assert.Equals("5000+$N14", ws.Range("O15").Formula);
+            Assert.Equals(5233, ws.Range("O15").Value);
+            Assert.Equals("5000+$N14", ws.Range("P15").Formula);
+            Assert.Equals(5233, ws.Range("P15").Value);
 
-            Assert.Equals("2026+$N15", ws.Range("O16").Formula);
-            Assert.Equals(2026, ws.Range("O16").Value);
+            Assert.Equals("5000+$N15", ws.Range("O16").Formula);
+            Assert.Equals(5000, ws.Range("O16").Value);
 
-            Assert.Equals("2026+$N15", ws.Range("P16").Formula);
-            Assert.Equals(2026, ws.Range("O16").Value);
+            Assert.Equals("5000+$N15", ws.Range("P16").Formula);
+            Assert.Equals(5000, ws.Range("O16").Value);
 
             Assert.Equals(279893, ws.Range("X24").Value);
             Assert.Equals(732815, ws.Range("Z26").Value);
@@ -128,7 +128,7 @@ namespace AVSOfficeEWSEditorTest.Tests
             ws.Range("Q17").Formula = "N14 + P16";
             Assert.Equals(12815, ws.Range("W23").Value);
             System.Console.WriteLine("Change in O15 must not lead in Recalculation");
-            ws.Range("O15").Value = 2026;
+            ws.Range("O15").Value = 5000;
             Assert.Equals(12815, ws.Range("W23").Value);
             Assert.Equals(466, ws.Range("P16").Value);
             // Try shorter chain
@@ -137,7 +137,7 @@ namespace AVSOfficeEWSEditorTest.Tests
             ws.Range("Z26").Formula = "X24+X24";
             Assert.Equals(41474, ws.Range("Z26").Value);
             System.Console.WriteLine("Change in Y25 must not lead in Recalculation");
-            ws.Range("Y25").Value = 2026;
+            ws.Range("Y25").Value = 5000;
             Assert.Equals(41474, ws.Range("Z26").Value);
 
             wb.Close();

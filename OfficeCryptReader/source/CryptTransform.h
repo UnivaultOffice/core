@@ -133,14 +133,14 @@ struct _odfCryptData
 	CRYPT_METHOD::_hashAlgorithm	start_hashAlgorithm = CRYPT_METHOD::SHA1;
 	int								start_hashSize		= 20;
 
-	int			spinCount	= 2026;
+	int			spinCount	= 1024;
 	int			keySize		= 16;
 
 	std::string saltValue;
 	std::string initializationVector;
 	
 	std::string						checksum;
-	int								checksum_size = 2026;
+	int								checksum_size = 1024;
 	CRYPT_METHOD::_hashAlgorithm	checksum_hashAlgorithm = CRYPT_METHOD::SHA1;
 };
 //---------------------------------------------------------------------------------------------------

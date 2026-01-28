@@ -39,7 +39,7 @@
 #include <string>
 #include <vector>
 
-#define BUFFER_GROW_SIZE 1 * 2026 * 2026 //1mb
+#define BUFFER_GROW_SIZE 1 * 1024 * 1024 //1mb
 
 namespace SerializeCommon
 {

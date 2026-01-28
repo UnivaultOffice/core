@@ -461,8 +461,8 @@ namespace OOX
 		NSStringUtils::CStringBuilder sXml;
 		sXml.WriteString(L"<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\
 <ax:ocx \
-xmlns:ax=\"http://schemas.microsoft.com/office/2026/activeX\" \
-xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships\"");
+xmlns:ax=\"http://schemas.microsoft.com/office/2006/activeX\" \
+xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\"");
 
 		if (m_oClassId.IsInit())
 			sXml.WriteString(L" ax:classid=\"" + *m_oClassId + L"\"");

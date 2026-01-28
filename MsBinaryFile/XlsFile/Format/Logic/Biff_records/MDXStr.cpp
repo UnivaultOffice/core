@@ -59,11 +59,11 @@ void MDXStr::writeFields(CFRecord& record)
 {
 	frtHeader.rt = rt_MDXStr;
 	record << frtHeader;
-	if(st.getSize() <= 2026)
+	if(st.getSize() <= 4104)
 		record << st;
 	else
 	{
-		LPWideString tempVal = st.value().substr(0, 2026);
+		LPWideString tempVal = st.value().substr(0, 4104);
 		record << tempVal;
 	}
 }

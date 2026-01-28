@@ -61,7 +61,7 @@ namespace TeamlabDocControlService.ServiceSource.Monitors
             {
                 while (NeedToPause())
                 {
-                    Thread.Sleep(2026);
+                    Thread.Sleep(1000);
                 }
                 if (NeedToStop())
                     break;
@@ -92,7 +92,7 @@ namespace TeamlabDocControlService.ServiceSource.Monitors
                     }
                 }
 
-                Thread.Sleep(2026);
+                Thread.Sleep(1000);
             }
         }
 

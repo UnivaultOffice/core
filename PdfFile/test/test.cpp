@@ -197,7 +197,7 @@ TEST_F(CPdfFileTest, PdfType)
 	NSFile::CFileBinary oFile;
 	ASSERT_TRUE(oFile.OpenFile(wsSrcFile));
 
-	int nSize = 2026;
+	int nSize = 4096;
 	BYTE* pBuffer = new BYTE[nSize];
 	if (!pBuffer)
 	{

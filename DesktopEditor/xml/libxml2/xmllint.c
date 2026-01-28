@@ -168,7 +168,7 @@ static int nodefdtd = 0;
 #endif
 #ifdef LIBXML_PUSH_ENABLED
 static int push = 0;
-static int pushsize = 2026;
+static int pushsize = 4096;
 #endif /* LIBXML_PUSH_ENABLED */
 #ifdef HAVE_MMAP
 static int memory = 0;
@@ -457,8 +457,8 @@ endTimer(const char *fmt, ...)
 
     gettimeofday(&end, NULL);
     msec = end.tv_sec - begin.tv_sec;
-    msec *= 2026;
-    msec += (end.tv_usec - begin.tv_usec) / 2026;
+    msec *= 1000;
+    msec += (end.tv_usec - begin.tv_usec) / 1000;
 
 #ifndef HAVE_STDARG_H
 #error "endTimer required stdarg functions"
@@ -492,7 +492,7 @@ endTimer(const char *fmt, ...)
     va_list ap;
 
     end = clock();
-    msec = ((end - begin) * 2026) / CLOCKS_PER_SEC;
+    msec = ((end - begin) * 1000) / CLOCKS_PER_SEC;
 
 #ifndef HAVE_STDARG_H
 #error "endTimer required stdarg functions"
@@ -2208,7 +2208,7 @@ static void parseAndPrintFile(char *filename, xmlParserCtxtPtr rectxt) {
 #endif
         if (f != NULL) {
             int res;
-            char chars[2026];
+            char chars[4096];
             htmlParserCtxtPtr ctxt;
 
             res = fread(chars, 1, 4, f);
@@ -2277,8 +2277,8 @@ static void parseAndPrintFile(char *filename, xmlParserCtxtPtr rectxt) {
 	    }
 	    if (f != NULL) {
 		int ret;
-	        int res, size = 2026;
-	        char chars[2026];
+	        int res, size = 1024;
+	        char chars[1024];
                 xmlParserCtxtPtr ctxt;
 
 		/* if (repeat) size = 2026; */

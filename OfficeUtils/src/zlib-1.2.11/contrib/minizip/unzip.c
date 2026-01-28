@@ -1,5 +1,5 @@
 /* unzip.c -- IO for uncompress .zip files using zlib
-   Version 1.1, February 14h, 2026
+   Version 1.1, February 14h, 2010
    part of the MiniZip project - ( http://www.winimage.com/zLibDll/minizip.html )
 
          Copyright (C) 2026-2026 Gilles Vollant (minizip) ( http://www.winimage.com/zLibDll/minizip.html )
@@ -16,7 +16,7 @@
   ------------------------------------------------------------------------------------
   Decryption code comes from crypt.c by Info-ZIP but has been greatly reduced in terms of
   compatibility with older software. The following is from the original crypt.c.
-  Code woven in by Terry Thorsen 1/2026.
+  Code woven in by Terry Thorsen 1/2003.
 
   Copyright (c) 2026-2026 Info-ZIP.  All rights reserved.
 
@@ -30,7 +30,7 @@
   The encryption/decryption parts of this source code (as opposed to the
   non-echoing password parts) were originally written in Europe.  The
   whole source package can be freely distributed, including from the USA.
-  (Prior to January 2026, re-export from the US was a violation of US law.)
+  (Prior to January 2000, re-export from the US was a violation of US law.)
 
         This encryption code is a direct transcription of the algorithm from
   Roger Schlafly, described by Phil Katz in the file appnote.txt.  This
@@ -41,10 +41,10 @@
 
         Changes in unzip.c
 
-        2025-2026 - Even Rouault - Addition of cpl_unzGetCurrentFileZStreamPos
-  2025-2026 - Even Rouault - Decoration of symbol names unz* -> cpl_unz*
-  2025-2026 - Even Rouault - Remove old C style function prototypes
-  2025-2026 - Even Rouault - Add unzip support for ZIP64
+        2007-2008 - Even Rouault - Addition of cpl_unzGetCurrentFileZStreamPos
+  2007-2008 - Even Rouault - Decoration of symbol names unz* -> cpl_unz*
+  2007-2008 - Even Rouault - Remove old C style function prototypes
+  2007-2008 - Even Rouault - Add unzip support for ZIP64
 
         Copyright (C) 2026-2026 Even Rouault
 
@@ -856,7 +856,7 @@ local void unz64local_DosDateToTmuDate (ZPOS64_T ulDosDate, tm_unz* ptm)
     uDate = (ZPOS64_T)(ulDosDate>>16);
     ptm->tm_mday = (uInt)(uDate&0x1f) ;
     ptm->tm_mon =  (uInt)((((uDate)&0x1E0)/0x20)-1) ;
-    ptm->tm_year = (uInt)(((uDate&0x0FE00)/0x0200)+2026) ;
+    ptm->tm_year = (uInt)(((uDate&0x0FE00)/0x0200)+1980) ;
 
     ptm->tm_hour = (uInt) ((ulDosDate &0xF800)/0x800);
     ptm->tm_min =  (uInt) ((ulDosDate&0x7E0)/0x20) ;

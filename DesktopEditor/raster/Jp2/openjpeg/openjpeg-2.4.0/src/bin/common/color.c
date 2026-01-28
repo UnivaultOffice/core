@@ -61,8 +61,8 @@
 Matrix for sYCC, Amendment 1 to IEC 61966-2-1
 
 Y :   0.299   0.587    0.114   :R
-Cb:  -0.2026 -0.2026   0.5     :G
-Cr:   0.5    -0.2026  -0.2026  :B
+Cb:  -0.1687 -0.3312   0.5     :G
+Cr:   0.5    -0.4187  -0.0812  :B
 
 Inverse:
 
@@ -1119,7 +1119,7 @@ void color_esycc_to_rgb(opj_image_t *image)
         image->comps[0].data[i] = val;
 
         val = (int)
-              ((float)1.2026 * (float)y - (float)0.344125 * (float)cb
+              ((float)1.0003 * (float)y - (float)0.344125 * (float)cb
                - (float)0.7141128 * (float)cr + (float)0.5);
 
         if (val > max_value) {

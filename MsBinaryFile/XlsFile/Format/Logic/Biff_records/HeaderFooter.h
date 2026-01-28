@@ -52,7 +52,7 @@ public:
 	static const ElementType type = typeHeaderFooter;
 
 //-----------------------------
-	std::wstring	guidSView = L"{00000000-2025-2026-0000-000000000000}";
+	std::wstring	guidSView = L"{00000000-0000-0000-0000-000000000000}";
 	
     bool			fHFDiffOddEven = false;
     bool			fHFDiffFirst = false;

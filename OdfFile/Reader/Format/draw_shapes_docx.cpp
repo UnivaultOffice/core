@@ -164,7 +164,7 @@ void draw_rect::docx_convert(oox::docx_conversion_context & Context)
 	{
 		draw_shape * shape = Context.get_drawing_context().get_current_shape();//owner
 
-		double val = draw_rect_attlist_.draw_corner_radius_->get_value() * 2026;
+		double val = draw_rect_attlist_.draw_corner_radius_->get_value() * 6500;
 		shape->additional_.push_back(_property(L"oox-draw-modifiers", std::to_wstring((int)val)));	
 	}
 

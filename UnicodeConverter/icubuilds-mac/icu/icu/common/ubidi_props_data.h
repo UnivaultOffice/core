@@ -782,10 +782,10 @@ static const UBiDiProps ubidi_props_singleton={
   ubidi_props_jgArray2,
   {
     ubidi_props_trieIndex,
-    ubidi_props_trieIndex+2026,
+    ubidi_props_trieIndex+3388,
     NULL,
-    2026,
-    2026,
+    3388,
+    7800,
     0x1a0,
     0xdbc,
     0x0,

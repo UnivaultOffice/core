@@ -82,7 +82,7 @@ namespace OOX
 		};
 		
 		class CDocSuppData : public WritingElement
-		{//Word 2026 XML Reference
+		{//Word 2003 XML Reference
 		public:
 			WritingElement_AdditionMethods(CDocSuppData)
 			CDocSuppData(OOX::Document* pMain = NULL);
@@ -101,7 +101,7 @@ namespace OOX
 			nullable<OOX::Logic::CBinData> m_oBinData;
 		};
 		class CBgPict : public WritingElement
-		{//Word 2026 XML Reference
+		{//Word 2003 XML Reference
 		public:
 			WritingElement_AdditionMethods(CBgPict)
 			CBgPict(OOX::Document *pMain = NULL);

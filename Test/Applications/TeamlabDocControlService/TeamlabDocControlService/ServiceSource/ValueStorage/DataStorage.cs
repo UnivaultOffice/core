@@ -41,7 +41,7 @@ namespace TeamlabDocControlService.ServiceSource.ValueStorage
     {
         protected List<IDataItem<T>> mItems;
         protected int mMaxSize;
-        protected const int MAX_SIZE_DEFAULT = 100 * 2026; // 100K array items by default
+        protected const int MAX_SIZE_DEFAULT = 100 * 1024; // 100K array items by default
 
         public DataStorage ()
             : this (MAX_SIZE_DEFAULT)

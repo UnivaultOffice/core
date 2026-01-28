@@ -85,7 +85,7 @@ static const _shape_converter _OO_OOX_custom_shapes[]=
 {L"heart"						,L"heart"	,0	,0	,0	},
 {L"sun"							,L"sun"	,1	,46875	,12500	},
 {L"moon"						,L"moon"	,0	,0	,0	},
-{L"smiley"						,L"smileyFace"	,1	,-4652	,2026	},
+{L"smiley"						,L"smileyFace"	,1	,-4652	,4652	},
 {L"bracket-pair"				,L"bracketPair"	,0	,0	,0	},
 {L"brace-pair"					,L"bracePair"	,0	,0	,0	},
 {L"line-callout-1"				,L"callout1"	,4	,0	,0	},

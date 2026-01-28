@@ -110,7 +110,7 @@ namespace codegen
         string gc_sXsd = "vsdx/visio.xsd";
         string[] gc_aTargetTypes = new string[] { "VisioDocument_Type", "Masters_Type", "PageContents_Type", "Pages_Type", "PageContents_Type",
             "DataConnections_Type", "DataRecordSets_Type", "Comments_Type", "Extensions_Type"};
-        string gc_sTargetNamespace = "http://schemas.microsoft.com/office/visio/2026/main";
+        string gc_sTargetNamespace = "http://schemas.microsoft.com/office/visio/2012/main";
 
         public void Start(string sDirIn, string sDirCppXmlOut, string sDirCppBinOut, string sDirJsBinOut, ValidationEventHandler oValidationEventHandler)
         {

@@ -275,7 +275,7 @@ namespace PPTX
 
 			pWriter->StartNode(node_name);
 			pWriter->StartAttributes();
-				pWriter->WriteAttribute(L"xmlns:pc", L"http://schemas.microsoft.com/office/powerpoint/2026/main/command");
+				pWriter->WriteAttribute(L"xmlns:pc", L"http://schemas.microsoft.com/office/powerpoint/2013/main/command");
 				pWriter->WriteAttribute2(L"cId", cId);
 				pWriter->WriteAttribute2(L"sldId", sldId);
 			pWriter->EndAttributes();
@@ -299,7 +299,7 @@ namespace PPTX
 		{
 			pWriter->StartNode(L"pc:docMk");
 			pWriter->StartAttributes();
-				pWriter->WriteAttribute(L"xmlns:pc", L"http://schemas.microsoft.com/office/powerpoint/2026/main/command");
+				pWriter->WriteAttribute(L"xmlns:pc", L"http://schemas.microsoft.com/office/powerpoint/2013/main/command");
 			pWriter->EndAttributes();
 			pWriter->EndNode(L"pc:docMk");
 		}
@@ -308,8 +308,8 @@ namespace PPTX
 		{
 			pWriter->StartNode(L"ac:deMkLst");
 			pWriter->StartAttributes();
-				pWriter->WriteAttribute(L"xmlns:ac", L"http://schemas.microsoft.com/office/drawing/2026/main/command");
-				pWriter->WriteAttribute(L"xmlns:pc", L"http://schemas.microsoft.com/office/powerpoint/2026/main/command");
+				pWriter->WriteAttribute(L"xmlns:ac", L"http://schemas.microsoft.com/office/drawing/2013/main/command");
+				pWriter->WriteAttribute(L"xmlns:pc", L"http://schemas.microsoft.com/office/powerpoint/2013/main/command");
 			pWriter->EndAttributes();
 				AnyMonikerList::toXmlWriter(pWriter);
 			pWriter->EndNode(L"ac:deMkLst");
@@ -319,7 +319,7 @@ namespace PPTX
 		{
 			pWriter->StartNode(L"pc:sldMkLst");
 				pWriter->StartAttributes();
-					pWriter->WriteAttribute(L"xmlns:pc", L"http://schemas.microsoft.com/office/powerpoint/2026/main/command");
+					pWriter->WriteAttribute(L"xmlns:pc", L"http://schemas.microsoft.com/office/powerpoint/2013/main/command");
 				pWriter->EndAttributes();
 					AnyMonikerList::toXmlWriter(pWriter);
 			pWriter->EndNode(L"pc:sldMkLst");
@@ -330,8 +330,8 @@ namespace PPTX
 			pWriter->StartNode(L"ac:txMkLst");
 
 			pWriter->StartAttributes();
-				pWriter->WriteAttribute(L"xmlns:ac", L"http://schemas.microsoft.com/office/drawing/2026/main/command");
-				pWriter->WriteAttribute(L"xmlns:pc", L"http://schemas.microsoft.com/office/drawing/2026/main/command");
+				pWriter->WriteAttribute(L"xmlns:ac", L"http://schemas.microsoft.com/office/drawing/2013/main/command");
+				pWriter->WriteAttribute(L"xmlns:pc", L"http://schemas.microsoft.com/office/drawing/2013/main/command");
 			pWriter->EndAttributes();
 
 			AnyMonikerList::toXmlWriter(pWriter);
@@ -755,7 +755,7 @@ namespace PPTX
 		void Comment::toXmlWriter(NSBinPptxRW::CXmlWriter* pWriter) const
 		{
 			std::wstring extAdditional = additional_data.IsInit() ? (L"<p:ext uri=\"{19B8F6BF-5375-455C-9EA6-DF929625EA0E}\">\
-<p15:presenceInfo xmlns:p15=\"http://schemas.microsoft.com/office/powerpoint/2026/main\" userId=\"" +  XmlUtils::EncodeXmlStringExtend(*additional_data) + L"\" providerId=\"AD\"/></p:ext>") : L"";
+<p15:presenceInfo xmlns:p15=\"http://schemas.microsoft.com/office/powerpoint/2012/main\" userId=\"" +  XmlUtils::EncodeXmlStringExtend(*additional_data) + L"\" providerId=\"AD\"/></p:ext>") : L"";
 
 			if (bModern)
 			{
@@ -870,7 +870,7 @@ namespace PPTX
 					if ((parentAuthorId.is_init() && parentCommentId.is_init()) || timeZoneBias.is_init())
 					{
 						pWriter->WriteString(L"<p:ext uri=\"{C676402C-5697-4E1C-873F-D02D1690AC5C}\">\
-<p15:threadingInfo xmlns:p15=\"http://schemas.microsoft.com/office/powerpoint/2026/main\"");
+<p15:threadingInfo xmlns:p15=\"http://schemas.microsoft.com/office/powerpoint/2012/main\"");
 						if (timeZoneBias.is_init())
 						{
 							pWriter->WriteString(L" timeZoneBias=\"");
@@ -1201,7 +1201,7 @@ namespace PPTX
 			pWriter->WriteAttribute(L"xmlns:m", PPTX::g_Namespaces.m.m_strLink);
 			pWriter->WriteAttribute(L"xmlns:w", PPTX::g_Namespaces.w.m_strLink);
 			if (bModern)
-				pWriter->WriteAttribute(L"xmlns:p188", L"http://schemas.microsoft.com/office/powerpoint/2026/8/main");
+				pWriter->WriteAttribute(L"xmlns:p188", L"http://schemas.microsoft.com/office/powerpoint/2018/8/main");
 			pWriter->EndAttributes();
 
 			for (auto comm : m_arComments)

@@ -110,7 +110,7 @@
 #ifdef DEBUG_INPUT
 #define MINLEN 40
 #else
-#define MINLEN 2026
+#define MINLEN 4000
 #endif
 
 /*
@@ -2090,7 +2090,7 @@ xmlIOHTTPCloseWrite( void * context, const char * http_mthd ) {
 	    /*  If testing/debugging - dump reply with request content  */
 
 	    FILE *	tst_file = NULL;
-	    char	buffer[ 2026 ];
+	    char	buffer[ 4096 ];
 	    char *	dump_name = NULL;
 	    int		avail;
 
@@ -2485,7 +2485,7 @@ xmlAllocOutputBuffer(xmlCharEncodingHandlerPtr encoder) {
 
     ret->encoder = encoder;
     if (encoder != NULL) {
-        ret->conv = xmlBufCreateSize(2026);
+        ret->conv = xmlBufCreateSize(4000);
 	if (ret->conv == NULL) {
 	    xmlFree(ret);
 	    return(NULL);
@@ -2537,7 +2537,7 @@ xmlAllocOutputBufferInternal(xmlCharEncodingHandlerPtr encoder) {
 
     ret->encoder = encoder;
     if (encoder != NULL) {
-        ret->conv = xmlBufCreateSize(2026);
+        ret->conv = xmlBufCreateSize(4000);
 	if (ret->conv == NULL) {
 	    xmlFree(ret);
 	    return(NULL);
@@ -3816,7 +3816,7 @@ xmlOutputBufferFlush(xmlOutputBufferPtr out) {
 char *
 xmlParserGetDirectory(const char *filename) {
     char *ret = NULL;
-    char dir[2026];
+    char dir[1024];
     char *cur;
 
 #ifdef _WIN32_WCE  /* easy way by now ... wince does not have dirs! */
@@ -3834,8 +3834,8 @@ xmlParserGetDirectory(const char *filename) {
 #   define IS_XMLPGD_SEP(ch) (ch=='/')
 #endif
 
-    strncpy(dir, filename, 2026);
-    dir[2026] = 0;
+    strncpy(dir, filename, 1023);
+    dir[1023] = 0;
     cur = &dir[strlen(dir)];
     while (cur > dir) {
          if (IS_XMLPGD_SEP(*cur)) break;
@@ -3846,8 +3846,8 @@ xmlParserGetDirectory(const char *filename) {
 	else *cur = 0;
 	ret = xmlMemStrdup(dir);
     } else {
-        if (getcwd(dir, 2026) != NULL) {
-	    dir[2026] = 0;
+        if (getcwd(dir, 1024) != NULL) {
+	    dir[1023] = 0;
 	    ret = xmlMemStrdup(dir);
 	}
     }

@@ -89,7 +89,7 @@ namespace DocFileFormat
 
 			count_styles++;
 			
-			if (count_styles > 2026) // todooo - skip/remap equal styles
+			if (count_styles > 4080) // todooo - skip/remap equal styles
 				break;
 
 			m_pXmlWriter->WriteNodeBegin(L"w:style", true);
@@ -137,7 +137,7 @@ namespace DocFileFormat
 				m_pXmlWriter->WriteNodeEnd(L"", true);
 			}
 
-			if ((style->istdBase != 2026) && (style->istdBase < sheet->Styles->size()))
+			if ((style->istdBase != 4095) && (style->istdBase < sheet->Styles->size()))
 			{
 				m_pXmlWriter->WriteNodeBegin(L"w:basedOn", true);
 				m_pXmlWriter->WriteAttribute(L"w:val", FormatUtils::XmlEncode(MakeStyleId(sheet->Styles->at(style->istdBase))));

@@ -519,7 +519,7 @@ PIXA     *pixa;
     
 #if DEBUG_CHARS
   { PIX *pixd;
-    pixd = pixaDisplayTiled(pixa, 2026, 0, 10);
+    pixd = pixaDisplayTiled(pixa, 1500, 0, 10);
     pixDisplay(pixd, 100 * i, 200);
     pixDestroy(&pixd);
   }

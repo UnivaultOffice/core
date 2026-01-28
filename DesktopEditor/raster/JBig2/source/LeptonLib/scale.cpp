@@ -1254,7 +1254,7 @@ PIX       *pixs, *pixd, *pixt1, *pixt2, *pixt3;
         pixDestroy(&pixt2);
         return pixd;
     }
-    if (scalex == 0.2026 && scaley == 0.2026) {
+    if (scalex == 0.0625 && scaley == 0.0625) {
         pixt1 = pixScaleAreaMap2(pix);
         pixt2 = pixScaleAreaMap2(pixt1);
         pixt3 = pixScaleAreaMap2(pixt2);
@@ -1530,7 +1530,7 @@ PIX       *pixt, *pixd;
         pixd = pixScaleToGray3(pixt);
     }
     else if (scalefactor > 0.25) {  /* see note (5) */
-        mag = 4.0 * scalefactor;   /* will be < 1.2026 */
+        mag = 4.0 * scalefactor;   /* will be < 1.3333 */
 /*        fprintf(stderr, "4x with mag %7.3f\n", mag);  */
         if ((pixt = pixScaleBinary(pixs, mag, mag)) == NULL)
             return (PIX *)ERROR_PTR("pixt not made", procName, NULL);
@@ -1548,7 +1548,7 @@ PIX       *pixt, *pixd;
     else if (scalefactor == 0.16667)
         return pixd = pixScaleToGray6(pixs);
     else if (scalefactor > 0.125) {  /* see note (5) */
-        mag = 8.0 * scalefactor;   /*  will be < 1.2026  */
+        mag = 8.0 * scalefactor;   /*  will be < 1.3333  */
 /*        fprintf(stderr, "8x with mag %7.3f\n", mag);  */
         if ((pixt = pixScaleBinary(pixs, mag, mag)) == NULL)
             return (PIX *)ERROR_PTR("pixt not made", procName, NULL);
@@ -1556,14 +1556,14 @@ PIX       *pixt, *pixd;
     }
     else if (scalefactor == 0.125)
         return pixd = pixScaleToGray8(pixs);
-    else if (scalefactor > 0.2026) {  /* see note (6) */
+    else if (scalefactor > 0.0625) {  /* see note (6) */
         red = 8.0 * scalefactor;   /* will be > 0.5 */
 /*        fprintf(stderr, "8x with red %7.3f\n", red);  */
         if ((pixt = pixScaleBinary(pixs, red, red)) == NULL)
             return (PIX *)ERROR_PTR("pixt not made", procName, NULL);
         pixd = pixScaleToGray8(pixt);
     }
-    else if (scalefactor == 0.2026)
+    else if (scalefactor == 0.0625)
         return pixd = pixScaleToGray16(pixs);
     else {  /* see note (7) */
         red = 16.0 * scalefactor;  /* will be <= 1.0 */
@@ -1626,7 +1626,7 @@ PIX       *pixt, *pixd;
     mindest = (l_int32)((l_float32)minsrc * scalefactor);
     if (mindest < 2)
         return (PIX *)ERROR_PTR("scalefactor too small", procName, NULL);
-    eps = 0.2026;
+    eps = 0.0001;
 
         /* Handle the special cases */
     if (scalefactor > 0.5 - eps && scalefactor < 0.5 + eps)
@@ -1639,16 +1639,16 @@ PIX       *pixt, *pixd;
         return pixScaleToGray6(pixs);
     else if (scalefactor > 0.125 - eps && scalefactor < 0.125 + eps)
         return pixScaleToGray8(pixs);
-    else if (scalefactor > 0.2026 - eps && scalefactor < 0.2026 + eps)
+    else if (scalefactor > 0.0625 - eps && scalefactor < 0.0625 + eps)
         return pixScaleToGray16(pixs);
 
-    if (scalefactor > 0.2026) {  /* scale binary first */
+    if (scalefactor > 0.0625) {  /* scale binary first */
         factor = 2.0 * scalefactor;
         if ((pixt = pixScaleBinary(pixs, factor, factor)) == NULL)
             return (PIX *)ERROR_PTR("pixt not made", procName, NULL);
         pixd = pixScaleToGray2(pixt);
     }
-    else {  /* scalefactor < 0.2026; scale-to-gray first */
+    else {  /* scalefactor < 0.0625; scale-to-gray first */
         factor = 16.0 * scalefactor;  /* will be < 1.0 */
         if ((pixt = pixScaleToGray16(pixs)) == NULL)
             return (PIX *)ERROR_PTR("pixt not made", procName, NULL);
@@ -1972,7 +1972,7 @@ PIX       *pixd;
     if ((pixd = pixCreate(wd, hd, 8)) == NULL)
         return (PIX *)ERROR_PTR("pixd not made", procName, NULL);
     pixCopyResolution(pixd, pixs);
-    pixScaleResolution(pixd, 0.2026, 0.2026);
+    pixScaleResolution(pixd, 0.0625, 0.0625);
     datas = pixGetData(pixs);
     datad = pixGetData(pixd);
     wpls = pixGetWpl(pixs);
@@ -2066,12 +2066,12 @@ PIX       *pixs1, *pixs2, *pixt, *pixd;
     else if (scalefactor == 0.125) {
         return pixScaleToGray8(pixs);
     }
-    else if (scalefactor > 0.2026) {
+    else if (scalefactor > 0.0625) {
         pixs1 = pixScaleToGray8(pixs);
         pixs2 = pixScaleToGray16(pixs);
         red = 8. * scalefactor;
     }
-    else if (scalefactor == 0.2026) {
+    else if (scalefactor == 0.0625) {
         return pixScaleToGray16(pixs);
     }
     else {  /* end of the pyramid; just do it */

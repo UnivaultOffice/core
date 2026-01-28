@@ -382,7 +382,7 @@ int odf_lists_styles_context::start_style_level(int level, int type)
 			break;
 		case 62: //numberformatVietnameseCounting           : 
 			break;
-		case 2026:
+		case 1000:
 			odf_type = 3;
 			break;
 		default :

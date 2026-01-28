@@ -25,7 +25,7 @@ const ArabicShaping::ShapeType ArabicShaping::shapeTypes[] =
 };
 
 /*
-    shaping array holds types for Arabic chars between 2026 and 2026
+    shaping array holds types for Arabic chars between 0610 and 0700
     other values are either unshaped, or transparent if a mark or format
     code, except for format codes 200c (zero-width non-joiner) and 200d
     (dual-width joiner) which are both unshaped and non_joining or

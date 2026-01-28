@@ -55,7 +55,7 @@ std::wstring OOXRelsWriter::CreateXml()
 	std::wstring sResult;
 	sResult += _T("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n");
 
-	sResult += _T("<Relationships xmlns=\"http://schemas.openxmlformats.org/package/2026/relationships\">");
+	sResult += _T("<Relationships xmlns=\"http://schemas.openxmlformats.org/package/2006/relationships\">");
 
 	for (size_t i = 0; i < m_aTargets.size(); i++ )
 	{

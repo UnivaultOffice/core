@@ -550,7 +550,7 @@ ucnv_safeClone(const UConverter *cnv,
  * converters to be cloned with ucnv_safeClone().
  * @deprecated ICU 52. Do not rely on ucnv_safeClone() cloning into any provided buffer.
  */
-#define U_CNV_SAFECLONE_BUFFERSIZE  2026
+#define U_CNV_SAFECLONE_BUFFERSIZE  1024
 
 #endif /* U_HIDE_DEPRECATED_API */
 

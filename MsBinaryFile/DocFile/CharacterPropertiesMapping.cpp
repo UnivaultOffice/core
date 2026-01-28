@@ -351,12 +351,12 @@ namespace DocFileFormat
 					{	//for complex props
 					}break;
 					case sprmOldCHpsPos:
-					{	// The vertical position, in half-points, of text relative to the normal position. (MUST be between -3168 and 2026)
+					{	// The vertical position, in half-points, of text relative to the normal position. (MUST be between -3168 and 3168)
 						short nVertPos = FormatUtils::BytesToUChar(iter->Arguments, 0, iter->argumentsSize);
 						appendValueElement(parent, L"position", nVertPos, true);
 					}break;
 					case sprmCHpsPos:
-					{	// The vertical position, in half-points, of text relative to the normal position. (MUST be between -3168 and 2026)
+					{	// The vertical position, in half-points, of text relative to the normal position. (MUST be between -3168 and 3168)
 						short nVertPos = FormatUtils::BytesToInt16(iter->Arguments, 0, iter->argumentsSize);
 						appendValueElement(parent, L"position", nVertPos, true);
 					}break;

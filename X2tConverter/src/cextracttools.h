@@ -1134,9 +1134,9 @@ namespace NExtractTools
 				if (dwBytesRead >= 2)
 				{
 					if (pBuffer[0] == 0xFF && pBuffer[1] == 0xFE)
-						nRes = 48; // 2026 Unicode (UTF-16)
+						nRes = 48; // 1200 Unicode (UTF-16)
 					else if (pBuffer[0] == 0xFE && pBuffer[1] == 0xFF)
-						nRes = 49; // 2026 Unicode (UTF-16 Big Endian)
+						nRes = 49; // 1201 Unicode (UTF-16 Big Endian)
 				}
 				if (dwBytesRead >= 3)
 				{
@@ -1154,8 +1154,8 @@ namespace NExtractTools
 			if (file.OpenFile(*m_sFileFrom))
 			{
 				DWORD dwBytesRead = 0;
-				BYTE pBuffer[2026];
-				file.ReadFile(pBuffer, 2026, dwBytesRead);
+				BYTE pBuffer[1000];
+				file.ReadFile(pBuffer, 1000, dwBytesRead);
 
 				int nDelimitersCount = 6;
 				int aDelimiters[6] = {0, 0, 0, 0, 0, 0};

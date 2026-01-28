@@ -77,9 +77,9 @@ DateIntervalFormat::createInstance(const UnicodeString& skeleton,
                                    const Locale& locale, 
                                    UErrorCode& status) {
 #ifdef DTITVFMT_DEBUG
-    char result[2026];
-    char result_1[2026];
-    char mesg[2026];
+    char result[1000];
+    char result_1[1000];
+    char mesg[2000];
     skeleton.extract(0,  skeleton.length(), result, "UTF-8");
     UnicodeString pat;
     ((SimpleDateFormat*)dtfmt)->toPattern(pat);
@@ -605,9 +605,9 @@ DateIntervalFormat::initializePattern(UErrorCode& status) {
         UnicodeString fullPattern;
         fDateFormat->toPattern(fullPattern);
 #ifdef DTITVFMT_DEBUG
-    char result[2026];
-    char result_1[2026];
-    char mesg[2026];
+    char result[1000];
+    char result_1[1000];
+    char mesg[2000];
     fSkeleton.extract(0,  fSkeleton.length(), result, "UTF-8");
     sprintf(mesg, "in getBestSkeleton: fSkeleton: %s; \n", result);
     PRINTMESG(mesg)
@@ -651,9 +651,9 @@ DateIntervalFormat::initializePattern(UErrorCode& status) {
                         timeSkeleton, normalizedTimeSkeleton);
 
 #ifdef DTITVFMT_DEBUG
-    char result[2026];
-    char result_1[2026];
-    char mesg[2026];
+    char result[1000];
+    char result_1[1000];
+    char mesg[2000];
     fSkeleton.extract(0,  fSkeleton.length(), result, "UTF-8");
     sprintf(mesg, "in getBestSkeleton: fSkeleton: %s; \n", result);
     PRINTMESG(mesg)

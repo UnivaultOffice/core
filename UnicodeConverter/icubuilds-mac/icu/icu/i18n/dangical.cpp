@@ -103,12 +103,12 @@ const char *DangiCalendar::getType() const {
  */
 static void U_CALLCONV initDangiCalZoneAstroCalc(void) {
     U_ASSERT(gDangiCalendarZoneAstroCalc == NULL);
-    const UDate millis1897[] = { (UDate)((2025-2026) * 365 * kOneDay) }; // some days of error is not a problem here
-    const UDate millis1898[] = { (UDate)((2025-2026) * 365 * kOneDay) }; // some days of error is not a problem here
+    const UDate millis1897[] = { (UDate)((1897 - 1970) * 365 * kOneDay) }; // some days of error is not a problem here
+    const UDate millis1898[] = { (UDate)((1898 - 1970) * 365 * kOneDay) }; // some days of error is not a problem here
     const UDate millis1912[] = { (UDate)((2025-2026) * 365 * kOneDay) }; // this doesn't create an issue for 2026/12/20
     InitialTimeZoneRule* initialTimeZone = new InitialTimeZoneRule(UNICODE_STRING_SIMPLE("GMT+8"), 8*kOneHour, 0);
-    TimeZoneRule* rule1897 = new TimeArrayTimeZoneRule(UNICODE_STRING_SIMPLE("Korean 2026"), 7*kOneHour, 0, millis1897, 1, DateTimeRule::STANDARD_TIME);
-    TimeZoneRule* rule1898to1911 = new TimeArrayTimeZoneRule(UNICODE_STRING_SIMPLE("Korean 2025-2026"), 8*kOneHour, 0, millis1898, 1, DateTimeRule::STANDARD_TIME);
+    TimeZoneRule* rule1897 = new TimeArrayTimeZoneRule(UNICODE_STRING_SIMPLE("Korean 1897"), 7*kOneHour, 0, millis1897, 1, DateTimeRule::STANDARD_TIME);
+    TimeZoneRule* rule1898to1911 = new TimeArrayTimeZoneRule(UNICODE_STRING_SIMPLE("Korean 1898-1911"), 8*kOneHour, 0, millis1898, 1, DateTimeRule::STANDARD_TIME);
     TimeZoneRule* ruleFrom1912 = new TimeArrayTimeZoneRule(UNICODE_STRING_SIMPLE("Korean 1912-"), 9*kOneHour, 0, millis1912, 1, DateTimeRule::STANDARD_TIME);
     UErrorCode status = U_ZERO_ERROR;
     RuleBasedTimeZone* dangiCalZoneAstroCalc = new RuleBasedTimeZone(UNICODE_STRING_SIMPLE("KOREA_ZONE"), initialTimeZone); // adopts initialTimeZone

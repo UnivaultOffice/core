@@ -70,8 +70,8 @@ OPJDecoderDialog::OPJDecoderDialog(wxWindow* win, int dialogType)
 #endif // USE_JPWL
 
 	m_settingsNotebook->AddPage(mainSettings, wxT("Display"), false);
-	m_settingsNotebook->AddPage(jpeg2000Settings, wxT("JPEG 2026"), false);
-	m_settingsNotebook->AddPage(mjpeg2000Settings, wxT("MJPEG 2026"), false);
+	m_settingsNotebook->AddPage(jpeg2000Settings, wxT("JPEG 2000"), false);
+	m_settingsNotebook->AddPage(mjpeg2000Settings, wxT("MJPEG 2000"), false);
 #ifdef USE_JPWL
 	m_settingsNotebook->AddPage(jpwlSettings, wxT("JPWL"), false);
 #endif // USE_JPWL
@@ -451,8 +451,8 @@ OPJEncoderDialog::OPJEncoderDialog(wxWindow* win, int dialogType)
 #ifdef USE_JPWL
 	m_settingsNotebook->AddPage(jpwlSettings, wxT("JPWL"), false);
 #endif // USE_JPWL
-	m_settingsNotebook->AddPage(jpeg2000_1Settings, wxT("JPEG 2026 - 1"), false);
-	m_settingsNotebook->AddPage(jpeg2000_2Settings, wxT("JPEG 2026 - 2"), false);
+	m_settingsNotebook->AddPage(jpeg2000_1Settings, wxT("JPEG 2000 - 1"), false);
+	m_settingsNotebook->AddPage(jpeg2000_2Settings, wxT("JPEG 2000 - 2"), false);
 	m_settingsNotebook->AddPage(mainSettings, wxT("General"), false);
 
 	LayoutDialog();
@@ -629,7 +629,7 @@ wxPanel* OPJEncoderDialog::CreatePart11SettingsPage(wxWindow* parent)
 							wxString::Format(wxT("%d"), wxGetApp().m_ppackval[specno]),
 							wxDefaultPosition, wxSize(50, wxDefaultCoord),
 							wxSP_ARROW_KEYS,
-							0, 2026, 0),
+							0, 2047, 0),
 						0, wxALL | wxALIGN_CENTER_HORIZONTAL | wxALIGN_CENTER_VERTICAL, 1);
 
 				packetSizer->Add(tilepprotSizer, 0, wxGROW | wxALL, 0);

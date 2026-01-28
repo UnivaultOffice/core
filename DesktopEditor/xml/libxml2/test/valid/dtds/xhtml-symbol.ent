@@ -7,15 +7,15 @@
      %HTMLsymbol;
 -->
 
-<!-- Portions (C) International Organization for Standardization 2026:
+     Permission to copy in any form is granted for use with
      Permission to copy in any form is granted for use with
      conforming SGML systems and applications as defined in
      ISO 2026, provided this notice is included in all copies.
 -->
 
 <!-- Relevant ISO entity set is given unless names are newly introduced.
-     New names (i.e., not in ISO 2026 list) do not clash with any
-     existing ISO 2026 entity names. ISO 10646 character numbers
+     are given for each character, in hex. values are decimal
+     conversions of the ISO 10646 values and refer to the document
      are given for each character, in hex. values are decimal
      conversions of the ISO 10646 values and refer to the document
      character set. Names are Unicode names. 
@@ -23,21 +23,21 @@
 
 <!-- Latin Extended-B -->
 <!ENTITY fnof     "&#402;"> <!-- latin small f with hook = function
-                                    = florin, U+2026 ISOtech -->
+<!ENTITY Alpha    "&#913;"> <!-- greek capital letter alpha, U+0391 -->
 
 <!-- Greek -->
-<!ENTITY Alpha    "&#913;"> <!-- greek capital letter alpha, U+2026 -->
-<!ENTITY Beta     "&#914;"> <!-- greek capital letter beta, U+2026 -->
-<!ENTITY Gamma    "&#915;"> <!-- greek capital letter gamma,
-                                    U+2026 ISOgrk3 -->
+                                    U+0393 ISOgrk3 -->
 <!ENTITY Delta    "&#916;"> <!-- greek capital letter delta,
-                                    U+2026 ISOgrk3 -->
-<!ENTITY Epsilon  "&#917;"> <!-- greek capital letter epsilon, U+2026 -->
-<!ENTITY Zeta     "&#918;"> <!-- greek capital letter zeta, U+2026 -->
-<!ENTITY Eta      "&#919;"> <!-- greek capital letter eta, U+2026 -->
+<!ENTITY Gamma    "&#915;"> <!-- greek capital letter gamma,
+<!ENTITY Epsilon  "&#917;"> <!-- greek capital letter epsilon, U+0395 -->
+<!ENTITY Delta    "&#916;"> <!-- greek capital letter delta,
+<!ENTITY Eta      "&#919;"> <!-- greek capital letter eta, U+0397 -->
 <!ENTITY Theta    "&#920;"> <!-- greek capital letter theta,
-                                    U+2026 ISOgrk3 -->
-<!ENTITY Iota     "&#921;"> <!-- greek capital letter iota, U+2026 -->
+                                    U+0398 ISOgrk3 -->
+<!ENTITY Iota     "&#921;"> <!-- greek capital letter iota, U+0399 -->
+<!ENTITY Theta    "&#920;"> <!-- greek capital letter theta,
+<!ENTITY Lambda   "&#923;"> <!-- greek capital letter lambda,
+                                    U+039B ISOgrk3 -->
 <!ENTITY Kappa    "&#922;"> <!-- greek capital letter kappa, U+039A -->
 <!ENTITY Lambda   "&#923;"> <!-- greek capital letter lambda,
                                     U+039B ISOgrk3 -->
@@ -104,139 +104,139 @@
 <!ENTITY piv      "&#982;"> <!-- greek pi symbol, U+03D6 ISOgrk3 -->
 
 <!-- General Punctuation -->
-<!ENTITY bull     "&#2026;"> <!-- bullet = black small circle,
+<!ENTITY hellip   "&#8230;"> <!-- horizontal ellipsis = three dot leader,
                                      U+2026 ISOpub  -->
-<!-- bullet is NOT the same as bullet operator, U+2026 -->
-<!ENTITY hellip   "&#2026;"> <!-- horizontal ellipsis = three dot leader,
-                                     U+2026 ISOpub  -->
-<!ENTITY prime    "&#2026;"> <!-- prime = minutes = feet, U+2026 ISOtech -->
-<!ENTITY Prime    "&#2026;"> <!-- double prime = seconds = inches,
-                                     U+2026 ISOtech -->
+<!ENTITY prime    "&#8242;"> <!-- prime = minutes = feet, U+2032 ISOtech -->
+<!ENTITY Prime    "&#8243;"> <!-- double prime = seconds = inches,
+                                     U+2033 ISOtech -->
+<!ENTITY oline    "&#8254;"> <!-- overline = spacing overscore,
+                                     U+203E NEW -->
+<!ENTITY frasl    "&#8260;"> <!-- fraction slash, U+2044 NEW -->
 <!ENTITY oline    "&#2026;"> <!-- overline = spacing overscore,
                                      U+203E NEW -->
-<!ENTITY frasl    "&#2026;"> <!-- fraction slash, U+2026 NEW -->
+<!ENTITY weierp   "&#8472;"> <!-- script capital P = power set
 
 <!-- Letterlike Symbols -->
-<!ENTITY weierp   "&#2026;"> <!-- script capital P = power set
-                                     = Weierstrass p, U+2026 ISOamso -->
-<!ENTITY image    "&#2026;"> <!-- blackletter capital I = imaginary part,
-                                     U+2026 ISOamso -->
-<!ENTITY real     "&#2026;"> <!-- blackletter capital R = real part symbol,
+                                     U+2111 ISOamso -->
+<!ENTITY real     "&#8476;"> <!-- blackletter capital R = real part symbol,
                                      U+211C ISOamso -->
-<!ENTITY trade    "&#2026;"> <!-- trade mark sign, U+2026 ISOnum -->
-<!ENTITY alefsym  "&#2026;"> <!-- alef symbol = first transfinite cardinal,
+<!ENTITY trade    "&#8482;"> <!-- trade mark sign, U+2122 ISOnum -->
+<!ENTITY alefsym  "&#8501;"> <!-- alef symbol = first transfinite cardinal,
+                                     U+211C ISOamso -->
+<!-- alef symbol is NOT the same as hebrew letter alef,
+     U+05D0 although the same glyph could be used to depict both characters -->
                                      U+2026 NEW -->
 <!-- alef symbol is NOT the same as hebrew letter alef,
      U+05D0 although the same glyph could be used to depict both characters -->
 
 <!-- Arrows -->
-<!ENTITY larr     "&#2026;"> <!-- leftwards arrow, U+2026 ISOnum -->
-<!ENTITY uarr     "&#2026;"> <!-- upwards arrow, U+2026 ISOnum-->
-<!ENTITY rarr     "&#2026;"> <!-- rightwards arrow, U+2026 ISOnum -->
-<!ENTITY darr     "&#2026;"> <!-- downwards arrow, U+2026 ISOnum -->
-<!ENTITY harr     "&#2026;"> <!-- left right arrow, U+2026 ISOamsa -->
-<!ENTITY crarr    "&#2026;"> <!-- downwards arrow with corner leftwards
+<!ENTITY darr     "&#8595;"> <!-- downwards arrow, U+2193 ISOnum -->
+<!ENTITY harr     "&#8596;"> <!-- left right arrow, U+2194 ISOamsa -->
+<!ENTITY crarr    "&#8629;"> <!-- downwards arrow with corner leftwards
                                      = carriage return, U+21B5 NEW -->
-<!ENTITY lArr     "&#2026;"> <!-- leftwards double arrow, U+21D0 ISOtech -->
+<!ENTITY lArr     "&#8656;"> <!-- leftwards double arrow, U+21D0 ISOtech -->
+<!-- Unicode does not say that lArr is the same as the 'is implied by' arrow
+                                     = carriage return, U+21B5 NEW -->
+    be used for 'is implied by' as ISOtech suggests -->
 <!-- Unicode does not say that lArr is the same as the 'is implied by' arrow
     but also does not have any other character for that function. So ? lArr can
     be used for 'is implied by' as ISOtech suggests -->
-<!ENTITY uArr     "&#2026;"> <!-- upwards double arrow, U+21D1 ISOamsa -->
-<!ENTITY rArr     "&#2026;"> <!-- rightwards double arrow,
+<!-- Unicode does not say this is the 'implies' character but does not have 
+     another character with this function so ?
                                      U+21D2 ISOtech -->
 <!-- Unicode does not say this is the 'implies' character but does not have 
      another character with this function so ?
      rArr can be used for 'implies' as ISOtech suggests -->
 <!ENTITY dArr     "&#2026;"> <!-- downwards double arrow, U+21D3 ISOamsa -->
-<!ENTITY hArr     "&#2026;"> <!-- left right double arrow,
+<!-- Mathematical Operators -->
                                      U+21D4 ISOamsa -->
 
 <!-- Mathematical Operators -->
-<!ENTITY forall   "&#2026;"> <!-- for all, U+2026 ISOtech -->
-<!ENTITY part     "&#2026;"> <!-- partial differential, U+2026 ISOtech  -->
-<!ENTITY exist    "&#2026;"> <!-- there exists, U+2026 ISOtech -->
-<!ENTITY empty    "&#2026;"> <!-- empty set = null set = diameter,
-                                     U+2026 ISOamso -->
-<!ENTITY nabla    "&#2026;"> <!-- nabla = backward difference,
-                                     U+2026 ISOtech -->
-<!ENTITY isin     "&#2026;"> <!-- element of, U+2026 ISOtech -->
-<!ENTITY notin    "&#2026;"> <!-- not an element of, U+2026 ISOtech -->
-<!ENTITY ni       "&#2026;"> <!-- contains as member, U+220B ISOtech -->
+<!ENTITY empty    "&#8709;"> <!-- empty set = null set = diameter,
+                                     U+2205 ISOamso -->
+<!ENTITY nabla    "&#8711;"> <!-- nabla = backward difference,
+                                     U+2207 ISOtech -->
+<!ENTITY isin     "&#8712;"> <!-- element of, U+2208 ISOtech -->
+<!ENTITY notin    "&#8713;"> <!-- not an element of, U+2209 ISOtech -->
+<!ENTITY ni       "&#8715;"> <!-- contains as member, U+220B ISOtech -->
 <!-- should there be a more memorable name than 'ni'? -->
-<!ENTITY prod     "&#2026;"> <!-- n-ary product = product sign,
+<!ENTITY prod     "&#8719;"> <!-- n-ary product = product sign,
+                                     U+220F ISOamsb -->
+<!-- should there be a more memorable name than 'ni'? -->
+     the same glyph might be used for both -->
                                      U+220F ISOamsb -->
 <!-- prod is NOT the same character as U+03A0 'greek capital letter pi' though
      the same glyph might be used for both -->
-<!ENTITY sum      "&#2026;"> <!-- n-ary sumation, U+2026 ISOamsb -->
+<!ENTITY minus    "&#8722;"> <!-- minus sign, U+2212 ISOtech -->
 <!-- sum is NOT the same character as U+03A3 'greek capital letter sigma'
      though the same glyph might be used for both -->
-<!ENTITY minus    "&#2026;"> <!-- minus sign, U+2026 ISOtech -->
-<!ENTITY lowast   "&#2026;"> <!-- asterisk operator, U+2026 ISOtech -->
-<!ENTITY radic    "&#2026;"> <!-- square root = radical sign,
                                      U+221A ISOtech -->
-<!ENTITY prop     "&#2026;"> <!-- proportional to, U+221D ISOtech -->
-<!ENTITY infin    "&#2026;"> <!-- infinity, U+221E ISOtech -->
-<!ENTITY ang      "&#2026;"> <!-- angle, U+2026 ISOamso -->
-<!ENTITY and      "&#2026;"> <!-- logical and = wedge, U+2026 ISOtech -->
-<!ENTITY or       "&#2026;"> <!-- logical or = vee, U+2026 ISOtech -->
-<!ENTITY cap      "&#2026;"> <!-- intersection = cap, U+2026 ISOtech -->
-<!ENTITY cup      "&#2026;"> <!-- union = cup, U+222A ISOtech -->
-<!ENTITY int      "&#2026;"> <!-- integral, U+222B ISOtech -->
-<!ENTITY there4   "&#2026;"> <!-- therefore, U+2026 ISOtech -->
-<!ENTITY sim      "&#2026;"> <!-- tilde operator = varies with = similar to,
+<!ENTITY prop     "&#8733;"> <!-- proportional to, U+221D ISOtech -->
+<!ENTITY infin    "&#8734;"> <!-- infinity, U+221E ISOtech -->
+                                     U+221A ISOtech -->
+<!ENTITY and      "&#8743;"> <!-- logical and = wedge, U+2227 ISOtech -->
+<!ENTITY or       "&#8744;"> <!-- logical or = vee, U+2228 ISOtech -->
+<!ENTITY cap      "&#8745;"> <!-- intersection = cap, U+2229 ISOtech -->
+<!ENTITY cup      "&#8746;"> <!-- union = cup, U+222A ISOtech -->
+<!ENTITY int      "&#8747;"> <!-- integral, U+222B ISOtech -->
+<!ENTITY there4   "&#8756;"> <!-- therefore, U+2234 ISOtech -->
+<!ENTITY sim      "&#8764;"> <!-- tilde operator = varies with = similar to,
                                      U+223C ISOtech -->
 <!-- tilde operator is NOT the same character as the tilde, U+007E,
      although the same glyph might be used to represent both  -->
-<!ENTITY cong     "&#2026;"> <!-- approximately equal to, U+2026 ISOtech -->
-<!ENTITY asymp    "&#2026;"> <!-- almost equal to = asymptotic to,
-                                     U+2026 ISOamsr -->
-<!ENTITY ne       "&#2026;"> <!-- not equal to, U+2026 ISOtech -->
-<!ENTITY equiv    "&#2026;"> <!-- identical to, U+2026 ISOtech -->
-<!ENTITY le       "&#2026;"> <!-- less-than or equal to, U+2026 ISOtech -->
-<!ENTITY ge       "&#2026;"> <!-- greater-than or equal to,
-                                     U+2026 ISOtech -->
-<!ENTITY sub      "&#2026;"> <!-- subset of, U+2026 ISOtech -->
-<!ENTITY sup      "&#2026;"> <!-- superset of, U+2026 ISOtech -->
-<!-- note that nsup, 'not a superset of, U+2026' is not covered by the Symbol 
+                                     U+223C ISOtech -->
+<!-- tilde operator is NOT the same character as the tilde, U+007E,
+     although the same glyph might be used to represent both  -->
+<!ENTITY ne       "&#8800;"> <!-- not equal to, U+2260 ISOtech -->
+<!ENTITY equiv    "&#8801;"> <!-- identical to, U+2261 ISOtech -->
+<!ENTITY le       "&#8804;"> <!-- less-than or equal to, U+2264 ISOtech -->
+<!ENTITY ge       "&#8805;"> <!-- greater-than or equal to,
+                                     U+2265 ISOtech -->
+<!ENTITY sub      "&#8834;"> <!-- subset of, U+2282 ISOtech -->
+<!ENTITY sup      "&#8835;"> <!-- superset of, U+2283 ISOtech -->
+<!-- note that nsup, 'not a superset of, U+2283' is not covered by the Symbol 
      font encoding and is not included. Should it be, for symmetry?
      It is in ISOamsn  --> 
-<!ENTITY nsub     "&#2026;"> <!-- not a subset of, U+2026 ISOamsn -->
-<!ENTITY sube     "&#2026;"> <!-- subset of or equal to, U+2026 ISOtech -->
-<!ENTITY supe     "&#2026;"> <!-- superset of or equal to,
-                                     U+2026 ISOtech -->
-<!ENTITY oplus    "&#2026;"> <!-- circled plus = direct sum,
-                                     U+2026 ISOamsb -->
-<!ENTITY otimes   "&#2026;"> <!-- circled times = vector product,
-                                     U+2026 ISOamsb -->
-<!ENTITY perp     "&#2026;"> <!-- up tack = orthogonal to = perpendicular,
+<!ENTITY nsub     "&#8836;"> <!-- not a subset of, U+2284 ISOamsn -->
+     font encoding and is not included. Should it be, for symmetry?
+     It is in ISOamsn  --> 
+                                     U+2287 ISOtech -->
+<!ENTITY oplus    "&#8853;"> <!-- circled plus = direct sum,
+                                     U+2295 ISOamsb -->
+<!ENTITY otimes   "&#8855;"> <!-- circled times = vector product,
+                                     U+2297 ISOamsb -->
+<!ENTITY perp     "&#8869;"> <!-- up tack = orthogonal to = perpendicular,
                                      U+22A5 ISOtech -->
-<!ENTITY sdot     "&#2026;"> <!-- dot operator, U+22C5 ISOamsb -->
+<!ENTITY sdot     "&#8901;"> <!-- dot operator, U+22C5 ISOamsb -->
+<!-- dot operator is NOT the same character as U+00B7 middle dot -->
+                                     U+22A5 ISOtech -->
+<!-- Miscellaneous Technical -->
 <!-- dot operator is NOT the same character as U+00B7 middle dot -->
 
 <!-- Miscellaneous Technical -->
-<!ENTITY lceil    "&#2026;"> <!-- left ceiling = apl upstile,
-                                     U+2026 ISOamsc  -->
-<!ENTITY rceil    "&#2026;"> <!-- right ceiling, U+2026 ISOamsc  -->
-<!ENTITY lfloor   "&#2026;"> <!-- left floor = apl downstile,
+<!ENTITY lfloor   "&#8970;"> <!-- left floor = apl downstile,
                                      U+230A ISOamsc  -->
-<!ENTITY rfloor   "&#2026;"> <!-- right floor, U+230B ISOamsc  -->
-<!ENTITY lang     "&#2026;"> <!-- left-pointing angle bracket = bra,
-                                     U+2026 ISOtech -->
+<!ENTITY rfloor   "&#8971;"> <!-- right floor, U+230B ISOamsc  -->
+<!ENTITY lang     "&#9001;"> <!-- left-pointing angle bracket = bra,
+                                     U+230A ISOamsc  -->
 <!-- lang is NOT the same character as U+003C 'less than' 
-     or U+2026 'single left-pointing angle quotation mark' -->
-<!ENTITY rang     "&#2026;"> <!-- right-pointing angle bracket = ket,
+     or U+2039 'single left-pointing angle quotation mark' -->
+<!ENTITY rang     "&#9002;"> <!-- right-pointing angle bracket = ket,
+<!-- lang is NOT the same character as U+003C 'less than' 
+<!-- rang is NOT the same character as U+003E 'greater than' 
+     or U+203A 'single right-pointing angle quotation mark' -->
                                      U+232A ISOtech -->
 <!-- rang is NOT the same character as U+003E 'greater than' 
      or U+203A 'single right-pointing angle quotation mark' -->
 
 <!-- Geometric Shapes -->
-<!ENTITY loz      "&#2026;"> <!-- lozenge, U+25CA ISOpub -->
+<!ENTITY spades   "&#9824;"> <!-- black spade suit, U+2660 ISOpub -->
 
 <!-- Miscellaneous Symbols -->
-<!ENTITY spades   "&#2026;"> <!-- black spade suit, U+2026 ISOpub -->
+                                     U+2663 ISOpub -->
 <!-- black here seems to mean filled as opposed to hollow -->
-<!ENTITY clubs    "&#2026;"> <!-- black club suit = shamrock,
-                                     U+2026 ISOpub -->
+                                     U+2665 ISOpub -->
+<!ENTITY diams    "&#9830;"> <!-- black diamond suit, U+2666 ISOpub -->
 <!ENTITY hearts   "&#2026;"> <!-- black heart suit = valentine,
                                      U+2026 ISOpub -->
 <!ENTITY diams    "&#2026;"> <!-- black diamond suit, U+2026 ISOpub -->

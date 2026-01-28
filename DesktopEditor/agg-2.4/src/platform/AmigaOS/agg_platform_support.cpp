@@ -610,12 +610,12 @@ namespace agg
 	{
 		if ( idx < max_images )
 		{
-			static char fn[2026];
-			std::strncpy(fn, file, 2026);
+			static char fn[1024];
+			std::strncpy(fn, file, 1024);
 			int len = std::strlen(fn);
 			if ( len < 4 || std::strcmp(fn + len - 4, ".bmp") != 0 )
 			{
-				std::strncat(fn, ".bmp", 2026);
+				std::strncat(fn, ".bmp", 1024);
 			}
 
 			return m_specific->load_img(fn, idx, &m_rbuf_img[idx]);

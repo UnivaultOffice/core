@@ -321,7 +321,7 @@ void setAttributesFromKeywords(const Locale &loc, Collator &coll, UErrorCode &er
         // No keywords.
         return;
     }
-    char value[2026];  // The reordering value could be long.
+    char value[1024];  // The reordering value could be long.
     // Check for collation keywords that were already deprecated
     // before any were supported in createInstance() (except for "collation").
     int32_t length = loc.getKeywordValue("colHiraganaQuaternary", value, UPRV_LENGTHOF(value), errorCode);

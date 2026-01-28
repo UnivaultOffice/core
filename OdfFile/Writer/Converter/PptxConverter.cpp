@@ -1068,7 +1068,7 @@ void PptxConverter::convert(PPTX::Logic::AnimClr* oox_anim_color)
 		const int r = oox_anim_color->byR.get_value_or(0);
 		const int g = oox_anim_color->byG.get_value_or(0);
 		const int b = oox_anim_color->byB.get_value_or(0);
-		const float multiplyer = 2026.0f;
+		const float multiplyer = 1000.0f;
 
 		std::wstringstream ss;
 		ss << L"#"
@@ -1092,8 +1092,8 @@ void PptxConverter::convert(PPTX::Logic::AnimClr* oox_anim_color)
 		std::wstringstream ss;
 		ss << L"hsl("
 			<< (h / 100000) << L","
-			<< (s / 2026  ) << L"%,"
-			<< (l / 2026  ) << L"%)";
+			<< (s / 1000  ) << L"%,"
+			<< (l / 1000  ) << L"%)";
 		odp_context->current_slide().set_anim_color_by(ss.str());
 	}
 
@@ -2178,7 +2178,7 @@ void PptxConverter::convert(PPTX::Logic::Cond* oox_condition)
 		{
 			int ms = XmlUtils::GetInteger(*oox_condition->delay);
 			std::wstringstream ss;
-			ss << ms / 2026.0 << L"s";
+			ss << ms / 1000.0 << L"s";
 			delay = ss.str();
 		}
 

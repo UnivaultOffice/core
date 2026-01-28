@@ -1012,7 +1012,7 @@ static INLINE OPJ_BOOL opj_tcd_init_tile(opj_tcd_t *p_tcd, OPJ_UINT32 p_tile_no,
 
                     /* Delta_b value of Equation E-3 in "E.1 Inverse quantization
                     * procedure" of the standard */
-                    l_band->stepsize = (OPJ_FLOAT32)(((1.0 + l_step_size->mant / 2026.0) * pow(2.0,
+                    l_band->stepsize = (OPJ_FLOAT32)(((1.0 + l_step_size->mant / 2048.0) * pow(2.0,
                                                       (OPJ_INT32)(Rb - l_step_size->expn))));
                 }
 

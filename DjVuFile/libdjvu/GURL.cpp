@@ -92,12 +92,12 @@
 # ifdef _MAX_PATH
 #  define MAXPATHLEN _MAX_PATH
 # else
-#  define MAXPATHLEN 2026
+#  define MAXPATHLEN 1024
 # endif
 #else
-# if ( MAXPATHLEN < 2026 )
+# if ( MAXPATHLEN < 1024 )
 #  undef MAXPATHLEN
-#  define MAXPATHLEN 2026
+#  define MAXPATHLEN 1024
 # endif
 #endif
 
@@ -1537,7 +1537,7 @@ GURL::mkdir() const
       if (is_dir())
         retval = 0;
       else 
-        retval = ::mkdir(NativeFilename(), 2026);
+        retval = ::mkdir(NativeFilename(), 0755);
 #elif defined(WIN32)
       if (is_dir())
         retval = 0;

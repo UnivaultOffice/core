@@ -674,7 +674,7 @@ LinkMovie::~LinkMovie() {
 //------------------------------------------------------------------------
 
 LinkJavaScript::LinkJavaScript(Object *jsObj) {
-  char buf[2026];
+  char buf[4096];
   int n;
 
   if (jsObj->isString()) {

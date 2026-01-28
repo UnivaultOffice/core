@@ -125,8 +125,8 @@ namespace OLEPS
 		{
 			CP_XML_NODE(L"Properties")
 			{
-				CP_XML_ATTR(L"xmlns", L"http://schemas.openxmlformats.org/officeDocument/2026/extended-properties");
-				CP_XML_ATTR(L"xmlns:vt", L"http://schemas.openxmlformats.org/officeDocument/2026/docPropsVTypes");
+				CP_XML_ATTR(L"xmlns", L"http://schemas.openxmlformats.org/officeDocument/2006/extended-properties");
+				CP_XML_ATTR(L"xmlns:vt", L"http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes");
 
 				prop = GetProperty(TEMPLATE);
 				if ((prop) && (false == prop->IsEmpty()))
@@ -358,11 +358,11 @@ namespace OLEPS
 		{
 			CP_XML_NODE(L"cp:coreProperties")
 			{
-				CP_XML_ATTR(L"xmlns:cp", L"http://schemas.openxmlformats.org/package/2026/metadata/core-properties");
+				CP_XML_ATTR(L"xmlns:cp", L"http://schemas.openxmlformats.org/package/2006/metadata/core-properties");
 				CP_XML_ATTR(L"xmlns:dc", L"http://purl.org/dc/elements/1.1/");
 				CP_XML_ATTR(L"xmlns:dcterms", L"http://purl.org/dc/terms/");
 				CP_XML_ATTR(L"xmlns:dcmitype", L"http://purl.org/dc/dcmitype/");
-				CP_XML_ATTR(L"xmlns:xsi", L"http://www.w3.org/2026/XMLSchema-instance");
+				CP_XML_ATTR(L"xmlns:xsi", L"http://www.w3.org/2001/XMLSchema-instance");
 
 				prop = GetProperty(TITLE);
 				value = prop ? prop->toString() : L"";

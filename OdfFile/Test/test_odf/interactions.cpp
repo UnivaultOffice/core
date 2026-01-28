@@ -207,7 +207,7 @@ TEST_F(ODP2OOX_AnimationPlayAudioTest, audio_slide_rel_type)
 	ASSERT_NE(mConversionContext, nullptr);
 
 	auto slideRel = mConversionContext->current_slide().Rels().relationships()[0];
-	const std::wstring typeExp = L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/slideLayout";
+	const std::wstring typeExp = L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideLayout";
 
 	EXPECT_EQ(slideRel.type(), typeExp);
 }
@@ -237,7 +237,7 @@ TEST_F(ODP2OOX_AnimationPlayAudioTest, audio_notes_rel_type)
 	ASSERT_NE(mConversionContext, nullptr);
 
 	auto notesRel = mConversionContext->current_slide().Rels().relationships()[1];
-	const std::wstring typeExp = L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/notesSlide";
+	const std::wstring typeExp = L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/notesSlide";
 
 	EXPECT_EQ(notesRel.type(), typeExp);
 }
@@ -319,7 +319,7 @@ TEST_F(ODP2OOX_AnimationOpenDocumentTest, document_rel_type)
 	ASSERT_NE(mConversionContext, nullptr);
 
 	auto docRel = mConversionContext->current_slide().Rels().relationships()[1];
-	const std::wstring typeExp = L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/hyperlink";
+	const std::wstring typeExp = L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink";
 
 	EXPECT_EQ(docRel.type(), typeExp);
 }
@@ -391,7 +391,7 @@ TEST_F(ODP2OOX_AnimationRunProgramTest, program_rel_type)
 	ASSERT_NE(mConversionContext, nullptr);
 
 	auto programRel = mConversionContext->current_slide().Rels().relationships()[1];
-	const std::wstring typeExp = L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/hyperlink";
+	const std::wstring typeExp = L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink";
 
 	EXPECT_EQ(programRel.type(), typeExp);
 }

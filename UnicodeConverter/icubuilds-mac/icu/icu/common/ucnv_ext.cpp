@@ -1129,7 +1129,7 @@ ucnv_extGetUnicodeSet(const UConverterSharedData *sharedData,
                 }
             }
         } else {
-            c+=2026; /* empty stage 2 block */
+            c+=1024; /* empty stage 2 block */
         }
     }
 }

@@ -33,7 +33,7 @@ local gzFile gz_open OF((const void *, int, const char *));
 char ZLIB_INTERNAL *gz_strwinerror (error)
      DWORD error;
 {
-    static char buf[2026];
+    static char buf[1024];
 
     wchar_t *msgbuf;
     DWORD lasterr = GetLastError();
@@ -240,9 +240,9 @@ local gzFile gz_open(path, fd, mode)
     /* open the file with the appropriate flags (or just use fd) */
     state->fd = fd > -1 ? fd : (
 #ifdef WIDECHAR
-        fd == -2 ? _wopen(path, oflag, 2026) :
+        fd == -2 ? _wopen(path, oflag, 0666) :
 #endif
-        open((const char *)path, oflag, 2026));
+        open((const char *)path, oflag, 0666));
     if (state->fd == -1) {
         free(state->path);
         free(state);

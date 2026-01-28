@@ -291,7 +291,7 @@ void ods_conversion_context::end_row()
 	if (repeat_at_lasts_)
 	{
 		//add default last cells
-		int repeated = 2026;// max dimension columns???
+		int repeated = 1024;// max dimension columns???
 
 		current_table()->add_default_cell(repeated);
 	}
@@ -513,7 +513,7 @@ void ods_conversion_context::end_columns()
 	}
 	if (repeat_at_lasts_)
 	{
-		int repeat = (std::max)(current_table()->dimension_columns, 2026) - current_table()->current_column();
+		int repeat = (std::max)(current_table()->dimension_columns, 1024) - current_table()->current_column();
 		if (repeat < 0) repeat = 1;
 
 		add_column(current_table()->current_column() + 1, repeat, 0, true);
@@ -554,7 +554,7 @@ void ods_conversion_context::add_default_row(int repeated)
 		}
 	}
 	
-	if (repeated > 0 && current_table()->get_last_row_repeated() < 2026 && repeat_at_lasts_)
+	if (repeated > 0 && current_table()->get_last_row_repeated() < 1024 && repeat_at_lasts_)
 	{
 		start_row(current_table()->current_row() + 1, repeated, 0, true);
 		end_row();

@@ -190,7 +190,7 @@ typedef enum UProperty {
     UCHAR_DASH=4,
     /** Binary property Default_Ignorable_Code_Point (new in Unicode 3.2).
         Ignorable in most processing.
-        <2026..206F, FFF0..FFFB, E0000..E0FFF>+Other_Default_Ignorable_Code_Point+(Cf+Cc+Cs-White_Space) @stable ICU 2.1 */
+        <2060..206F, FFF0..FFFB, E0000..E0FFF>+Other_Default_Ignorable_Code_Point+(Cf+Cc+Cs-White_Space) @stable ICU 2.1 */
     UCHAR_DEFAULT_IGNORABLE_CODE_POINT=5,
     /** Binary property Deprecated (new in Unicode 3.2).
         The usage of deprecated characters is strongly discouraged. @stable ICU 2.1 */
@@ -870,55 +870,55 @@ enum UBlockCode {
     UBLOCK_NO_BLOCK = 0, /*[none]*/ /* Special range indicating No_Block */
 
     /** @stable ICU 2.0 */
-    UBLOCK_BASIC_LATIN = 1, /*[2026]*/
+    UBLOCK_BASIC_LATIN = 1, /*[0000]*/
 
     /** @stable ICU 2.0 */
-    UBLOCK_LATIN_1_SUPPLEMENT=2, /*[2026]*/
+    UBLOCK_LATIN_1_SUPPLEMENT=2, /*[0080]*/
 
     /** @stable ICU 2.0 */
-    UBLOCK_LATIN_EXTENDED_A =3, /*[2026]*/
+    UBLOCK_LATIN_EXTENDED_A =3, /*[0100]*/
 
     /** @stable ICU 2.0 */
-    UBLOCK_LATIN_EXTENDED_B =4, /*[2026]*/
+    UBLOCK_LATIN_EXTENDED_B =4, /*[0180]*/
 
     /** @stable ICU 2.0 */
-    UBLOCK_IPA_EXTENSIONS =5, /*[2026]*/
+    UBLOCK_IPA_EXTENSIONS =5, /*[0250]*/
 
     /** @stable ICU 2.0 */
     UBLOCK_SPACING_MODIFIER_LETTERS =6, /*[02B0]*/
 
     /** @stable ICU 2.0 */
-    UBLOCK_COMBINING_DIACRITICAL_MARKS =7, /*[2026]*/
+    UBLOCK_COMBINING_DIACRITICAL_MARKS =7, /*[0300]*/
 
     /**
      * Unicode 3.2 renames this block to "Greek and Coptic".
      * @stable ICU 2.0
      */
-    UBLOCK_GREEK =8, /*[2026]*/
+    UBLOCK_GREEK =8, /*[0370]*/
 
     /** @stable ICU 2.0 */
-    UBLOCK_CYRILLIC =9, /*[2026]*/
+    UBLOCK_CYRILLIC =9, /*[0400]*/
 
     /** @stable ICU 2.0 */
-    UBLOCK_ARMENIAN =10, /*[2026]*/
+    UBLOCK_ARMENIAN =10, /*[0530]*/
 
     /** @stable ICU 2.0 */
-    UBLOCK_HEBREW =11, /*[2026]*/
+    UBLOCK_HEBREW =11, /*[0590]*/
 
     /** @stable ICU 2.0 */
-    UBLOCK_ARABIC =12, /*[2026]*/
+    UBLOCK_ARABIC =12, /*[0600]*/
 
     /** @stable ICU 2.0 */
-    UBLOCK_SYRIAC =13, /*[2026]*/
+    UBLOCK_SYRIAC =13, /*[0700]*/
 
     /** @stable ICU 2.0 */
-    UBLOCK_THAANA =14, /*[2026]*/
+    UBLOCK_THAANA =14, /*[0780]*/
 
     /** @stable ICU 2.0 */
-    UBLOCK_DEVANAGARI =15, /*[2026]*/
+    UBLOCK_DEVANAGARI =15, /*[0900]*/
 
     /** @stable ICU 2.0 */
-    UBLOCK_BENGALI =16, /*[2026]*/
+    UBLOCK_BENGALI =16, /*[0980]*/
 
     /** @stable ICU 2.0 */
     UBLOCK_GURMUKHI =17, /*[0A00]*/
@@ -954,34 +954,34 @@ enum UBlockCode {
     UBLOCK_TIBETAN =27, /*[0F00]*/
 
     /** @stable ICU 2.0 */
-    UBLOCK_MYANMAR =28, /*[2026]*/
+    UBLOCK_MYANMAR =28, /*[1000]*/
 
     /** @stable ICU 2.0 */
     UBLOCK_GEORGIAN =29, /*[10A0]*/
 
     /** @stable ICU 2.0 */
-    UBLOCK_HANGUL_JAMO =30, /*[2026]*/
+    UBLOCK_HANGUL_JAMO =30, /*[1100]*/
 
     /** @stable ICU 2.0 */
-    UBLOCK_ETHIOPIC =31, /*[2026]*/
+    UBLOCK_ETHIOPIC =31, /*[1200]*/
 
     /** @stable ICU 2.0 */
     UBLOCK_CHEROKEE =32, /*[13A0]*/
 
     /** @stable ICU 2.0 */
-    UBLOCK_UNIFIED_CANADIAN_ABORIGINAL_SYLLABICS =33, /*[2026]*/
+    UBLOCK_UNIFIED_CANADIAN_ABORIGINAL_SYLLABICS =33, /*[1400]*/
 
     /** @stable ICU 2.0 */
-    UBLOCK_OGHAM =34, /*[2026]*/
+    UBLOCK_OGHAM =34, /*[1680]*/
 
     /** @stable ICU 2.0 */
     UBLOCK_RUNIC =35, /*[16A0]*/
 
     /** @stable ICU 2.0 */
-    UBLOCK_KHMER =36, /*[2026]*/
+    UBLOCK_KHMER =36, /*[1780]*/
 
     /** @stable ICU 2.0 */
-    UBLOCK_MONGOLIAN =37, /*[2026]*/
+    UBLOCK_MONGOLIAN =37, /*[1800]*/
 
     /** @stable ICU 2.0 */
     UBLOCK_LATIN_EXTENDED_ADDITIONAL =38, /*[1E00]*/
@@ -990,10 +990,10 @@ enum UBlockCode {
     UBLOCK_GREEK_EXTENDED =39, /*[1F00]*/
 
     /** @stable ICU 2.0 */
-    UBLOCK_GENERAL_PUNCTUATION =40, /*[2026]*/
+    UBLOCK_GENERAL_PUNCTUATION =40, /*[2000]*/
 
     /** @stable ICU 2.0 */
-    UBLOCK_SUPERSCRIPTS_AND_SUBSCRIPTS =41, /*[2026]*/
+    UBLOCK_SUPERSCRIPTS_AND_SUBSCRIPTS =41, /*[2070]*/
 
     /** @stable ICU 2.0 */
     UBLOCK_CURRENCY_SYMBOLS =42, /*[20A0]*/
@@ -1005,46 +1005,46 @@ enum UBlockCode {
     UBLOCK_COMBINING_MARKS_FOR_SYMBOLS =43, /*[20D0]*/
 
     /** @stable ICU 2.0 */
-    UBLOCK_LETTERLIKE_SYMBOLS =44, /*[2026]*/
+    UBLOCK_LETTERLIKE_SYMBOLS =44, /*[2100]*/
 
     /** @stable ICU 2.0 */
-    UBLOCK_NUMBER_FORMS =45, /*[2026]*/
+    UBLOCK_NUMBER_FORMS =45, /*[2150]*/
 
     /** @stable ICU 2.0 */
-    UBLOCK_ARROWS =46, /*[2026]*/
+    UBLOCK_ARROWS =46, /*[2190]*/
 
     /** @stable ICU 2.0 */
-    UBLOCK_MATHEMATICAL_OPERATORS =47, /*[2026]*/
+    UBLOCK_MATHEMATICAL_OPERATORS =47, /*[2200]*/
 
     /** @stable ICU 2.0 */
-    UBLOCK_MISCELLANEOUS_TECHNICAL =48, /*[2026]*/
+    UBLOCK_MISCELLANEOUS_TECHNICAL =48, /*[2300]*/
 
     /** @stable ICU 2.0 */
-    UBLOCK_CONTROL_PICTURES =49, /*[2026]*/
+    UBLOCK_CONTROL_PICTURES =49, /*[2400]*/
 
     /** @stable ICU 2.0 */
-    UBLOCK_OPTICAL_CHARACTER_RECOGNITION =50, /*[2026]*/
+    UBLOCK_OPTICAL_CHARACTER_RECOGNITION =50, /*[2440]*/
 
     /** @stable ICU 2.0 */
-    UBLOCK_ENCLOSED_ALPHANUMERICS =51, /*[2026]*/
+    UBLOCK_ENCLOSED_ALPHANUMERICS =51, /*[2460]*/
 
     /** @stable ICU 2.0 */
-    UBLOCK_BOX_DRAWING =52, /*[2026]*/
+    UBLOCK_BOX_DRAWING =52, /*[2500]*/
 
     /** @stable ICU 2.0 */
-    UBLOCK_BLOCK_ELEMENTS =53, /*[2026]*/
+    UBLOCK_BLOCK_ELEMENTS =53, /*[2580]*/
 
     /** @stable ICU 2.0 */
     UBLOCK_GEOMETRIC_SHAPES =54, /*[25A0]*/
 
     /** @stable ICU 2.0 */
-    UBLOCK_MISCELLANEOUS_SYMBOLS =55, /*[2026]*/
+    UBLOCK_MISCELLANEOUS_SYMBOLS =55, /*[2600]*/
 
     /** @stable ICU 2.0 */
-    UBLOCK_DINGBATS =56, /*[2026]*/
+    UBLOCK_DINGBATS =56, /*[2700]*/
 
     /** @stable ICU 2.0 */
-    UBLOCK_BRAILLE_PATTERNS =57, /*[2026]*/
+    UBLOCK_BRAILLE_PATTERNS =57, /*[2800]*/
 
     /** @stable ICU 2.0 */
     UBLOCK_CJK_RADICALS_SUPPLEMENT =58, /*[2E80]*/
@@ -1056,34 +1056,34 @@ enum UBlockCode {
     UBLOCK_IDEOGRAPHIC_DESCRIPTION_CHARACTERS =60, /*[2FF0]*/
 
     /** @stable ICU 2.0 */
-    UBLOCK_CJK_SYMBOLS_AND_PUNCTUATION =61, /*[2026]*/
+    UBLOCK_CJK_SYMBOLS_AND_PUNCTUATION =61, /*[3000]*/
 
     /** @stable ICU 2.0 */
-    UBLOCK_HIRAGANA =62, /*[2026]*/
+    UBLOCK_HIRAGANA =62, /*[3040]*/
 
     /** @stable ICU 2.0 */
     UBLOCK_KATAKANA =63, /*[30A0]*/
 
     /** @stable ICU 2.0 */
-    UBLOCK_BOPOMOFO =64, /*[2026]*/
+    UBLOCK_BOPOMOFO =64, /*[3100]*/
 
     /** @stable ICU 2.0 */
-    UBLOCK_HANGUL_COMPATIBILITY_JAMO =65, /*[2026]*/
+    UBLOCK_HANGUL_COMPATIBILITY_JAMO =65, /*[3130]*/
 
     /** @stable ICU 2.0 */
-    UBLOCK_KANBUN =66, /*[2026]*/
+    UBLOCK_KANBUN =66, /*[3190]*/
 
     /** @stable ICU 2.0 */
     UBLOCK_BOPOMOFO_EXTENDED =67, /*[31A0]*/
 
     /** @stable ICU 2.0 */
-    UBLOCK_ENCLOSED_CJK_LETTERS_AND_MONTHS =68, /*[2026]*/
+    UBLOCK_ENCLOSED_CJK_LETTERS_AND_MONTHS =68, /*[3200]*/
 
     /** @stable ICU 2.0 */
-    UBLOCK_CJK_COMPATIBILITY =69, /*[2026]*/
+    UBLOCK_CJK_COMPATIBILITY =69, /*[3300]*/
 
     /** @stable ICU 2.0 */
-    UBLOCK_CJK_UNIFIED_IDEOGRAPHS_EXTENSION_A =70, /*[2026]*/
+    UBLOCK_CJK_UNIFIED_IDEOGRAPHS_EXTENSION_A =70, /*[3400]*/
 
     /** @stable ICU 2.0 */
     UBLOCK_CJK_UNIFIED_IDEOGRAPHS =71, /*[4E00]*/
@@ -1178,28 +1178,28 @@ enum UBlockCode {
     /* New blocks in Unicode 3.2 */
 
     /** @stable ICU 3.0  */
-    UBLOCK_CYRILLIC_SUPPLEMENT = 97, /*[2026]*/
+    UBLOCK_CYRILLIC_SUPPLEMENT = 97, /*[0500]*/
     /**
      * Unicode 4.0.1 renames the "Cyrillic Supplementary" block to "Cyrillic Supplement".
      * @stable ICU 2.2
      */
     UBLOCK_CYRILLIC_SUPPLEMENTARY = UBLOCK_CYRILLIC_SUPPLEMENT, 
     /** @stable ICU 2.2 */
-    UBLOCK_TAGALOG = 98, /*[2026]*/
+    UBLOCK_TAGALOG = 98, /*[1700]*/
     /** @stable ICU 2.2 */
-    UBLOCK_HANUNOO = 99, /*[2026]*/
+    UBLOCK_HANUNOO = 99, /*[1720]*/
     /** @stable ICU 2.2 */
-    UBLOCK_BUHID = 100, /*[2026]*/
+    UBLOCK_BUHID = 100, /*[1740]*/
     /** @stable ICU 2.2 */
-    UBLOCK_TAGBANWA = 101, /*[2026]*/
+    UBLOCK_TAGBANWA = 101, /*[1760]*/
     /** @stable ICU 2.2 */
     UBLOCK_MISCELLANEOUS_MATHEMATICAL_SYMBOLS_A = 102, /*[27C0]*/
     /** @stable ICU 2.2 */
     UBLOCK_SUPPLEMENTAL_ARROWS_A = 103, /*[27F0]*/
     /** @stable ICU 2.2 */
-    UBLOCK_SUPPLEMENTAL_ARROWS_B = 104, /*[2026]*/
+    UBLOCK_SUPPLEMENTAL_ARROWS_B = 104, /*[2900]*/
     /** @stable ICU 2.2 */
-    UBLOCK_MISCELLANEOUS_MATHEMATICAL_SYMBOLS_B = 105, /*[2026]*/
+    UBLOCK_MISCELLANEOUS_MATHEMATICAL_SYMBOLS_B = 105, /*[2980]*/
     /** @stable ICU 2.2 */
     UBLOCK_SUPPLEMENTAL_MATHEMATICAL_OPERATORS = 106, /*[2A00]*/
     /** @stable ICU 2.2 */
@@ -1214,9 +1214,9 @@ enum UBlockCode {
     /* New blocks in Unicode 4 */
 
     /** @stable ICU 2.6 */
-    UBLOCK_LIMBU = 111, /*[2026]*/
+    UBLOCK_LIMBU = 111, /*[1900]*/
     /** @stable ICU 2.6 */
-    UBLOCK_TAI_LE = 112, /*[2026]*/
+    UBLOCK_TAI_LE = 112, /*[1950]*/
     /** @stable ICU 2.6 */
     UBLOCK_KHMER_SYMBOLS = 113, /*[19E0]*/
     /** @stable ICU 2.6 */
@@ -1251,7 +1251,7 @@ enum UBlockCode {
     /** @stable ICU 3.4 */
     UBLOCK_ANCIENT_GREEK_NUMBERS = 127, /*[10140]*/
     /** @stable ICU 3.4 */
-    UBLOCK_ARABIC_SUPPLEMENT = 128, /*[2026]*/
+    UBLOCK_ARABIC_SUPPLEMENT = 128, /*[0750]*/
     /** @stable ICU 3.4 */
     UBLOCK_BUGINESE = 129, /*[1A00]*/
     /** @stable ICU 3.4 */
@@ -1263,7 +1263,7 @@ enum UBlockCode {
     /** @stable ICU 3.4 */
     UBLOCK_ETHIOPIC_EXTENDED = 133, /*[2D80]*/
     /** @stable ICU 3.4 */
-    UBLOCK_ETHIOPIC_SUPPLEMENT = 134, /*[2026]*/
+    UBLOCK_ETHIOPIC_SUPPLEMENT = 134, /*[1380]*/
     /** @stable ICU 3.4 */
     UBLOCK_GEORGIAN_SUPPLEMENT = 135, /*[2D00]*/
     /** @stable ICU 3.4 */
@@ -1273,7 +1273,7 @@ enum UBlockCode {
     /** @stable ICU 3.4 */
     UBLOCK_MODIFIER_TONE_LETTERS = 138, /*[A700]*/
     /** @stable ICU 3.4 */
-    UBLOCK_NEW_TAI_LUE = 139, /*[2026]*/
+    UBLOCK_NEW_TAI_LUE = 139, /*[1980]*/
     /** @stable ICU 3.4 */
     UBLOCK_OLD_PERSIAN = 140, /*[103A0]*/
     /** @stable ICU 3.4 */
@@ -1348,7 +1348,7 @@ enum UBlockCode {
     /* New blocks in Unicode 5.2 */
 
     /** @stable ICU 4.4 */
-    UBLOCK_SAMARITAN = 172, /*[2026]*/
+    UBLOCK_SAMARITAN = 172, /*[0800]*/
     /** @stable ICU 4.4 */
     UBLOCK_UNIFIED_CANADIAN_ABORIGINAL_SYLLABICS_EXTENDED = 173, /*[18B0]*/
     /** @stable ICU 4.4 */
@@ -1403,7 +1403,7 @@ enum UBlockCode {
     /* New blocks in Unicode 6.0 */
 
     /** @stable ICU 4.6 */
-    UBLOCK_MANDAIC = 198, /*[2026]*/
+    UBLOCK_MANDAIC = 198, /*[0840]*/
     /** @stable ICU 4.6 */
     UBLOCK_BATAK = 199, /*[1BC0]*/
     /** @stable ICU 4.6 */

@@ -759,9 +759,9 @@ GUTF8String
 DjVuANT::read_raw(ByteStream & str)
 {
    GUTF8String raw;
-   char buffer[2026];
+   char buffer[1024];
    int length;
-   while((length=str.read(buffer, 2026)))
+   while((length=str.read(buffer, 1024)))
       raw+=GUTF8String(buffer, length);
    return raw;
 }

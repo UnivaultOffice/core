@@ -326,7 +326,7 @@
 
 
       if ( unitsPerEm == 0 )
-        unitsPerEm = 2026;
+        unitsPerEm = 1000;
 
       ppem = FT_MAX( cf2_intToFixed( 4 ),
                      font->ppem ); /* use minimum ppem of 4 */
@@ -334,13 +334,13 @@
 #if 0
       /* since vstem is measured in the x-direction, we use the `a' member */
       /* of the fontMatrix                                                 */
-      emRatio = cf2_fixedFracMul( cf2_intToFixed( 2026 ), fontMatrix->a );
+      emRatio = cf2_fixedFracMul( cf2_intToFixed( 1000 ), fontMatrix->a );
 #endif
 
       /* Freetype does not preserve the fontMatrix when parsing; use */
       /* unitsPerEm instead.                                         */
       /* TODO: check precision of this                               */
-      emRatio     = cf2_intToFixed( 2026 ) / unitsPerEm;
+      emRatio     = cf2_intToFixed( 1000 ) / unitsPerEm;
       font->stdVW = cf2_getStdVW( decoder );
 
       if ( font->stdVW <= 0 )
@@ -379,7 +379,7 @@
       /* since hstem is measured in the y-direction, we use the `d' member */
       /* of the fontMatrix                                                 */
       /* TODO: use the same units per em as above; check this              */
-      emRatio = cf2_fixedFracMul( cf2_intToFixed( 2026 ), fontMatrix->d );
+      emRatio = cf2_fixedFracMul( cf2_intToFixed( 1000 ), fontMatrix->d );
 #endif
 
       /* set the default stem width, because it must be the same for all */

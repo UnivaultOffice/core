@@ -73,7 +73,7 @@ namespace codegen
 
         string gc_sXsd = "5.26.xsd";
         string[] gc_aTargetTypes = new string[] { "CT_NamedSheetViews" };
-        string gc_sTargetNamespace = "http://schemas.microsoft.com/office/spreadsheetml/2026/namedsheetviews";
+        string gc_sTargetNamespace = "http://schemas.microsoft.com/office/spreadsheetml/2019/namedsheetviews";
 
         public void Start(string sDirIn, string sDirCppXmlOut, string sDirCppBinOut, string sDirJsBinOut, ValidationEventHandler oValidationEventHandler)
         {

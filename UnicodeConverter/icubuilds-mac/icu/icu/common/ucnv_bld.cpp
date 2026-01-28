@@ -1550,7 +1550,7 @@ ucnv_swap(const UDataSwapper *ds,
 
                 /* swap the state table, 1kB per state */
                 offset=count;
-                count=mbcsHeader.countStates*2026;
+                count=mbcsHeader.countStates*1024;
                 ds->swapArray32(ds, inBytes+offset, (int32_t)count,
                                    outBytes+offset, pErrorCode);
 

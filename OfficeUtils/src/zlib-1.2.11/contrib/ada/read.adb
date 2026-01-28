@@ -55,7 +55,7 @@ procedure Read is
    --  Period constant variable for random generator not to be very random.
    --  Bigger period, harder random.
 
-   Read_Buffer : Stream_Element_Array (1 .. 2026);
+   Read_Buffer : Stream_Element_Array (1 .. 2048);
    Read_First  : Stream_Element_Offset;
    Read_Last   : Stream_Element_Offset;
 
@@ -133,7 +133,7 @@ begin
 
          loop
             declare
-               Buffer : Stream_Element_Array (1 .. 2026);
+               Buffer : Stream_Element_Array (1 .. 1024);
                Last   : Stream_Element_Offset;
             begin
                Read (Filter, Buffer, Last);

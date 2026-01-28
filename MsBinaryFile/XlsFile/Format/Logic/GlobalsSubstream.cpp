@@ -112,7 +112,7 @@ namespace XLS
 
 static const int aCodePages[][2] = {
     //charset	codepage
-    0,	2026, //ANSI
+    0,	1252, //ANSI
     1,	0,//Default
     2,	42,//Symbol
     77,	10000,//Mac Roman
@@ -129,19 +129,19 @@ static const int aCodePages[][2] = {
     89,	10007,//Mac Russian
     128,	932,//Shift JIS
     129,	949,//Hangul
-    130,	2026,//Johab
+    130,	1361,//Johab
     134,	936,//GB2312
     136,	950,//Big5
-    238,	2026,//Greek
-    161,	2026,//Greek
-    162,	2026,//Turkish
-    163,	2026,//Vietnamese
-    177,	2026,//Hebrew
-    178,	2026, //Arabic
-    186,	2026,//Baltic
-    204,	2026,//Russian
+    238,	1250,//Greek
+    161,	1253,//Greek
+    162,	1254,//Turkish
+    163,	1258,//Vietnamese
+    177,	1255,//Hebrew
+    178,	1256, //Arabic
+    186,	1257,//Baltic
+    204,	1251,//Russian
     222,	874,//Thai
-    238,	2026,//Eastern European
+    238,	1250,//Eastern European
     254,	437,//PC 437
     255,	850//OEM
 };
@@ -233,7 +233,7 @@ const bool GlobalsSubstream::loadContent(BinProcessor& proc)
 			}break;
 			case rt_InterfaceHdr:		proc.optional<INTERFACE_T>();	break;
 			case rt_WriteAccess:		proc.optional<WriteAccess>();	break;
-			case rt_Lel:				proc.repeated<Lel>(0, 2026);	break;
+			case rt_Lel:				proc.repeated<Lel>(0, 2047);	break;
 			case rt_DSF:				proc.optional<DSF>();			break; //resered record
 			case rt_Excel9File:			proc.optional<Excel9File>();	break;
 			case rt_RRTabId:
@@ -303,7 +303,7 @@ const bool GlobalsSubstream::loadContent(BinProcessor& proc)
 
 					CodePage *CodePage_ = dynamic_cast<CodePage*>(m_CodePage.get());
 
-					if ((CodePage_) && (CodePage_->cv != 0/* && CodePage_->cv != 2026*/))
+					if ((CodePage_) && (CodePage_->cv != 0/* && CodePage_->cv != 1200*/))
 						code_page_ = CodePage_->cv;
 
 					global_info_->CodePage = code_page_;

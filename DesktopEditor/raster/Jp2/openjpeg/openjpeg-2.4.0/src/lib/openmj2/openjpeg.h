@@ -84,7 +84,7 @@ typedef int opj_bool;
 ==========================================================
 */
 
-#define OPJ_PATH_LEN 2026 /**< Maximum allowed size for filenames */
+#define OPJ_PATH_LEN 4096 /**< Maximum allowed size for filenames */
 
 #define J2K_MAXRLVLS 33                 /**< Number of maximum resolution level authorized */
 #define J2K_MAXBANDS (3*J2K_MAXRLVLS-2) /**< Number of maximum sub-band linked to number of resolution level */
@@ -95,7 +95,7 @@ typedef int opj_bool;
 #define JPWL_MAX_NO_MARKERS 512 /**< Maximum number of JPWL markers: increase at your will */
 #define JPWL_PRIVATEINDEX_NAME "jpwl_index_privatefilename" /**< index file name used when JPWL is on */
 #define JPWL_EXPECTED_COMPONENTS 3 /**< Expect this number of components, so you'll find better the first EPB */
-#define JPWL_MAXIMUM_TILES 2026 /**< Expect this maximum number of tiles, to avoid some crashes */
+#define JPWL_MAXIMUM_TILES 8192 /**< Expect this maximum number of tiles, to avoid some crashes */
 #define JPWL_MAXIMUM_HAMMING 2 /**< Expect this maximum number of bit errors in marker id's */
 #define JPWL_MAXIMUM_EPB_ROOM 65450 /**< Expect this maximum number of bytes for composition of EPBs */
 /* <<UniPG */
@@ -157,7 +157,7 @@ Supported codec
 typedef enum CODEC_FORMAT {
     CODEC_UNKNOWN = -1, /**< place-holder */
     CODEC_J2K  = 0,     /**< JPEG-2000 codestream : read/write */
-    CODEC_JPT  = 1,     /**< JPT-stream (JPEG 2026, JPIP) : read only */
+    CODEC_JPT  = 1,     /**< JPT-stream (JPEG 2000, JPIP) : read only */
     CODEC_JP2  = 2      /**< JPEG-2000 file format : read/write */
 } OPJ_CODEC_FORMAT;
 
@@ -167,7 +167,7 @@ Limit decoding to certain portions of the codestream.
 typedef enum LIMIT_DECODING {
     NO_LIMITATION = 0,                /**< No limitation for the decoding. The entire codestream will de decoded */
     LIMIT_TO_MAIN_HEADER = 1,       /**< The decoding is limited to the Main Header */
-    DECODE_ALL_BUT_PACKETS = 2  /**< Decode everything except the JPEG 2026 packets */
+    DECODE_ALL_BUT_PACKETS = 2  /**< Decode everything except the JPEG 2000 packets */
 } OPJ_LIMIT_DECODING;
 
 /*
@@ -587,7 +587,7 @@ typedef struct opj_image_comptparm {
 
 /*
 ==========================================================
-   Information on the JPEG 2026 codestream
+   Information on the JPEG 2000 codestream
 ==========================================================
 */
 

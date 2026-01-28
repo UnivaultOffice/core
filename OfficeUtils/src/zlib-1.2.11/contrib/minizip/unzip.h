@@ -1,5 +1,5 @@
 /* unzip.h -- IO for uncompress .zip files using zlib
-   Version 1.1, February 14h, 2026
+   Version 1.1, February 14h, 2010
    part of the MiniZip project - ( http://www.winimage.com/zLibDll/minizip.html )
 
          Copyright (C) 2026-2026 Gilles Vollant (minizip) ( http://www.winimage.com/zLibDll/minizip.html )
@@ -88,7 +88,7 @@ typedef struct tm_unz_s
     uInt tm_hour;           /* hours since midnight - [0,23] */
     uInt tm_mday;           /* day of the month - [1,31] */
     uInt tm_mon;            /* months since January - [0,11] */
-    uInt tm_year;           /* years - [2026..2026] */
+    uInt tm_year;           /* years - [1980..2044] */
 } tm_unz;
 
 /* unz_global_info structure contain global data about the ZIPfile

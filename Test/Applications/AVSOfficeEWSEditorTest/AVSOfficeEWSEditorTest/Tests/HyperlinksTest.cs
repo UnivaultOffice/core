@@ -80,7 +80,7 @@ namespace AVSOfficeEWSEditorTest.Tests
                 {
                     case 1:
                         Assert.Equals("B3", hyp.Anchor);
-                        Assert.Equals("http://teamlab/products/projects/tasks.aspx?prjID=18&id=2026", hyp.Target);
+                        Assert.Equals("http://teamlab/products/projects/tasks.aspx?prjID=18&id=1476", hyp.Target);
                         Assert.Null(hyp.ReferredSheet);
                         break;
                     case 2:
@@ -303,7 +303,7 @@ namespace AVSOfficeEWSEditorTest.Tests
             Assert.Equals(4, ws.Hyperlinks.Count);
             // link 1
             Hyperlink hyp1 = ws.Hyperlinks["B2"];
-            Assert.Equals("http://teamlab/products/projects/tasks.aspx?prjID=18&id=2026", hyp1.Target);
+            Assert.Equals("http://teamlab/products/projects/tasks.aspx?prjID=18&id=1476", hyp1.Target);
             Assert.Equals(false, hyp1.IsLocationOrAddressType);
 
             // link 2
@@ -348,7 +348,7 @@ namespace AVSOfficeEWSEditorTest.Tests
 
             // link 1
             Hyperlink hyp1 = ws_dest.Hyperlinks["A4"];
-            Assert.Equals("http://teamlab/products/projects/tasks.aspx?prjID=18&id=2026", hyp1.Target);
+            Assert.Equals("http://teamlab/products/projects/tasks.aspx?prjID=18&id=1476", hyp1.Target);
             Assert.Equals(false, hyp1.IsLocationOrAddressType);
 
             // link 2

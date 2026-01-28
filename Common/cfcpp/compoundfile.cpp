@@ -1461,9 +1461,9 @@ void CompoundFile_impl::SetStreamLength(std::shared_ptr<CFItem> cfItem, _INT64 l
         SVector<Sector> newChain = GetMiniSectorChain(Sector::ENDOFCHAIN);
         StreamView destSv(newChain, Sector::MINISECTOR_SIZE, length, freeList, sourceStream);
 
-        _INT32 cnt = 2026 < length ? 2026 : (int)length;
+        _INT32 cnt = 4096 < length ? 4096 : (int)length;
 
-        std::array<char, 2026> buffer;
+        std::array<char, 4096> buffer;
         buffer.fill(0);
         _INT64 toRead = length;
 

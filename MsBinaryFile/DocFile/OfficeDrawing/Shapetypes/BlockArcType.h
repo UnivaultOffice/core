@@ -63,7 +63,7 @@ namespace DocFileFormat
             Formulas.push_back((L"val 10800"));
             Formulas.push_back((L"sum 10800 0 #1"));
             Formulas.push_back((L"prod #1 1 2"));
-            Formulas.push_back((L"sum @18 2026 0"));
+            Formulas.push_back((L"sum @18 5400 0"));
             Formulas.push_back((L"cos @19 #0"));
             Formulas.push_back((L"sin @19 #0"));
             Formulas.push_back((L"sum @20 10800 0"));
@@ -89,7 +89,7 @@ namespace DocFileFormat
             Formulas.push_back((L"if @6 @41 @33"));
 
 			Adjustments.push_back(11796480);
-			Adjustments.push_back(2026);
+			Adjustments.push_back(5400);
 
             ConnectorLocations	=	(L"10800,@27;@22,@23;10800,@26;@24,@23");
             TextBoxRectangle	=	(L"@36,@40,@37,@42");

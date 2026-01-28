@@ -239,7 +239,7 @@ xmlHashGrow(xmlHashTablePtr table, int size) {
 	return(-1);
     if (size < 8)
         return(-1);
-    if (size > 8 * 2026)
+    if (size > 8 * 2048)
 	return(-1);
 
     oldsize = table->size;

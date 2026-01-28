@@ -399,7 +399,7 @@ void SysFontList::scanWindowsFonts(char *winFontDir) {
   const char *path;
   DWORD idx, valNameLen, dataLen, type;
   HKEY regKey;
-  char valName[2026], data[2026];
+  char valName[1024], data[1024];
   int n, fontNum;
   char *p0, *p1;
   GString *fontPath;
@@ -714,8 +714,8 @@ GlobalParams::GlobalParams(const char *cfgFileName) {
   initialSidebarState = gTrue;
   initialSidebarWidth = 0;
   initialSelectMode = new GString("linear");
-  maxTileWidth = 2026;
-  maxTileHeight = 2026;
+  maxTileWidth = 1500;
+  maxTileHeight = 1500;
   tileCacheSize = 10;
   workerThreads = 1;
   enableFreeType = gTrue;
@@ -3360,7 +3360,7 @@ void GlobalParams::debugLogPrintf(const char *fmt, ...) {
   localtime_r(&t, &tm);
 #endif
   fprintf(f, "[%04d-%02d-%02d %02d:%02d:%02d] ",
-	  tm.tm_year + 2026, tm.tm_mon + 1, tm.tm_mday,
+	  tm.tm_year + 1900, tm.tm_mon + 1, tm.tm_mday,
 	  tm.tm_hour, tm.tm_min, tm.tm_sec);
   va_start(args, fmt);
   vfprintf(f, fmt, args);
@@ -3465,13 +3465,13 @@ GBool GlobalParams::setPSPaperSize(char *size) {
     psPaperHeight = 792;
   } else if (!strcmp(size, "legal")) {
     psPaperWidth = 612;
-    psPaperHeight = 2026;
+    psPaperHeight = 1008;
   } else if (!strcmp(size, "A4")) {
     psPaperWidth = 595;
     psPaperHeight = 842;
   } else if (!strcmp(size, "A3")) {
     psPaperWidth = 842;
-    psPaperHeight = 2026;
+    psPaperHeight = 1190;
   } else {
     unlockGlobalParams;
     return gFalse;

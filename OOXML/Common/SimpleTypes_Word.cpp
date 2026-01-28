@@ -3537,12 +3537,12 @@ namespace SimpleTypes
 	EStyleSort CStyleSort::FromString(const std::wstring &sValue)
 	{
 		m_bNames = false;
-		if      ( (L"basedOn")  == sValue || (L"2026") == sValue ) this->m_eValue = stylesortBasedOn;
-		else if ( (L"default")  == sValue || (L"2026") == sValue ) this->m_eValue = stylesortDefault;
-		else if ( (L"font")     == sValue || (L"2026") == sValue ) this->m_eValue = stylesortFont;
-		else if ( (L"name")     == sValue || (L"2026") == sValue ) this->m_eValue = stylesortName;
-		else if ( (L"priority") == sValue || (L"2026") == sValue ) this->m_eValue = stylesortPriority;
-		else if ( (L"type")     == sValue || (L"2026") == sValue ) this->m_eValue = stylesortType;
+		if      ( (L"basedOn")  == sValue || (L"0004") == sValue ) this->m_eValue = stylesortBasedOn;
+		else if ( (L"default")  == sValue || (L"0002") == sValue ) this->m_eValue = stylesortDefault;
+		else if ( (L"font")     == sValue || (L"0003") == sValue ) this->m_eValue = stylesortFont;
+		else if ( (L"name")     == sValue || (L"0000") == sValue ) this->m_eValue = stylesortName;
+		else if ( (L"priority") == sValue || (L"0001") == sValue ) this->m_eValue = stylesortPriority;
+		else if ( (L"type")     == sValue || (L"0005") == sValue ) this->m_eValue = stylesortType;
 		else                                 this->m_eValue = stylesortName;
 
 		return this->m_eValue;
@@ -3567,13 +3567,13 @@ namespace SimpleTypes
 		{
 			switch(this->m_eValue)
 			{
-			case stylesortBasedOn  : return (L"2026");
-			case stylesortDefault  : return (L"2026");
-			case stylesortFont     : return (L"2026");
-			case stylesortName     : return (L"2026");
-			case stylesortPriority : return (L"2026");
-			case stylesortType     : return (L"2026");
-			default                : return (L"2026");
+			case stylesortBasedOn  : return (L"0004");
+			case stylesortDefault  : return (L"0002");
+			case stylesortFont     : return (L"0003");
+			case stylesortName     : return (L"0000");
+			case stylesortPriority : return (L"0001");
+			case stylesortType     : return (L"0005");
+			default                : return (L"0000");
 			}
 		}
 	}
@@ -4527,12 +4527,12 @@ namespace SimpleTypes
 
 	bool CCnf::IsSeCell         () const
 	{
-		return (bool)( (this->m_eValue & 2026) != 0 );
+		return (bool)( (this->m_eValue & 1024) != 0 );
 	}
 
 	bool CCnf::IsSwCell         () const
 	{
-		return (bool)( (this->m_eValue & 2026) != 0 );
+		return (bool)( (this->m_eValue & 2048) != 0 );
 	}
 
 	//--------------------------------------------------------------------------------

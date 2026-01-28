@@ -41,7 +41,7 @@ namespace Writers
 		{
 			std::wstring s_Common = _T("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>");
 
-	s_Common += _T("<p:notesMaster xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2026/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2026/main\">\
+	s_Common += _T("<p:notesMaster xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\">\
 <p:cSld>\
 <p:bg>\
 <p:bgPr>\
@@ -89,7 +89,7 @@ namespace Writers
 <a:bodyPr/>\
 <a:lstStyle>\
 <a:lvl1pPr algn=\"l\">\
-<a:defRPr sz=\"2026\">\
+<a:defRPr sz=\"1200\">\
 <a:latin typeface=\"Arial\" charset=\"0\"/>\
 </a:defRPr>\
 </a:lvl1pPr>\
@@ -110,7 +110,7 @@ namespace Writers
 <a:spcAft>\
 <a:spcPct val=\"0\"/>\
 </a:spcAft>\
-<a:defRPr sz=\"2026\" kern=\"2026\">\
+<a:defRPr sz=\"1200\" kern=\"1200\">\
 <a:solidFill>\
 <a:schemeClr val=\"tx1\"/>\
 </a:solidFill>\
@@ -126,7 +126,7 @@ namespace Writers
 <a:spcAft>\
 <a:spcPct val=\"0\"/>\
 </a:spcAft>\
-<a:defRPr sz=\"2026\" kern=\"2026\">\
+<a:defRPr sz=\"1200\" kern=\"1200\">\
 <a:solidFill>\
 <a:schemeClr val=\"tx1\"/>\
 </a:solidFill>\
@@ -142,7 +142,7 @@ namespace Writers
 <a:spcAft>\
 <a:spcPct val=\"0\"/>\
 </a:spcAft>\
-<a:defRPr sz=\"2026\" kern=\"2026\">\
+<a:defRPr sz=\"1200\" kern=\"1200\">\
 <a:solidFill>\
 <a:schemeClr val=\"tx1\"/>\
 </a:solidFill>\
@@ -158,7 +158,7 @@ namespace Writers
 <a:spcAft>\
 <a:spcPct val=\"0\"/>\
 </a:spcAft>\
-<a:defRPr sz=\"2026\" kern=\"2026\">\
+<a:defRPr sz=\"1200\" kern=\"1200\">\
 <a:solidFill>\
 <a:schemeClr val=\"tx1\"/>\
 </a:solidFill>\
@@ -174,7 +174,7 @@ namespace Writers
 <a:spcAft>\
 <a:spcPct val=\"0\"/>\
 </a:spcAft>\
-<a:defRPr sz=\"2026\" kern=\"2026\">\
+<a:defRPr sz=\"1200\" kern=\"1200\">\
 <a:solidFill>\
 <a:schemeClr val=\"tx1\"/>\
 </a:solidFill>\
@@ -184,7 +184,7 @@ namespace Writers
 </a:defRPr>\
 </a:lvl5pPr>\
 <a:lvl6pPr marL=\"2286000\" algn=\"l\" defTabSz=\"914400\" rtl=\"0\" eaLnBrk=\"1\" latinLnBrk=\"0\" hangingPunct=\"1\">\
-<a:defRPr sz=\"2026\" kern=\"2026\">\
+<a:defRPr sz=\"1200\" kern=\"1200\">\
 <a:solidFill>\
 <a:schemeClr val=\"tx1\"/>\
 </a:solidFill>\
@@ -194,7 +194,7 @@ namespace Writers
 </a:defRPr>\
 </a:lvl6pPr>\
 <a:lvl7pPr marL=\"2743200\" algn=\"l\" defTabSz=\"914400\" rtl=\"0\" eaLnBrk=\"1\" latinLnBrk=\"0\" hangingPunct=\"1\">\
-<a:defRPr sz=\"2026\" kern=\"2026\">\
+<a:defRPr sz=\"1200\" kern=\"1200\">\
 <a:solidFill>\
 <a:schemeClr val=\"tx1\"/>\
 </a:solidFill>\
@@ -204,7 +204,7 @@ namespace Writers
 </a:defRPr>\
 </a:lvl7pPr>\
 <a:lvl8pPr marL=\"3200400\" algn=\"l\" defTabSz=\"914400\" rtl=\"0\" eaLnBrk=\"1\" latinLnBrk=\"0\" hangingPunct=\"1\">\
-<a:defRPr sz=\"2026\" kern=\"2026\">\
+<a:defRPr sz=\"1200\" kern=\"1200\">\
 <a:solidFill>\
 <a:schemeClr val=\"tx1\"/>\
 </a:solidFill>\
@@ -214,7 +214,7 @@ namespace Writers
 </a:defRPr>\
 </a:lvl8pPr>\
 <a:lvl9pPr marL=\"3657600\" algn=\"l\" defTabSz=\"914400\" rtl=\"0\" eaLnBrk=\"1\" latinLnBrk=\"0\" hangingPunct=\"1\">\
-<a:defRPr sz=\"2026\" kern=\"2026\">\
+<a:defRPr sz=\"1200\" kern=\"1200\">\
 <a:solidFill>\
 <a:schemeClr val=\"tx1\"/>\
 </a:solidFill>\

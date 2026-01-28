@@ -733,7 +733,7 @@ namespace OOX
 		}
 		void CSparklineGroups::toXML(NSStringUtils::CStringBuilder& writer) const
 		{
-			writer.WriteString(_T("<x14:sparklineGroups xmlns:xm=\"http://schemas.microsoft.com/office/excel/2026/main\">"));
+			writer.WriteString(_T("<x14:sparklineGroups xmlns:xm=\"http://schemas.microsoft.com/office/excel/2006/main\">"));
 
 			for ( size_t i = 0; i < m_arrItems.size(); ++i)
 			{

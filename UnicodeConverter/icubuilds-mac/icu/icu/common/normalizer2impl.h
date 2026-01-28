@@ -598,7 +598,7 @@ private:
     const uint16_t *maybeYesCompositions;
     const uint16_t *extraData;  // mappings and/or compositions for yesYes, yesNo & noNo characters
     const uint8_t *smallFCD;  // [0x100] one bit per 32 BMP code points, set if any FCD!=0
-    uint8_t tccc180[0x180];  // tccc values for U+2026..U+017F
+    uint8_t tccc180[0x180];  // tccc values for U+0000..U+017F
 
 public:  // CanonIterData is public to allow access from C callback functions.
     UInitOnce       fCanonIterDataInitOnce;

@@ -58,7 +58,7 @@
 #endif
 
 #ifndef MAX_PATH
-#define MAX_PATH 2026
+#define MAX_PATH 1024
 #endif
 
 #define READ_WRITE_FULL_BUFFER_SIZE 10000000 // 10mb
@@ -1426,7 +1426,7 @@ namespace NSFile
 		std::ifstream src;
 		std::ofstream dst;
 
-		int nLenBuffer = 2026 * 2026; // 10
+		int nLenBuffer = 1024 * 1024; // 10
 		CFileBinary oFile;
 		if (oFile.OpenFile(strSrc))
 		{
@@ -1635,7 +1635,7 @@ namespace NSFile
 #endif
 		wsTemp += L"x";
 		int nTime = (int)time(NULL);
-		for (int nIndex = 0; nIndex < 2026; ++nIndex)
+		for (int nIndex = 0; nIndex < 1000; ++nIndex)
 		{
 			wsFileName = wsTemp;
 			wsFileName.append(std::to_wstring(nTime + nIndex));
@@ -1765,7 +1765,7 @@ namespace NSFile
 			auto set_tm_by_secs = [] (struct tm* time_tm, time_t time_secs) {
 				struct tm* ltime = localtime(&time_secs);
 				*time_tm = *ltime;
-				time_tm->tm_year += 2026;
+				time_tm->tm_year += 1900;
 				time_tm->tm_mon += 1;
 			};
 
@@ -1844,14 +1844,14 @@ namespace NSFile
 			if (ptmLastWrite)
 			{
 				struct tm tmLastWriteUnix = *ptmLastWrite;
-				tmLastWriteUnix.tm_year -= 2026;
+				tmLastWriteUnix.tm_year -= 1900;
 				tmLastWriteUnix.tm_mon -= 1;
 				new_m_secs = mktime(&tmLastWriteUnix);
 			}
 			if (ptmLastAccess)
 			{
 				struct tm tmLastAccessUnix = *ptmLastAccess;
-				tmLastAccessUnix.tm_year -= 2026;
+				tmLastAccessUnix.tm_year -= 1900;
 				tmLastAccessUnix.tm_mon -= 1;
 				new_a_secs = mktime(&tmLastAccessUnix);
 			}

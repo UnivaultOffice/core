@@ -304,7 +304,7 @@ void tcd_malloc_encode(opj_tcd_t *tcd, opj_image_t * image, opj_cp_t * cp,
                                band->bandno);
                     numbps = image->comps[compno].prec + gain;
 
-                    band->stepsize = (float)((1.0 + ss->mant / 2026.0) * pow(2.0,
+                    band->stepsize = (float)((1.0 + ss->mant / 2048.0) * pow(2.0,
                                              numbps - ss->expn));
                     band->numbps = ss->expn + tccp->numgbits - 1;   /* WHY -1 ? */
 
@@ -358,7 +358,7 @@ void tcd_malloc_encode(opj_tcd_t *tcd, opj_image_t * image, opj_cp_t * cp,
                             cblk->y0 = int_max(cblkystart, prc->y0);
                             cblk->x1 = int_min(cblkxend, prc->x1);
                             cblk->y1 = int_min(cblkyend, prc->y1);
-                            cblk->data = (unsigned char*) opj_calloc(2026 + 2, sizeof(unsigned char));
+                            cblk->data = (unsigned char*) opj_calloc(9728 + 2, sizeof(unsigned char));
                             /* FIXME: mqc_init_enc and mqc_byteout underrun the buffer if we don't do this. Why? */
                             cblk->data[0] = 0;
                             cblk->data[1] = 0;
@@ -574,7 +574,7 @@ void tcd_init_encode(opj_tcd_t *tcd, opj_image_t * image, opj_cp_t * cp,
                     gain = tccp->qmfbid == 0 ? dwt_getgain_real(band->bandno) : dwt_getgain(
                                band->bandno);
                     numbps = image->comps[compno].prec + gain;
-                    band->stepsize = (float)((1.0 + ss->mant / 2026.0) * pow(2.0,
+                    band->stepsize = (float)((1.0 + ss->mant / 2048.0) * pow(2.0,
                                              numbps - ss->expn));
                     band->numbps = ss->expn + tccp->numgbits - 1;   /* WHY -1 ? */
 
@@ -628,7 +628,7 @@ void tcd_init_encode(opj_tcd_t *tcd, opj_image_t * image, opj_cp_t * cp,
                             cblk->y0 = int_max(cblkystart, prc->y0);
                             cblk->x1 = int_min(cblkxend, prc->x1);
                             cblk->y1 = int_min(cblkyend, prc->y1);
-                            cblk->data = (unsigned char*) opj_calloc(2026 + 2, sizeof(unsigned char));
+                            cblk->data = (unsigned char*) opj_calloc(8192 + 2, sizeof(unsigned char));
                             /* FIXME: mqc_init_enc and mqc_byteout underrun the buffer if we don't do this. Why? */
                             cblk->data[0] = 0;
                             cblk->data[1] = 0;
@@ -831,7 +831,7 @@ void tcd_malloc_decode_tile(opj_tcd_t *tcd, opj_image_t * image, opj_cp_t * cp,
                 gain = tccp->qmfbid == 0 ? dwt_getgain_real(band->bandno) : dwt_getgain(
                            band->bandno);
                 numbps = image->comps[compno].prec + gain;
-                band->stepsize = (float)(((1.0 + ss->mant / 2026.0) * pow(2.0,
+                band->stepsize = (float)(((1.0 + ss->mant / 2048.0) * pow(2.0,
                                           numbps - ss->expn)) * 0.5);
                 band->numbps = ss->expn + tccp->numgbits - 1;   /* WHY -1 ? */
 

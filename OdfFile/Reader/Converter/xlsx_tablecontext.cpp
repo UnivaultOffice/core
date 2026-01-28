@@ -523,14 +523,14 @@ namespace oox {
 					CP_XML_ATTR(L"r:id", rId);
 				}
 			}
-			Rels.add(relationship(rId, L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/table", ref));
+			Rels.add(relationship(rId, L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/table", ref));
 			//--------------------------------------------------------
 			std::wstringstream strm;
 			CP_XML_WRITER(strm)
 			{
 				CP_XML_NODE(L"table")
 				{
-					CP_XML_ATTR(L"xmlns", L"http://schemas.openxmlformats.org/spreadsheetml/2026/main");
+					CP_XML_ATTR(L"xmlns", L"http://schemas.openxmlformats.org/spreadsheetml/2006/main");
 
 					CP_XML_ATTR(L"id", id);
 					CP_XML_ATTR(L"name", xlsx_data_ranges_[it->second]->name);

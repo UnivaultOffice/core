@@ -66,22 +66,22 @@ end def
 /WMode 1 def
 
 16 begincidrange
-<d932> <d933> 2026
-<d935> <d935> 2026
-<d936> <d936> 2026
-<d939> <d93b> 2026
-<d93d> <d93d> 2026
-<d942> <d94d> 2026
-<d97b> <d97b> 2026
-<da31> <da31> 2026
-<da38> <da39> 2026
-<da3c> <da3c> 2026
-<da3e> <da3e> 2026
-<da4a> <da4f> 2026
-<da6b> <da6b> 2026
-<da6d> <da6d> 2026
-<da6f> <da6f> 2026
-<da9d> <daa0> 2026
+<d932> <d933> 8056
+<d935> <d935> 8058
+<d936> <d936> 8320
+<d939> <d93b> 8059
+<d93d> <d93d> 8062
+<d942> <d94d> 8063
+<d97b> <d97b> 8075
+<da31> <da31> 8076
+<da38> <da39> 8077
+<da3c> <da3c> 8079
+<da3e> <da3e> 8080
+<da4a> <da4f> 8081
+<da6b> <da6b> 8087
+<da6d> <da6d> 8088
+<da6f> <da6f> 8089
+<da9d> <daa0> 8090
 endcidrange
 endcmap
 CMapName currentdict /CMap defineresource pop

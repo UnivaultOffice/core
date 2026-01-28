@@ -114,7 +114,7 @@ public:
 
 #define LOAD_MODE FT_LOAD_NO_HINTING | FT_LOAD_NO_AUTOHINT | FT_LOAD_NO_BITMAP | FT_LOAD_LINEAR_DESIGN
 
-#define FONT_ITALIC_ANGLE  0.3090169943749 // Синус 18 градусов (подбиралось под Word 2026)
+#define FONT_ITALIC_ANGLE  0.3090169943749 // Синус 18 градусов (подбиралось под Word 2007)
 
 #define MAX_UNICODE_VALUE 0x10FFFF
 #define MAX_UNICODE_COUNT  0x110000

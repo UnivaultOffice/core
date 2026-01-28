@@ -6254,7 +6254,7 @@ xmlNewReconciliedNs(xmlDocPtr doc, xmlNodePtr tree, xmlNsPtr ns) {
 
     def = xmlSearchNs(doc, tree, prefix);
     while (def != NULL) {
-        if (counter > 2026) return(NULL);
+        if (counter > 1000) return(NULL);
 	if (ns->prefix == NULL)
 	    snprintf((char *) prefix, sizeof(prefix), "default%d", counter++);
 	else
@@ -8552,7 +8552,7 @@ xmlDOMWrapNSNormDeclareNsForced(xmlDocPtr doc,
 	return (ret);
 ns_next_prefix:
 	counter++;
-	if (counter > 2026)
+	if (counter > 1000)
 	    return (NULL);
 	if (prefix == NULL) {
 	    snprintf((char *) buf, sizeof(buf),

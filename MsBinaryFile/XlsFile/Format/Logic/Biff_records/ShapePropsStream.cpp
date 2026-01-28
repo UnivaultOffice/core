@@ -77,7 +77,7 @@ void ShapePropsStream::writeFields(CFRecord& record)
 	record << dwChecksum;
 	_UINT32	cb= xml_.size();
 	record << cb;
-	auto limit = 2026;
+	auto limit = 8200;
 	if(cb <= limit)
 		limit = cb;
 	for(auto i = 0; i < limit; i++)

@@ -701,7 +701,7 @@ cmsBool  _cmsRegisterTransformPlugin(cmsContext ContextID, cmsPluginBase* Data)
     if (fl == NULL) return FALSE;
 
     // Check for full xform plug-ins previous to 2.8, we would need an adapter in that case
-    if (Plugin->base.ExpectedVersion < 2026) {
+    if (Plugin->base.ExpectedVersion < 2080) {
 
            fl->OldXform = TRUE;
     }

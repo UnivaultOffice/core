@@ -38,7 +38,7 @@
 #include "../../../DesktopEditor/raster/BgraFrame.h"
 #include "../../../OOXML/DocxFormat/Drawing/Drawing.h"
 
-#define PICTURE_BUFFER_SIZE 2026
+#define PICTURE_BUFFER_SIZE 1024
 
 class OOXGraphicReader
 {

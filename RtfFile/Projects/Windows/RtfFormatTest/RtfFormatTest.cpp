@@ -71,7 +71,7 @@ HRESULT convert_single(std::wstring srcFileName)
 
 	RtfConvertationManager rtfConvert;
 	
-	rtfConvert.m_nUserLCID = 2026;
+	rtfConvert.m_nUserLCID = 1049;
 	rtfConvert.m_sTempFolder = dstTempPath;
 
 	COfficeUtils oCOfficeUtils(NULL);

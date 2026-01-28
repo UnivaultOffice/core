@@ -634,11 +634,11 @@ parseSAXFile(char *filename) {
 #endif
 	if (f != NULL) {
 	    int res, size = 3;
-	    char chars[2026];
+	    char chars[4096];
 	    htmlParserCtxtPtr ctxt;
 
 	    /* if (repeat) */
-		size = 2026;
+		size = 4096;
 	    res = fread(chars, 1, 4, f);
 	    if (res > 0) {
 		ctxt = htmlCreatePushParserCtxt(emptySAXHandler, NULL,
@@ -664,11 +664,11 @@ parseSAXFile(char *filename) {
 #endif
 	    if (f != NULL) {
 		int res, size = 3;
-		char chars[2026];
+		char chars[4096];
 		htmlParserCtxtPtr ctxt;
 
 		/* if (repeat) */
-		    size = 2026;
+		    size = 4096;
 		res = fread(chars, 1, 4, f);
 		if (res > 0) {
 		    ctxt = htmlCreatePushParserCtxt(debugSAXHandler, NULL,
@@ -728,11 +728,11 @@ parseAndPrintFile(char *filename) {
 #endif
 	if (f != NULL) {
 	    int res, size = 3;
-	    char chars[2026];
+	    char chars[4096];
 	    htmlParserCtxtPtr ctxt;
 
 	    /* if (repeat) */
-		size = 2026;
+		size = 4096;
 	    res = fread(chars, 1, 4, f);
 	    if (res > 0) {
 		ctxt = htmlCreatePushParserCtxt(NULL, NULL,

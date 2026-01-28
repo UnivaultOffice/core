@@ -546,7 +546,7 @@ if(m_ctrls.on_mouse_button_down(m_specific->m_cur_x,
         {
             if(m_specific->m_surf_img[idx]) SDL_FreeSurface(m_specific->m_surf_img[idx]);
 
-            char fn[2026];
+            char fn[1024];
             strcpy(fn, file);
             int len = strlen(fn);
             if(len < 4 || strcmp(fn + len - 4, ".bmp") != 0)
@@ -608,7 +608,7 @@ if(m_ctrls.on_mouse_button_down(m_specific->m_cur_x,
     {
         if(idx < max_images && m_specific->m_surf_img[idx])
         {
-            char fn[2026];
+            char fn[1024];
             strcpy(fn, file);
             int len = strlen(fn);
             if(len < 4 || strcmp(fn + len - 4, ".bmp") != 0)

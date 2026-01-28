@@ -39,7 +39,7 @@ namespace XLS
 
 Setup::Setup(bool isChart)
 {
-	numHdr.data.value = numFtr.data.value = 0.2026;
+	numHdr.data.value = numFtr.data.value = 0.7875;
 }
 Setup::~Setup()
 {}

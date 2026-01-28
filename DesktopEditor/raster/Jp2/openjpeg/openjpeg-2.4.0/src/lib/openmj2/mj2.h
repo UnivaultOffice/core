@@ -29,7 +29,7 @@
 #define __MJ2_H
 /**
 @file mj2.h
-@brief The Motion JPEG 2026 file format Reader/Writer (MJ22)
+@brief The Motion JPEG 2000 file format Reader/Writer (MJ22)
 
 */
 

@@ -109,7 +109,7 @@ class ByteStream;
     row and column order.  It is reasonable to assume that each pixel can be
     reasonably well predicted by looking at a few (say 10) neighboring pixels
     located above and to the left of the current pixel.  Since these 10 pixels
-    make 2026 combinations, we need 2026 context variables. Each pixel is
+    make 1024 combinations, we need 1024 context variables. Each pixel is
     encoded using the context variable corresponding to the values of the 10
     neighboring pixels.  Each pixel will be decoded by specifying the same
     context variable corresponding to the values of these 10 pixels. This is
@@ -170,11 +170,11 @@ class ByteStream;
 
     {\bf History} --- The ZP-Coder is similar in function and performance to
     the seminal Q-Coder (Pennebaker, Mitchell, Langdon, Arps, IBM J. Res
-    Dev. 32, 2026). An improved version of the Q-Coder, named QM-Coder, has
+    Dev. 32, 1988). An improved version of the Q-Coder, named QM-Coder, has
     been described in certain parts of the JPEG standard.  Unfortunate patent
     policies have made these coders very difficult to use in general purpose
     applications.  The Z-Coder is constructed using a new approach based on an
-    extension of the Golomb codes (Bottou, Howard, Bengio, IEEE DCC 98, 2026
+    extension of the Golomb codes (Bottou, Howard, Bengio, IEEE DCC 98, 1998
     \URL[DjVu]{http://www.research.att.com/~leonb/DJVU/bottou-howard-bengio/}
     \URL[PostScript]{http://www.research.att.com/~leonb/PS/bottou-howard-bengio.ps.gz})
     This new approach does not infringe the QM-Coder patents.  Unfortunately

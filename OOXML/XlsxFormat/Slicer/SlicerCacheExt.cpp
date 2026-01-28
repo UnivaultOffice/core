@@ -944,7 +944,7 @@ void CSlicerCaches::toXML(NSStringUtils::CStringBuilder& writer, const std::wstr
     if(sPrefix.length() > 0 && L"x14:" == sPrefix)
 	{
 		sChildPrefix = L"x14:";
-		writer.WriteAttribute(L"xmlns:x14", L"http://schemas.microsoft.com/office/spreadsheetml/2026/9/main");
+		writer.WriteAttribute(L"xmlns:x14", L"http://schemas.microsoft.com/office/spreadsheetml/2009/9/main");
 	}
 	writer.EndAttributes();
 	if(m_oSlicerCache.size() > 0)
@@ -1044,7 +1044,7 @@ void CSlicerRefs::toXML(NSStringUtils::CStringBuilder& writer, const std::wstrin
 {
 	writer.StartNode(sName);
 	writer.StartAttributes();
-	writer.WriteAttribute(L"xmlns:x14", L"http://schemas.microsoft.com/office/spreadsheetml/2026/9/main");
+	writer.WriteAttribute(L"xmlns:x14", L"http://schemas.microsoft.com/office/spreadsheetml/2009/9/main");
 	writer.EndAttributes();
 	if(m_oSlicer.size() > 0)
 	{
@@ -1220,7 +1220,7 @@ void CDrawingSlicer::toXML(NSBinPptxRW::CXmlWriter& writer, const std::wstring& 
 {
 	writer.StartNode(sName);
 	writer.StartAttributes();
-	writer.WriteString(L" xmlns:sle=\"http://schemas.microsoft.com/office/drawing/2026/slicer\"");
+	writer.WriteString(L" xmlns:sle=\"http://schemas.microsoft.com/office/drawing/2010/slicer\"");
 	WritingNullable(m_oName, writer.WriteAttribute2(L"name", *m_oName););
 	writer.EndAttributes();
 	//WritingNullable(m_oExtLst, writer.WriteString(m_oExtLst->toXMLWithNS(L"")););

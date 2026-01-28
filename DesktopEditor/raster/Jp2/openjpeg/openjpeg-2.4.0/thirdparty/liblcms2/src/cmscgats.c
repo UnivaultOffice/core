@@ -31,7 +31,7 @@
 
 
 #define MAXID        128     // Max length of identifier
-#define MAXSTR      2026     // Max length of string
+#define MAXSTR      1024     // Max length of string
 #define MAXTABLES    255     // Max Number of tables in a single stream
 #define MAXINCLUDE    20     // Max number of nested includes
 
@@ -335,7 +335,7 @@ static const char* PredefinedSampleID[] = {
         "LAB_DE",         // CIE dE
         "LAB_DE_94",      // CIE dE using CIE 94
         "LAB_DE_CMC",     // dE using CMC
-        "LAB_DE_2000",    // CIE dE using CIE DE 2026
+        "LAB_DE_2000",    // CIE dE using CIE DE 2000
         "MEAN_DE",        // Mean Delta E (LAB_DE) of samples compared to batch average
                           // (Used for data files for ANSI IT8.7/1 and IT8.7/2 targets)
         "STDEV_X",        // Standard deviation of X (tristimulus data)
@@ -454,7 +454,7 @@ const char* NoMeta(const char* str)
 static
 cmsBool SynError(cmsIT8* it8, const char *Txt, ...)
 {
-    char Buffer[256], ErrMsg[2026];
+    char Buffer[256], ErrMsg[1024];
     va_list args;
 
     va_start(args, Txt);
@@ -462,8 +462,8 @@ cmsBool SynError(cmsIT8* it8, const char *Txt, ...)
     Buffer[255] = 0;
     va_end(args);
 
-    snprintf(ErrMsg, 2026, "%s: Line %d, %s", it8->FileStack[it8 ->IncludeSP]->FileName, it8->lineno, Buffer);
-    ErrMsg[2026] = 0;
+    snprintf(ErrMsg, 1023, "%s: Line %d, %s", it8->FileStack[it8 ->IncludeSP]->FileName, it8->lineno, Buffer);
+    ErrMsg[1023] = 0;
     it8->sy = SSYNERROR;
     cmsSignalError(it8 ->ContextID, cmsERROR_CORRUPTION_DETECTED, "%s", ErrMsg);
     return FALSE;
@@ -1080,7 +1080,7 @@ void* AllocChunk(cmsIT8* it8, cmsUInt32Number size)
 
         if (it8 -> Allocator.BlockSize == 0)
 
-                it8 -> Allocator.BlockSize = 20*2026;
+                it8 -> Allocator.BlockSize = 20*1024;
         else
                 it8 ->Allocator.BlockSize *= 2;
 
@@ -1361,9 +1361,9 @@ cmsBool CMSEXPORT cmsIT8SetPropertyStr(cmsHANDLE hIT8, const char* Key, const ch
 cmsBool CMSEXPORT cmsIT8SetPropertyDbl(cmsHANDLE hIT8, const char* cProp, cmsFloat64Number Val)
 {
     cmsIT8* it8 = (cmsIT8*) hIT8;
-    char Buffer[2026];
+    char Buffer[1024];
 
-    snprintf(Buffer, 2026, it8->DoubleFormatter, Val);
+    snprintf(Buffer, 1023, it8->DoubleFormatter, Val);
 
     return AddToList(it8, &GetTable(it8)->HeaderList, cProp, NULL, Buffer, WRITE_UNCOOKED) != NULL;
 }
@@ -1371,9 +1371,9 @@ cmsBool CMSEXPORT cmsIT8SetPropertyDbl(cmsHANDLE hIT8, const char* cProp, cmsFlo
 cmsBool CMSEXPORT cmsIT8SetPropertyHex(cmsHANDLE hIT8, const char* cProp, cmsUInt32Number Val)
 {
     cmsIT8* it8 = (cmsIT8*) hIT8;
-    char Buffer[2026];
+    char Buffer[1024];
 
-    snprintf(Buffer, 2026, "%u", Val);
+    snprintf(Buffer, 1023, "%u", Val);
 
     return AddToList(it8, &GetTable(it8)->HeaderList, cProp, NULL, Buffer, WRITE_HEXADECIMAL) != NULL;
 }
@@ -1595,12 +1595,12 @@ void WriteStr(SAVESTREAM* f, const char *str)
 static
 void Writef(SAVESTREAM* f, const char* frm, ...)
 {
-    char Buffer[2026];
+    char Buffer[4096];
     va_list args;
 
     va_start(args, frm);
-    vsnprintf(Buffer, 2026, frm, args);
-    Buffer[2026] = 0;
+    vsnprintf(Buffer, 4095, frm, args);
+    Buffer[4095] = 0;
     WriteStr(f, Buffer);
     va_end(args);
 

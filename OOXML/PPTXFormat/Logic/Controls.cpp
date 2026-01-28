@@ -332,7 +332,7 @@ namespace PPTX
 						pActiveX_xml->write(sActiveXPath + FILE_SEPARATOR_STR + sActiveXFileName, oActiveXRegPath, *pReader->m_pRels->m_pManager->m_pContentTypes);
 
 						std::wstring sActiveXRelsPath = L"../activeX/" + sActiveXFileName;
-						size_t nRId = pReader->m_pRels->WriteRels(L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/control", sActiveXRelsPath, L"");
+						size_t nRId = pReader->m_pRels->WriteRels(L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/control", sActiveXRelsPath, L"");
 						rId = OOX::RId(nRId);
 					}break;
 					default:

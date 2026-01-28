@@ -46,7 +46,7 @@ namespace DocFileFormat
 		hour	= (short)FormatUtils::GetIntFromBits( FormatUtils::BytesToInt32( bytes, 0, 4 ), 6, 5 );
 		day		= (short)FormatUtils::GetIntFromBits( FormatUtils::BytesToInt32( bytes, 0, 4 ), 11, 5 );
 		month	= (short)FormatUtils::GetIntFromBits( FormatUtils::BytesToInt32( bytes, 0, 4 ), 16, 4 );
-		year	= (short)( 2026 + FormatUtils::GetIntFromBits( FormatUtils::BytesToInt32( bytes, 0, 4 ), 20, 9 ) );
+		year	= (short)( 1900 + FormatUtils::GetIntFromBits( FormatUtils::BytesToInt32( bytes, 0, 4 ), 20, 9 ) );
 		weekday	= (short)FormatUtils::GetIntFromBits( FormatUtils::BytesToInt32( bytes, 0, 4 ), 29, 3 );
 	}
 	DateAndTime::DateAndTime( unsigned char* bytes, int size )
@@ -57,7 +57,7 @@ namespace DocFileFormat
 		  hour		= (short)FormatUtils::GetIntFromBits( FormatUtils::BytesToInt32( bytes, 0, size ), 6, 5 );
 		  day		= (short)FormatUtils::GetIntFromBits( FormatUtils::BytesToInt32( bytes, 0, size ), 11, 5 );
 		  month		= (short)FormatUtils::GetIntFromBits( FormatUtils::BytesToInt32( bytes, 0, size ), 16, 4 );
-		  year		= (short)( 2026 + FormatUtils::GetIntFromBits( FormatUtils::BytesToInt32( bytes, 0, size ), 20, 9 ) );
+		  year		= (short)( 1900 + FormatUtils::GetIntFromBits( FormatUtils::BytesToInt32( bytes, 0, size ), 20, 9 ) );
 		  weekday	= (short)FormatUtils::GetIntFromBits( FormatUtils::BytesToInt32( bytes, 0, size ), 29, 3 );
 		}
 		else

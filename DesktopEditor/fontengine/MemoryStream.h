@@ -143,7 +143,7 @@ namespace NSMemoryStream
 			}
 			else
 			{
-				m_lSize = 2026;
+				m_lSize = 1000;
 				m_pBuffer = new BYTE[m_lSize];
 				m_pBufferMem = m_pBuffer;
 

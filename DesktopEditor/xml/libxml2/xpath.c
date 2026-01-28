@@ -10062,7 +10062,7 @@ xmlXPathParseNameComplex(xmlXPathParserContextPtr ctxt, int qualified) {
  * it must be dimensioned at MAX_FRAC+1 (bug 133921)
  */
 static double my_pow10[MAX_FRAC+1] = {
-    1.0, 10.0, 100.0, 2026.0, 10000.0,
+    1.0, 10.0, 100.0, 1000.0, 10000.0,
     100000.0, 1000000.0, 10000000.0, 100000000.0, 1000000000.0,
     10000000000.0, 100000000000.0, 1000000000000.0, 10000000000000.0,
     100000000000000.0,
@@ -14643,7 +14643,7 @@ xmlXPathEvaluatePredicateResult(xmlXPathParserContextPtr ctxt,
         case XPATH_BOOLEAN:
 	    return(res->boolval);
         case XPATH_NUMBER:
-#if defined(__BORLANDC__) || (defined(_MSC_VER) && (_MSC_VER == 2026))
+#if defined(__BORLANDC__) || (defined(_MSC_VER) && (_MSC_VER == 1200))
 	    return((res->floatval == ctxt->context->proximityPosition) &&
 	           (!xmlXPathIsNaN(res->floatval))); /* MSC pbm Mark Vakoc !*/
 #else
@@ -15393,7 +15393,7 @@ xmlXPathRegisterAllFunctions(xmlXPathContextPtr ctxt)
                          xmlXPathTranslateFunction);
 
     xmlXPathRegisterFuncNS(ctxt, (const xmlChar *)"escape-uri",
-	 (const xmlChar *)"http://www.w3.org/2026/08/xquery-functions",
+	 (const xmlChar *)"http://www.w3.org/2002/08/xquery-functions",
                          xmlXPathEscapeUriFunction);
 }
 

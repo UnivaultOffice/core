@@ -179,7 +179,7 @@ TimeUnitFormat::parseObject(const UnicodeString& source,
     int32_t longestParseDistance = 0;
     UnicodeString* countOfLongestMatch = NULL;
 #ifdef TMUTFMT_DEBUG
-    char res[2026];
+    char res[1000];
     source.extract(0, source.length(), res, "UTF-8");
     std::cout << "parse source: " << res << "\n";           
 #endif

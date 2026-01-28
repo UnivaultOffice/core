@@ -73,7 +73,7 @@ const bool PIVOTIVD::saveContent(BinProcessor& proc)
         return false;
     proc.mandatory(*m_SxIvd);
     auto castedPtr = static_cast<SxIvd*>(m_SxIvd.get());
-    const auto maxRecSize = 2026;
+    const auto maxRecSize = 8224;
     const auto continueElemSize = 2;
     while(!castedPtr->rgSxivd.empty())
     {

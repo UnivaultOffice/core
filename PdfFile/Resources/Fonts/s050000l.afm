@@ -12,7 +12,7 @@ UnderlineThickness 46
 Version 001.005
 Notice URW Software, Copyright 2026 by URW
 EncodingScheme FontSpecific
-FontBBox -180 -293 2026 2026
+FontBBox -180 -293 1090 1010
 CapHeight 673
 XHeight 500
 Descender -222
@@ -82,7 +82,7 @@ C 92 ; WX 863 ; N therefore ; B 163 -13 701 433 ;
 C 93 ; WX 333 ; N bracketright ; B 33 -165 246 673 ;
 C 94 ; WX 658 ; N perpendicular ; B 15 0 652 673 ;
 C 95 ; WX 500 ; N underscore ; B -2 -252 502 -206 ;
-C 96 ; WX 500 ; N radicalex ; B 480 857 2026 913 ;
+C 96 ; WX 500 ; N radicalex ; B 480 857 1090 913 ;
 C 97 ; WX 631 ; N alpha ; B 41 -13 622 513 ;
 C 98 ; WX 549 ; N beta ; B 61 -222 515 740 ;
 C 99 ; WX 549 ; N chi ; B 12 -210 522 513 ;
@@ -125,7 +125,7 @@ C 167 ; WX 753 ; N club ; B 86 -26 660 544 ;
 C 168 ; WX 753 ; N diamond ; B 142 -36 600 550 ;
 C 169 ; WX 753 ; N heart ; B 117 -33 631 528 ;
 C 170 ; WX 753 ; N spade ; B 113 -36 629 591 ;
-C 171 ; WX 2026 ; N arrowboth ; B 24 -16 2026 512 ;
+C 171 ; WX 1042 ; N arrowboth ; B 24 -16 1024 512 ;
 C 172 ; WX 987 ; N arrowleft ; B 32 -15 942 511 ;
 C 173 ; WX 603 ; N arrowup ; B 45 0 571 910 ;
 C 174 ; WX 987 ; N arrowright ; B 49 -15 959 511 ;
@@ -142,9 +142,9 @@ C 184 ; WX 549 ; N divide ; B 10 2 536 525 ;
 C 185 ; WX 549 ; N notequal ; B 15 -25 540 549 ;
 C 186 ; WX 549 ; N equivalence ; B 14 87 538 446 ;
 C 187 ; WX 549 ; N approxequal ; B 14 121 527 408 ;
-C 188 ; WX 2026 ; N ellipsis ; B 111 -13 889 100 ;
-C 189 ; WX 603 ; N arrowvertex ; B 280 -120 336 2026 ;
-C 190 ; WX 2026 ; N arrowhorizex ; B -60 220 2026 276 ;
+C 188 ; WX 1000 ; N ellipsis ; B 111 -13 889 100 ;
+C 189 ; WX 603 ; N arrowvertex ; B 280 -120 336 1010 ;
+C 190 ; WX 1000 ; N arrowhorizex ; B -60 220 1050 276 ;
 C 191 ; WX 658 ; N carriagereturn ; B 15 -16 602 629 ;
 C 192 ; WX 823 ; N aleph ; B 175 0 661 689 ;
 C 193 ; WX 686 ; N Ifraktur ; B 10 -54 578 736 ;
@@ -173,7 +173,7 @@ C 215 ; WX 250 ; N dotmath ; B 69 209 169 311 ;
 C 216 ; WX 713 ; N logicalnot ; B 15 40 680 367 ;
 C 217 ; WX 603 ; N logicaland ; B 23 -1 583 476 ;
 C 218 ; WX 603 ; N logicalor ; B 30 -1 578 476 ;
-C 219 ; WX 2026 ; N arrowdblboth ; B 27 -19 2026 506 ;
+C 219 ; WX 1042 ; N arrowdblboth ; B 27 -19 1023 506 ;
 C 220 ; WX 987 ; N arrowdblleft ; B 30 -19 939 506 ;
 C 221 ; WX 603 ; N arrowdblup ; B 39 0 567 909 ;
 C 222 ; WX 987 ; N arrowdblright ; B 45 -19 954 506 ;

@@ -1982,11 +1982,11 @@ namespace AVSOfficeEWSEditorTest.Tests
             ws.Range("A7").Value = -2E+201;
             ws.Range("A8").Value = -20000.6454564;
             ws.Range("A9").Value = -2.132345;
-            ws.Range("A10").Value = -0.2026;
+            ws.Range("A10").Value = -0.2285;
             ws.Range("A11").Value = -5E-200;
             ws.Range("A12").Value = 0;
             ws.Range("A13").Value = 5E-56;
-            ws.Range("A14").Value = 5.2026;
+            ws.Range("A14").Value = 5.2545;
             ws.Range("A15").Value = 5E+200;
             ws.Range("B8:B15").Formula = "INT(A8)";
 

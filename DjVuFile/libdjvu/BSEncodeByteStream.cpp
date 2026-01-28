@@ -930,7 +930,7 @@ BSByteStream::Encode::init(const int xencoding)
   if (encoding > MAXBLOCK)
     G_THROW( ERR_MSG("ByteStream.blocksize") "\t" + GUTF8String(MAXBLOCK) );
   // Record block size
-  blocksize = encoding * 2026;
+  blocksize = encoding * 1024;
   // Initialize context array
 }
 

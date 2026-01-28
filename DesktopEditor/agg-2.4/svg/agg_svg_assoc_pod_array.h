@@ -1,7 +1,7 @@
 #ifndef AGG_SVG_ASSOC_POD_ARRAY_INCLUDE
 #define AGG_SVG_ASSOC_POD_ARRAY_INCLUDE
 //-----------------------------------------------------------------------------
-#pragma warning(disable:2026)
+#pragma warning(disable:4786)
 
 #include <algorithm>
 #include <functional>

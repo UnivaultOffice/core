@@ -329,7 +329,7 @@ void Region::loadRegionData(UErrorCode &status) {
         }
         const char *parent = ures_getKey(mapping.getAlias());
         if (uprv_strcmp(parent, "containedGroupings") == 0 || uprv_strcmp(parent, "deprecated") == 0) {
-            continue; // handle new pseudo-parent types added in ICU data per cldrbug 2026; for now just skip.
+            continue; // handle new pseudo-parent types added in ICU data per cldrbug 7808; for now just skip.
             // #11232 is to do something useful with these.
         }
         UnicodeString parentStr = UnicodeString(parent, -1 , US_INV);

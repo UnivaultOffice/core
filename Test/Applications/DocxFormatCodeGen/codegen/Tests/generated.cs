@@ -101,7 +101,7 @@ public partial class CT_ChartSpace {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace="http://schemas.openxmlformats.org/markup-compatibility/2026")]
+    [System.Xml.Serialization.XmlElementAttribute(Namespace="http://schemas.openxmlformats.org/markup-compatibility/2006")]
     public AlternateContent AlternateContent {
         get {
             return this.alternateContentField;
@@ -22961,7 +22961,7 @@ public partial class CT_TextLanguageID {
 [System.SerializableAttribute()]
 [System.Diagnostics.DebuggerStepThroughAttribute()]
 [System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://schemas.openxmlformats.org/markup-compatibility/2026")]
+[System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://schemas.openxmlformats.org/markup-compatibility/2006")]
 public partial class AlternateContent {
     
     private AlternateContentChoice[] choiceField;
@@ -22995,7 +22995,7 @@ public partial class AlternateContent {
 [System.SerializableAttribute()]
 [System.Diagnostics.DebuggerStepThroughAttribute()]
 [System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://schemas.openxmlformats.org/markup-compatibility/2026")]
+[System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://schemas.openxmlformats.org/markup-compatibility/2006")]
 public partial class AlternateContentChoice {
     
     private CT_Style styleField;
@@ -23030,7 +23030,7 @@ public partial class AlternateContentChoice {
 [System.SerializableAttribute()]
 [System.Diagnostics.DebuggerStepThroughAttribute()]
 [System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://schemas.openxmlformats.org/markup-compatibility/2026")]
+[System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://schemas.openxmlformats.org/markup-compatibility/2006")]
 public partial class AlternateContentFallback {
     
     private CT_Style1 styleField;

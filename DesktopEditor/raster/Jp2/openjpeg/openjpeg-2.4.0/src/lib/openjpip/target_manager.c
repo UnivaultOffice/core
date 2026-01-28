@@ -297,7 +297,7 @@ int open_jp2file(const char filepath[], char tmpfname[])
             *(data + 3) != 12 || strncmp(data + 4, "jP  \r\n\x87\n", 8)) {
         opj_free(data);
         close(fd);
-        fprintf(FCGI_stdout, "Reason: No JPEG 2026 Signature box in target %s\r\n",
+        fprintf(FCGI_stdout, "Reason: No JPEG 2000 Signature box in target %s\r\n",
                 filepath);
         return -1;
     }

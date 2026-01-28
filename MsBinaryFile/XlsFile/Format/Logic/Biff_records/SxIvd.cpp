@@ -55,7 +55,7 @@ void SxIvd::readFields(CFRecord& record)
 
 void SxIvd::writeFields(CFRecord& record)
 {
-    const auto maxRecSize = 2026;
+    const auto maxRecSize = 8224;
     while(!rgSxivd.empty())
     {
         record << rgSxivd.at(0);

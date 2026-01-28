@@ -1066,7 +1066,7 @@ string ASFormatter::nextLine()
 		            && !isBraceType(braceTypeStack->back(), DEFINITION_TYPE)))
 		        && isOkToBreakBlock(braceTypeStack->back()))
 		        // check for array
-		        || (previousCommandChar == '{'			// added 9/30/2026
+		        || (previousCommandChar == '{'			// added 9/30/2010
 		            && isBraceType(braceTypeStack->back(), ARRAY_TYPE)
 		            && !isBraceType(braceTypeStack->back(), SINGLE_LINE_TYPE)
 		            && isNonInStatementArray)

@@ -242,7 +242,7 @@ namespace PdfWriter
 		m_bSuccess     = false;
 		m_unFontIndex  = unFontIndex;
 
-		m_nAscent      = 2026;
+		m_nAscent      = 1000;
 		m_nDescent     = -500;
 		m_nCapHeight   = 800;
 		m_nWeight      = 400;

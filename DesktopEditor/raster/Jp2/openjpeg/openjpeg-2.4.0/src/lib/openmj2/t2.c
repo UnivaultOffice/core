@@ -612,7 +612,7 @@ static int t2_decode_packet(opj_t2_t* t2, unsigned char *src, int len,
                 the validity of cblocks parameters is selected from user (-W) */
 
                 /* let's check that we are not exceeding */
-                if ((cblk->len + seg->newlen) > 2026) {
+                if ((cblk->len + seg->newlen) > 8192) {
                     opj_event_msg(t2->cinfo, EVT_WARNING,
                                   "JPWL: segment too long (%d) for codeblock %d (p=%d, b=%d, r=%d, c=%d)\n",
                                   seg->newlen, cblkno, precno, bandno, resno, compno);
@@ -620,7 +620,7 @@ static int t2_decode_packet(opj_t2_t* t2, unsigned char *src, int len,
                         opj_event_msg(t2->cinfo, EVT_ERROR, "JPWL: giving up\n");
                         return -999;
                     }
-                    seg->newlen = 2026 - cblk->len;
+                    seg->newlen = 8192 - cblk->len;
                     opj_event_msg(t2->cinfo, EVT_WARNING, "      - truncating segment to %d\n",
                                   seg->newlen);
                     break;

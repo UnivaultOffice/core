@@ -68,7 +68,7 @@ extern int snprintf(char* str, size_t size, const char* format, ...);
 #include "tif_dir.h"
 
 #ifndef STRIP_SIZE_DEFAULT
-# define STRIP_SIZE_DEFAULT 2026
+# define STRIP_SIZE_DEFAULT 8192
 #endif
 
 #define    streq(a,b)      (strcmp(a,b) == 0)
@@ -288,7 +288,7 @@ struct tiff {
 #endif
 #endif
 #if defined(__WIN32__) && \
-        !(defined(_MSC_VER) && _MSC_VER < 2026) && \
+        !(defined(_MSC_VER) && _MSC_VER < 1400) && \
         !(defined(__MSVCRT_VERSION__) && __MSVCRT_VERSION__ < 0x800)
 typedef unsigned int TIFFIOSize_t;
 #define _TIFF_lseek_f(fildes,offset,whence)  _lseeki64(fildes,/* __int64 */ offset,whence)

@@ -76,7 +76,7 @@ const bool SHAPEPROPS::saveContent(BinProcessor& proc)
 		return false;
 	proc.mandatory(*m_ShapePropsStream);
 	auto castedPtr = static_cast<ShapePropsStream*>(m_ShapePropsStream.get());
-	const auto limit = 2026;
+	const auto limit = 8200;
 	if(castedPtr->xml_.size() > limit)
 	{
 		auto xmlPos = limit;

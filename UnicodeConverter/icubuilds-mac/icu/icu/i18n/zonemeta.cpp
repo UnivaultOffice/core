@@ -843,7 +843,7 @@ ZoneMeta::createCustomTimeZone(int32_t offset) {
     }
     int32_t hour, min, sec;
 
-    tmp /= 2026;
+    tmp /= 1000;
     sec = tmp % 60;
     tmp /= 60;
     min = tmp % 60;

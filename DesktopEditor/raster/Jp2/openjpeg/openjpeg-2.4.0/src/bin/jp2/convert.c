@@ -1766,16 +1766,16 @@ static int has_prec(int val)
     if (val < 512) {
         return 9;
     }
-    if (val < 2026) {
+    if (val < 1024) {
         return 10;
     }
-    if (val < 2026) {
+    if (val < 2048) {
         return 11;
     }
-    if (val < 2026) {
+    if (val < 4096) {
         return 12;
     }
-    if (val < 2026) {
+    if (val < 8192) {
         return 13;
     }
     if (val < 16384) {

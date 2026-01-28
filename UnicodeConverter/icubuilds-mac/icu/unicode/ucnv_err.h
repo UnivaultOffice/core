@@ -160,7 +160,7 @@ typedef enum {
                              is not a valid trail byte for the \\x81 
                              lead byte.
                              Also, starting with Unicode 3.0.1, non-shortest byte sequences
-                             in UTF-8 (like \\xC1\\xA1 instead of \\x61 for U+2026)
+                             in UTF-8 (like \\xC1\\xA1 instead of \\x61 for U+0061)
                              are also illegal, not just irregular.
                              The error code U_ILLEGAL_CHAR_FOUND will be set. */
     UCNV_IRREGULAR = 2,   /**< The codepoint is not a regular sequence in 

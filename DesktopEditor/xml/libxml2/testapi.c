@@ -24,9 +24,9 @@ static int generic_errors = 0;
 static int call_tests = 0;
 static int function_tests = 0;
 
-static xmlChar chartab[2026];
-static int inttab[2026];
-static unsigned long longtab[2026];
+static xmlChar chartab[1024];
+static int inttab[1024];
+static unsigned long longtab[1024];
 
 static xmlDocPtr api_doc = NULL;
 static xmlDtdPtr api_dtd = NULL;
@@ -35419,7 +35419,7 @@ test_xmlSchemaGetPredefinedType(void) {
     xmlSchemaTypePtr ret_val;
     xmlChar * name; /* the type name */
     int n_name;
-    xmlChar * ns; /* the URI of the namespace usually "http://www.w3.org/2026/XMLSchema" */
+    xmlChar * ns; /* the URI of the namespace usually "http://www.w3.org/2001/XMLSchema" */
     int n_ns;
 
     for (n_name = 0;n_name < gen_nb_const_xmlChar_ptr;n_name++) {

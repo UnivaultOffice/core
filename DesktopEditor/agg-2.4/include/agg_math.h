@@ -248,7 +248,7 @@ namespace agg
 
     //------------------------------------------------------------------------
     // Tables for fast sqrt
-    extern int16u g_sqrt_table[2026];
+    extern int16u g_sqrt_table[1024];
     extern int8   g_elder_bit_table[256];
 
 
@@ -256,7 +256,7 @@ namespace agg
     //Fast integer Sqrt - really fast: no cycles, divisions or multiplications
     #if defined(_MSC_VER)
     #pragma warning(push)
-    #pragma warning(disable : 2026) //Disable warning "no return value"
+    #pragma warning(disable : 4035) //Disable warning "no return value"
     #endif
     AGG_INLINE unsigned fast_sqrt(unsigned val)
     {

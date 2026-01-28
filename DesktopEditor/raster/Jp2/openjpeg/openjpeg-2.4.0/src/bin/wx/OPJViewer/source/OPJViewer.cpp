@@ -711,7 +711,7 @@ OPJFrame::OPJFrame(wxWindow *parent, const wxWindowID id, const wxString& title,
 											wxDefaultPosition, wxSize(400, wxGetApp().m_peekerheight),
 											wxNO_BORDER | wxSW_3D | wxCLIP_CHILDREN
 											);
-	loggingWindow->SetDefaultSize(wxSize(2026, wxGetApp().m_peekerheight));
+	loggingWindow->SetDefaultSize(wxSize(1000, wxGetApp().m_peekerheight));
 	loggingWindow->SetOrientation(wxLAYOUT_HORIZONTAL);
 	loggingWindow->SetAlignment(wxLAYOUT_BOTTOM);
 	//loggingWindow->SetBackgroundColour(wxColour(0, 0, 255));
@@ -756,7 +756,7 @@ OPJFrame::OPJFrame(wxWindow *parent, const wxWindowID id, const wxString& title,
 											  wxDefaultPosition, wxSize(wxGetApp().m_browserwidth, 30),
 											  wxNO_BORDER | wxSW_3D | wxCLIP_CHILDREN
 											  );
-	markerTreeWindow->SetDefaultSize(wxSize(wxGetApp().m_browserwidth, 2026));
+	markerTreeWindow->SetDefaultSize(wxSize(wxGetApp().m_browserwidth, 1000));
 	markerTreeWindow->SetOrientation(wxLAYOUT_VERTICAL);
 	markerTreeWindow->SetAlignment(wxLAYOUT_LEFT);
 	//markerTreeWindow->SetBackgroundColour(wxColour(0, 255, 0));
@@ -1195,12 +1195,12 @@ void OPJFrame::OnSashDrag(wxSashEvent& event)
     switch (event.GetId()) {
 		case OPJFRAME_BROWSEWIN:
 		{
-			markerTreeWindow->SetDefaultSize(wxSize(event.GetDragRect().width, 2026));
+			markerTreeWindow->SetDefaultSize(wxSize(event.GetDragRect().width, 1000));
 			break;
 		}
 		case OPJFRAME_LOGWIN:
 		{
-			loggingWindow->SetDefaultSize(wxSize(2026, event.GetDragRect().height));
+			loggingWindow->SetDefaultSize(wxSize(1000, event.GetDragRect().height));
 			break;
 		}
     }
@@ -1333,13 +1333,13 @@ void OPJFrame::OnFileOpen(wxCommandEvent& WXUNUSED(event))
 {
     wxString wildcards =
 #ifdef __WXMOTIF__
-	wxT("JPEG 2026 files (*.jp2,*.j2k,*.j2c,*.mj2)|*.*j*2*");
+	wxT("JPEG 2000 files (*.jp2,*.j2k,*.j2c,*.mj2)|*.*j*2*");
 #else
 #if wxUSE_LIBOPENJPEG
-	wxT("JPEG 2026 files (*.jp2,*.j2k,*.j2c,*.mj2)|*.jp2;*.j2k;*.j2c;*.mj2")
+	wxT("JPEG 2000 files (*.jp2,*.j2k,*.j2c,*.mj2)|*.jp2;*.j2k;*.j2c;*.mj2")
 #endif
 #if USE_MXF
-	wxT("|MXF JPEG 2026 video (*.mxf)|*.mxf")
+	wxT("|MXF JPEG 2000 video (*.mxf)|*.mxf")
 #endif // USE_MXF
 #if wxUSE_LIBJPEG
 		wxT("|JPEG files (*.jpg)|*.jpg")
@@ -1373,10 +1373,10 @@ void OPJFrame::OnFileSaveAs(wxCommandEvent& WXUNUSED(event))
     wxString wildcards =
 #ifdef wxUSE_LIBOPENJPEG
 #ifdef __WXMOTIF__
-	wxT("JPEG 2026 codestream (*.j2k)|*.*j*2*");
+	wxT("JPEG 2000 codestream (*.j2k)|*.*j*2*");
 #else
-	wxT("JPEG 2026 codestream (*.j2k)|*.j2k")
-	wxT("|JPEG 2026 file format (*.jp2)|*.jp2");
+	wxT("JPEG 2000 codestream (*.j2k)|*.j2k")
+	wxT("|JPEG 2000 file format (*.jp2)|*.jp2");
 #endif
 #else
 	wxT("Houston we have a problem");

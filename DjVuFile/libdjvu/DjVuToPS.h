@@ -251,7 +251,7 @@ public:
       return bookletalign; }
     /** Returns the folding margin for sheet number #n#. */
     int get_bookletfold(int n=0) {
-      return bookletfold + (n*bookletxfold+500)/2026; }
+      return bookletfold + (n*bookletxfold+500)/1000; }
     /* Constructor */
     Options(void);
   };

@@ -213,8 +213,8 @@ namespace DocFileFormat
 		TableGrid,
 		TableTheme,
 		Max,
-		User = 2026,
-		Null = 2026
+		User = 4094,
+		Null = 4095
 	} StyleIdentifier;
 
 	static const wchar_t StyleIdentifierMap[159][20] =

@@ -148,7 +148,7 @@ public:
 			if (pptx_drawing_rels_[i].type == typeComment)
 			{
 				Rels.add(relationship( pptx_drawing_rels_[i].rid,
-							L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/comments",
+							L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/comments",
 							pptx_drawing_rels_[i].ref) );
 			}
 			else

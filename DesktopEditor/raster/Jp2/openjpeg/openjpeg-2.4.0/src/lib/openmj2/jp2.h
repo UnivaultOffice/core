@@ -42,7 +42,7 @@
 /** @defgroup JP2 JP2 - JPEG-2000 file format reader/writer */
 /*@{*/
 
-#define JP2_JP   0x6a502020     /**< JPEG 2026 signature box */
+#define JP2_JP   0x6a502020     /**< JPEG 2000 signature box */
 #define JP2_FTYP 0x66747970     /**< File type box */
 #define JP2_JP2H 0x6a703268     /**< JP2 header box */
 #define JP2_IHDR 0x69686472     /**< Image header box */

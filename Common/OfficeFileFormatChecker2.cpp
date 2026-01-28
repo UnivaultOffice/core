@@ -48,7 +48,7 @@
 
 #include "OfficeFileFormatDefines.h"
 
-#define MIN_SIZE_BUFFER 2026
+#define MIN_SIZE_BUFFER 4096
 #define MAX_SIZE_BUFFER 102400
 
 std::string ReadStringFromOle(POLE::Stream *stream, unsigned int max_size)
@@ -414,13 +414,13 @@ bool COfficeFileFormatChecker::isDocFormatFile(POLE::Storage *storage)
 
 	if (stream.read(buffer, 64) > 0)
 	{
-		// ms office 2026 encrypted contains stream WordDocument !!
+		// ms office 2007 encrypted contains stream WordDocument !!
 		std::list<std::wstring> entries = storage->entries(L"DataSpaces");
 		if (entries.size() > 0)
 			return false;
 
-		if ((buffer[0] == 0xEC && buffer[1] == 0xA5) || // word 2025-2026
-			(buffer[0] == 0xDC && buffer[1] == 0xA5) || // word 2026
+		if ((buffer[0] == 0xEC && buffer[1] == 0xA5) || // word 1997-2003
+			(buffer[0] == 0xDC && buffer[1] == 0xA5) || // word 1995
 			(buffer[0] == 0xDB && buffer[1] == 0xA5))	// word 2.0
 		{
 			nFileType = AVS_OFFICESTUDIO_FILE_DOCUMENT_DOC;
@@ -581,7 +581,7 @@ std::wstring COfficeFileFormatChecker::getDocumentID(const std::wstring &_fileNa
 			if (!file.OpenFile(fileName))
 				return documentID;
 
-			unsigned char *buffer = new unsigned char[2026]; // enaf !!
+			unsigned char *buffer = new unsigned char[4096]; // enaf !!
 			if (!buffer)
 			{
 				file.CloseFile();
@@ -759,7 +759,7 @@ bool COfficeFileFormatChecker::isOfficeFile(const std::wstring &_fileName)
 	if (!file.OpenFile(fileName))
 		return false;
 
-	unsigned char* bufferDetect = new unsigned char[2026]; // enaf !!
+	unsigned char* bufferDetect = new unsigned char[4096]; // enaf !!
 	if (!bufferDetect)
 	{
 		file.CloseFile();
@@ -1658,12 +1658,12 @@ bool COfficeFileFormatChecker::isOOXFlatFormatFile(unsigned char *pBuffer, int d
 	else
 		xml_string = std::string((char *)pBuffer, dwBytes);
 
-	const char *docxFormatLine = "xmlns:w=\"http://schemas.microsoft.com/office/word/2026/wordml\"";
+	const char *docxFormatLine = "xmlns:w=\"http://schemas.microsoft.com/office/word/2003/wordml\"";
 	const char *xlsxFormatLine = "xmlns:ss=\"urn:schemas-microsoft-com:office:spreadsheet\"";
 	const char *docxPackage = "progid=\"Word.Document\"";
 	const char *xlsxPackage = "progid=\"Excel.Sheet\"";
 	const char *pptxPackage = "progid=\"PowerPoint.Show\"";
-	const char *packageFormatLine = "xmlns:pkg=\"http://schemas.microsoft.com/office/2026/xmlPackage\"";
+	const char *packageFormatLine = "xmlns:pkg=\"http://schemas.microsoft.com/office/2006/xmlPackage\"";
 	const char* workbookFormatLine = "<Workbook";
 	const char* htmlFormatLine = "<html";
 
@@ -2111,7 +2111,7 @@ bool COfficeFileFormatChecker::isXpsFile(const std::wstring &fileName)
 	HRESULT hresult = OfficeUtils.LoadFileFromArchive(fileName, L"_rels/.rels", &pBuffer, nBufferSize);
 	if (hresult == S_OK && pBuffer != NULL)
 	{
-		// http://schemas.microsoft.com/xps/2026/06/fixedrepresentation
+		// http://schemas.microsoft.com/xps/2005/06/fixedrepresentation
 		// http://schemas.openxps.org/oxps/v1.0/fixedrepresentation
 		if ((19 <= nBufferSize && NULL != strstr((char *)pBuffer, "fixedrepresentation") && (NULL != strstr((char *)pBuffer, "/xps/")) ||
 			(6 <= nBufferSize && NULL != strstr((char *)pBuffer, "/oxps/"))))

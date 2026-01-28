@@ -464,7 +464,7 @@ void GlobalWorkbookInfo::CalculateAnchor(int colL, int colR, int rwT, int rwB, _
 	//1 inch	=	72 point
 	//1 emu		=	360000 * 2.54 inch
 
-	double kfCol	= 1;// 2026.;//360000 / 72. / 4.;
+	double kfCol	= 1;// 1250.;//360000 / 72. / 4.;
 	double kfRow	= ( 360000 * 2.54 / 72) / 256. ;
 
 	double Digit_Width	= defaultDigitFontSize.first;

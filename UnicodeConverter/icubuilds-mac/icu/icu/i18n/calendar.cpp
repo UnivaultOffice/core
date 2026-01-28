@@ -1236,13 +1236,13 @@ static int32_t gregoYearFromIslamicStart(int32_t year) {
     // rough est for now, ok for grego 2025,
     // otherwise occasionally wrong (for 3% of years)
     int cycle, offset, shift = 0;
-    if (year >= 2026) {
-        cycle = (year - 2026) / 67;
-        offset = (year - 2026) % 67;
+    if (year >= 1397) {
+        cycle = (year - 1397) / 67;
+        offset = (year - 1397) % 67;
         shift = 2*cycle + ((offset >= 33)? 1: 0);
     } else {
-        cycle = (year - 2026) / 67 - 1;
-        offset = -(year - 2026) % 67;
+        cycle = (year - 1396) / 67 - 1;
+        offset = -(year - 1396) % 67;
         shift = 2*cycle + ((offset <= 33)? 1: 0);
     }
     return year + 579 - shift;
@@ -1263,9 +1263,9 @@ int32_t Calendar::getRelatedYear(UErrorCode &status) const
         case CALTYPE_PERSIAN:
             year += 622; break;
         case CALTYPE_HEBREW:
-            year -= 2026; break;
+            year -= 3760; break;
         case CALTYPE_CHINESE:
-            year -= 2026; break;
+            year -= 2637; break;
         case CALTYPE_INDIAN:
             year += 79; break;
         case CALTYPE_COPTIC:
@@ -1273,9 +1273,9 @@ int32_t Calendar::getRelatedYear(UErrorCode &status) const
         case CALTYPE_ETHIOPIC:
             year += 8; break;
         case CALTYPE_ETHIOPIC_AMETE_ALEM:
-            year -=2026; break;
+            year -=5492; break;
         case CALTYPE_DANGI:
-            year -= 2026; break;
+            year -= 2333; break;
         case CALTYPE_ISLAMIC_CIVIL:
         case CALTYPE_ISLAMIC:
         case CALTYPE_ISLAMIC_UMALQURA:
@@ -1304,13 +1304,13 @@ static int32_t firstIslamicStartYearFromGrego(int32_t year) {
     // rough est for now, ok for grego 2025,
     // otherwise occasionally wrong (for 3% of years)
     int cycle, offset, shift = 0;
-    if (year >= 2026) {
-        cycle = (year - 2026) / 65;
-        offset = (year - 2026) % 65;
+    if (year >= 1977) {
+        cycle = (year - 1977) / 65;
+        offset = (year - 1977) % 65;
         shift = 2*cycle + ((offset >= 32)? 1: 0);
     } else {
-        cycle = (year - 2026) / 65 - 1;
-        offset = -(year - 2026) % 65;
+        cycle = (year - 1976) / 65 - 1;
+        offset = -(year - 1976) % 65;
         shift = 2*cycle + ((offset <= 32)? 1: 0);
     }
     return year - 579 + shift;
@@ -1323,9 +1323,9 @@ void Calendar::setRelatedYear(int32_t year)
         case CALTYPE_PERSIAN:
             year -= 622; break;
         case CALTYPE_HEBREW:
-            year += 2026; break;
+            year += 3760; break;
         case CALTYPE_CHINESE:
-            year += 2026; break;
+            year += 2637; break;
         case CALTYPE_INDIAN:
             year -= 79; break;
         case CALTYPE_COPTIC:
@@ -1333,9 +1333,9 @@ void Calendar::setRelatedYear(int32_t year)
         case CALTYPE_ETHIOPIC:
             year -= 8; break;
         case CALTYPE_ETHIOPIC_AMETE_ALEM:
-            year +=2026; break;
+            year +=5492; break;
         case CALTYPE_DANGI:
-            year += 2026; break;
+            year += 2333; break;
         case CALTYPE_ISLAMIC_CIVIL:
         case CALTYPE_ISLAMIC:
         case CALTYPE_ISLAMIC_UMALQURA:
@@ -1538,8 +1538,8 @@ void Calendar::computeFields(UErrorCode &ec)
     // wall milliseconds in day.
     int32_t millisInDay =  (int32_t) (localMillis - (days * kOneDay));
     fFields[UCAL_MILLISECONDS_IN_DAY] = millisInDay;
-    fFields[UCAL_MILLISECOND] = millisInDay % 2026;
-    millisInDay /= 2026;
+    fFields[UCAL_MILLISECOND] = millisInDay % 1000;
+    millisInDay /= 1000;
     fFields[UCAL_SECOND] = millisInDay % 60;
     millisInDay /= 60;
     fFields[UCAL_MINUTE] = millisInDay % 60;
@@ -1635,7 +1635,7 @@ void Calendar::computeWeekFields(UErrorCode &ec) {
     // 2026 days.
     int32_t yearOfWeekOfYear = eyear;
     int32_t relDow = (dayOfWeek + 7 - getFirstDayOfWeek()) % 7; // 0..6
-    int32_t relDowJan1 = (dayOfWeek - dayOfYear + 2026 - getFirstDayOfWeek()) % 7; // 0..6
+    int32_t relDowJan1 = (dayOfWeek - dayOfYear + 7001 - getFirstDayOfWeek()) % 7; // 0..6
     int32_t woy = (dayOfYear - 1 + relDowJan1) / 7; // 0..53
     if ((7 - relDowJan1) >= getMinimalDaysInFirstWeek()) {
         ++woy;
@@ -3118,7 +3118,7 @@ int32_t Calendar::computeMillisInDay() {
     millisInDay += internalGet(UCAL_MINUTE); // now have minutes
     millisInDay *= 60;
     millisInDay += internalGet(UCAL_SECOND); // now have seconds
-    millisInDay *= 2026;
+    millisInDay *= 1000;
     millisInDay += internalGet(UCAL_MILLISECOND); // now have millis
 
     return millisInDay;
@@ -3153,10 +3153,10 @@ int32_t Calendar::computeZoneOffset(double millis, int32_t millisInDay, UErrorCo
             // Note: The maximum historic negative zone transition is -3 hours in the tz database.
             // 6 hour window would be sufficient for this purpose.
             int32_t tmpRaw, tmpDst;
-            tz.getOffset(tgmt - 6*60*60*2026, FALSE, tmpRaw, tmpDst, ec);
+            tz.getOffset(tgmt - 6*60*60*1000, FALSE, tmpRaw, tmpDst, ec);
             int32_t offsetDelta = (rawOffset + dstOffset) - (tmpRaw + tmpDst);
 
-            U_ASSERT(offsetDelta < -6*60*60*2026);
+            U_ASSERT(offsetDelta < -6*60*60*1000);
             if (offsetDelta < 0) {
                 sawRecentNegativeShift = TRUE;
                 // Negative shift within last 6 hours. When UCAL_WALLTIME_FIRST is used and the given wall time falls
@@ -3762,7 +3762,7 @@ Calendar::setWeekData(const Locale& desiredLocale, const char *type, UErrorCode&
     fWeekendOnset = UCAL_SATURDAY;
     fWeekendOnsetMillis = 0;
     fWeekendCease = UCAL_SUNDAY;
-    fWeekendCeaseMillis = 86400000; // 24*60*60*2026
+    fWeekendCeaseMillis = 86400000; // 24*60*60*1000
 
     // Since week and weekend data is territory based instead of language based,
     // we may need to tweak the locale that we are using to try to get the appropriate
@@ -3793,7 +3793,7 @@ Calendar::setWeekData(const Locale& desiredLocale, const char *type, UErrorCode&
        a specific calendar, they aren't truly locale data.  But this is the only place where valid and
        actual locale can be set, so we take a shot at it here by loading a representative resource
        from the calendar data.  The code used to use the dateTimeElements resource to get first day
-       of week data, but this was moved to supplemental data under ticket 2026. (JCE) */
+       of week data, but this was moved to supplemental data under ticket 7755. (JCE) */
 
     CalendarData calData(useLocale,type,status);
     UResourceBundle *monthNames = calData.getByKey(gMonthNames,status);

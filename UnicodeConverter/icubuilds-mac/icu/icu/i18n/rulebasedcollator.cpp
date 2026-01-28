@@ -1527,7 +1527,7 @@ void appendAttribute(CharString &s, char letter, UColAttributeValue value,
     if(!s.isEmpty()) {
         s.append('_', errorCode);
     }
-    static const char *valueChars = "2026...........IXO..SN..LU......";
+    static const char *valueChars = "1234...........IXO..SN..LU......";
     s.append(letter, errorCode);
     s.append(valueChars[value], errorCode);
 }

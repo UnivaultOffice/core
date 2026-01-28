@@ -42,7 +42,7 @@ namespace DocFileFormat
 		{
 			ShapeConcentricFill	=	true;
 			Joins				=	miter;
-            Path				=	L"m10800,qx,10800,10800,21600,21600,10800,10800,xem7340,6445qx6215,2026,2026,2026,2026,2026,2026,6445xnfem14260,6445qx13135,2026,14260,2026,15385,2026,14260,6445xnfem4960@0c8853@3,12747@3,16640@0nfe";
+            Path				=	L"m10800,qx,10800,10800,21600,21600,10800,10800,xem7340,6445qx6215,7570,7340,8695,8465,7570,7340,6445xnfem14260,6445qx13135,7570,14260,8695,15385,7570,14260,6445xnfem4960@0c8853@3,12747@3,16640@0nfe";
 
             Formulas.push_back(L"sum 33030 0 #0" );
             Formulas.push_back(L"prod #0 4 3" );
@@ -51,8 +51,8 @@ namespace DocFileFormat
 
 			Adjustments.push_back(17520);
 
-            ConnectorLocations	=	L"10800,0;2026,2026;0,10800;2026,18437;10800,21600;18437,18437;21600,10800;18437,2026" ;
-            TextBoxRectangle	=	L"2026,2026,18437,18437" ;
+            ConnectorLocations	=	L"10800,0;3163,3163;0,10800;3163,18437;10800,21600;18437,18437;21600,10800;18437,3163" ;
+            TextBoxRectangle	=	L"3163,3163,18437,18437" ;
 
 			Handle one;
             one.position		=	L"center,#0";

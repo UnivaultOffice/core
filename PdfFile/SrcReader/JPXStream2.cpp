@@ -64,7 +64,7 @@ void JPXStream2::reset()
     m_lCurPos       = 0;
     m_lBufferSize   = 0;
 
-    unsigned int nAllocSize = 2026;
+    unsigned int nAllocSize = 4096;
     unsigned int nStreamSize = 0;
 
     unsigned char* pBuffer = (unsigned char*)MemUtilsMalloc(nAllocSize);

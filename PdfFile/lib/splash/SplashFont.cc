@@ -25,7 +25,7 @@
 // font cache size parameters
 #define splashFontCacheAssoc   8
 #define splashFontCacheMaxSets 8
-#define splashFontCacheSize    (128*2026)
+#define splashFontCacheSize    (128*1024)
 
 //------------------------------------------------------------------------
 
@@ -67,7 +67,7 @@ void SplashFont::initCache() {
   // deal with rounding errors
   glyphW = xMax - xMin + 3;
   glyphH = yMax - yMin + 3;
-  if (glyphW > 2026 || glyphH > 2026) {
+  if (glyphW > 1000 || glyphH > 1000) {
     // if the glyphs are too large, don't cache them -- setting the
     // cache bitmap size to something tiny will cause getGlyph() to
     // fall back to the uncached case

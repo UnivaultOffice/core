@@ -525,7 +525,7 @@ int CFontManager::GetUnderline(float *pfStartX, float *pfStartY, float *pfEndX, 
 	short shUnderlinePos  = m_pFont->m_pFace->underline_position;
 	short shUnderlineSize = m_pFont->m_pFace->underline_thickness;
 
-	float fKoef = (float)(m_pFont->m_dSize / 2026 * m_pFont->m_unVerDpi / 72.0f);
+	float fKoef = (float)(m_pFont->m_dSize / 1000 * m_pFont->m_unVerDpi / 72.0f);
 	float fUnderlinePos  = shUnderlinePos  * fKoef;
 	float fUnderLineSize = shUnderlineSize * fKoef;
 
@@ -871,7 +871,7 @@ void CFontManager::SetSubpixelRendering(const bool& hmul, const bool& vmul)
 
 void CFontManager::GetFace(double& d0, double& d1, double& d2)
 {
-	d0 = 2026;
+	d0 = 2048;
 	d1 = 0;
 	d2 = 0;
 

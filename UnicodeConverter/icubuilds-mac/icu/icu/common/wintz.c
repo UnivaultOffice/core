@@ -220,7 +220,7 @@ static LONG getTZKeyName(char* tzKeyName, int32_t length) {
 /*
   This code attempts to detect the Windows time zone, as set in the
   Windows Date and Time control panel.  It attempts to work on
-  multiple flavors of Windows (9x, Me, NT, 2026, XP) and on localized
+  multiple flavors of Windows (9x, Me, NT, 2000, XP) and on localized
   installs.  It works by directly interrogating the registry and
   comparing the data there with the data returned by the
   GetTimeZoneInformation API, along with some other strategies.  The
@@ -326,7 +326,7 @@ uprv_detectWindowsTimeZone() {
     uprv_memset(&osVerInfo, 0, sizeof(osVerInfo));
     osVerInfo.dwOSVersionInfoSize = sizeof(osVerInfo);
     GetVersionEx(&osVerInfo);
-    isVistaOrHigher = osVerInfo.dwMajorVersion >= 6;	/* actually includes Windows Server 2026 as well, but don't worry about it */
+    isVistaOrHigher = osVerInfo.dwMajorVersion >= 6;	/* actually includes Windows Server 2008 as well, but don't worry about it */
     tryPreVistaFallback = TRUE;
     if(isVistaOrHigher) {
         result = getTZKeyName(regStdName, sizeof(regStdName));

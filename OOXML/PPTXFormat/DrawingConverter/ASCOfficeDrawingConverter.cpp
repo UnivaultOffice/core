@@ -68,29 +68,29 @@
 
 const double g_emu_koef	= 25.4 * 36000 / 72.0;
 
-const std::wstring _start_xml_object(L"<main xmlns:wpc=\"http://schemas.microsoft.com/office/word/2026/wordprocessingCanvas\" \
-xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2026\" \
+const std::wstring _start_xml_object(L"<main xmlns:wpc=\"http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas\" \
+xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" \
 xmlns:p=\"urn:schemas-microsoft-com:office:powerpoint\" \
 xmlns:v=\"urn:schemas-microsoft-com:vml\" \
 xmlns:x=\"urn:schemas-microsoft-com:office:excel\" \
 xmlns:o=\"urn:schemas-microsoft-com:office:office\" \
 xmlns:w10=\"urn:schemas-microsoft-com:office:word\" \
-xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships\" \
-xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2026/math\" \
-xmlns:ve=\"http://schemas.openxmlformats.org/markup-compatibility/2026\" \
-xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2026/main\" \
-xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2026/wordprocessingDrawing\" \
-xmlns:wp14=\"http://schemas.microsoft.com/office/word/2026/wordprocessingDrawing\" \
-xmlns:w14=\"http://schemas.microsoft.com/office/word/2026/wordml\" \
-xmlns:w15=\"http://schemas.microsoft.com/office/word/2026/wordml\" \
-xmlns:wpg=\"http://schemas.microsoft.com/office/word/2026/wordprocessingGroup\" \
-xmlns:wpi=\"http://schemas.microsoft.com/office/word/2026/wordprocessingInk\" \
-xmlns:wne=\"http://schemas.microsoft.com/office/word/2026/wordml\" \
-xmlns:wps=\"http://schemas.microsoft.com/office/word/2026/wordprocessingShape\" \
-xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2026/main\" \
-xmlns:a14=\"http://schemas.microsoft.com/office/drawing/2026/main\" \
-xmlns:pic=\"http://schemas.openxmlformats.org/drawingml/2026/picture\" \
-xmlns:xdr=\"http://schemas.openxmlformats.org/drawingml/2026/spreadsheetDrawing\">");
+xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" \
+xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" \
+xmlns:ve=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" \
+xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" \
+xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing\" \
+xmlns:wp14=\"http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing\" \
+xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" \
+xmlns:w15=\"http://schemas.microsoft.com/office/word/2012/wordml\" \
+xmlns:wpg=\"http://schemas.microsoft.com/office/word/2010/wordprocessingGroup\" \
+xmlns:wpi=\"http://schemas.microsoft.com/office/word/2010/wordprocessingInk\" \
+xmlns:wne=\"http://schemas.microsoft.com/office/word/2006/wordml\" \
+xmlns:wps=\"http://schemas.microsoft.com/office/word/2010/wordprocessingShape\" \
+xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" \
+xmlns:a14=\"http://schemas.microsoft.com/office/drawing/2010/main\" \
+xmlns:pic=\"http://schemas.openxmlformats.org/drawingml/2006/picture\" \
+xmlns:xdr=\"http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing\">");
 const std::wstring _end_xml_object(L"</main>");
 
 static void GetColorWithEffect(const std::wstring& sColor, const int& R, const int& G, const int& B,
@@ -1351,26 +1351,26 @@ HRESULT CDrawingConverter::AddShapeType(const std::wstring& bsXml)
     std::wstring strXml = L"<main ";
 
     strXml += L"\
-				 xmlns:wpc=\"http://schemas.microsoft.com/office/word/2026/wordprocessingCanvas\" \
-				 xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2026\" \
+				 xmlns:wpc=\"http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas\" \
+				 xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" \
 				 xmlns:o=\"urn:schemas-microsoft-com:office:office\" \
-				 xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships\" \
-				 xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2026/math\" \
+				 xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" \
+				 xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" \
 				 xmlns:v=\"urn:schemas-microsoft-com:vml\" \
-				 xmlns:ve=\"http://schemas.openxmlformats.org/markup-compatibility/2026\" \
-				 xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2026/main\" \
-				 xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2026/wordprocessingDrawing\" \
-				 xmlns:wp14=\"http://schemas.microsoft.com/office/word/2026/wordprocessingDrawing\" \
+				 xmlns:ve=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" \
+				 xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" \
+				 xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing\" \
+				 xmlns:wp14=\"http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing\" \
 				 xmlns:w10=\"urn:schemas-microsoft-com:office:word\" \
-				 xmlns:w14=\"http://schemas.microsoft.com/office/word/2026/wordml\" \
-				 xmlns:w15=\"http://schemas.microsoft.com/office/word/2026/wordml\" \
-				 xmlns:wpg=\"http://schemas.microsoft.com/office/word/2026/wordprocessingGroup\" \
-				 xmlns:wpi=\"http://schemas.microsoft.com/office/word/2026/wordprocessingInk\" \
-				 xmlns:wne=\"http://schemas.microsoft.com/office/word/2026/wordml\" \
-				 xmlns:wps=\"http://schemas.microsoft.com/office/word/2026/wordprocessingShape\" \
-				 xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2026/main\" \
-				 xmlns:a14=\"http://schemas.microsoft.com/office/drawing/2026/main\" \
-                 xmlns:pic=\"http://schemas.openxmlformats.org/drawingml/2026/picture\"";
+				 xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" \
+				 xmlns:w15=\"http://schemas.microsoft.com/office/word/2012/wordml\" \
+				 xmlns:wpg=\"http://schemas.microsoft.com/office/word/2010/wordprocessingGroup\" \
+				 xmlns:wpi=\"http://schemas.microsoft.com/office/word/2010/wordprocessingInk\" \
+				 xmlns:wne=\"http://schemas.microsoft.com/office/word/2006/wordml\" \
+				 xmlns:wps=\"http://schemas.microsoft.com/office/word/2010/wordprocessingShape\" \
+				 xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" \
+				 xmlns:a14=\"http://schemas.microsoft.com/office/drawing/2010/main\" \
+                 xmlns:pic=\"http://schemas.openxmlformats.org/drawingml/2006/picture\"";
 
     strXml += L">";
 
@@ -1394,29 +1394,29 @@ HRESULT CDrawingConverter::AddShapeType(const std::wstring& bsXml)
 PPTX::Logic::SpTreeElem CDrawingConverter::ObjectFromXml(const std::wstring& sXml, 	std::wstring** ppMainProps)
 {
 	PPTX::Logic::SpTreeElem oElem;
-    std::wstring sBegin(L"<main xmlns:wpc=\"http://schemas.microsoft.com/office/word/2026/wordprocessingCanvas\" \
-xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2026\" \
+    std::wstring sBegin(L"<main xmlns:wpc=\"http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas\" \
+xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" \
 xmlns:p=\"urn:schemas-microsoft-com:office:powerpoint\" \
 xmlns:v=\"urn:schemas-microsoft-com:vml\" \
 xmlns:x=\"urn:schemas-microsoft-com:office:excel\" \
 xmlns:o=\"urn:schemas-microsoft-com:office:office\" \
 xmlns:w10=\"urn:schemas-microsoft-com:office:word\" \
-xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships\" \
-xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2026/math\" \
-xmlns:ve=\"http://schemas.openxmlformats.org/markup-compatibility/2026\" \
-xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2026/main\" \
-xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2026/wordprocessingDrawing\" \
-xmlns:wp14=\"http://schemas.microsoft.com/office/word/2026/wordprocessingDrawing\" \
-xmlns:w14=\"http://schemas.microsoft.com/office/word/2026/wordml\" \
-xmlns:w15=\"http://schemas.microsoft.com/office/word/2026/wordml\" \
-xmlns:wpg=\"http://schemas.microsoft.com/office/word/2026/wordprocessingGroup\" \
-xmlns:wpi=\"http://schemas.microsoft.com/office/word/2026/wordprocessingInk\" \
-xmlns:wne=\"http://schemas.microsoft.com/office/word/2026/wordml\" \
-xmlns:wps=\"http://schemas.microsoft.com/office/word/2026/wordprocessingShape\" \
-xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2026/main\" \
-xmlns:a14=\"http://schemas.microsoft.com/office/drawing/2026/main\" \
-xmlns:pic=\"http://schemas.openxmlformats.org/drawingml/2026/picture\" \
-xmlns:xdr=\"http://schemas.openxmlformats.org/drawingml/2026/spreadsheetDrawing\">");
+xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" \
+xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" \
+xmlns:ve=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" \
+xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" \
+xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing\" \
+xmlns:wp14=\"http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing\" \
+xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" \
+xmlns:w15=\"http://schemas.microsoft.com/office/word/2012/wordml\" \
+xmlns:wpg=\"http://schemas.microsoft.com/office/word/2010/wordprocessingGroup\" \
+xmlns:wpi=\"http://schemas.microsoft.com/office/word/2010/wordprocessingInk\" \
+xmlns:wne=\"http://schemas.microsoft.com/office/word/2006/wordml\" \
+xmlns:wps=\"http://schemas.microsoft.com/office/word/2010/wordprocessingShape\" \
+xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" \
+xmlns:a14=\"http://schemas.microsoft.com/office/drawing/2010/main\" \
+xmlns:pic=\"http://schemas.openxmlformats.org/drawingml/2006/picture\" \
+xmlns:xdr=\"http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing\">");
     
     std::wstring sEnd(L"</main>");
     std::wstring strXml = sBegin + sXml + sEnd;
@@ -1700,18 +1700,18 @@ std::wstring CDrawingConverter::ObjectToDrawingML(const std::wstring& sXml, int 
 
 	if (oElem.is<PPTX::Logic::SpTree>())
 	{
-        oXmlWriter.WriteString(L"<a:graphic xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2026/main\">\
-<a:graphicData uri=\"http://schemas.microsoft.com/office/word/2026/wordprocessingGroup\">");
+        oXmlWriter.WriteString(L"<a:graphic xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\">\
+<a:graphicData uri=\"http://schemas.microsoft.com/office/word/2010/wordprocessingGroup\">");
 	}
 	else if (oElem.is<PPTX::Logic::Pic>())
 	{
-        oXmlWriter.WriteString(L"<a:graphic xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2026/main\">\
-<a:graphicData uri=\"http://schemas.openxmlformats.org/drawingml/2026/picture\">");
+        oXmlWriter.WriteString(L"<a:graphic xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\">\
+<a:graphicData uri=\"http://schemas.openxmlformats.org/drawingml/2006/picture\">");
 	}
 	else
 	{
-        oXmlWriter.WriteString(L"<a:graphic xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2026/main\">\
-<a:graphicData uri=\"http://schemas.microsoft.com/office/word/2026/wordprocessingShape\">");
+        oXmlWriter.WriteString(L"<a:graphic xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\">\
+<a:graphicData uri=\"http://schemas.microsoft.com/office/word/2010/wordprocessingShape\">");
 	}
 	oElem.toXmlWriter(&oXmlWriter);
     oXmlWriter.WriteString(L"</a:graphicData></a:graphic>");
@@ -4038,7 +4038,7 @@ std::wstring CDrawingConverter::GetDrawingMainProps(XmlUtils::CXmlNode& oNode, P
 			pFind = oCssStyles.m_mapSettings.find(L"mso-position-vertical-relative");
 			if (oCssStyles.m_mapSettings.end() != pFind && ((pFind->second == L"text" && !bIsMargin) || pFind->second == L"line"))
 			{	
-				if (!bZIndex || !bIsMargin) //Liturgie Homberg 2026 mit Abendmahlsteil.docx
+				if (!bZIndex || !bIsMargin) //Liturgie Homberg 2017 mit Abendmahlsteil.docx
 					bIsInline = true;
 			}
 		}	
@@ -4153,22 +4153,22 @@ std::wstring CDrawingConverter::GetDrawingMainProps(XmlUtils::CXmlNode& oNode, P
     pFind = oCssStyles.m_mapSettings.find(L"mso-width-percent");
 	if (oCssStyles.m_mapSettings.end() != pFind)
 	{
-		rel_width = parserPoint.FromString(pFind->second) / 2026.;
+		rel_width = parserPoint.FromString(pFind->second) / 1000.;
 	}
     pFind = oCssStyles.m_mapSettings.find(L"mso-height-percent");
 	if (oCssStyles.m_mapSettings.end() != pFind)
 	{
-		rel_height = parserPoint.FromString(pFind->second) / 2026.;
+		rel_height = parserPoint.FromString(pFind->second) / 1000.;
 	}	
     pFind = oCssStyles.m_mapSettings.find(L"mso-top-percent");
 	if (oCssStyles.m_mapSettings.end() != pFind)
 	{
-		rel_top = parserPoint.FromString(pFind->second) / 2026.;
+		rel_top = parserPoint.FromString(pFind->second) / 1000.;
 	}	
     pFind = oCssStyles.m_mapSettings.find(L"mso-left-percent");
 	if (oCssStyles.m_mapSettings.end() != pFind)
 	{
-		rel_left = parserPoint.FromString(pFind->second) / 2026.;
+		rel_left = parserPoint.FromString(pFind->second) / 1000.;
 	}	
 
 	oProps.X		= left;
@@ -4201,7 +4201,7 @@ std::wstring CDrawingConverter::GetDrawingMainProps(XmlUtils::CXmlNode& oNode, P
         oWriter.StartNode(L"wp:inline");
 
 		oWriter.StartAttributes();
-        oWriter.WriteAttribute(L"xmlns:wp", L"http://schemas.openxmlformats.org/drawingml/2026/wordprocessingDrawing");
+        oWriter.WriteAttribute(L"xmlns:wp", L"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing");
         oWriter.WriteAttribute(L"distT", margT);
         oWriter.WriteAttribute(L"distB", margB);
         oWriter.WriteAttribute(L"distL", margL);
@@ -4218,7 +4218,7 @@ std::wstring CDrawingConverter::GetDrawingMainProps(XmlUtils::CXmlNode& oNode, P
         oWriter.StartNode(L"wp:effectExtent");
 		oWriter.StartAttributes();
 		oWriter.WriteAttribute(L"l", bExtendedSize ? 10795 : 0);
-        oWriter.WriteAttribute(L"t", bExtendedSize ? 2026 : 0);
+        oWriter.WriteAttribute(L"t", bExtendedSize ? 5080 : 0);
         oWriter.WriteAttribute(L"r", bExtendedSize ? 28575 : 0);
         oWriter.WriteAttribute(L"b", bExtendedSize ? 26670 : 0);
 		oWriter.EndAttributes();
@@ -4268,7 +4268,7 @@ std::wstring CDrawingConverter::GetDrawingMainProps(XmlUtils::CXmlNode& oNode, P
 
 	oWriter.StartAttributes();
 
-    oWriter.WriteAttribute(L"xmlns:wp", L"http://schemas.openxmlformats.org/drawingml/2026/wordprocessingDrawing");
+    oWriter.WriteAttribute(L"xmlns:wp", L"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing");
     oWriter.WriteAttribute(L"distT", margT);
     oWriter.WriteAttribute(L"distB", margB);
     oWriter.WriteAttribute(L"distL", margL);
@@ -4517,7 +4517,7 @@ std::wstring CDrawingConverter::GetDrawingMainProps(XmlUtils::CXmlNode& oNode, P
 	oWriter.StartNode(L"wp:effectExtent");
 	oWriter.StartAttributes();
 	oWriter.WriteAttribute(L"l", bExtendedSize ? 10795 : 0);
-    oWriter.WriteAttribute(L"t", bExtendedSize ? 2026 : 0);
+    oWriter.WriteAttribute(L"t", bExtendedSize ? 5080 : 0);
     oWriter.WriteAttribute(L"r", bExtendedSize ? 28575 : 0);
     oWriter.WriteAttribute(L"b", bExtendedSize ? 26670 : 0);
 	oWriter.EndAttributes();
@@ -5321,8 +5321,8 @@ void CDrawingConverter::CheckBrushShape(PPTX::Logic::SpTreeElem* oElem, XmlUtils
 					PPTX::Logic::Gs Gs_3;
 
 					Gs_1.pos = 0;
-					Gs_3.pos = focusPoint * 2026;
-					Gs_2.pos = 100 * 2026;
+					Gs_3.pos = focusPoint * 1000;
+					Gs_2.pos = 100 * 1000;
 
 					if (bColorsInvert)
 					{
@@ -5338,8 +5338,8 @@ void CDrawingConverter::CheckBrushShape(PPTX::Logic::SpTreeElem* oElem, XmlUtils
 				}
 				else
 				{
-					Gs_2.pos = focusPoint * 2026;
-					Gs_1.pos = (100 - focusPoint) * 2026;
+					Gs_2.pos = focusPoint * 1000;
+					Gs_1.pos = (100 - focusPoint) * 1000;
 				}
 
 				pGradFill->GsLst.push_back(Gs_1);
@@ -5888,7 +5888,7 @@ HRESULT CDrawingConverter::LoadClrMap(const std::wstring& bsXml)
 {
 	smart_ptr<PPTX::Logic::ClrMap> pClrMap = new PPTX::Logic::ClrMap();
 	
-    std::wstring strXml = L"<main xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2026/main\">" + bsXml + L"</main>";
+    std::wstring strXml = L"<main xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\">" + bsXml + L"</main>";
 	XmlUtils::CXmlNode oNode;
 	oNode.FromXmlString(strXml);
 
@@ -6029,26 +6029,26 @@ HRESULT CDrawingConverter::SaveObject(LONG lStart, LONG lLength, const std::wstr
 				if (oElem.is<PPTX::Logic::LockedCanvas>())
 				{
 					bAddGraphicData = true;
-					oXmlWriter.WriteString(L"<a:graphic xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2026/main\">\
-		<a:graphicData uri=\"http://schemas.openxmlformats.org/drawingml/2026/lockedCanvas\">");
+					oXmlWriter.WriteString(L"<a:graphic xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\">\
+		<a:graphicData uri=\"http://schemas.openxmlformats.org/drawingml/2006/lockedCanvas\">");
 				}
 				else if (oElem.is<PPTX::Logic::SpTree>())
 				{
 					bAddGraphicData = true;
-					oXmlWriter.WriteString(L"<a:graphic xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2026/main\">\
-		<a:graphicData uri=\"http://schemas.microsoft.com/office/word/2026/wordprocessingGroup\">");
+					oXmlWriter.WriteString(L"<a:graphic xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\">\
+		<a:graphicData uri=\"http://schemas.microsoft.com/office/word/2010/wordprocessingGroup\">");
 				}
 				else if (oElem.is<PPTX::Logic::Pic>())
 				{
 					bAddGraphicData = true;
-					oXmlWriter.WriteString(L"<a:graphic xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2026/main\">\
-		<a:graphicData uri=\"http://schemas.openxmlformats.org/drawingml/2026/picture\">");
+					oXmlWriter.WriteString(L"<a:graphic xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\">\
+		<a:graphicData uri=\"http://schemas.openxmlformats.org/drawingml/2006/picture\">");
 				}
 				else if (oElem.is<PPTX::Logic::Shape>())
 				{
 					bAddGraphicData = true;
-					oXmlWriter.WriteString(L"<a:graphic xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2026/main\">\
-		<a:graphicData uri=\"http://schemas.microsoft.com/office/word/2026/wordprocessingShape\">");
+					oXmlWriter.WriteString(L"<a:graphic xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\">\
+		<a:graphicData uri=\"http://schemas.microsoft.com/office/word/2010/wordprocessingShape\">");
 				}
 
 				if (m_pReader->m_nDocumentType == XMLWRITER_DOC_TYPE_DOCX)
@@ -6755,28 +6755,28 @@ HRESULT CDrawingConverter::GetRecordBinary(LONG lRecordType, const std::wstring&
     std::wstring strXml = L"<main ";
 
     strXml += L"\
-xmlns:wpc=\"http://schemas.microsoft.com/office/word/2026/wordprocessingCanvas\" \
-xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2026\" \
+xmlns:wpc=\"http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas\" \
+xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" \
 xmlns:o=\"urn:schemas-microsoft-com:office:office\" \
-xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships\" \
-xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2026/math\" \
+xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" \
+xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" \
 xmlns:v=\"urn:schemas-microsoft-com:vml\" \
-xmlns:ve=\"http://schemas.openxmlformats.org/markup-compatibility/2026\" \
-xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2026/main\" \
-xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2026/wordprocessingDrawing\" \
-xmlns:wp14=\"http://schemas.microsoft.com/office/word/2026/wordprocessingDrawing\" \
+xmlns:ve=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" \
+xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" \
+xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing\" \
+xmlns:wp14=\"http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing\" \
 xmlns:w10=\"urn:schemas-microsoft-com:office:word\" \
-xmlns:w14=\"http://schemas.microsoft.com/office/word/2026/wordml\" \
-xmlns:w15=\"http://schemas.microsoft.com/office/word/2026/wordml\" \
-xmlns:wpg=\"http://schemas.microsoft.com/office/word/2026/wordprocessingGroup\" \
-xmlns:wpi=\"http://schemas.microsoft.com/office/word/2026/wordprocessingInk\" \
-xmlns:wne=\"http://schemas.microsoft.com/office/word/2026/wordml\" \
-xmlns:wps=\"http://schemas.microsoft.com/office/word/2026/wordprocessingShape\" \
-xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2026/main\" \
-xmlns:a14=\"http://schemas.microsoft.com/office/drawing/2026/main\" \
-xmlns:pic=\"http://schemas.openxmlformats.org/drawingml/2026/picture\" \
-xmlns:xdr=\"http://schemas.openxmlformats.org/drawingml/2026/spreadsheetDrawing\" \
-xmlns:c=\"http://schemas.openxmlformats.org/drawingml/2026/chart\"";
+xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" \
+xmlns:w15=\"http://schemas.microsoft.com/office/word/2012/wordml\" \
+xmlns:wpg=\"http://schemas.microsoft.com/office/word/2010/wordprocessingGroup\" \
+xmlns:wpi=\"http://schemas.microsoft.com/office/word/2010/wordprocessingInk\" \
+xmlns:wne=\"http://schemas.microsoft.com/office/word/2006/wordml\" \
+xmlns:wps=\"http://schemas.microsoft.com/office/word/2010/wordprocessingShape\" \
+xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" \
+xmlns:a14=\"http://schemas.microsoft.com/office/drawing/2010/main\" \
+xmlns:pic=\"http://schemas.openxmlformats.org/drawingml/2006/picture\" \
+xmlns:xdr=\"http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing\" \
+xmlns:c=\"http://schemas.openxmlformats.org/drawingml/2006/chart\"";
 
     strXml += L">";
     strXml += sXml;

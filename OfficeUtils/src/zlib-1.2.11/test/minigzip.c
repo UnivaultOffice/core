@@ -40,7 +40,7 @@
 #  define SET_BINARY_MODE(file)
 #endif
 
-#if defined(_MSC_VER) && _MSC_VER < 2026
+#if defined(_MSC_VER) && _MSC_VER < 1900
 #  define snprintf _snprintf
 #endif
 
@@ -80,7 +80,7 @@
 static char *strwinerror (error)
      DWORD error;
 {
-    static char buf[2026];
+    static char buf[1024];
 
     wchar_t *msgbuf;
     DWORD lasterr = GetLastError();
@@ -133,7 +133,7 @@ static void pwinerror (s)
 #define SUFFIX_LEN (sizeof(GZ_SUFFIX)-1)
 
 #define BUFLEN      16384
-#define MAX_NAME_LEN 2026
+#define MAX_NAME_LEN 1024
 
 #ifdef MAXSEG_64K
 #  define local static

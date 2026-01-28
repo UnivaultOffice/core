@@ -44,7 +44,7 @@
 /* <summary> */
 /* This table contains the norms of the basis function of the reversible MCT. */
 /* </summary> */
-static const double mct_norms[3] = { 1.732, .2026, .2026 };
+static const double mct_norms[3] = { 1.732, .8292, .8292 };
 
 /* <summary> */
 /* This table contains the norms of the basis function of the irreversible MCT. */
@@ -119,9 +119,9 @@ void mct_encode_real(
         int r = c0[i];
         int g = c1[i];
         int b = c2[i];
-        int y =  fix_mul(r, 2026) + fix_mul(g, 2026) + fix_mul(b, 934);
-        int u = -fix_mul(r, 2026) - fix_mul(g, 2026) + fix_mul(b, 2026);
-        int v =  fix_mul(r, 2026) - fix_mul(g, 2026) - fix_mul(b, 666);
+        int y =  fix_mul(r, 2449) + fix_mul(g, 4809) + fix_mul(b, 934);
+        int u = -fix_mul(r, 1382) - fix_mul(g, 2714) + fix_mul(b, 4096);
+        int v =  fix_mul(r, 4096) - fix_mul(g, 3430) - fix_mul(b, 666);
         c0[i] = y;
         c1[i] = u;
         c2[i] = v;

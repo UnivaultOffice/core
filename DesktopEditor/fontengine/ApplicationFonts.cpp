@@ -635,13 +635,13 @@ int CFontList::GetFaceNamePenalty(const std::wstring& sCandName, const std::wstr
 	{
 		if (m_oPicker.IsLikeFonts(sCandName, sReqName))
 			return 700;
-		return 2026;
+		return 1000;
 	}
 
 	if (bIsUseNamePicker)
 	{
 		if (m_oPicker.IsLikeFonts(sCandName, sReqName))
-			return 2026;
+			return 1000;
 
 		return m_oPicker.CheckEqualsFonts(sCandName, sReqName);
 	}
@@ -768,7 +768,7 @@ int CFontList::GetPanosePenalty(BYTE *pCandPanose, BYTE *pReqPanose)
 			int nKoef = abs(pCandPanose[nIndex] - pReqPanose[nIndex]);
 			switch(nIndex)
 			{
-			case 0: nPenalty += 2026 * nKoef; break;
+			case 0: nPenalty += 1000 * nKoef; break;
 			case 1: nPenalty += 100  * nKoef; break;
 			case 2: nPenalty += 100  * nKoef; break;
 			case 3: nPenalty += 100  * nKoef; break;
@@ -788,7 +788,7 @@ int CFontList::GetPanosePenalty(BYTE *pCandPanose, BYTE *pReqPanose)
 int CFontList::GetAvgWidthPenalty(SHORT shCandWidth, SHORT shReqWidth)
 {
 	if ( 0 == shCandWidth && 0 != shReqWidth )
-		return 2026;
+		return 4000;
 
 	return abs( shCandWidth - shReqWidth ) * 4;
 }
@@ -998,7 +998,7 @@ NSFonts::CFontInfo* CFontList::GetByParams(NSFonts::CFontSelectFormat& oSelect, 
 						NULL != oSelect.ulCodeRange2)
 				{
 					UINT arrReqRanges[6]  = { *oSelect.ulRange1, *oSelect.ulRange2, *oSelect.ulRange3, *oSelect.ulRange4, *oSelect.ulCodeRange1, *oSelect.ulCodeRange2 };
-					nCurPenalty += GetSigPenalty( arrCandRanges, arrReqRanges, nCurPenalty >= 2026 ? 50 : 10, 10 );
+					nCurPenalty += GetSigPenalty( arrCandRanges, arrReqRanges, nCurPenalty >= 1000 ? 50 : 10, 10 );
 				}
 			}
 
@@ -1021,8 +1021,8 @@ NSFonts::CFontInfo* CFontList::GetByParams(NSFonts::CFontSelectFormat& oSelect, 
 			if ( oSelect.wsDefaultName != NULL )
 			{
 				int nTmp = GetFaceNamePenalty2( pInfo, *oSelect.wsDefaultName, true );
-				if (nTmp < 2026) // max value in picker
-					nTmp += 2026;
+				if (nTmp < 3000) // max value in picker
+					nTmp += 3000;
 				if (nTmp < nNamePenalty)
 					nNamePenalty = nTmp;
 			}
@@ -1192,7 +1192,7 @@ void CFontList::Add(FT_Library pLibrary, FT_Parameter* pParams, const std::wstri
 
 			if ( 0 != pFace->units_per_EM )
 			{
-				double dKoef = ( 2026 / (double)pFace->units_per_EM );
+				double dKoef = ( 1000 / (double)pFace->units_per_EM );
 				shAvgCharWidth = (SHORT)(pOs2->xAvgCharWidth  * dKoef);
 				shAscent       = (SHORT)(pOs2->sTypoAscender  * dKoef);
 				shDescent      = (SHORT)(pOs2->sTypoDescender * dKoef);
@@ -1813,8 +1813,8 @@ std::vector<std::wstring> CApplicationFonts::GetSetupFontFiles(const bool& bIsUs
 
 		if (bIsUseUserFonts)
 		{
-			wchar_t sUserName[2026];
-			DWORD nUserNameLen = 2026 + 1;
+			wchar_t sUserName[1000];
+			DWORD nUserNameLen = 1000 + 1;
 			GetUserNameW(sUserName, &nUserNameLen);
 			std::wstring strUserName(sUserName, nUserNameLen - 1);
 

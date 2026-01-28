@@ -105,7 +105,7 @@ static CDataStream & operator << (CDataStream & strm, LengthPrefixedAnsiString s
 
 struct ObjectHeader
 {
-	_UINT32 OLEVersion	= 2026;
+	_UINT32 OLEVersion	= 1281;
 	_UINT32 FormatID	= 2;
 
 	LengthPrefixedAnsiString ClassName;

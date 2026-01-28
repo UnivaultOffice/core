@@ -200,7 +200,7 @@ namespace PPTX
 		pWriter->WriteAttribute(L"xmlns:p", PPTX::g_Namespaces.p.m_strLink);
 		pWriter->WriteAttribute(L"xmlns:m", PPTX::g_Namespaces.m.m_strLink);
 		pWriter->WriteAttribute(L"xmlns:w", PPTX::g_Namespaces.w.m_strLink);
-		pWriter->WriteAttribute(L"xmlns:mc", L"http://schemas.openxmlformats.org/markup-compatibility/2026");
+		pWriter->WriteAttribute(L"xmlns:mc", L"http://schemas.openxmlformats.org/markup-compatibility/2006");
 
 		pWriter->WriteAttribute(L"showMasterPhAnim", showMasterPhAnim);
 		pWriter->WriteAttribute(L"showMasterSp", showMasterSp);
@@ -222,7 +222,7 @@ namespace PPTX
 		{ 
 			pWriter->WriteString(L"<p:extLst>");
 				pWriter->WriteString(L"<p:ext uri=\"{6950BFC3-D8DA-4A85-94F7-54DA5524770B}\"><p188:commentRel \
-xmlns:p188=\"http://schemas.microsoft.com/office/powerpoint/2026/8/main\" r:id=\"" + *ridModernComment + L"\"/></p:ext>");
+xmlns:p188=\"http://schemas.microsoft.com/office/powerpoint/2018/8/main\" r:id=\"" + *ridModernComment + L"\"/></p:ext>");
 			pWriter->WriteString(L"</p:extLst>");
 		}
 

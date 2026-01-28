@@ -78,9 +78,9 @@ namespace
 std::wstring get_rel_type(headers_footers::Type _Type)
 {
     if (_Type == headers_footers::header || _Type == headers_footers::headerLeft || _Type == headers_footers::headerFirst)
-        return std::wstring(L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/header");
+        return std::wstring(L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/header");
     else
-        return std::wstring(L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/footer");
+        return std::wstring(L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/footer");
 }
     
 }

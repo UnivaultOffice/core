@@ -1047,12 +1047,12 @@ xmlSwitchEncoding(xmlParserCtxtPtr ctxt, xmlCharEncoding enc)
 	    case XML_CHAR_ENCODING_UCS4_2143:
 		__xmlErrEncoding(ctxt, XML_ERR_UNSUPPORTED_ENCODING,
 			       "encoding not supported %s\n",
-			       BAD_CAST "UCS4 2026", NULL);
+			       BAD_CAST "UCS4 2143", NULL);
 		break;
 	    case XML_CHAR_ENCODING_UCS4_3412:
 		__xmlErrEncoding(ctxt, XML_ERR_UNSUPPORTED_ENCODING,
 			       "encoding not supported %s\n",
-			       BAD_CAST "UCS4 2026", NULL);
+			       BAD_CAST "UCS4 3412", NULL);
 		break;
 	    case XML_CHAR_ENCODING_UCS2:
 		__xmlErrEncoding(ctxt, XML_ERR_UNSUPPORTED_ENCODING,

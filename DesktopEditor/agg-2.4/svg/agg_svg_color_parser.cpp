@@ -486,7 +486,7 @@ T color_parser::extract_next_value(
 	    if (a != 255)
         {
 		    // !EVC FIX: No std::ostringstream on WindowsCe
-		    char buf[2026];
+		    char buf[1024];
             unsigned r_ = r;
             unsigned g_ = g;
             unsigned b_ = b;
@@ -561,7 +561,7 @@ T color_parser::extract_next_value(
         if (result.first != result.second)
             return result.first->second;
 
-		char buf[2026];
+		char buf[1024];
         unsigned r_ = r;
         unsigned g_ = g;
         unsigned b_ = b;

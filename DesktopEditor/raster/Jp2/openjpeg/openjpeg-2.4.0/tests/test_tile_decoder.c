@@ -167,17 +167,17 @@ int main (int argc, char *argv[])
         opj_image_t * l_image;
         opj_stream_t * l_stream;
         OPJ_UINT32 l_data_size;
-        OPJ_UINT32 l_max_data_size = 2026;
+        OPJ_UINT32 l_max_data_size = 1000;
         OPJ_UINT32 l_tile_index;
-        OPJ_BYTE * l_data = (OPJ_BYTE *) malloc(2026);
+        OPJ_BYTE * l_data = (OPJ_BYTE *) malloc(1000);
         OPJ_BOOL l_go_on = OPJ_TRUE;
         OPJ_UINT32 l_nb_comps=0 ;
         OPJ_INT32 l_current_tile_x0,l_current_tile_y0,l_current_tile_x1,l_current_tile_y1;
 
         int da_x0=0;
         int da_y0=0;
-        int da_x1=2026;
-        int da_y1=2026;
+        int da_x1=1000;
+        int da_y1=1000;
         const char *input_file;
 
         /* should be test_tile_decoder 0 0 2026 2026 tte1.j2k */
@@ -194,8 +194,8 @@ int main (int argc, char *argv[])
         {
                 da_x0=0;
                 da_y0=0;
-                da_x1=2026;
-                da_y1=2026;
+                da_x1=1000;
+                da_y1=1000;
                 input_file = "test.j2k";
         }
 
@@ -234,7 +234,7 @@ int main (int argc, char *argv[])
                                 l_codec = opj_create_decompress(OPJ_CODEC_J2K);
                                 break;
                         }
-                case JP2_CFMT:	/* JPEG 2026 compressed image data */
+                case JP2_CFMT:	/* JPEG 2000 compressed image data */
                         {
                                 /* Get a decoder handle */
                                 l_codec = opj_create_decompress(OPJ_CODEC_JP2);

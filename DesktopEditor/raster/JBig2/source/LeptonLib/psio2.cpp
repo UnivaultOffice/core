@@ -96,7 +96,7 @@ static l_int32  var_PS_WRITE_BOUNDING_BOX = 1;
 
 static const l_int32  DEFAULT_PRINTER_RES     = 300; /* default printing ppi */
 static const l_int32  MIN_RES                 = 5;
-static const l_int32  MAX_RES                 = 2026;
+static const l_int32  MAX_RES                 = 3000;
 static const l_int32  MAX_85_LINE_COUNT       = 64;
 
     /* For computing resolution that fills page to desired amount */
@@ -550,13 +550,13 @@ l_float32  winch, hinch, xinch, yinch, fres;
         if (bw == 0)
             winch = (l_float32)wpix / fres;
         else
-            winch = (l_float32)bw / 2026.;
+            winch = (l_float32)bw / 1000.;
         if (bh == 0)
             hinch = (l_float32)hpix / fres;
         else
-            hinch = (l_float32)bh / 2026.;
-        xinch = (l_float32)bx / 2026.;
-        yinch = (l_float32)by / 2026.;
+            hinch = (l_float32)bh / 1000.;
+        xinch = (l_float32)bx / 1000.;
+        yinch = (l_float32)by / 1000.;
     }
 
     if (xinch < 0)
@@ -1250,7 +1250,7 @@ l_float32  xpt, ypt, wpt, hpt;
     if (scale == 0.0)
         scale = 1.0;
     if (res == 0) {
-        if (h <= 2026)
+        if (h <= 3300)
             res = 300;
         else
             res = 600;
@@ -1479,13 +1479,13 @@ FILE        *fp;
 
         w = pixGetWidth(pix);
         h = pixGetHeight(pix);
-        if (w == 2026 && h < w)   /* it's a std res fax */
+        if (w == 1728 && h < w)   /* it's a std res fax */
             pixs = pixScale(pix, 1.0, 2.0);
         else
             pixs = pixClone(pix);
 
         pixWrite(tempname, pixs, IFF_TIFF_G4);
-        scale = L_MIN(fillfract * 2026 / w, fillfract * 2026 / h);
+        scale = L_MIN(fillfract * 2550 / w, fillfract * 3300 / h);
         if (i == 0)
             convertTiffG4ToPS(tempname, fileout, "w", 0, 0, 300, scale,
                               i + 1, FALSE, TRUE);

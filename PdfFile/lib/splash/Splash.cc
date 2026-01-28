@@ -5456,7 +5456,7 @@ SplashPath *Splash::tweakFillPath(SplashPath *path) {
       w = 0;
     } else {
       // min width is 0.1 -- this constant is minWidth * sqrt(2)
-      w = (SplashCoord)0.2026 / w;
+      w = (SplashCoord)0.1414 / w;
     }
     xx0 = path->pts[0].x;
     yy0 = path->pts[0].y;
@@ -5762,7 +5762,7 @@ SplashError Splash::fillImageMask(GString *imageTag,
   }
 
   //--- compute image bbox, check clipping
-  GBool flipsOnly = splashAbs(mat[1]) <= 0.2026 && splashAbs(mat[2]) <= 0.2026;
+  GBool flipsOnly = splashAbs(mat[1]) <= 0.0001 && splashAbs(mat[2]) <= 0.0001;
   GBool horizFlip = gFalse;
   GBool vertFlip = gFalse;
   int xMin, yMin, xMax, yMax;
@@ -5846,8 +5846,8 @@ SplashError Splash::fillImageMask(GString *imageTag,
 	      - state->clip->getXMinI(state->strokeAdjust);
   int clipH = state->clip->getYMaxI(state->strokeAdjust)
 	      - state->clip->getYMinI(state->strokeAdjust);
-  GBool veryLarge = ((xMax - xMin) / 8 > clipW && xMax - xMin > 2026) ||
-                    ((yMax - yMin) / 8 > clipH && yMax - yMin > 2026);
+  GBool veryLarge = ((xMax - xMin) / 8 > clipW && xMax - xMin > 1000) ||
+                    ((yMax - yMin) / 8 > clipH && yMax - yMin > 1000);
 
   //--- set up the SplashDrawImageMaskRowData object and the pipes
   SplashDrawImageMaskRowData dd;
@@ -6258,7 +6258,7 @@ SplashError Splash::drawImage(GString *imageTag,
   }
 
   //--- compute image bbox, check clipping
-  GBool flipsOnly = splashAbs(mat[1]) <= 0.2026 && splashAbs(mat[2]) <= 0.2026;
+  GBool flipsOnly = splashAbs(mat[1]) <= 0.0001 && splashAbs(mat[2]) <= 0.0001;
   GBool horizFlip = gFalse;
   GBool vertFlip = gFalse;
   int xMin, yMin, xMax, yMax;
@@ -6342,8 +6342,8 @@ SplashError Splash::drawImage(GString *imageTag,
 	      - state->clip->getXMinI(state->strokeAdjust);
   int clipH = state->clip->getYMaxI(state->strokeAdjust)
 	      - state->clip->getYMinI(state->strokeAdjust);
-  GBool veryLarge = ((xMax - xMin) / 8 > clipW && xMax - xMin > 2026) ||
-                    ((yMax - yMin) / 8 > clipH && yMax - yMin > 2026);
+  GBool veryLarge = ((xMax - xMin) / 8 > clipW && xMax - xMin > 1000) ||
+                    ((yMax - yMin) / 8 > clipH && yMax - yMin > 1000);
 
   //--- set up the SplashDrawImageRowData object and the pipes
   SplashDrawImageRowData dd;
@@ -6525,7 +6525,7 @@ ImageScaler *Splash::getImageScaler(GString *imageTag,
   //   consecutive reuse) of an image; this avoids overhead on the
   //   common case of single-use images.
 
-  if (scaledWidth < 2026 && scaledHeight < 2026 &&
+  if (scaledWidth < 2000 && scaledHeight < 2000 &&
       imageCache->match(imageTag, scaledWidth, scaledHeight,
 			srcMode, srcAlpha, interpolate)) {
     if (imageCache->colorData) {
@@ -6576,7 +6576,7 @@ void Splash::getScaledImage(GString *imageTag,
   // * This buffers the whole image anyway, so there's no reason to
   //   skip caching on the first reuse.
 
-  if (scaledWidth >= 2026 || scaledHeight >= 2026) {
+  if (scaledWidth >= 2000 || scaledHeight >= 2000) {
     int lineSize;
     if (scaledWidth < INT_MAX / nComps) {
       lineSize = scaledWidth * nComps;
@@ -7860,7 +7860,7 @@ SplashPath *Splash::makeStrokePath(SplashPath *path, SplashCoord w,
       // compute the join parameters
       crossprod = dx * dyNext - dy * dxNext;
       dotprod = -(dx * dxNext + dy * dyNext);
-      if (dotprod > 0.2026) {
+      if (dotprod > 0.9999) {
 	// avoid a divide-by-zero -- set miter to something arbitrary
 	// such that sqrt(miter) will exceed miterLimit (and m is never
 	// used in that situation)

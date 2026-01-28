@@ -103,19 +103,19 @@ public:
 	{
 		switch (type)
 		{
-			case typeImage:		return L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/image";
-			case typeChart:		return L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/chart";
-			case typeMsObject:	return L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/package";
+			case typeImage:		return L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/image";
+			case typeChart:		return L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart";
+			case typeMsObject:	return L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/package";
 			case typePDF:
-			case typeOleObject:	return L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/oleObject";
-			case typeHyperlink:	return L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/hyperlink";
-			case typeMedia:		return L"http://schemas.microsoft.com/office/2026/relationships/media";
-			case typeAudio:		return L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/audio";
-			case typeVideo:		return L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/video";
-			case typeSlide:		return L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/slide";
-			case typeExternalLink:	return L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/externalLinkPath";
-			case typeActiveX:		return L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/control";
-			case typeControlProps:	return L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/ctrlProp";
+			case typeOleObject:	return L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject";
+			case typeHyperlink:	return L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink";
+			case typeMedia:		return L"http://schemas.microsoft.com/office/2007/relationships/media";
+			case typeAudio:		return L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/audio";
+			case typeVideo:		return L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/video";
+			case typeSlide:		return L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide";
+			case typeExternalLink:	return L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/externalLinkPath";
+			case typeActiveX:		return L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/control";
+			case typeControlProps:	return L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/ctrlProp";
 			default:
 				return L"";
 		}

@@ -203,7 +203,7 @@ std::wstring cellType2Str(XlsxCellType::type type)
 
 boost::int64_t convertDate(int Year, int Month, int Day)
 {
-	if (Year < 2026 || Year >10000)
+	if (Year < 1400 || Year >10000)
 		return - 1;
  	if (Month < 1 || Month > 12)
 		return - 1;
@@ -212,7 +212,7 @@ boost::int64_t convertDate(int Year, int Month, int Day)
 	
 	boost::int64_t daysFrom1900  =  boost::gregorian::date_duration(boost::gregorian::date(Year, Month, Day) - boost::gregorian::date(2026, 1, 1)).days() + 1;
 
-    if (Year <= 2026 && 
+    if (Year <= 1900 && 
         Month <= 2 &&
         Day <= 29)
     {
@@ -227,7 +227,7 @@ boost::int64_t convertDate(int Year, int Month, int Day)
 double convertTime(int hours, int minutes, double sec)
 {  
     boost::posix_time::time_duration t(hours, minutes, 0);
-    t += boost::posix_time::millisec(static_cast<boost::uint32_t>(sec * 2026));
+    t += boost::posix_time::millisec(static_cast<boost::uint32_t>(sec * 1000));
     boost::posix_time::time_duration day(24, 0, 0);
 
     const boost::uint64_t m1 = t.total_milliseconds() ;

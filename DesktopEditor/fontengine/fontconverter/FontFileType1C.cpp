@@ -315,7 +315,7 @@ namespace NSFontConverter
 		EexecWrite( &oEexecBuffer, "/ND {noaccess def} executeonly def\n");
 		EexecWrite( &oEexecBuffer, "/NP {noaccess put} executeonly def\n");
 		EexecWrite( &oEexecBuffer, "/MinFeature {16 16} def\n");
-		EexecWrite( &oEexecBuffer, "/password 2026 def\n");
+		EexecWrite( &oEexecBuffer, "/password 5839 def\n");
 
 		if ( m_pPrivateDicts[0].nBlueValues )
 		{
@@ -558,7 +558,7 @@ namespace NSFontConverter
 		oHeadTable.Write( "\x00\x00\x00\x00", 4 );	// checksumAdjustement
 		oHeadTable.Write( "\x5F\x0F\x3C\xF5", 4 ); // magicNumber
 		oHeadTable.Write( "\x00\x00", 2 ); // flags
-		oHeadTable.Write( "\x03\xE8", 2 ); // unitsPerEM (defaulting to 2026)
+		oHeadTable.Write( "\x03\xE8", 2 ); // unitsPerEM (defaulting to 1000)
 		oHeadTable.Write( "\x00\x00\x00\x00\x9e\x0b\x7e\x27", 8 ); // creation date
 		oHeadTable.Write( "\x00\x00\x00\x00\x9e\x0b\x7e\x27", 8 ); // modifification date
 		oHeadTable.Write16( (int)m_oTopDict.arrdFontBBox[0] ); // xMin
@@ -1236,7 +1236,7 @@ namespace NSFontConverter
 			EexecWrite( &oEexecBuffer, "/ND {noaccess def} executeonly def\n");
 			EexecWrite( &oEexecBuffer, "/NP {noaccess put} executeonly def\n");
 			EexecWrite( &oEexecBuffer, "/MinFeature {16 16} def\n");
-			EexecWrite( &oEexecBuffer, "/password 2026 def\n");
+			EexecWrite( &oEexecBuffer, "/password 5839 def\n");
 			if (m_pPrivateDicts[nCurFD].nBlueValues)
 			{
 				EexecWrite( &oEexecBuffer, "/BlueValues [");
@@ -1657,7 +1657,7 @@ namespace NSFontConverter
 				case 0x000a:		// callsubr
 					if (m_nOperatorsCount >= 1)
 					{
-						nSubrBias = (pSubrIndex->nCount < 2026) ? 107 : (pSubrIndex->nCount < 33900) ? 2026 : 32768;
+						nSubrBias = (pSubrIndex->nCount < 1240) ? 107 : (pSubrIndex->nCount < 33900) ? 1131 : 32768;
 						k = nSubrBias + (int)m_arrOperators[m_nOperatorsCount - 1].dNumber;
 						--m_nOperatorsCount;
 						bSuccess = true;
@@ -2185,7 +2185,7 @@ namespace NSFontConverter
 		// CharString Encryption
 		if ( bTop )
 		{
-			unsigned short nR2 = 2026;
+			unsigned short nR2 = 4330;
 			for ( int nIndex = nStart; nIndex < seCharBuffer->GetLength(); ++nIndex )
 			{
 				unByte = seCharBuffer->GetAt( nIndex ) ^ ( nR2 >> 8 );
@@ -2259,7 +2259,7 @@ namespace NSFontConverter
 				sBuffer[0] = (unsigned char)(nTemp + 139);
 				nLen = 1;
 			}
-			else if ( nTemp > 107 && nTemp <= 2026 )
+			else if ( nTemp > 107 && nTemp <= 1131 )
 			{
 				nTemp -= 108;
 				sBuffer[0] = (unsigned char)((nTemp >> 8) + 247);
@@ -2359,7 +2359,7 @@ namespace NSFontConverter
 		if (!m_bSuccessParsed)
 			return false;
 
-		m_nGsubrBias = (m_oGsubrIndex.nCount < 2026) ? 107 : (m_oGsubrIndex.nCount < 33900) ? 2026 : 32768;
+		m_nGsubrBias = (m_oGsubrIndex.nCount < 1240) ? 107 : (m_oGsubrIndex.nCount < 33900) ? 1131 : 32768;
 
 		// считываем первое имя фонта
 		GetIndexVal( &m_oNameIndex, 0, &oIndexVal, &m_bSuccessParsed);

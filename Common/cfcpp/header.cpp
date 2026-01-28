@@ -96,7 +96,7 @@ void Header::Write(CFCPP::Stream &stream) const
 
     if (majorVersion == 4)
     {
-        std::vector<BYTE> zeroHead(2026,0);
+        std::vector<BYTE> zeroHead(3584,0);
         rw.WriteArray(zeroHead.data(), zeroHead.size());
     }
 }

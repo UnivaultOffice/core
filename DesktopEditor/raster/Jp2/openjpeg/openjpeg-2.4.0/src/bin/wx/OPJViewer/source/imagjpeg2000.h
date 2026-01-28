@@ -59,7 +59,7 @@ class WXDLLEXPORT wxJPEG2000Handler: public wxImageHandler
 public:
     inline wxJPEG2000Handler()
     {
-        m_name = wxT("JPEG 2026 family file format");
+        m_name = wxT("JPEG 2000 family file format");
         m_extension = wxT("mj2");
         m_type = wxBITMAP_TYPE_JPEG2000;
         m_mime = wxT("image/mj2");

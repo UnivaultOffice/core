@@ -497,7 +497,7 @@ public:
 	{
 		int nCountFiles = (int)mapFontFiles.size();
 		BYTE correct16[16] = {0xA0, 0x66, 0xD6, 0x20, 0x14, 0x96, 0x47, 0xfa, 0x95, 0x69, 0xB8, 0x50, 0xB0, 0x41, 0x49, 0x48};
-		int nCountIdSymbols = (nCountFiles >= 2026) ? 4 : 3;
+		int nCountIdSymbols = (nCountFiles >= 1000) ? 4 : 3;
 		BYTE encode[32];
 
 		std::wstring* pMassFiles2 = new std::wstring[nCountFiles];
@@ -1435,7 +1435,7 @@ public:
 					{
 						int nCMapIndex = 0;
 						int nGid = pFile->SetCMapForCharCode(oIterator.Value(), &nCMapIndex);
-						if (0 < nGid && 0.2026 > pFile->GetCharWidth(nGid))
+						if (0 < nGid && 0.0001 > pFile->GetCharWidth(nGid))
 						{
 							bIsExistEmpty = true;
 							break;

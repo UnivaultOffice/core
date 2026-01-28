@@ -361,7 +361,7 @@ void calcext_sparkline_groups::xlsx_convert(oox::xlsx_conversion_context& Contex
 	{
 		CP_XML_NODE(L"x14:sparklineGroups")
 		{
-			CP_XML_ATTR(L"xmlns:xm", L"http://schemas.microsoft.com/office/excel/2026/main");
+			CP_XML_ATTR(L"xmlns:xm", L"http://schemas.microsoft.com/office/excel/2006/main");
 
 			for (size_t i = 0; i < content_.size(); i++)
 			{

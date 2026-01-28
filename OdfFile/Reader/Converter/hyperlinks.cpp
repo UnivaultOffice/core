@@ -68,7 +68,7 @@ void hyperlinks::dump_rels(rels & Rels, _rels_type_place type_place)
 
 		if (hrefs_[i].type_place == type_place)
 		{
-			Rels.add( relationship(hrefs_[i].id, L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/hyperlink", hrefs_[i].href, L"External" ) );
+			Rels.add( relationship(hrefs_[i].id, L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink", hrefs_[i].href, L"External" ) );
 			hrefs_[i].used_rels = true;
 		}
     }

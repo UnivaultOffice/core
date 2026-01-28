@@ -220,7 +220,7 @@ namespace oox {
 			{
 				CP_XML_NODE(L"a:ln")
 				{
-					CP_XML_ATTR(L"w",2026);
+					CP_XML_ATTR(L"w",6350);
 					CP_XML_ATTR(L"cap",L"flat");CP_XML_ATTR(L"cmpd",L"sng"); CP_XML_ATTR(L"algn",L"ctr");
 					CP_XML_NODE(L"a:solidFill"){CP_XML_NODE(L"a:schemeClr"){CP_XML_ATTR(L"val",L"phClr");}}
 					CP_XML_NODE(L"a:miter"){CP_XML_ATTR(L"lim",800000);}

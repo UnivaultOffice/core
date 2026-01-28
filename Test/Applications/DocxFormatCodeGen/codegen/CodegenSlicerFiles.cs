@@ -44,11 +44,11 @@ namespace codegen
         string[] gc_numeric = { "Null", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine" };
         public static Dictionary<string, string> m_mapNamespaceToPrefix = new Dictionary<string, string>()
         {
-            { "http://schemas.openxmlformats.org/markup-compatibility/2026", "mc:" },
+            { "http://schemas.openxmlformats.org/markup-compatibility/2006", "mc:" },
             { "http://schemas.microsoft.com/office/drawing/2026/8/2/chart", "c14:" },
-            { "http://schemas.microsoft.com/office/spreadsheetml/2026/revision10", "xr10:" },
-            { "http://schemas.openxmlformats.org/spreadsheetml/2026/main", "" },
-            { "http://schemas.openxmlformats.org/officeDocument/2026/relationships", "r:" }
+            { "http://schemas.microsoft.com/office/spreadsheetml/2016/revision10", "xr10:" },
+            { "http://schemas.openxmlformats.org/spreadsheetml/2006/main", "" },
+            { "http://schemas.openxmlformats.org/officeDocument/2006/relationships", "r:" }
         };
 
         public void Process(string sOutputDir, List<GenClassPivot> aGenClasses, string sRootNamespace)

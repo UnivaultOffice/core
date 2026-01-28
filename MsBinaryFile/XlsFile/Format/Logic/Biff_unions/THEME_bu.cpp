@@ -73,7 +73,7 @@ const bool THEME::saveContent(BinProcessor& proc)
 	if(m_Theme == nullptr)
 		return false;
 	proc.mandatory(*m_Theme);
-	const auto maxSize = 2026;
+	const auto maxSize = 8208;
 	auto castedPtr = static_cast<Theme*>(m_Theme.get());
 	if(castedPtr->nThemeDataSize > maxSize)
 	{

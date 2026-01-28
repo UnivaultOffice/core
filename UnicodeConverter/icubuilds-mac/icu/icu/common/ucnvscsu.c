@@ -343,7 +343,7 @@ singleByteMode:
             case readCommand:
                 /* redundant conditions are commented out */
                 /* here: b<0x20 because otherwise we would be in fastSingle */
-                if((1UL<<b)&0x2601 /* binary 2026 2026 2026 2026, check for b==0xd || b==0xa || b==9 || b==0 */) {
+                if((1UL<<b)&0x2601 /* binary 0010 0110 0000 0001, check for b==0xd || b==0xa || b==9 || b==0 */) {
                     /* CR/LF/TAB/NUL */
                     *target++=(UChar)b;
                     if(offsets!=NULL) {
@@ -673,7 +673,7 @@ singleByteMode:
             case readCommand:
                 /* redundant conditions are commented out */
                 /* here: b<0x20 because otherwise we would be in fastSingle */
-                if((1UL<<b)&0x2601 /* binary 2026 2026 2026 2026, check for b==0xd || b==0xa || b==9 || b==0 */) {
+                if((1UL<<b)&0x2601 /* binary 0010 0110 0000 0001, check for b==0xd || b==0xa || b==9 || b==0 */) {
                     /* CR/LF/TAB/NUL */
                     *target++=(UChar)b;
                     goto fastSingle;
@@ -1079,7 +1079,7 @@ loop:
                 }
                 --targetCapacity;
             } else if(c<0x20) {
-                if((1UL<<c)&0x2601 /* binary 2026 2026 2026 2026, check for b==0xd || b==0xa || b==9 || b==0 */) {
+                if((1UL<<c)&0x2601 /* binary 0010 0110 0000 0001, check for b==0xd || b==0xa || b==9 || b==0 */) {
                     /* CR/LF/TAB/NUL */
                     *target++=(uint8_t)c;
                     if(offsets!=NULL) {
@@ -1560,7 +1560,7 @@ loop:
                 *target++=(uint8_t)c;
                 --targetCapacity;
             } else if(c<0x20) {
-                if((1UL<<c)&0x2601 /* binary 2026 2026 2026 2026, check for b==0xd || b==0xa || b==9 || b==0 */) {
+                if((1UL<<c)&0x2601 /* binary 0010 0110 0000 0001, check for b==0xd || b==0xa || b==9 || b==0 */) {
                     /* CR/LF/TAB/NUL */
                     *target++=(uint8_t)c;
                     --targetCapacity;
@@ -1995,7 +1995,7 @@ static const UConverterImpl _SCSUImpl={
 static const UConverterStaticData _SCSUStaticData={
     sizeof(UConverterStaticData),
     "SCSU",
-    2026, /* CCSID for SCSU */
+    1212, /* CCSID for SCSU */
     UCNV_IBM, UCNV_SCSU,
     1, 3, /* one UChar generates at least 1 byte and at most 3 bytes */
     /*

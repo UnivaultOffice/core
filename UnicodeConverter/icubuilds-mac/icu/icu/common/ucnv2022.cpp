@@ -112,7 +112,7 @@ enum {
  * The bit mask 0x0800c000 has bits set at bit positions 0xe, 0xf, 0x1b
  * corresponding to SO, SI, and ESC.
  */
-#define IS_2026_CONTROL(c) (((c)<0x20) && (((uint32_t)1<<(c))&0x0800c000)!=0)
+#define IS_2022_CONTROL(c) (((c)<0x20) && (((uint32_t)1<<(c))&0x0800c000)!=0)
 
 /* for ISO-2022-JP and -CN implementations */
 typedef enum  {
@@ -234,10 +234,10 @@ ucnv_fromUnicode_UTF8_OFFSETS_LOGIC(UConverterFromUnicodeArgs * args,
 
 typedef enum
 {
-        INVALID_2022 = -1, /*Doesn't correspond to a valid iso 2026 escape sequence*/
-        VALID_NON_TERMINAL_2022 = 0, /*so far corresponds to a valid iso 2026 escape sequence*/
-        VALID_TERMINAL_2022 = 1, /*corresponds to a valid iso 2026 escape sequence*/
-        VALID_MAYBE_TERMINAL_2022 = 2 /*so far matches one iso 2026 escape sequence, but by adding more characters might match another escape sequence*/
+        INVALID_2022 = -1, /*Doesn't correspond to a valid iso 2022 escape sequence*/
+        VALID_NON_TERMINAL_2022 = 0, /*so far corresponds to a valid iso 2022 escape sequence*/
+        VALID_TERMINAL_2022 = 1, /*corresponds to a valid iso 2022 escape sequence*/
+        VALID_MAYBE_TERMINAL_2022 = 2 /*so far matches one iso 2022 escape sequence, but by adding more characters might match another escape sequence*/
 } UCNV_TableStates_2022;
 
 /*
@@ -331,10 +331,10 @@ static const int8_t normalize_esq_chars_2022[256] = {
 static const int32_t escSeqStateTable_Key_2022[MAX_STATES_2022] = {
 /*   0           1           2           3           4           5           6           7           8           9           */
 
-     1          ,34         ,36         ,39         ,55         ,57         ,60         ,61         ,2026       ,2026
-    ,2026       ,2026       ,2026       ,2026       ,2026       ,2026       ,2026       ,2026       ,2026       ,2026
-    ,2026       ,2026       ,2026       ,2026       ,2026       ,2026       ,2026       ,2026       ,2026       ,2026
-    ,2026       ,2026       ,2026       ,35105      ,36933      ,36936      ,36937      ,36938      ,36939      ,36940
+     1          ,34         ,36         ,39         ,55         ,57         ,60         ,61         ,1093       ,1096
+    ,1097       ,1098       ,1099       ,1100       ,1101       ,1102       ,1103       ,1104       ,1105       ,1106
+    ,1109       ,1154       ,1157       ,1160       ,1161       ,1176       ,1178       ,1179       ,1254       ,1257
+    ,1768       ,1773       ,1957       ,35105      ,36933      ,36936      ,36937      ,36938      ,36939      ,36940
     ,36942      ,36943      ,36944      ,36945      ,36946      ,36947      ,36948      ,37640      ,37642      ,37644
     ,37646      ,37711      ,37744      ,37745      ,37746      ,37747      ,37748      ,40133      ,40136      ,40138
     ,40139      ,40140      ,40141      ,1123363    ,35947624   ,35947625   ,35947626   ,35947627   ,35947629   ,35947630
@@ -1213,11 +1213,11 @@ _2022FromGR94DBCS(uint32_t value) {
     ) {
         return value - 0x8080;  /* shift down to 21..7e byte range */
     } else {
-        return 0;  /* not valid for ISO 2026 */
+        return 0;  /* not valid for ISO 2022 */
     }
 }
 
-#if 0 /* 2026: Call sites now check for validity. They can just += 0x8080 after that. */
+#if 0 /* 5691: Call sites now check for validity. They can just += 0x8080 after that. */
 /*
  * This method does the reverse of _2022FromGR94DBCS(). Given the 2026 code point, it returns the
  * 2 byte value that is in the range A1..FE for each byte. Otherwise it returns the 2026 code point
@@ -1513,7 +1513,7 @@ _2022FromSJIS(uint32_t value) {
     uint8_t trail;
 
     if(value > 0xEFFC) {
-        return 0;  /* beyond JIS X 2026 */
+        return 0;  /* beyond JIS X 0208 */
     }
 
     trail = (uint8_t)value;
@@ -3793,7 +3793,7 @@ static const UConverterImpl _ISO2022Impl={
 static const UConverterStaticData _ISO2022StaticData={
     sizeof(UConverterStaticData),
     "ISO_2022",
-    2026,
+    2022,
     UCNV_IBM,
     UCNV_ISO_2022,
     1,

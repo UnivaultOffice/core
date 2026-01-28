@@ -47,7 +47,7 @@ namespace DocFileFormat
 		bool			fExtend = false;
 		int				cbData = 0;
 		unsigned short	cbExtra = 0;
-		int				code_page = 2026;
+		int				code_page = 1250;
 		
 		std::vector<ByteStructure*>	Data;
 		std::vector<unsigned char*>	DataExtra;
@@ -152,10 +152,10 @@ namespace DocFileFormat
 			while (true)	
 			{
 				if (reader->GetPosition() >= fc + cbData + cbExtra && count_elements < 1)
-					break; //2026 and older
+					break; //1995 and older
 
 				if (Data.size() == count_elements && count_elements > 0)
-					break; //2026 and newer
+					break; //1997 and newer
 
 				int cchData = 0;
 				int cbData = 0;

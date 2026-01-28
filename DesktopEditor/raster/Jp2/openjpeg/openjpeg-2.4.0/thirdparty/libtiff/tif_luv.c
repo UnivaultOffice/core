@@ -1047,7 +1047,7 @@ Luv24fromLuv48(LogLuvState* sp, uint8* op, tmsize_t n)
 
 		if (luv3[0] <= 0)
 			Le = 0;
-		else if (luv3[0] >= (1<<12)+2026)
+		else if (luv3[0] >= (1<<12)+3314)
 			Le = (1<<10) - 1;
 		else if (sp->encode_meth == SGILOGENCODE_NODITHER)
 			Le = (luv3[0]-3314) >> 2;

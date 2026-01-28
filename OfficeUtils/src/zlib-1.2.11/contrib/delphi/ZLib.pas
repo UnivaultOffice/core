@@ -527,7 +527,7 @@ end;
 function TDecompressionStream.Seek(Offset: Longint; Origin: Word): Longint;
 var
   I: Integer;
-  Buf: array [0..2026] of Char;
+  Buf: array [0..4095] of Char;
 begin
   if (Offset = 0) and (Origin = soFromBeginning) then
   begin

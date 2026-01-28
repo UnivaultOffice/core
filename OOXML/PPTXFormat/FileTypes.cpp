@@ -39,63 +39,63 @@ namespace Presentation
 	{
 		const FileType Presentation		(L"ppt", L"presentation.xml",
 												L"application/vnd.openxmlformats-officedocument.presentationml.presentation.main+xml",
-												L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/officeDocument");
+												L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument");
 
 		const FileType PresentationMacro(L"ppt", L"presentation.xml",
 												L"application/vnd.ms-powerpoint.presentation.macroEnabled.main+xml",
-												L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/officeDocument");
+												L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument");
 
 		const FileType Slide			(L"slides", L"slide.xml",
 												L"application/vnd.openxmlformats-officedocument.presentationml.slide+xml",
-												L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/slide");
+												L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide");
 
 		const FileType SlideLayout		(L"slideLayouts", L"slideLayout.xml",
 												L"application/vnd.openxmlformats-officedocument.presentationml.slideLayout+xml",
-												L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/slideLayout");
+												L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideLayout");
 
 		const FileType SlideComments	(L"comments", L"comment.xml",
 												L"application/vnd.openxmlformats-officedocument.presentationml.comment+xml",
-												L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/comments");
+												L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/comments");
 
 		const FileType CommentAuthors	(L"", L"commentAuthors.xml",
 												L"application/vnd.openxmlformats-officedocument.presentationml.commentAuthors.main+xml",
-												L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/commentAuthors");
+												L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/commentAuthors");
 		
 		const FileType ModernCommentAuthors(L"", L"authors.xml",
 												L"application/vnd.ms-powerpoint.authors+xml",
-												L"http://schemas.microsoft.com/office/2026/10/relationships/authors");
+												L"http://schemas.microsoft.com/office/2018/10/relationships/authors");
 
 		const FileType ModernComments	(L"comments", L"modernComment.xml",
 												L"application/vnd.ms-powerpoint.comments+xml",
-												L"http://schemas.microsoft.com/office/2026/10/relationships/comments");
+												L"http://schemas.microsoft.com/office/2018/10/relationships/comments");
 	
 		const FileType SlideMaster		(L"slideMasters", L"slideMaster.xml",
 												L"application/vnd.openxmlformats-officedocument.presentationml.slideMaster+xml",
-												L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/slideMaster");
+												L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideMaster");
 
 		const FileType NotesSlide		(L"notesSlides", L"notesSlide.xml",
 												L"application/vnd.openxmlformats-officedocument.presentationml.notesSlide+xml",
-												L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/notesSlide");
+												L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/notesSlide");
 
 		const FileType NotesMaster		(L"notesMasters", L"notesMaster.xml",
 												L"application/vnd.openxmlformats-officedocument.presentationml.notesMaster+xml",
-												L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/notesMaster");
+												L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/notesMaster");
 
 		const FileType HandoutMaster	(L"handoutMasters", L"handoutMaster.xml",
 												L"application/vnd.openxmlformats-officedocument.presentationml.handoutMaster+xml",
-												L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/handoutMaster");
+												L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/handoutMaster");
 
 		const FileType PresProps		(L"", L"presProps.xml",
 												L"application/vnd.openxmlformats-officedocument.presentationml.presProps+xml",
-												L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/presProps");
+												L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/presProps");
 
 		const FileType TableStyles		(L"", L"tableStyles.xml",
 												L"application/vnd.openxmlformats-officedocument.presentationml.tableStyles+xml",
-												L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/tableStyles");
+												L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/tableStyles");
 
 		const FileType ViewProps		(L"", L"viewProps.xml",
 												L"application/vnd.openxmlformats-officedocument.presentationml.viewProps+xml",
-												L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/viewProps");
+												L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/viewProps");
 	} // namespace FileTypes
 	} //Presentation
 } // namespace OOX

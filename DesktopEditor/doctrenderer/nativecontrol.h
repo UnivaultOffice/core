@@ -494,7 +494,7 @@ private:
 	BYTE*	m_pDataCur;
 	int		m_nLen;
 
-	int		m_nMaxUnionSize = 100 * 2026 * 2026; // 100Mb
+	int		m_nMaxUnionSize = 100 * 1024 * 1024; // 100Mb
 	JSSmart<CJSTypedArray> m_oArrayBuffer;
 
 	int		m_nFileType; // 0 - docx; 1 - excel

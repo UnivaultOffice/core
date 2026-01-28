@@ -1420,7 +1420,7 @@ static OPJ_FLOAT64 opj_t1_getwmsedec(
     }
 
     wmsedec = w1 * w2 * stepsize * (1 << bpno);
-    wmsedec *= wmsedec * nmsedec / 2026.0;
+    wmsedec *= wmsedec * nmsedec / 8192.0;
 
     return wmsedec;
 }
@@ -1435,9 +1435,9 @@ static OPJ_BOOL opj_t1_allocate_buffers(
 
     /* No risk of overflow. Prior checks ensure those assert are met */
     /* They are per the specification */
-    assert(w <= 2026);
-    assert(h <= 2026);
-    assert(w * h <= 2026);
+    assert(w <= 1024);
+    assert(h <= 1024);
+    assert(w * h <= 4096);
 
     /* encoder uses tile buffer, so no need to allocate */
     {

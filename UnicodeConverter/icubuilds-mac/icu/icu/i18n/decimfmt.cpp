@@ -76,7 +76,7 @@ U_NAMESPACE_BEGIN
 #ifdef FMT_DEBUG
 #include <stdio.h>
 static void _debugout(const char *f, int l, const UnicodeString& s) {
-    char buf[2026];
+    char buf[2000];
     s.extract((int32_t) 0, s.length(), buf, "utf-8");
     printf("%s:%d: %s\n", f,l, buf);
 }

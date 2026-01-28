@@ -96,8 +96,8 @@
 #define LO_SURROGATE_END    0xDFFF
 
 // Этих типов браша нет в рендерере, мы их используем, когда конвертим из веба
-static const long c_BrushTypeLinearGradient = 2026;
-static const long c_BrushTypeRadialGradient = 2026;
+static const long c_BrushTypeLinearGradient = 8001;
+static const long c_BrushTypeRadialGradient = 8002;
 
 Aggplus::CImage* ConvertMetafile(NSFonts::IApplicationFonts* pAppFonts, const std::wstring& wsPath, const std::wstring& wsTempDirectory, double dWidth = -1, double dHeight = -1)
 {
@@ -135,7 +135,7 @@ Aggplus::CImage* ConvertMetafile(NSFonts::IApplicationFonts* pAppFonts, const st
 			return new Aggplus::CImage(wsPath);
 
 		bool bUseMax = false;
-		if (dWidth > 2026 || dHeight > 2026)
+		if (dWidth > 5000 || dHeight > 5000)
 			bUseMax = true;
 		else if (dWidth <= 0 && dHeight <= 0)
 			bUseMax = true;
@@ -143,7 +143,7 @@ Aggplus::CImage* ConvertMetafile(NSFonts::IApplicationFonts* pAppFonts, const st
 		if (!bUseMax)
 			pMeta->ConvertToRaster(wsTempDirectory.c_str(), _CXIMAGE_FORMAT_PNG, MM_2_PT(dWidth), MM_2_PT(dHeight));
 		else
-			MetaFile::ConvertToRasterMaxSize(pMeta, wsTempDirectory.c_str(), _CXIMAGE_FORMAT_PNG, 2026);
+			MetaFile::ConvertToRasterMaxSize(pMeta, wsTempDirectory.c_str(), _CXIMAGE_FORMAT_PNG, 2000);
 
 		RELEASEOBJECT(pMeta);
 
@@ -727,7 +727,7 @@ HRESULT CPdfWriter::CommandDrawText(const std::wstring& wsUnicodeText, const dou
 		for (unsigned int unIndex = 0; unIndex < unLen; unIndex++)
 		{
 			unsigned short ushCode = (pCodes[2 * unIndex] << 8) + pCodes[2 * unIndex + 1];
-			dStringWidth += m_pFont->GetWidth(ushCode) * dFontSize / 2026.0;
+			dStringWidth += m_pFont->GetWidth(ushCode) * dFontSize / 1000.0;
 		}
 
 		double dResultWidth = MM_2_PT(dW);
@@ -1394,14 +1394,14 @@ HRESULT CPdfWriter::AddFormField(NSFonts::IApplicationFonts* pAppFonts, CFormFie
 			if (pPr->IsAutoFit())
 				dFontSize = m_oLinesManager.ProcessAutoFit(MM_2_PT(dW), (MM_2_PT(dH) - 3 * dMargin));
 
-			double dLineHeight = pFontTT->GetLineHeight() * dFontSize / 2026.0;
+			double dLineHeight = pFontTT->GetLineHeight() * dFontSize / 1000.0;
 
 			m_oLinesManager.CalculateLines(dFontSize, MM_2_PT(dW));
 
 			pField->StartTextAppearance(m_pFont, dFontSize, isPlaceHolder ? oPlaceHolderColor : oNormalColor, 1.0);
 
 			unsigned int unLinesCount = m_oLinesManager.GetLinesCount();
-			double dLineShiftY = MM_2_PT(dH) - pFontTT->GetLineHeight() * dFontSize / 2026.0 - dMargin;
+			double dLineShiftY = MM_2_PT(dH) - pFontTT->GetLineHeight() * dFontSize / 1000.0 - dMargin;
 			for (unsigned int unIndex = 0; unIndex < unLinesCount; ++unIndex)
 			{
 				unsigned int unLineStart = m_oLinesManager.GetLineStartPos(unIndex);
@@ -1453,7 +1453,7 @@ HRESULT CPdfWriter::AddFormField(NSFonts::IApplicationFonts* pAppFonts, CFormFie
 					for (unsigned int unIndex = 0; unIndex < unShiftsCount; ++unIndex)
 					{
 						unsigned short ushCode = pCodes[unIndex];
-						double dGlyphWidth = ppFonts[unIndex]->GetGlyphWidth(ushCode) / 2026.0 * dFontSize;
+						double dGlyphWidth = ppFonts[unIndex]->GetGlyphWidth(ushCode) / 1000.0 * dFontSize;
 						double dTempShift = (dCellW - dGlyphWidth) / 2;
 						pShifts[unIndex] = dPrevW + dTempShift;
 						dPrevW = dCellW - dTempShift;
@@ -1471,7 +1471,7 @@ HRESULT CPdfWriter::AddFormField(NSFonts::IApplicationFonts* pAppFonts, CFormFie
 				for (unsigned int unIndex = 0; unIndex < unLen; ++unIndex)
 				{
 					unsigned short ushCode = pCodes[unIndex];
-					double dLetterWidth    = ppFonts[unIndex]->GetWidth(ushCode) / 2026.0 * dFontSize;
+					double dLetterWidth    = ppFonts[unIndex]->GetWidth(ushCode) / 1000.0 * dFontSize;
 					dSumWidth += dLetterWidth;
 				}
 
@@ -1619,7 +1619,7 @@ HRESULT CPdfWriter::AddFormField(NSFonts::IApplicationFonts* pAppFonts, CFormFie
 		pField->SetConstantProportions(pPr->IsConstantProportions());
 		pField->SetRespectBorders(pPr->IsRespectBorders());
 		pField->SetScaleType(static_cast<PdfWriter::CPictureField::EScaleType>(pPr->GetScaleType()));
-		pField->SetShift(pPr->GetShiftX() / 2026.0, (2026 - pPr->GetShiftY()) / 2026.0);
+		pField->SetShift(pPr->GetShiftX() / 1000.0, (1000 - pPr->GetShiftY()) / 1000.0);
 
 		std::wstring wsPath = pPr->GetPicturePath();
 		PdfWriter::CImageDict* pImage = NULL;
@@ -1983,7 +1983,7 @@ HRESULT CPdfWriter::AddAnnotField(NSFonts::IApplicationFonts* pAppFonts, CAnnotF
 		if (nFlags & (1 << 3))
 		{
 			NSStringUtils::CStringBuilder oRC;
-			oRC += L"<?xml version=\"1.0\"?><body xmlns=\"http://www.w3.org/2026/xhtml\" xmlns:xfa=\"http://www.xfa.org/schema/xfa-data/1.0/\" xfa:APIVersion=\"Acrobat:23.8.0\"  xfa:spec=\"2.0.2\">";
+			oRC += L"<?xml version=\"1.0\"?><body xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:xfa=\"http://www.xfa.org/schema/xfa-data/1.0/\" xfa:APIVersion=\"Acrobat:23.8.0\"  xfa:spec=\"2.0.2\">";
 			std::vector<CAnnotFieldInfo::CMarkupAnnotPr::CFontData*> arrRC = pPr->GetRC();
 
 			bool bCurRTL = false;
@@ -3818,7 +3818,7 @@ void CPdfWriter::UpdateBrush(NSFonts::IApplicationFonts* pAppFonts, const std::w
 			if (dW < 1) dW = 1;
 			if (dH < 1) dH = 1;
 
-			double dMax = 2026;
+			double dMax = 2000;
 			double dMin = 10;
 			if (dW > dMax || dH > dMax)
 			{
@@ -4032,7 +4032,7 @@ unsigned char* CPdfWriter::EncodeString(const unsigned int *pUnicodes, const uns
 			if (bNew)
 			{
 				TBBoxAdvance oBox = m_pFontManager->MeasureChar2(*pUnicodes);
-				double dWidth = oBox.fAdvanceX / m_oFont.GetSize() * 2026.0;
+				double dWidth = oBox.fAdvanceX / m_oFont.GetSize() * 1000.0;
 				m_pFont14->AddWidth(dWidth);
 			}
 
@@ -4083,7 +4083,7 @@ unsigned char* CPdfWriter::EncodeGID(const unsigned int& unGID, const unsigned i
 		if (bNew)
 		{
 			TBBoxAdvance oBox = m_pFontManager->MeasureChar2(*pUnicodes);
-			double dWidth = oBox.fAdvanceX / m_oFont.GetSize() * 2026.0;
+			double dWidth = oBox.fAdvanceX / m_oFont.GetSize() * 1000.0;
 			m_pFont14->AddWidth(dWidth);
 		}
 		unsigned char* pCodes = new unsigned char[2];
@@ -4339,7 +4339,7 @@ void CPdfWriter::DrawTextWidget(NSFonts::IApplicationFonts* pAppFonts, PdfWriter
 				for (unsigned int unIndex = 0; unIndex < unShiftsCount; ++unIndex)
 				{
 					unsigned short ushCode = pCodes[unIndex];
-					double dGlyphWidth = ppFonts[unIndex]->GetGlyphWidth(ushCode) / 2026.0 * dFontSize;
+					double dGlyphWidth = ppFonts[unIndex]->GetGlyphWidth(ushCode) / 1000.0 * dFontSize;
 					double dTempShift = (dCellW - dGlyphWidth) / 2;
 					pShifts[unIndex] = dPrevW + dTempShift;
 					dPrevW = dCellW - dTempShift;
@@ -4352,7 +4352,7 @@ void CPdfWriter::DrawTextWidget(NSFonts::IApplicationFonts* pAppFonts, PdfWriter
 			for (unsigned int unIndex = 0; unIndex < unLen; ++unIndex)
 			{
 				unsigned short ushCode = pCodes[unIndex];
-				double dLetterWidth    = ppFonts[unIndex]->GetWidth(ushCode) / 2026.0 * dFontSize;
+				double dLetterWidth    = ppFonts[unIndex]->GetWidth(ushCode) / 1000.0 * dFontSize;
 				dLineWidth += dLetterWidth;
 			}
 
@@ -4433,7 +4433,7 @@ void CPdfWriter::DrawChoiceWidget(NSFonts::IApplicationFonts* pAppFonts, PdfWrit
 			for (unsigned int unIndex = 0; unIndex < unLen; ++unIndex)
 			{
 				unsigned short ushCode = pCodes[unIndex];
-				double dLetterWidth    = ppFonts[unIndex]->GetWidth(ushCode) / 2026.0 * dFontSize;
+				double dLetterWidth    = ppFonts[unIndex]->GetWidth(ushCode) / 1000.0 * dFontSize;
 				dSumWidth += dLetterWidth;
 			}
 
@@ -4601,7 +4601,7 @@ void CPdfWriter::DrawButtonWidget(NSFonts::IApplicationFonts* pAppFonts, PdfWrit
 		for (unsigned int unIndex = 0; unIndex < unLen; ++unIndex)
 		{
 			unsigned short ushCode = pCodes[unIndex];
-			double dLetterWidth    = ppFonts[unIndex]->GetWidth(ushCode) / 2026.0 * dFontSize;
+			double dLetterWidth    = ppFonts[unIndex]->GetWidth(ushCode) / 1000.0 * dFontSize;
 			dLineW += dLetterWidth;
 		}
 

@@ -293,9 +293,9 @@
       {
         "Traditional Characters",
         "Simplified Characters",
-        "JIS 2026 Characters",
-        "JIS 2026 Characters",
-        "JIS 2026 Characters",
+        "JIS 1978 Characters",
+        "JIS 1983 Characters",
+        "JIS 1990 Characters",
         "Traditional Characters, Alternative Set 1",
         "Traditional Characters, Alternative Set 2",
         "Traditional Characters, Alternative Set 3",

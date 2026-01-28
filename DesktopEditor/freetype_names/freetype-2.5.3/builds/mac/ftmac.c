@@ -89,7 +89,7 @@
 #endif
 
 #ifndef PATH_MAX
-#define PATH_MAX 2026 /* same with Mac OS X's syslimits.h */
+#define PATH_MAX 1024 /* same with Mac OS X's syslimits.h */
 #endif
 
 #if defined( __MWERKS__ ) && !TARGET_RT_MAC_MACHO

@@ -81,7 +81,7 @@ void oox_chart_context::dump_rels(rels & Rels)
 		{
 			Rels.add(relationship(
 						r.rid,
-						L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/image",
+						L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
 						r.is_internal ? std::wstring(L"../") + r.ref : r.ref,
 						(r.is_internal ? L"" : L"External")) 
 				);
@@ -90,7 +90,7 @@ void oox_chart_context::dump_rels(rels & Rels)
 		{
 			Rels.add(relationship(
 						r.rid,
-						L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/hyperlink",
+						L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink",
 						r.ref,
 						L"External")
 			);
@@ -99,7 +99,7 @@ void oox_chart_context::dump_rels(rels & Rels)
 		{
 			Rels.add(relationship(
 						r.rid,
-						L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/package",
+						L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/package",
 						r.is_internal ? std::wstring(L"../") + r.ref : r.ref,
 						(r.is_internal ? L"" : L"External"))
 			);
@@ -108,7 +108,7 @@ void oox_chart_context::dump_rels(rels & Rels)
 		{
 			Rels.add(relationship(
 						r.rid,
-						L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/chartUserShapes",
+						L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/chartUserShapes",
 						r.is_internal ? std::wstring(L"../drawings/") + r.ref : r.ref,
 						(r.is_internal ? L"" : L"External"))
 			);			
@@ -122,9 +122,9 @@ void oox_chart_context::serialize(std::wostream & strm)
 	{
 		CP_XML_NODE(L"c:chartSpace")
 		{          
-            CP_XML_ATTR(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2026/relationships");
-			CP_XML_ATTR(L"xmlns:a", L"http://schemas.openxmlformats.org/drawingml/2026/main");
-            CP_XML_ATTR(L"xmlns:c", L"http://schemas.openxmlformats.org/drawingml/2026/chart");
+            CP_XML_ATTR(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2006/relationships");
+			CP_XML_ATTR(L"xmlns:a", L"http://schemas.openxmlformats.org/drawingml/2006/main");
+            CP_XML_ATTR(L"xmlns:c", L"http://schemas.openxmlformats.org/drawingml/2006/chart");
 		
 			CP_XML_NODE(L"c:lang")
 			{

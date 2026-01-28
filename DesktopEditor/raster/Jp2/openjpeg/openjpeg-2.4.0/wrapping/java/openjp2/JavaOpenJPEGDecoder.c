@@ -86,7 +86,7 @@ void decode_help_display() {
 	fprintf(stdout,"- the -h option displays this help information on screen\n\n");
 
 /* UniPG>> */
-	fprintf(stdout,"List of parameters for the JPEG 2026 "
+	fprintf(stdout,"List of parameters for the JPEG 2000 "
 #ifdef USE_JPWL
 		"+ JPWL "
 #endif /* USE_JPWL */

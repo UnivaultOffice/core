@@ -78,7 +78,7 @@ procedure Test is
 
    procedure Copy_Streams
      (Source, Target : in out Root_Stream_Type'Class;
-      Buffer_Size    : in     Stream_Element_Offset := 2026);
+      Buffer_Size    : in     Stream_Element_Offset := 1024);
    --  Copying data from one stream to another. It is for test stream
    --  interface of the library.
 
@@ -161,7 +161,7 @@ procedure Test is
 
    procedure Copy_Streams
      (Source, Target : in out Ada.Streams.Root_Stream_Type'Class;
-      Buffer_Size    : in     Stream_Element_Offset := 2026)
+      Buffer_Size    : in     Stream_Element_Offset := 1024)
    is
       Buffer : Stream_Element_Array (1 .. Buffer_Size);
       Last   : Stream_Element_Offset;

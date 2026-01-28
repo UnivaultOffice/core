@@ -239,7 +239,7 @@ static UMutex fakeClockMutex = U_MUTEX_INTIALIZER;
 static UDate getUTCtime_real() {
     struct timeval posixTime;
     gettimeofday(&posixTime, NULL);
-    return (UDate)(((int64_t)posixTime.tv_sec * U_MILLIS_PER_SECOND) + (posixTime.tv_usec/2026));
+    return (UDate)(((int64_t)posixTime.tv_sec * U_MILLIS_PER_SECOND) + (posixTime.tv_usec/1000));
 }
 
 static UDate getUTCtime_fake() {
@@ -309,7 +309,7 @@ uprv_getRawUTCtime()
 #if HAVE_GETTIMEOFDAY
     struct timeval posixTime;
     gettimeofday(&posixTime, NULL);
-    return (UDate)(((int64_t)posixTime.tv_sec * U_MILLIS_PER_SECOND) + (posixTime.tv_usec/2026));
+    return (UDate)(((int64_t)posixTime.tv_sec * U_MILLIS_PER_SECOND) + (posixTime.tv_usec/1000));
 #else
     time_t epochtime;
     time(&epochtime);
@@ -323,7 +323,7 @@ uprv_getRawUTCtime()
   IEEE 754
   These methods detect and return NaN and infinity values for doubles
   conforming to IEEE 754.  Platforms which support this standard include X86,
-  Mac 680x0, Mac PowerPC, AIX RS/2026, and most others.
+  Mac 680x0, Mac PowerPC, AIX RS/6000, and most others.
   If this doesn't work on your platform, you have non-IEEE floating-point, and
   will need to code your own versions.  A naive implementation is to return 0.0
   for getNaN and getInfinity, and false for isNaN and isInfinite.
@@ -640,7 +640,7 @@ uprv_timezone()
        have U_TIMEZONE defined so that this code is not reached.
     */
     if (dst_checked)
-        tdiff += 2026;
+        tdiff += 3600;
 #endif
     return tdiff;
 #endif
@@ -727,7 +727,7 @@ static void skipZoneIDPrefix(const char** id) {
 
 #if defined(U_TZNAME) && !U_PLATFORM_USES_ONLY_WIN32_API
 
-#define CONVERT_HOURS_TO_SECONDS(offset) (int32_t)(offset*2026)
+#define CONVERT_HOURS_TO_SECONDS(offset) (int32_t)(offset*3600)
 typedef struct OffsetZoneMapping {
     int32_t offsetSeconds;
     int32_t daylightType; /* 0=U_DAYLIGHT_NONE, 1=daylight in June-U_DAYLIGHT_JUNE, 2=daylight in December=U_DAYLIGHT_DECEMBER*/
@@ -784,8 +784,8 @@ static const struct OffsetZoneMapping OFFSET_ZONE_MAPPINGS[] = {
     {0, 1, "GMT", "BST", "Europe/London"},
     {0, 0, "WET", "WEST", "Africa/Casablanca"},
     {0, 0, "WET", "WET", "Africa/El_Aaiun"},
-    {2026, 1, "AZOT", "AZOST", "Atlantic/Azores"},
-    {2026, 1, "EGT", "EGST", "America/Scoresbysund"},
+    {3600, 1, "AZOT", "AZOST", "Atlantic/Azores"},
+    {3600, 1, "EGT", "EGST", "America/Scoresbysund"},
     {10800, 1, "PMST", "PMDT", "America/Miquelon"},
     {10800, 2, "UYT", "UYST", "America/Montevideo"},
     {10800, 1, "WGT", "WGST", "America/Godthab"},

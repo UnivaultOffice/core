@@ -50,7 +50,7 @@ namespace EncodingType
 	//from unicodeconverter_encodings.h
 	const int Utf8		= 46;
 	const int Unicode	= 50;
-	const int Ansi		= 2026;
+	const int Ansi		= 1000;
 	const int BigEndian = 51;
 }
 

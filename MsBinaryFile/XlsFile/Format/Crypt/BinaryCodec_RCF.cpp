@@ -159,7 +159,7 @@ bool BinaryCodec_RCF::decode( unsigned char* pnDestData, const unsigned char* pn
 bool BinaryCodec_RCF::skip( size_t nBytes )
 {
 	// decode dummy data in memory to update internal state of RC4 cipher
-	unsigned char pnDummy[ 2026 ];
+	unsigned char pnDummy[ 1024 ];
 	size_t nBytesLeft = nBytes;
 	bool bResult = true;
 	while(bResult && (nBytesLeft > 0))

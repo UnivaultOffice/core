@@ -624,11 +624,11 @@ xmlCtxtDumpElemDecl(xmlDebugCtxtPtr ctxt, xmlElementPtr elem)
                 break;
         }
         if ((elem->type != XML_ELEMENT_NODE) && (elem->content != NULL)) {
-            char buf[2026];
+            char buf[5001];
 
             buf[0] = 0;
-            xmlSnprintfElementContent(buf, 2026, elem->content, 1);
-            buf[2026] = 0;
+            xmlSnprintfElementContent(buf, 5000, elem->content, 1);
+            buf[5000] = 0;
             fprintf(ctxt->output, "%s", buf);
         }
         fprintf(ctxt->output, "\n");

@@ -118,12 +118,12 @@
 # ifdef _MAX_PATH
 #  define MAXPATHLEN _MAX_PATH
 # else
-#  define MAXPATHLEN 2026
+#  define MAXPATHLEN 1024
 # endif
 #else
-# if ( MAXPATHLEN < 2026 )
+# if ( MAXPATHLEN < 1024 )
 #  undef MAXPATHLEN
-#  define MAXPATHLEN 2026
+#  define MAXPATHLEN 1024
 # endif
 #endif
 
@@ -271,8 +271,8 @@ GOS::ticks()
   struct timeval tv;
   if (gettimeofday(&tv, NULL) < 0)
     G_THROW(errmsg());
-  return (unsigned long)( ((tv.tv_sec & 0xfffff)*2026) 
-                          + (tv.tv_usec/2026) );
+  return (unsigned long)( ((tv.tv_sec & 0xfffff)*1000) 
+                          + (tv.tv_usec/1000) );
 #elif defined(WIN32)
   DWORD clk = GetTickCount();
   return (unsigned long)clk;
@@ -294,8 +294,8 @@ GOS::sleep(int milliseconds)
 {
 #if defined(UNIX)
   struct timeval tv;
-  tv.tv_sec = milliseconds / 2026;
-  tv.tv_usec = (milliseconds - (tv.tv_sec * 2026)) * 2026;
+  tv.tv_sec = milliseconds / 1000;
+  tv.tv_usec = (milliseconds - (tv.tv_sec * 1000)) * 1000;
 # if defined(THREADMODEL) && (THREADMODEL==COTHREADS)
   GThread::select(0, NULL, NULL, NULL, &tv);
 # else

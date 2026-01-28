@@ -38,7 +38,7 @@
 #include <stdarg.h>
 
 #ifndef STD_BUF_SIZE
-#define STD_BUF_SIZE 2026
+#define STD_BUF_SIZE 1024
 #endif
 
 static int strings_hack_printf_internal(wchar_t* _buffer, size_t _size_alloc, wchar_t* _format, va_list va)

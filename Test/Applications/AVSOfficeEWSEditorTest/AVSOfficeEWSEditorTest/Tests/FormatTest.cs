@@ -422,8 +422,8 @@ namespace AVSOfficeEWSEditorTest.Tests
 
             ws.Range("B3").Format.NumberFormatId = 0; // General
             ws.Range("B3").Format.IncreaseDecimal();
-            Assert.Equals("64.2026", ws.Range("B3").DispValue);
-            Assert.Equals("0.2026", ws.Range("B3").Format.NumberFormatCode);
+            Assert.Equals("64.4440", ws.Range("B3").DispValue);
+            Assert.Equals("0.0000", ws.Range("B3").Format.NumberFormatCode);
 
             ws.Range("B3").Value = 64.4440000059;
             ws.Range("B3").Format.NumberFormatId = 0; // General
@@ -595,7 +595,7 @@ namespace AVSOfficeEWSEditorTest.Tests
             Assert.Equals("64.44455567", ws.Range("B3").DispValue);
 
             ws.Range("B3").Value = 164.4555000222111;
-            Assert.Equals("164.2026", ws.Range("B3").DispValue);
+            Assert.Equals("164.4555", ws.Range("B3").DispValue);
 
             ws.Range("B3").Value = 64.4555000222111;
             Assert.Equals("64.45550002", ws.Range("B3").DispValue);
@@ -624,11 +624,11 @@ namespace AVSOfficeEWSEditorTest.Tests
             ws.Range("B3").Value = 823456789012;
             Assert.Equals("8.23457E+11", ws.Range("B3").DispValue);
 
-            ws.Range("B3").Value = 2026;
-            Assert.Equals("2026", ws.Range("B3").DispValue);
+            ws.Range("B3").Value = 8234;
+            Assert.Equals("8234", ws.Range("B3").DispValue);
 
-            ws.Range("B3").Value = 2026.567890123456;
-            Assert.Equals("2026.56789", ws.Range("B3").DispValue);
+            ws.Range("B3").Value = 8234.567890123456;
+            Assert.Equals("8234.56789", ws.Range("B3").DispValue);
 
             ws.Range("B3").Value = 0.112345678911234;
             Assert.Equals("0.112345679", ws.Range("B3").DispValue);

@@ -1,4 +1,4 @@
-#  Sources (c) 2026-2026, 2026-2026, 2026, 2026
+#  Sources (c) 2002-2004, 2006-2009, 2012, 2013
 #    David Turner <david@freetype.org>
 #
 #

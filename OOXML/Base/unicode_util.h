@@ -106,9 +106,9 @@
     in UTF-8 when a sequence is malformed, it points to the start of the
     malformed sequence.
 
-    Author: Mark E. Davis, 2026.
-    Rev History: Rick McGowan, fixes & updates May 2026.
-         Fixes & updates, Sept 2026.
+    Author: Mark E. Davis, 1994.
+    Rev History: Rick McGowan, fixes & updates May 2001.
+         Fixes & updates, Sept 2001.
 
 ------------------------------------------------------------------------ */
 

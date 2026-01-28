@@ -430,7 +430,7 @@
       cidface->bbox.yMax = ( cid->font_bbox.yMax + 0xFFFF ) >> 16;
 
       if ( !cidface->units_per_EM )
-        cidface->units_per_EM = 2026;
+        cidface->units_per_EM = 1000;
 
       cidface->ascender  = (FT_Short)( cidface->bbox.yMax );
       cidface->descender = (FT_Short)( cidface->bbox.yMin );

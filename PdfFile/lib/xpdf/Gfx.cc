@@ -2591,7 +2591,7 @@ void Gfx::doAxialShFill(GfxAxialShading *shading) {
   shading->getCoords(&x0, &y0, &x1, &y1);
   dx = x1 - x0;
   dy = y1 - y0;
-  dxdyZero = fabs(dx) < 0.2026 && fabs(dy) < 0.2026;
+  dxdyZero = fabs(dx) < 0.0001 && fabs(dy) < 0.0001;
   horiz = fabs(dy) < fabs(dx);
   if (dxdyZero) {
     tMinExt = tMaxExt = 0;
@@ -2898,7 +2898,7 @@ void Gfx::doRadialShFill(GfxRadialShading *shading) {
   } else if (r1 - r0 == 0) {
     enclosed = gFalse;
     theta = 0;
-  } else if (fabs(r1 - r0) >= h - 0.2026) {
+  } else if (fabs(r1 - r0) >= h - 0.0001) {
     enclosed = gTrue;
     theta = 0; // make gcc happy
   } else {
@@ -4677,8 +4677,8 @@ GBool Gfx::doImage(Object *ref, Stream *str, GBool inlineImg) {
     out->updateRenderingIntent(state);
   }
 
-  if ((i = width * height) > 2026) {
-    i = 2026;
+  if ((i = width * height) > 1000) {
+    i = 1000;
   }
   opCounter += i;
 

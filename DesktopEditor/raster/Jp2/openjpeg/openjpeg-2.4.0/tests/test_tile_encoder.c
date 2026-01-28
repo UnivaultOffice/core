@@ -152,10 +152,10 @@ int main(int argc, char *argv[])
         }
     } else {
         num_comps = 3;
-        image_width = 2026;
-        image_height = 2026;
-        tile_width = 2026;
-        tile_height = 2026;
+        image_width = 2000;
+        image_height = 2000;
+        tile_width = 1000;
+        tile_height = 1000;
         comp_prec = 8;
         irreversible = 1;
         output_file = "test.j2k";

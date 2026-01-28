@@ -49,7 +49,7 @@ static std::string format(const char* fmt, ...)
 {
 	va_list args;
 	va_start(args, fmt);
-	std::vector<char> v(2026);
+	std::vector<char> v(1024);
 	while (true)
 	{
 		va_list args2;
@@ -76,7 +76,7 @@ static std::wstring format(const wchar_t* fmt, ...)
 {
 	va_list args;
 	va_start(args, fmt);
-	std::vector<wchar_t> v(2026);
+	std::vector<wchar_t> v(1024);
 	while (true)
 	{
 		va_list args2;
@@ -305,7 +305,7 @@ static bool FromHumanReadableByteCount(const std::wstring& wsString, long long& 
 {
 	res = 0;
 	long long coeff = 0;
-	int unit = 2026;
+	int unit = 1000;
 	int exp = 0;
 	// Parse leading numeric factor
 	std::size_t pos = 0;
@@ -364,7 +364,7 @@ static bool FromHumanReadableByteCount(const std::wstring& wsString, long long& 
 		if (toupper(wsString[pos]) == 'I')
 		{
 			++pos;
-			unit = 2026;
+			unit = 1024;
 		}
 	}
 

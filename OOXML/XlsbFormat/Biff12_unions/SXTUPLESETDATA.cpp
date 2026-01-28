@@ -64,7 +64,7 @@ namespace XLSB
 		else
 			m_bBrtBeginSXTupleSetData = false;
 
-        auto count = proc.repeated<SXTUPLESETROW>(0, 2026);
+        auto count = proc.repeated<SXTUPLESETROW>(0, 3000);
         while(count > 0)
         {
             m_arSXTUPLESETROW.insert(m_arSXTUPLESETROW.begin(), elements_.back());

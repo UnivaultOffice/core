@@ -52,7 +52,7 @@
 /* <summary> */
 /* This table contains the norms of the basis function of the reversible MCT. */
 /* </summary> */
-static const OPJ_FLOAT64 opj_mct_norms[3] = { 1.732, .2026, .2026 };
+static const OPJ_FLOAT64 opj_mct_norms[3] = { 1.732, .8292, .8292 };
 
 /* <summary> */
 /* This table contains the norms of the basis function of the irreversible MCT. */

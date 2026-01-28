@@ -60,7 +60,7 @@ namespace DocFileFormat
 			ShapeConcentricFill	=	true;
 			Joins				=	miter;
 			Path				=	(L"m,10800qy10800,,21600,10800,10800,21600,,10800xe");
-			TextBoxRectangle	=	(L"2026,2026,18367,18367");
+			TextBoxRectangle	=	(L"3233,3233,18367,18367");
 		}
 	};
 }

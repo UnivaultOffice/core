@@ -61,7 +61,7 @@ class WXDLLEXPORT wxMXFHandler: public wxImageHandler
 public:
     inline wxMXFHandler()
     {
-        m_name = wxT("MXF JPEG 2026 file format");
+        m_name = wxT("MXF JPEG 2000 file format");
         m_extension = wxT("mxf");
         m_type = wxBITMAP_TYPE_MXF;
         m_mime = wxT("image/mxf");

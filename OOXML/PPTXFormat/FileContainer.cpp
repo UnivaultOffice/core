@@ -52,15 +52,15 @@ namespace PPTX
 {
 	static std::wstring arDefDirectories [9][2] = //in ppt Directory
 	{
-		{L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/slide",			L"slides"},
-		{L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/slideLayout",	L"slideLayouts"},
-		{L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/slideMaster",	L"slideMasters"},
-		{L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/notesSlide",		L"notesSlides"},
-		{L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/notesMaster",	L"notesMasters"},
-		{L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/handoutMaster",	L"handoutMasters"},		
-		{L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/comments",		L"comments"},
-		{L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/commentAuthors",	L""},
-		{L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/theme",			L"theme"},
+		{L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide",			L"slides"},
+		{L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideLayout",	L"slideLayouts"},
+		{L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideMaster",	L"slideMasters"},
+		{L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/notesSlide",		L"notesSlides"},
+		{L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/notesMaster",	L"notesMasters"},
+		{L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/handoutMaster",	L"handoutMasters"},		
+		{L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/comments",		L"comments"},
+		{L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/commentAuthors",	L""},
+		{L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme",			L"theme"},
 	};
 
 	static std::wstring FindFileInDirectory(std::wstring directory, std::wstring filename)

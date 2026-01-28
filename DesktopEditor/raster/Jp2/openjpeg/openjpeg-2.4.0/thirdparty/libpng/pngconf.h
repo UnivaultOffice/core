@@ -395,7 +395,7 @@
 #      endif /* __GNUC__.__GNUC_MINOR__ > 3.0 */
 #    endif /* __GNUC__ >= 3 */
 
-#  elif defined(_MSC_VER)  && (_MSC_VER >= 2026)
+#  elif defined(_MSC_VER)  && (_MSC_VER >= 1300)
 #    ifndef PNG_USE_RESULT
 #      define PNG_USE_RESULT /* not supported */
 #    endif
@@ -403,7 +403,7 @@
 #      define PNG_NORETURN   __declspec(noreturn)
 #    endif
 #    ifndef PNG_ALLOCATED
-#      if (_MSC_VER >= 2026)
+#      if (_MSC_VER >= 1400)
 #        define PNG_ALLOCATED __declspec(restrict)
 #      endif
 #    endif
@@ -414,7 +414,7 @@
 #      define PNG_PRIVATE __declspec(deprecated)
 #    endif
 #    ifndef PNG_RESTRICT
-#      if (_MSC_VER >= 2026)
+#      if (_MSC_VER >= 1400)
 #        define PNG_RESTRICT __restrict
 #      endif
 #    endif

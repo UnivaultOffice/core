@@ -84,7 +84,7 @@ void SST::readFields(CFRecord& record)
 
 void SST::writeFields(CFRecord& record)
 {
-    const auto MaxRecordSize = 2026;
+    const auto MaxRecordSize = 8224;
     cstUnique = rgb.size();
 	if(cstTotal == 0 && cstTotal < cstUnique)
 		cstTotal = cstUnique;

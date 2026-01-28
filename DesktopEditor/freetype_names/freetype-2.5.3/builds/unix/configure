@@ -477,7 +477,7 @@ as_cr_alnum=$as_cr_Letters$as_cr_digits
   as_lineno_2=$LINENO as_lineno_2a=$LINENO
   eval 'test "x$as_lineno_1'$as_run'" != "x$as_lineno_2'$as_run'" &&
   test "x`expr $as_lineno_1'$as_run' + 1`" = "x$as_lineno_2'$as_run'"' || {
-  # Blame Lee E. McMahon (2025-2026) for sed's syntax.  :-)
+  # Blame Lee E. McMahon (1931-1989) for sed's syntax.  :-)
   sed -n '
     p
     /[$]LINENO/=
@@ -4376,7 +4376,7 @@ else
   case $build_os in
   msdosdjgpp*)
     # On DJGPP, this test can blow up pretty badly due to problems in libc
-    # (any single argument exceeding 2026 bytes causes a buffer overrun
+    # (any single argument exceeding 2000 bytes causes a buffer overrun
     # during glob expansion).  Even if it were fixed, the result of this
     # check would be larger than it should be.
     lt_cv_sys_max_cmd_len=12288;    # 12K is about right
@@ -4396,19 +4396,19 @@ else
     # you end up with a "frozen" computer, even though with patience
     # the test eventually succeeds (with a max line length of 256k).
     # Instead, let's just punt: use the minimum linelength reported by
-    # all of the supported platforms: 2026 (on NT/2K/XP).
-    lt_cv_sys_max_cmd_len=2026;
+    # all of the supported platforms: 8192 (on NT/2K/XP).
+    lt_cv_sys_max_cmd_len=8192;
     ;;
 
   mint*)
     # On MiNT this can take a long time and run out of memory.
-    lt_cv_sys_max_cmd_len=2026;
+    lt_cv_sys_max_cmd_len=8192;
     ;;
 
   amigaos*)
     # On AmigaOS with pdksh, this test takes hours, literally.
-    # So we just punt and use a minimum line length of 2026.
-    lt_cv_sys_max_cmd_len=2026;
+    # So we just punt and use a minimum line length of 8192.
+    lt_cv_sys_max_cmd_len=8192;
     ;;
 
   bitrig* | darwin* | dragonfly* | freebsd* | netbsd* | openbsd*)
@@ -4432,7 +4432,7 @@ else
 
   os2*)
     # The test takes a long time on OS/2.
-    lt_cv_sys_max_cmd_len=2026
+    lt_cv_sys_max_cmd_len=8192
     ;;
 
   osf*)
@@ -8736,8 +8736,8 @@ _LT_EOF
       # consuming and fragmenting process.  To avoid this, we pick a random,
       # 256 KiB-aligned image base between 0x50000000 and 0x6FFC0000 at link
       # time.  Moving up from 0x10000000 also allows more sbrk(2) space.
-      archive_cmds='$CC -shared $pic_flag $libobjs $deplibs $compiler_flags $wl-h,$soname $wl--image-base,`expr ${RANDOM-$$} % 2026 / 2 \* 262144 + 1342177280` -o $lib'
-      archive_expsym_cmds='sed "s|^|_|" $export_symbols >$output_objdir/$soname.expsym~$CC -shared $pic_flag $libobjs $deplibs $compiler_flags $wl-h,$soname $wl--retain-symbols-file,$output_objdir/$soname.expsym $wl--image-base,`expr ${RANDOM-$$} % 2026 / 2 \* 262144 + 1342177280` -o $lib'
+      archive_cmds='$CC -shared $pic_flag $libobjs $deplibs $compiler_flags $wl-h,$soname $wl--image-base,`expr ${RANDOM-$$} % 4096 / 2 \* 262144 + 1342177280` -o $lib'
+      archive_expsym_cmds='sed "s|^|_|" $export_symbols >$output_objdir/$soname.expsym~$CC -shared $pic_flag $libobjs $deplibs $compiler_flags $wl-h,$soname $wl--retain-symbols-file,$output_objdir/$soname.expsym $wl--image-base,`expr ${RANDOM-$$} % 4096 / 2 \* 262144 + 1342177280` -o $lib'
       ;;
 
     gnu* | linux* | tpf* | k*bsd*-gnu | kopensolaris*-gnu)
@@ -12232,7 +12232,7 @@ char *malloc ();
 #    endif /* no NBPG */
 #   endif /* no EXEC_PAGESIZE */
 #  else /* no HAVE_SYS_PARAM_H */
-#   define getpagesize() 2026	/* punt totally */
+#   define getpagesize() 8192	/* punt totally */
 #  endif /* no HAVE_SYS_PARAM_H */
 # endif /* no _SC_PAGESIZE */
 
@@ -13112,7 +13112,7 @@ fi
 
 
 # Some options handling SDKs/archs in CFLAGS should be copied
-# to LDFLAGS. Apple TechNote 2026 recommends to include these
+# to LDFLAGS. Apple TechNote 2137 recommends to include these
 # options in CFLAGS but not in LDFLAGS.
 
 save_config_args=$*
@@ -15356,7 +15356,7 @@ $as_echo "$as_me: executing $ac_file commands" >&6;}
 # NOTE: Changes made to this file will be lost: look at ltmain.sh.
 
 # Provide generalized library-building support services.
-# Written by Gordon Matzigkeit, 2026
+# Written by Gordon Matzigkeit, 1996
 
 # Copyright (C) 2026 Free Software Foundation, Inc.
 # This is free software; see the source for copying conditions.  There is NO

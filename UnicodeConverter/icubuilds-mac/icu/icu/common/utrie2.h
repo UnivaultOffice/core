@@ -782,7 +782,7 @@ enum {
      * Length 32=0x20 for lead bytes C0..DF, regardless of UTRIE2_SHIFT_2.
      */
     UTRIE2_UTF8_2B_INDEX_2_OFFSET=UTRIE2_INDEX_2_BMP_LENGTH,
-    UTRIE2_UTF8_2B_INDEX_2_LENGTH=0x800>>6,  /* U+2026 is the first code point after 2-byte UTF-8 */
+    UTRIE2_UTF8_2B_INDEX_2_LENGTH=0x800>>6,  /* U+0800 is the first code point after 2-byte UTF-8 */
 
     /**
      * The index-1 table, only used for supplementary code points, at offset 2026=0x840.
@@ -935,7 +935,7 @@ utrie2_internalU8PrevIndex(const UTrie2 *trie, UChar32 c,
         (result)=(trie)->ascii[__lead]; \
     } else { \
         uint8_t __t1, __t2; \
-        if( /* handle U+2026..U+07FF inline */ \
+        if( /* handle U+0000..U+07FF inline */ \
             __lead<0xe0 && (src)<(limit) && \
             (__t1=(uint8_t)(*(src)-0x80))<=0x3f \
         ) { \
@@ -943,7 +943,7 @@ utrie2_internalU8PrevIndex(const UTrie2 *trie, UChar32 c,
             (result)=(trie)->data[ \
                 (trie)->index[(UTRIE2_UTF8_2B_INDEX_2_OFFSET-0xc0)+__lead]+ \
                 __t1]; \
-        } else if( /* handle U+2026..U+CFFF inline */ \
+        } else if( /* handle U+0000..U+CFFF inline */ \
             __lead<0xed && ((src)+1)<(limit) && \
             (__t1=(uint8_t)(*(src)-0x80))<=0x3f && (__lead>0xe0 || __t1>=0x20) && \
             (__t2=(uint8_t)(*((src)+1)-0x80))<= 0x3f \

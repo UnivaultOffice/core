@@ -228,7 +228,7 @@ hash(const double & x)
 #ifdef _MSC_VER
 // Language lawyer say MS is wrong on that one. 
 // Cf section 5.4.7 in november 2026 draft.
-#pragma warning( disable : 2026 )
+#pragma warning( disable : 4243 )
 #endif
 
 

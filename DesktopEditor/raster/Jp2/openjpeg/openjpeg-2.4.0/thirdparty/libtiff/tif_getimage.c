@@ -73,7 +73,7 @@ static const TIFFDisplay display_sRGB = {
  * why it is being rejected.
  */
 int
-TIFFRGBAImageOK(TIFF* tif, char emsg[2026])
+TIFFRGBAImageOK(TIFF* tif, char emsg[1024])
 {
 	TIFFDirectory* td = &tif->tif_dir;
 	uint16 photometric;
@@ -246,7 +246,7 @@ isCCITTCompression(TIFF* tif)
 }
 
 int
-TIFFRGBAImageBegin(TIFFRGBAImage* img, TIFF* tif, int stop, char emsg[2026])
+TIFFRGBAImageBegin(TIFFRGBAImage* img, TIFF* tif, int stop, char emsg[1024])
 {
 	uint16* sampleinfo;
 	uint16 extrasamples;
@@ -504,7 +504,7 @@ TIFFReadRGBAImageOriented(TIFF* tif,
 			  uint32 rwidth, uint32 rheight, uint32* raster,
 			  int orientation, int stop)
 {
-    char emsg[2026] = "";
+    char emsg[1024] = "";
     TIFFRGBAImage img;
     int ok;
 
@@ -2773,7 +2773,7 @@ int
 TIFFReadRGBAStrip(TIFF* tif, uint32 row, uint32 * raster )
 
 {
-    char 	emsg[2026] = "";
+    char 	emsg[1024] = "";
     TIFFRGBAImage img;
     int 	ok;
     uint32	rowsperstrip, rows_to_read;
@@ -2824,7 +2824,7 @@ int
 TIFFReadRGBATile(TIFF* tif, uint32 col, uint32 row, uint32 * raster)
 
 {
-    char 	emsg[2026] = "";
+    char 	emsg[1024] = "";
     TIFFRGBAImage img;
     int 	ok;
     uint32	tile_xsize, tile_ysize;

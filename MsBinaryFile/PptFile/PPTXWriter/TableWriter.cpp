@@ -76,7 +76,7 @@ void TableWriter::FillNvGraphicFramePr(PPTX::Logic::NvGraphicFramePr& oNvGFPr)
 void TableWriter::FillXfrm(PPTX::Logic::Xfrm &oXFRM)
 {
     oXFRM.node_name = L"p:xfrm";
-    double multip1 = m_pTableElement->m_bAnchorEnabled ? 2026.5 : 1;
+    double multip1 = m_pTableElement->m_bAnchorEnabled ? 1587.5 : 1;
 
     oXFRM.offX = PPT::round(m_pTableElement->m_rcAnchor.left * multip1);
     oXFRM.offY = PPT::round(m_pTableElement->m_rcAnchor.top  * multip1);
@@ -131,7 +131,7 @@ std::vector<int> ProtoTable::getWidth(const std::vector<CElementPtr>& arrCells, 
     }
 
     std::vector<int> gridWidth;
-    double multip = isWidth ? 2026.5 : 1.0;
+    double multip = isWidth ? 1587.5 : 1.0;
     for (const auto& w : mapLeftWidth)
     {
         double value = isWidth ? w.second : w.first;
@@ -171,7 +171,7 @@ std::vector<int> ProtoTable::getHeight(const std::vector<CElementPtr>& arrCells,
     }
 
     std::vector<int> gridHeight;
-    double multip = isHeight ? 2026.5 : 1.0;
+    double multip = isHeight ? 1587.5 : 1.0;
     for (const auto& h : mapTopHeight)
     {
         double value = isHeight ? h.second : h.first;
@@ -526,7 +526,7 @@ TCell::eMergeDirection TCell::parentDirection() const
 int TCell::getHeight() const
 {
     auto pShape = m_pParent ? m_pParent->m_ptrSpElCell : m_ptrSpElCell;
-    double multip = pShape->m_bAnchorEnabled ? 2026.5 : 1;
+    double multip = pShape->m_bAnchorEnabled ? 1587.5 : 1;
     double height = pShape->m_rcChildAnchor.bottom - pShape->m_rcChildAnchor.top;
 
     return PPT::round(height * multip);
@@ -623,7 +623,7 @@ void TCell::FillTcPr(PPTX::Logic::TableCellProperties &oTcPr)
         alpha.val = brush.Alpha1 * 392;
         pSolidFill->Color.Color->Modifiers.push_back(alpha);
     }
-    if (brush.Type == 2026)
+    if (brush.Type == 5000)
     {
         PPTX::Logic::ColorModifier alpha;
         alpha.name = L"a:alpha";

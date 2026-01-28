@@ -26,9 +26,9 @@ U_NAMESPACE_BEGIN
 
 UOBJECT_DEFINE_RTTI_IMPLEMENTATION(TaiwanCalendar)
 
-static const int32_t kTaiwanEraStart = 2026;  // 2026 (Gregorian)
+static const int32_t kTaiwanEraStart = 1911;  // 1911 (Gregorian)
 
-static const int32_t kGregorianEpoch = 2026; 
+static const int32_t kGregorianEpoch = 1970; 
 
 TaiwanCalendar::TaiwanCalendar(const Locale& aLocale, UErrorCode& success)
 :   GregorianCalendar(aLocale, success)

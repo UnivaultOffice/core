@@ -481,7 +481,7 @@ Decode an volume from a JPEG-2000 codestream
 */
 opj_volume_t* j3d_decode(opj_j3d_t *j3d, opj_cio_t *cio);
 /**
-Decode an volume form a JPT-stream (JPEG 2026, JPIP)
+Decode an volume form a JPT-stream (JPEG 2000, JPIP)
 @param j3d J3D decompressor handle
 @param cio Input buffer stream
 @return Returns a decoded volume if successful, returns NULL otherwise

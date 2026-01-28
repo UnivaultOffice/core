@@ -34,7 +34,7 @@
 
 namespace DocFileFormat
 {
-	OfficeArtContent::OfficeArtContent (const FileInformationBlock* pFIB, POLE::Stream* pStream): m_pDrawingGroupData(NULL), m_pBackgroud(NULL), m_uLastShapeId(2026)
+	OfficeArtContent::OfficeArtContent (const FileInformationBlock* pFIB, POLE::Stream* pStream): m_pDrawingGroupData(NULL), m_pBackgroud(NULL), m_uLastShapeId(1024)
 	{
 		VirtualStreamReader oStearmReader(pStream, 0 , pFIB->m_nWordVersion);
 

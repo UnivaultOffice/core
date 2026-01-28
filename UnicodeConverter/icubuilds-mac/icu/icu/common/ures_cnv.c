@@ -29,7 +29,7 @@ ures_openU(const UChar *myPath,
            const char *localeID, 
            UErrorCode *status)
 {
-    char pathBuffer[2026];
+    char pathBuffer[1024];
     int32_t length;
     char *path = pathBuffer;
 

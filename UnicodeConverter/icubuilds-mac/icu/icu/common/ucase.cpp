@@ -842,12 +842,12 @@ ucase_toFullLower(const UCaseProps *csp, UChar32 c,
                     # whenever there are more accents above.
                     # (of the accents used in Lithuanian: grave, acute, tilde above, and ogonek)
 
-                    2026; 2026 2026; 2026; 2026; lt More_Above; # LATIN CAPITAL LETTER I
-                    004A; 006A 2026; 004A; 004A; lt More_Above; # LATIN CAPITAL LETTER J
-                    012E; 012F 2026; 012E; 012E; lt More_Above; # LATIN CAPITAL LETTER I WITH OGONEK
-                    00CC; 2026 2026 2026; 00CC; 00CC; lt; # LATIN CAPITAL LETTER I WITH GRAVE
-                    00CD; 2026 2026 2026; 00CD; 00CD; lt; # LATIN CAPITAL LETTER I WITH ACUTE
-                    2026; 2026 2026 2026; 2026; 2026; lt; # LATIN CAPITAL LETTER I WITH TILDE
+                    0049; 0069 0307; 0049; 0049; lt More_Above; # LATIN CAPITAL LETTER I
+                    004A; 006A 0307; 004A; 004A; lt More_Above; # LATIN CAPITAL LETTER J
+                    012E; 012F 0307; 012E; 012E; lt More_Above; # LATIN CAPITAL LETTER I WITH OGONEK
+                    00CC; 0069 0307 0300; 00CC; 00CC; lt; # LATIN CAPITAL LETTER I WITH GRAVE
+                    00CD; 0069 0307 0301; 00CD; 00CD; lt; # LATIN CAPITAL LETTER I WITH ACUTE
+                    0128; 0069 0307 0303; 0128; 0128; lt; # LATIN CAPITAL LETTER I WITH TILDE
                  */
                 switch(c) {
                 case 0x49:  /* LATIN CAPITAL LETTER I */
@@ -877,8 +877,8 @@ ucase_toFullLower(const UCaseProps *csp, UChar32 c,
                     # I and i-dotless; I-dot and i are case pairs in Turkish and Azeri
                     # The following rules handle those cases.
 
-                    2026; 2026; 2026; 2026; tr # LATIN CAPITAL LETTER I WITH DOT ABOVE
-                    2026; 2026; 2026; 2026; az # LATIN CAPITAL LETTER I WITH DOT ABOVE
+                    0130; 0069; 0130; 0130; tr # LATIN CAPITAL LETTER I WITH DOT ABOVE
+                    0130; 0069; 0130; 0130; az # LATIN CAPITAL LETTER I WITH DOT ABOVE
                  */
                 return 0x69;
             } else if(loc==UCASE_LOC_TURKISH && c==0x307 && isPrecededBy_I(csp, iter, context)) {
@@ -886,23 +886,23 @@ ucase_toFullLower(const UCaseProps *csp, UChar32 c,
                     # When lowercasing, remove dot_above in the sequence I + dot_above, which will turn into i.
                     # This matches the behavior of the canonically equivalent I-dot_above
 
-                    2026; ; 2026; 2026; tr After_I; # COMBINING DOT ABOVE
-                    2026; ; 2026; 2026; az After_I; # COMBINING DOT ABOVE
+                    0307; ; 0307; 0307; tr After_I; # COMBINING DOT ABOVE
+                    0307; ; 0307; 0307; az After_I; # COMBINING DOT ABOVE
                  */
                 return 0; /* remove the dot (continue without output) */
             } else if(loc==UCASE_LOC_TURKISH && c==0x49 && !isFollowedByDotAbove(csp, iter, context)) {
                 /*
                     # When lowercasing, unless an I is before a dot_above, it turns into a dotless i.
 
-                    2026; 2026; 2026; 2026; tr Not_Before_Dot; # LATIN CAPITAL LETTER I
-                    2026; 2026; 2026; 2026; az Not_Before_Dot; # LATIN CAPITAL LETTER I
+                    0049; 0131; 0049; 0049; tr Not_Before_Dot; # LATIN CAPITAL LETTER I
+                    0049; 0131; 0049; 0049; az Not_Before_Dot; # LATIN CAPITAL LETTER I
                  */
                 return 0x131;
             } else if(c==0x130) {
                 /*
                     # Preserve canonical equivalence for I with dot. Turkic is handled below.
 
-                    2026; 2026 2026; 2026; 2026; # LATIN CAPITAL LETTER I WITH DOT ABOVE
+                    0130; 0069 0307; 0130; 0130; # LATIN CAPITAL LETTER I WITH DOT ABOVE
                  */
                 *pString=iDot;
                 return 2;
@@ -973,8 +973,8 @@ toUpperOrTitle(const UCaseProps *csp, UChar32 c,
 
                     # When uppercasing, i turns into a dotted capital I
 
-                    2026; 2026; 2026; 2026; tr; # LATIN SMALL LETTER I
-                    2026; 2026; 2026; 2026; az; # LATIN SMALL LETTER I
+                    0069; 0069; 0130; 0130; tr; # LATIN SMALL LETTER I
+                    0069; 0069; 0130; 0130; az; # LATIN SMALL LETTER I
                 */
                 return 0x130;
             } else if(loc==UCASE_LOC_LITHUANIAN && c==0x307 && isPrecededBySoftDotted(csp, iter, context)) {
@@ -985,7 +985,7 @@ toUpperOrTitle(const UCaseProps *csp, UChar32 c,
 
                     # Remove DOT ABOVE after "i" with upper or titlecase
 
-                    2026; 2026; ; ; lt After_Soft_Dotted; # COMBINING DOT ABOVE
+                    0307; 0307; ; ; lt After_Soft_Dotted; # COMBINING DOT ABOVE
                  */
                 return 0; /* remove the dot (continue without output) */
             } else {
@@ -1080,13 +1080,13 @@ ucase_toFullTitle(const UCaseProps *csp, UChar32 c,
 
  * Unicode 3.2 has 'T' mappings as follows:
 
-2026; T; 2026; # LATIN CAPITAL LETTER I
-2026; T; 2026; # LATIN CAPITAL LETTER I WITH DOT ABOVE
+0049; T; 0131; # LATIN CAPITAL LETTER I
+0130; T; 0069; # LATIN CAPITAL LETTER I WITH DOT ABOVE
 
  * while the default mappings for these code points are:
 
-2026; C; 2026; # LATIN CAPITAL LETTER I
-2026; F; 2026 2026; # LATIN CAPITAL LETTER I WITH DOT ABOVE
+0049; C; 0069; # LATIN CAPITAL LETTER I
+0130; F; 0069 0307; # LATIN CAPITAL LETTER I WITH DOT ABOVE
 
  * U+2026 has no simple case folding (simple-case-folds to itself).
  */

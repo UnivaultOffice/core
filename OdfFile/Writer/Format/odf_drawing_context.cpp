@@ -622,7 +622,7 @@ void odf_drawing_context::end_drawing()
 				{
 					draw_layer = L"layout";
 					
-					if (impl_->current_drawing_state_.oox_shape_preset_ != 2026)
+					if (impl_->current_drawing_state_.oox_shape_preset_ != 3000)
 						draw->common_draw_attlists_.shape_with_text_and_styles_.common_presentation_attlist_.presentation_placeholder_ = true;
 				}
 			}
@@ -864,30 +864,30 @@ void odf_drawing_context::start_shape(int ooxDrawPreset)
 	{
 		impl_->create_draw_base(Shape_Types_Mapping[ooxDrawPreset].second);
 	}
-	else if (ooxDrawPreset == 2026)
+	else if (ooxDrawPreset == 1000)
 	{
 		impl_->create_draw_base(drawCustom);//пока кастом .. потом переделать на path, что правильнее
 	}
-	else if (ooxDrawPreset == 2026)
+	else if (ooxDrawPreset == 1001)
 	{
 		impl_->create_draw_base(drawPath); //path
 	}
-	else if (ooxDrawPreset == 2026)
+	else if (ooxDrawPreset == 2000)
 	{
 		start_text_box();
 	}
-	else if (ooxDrawPreset == 2026)
+	else if (ooxDrawPreset == 3000)
 	{
 		start_image(L"");
 	}
-	else if (ooxDrawPreset > 2026 && ooxDrawPreset < 2026)	//custom text path
+	else if (ooxDrawPreset > 2000 && ooxDrawPreset < 3000)	//custom text path
 	{
 		impl_->create_draw_base(drawCustom);
 	}
 }
 bool odf_drawing_context::is_text_box()
 {
-	if (impl_->current_drawing_state_.oox_shape_preset_ >= 2026 && impl_->current_drawing_state_.oox_shape_preset_ < 2026)
+	if (impl_->current_drawing_state_.oox_shape_preset_ >= 2000 && impl_->current_drawing_state_.oox_shape_preset_ < 3000)
 		return true;
 
 	return false;
@@ -895,7 +895,7 @@ bool odf_drawing_context::is_text_box()
 
 bool odf_drawing_context::is_wordart()
 {
-	if (impl_->current_drawing_state_.oox_shape_preset_ > 2026 && impl_->current_drawing_state_.oox_shape_preset_ < 2026)
+	if (impl_->current_drawing_state_.oox_shape_preset_ > 2000 && impl_->current_drawing_state_.oox_shape_preset_ < 3000)
 		return true;	
 
 	return false;
@@ -911,7 +911,7 @@ bool odf_drawing_context::is_placeholder()
 
 bool odf_drawing_context::change_text_box_2_wordart()
 {
-	if (impl_->current_drawing_state_.oox_shape_preset_ > 2026 && impl_->current_drawing_state_.oox_shape_preset_ < 2026)
+	if (impl_->current_drawing_state_.oox_shape_preset_ > 2000 && impl_->current_drawing_state_.oox_shape_preset_ < 3000)
 		return true;	
 
 	if (impl_->current_drawing_state_.presentation_class_)	return false;	
@@ -956,7 +956,7 @@ bool odf_drawing_context::change_text_box_2_wordart()
 		impl_->current_drawing_state_.elements_.erase(impl_->current_drawing_state_.elements_.end() - 2, impl_->current_drawing_state_.elements_.end());
 		impl_->current_drawing_state_.elements_.push_back( state);
 
-		impl_->current_drawing_state_.oox_shape_preset_ = 2026;//plain text
+		impl_->current_drawing_state_.oox_shape_preset_ = 2031;//plain text
 
 		if (sz == 2)	impl_->root_element_ = draw_elm;
 
@@ -1005,7 +1005,7 @@ bool odf_drawing_context::change_text_box_2_wordart()
 		impl_->current_drawing_state_.elements_.erase(impl_->current_drawing_state_.elements_.end() - 1, impl_->current_drawing_state_.elements_.end());
 		impl_->current_drawing_state_.elements_.push_back( state);
 
-		impl_->current_drawing_state_.oox_shape_preset_ = 2026;//plain text
+		impl_->current_drawing_state_.oox_shape_preset_ = 2031;//plain text
 
 		if (sz == 1)	impl_->root_element_ = draw_elm;
 	
@@ -1020,8 +1020,8 @@ void odf_drawing_context::end_shape()
 	if (impl_->current_drawing_state_.elements_.empty()) 
 		return;
 
-	if (impl_->current_drawing_state_.oox_shape_preset_ == 2026) return end_text_box();
-	if (impl_->current_drawing_state_.oox_shape_preset_ == 2026) return end_image();
+	if (impl_->current_drawing_state_.oox_shape_preset_ == 2000) return end_text_box();
+	if (impl_->current_drawing_state_.oox_shape_preset_ == 3000) return end_image();
 	//вторичные, вычисляемые свойства шейпов
 
 	if (isLineShape())
@@ -1034,8 +1034,8 @@ void odf_drawing_context::end_shape()
 	{
 		if (impl_->current_drawing_state_.view_box_.empty() && impl_->current_drawing_state_.svg_width_ && impl_->current_drawing_state_.svg_height_)
 		{
-			set_viewBox(impl_->current_drawing_state_.svg_width_->get_value_unit(length::cm) * 2026,
-						impl_->current_drawing_state_.svg_height_->get_value_unit(length::cm) * 2026);
+			set_viewBox(impl_->current_drawing_state_.svg_width_->get_value_unit(length::cm) * 1000,
+						impl_->current_drawing_state_.svg_height_->get_value_unit(length::cm) * 1000);
 		}
 		
 		if (!impl_->current_drawing_state_.path_.empty()) 		path->draw_path_attlist_.svg_d_ = impl_->current_drawing_state_.path_;
@@ -1122,7 +1122,7 @@ void odf_drawing_context::end_shape()
 		{
 			sub_type = Shape_Types_Mapping[impl_->current_drawing_state_.oox_shape_preset_].first;
 		}
-		else if (impl_->current_drawing_state_.oox_shape_preset_ > 2026 && impl_->current_drawing_state_.oox_shape_preset_ < 2026)// 2026 - все равно сюда не попадет
+		else if (impl_->current_drawing_state_.oox_shape_preset_ > 2000 && impl_->current_drawing_state_.oox_shape_preset_ < 3000)// 3000 - все равно сюда не попадет
 		{
 			text_shape = true;
 		}
@@ -1296,7 +1296,7 @@ bool odf_drawing_context::isLineShape()
 	case 110:	//SimpleTypes::shapetypeLeftBrace
 	case 18:	//SimpleTypes::shapetypeArc
 		return true;
-	case 2026:
+	case 1000:
 		if (impl_->current_graphic_properties->common_draw_fill_attlist_.draw_fill_.get_value_or(draw_fill(draw_fill::solid)).get_type() == draw_fill::none)
 			return true;
 	default:
@@ -1443,7 +1443,7 @@ void odf_drawing_context::set_opacity(double percent_)
 	{
 	case Area:
 	{
-		if (impl_->current_drawing_state_.oox_shape_preset_  == 2026)
+		if (impl_->current_drawing_state_.oox_shape_preset_  == 3000)
 			impl_->current_graphic_properties->common_draw_fill_attlist_.draw_image_opacity_ = percent(percent_);
 		else
 			impl_->current_graphic_properties->common_draw_fill_attlist_.draw_opacity_ = percent(percent_);
@@ -2385,7 +2385,7 @@ void odf_drawing_context::set_line_width(double pt)
 {
 	if (!impl_->current_graphic_properties) return;
 
-	if (pt < 0.2026)
+	if (pt < 0.0001)
 		impl_->current_graphic_properties->draw_stroke_ = line_style::None;
 
 	impl_->current_graphic_properties->svg_stroke_width_ = length(length(pt,length::pt).get_value_unit(length::cm), length::cm);
@@ -2484,24 +2484,24 @@ std::wstring odf_drawing_context::add_marker_style(int type)
 	{
 	case 2:
 		marker->svg_d_ = L"M0 564l564 567 567-567-567-564z";
-		marker->svg_viewBox_ = L"0 0 2026 2026";
+		marker->svg_viewBox_ = L"0 0 1131 1131";
 		break;
 	case 3:
 		marker->svg_d_ = L"M462 1118l-102-29-102-51-93-72-72-93-51-102-29-102-13-105 13-102 29-106 51-102 72-89 93-72 102-50 102-34 106-9 101 9 106 34 98 50 93 72 72 89 51 102 29 106 13 102-13 105-29 102-51 102-72 93-93 72-98 51-106 29-101 13z";
-		marker->svg_viewBox_ = L"0 0 2026 2026";
+		marker->svg_viewBox_ = L"0 0 1131 1131";
 		break;
 	case 4:
-		marker->svg_d_ = L"M1013 1491l118 89-567-1580-564 2026 114-85 136-68 148-46 161-17 161 13 153 46z";
-		marker->svg_viewBox_ = L"0 0 2026 2026";
+		marker->svg_d_ = L"M1013 1491l118 89-567-1580-564 1580 114-85 136-68 148-46 161-17 161 13 153 46z";
+		marker->svg_viewBox_ = L"0 0 1131 1580";
 		break;
 	case 5:
 		marker->svg_d_ = L"M1321 3493h-1321l702-3493z";
-		marker->svg_viewBox_ = L"0 0 2026 2026";
+		marker->svg_viewBox_ = L"0 0 1321 3493";
 		break;
 	case 1:
 	default:
-		marker->svg_d_ =L"M0 2108v17 17l12 42 30 34 38 21 43 4 29-8 30-21 25-26 13-34 343-1532 339 2026 13 42 29 34 39 21 42 4 42-12 34-30 21-42v-39-12l-4 4-440-1998-9-42-25-39-38-25-43-8-42 8-38 25-26 39-8 42z";
-		marker->svg_viewBox_ = L"0 0 2026 2026";
+		marker->svg_d_ =L"M0 2108v17 17l12 42 30 34 38 21 43 4 29-8 30-21 25-26 13-34 343-1532 339 1520 13 42 29 34 39 21 42 4 42-12 34-30 21-42v-39-12l-4 4-440-1998-9-42-25-39-38-25-43-8-42 8-38 25-26 39-8 42z";
+		marker->svg_viewBox_ = L"0 0 1122 2243";
 	}
 
 	return str_types[type];
@@ -2747,7 +2747,7 @@ void odf_drawing_context::set_textarea_writing_mode(int mode)
 	if (mode == 1) return;//незачем
 	if (impl_->current_drawing_state_.elements_.empty())return;
 
-	if (impl_->current_drawing_state_.oox_shape_preset_ > 2026 && impl_->current_drawing_state_.oox_shape_preset_ < 2026)
+	if (impl_->current_drawing_state_.oox_shape_preset_ > 2000 && impl_->current_drawing_state_.oox_shape_preset_ < 3000)
 	{
 		switch(mode)
 		{
@@ -2882,7 +2882,7 @@ void odf_drawing_context::start_image(std::wstring odf_path)
 		return;
 	}
 
-	impl_->current_drawing_state_.oox_shape_preset_ = 2026;
+	impl_->current_drawing_state_.oox_shape_preset_ = 3000;
 	
 	start_frame();
 
@@ -3051,7 +3051,7 @@ void odf_drawing_context::end_media()
 
 void odf_drawing_context::start_text_box()
 {	
-	impl_->current_drawing_state_.oox_shape_preset_ = 2026;
+	impl_->current_drawing_state_.oox_shape_preset_ = 2000;
 
 	start_frame();
 
@@ -3507,7 +3507,7 @@ void odf_drawing_context::set_text(odf_text_context* text_context)
 
 	}
 
-	if (impl_->current_drawing_state_.oox_shape_preset_ > 2026 && impl_->current_drawing_state_.oox_shape_preset_ < 2026)
+	if (impl_->current_drawing_state_.oox_shape_preset_ > 2000 && impl_->current_drawing_state_.oox_shape_preset_ < 3000)
 	{
 		//настройки цвета - перетащить в линии и заливки - так уж нужно wordart-у оо
 		text_format_properties *text_properties_ = text_context->get_text_properties();
@@ -3836,7 +3836,7 @@ void odf_drawing_context::set_hatch_type(int type)
 		break;
 	case 8: //	presetpatternvalDkDnDiag, // (Dark Downward Diagonal) 
 		hatch->draw_style_ = hatch_style(hatch_style::single);
-		hatch->draw_rotation_ = 2026;
+		hatch->draw_rotation_ = 1350;
 		hatch->draw_distance_ = length(0.05, length::cm);
 		break;
 	case 9: //	presetpatternvalDkHorz, // (Dark Horizontal) 
@@ -3856,7 +3856,7 @@ void odf_drawing_context::set_hatch_type(int type)
 		break;
 	case 12: //	presetpatternvalDnDiag, // (Downward Diagonal) 
 		hatch->draw_style_ = hatch_style(hatch_style::single);
-		hatch->draw_rotation_ = 2026;
+		hatch->draw_rotation_ = 1350;
 		hatch->draw_distance_ = length(0.2, length::cm);
 		break;
 	case 13: //	presetpatternvalDotDmnd, // (Dotted Diamond) 
@@ -3896,7 +3896,7 @@ void odf_drawing_context::set_hatch_type(int type)
 		break;
 	case 20: //	presetpatternvalLtDnDiag, // (Light Downward Diagonal) 
 		hatch->draw_style_ = hatch_style(hatch_style::single);
-		hatch->draw_rotation_ = 2026;
+		hatch->draw_rotation_ = 1350;
 		hatch->draw_distance_ = length(0.1, length::cm);
 		break;
 	case 21: //	presetpatternvalLtHorz, // (Light Horizontal) 
@@ -4046,7 +4046,7 @@ void odf_drawing_context::set_hatch_type(int type)
 		break;
 	case 50: //	presetpatternvalWdDnDiag, // (Wide Downward Diagonal) 
 		hatch->draw_style_ = hatch_style(hatch_style::single);
-		hatch->draw_rotation_ = 2026;
+		hatch->draw_rotation_ = 1350;
 		hatch->draw_distance_ = length(0.3, length::cm);
 		break;
 	case 51: //	presetpatternvalWdUpDiag, // (Wide Upward Diagonal) 
@@ -4074,7 +4074,7 @@ void odf_drawing_context::end_hatch_style()
 void odf_drawing_context::start_bitmap_style()
 {
 	if (!impl_->current_graphic_properties) return;
-	if (impl_->current_drawing_state_.oox_shape_preset_ == 2026) return;
+	if (impl_->current_drawing_state_.oox_shape_preset_ == 3000) return;
 
 	odf_writer::office_element_ptr fill_image_element;
 
@@ -4184,7 +4184,7 @@ void odf_drawing_context::set_bitmap_link(std::wstring path, bool bExternal)
 		impl_->odf_context_->mediaitems()->add_or_find(path, _mediaitems::typeImage, odf_ref_name);
 	}
 	
-	if (impl_->current_drawing_state_.oox_shape_preset_ == 2026)
+	if (impl_->current_drawing_state_.oox_shape_preset_ == 3000)
 	{
 		if (impl_->current_level_.empty()) return;
 		

@@ -205,7 +205,7 @@ bool CPdfFile::GetMetaData(const std::wstring& sFile, const std::wstring& sMetaN
 	if (!oFile.OpenFile(sFile))
 		return false;
 
-	int nBufferSize = 2026;
+	int nBufferSize = 4096;
 	BYTE* pBuffer = new BYTE[nBufferSize];
 	if (!pBuffer)
 	{

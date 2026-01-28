@@ -51,7 +51,7 @@ namespace DocFileFormat
         Formulas.push_back( L"prod #0 1 2" );
         Formulas.push_back( L"sum height 0 @1" );
 
-		Adjustments.push_back(2026);
+		Adjustments.push_back(5400);
 
         ConnectorLocations = L"10800,@0;10800,0;0,10800;10800,21600;21600,10800";
 

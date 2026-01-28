@@ -86,7 +86,7 @@ int CrtLine::serialize(std::wostream & _stream)
 				{
 					CP_XML_NODE(L"a:ln")
 					{
-						CP_XML_ATTR(L"w", 2026);	
+						CP_XML_ATTR(L"w", 3175);	
 						CP_XML_NODE(L"a:solidFill")
 						{
 							CP_XML_NODE(L"a:srgbClr")

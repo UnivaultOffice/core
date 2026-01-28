@@ -38,7 +38,7 @@ namespace OOXMLShapes
 			{
 				LoadFromXML(
 					_T("<ooxml-shape>")
-					_T("<gdLst xmlns=\"http://schemas.openxmlformats.org/drawingml/2026/main\">")
+					_T("<gdLst xmlns=\"http://schemas.openxmlformats.org/drawingml/2006/main\">")
 					  _T("<gd name=\"dx1\" fmla=\"*/ w 49 48\" />")
 					  _T("<gd name=\"dx2\" fmla=\"*/ w 10 48\" />")
 					  _T("<gd name=\"x1\" fmla=\"+- hc 0 dx1\" />")
@@ -50,7 +50,7 @@ namespace OOXMLShapes
 					  _T("<gd name=\"ir\" fmla=\"*/ w 5 6\" />")
 					  _T("<gd name=\"ib\" fmla=\"*/ h 2 3\" />")
 					_T("</gdLst>")
-					_T("<cxnLst xmlns=\"http://schemas.openxmlformats.org/drawingml/2026/main\">")
+					_T("<cxnLst xmlns=\"http://schemas.openxmlformats.org/drawingml/2006/main\">")
 					  _T("<cxn ang=\"3cd4\">")
 						_T("<pos x=\"hc\" y=\"hd4\" />")
 					  _T("</cxn>")
@@ -58,8 +58,8 @@ namespace OOXMLShapes
 						_T("<pos x=\"hc\" y=\"b\" />")
 					  _T("</cxn>")
 					_T("</cxnLst>")
-					_T("<rect l=\"il\" t=\"hd4\" r=\"ir\" b=\"ib\" xmlns=\"http://schemas.openxmlformats.org/drawingml/2026/main\" />")
-					_T("<pathLst xmlns=\"http://schemas.openxmlformats.org/drawingml/2026/main\">")
+					_T("<rect l=\"il\" t=\"hd4\" r=\"ir\" b=\"ib\" xmlns=\"http://schemas.openxmlformats.org/drawingml/2006/main\" />")
+					_T("<pathLst xmlns=\"http://schemas.openxmlformats.org/drawingml/2006/main\">")
 					  _T("<path>")
 						_T("<moveTo>")
 						  _T("<pt x=\"hc\" y=\"hd4\" />")

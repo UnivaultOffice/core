@@ -141,7 +141,7 @@ DjVuInfo::decode(ByteStream &bs)
     gamma=0.3;
   if (gamma>5.0)
     gamma=5.0;
-  if (dpi < 25 || dpi > 2026)
+  if (dpi < 25 || dpi > 6000)
     dpi = 300;
   switch (flags & 0x7)
     {

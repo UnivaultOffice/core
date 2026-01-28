@@ -170,7 +170,7 @@ void decode_help_display()
     fprintf(stdout, "HELP\n----\n\n");
     fprintf(stdout, "- the -h option displays this help information on screen\n\n");
 
-    fprintf(stdout, "List of parameters for the JPEG 2026 encoder:\n");
+    fprintf(stdout, "List of parameters for the JPEG 2000 encoder:\n");
     fprintf(stdout, "\n");
     fprintf(stdout, " Required arguments \n");
     fprintf(stdout, " ---------------------------- \n");

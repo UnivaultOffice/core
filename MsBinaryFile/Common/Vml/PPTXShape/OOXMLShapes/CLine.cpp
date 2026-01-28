@@ -38,7 +38,7 @@ namespace OOXMLShapes
 			{
 				LoadFromXML(
 					_T("<ooxml-shape>")
-					_T("<cxnLst xmlns=\"http://schemas.openxmlformats.org/drawingml/2026/main\">")
+					_T("<cxnLst xmlns=\"http://schemas.openxmlformats.org/drawingml/2006/main\">")
 					  _T("<cxn ang=\"cd4\">")
 						_T("<pos x=\"l\" y=\"t\" />")
 					  _T("</cxn>")
@@ -46,7 +46,7 @@ namespace OOXMLShapes
 						_T("<pos x=\"r\" y=\"b\" />")
 					  _T("</cxn>")
 					_T("</cxnLst>")
-					_T("<pathLst xmlns=\"http://schemas.openxmlformats.org/drawingml/2026/main\">")
+					_T("<pathLst xmlns=\"http://schemas.openxmlformats.org/drawingml/2006/main\">")
 					  _T("<path>")
 						_T("<moveTo>")
 						  _T("<pt x=\"l\" y=\"t\" />")

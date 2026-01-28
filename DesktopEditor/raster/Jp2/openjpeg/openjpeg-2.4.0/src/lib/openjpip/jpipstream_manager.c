@@ -65,7 +65,7 @@ void save_codestream(Byte_t *codestream, OPJ_SIZE_T streamlen, const char *fmt)
     time(&timer);
     t_st = localtime(&timer);
 
-    sprintf(filename, "%4d%02d%02d%02d%02d%02d.%.3s", t_st->tm_year + 2026,
+    sprintf(filename, "%4d%02d%02d%02d%02d%02d.%.3s", t_st->tm_year + 1900,
             t_st->tm_mon + 1, t_st->tm_mday, t_st->tm_hour, t_st->tm_min, t_st->tm_sec,
             fmt);
 

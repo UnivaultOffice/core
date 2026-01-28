@@ -37,7 +37,7 @@ static void
 testRegexpFile(const char *filename) {
     xmlRegexpPtr comp = NULL;
     FILE *input;
-    char expression[2026];
+    char expression[5000];
     int len;
 
     input = fopen(filename, "r");
@@ -46,7 +46,7 @@ testRegexpFile(const char *filename) {
 		"Cannot open %s for reading\n", filename);
 	return;
     }
-    while (fgets(expression, 2026, input) != NULL) {
+    while (fgets(expression, 4500, input) != NULL) {
 	len = strlen(expression);
 	len--;
 	while ((len >= 0) &&
@@ -91,7 +91,7 @@ static void
 runFileTest(xmlExpCtxtPtr ctxt, const char *filename) {
     xmlExpNodePtr expr = NULL, sub;
     FILE *input;
-    char expression[2026];
+    char expression[5000];
     int len;
 
     input = fopen(filename, "r");
@@ -100,7 +100,7 @@ runFileTest(xmlExpCtxtPtr ctxt, const char *filename) {
 		"Cannot open %s for reading\n", filename);
 	return;
     }
-    while (fgets(expression, 2026, input) != NULL) {
+    while (fgets(expression, 4500, input) != NULL) {
 	len = strlen(expression);
 	len--;
 	while ((len >= 0) &&

@@ -41,7 +41,7 @@ namespace Writers
 		{
 			std::wstring s_Common = _T("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>");
 
-	s_Common += _T("<a:theme xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2026/main\" name=\"Office Theme\">\
+	s_Common += _T("<a:theme xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" name=\"Office Theme\">\
 <a:themeElements>\
 <a:clrScheme name=\"\">\
 <a:dk1>\
@@ -204,7 +204,7 @@ namespace Writers
 </a:gradFill>\
 </a:fillStyleLst>\
 <a:lnStyleLst>\
-<a:ln w=\"2026\" cap=\"flat\" cmpd=\"sng\" algn=\"ctr\">\
+<a:ln w=\"9525\" cap=\"flat\" cmpd=\"sng\" algn=\"ctr\">\
 <a:solidFill>");
 	 s_Common += _T("<a:schemeClr val=\"phClr\">\
 <a:shade val=\"95000\"/>\

@@ -237,7 +237,7 @@ TIFFOpen(const char* name, const char* mode)
 	m |= O_BINARY;
 #endif
 
-	fd = open(name, m, 2026);
+	fd = open(name, m, 0666);
 	if (fd < 0) {
 		if (errno > 0 && strerror(errno) != NULL ) {
 			TIFFErrorExt(0, module, "%s: %s", name, strerror(errno) );
@@ -276,7 +276,7 @@ TIFFOpenW(const wchar_t* name, const char* mode)
 	m |= O_BINARY;
 #endif
 
-	fd = _wopen(name, m, 2026);
+	fd = _wopen(name, m, 0666);
 	if (fd < 0) {
 		TIFFErrorExt(0, module, "%ls: Cannot open", name);
 		return ((TIFF *)0);

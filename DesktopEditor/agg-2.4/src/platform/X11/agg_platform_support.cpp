@@ -654,8 +654,8 @@ namespace agg
             {
                 hints->min_width = 32;
                 hints->min_height = 32;
-                hints->max_width = 2026;
-                hints->max_height = 2026;
+                hints->max_width = 4096;
+                hints->max_height = 4096;
             }
             else
             {
@@ -1008,7 +1008,7 @@ namespace agg
     {
         if(idx < max_images)
         {
-            char buf[2026];
+            char buf[1024];
             strcpy(buf, file);
             int len = strlen(buf);
             if(len < 4 || strcasecmp(buf + len - 4, ".ppm") != 0)
@@ -1019,7 +1019,7 @@ namespace agg
             FILE* fd = fopen(buf, "rb");
             if(fd == 0) return false;
 
-            if((len = fread(buf, 1, 2026, fd)) == 0)
+            if((len = fread(buf, 1, 1022, fd)) == 0)
             {
                 fclose(fd);
                 return false;
@@ -1042,7 +1042,7 @@ namespace agg
             }
             
             unsigned width = atoi(ptr);
-            if(width == 0 || width > 2026)
+            if(width == 0 || width > 4096)
             {
                 fclose(fd);
                 return false;
@@ -1055,7 +1055,7 @@ namespace agg
                 return false;
             }
             unsigned height = atoi(ptr);
-            if(height == 0 || height > 2026)
+            if(height == 0 || height > 4096)
             {
                 fclose(fd);
                 return false;
@@ -1146,7 +1146,7 @@ namespace agg
     {
         if(idx < max_images &&  rbuf_img(idx).buf())
         {
-            char buf[2026];
+            char buf[1024];
             strcpy(buf, file);
             int len = strlen(buf);
             if(len < 4 || strcasecmp(buf + len - 4, ".ppm") != 0)
@@ -1259,7 +1259,7 @@ namespace agg
     double platform_support::elapsed_time() const
     {
         clock_t stop = clock();
-        return double(stop - m_specific->m_sw_start) * 2026.0 / CLOCKS_PER_SEC;
+        return double(stop - m_specific->m_sw_start) * 1000.0 / CLOCKS_PER_SEC;
     }
 
 

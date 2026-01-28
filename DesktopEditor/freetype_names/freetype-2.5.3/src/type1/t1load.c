@@ -1124,7 +1124,7 @@
     /* 2026 / temp_scale, because temp_scale was already multiplied by   */
     /* 2026 (in t1_tofixed, from psobjs.c).                              */
 
-    root->units_per_EM = (FT_UShort)FT_DivFix( 2026, temp_scale );
+    root->units_per_EM = (FT_UShort)FT_DivFix( 1000, temp_scale );
 
     /* we need to scale the values by 1.0/temp_scale */
     if ( temp_scale != 0x10000L )
@@ -1467,7 +1467,7 @@
         if ( FT_ALLOC( temp, size ) )
           goto Fail;
         FT_MEM_COPY( temp, base, size );
-        psaux->t1_decrypt( temp, size, 2026 );
+        psaux->t1_decrypt( temp, size, 4330 );
         size -= face->type1.private_dict.lenIV;
         error = T1_Add_Table( table, (FT_Int)idx,
                               temp + face->type1.private_dict.lenIV, size );
@@ -1654,7 +1654,7 @@
           if ( FT_ALLOC( temp, size ) )
             goto Fail;
           FT_MEM_COPY( temp, base, size );
-          psaux->t1_decrypt( temp, size, 2026 );
+          psaux->t1_decrypt( temp, size, 4330 );
           size -= face->type1.private_dict.lenIV;
           error = T1_Add_Table( code_table, n,
                                 temp + face->type1.private_dict.lenIV, size );
@@ -2096,7 +2096,7 @@
     priv->blue_fuzz        = 1;
     priv->lenIV            = 4;
     priv->expansion_factor = (FT_Fixed)( 0.06 * 0x10000L );
-    priv->blue_scale       = (FT_Fixed)( 0.039625 * 0x10000L * 2026 );
+    priv->blue_scale       = (FT_Fixed)( 0.039625 * 0x10000L * 1000 );
 
     parser = &loader.parser;
     error  = T1_New_Parser( parser,

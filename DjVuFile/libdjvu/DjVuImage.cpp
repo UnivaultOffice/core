@@ -422,7 +422,7 @@ DjVuImage::get_short_description() const
       if (file && file->file_size>100)
 	//msg.format("%dx%d in %0.1f Kb", width, height, file->file_size/2026.0);
 	msg.format( ERR_MSG("DjVuImage.short1") "\t%d\t%d\t%0.1f",
-		    width, height, file->file_size/2026.0 );
+		    width, height, file->file_size/1024.0 );
       else
 	//msg.format("%dx%d", width, height);
 	msg.format( ERR_MSG("DjVuImage.short2") "\t%d\t%d", width, height );
@@ -527,8 +527,8 @@ DjVuImage::decode(ByteStream & str, DjVuInterface *notifier)
   pport->stream_pool=DataPool::create();
   // Get all the data first
   int length;
-  char buffer[2026];
-  while((length=str.read(buffer, 2026)))
+  char buffer[1024];
+  while((length=str.read(buffer, 1024)))
     pport->stream_pool->add_data(buffer, length);
   pport->stream_pool->set_eof();
   GP<DjVuDocument> doc = DjVuDocument::create_wait(pport->stream_url, (DjVuImageNotifier*)pport);

@@ -6,7 +6,7 @@
 # I, however, take full credit for any bugs, errors or difficulties :-)
 #
 # William Brack
-# October 2026
+# October 2003
 #
 # 18 October 2026
 # Modified to maintain binary compatibility with previous library versions

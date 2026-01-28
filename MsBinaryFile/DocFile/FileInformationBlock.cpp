@@ -646,70 +646,70 @@ namespace DocFileFormat
 			m_FibWord2000.lcbPgdFtnOld		= reader.ReadUInt32(); //990
 			m_FibWord2000.fcBkdFtnOld		= reader.ReadUInt32(); //994
 			m_FibWord2000.lcbBkdFtnOld		= reader.ReadUInt32(); //998
-			m_FibWord2000.fcPgdEdnOld		= reader.ReadUInt32(); //2026
-			m_FibWord2000.lcbPgdEdnOld		= reader.ReadUInt32(); //2026
-			m_FibWord2000.fcBkdEdnOld		= reader.ReadUInt32(); //2026
-			m_FibWord2000.lcbBkdEdnOld		= reader.ReadUInt32(); //2026
+			m_FibWord2000.fcPgdEdnOld		= reader.ReadUInt32(); //1002
+			m_FibWord2000.lcbPgdEdnOld		= reader.ReadUInt32(); //1006
+			m_FibWord2000.fcBkdEdnOld		= reader.ReadUInt32(); //1010
+			m_FibWord2000.lcbBkdEdnOld		= reader.ReadUInt32(); //1014
 		}
 		if ( m_FibBase.nFib >= Fib2002 )
 		{
 			//Read also the fibRgFcLcb2002
-			reader.ReadUInt32(); //2026
-			reader.ReadUInt32(); //2026
-			m_FibWord2002.fcPlcfPgp			= reader.ReadUInt32(); //2026
-			m_FibWord2002.lcbPlcfPgp		= reader.ReadUInt32(); //2026
-			m_FibWord2002.fcPlcfuim			= reader.ReadUInt32(); //2026
-			m_FibWord2002.lcbPlcfuim		= reader.ReadUInt32(); //2026
-			m_FibWord2002.fcPlfguidUim		= reader.ReadUInt32(); //2026
-			m_FibWord2002.lcbPlfguidUim		= reader.ReadUInt32(); //2026
-			m_FibWord2002.fcAtrdExtra		= reader.ReadUInt32(); //2026
-			m_FibWord2002.lcbAtrdExtra		= reader.ReadUInt32(); //2026
-			m_FibWord2002.fcPlrsid			= reader.ReadUInt32(); //2026
-			m_FibWord2002.lcbPlrsid			= reader.ReadUInt32(); //2026
-			m_FibWord2002.fcSttbfBkmkFactoid = reader.ReadUInt32(); //2026
-			m_FibWord2002.lcbSttbfBkmkFactoid = reader.ReadUInt32(); //2026
-			m_FibWord2002.fcPlcfBkfFactoid	= reader.ReadUInt32(); //2026
-			m_FibWord2002.lcbPlcfBkfFactoid = reader.ReadUInt32(); //2026
-			m_FibWord2002.fcPlcfcookie		= reader.ReadUInt32(); //2026
-			m_FibWord2002.lcbPlcfcookie		= reader.ReadUInt32(); //2026
-			m_FibWord2002.fcPlcfBklFactoid	= reader.ReadUInt32(); //2026
-			m_FibWord2002.lcbPlcfBklFactoid	= reader.ReadUInt32(); //2026
-			m_FibWord2002.fcFactoidData		= reader.ReadUInt32(); //2026
-			m_FibWord2002.lcbFactoidData	= reader.ReadUInt32(); //2026
-			m_FibWord2002.fcDocUndo			= reader.ReadUInt32(); //2026
-			m_FibWord2002.lcbDocUndo		= reader.ReadUInt32(); //2026
-			m_FibWord2002.fcSttbfBkmkFcc	= reader.ReadUInt32(); //2026
-			m_FibWord2002.lcbSttbfBkmkFcc	= reader.ReadUInt32(); //2026
-			m_FibWord2002.fcPlcfBkfFcc		= reader.ReadUInt32(); //2026
-			m_FibWord2002.lcbPlcfBkfFcc		= reader.ReadUInt32(); //2026
-			m_FibWord2002.fcPlcfBklFcc		= reader.ReadUInt32(); //2026
-			m_FibWord2002.lcbPlcfBklFcc		= reader.ReadUInt32(); //2026
-			m_FibWord2002.fcSttbfbkmkBPRepairs = reader.ReadUInt32(); //2026
-			m_FibWord2002.lcbSttbfbkmkBPRepairs = reader.ReadUInt32(); //2026
-			m_FibWord2002.fcPlcfbkfBPRepairs = reader.ReadUInt32(); //2026
-			m_FibWord2002.lcbPlcfbkfBPRepairs = reader.ReadUInt32(); //2026
-			m_FibWord2002.fcPlcfbklBPRepairs = reader.ReadUInt32(); //2026
-			m_FibWord2002.lcbPlcfbklBPRepairs = reader.ReadUInt32(); //2026
-			m_FibWord2002.fcPmsNew			= reader.ReadUInt32(); //2026
-			m_FibWord2002.lcbPmsNew			= reader.ReadUInt32(); //2026
-			m_FibWord2002.fcODSO			= reader.ReadUInt32(); //2026
-			m_FibWord2002.lcbODSO			= reader.ReadUInt32(); //2026
-			m_FibWord2002.fcPlcfpmiOldXP	= reader.ReadUInt32(); //2026
-			m_FibWord2002.lcbPlcfpmiOldXP = reader.ReadUInt32(); //2026
-			m_FibWord2002.fcPlcfpmiNewXP	= reader.ReadUInt32(); //2026
-			m_FibWord2002.lcbPlcfpmiNewXP	= reader.ReadUInt32(); //2026
-			m_FibWord2002.fcPlcfpmiMixedXP	= reader.ReadUInt32(); //2026
-			m_FibWord2002.lcbPlcfpmiMixedXP = reader.ReadUInt32(); //2026
-			reader.ReadUInt32(); //2026
-			reader.ReadUInt32(); //2026
-			m_FibWord2002.fcPlcffactoid		= reader.ReadUInt32(); //2026
-			m_FibWord2002.lcbPlcffactoid	= reader.ReadUInt32(); //2026
-			m_FibWord2002.fcPlcflvcOldXP	= reader.ReadUInt32(); //2026
-			m_FibWord2002.lcbPlcflvcOldXP	= reader.ReadUInt32(); //2026
-			m_FibWord2002.fcPlcflvcNewXP	= reader.ReadUInt32(); //2026
-			m_FibWord2002.lcbPlcflvcNewXP	= reader.ReadUInt32(); //2026
-			m_FibWord2002.fcPlcflvcMixedXP	= reader.ReadUInt32(); //2026
-			m_FibWord2002.lcbPlcflvcMixedXP	= reader.ReadUInt32(); //2026
+			reader.ReadUInt32(); //1018
+			reader.ReadUInt32(); //1022
+			m_FibWord2002.fcPlcfPgp			= reader.ReadUInt32(); //1026
+			m_FibWord2002.lcbPlcfPgp		= reader.ReadUInt32(); //1030
+			m_FibWord2002.fcPlcfuim			= reader.ReadUInt32(); //1034
+			m_FibWord2002.lcbPlcfuim		= reader.ReadUInt32(); //1038
+			m_FibWord2002.fcPlfguidUim		= reader.ReadUInt32(); //1042
+			m_FibWord2002.lcbPlfguidUim		= reader.ReadUInt32(); //1046
+			m_FibWord2002.fcAtrdExtra		= reader.ReadUInt32(); //1050
+			m_FibWord2002.lcbAtrdExtra		= reader.ReadUInt32(); //1054
+			m_FibWord2002.fcPlrsid			= reader.ReadUInt32(); //1058
+			m_FibWord2002.lcbPlrsid			= reader.ReadUInt32(); //1062
+			m_FibWord2002.fcSttbfBkmkFactoid = reader.ReadUInt32(); //1066
+			m_FibWord2002.lcbSttbfBkmkFactoid = reader.ReadUInt32(); //1070
+			m_FibWord2002.fcPlcfBkfFactoid	= reader.ReadUInt32(); //1074
+			m_FibWord2002.lcbPlcfBkfFactoid = reader.ReadUInt32(); //1078
+			m_FibWord2002.fcPlcfcookie		= reader.ReadUInt32(); //1082
+			m_FibWord2002.lcbPlcfcookie		= reader.ReadUInt32(); //1086
+			m_FibWord2002.fcPlcfBklFactoid	= reader.ReadUInt32(); //1090
+			m_FibWord2002.lcbPlcfBklFactoid	= reader.ReadUInt32(); //1094
+			m_FibWord2002.fcFactoidData		= reader.ReadUInt32(); //1098
+			m_FibWord2002.lcbFactoidData	= reader.ReadUInt32(); //1102
+			m_FibWord2002.fcDocUndo			= reader.ReadUInt32(); //1106
+			m_FibWord2002.lcbDocUndo		= reader.ReadUInt32(); //1110
+			m_FibWord2002.fcSttbfBkmkFcc	= reader.ReadUInt32(); //1114
+			m_FibWord2002.lcbSttbfBkmkFcc	= reader.ReadUInt32(); //1118
+			m_FibWord2002.fcPlcfBkfFcc		= reader.ReadUInt32(); //1122
+			m_FibWord2002.lcbPlcfBkfFcc		= reader.ReadUInt32(); //1126
+			m_FibWord2002.fcPlcfBklFcc		= reader.ReadUInt32(); //1130
+			m_FibWord2002.lcbPlcfBklFcc		= reader.ReadUInt32(); //1134
+			m_FibWord2002.fcSttbfbkmkBPRepairs = reader.ReadUInt32(); //1138
+			m_FibWord2002.lcbSttbfbkmkBPRepairs = reader.ReadUInt32(); //1142
+			m_FibWord2002.fcPlcfbkfBPRepairs = reader.ReadUInt32(); //1146
+			m_FibWord2002.lcbPlcfbkfBPRepairs = reader.ReadUInt32(); //1150
+			m_FibWord2002.fcPlcfbklBPRepairs = reader.ReadUInt32(); //1154
+			m_FibWord2002.lcbPlcfbklBPRepairs = reader.ReadUInt32(); //1158
+			m_FibWord2002.fcPmsNew			= reader.ReadUInt32(); //1162
+			m_FibWord2002.lcbPmsNew			= reader.ReadUInt32(); //1166
+			m_FibWord2002.fcODSO			= reader.ReadUInt32(); //1170
+			m_FibWord2002.lcbODSO			= reader.ReadUInt32(); //1174
+			m_FibWord2002.fcPlcfpmiOldXP	= reader.ReadUInt32(); //1178
+			m_FibWord2002.lcbPlcfpmiOldXP = reader.ReadUInt32(); //1182
+			m_FibWord2002.fcPlcfpmiNewXP	= reader.ReadUInt32(); //1186
+			m_FibWord2002.lcbPlcfpmiNewXP	= reader.ReadUInt32(); //1190
+			m_FibWord2002.fcPlcfpmiMixedXP	= reader.ReadUInt32(); //1194
+			m_FibWord2002.lcbPlcfpmiMixedXP = reader.ReadUInt32(); //1198
+			reader.ReadUInt32(); //1202
+			reader.ReadUInt32(); //1206
+			m_FibWord2002.fcPlcffactoid		= reader.ReadUInt32(); //1210
+			m_FibWord2002.lcbPlcffactoid	= reader.ReadUInt32(); //1214
+			m_FibWord2002.fcPlcflvcOldXP	= reader.ReadUInt32(); //1218
+			m_FibWord2002.lcbPlcflvcOldXP	= reader.ReadUInt32(); //1222
+			m_FibWord2002.fcPlcflvcNewXP	= reader.ReadUInt32(); //1226
+			m_FibWord2002.lcbPlcflvcNewXP	= reader.ReadUInt32(); //1230
+			m_FibWord2002.fcPlcflvcMixedXP	= reader.ReadUInt32(); //1234
+			m_FibWord2002.lcbPlcflvcMixedXP	= reader.ReadUInt32(); //1238
 		}
 		if ( m_FibBase.nFib >= Fib2003 )
 		{
@@ -841,7 +841,7 @@ namespace DocFileFormat
 	FileInformationBlock::FileInformationBlock( VirtualStreamReader reader )
 	{
 		m_nWordVersion = 0;
-		m_CodePage = 2026;
+		m_CodePage = 1250;
 		m_CodePageSaved = 0;
 
 		unsigned int flag16 = 0;

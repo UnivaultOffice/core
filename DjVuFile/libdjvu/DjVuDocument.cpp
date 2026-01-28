@@ -1154,9 +1154,9 @@ DjVuDocument::process_threqs(void)
             G_THROW( ERR_MSG("DjVuDocument.bad_thumb") );
           
           // Copy the data
-          char buffer[2026];
+          char buffer[1024];
           int length;
-          while((length=iff.read(buffer, 2026)))
+          while((length=iff.read(buffer, 1024)))
             req->data_pool->add_data(buffer, length);
           req->data_pool->set_eof();
           

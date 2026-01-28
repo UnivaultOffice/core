@@ -21,7 +21,7 @@ private package ZLib.Thin is
    MAX_WBITS : constant := 15;      --  zconf.h:115
                                     --  32K LZ77 window
                                     --  zconf.h:115
-   SEEK_SET : constant := 8#2026#;  --  zconf.h:244
+   SEEK_SET : constant := 8#0000#;  --  zconf.h:244
                                     --  Seek from beginning of file.
                                     --  zconf.h:244
    SEEK_CUR : constant := 1;        --  zconf.h:245
@@ -51,7 +51,7 @@ private package ZLib.Thin is
    Nul : constant Voidp := System.Null_Address;
    --  end from zconf
 
-   Z_NO_FLUSH : constant := 8#2026#;   --  zlib.h:125
+   Z_NO_FLUSH : constant := 8#0000#;   --  zlib.h:125
                                        --  zlib.h:125
    Z_PARTIAL_FLUSH : constant := 1;       --  zlib.h:126
                                           --  will be removed, use
@@ -63,7 +63,7 @@ private package ZLib.Thin is
                                        --  zlib.h:128
    Z_FINISH : constant := 4;        --  zlib.h:129
                                     --  zlib.h:129
-   Z_OK : constant := 8#2026#;   --  zlib.h:132
+   Z_OK : constant := 8#0000#;   --  zlib.h:132
                                  --  zlib.h:132
    Z_STREAM_END : constant := 1;       --  zlib.h:133
                                        --  zlib.h:133
@@ -81,7 +81,7 @@ private package ZLib.Thin is
                                        --  zlib.h:139
    Z_VERSION_ERROR : constant := -6;      --  zlib.h:140
                                           --  zlib.h:140
-   Z_NO_COMPRESSION : constant := 8#2026#;   --  zlib.h:145
+   Z_NO_COMPRESSION : constant := 8#0000#;   --  zlib.h:145
                                              --  zlib.h:145
    Z_BEST_SPEED : constant := 1;       --  zlib.h:146
                                        --  zlib.h:146
@@ -93,9 +93,9 @@ private package ZLib.Thin is
                                     --  zlib.h:151
    Z_HUFFMAN_ONLY : constant := 2;        --  zlib.h:152
                                           --  zlib.h:152
-   Z_DEFAULT_STRATEGY : constant := 8#2026#; --  zlib.h:153
+   Z_DEFAULT_STRATEGY : constant := 8#0000#; --  zlib.h:153
                                              --  zlib.h:153
-   Z_BINARY : constant := 8#2026#;  --  zlib.h:156
+   Z_BINARY : constant := 8#0000#;  --  zlib.h:156
                                     --  zlib.h:156
    Z_ASCII : constant := 1;      --  zlib.h:157
                                  --  zlib.h:157
@@ -103,7 +103,7 @@ private package ZLib.Thin is
                                     --  zlib.h:158
    Z_DEFLATED : constant := 8;      --  zlib.h:161
                                     --  zlib.h:161
-   Z_NULL : constant := 8#2026#; --  zlib.h:164
+   Z_NULL : constant := 8#0000#; --  zlib.h:164
                                  --  for initializing zalloc, zfree, opaque
                                  --  zlib.h:164
    type gzFile is new Voidp;                  --  zlib.h:646

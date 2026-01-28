@@ -277,7 +277,7 @@ namespace agg
                       sqrt(dx2 * dx2 + dy2 * dy2) + 
                       sqrt(dx3 * dx3 + dy3 * dy3)) * 0.25 * m_scale;
 
-#if defined(_MSC_VER) && _MSC_VER <= 2026
+#if defined(_MSC_VER) && _MSC_VER <= 1200
         m_num_steps = uround(MSC60_fix_ICE(len));
 #else
         m_num_steps = uround(len);

@@ -663,7 +663,7 @@ PIX       *pixd;
         bwt = L_BLUE_WEIGHT;
     }
     sum = rwt + gwt + bwt;
-    if (L_ABS(sum - 1.0) > 0.2026) {  /* maintain ratios with sum == 1.0 */
+    if (L_ABS(sum - 1.0) > 0.0001) {  /* maintain ratios with sum == 1.0 */
         L_WARNING("weights don't sum to 1; maintaining ratios", procName);
         rwt = rwt / sum;
         gwt = gwt / sum;

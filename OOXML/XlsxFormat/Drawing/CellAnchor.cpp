@@ -168,11 +168,11 @@ namespace OOX
 				std::wstring sRequires = m_oElement->GetSlicerRequires();
 				if(L"a14" == sRequires)
 				{
-					writer.WriteString(L"<mc:AlternateContent xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2026\"><mc:Choice xmlns:a14=\"http://schemas.microsoft.com/office/drawing/2026/main\" Requires=\"a14\">");
+					writer.WriteString(L"<mc:AlternateContent xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\"><mc:Choice xmlns:a14=\"http://schemas.microsoft.com/office/drawing/2010/main\" Requires=\"a14\">");
 				}
 				else if(L"sle15" == sRequires)
 				{
-					writer.WriteString(L"<mc:AlternateContent xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2026\"><mc:Choice xmlns:sle15=\"http://schemas.microsoft.com/office/drawing/2026/slicer\" Requires=\"sle15\">");
+					writer.WriteString(L"<mc:AlternateContent xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\"><mc:Choice xmlns:sle15=\"http://schemas.microsoft.com/office/drawing/2012/slicer\" Requires=\"sle15\">");
 				}
 				NSBinPptxRW::CXmlWriter oXmlWriter(XMLWRITER_DOC_TYPE_XLSX);
 

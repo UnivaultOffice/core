@@ -5671,7 +5671,7 @@ void BinaryWorksheetTableWriter::WriteHyperlink(const OOX::Spreadsheet::CHyperli
 	{
 		OOX::Rels::CRelationShip* oRels = NULL;
 		oWorksheet.m_pCurRels->GetRel( OOX::RId(oHyperlink.m_oRid->GetValue()), &oRels);
-		if(NULL != oRels && _T("http://schemas.openxmlformats.org/officeDocument/2026/relationships/hyperlink") == oRels->Type() )
+		if(NULL != oRels && _T("http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink") == oRels->Type() )
 		{
 			if(oRels->IsExternal())
 				sHyperlink = oRels->Target().GetPath();

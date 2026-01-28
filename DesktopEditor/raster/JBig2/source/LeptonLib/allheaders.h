@@ -20,7 +20,7 @@
 #define LIBLEPT_MAJOR_VERSION   1
 #define LIBLEPT_MINOR_VERSION   67
 
-#pragma warning(disable: 2026 2026 2026 2026 2026 2026)
+#pragma warning(disable: 4305 4244 4996 4101 4018 4309)
 
 #include "alltypes.h"
 

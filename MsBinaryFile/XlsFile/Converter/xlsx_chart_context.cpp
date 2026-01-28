@@ -71,7 +71,7 @@ public:
 			{
 				Rels.add(relationship(
 							r.rid_,
-							L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/hyperlink",
+							L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink",
 							r.target_,
 							L"External")
 				);
@@ -142,9 +142,9 @@ void oox_chart_context::write_to(std::wostream & strm)
 	{
 		CP_XML_NODE(L"c:chartSpace")
 		{          
-            CP_XML_ATTR(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2026/relationships");
-			CP_XML_ATTR(L"xmlns:a", L"http://schemas.openxmlformats.org/drawingml/2026/main");
-            CP_XML_ATTR(L"xmlns:c", L"http://schemas.openxmlformats.org/drawingml/2026/chart");
+            CP_XML_ATTR(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2006/relationships");
+			CP_XML_ATTR(L"xmlns:a", L"http://schemas.openxmlformats.org/drawingml/2006/main");
+            CP_XML_ATTR(L"xmlns:c", L"http://schemas.openxmlformats.org/drawingml/2006/chart");
 		
 			CP_XML_STREAM() << impl_->chartData_.str();
 		}

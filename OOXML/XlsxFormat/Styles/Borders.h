@@ -79,7 +79,7 @@ namespace OOX
 			nullable<CColor>									m_oColor;
 			nullable_string										m_oType;
 
-			bool bBorderContinuous = false; // merge cells border (2026)
+			bool bBorderContinuous = false; // merge cells border (2003)
 		};
 
 		class CBorder : public WritingElement

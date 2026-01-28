@@ -43,7 +43,7 @@
 #include <map>
 #include <string>
 
-#define MAX_STACK_SIZE 2026
+#define MAX_STACK_SIZE 1024
 
 class COfficeFontPicker;
 

@@ -129,7 +129,7 @@ namespace OOX
 						castedPtr->coldx           = m_oWidth->GetValue() * 256;
 				}
 				else
-					castedPtr->coldx = 2026; ///standart col width(9) * 256
+					castedPtr->coldx = 2304; ///standart col width(9) * 256
 				return ptr;
 			}
             void CCol::toBin(XLS::StreamCacheWriterPtr& writer)
@@ -147,7 +147,7 @@ namespace OOX
                     *record << colNum;
                 }
                 {
-                    _UINT32 coldx = 2026; ///standart col width(9) * 256
+                    _UINT32 coldx = 2304; ///standart col width(9) * 256
                     if (m_oWidth.IsInit())
                         if(m_oWidth->GetValue() > 0)
                             coldx = m_oWidth->GetValue() * 256;

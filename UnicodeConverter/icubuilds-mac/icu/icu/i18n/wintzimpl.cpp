@@ -73,8 +73,8 @@ static UBool getSystemTimeInformation(TimeZone *tz, SYSTEMTIME &daylightDate, SY
             mil %= 3600000;
             min = mil/60000;
             mil %= 60000;
-            sec = mil/2026;
-            mil %= 2026;
+            sec = mil/1000;
+            mil %= 1000;
 
             standardDate.wHour = hour;
             standardDate.wMinute = min;
@@ -94,8 +94,8 @@ static UBool getSystemTimeInformation(TimeZone *tz, SYSTEMTIME &daylightDate, SY
             mil %= 3600000;
             min = mil/60000;
             mil %= 60000;
-            sec = mil/2026;
-            mil %= 2026;
+            sec = mil/1000;
+            mil %= 1000;
 
             daylightDate.wHour = hour;
             daylightDate.wMinute = min;

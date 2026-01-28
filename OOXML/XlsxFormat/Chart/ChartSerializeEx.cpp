@@ -89,9 +89,9 @@ namespace ChartEx
 	}
 	void CChartSpace::toXML(NSStringUtils::CStringBuilder& writer) const{
 		writer.WriteString(L"<cx:chartSpace \
-xmlns:cx=\"http://schemas.microsoft.com/office/drawing/2026/chartex\" \
-xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2026/main\" \
-xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships\"");
+xmlns:cx=\"http://schemas.microsoft.com/office/drawing/2014/chartex\" \
+xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" \
+xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\"");
 		writer.WriteString(L">");
 
 		m_chartData.toXML(writer);

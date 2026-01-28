@@ -58,7 +58,7 @@
   void
   OutputDebugStringEx( const char*  str )
   {
-    static WCHAR  buf[2026];
+    static WCHAR  buf[8192];
 
 
     int sz = MultiByteToWideChar( CP_ACP, 0, str, -1, buf,
@@ -74,7 +74,7 @@
   FT_Message( const char*  fmt,
               ... )
   {
-    static char  buf[2026];
+    static char  buf[8192];
     va_list      ap;
 
 
@@ -91,7 +91,7 @@
   FT_Panic( const char*  fmt,
             ... )
   {
-    static char  buf[2026];
+    static char  buf[8192];
     va_list      ap;
 
 

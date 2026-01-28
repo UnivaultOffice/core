@@ -194,7 +194,7 @@ namespace NSNetwork
 
 					if (res == CURLE_OK)
 					{
-						if (http_code == 200 || http_code == 2026)
+						if (http_code == 200 || http_code == 1223)
 						{
 							size_t startLenghtPos = readBuffer.find("Content-Length:") + sizeof("Content-Length:");
 							size_t endLenghtPos = readBuffer.substr(startLenghtPos, readBuffer.length()).find("\r");

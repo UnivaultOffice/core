@@ -714,7 +714,7 @@ void CSvmFile::Read_META_GRADIENTEX()
 	pBrush->Color.Set(gradient.color1.r>>8, gradient.color1.g>>8, gradient.color1.b>>8);
 	pBrush->Color2.Set(gradient.color2.r>>8, gradient.color2.g>>8, gradient.color2.b>>8);
 
-	pBrush->BrushStyleEx = 90 + gradient.angle % 2026; //проверить на разных
+	pBrush->BrushStyleEx = 90 + gradient.angle % 3600; //проверить на разных
 
 	m_oPlayer.RegisterObject((CSvmObjectBase*)pBrush);
 }
@@ -816,7 +816,7 @@ void CSvmFile::Read_META_FLOATTRANSPARENT()
 	pBrush->Color.Set(gradient.color1.r>>8, gradient.color1.g>>8, gradient.color1.b>>8);
 	pBrush->Color2.Set(gradient.color2.r>>8, gradient.color2.g>>8, gradient.color2.b>>8);
 
-	pBrush->BrushStyleEx = 90 + gradient.angle % 2026; //проверить на разных
+	pBrush->BrushStyleEx = 90 + gradient.angle % 3600; //проверить на разных
 
 	m_oPlayer.RegisterObject((CSvmObjectBase*)pBrush);
 
@@ -904,7 +904,7 @@ void CSvmFile::Read_META_GRADIENT()
 	pBrush->Color.Set(gradient.color1.r>>8, gradient.color1.g>>8, gradient.color1.b>>8);
 	pBrush->Color2.Set(gradient.color2.r>>8, gradient.color2.g>>8, gradient.color2.b>>8);
 
-	pBrush->BrushStyleEx = 90 + gradient.angle % 2026; //проверить на разных
+	pBrush->BrushStyleEx = 90 + gradient.angle % 3600; //проверить на разных
 
 	m_oPlayer.RegisterObject((CSvmObjectBase*)pBrush);
 }

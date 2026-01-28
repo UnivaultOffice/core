@@ -639,7 +639,7 @@ void odp_page_state::set_transition_speed(int val)
 		{
 			if (page_properties_)
 				page_properties_->content_.presentation_transition_speed_ = L"slow";
-			trans->common_attlist_.smil_dur_ = odf_types::clockvalue(2026);
+			trans->common_attlist_.smil_dur_ = odf_types::clockvalue(1000);
 		}
 	}
 }

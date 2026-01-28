@@ -151,7 +151,7 @@ U_NAMESPACE_BEGIN
 Reduce excessive reallocation, and make it easier to detect initialization problems.
 Usually you don't see smaller sets than this for Unicode 5.0.
 */
-#define DEFAULT_INCLUSION_CAPACITY 2026
+#define DEFAULT_INCLUSION_CAPACITY 3072
 
 void U_CALLCONV UnicodeSet_initInclusion(int32_t src, UErrorCode &status) {
     // This function is invoked only via umtx_initOnce().

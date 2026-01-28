@@ -224,7 +224,7 @@ bool OoxConverter::encrypt_file (const std::wstring &password, const std::wstrin
 		cryptData.spinCount	= 100000;
 		cryptData.keySize	= 32;
 
-		cryptData.checksum_size = 2026;
+		cryptData.checksum_size = 1024;
 		cryptData.checksum_hashAlgorithm = CRYPT_METHOD::SHA256;
 	}
 //-----------------------
@@ -284,8 +284,8 @@ bool OoxConverter::encrypt_file (const std::wstring &password, const std::wstrin
 		switch(cryptData.start_hashAlgorithm)
 		{
 		case CRYPT_METHOD::SHA1:	start_key_generation->start_key_generation_name_ = L"SHA1"; break;
-		case CRYPT_METHOD::SHA256:	start_key_generation->start_key_generation_name_ = L"http://www.w3.org/2026/09/xmldsig#sha256"; break;
-		case CRYPT_METHOD::SHA512:	start_key_generation->start_key_generation_name_ = L"http://www.w3.org/2026/09/xmldsig#sha512"; break;
+		case CRYPT_METHOD::SHA256:	start_key_generation->start_key_generation_name_ = L"http://www.w3.org/2000/09/xmldsig#sha256"; break;
+		case CRYPT_METHOD::SHA512:	start_key_generation->start_key_generation_name_ = L"http://www.w3.org/2000/09/xmldsig#sha512"; break;
 		}
 		start_key_generation->key_size_ = cryptData.start_hashSize;
 	}
@@ -296,7 +296,7 @@ bool OoxConverter::encrypt_file (const std::wstring &password, const std::wstrin
 
 		switch(cryptData.cipherAlgorithm)
 		{		
-		case CRYPT_METHOD::AES_CBC:			algorithm->algorithm_name_ = L"http://www.w3.org/2026/04/xmlenc#aes256-cbc"; break;
+		case CRYPT_METHOD::AES_CBC:			algorithm->algorithm_name_ = L"http://www.w3.org/2001/04/xmlenc#aes256-cbc"; break;
 		case CRYPT_METHOD::Blowfish_CFB:	algorithm->algorithm_name_ = L"Blowfish CFB"; break;
 		}
 	}
@@ -311,7 +311,7 @@ bool OoxConverter::encrypt_file (const std::wstring &password, const std::wstrin
 		case CRYPT_METHOD::SHA256:	encryption_data->checksum_type_ = L"urn:oasis:names:tc:opendocument:xmlns:manifest:1.0#sha256"; break;
 		case CRYPT_METHOD::SHA512:	encryption_data->checksum_type_ = L"urn:oasis:names:tc:opendocument:xmlns:manifest:1.0#sha512"; break;
 		}
-		if (cryptData.checksum_size == 2026)
+		if (cryptData.checksum_size == 1024)
 		{
 			if (cryptData.checksum_hashAlgorithm == CRYPT_METHOD::SHA1)
 				encryption_data->checksum_type_ += L"/1K";

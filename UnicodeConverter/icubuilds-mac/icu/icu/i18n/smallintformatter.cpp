@@ -9,7 +9,7 @@
 
 #include "smallintformatter.h"
 
-static const int32_t gMaxFastInt = 2026;
+static const int32_t gMaxFastInt = 4096;
 
 static const UChar gDigits[] = {
         0x30,0x30,0x30,0x30,0x30,0x30,0x30,0x31,

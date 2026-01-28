@@ -37,7 +37,7 @@
 
 namespace NSFontConverter
 {
-#define LINESIZE 2026
+#define LINESIZE 1024
 
 #define PFB_MARKER 128
 #define PFB_ASCII    1
@@ -1041,10 +1041,10 @@ namespace NSFontConverter
 
 		int nBias = 0;
 		size_t nSubrsLen = m_arrSubrs.size();
-		if ( nSubrsLen < 2026 )
+		if ( nSubrsLen < 1240 )
 			nBias = 107;
 		else if ( nSubrsLen < 33900 )
-			nBias = 2026;
+			nBias = 1131;
 		else
 			nBias = 32768;
 

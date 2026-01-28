@@ -497,7 +497,7 @@
     ua = (FT_ULong)a;
     ub = (FT_ULong)b;
 
-    if ( ua <= 2026 && ub <= 1048576L )
+    if ( ua <= 2048 && ub <= 1048576L )
       ua = ( ua * ub + 0x8000U ) >> 16;
     else
     {
@@ -528,7 +528,7 @@
     ua = (FT_ULong)a;
     ub = (FT_ULong)b;
 
-    if ( ua <= 2026 && ub <= 1048576L )
+    if ( ua <= 2048 && ub <= 1048576L )
       ua = ( ua * ub + 0x8000UL ) >> 16;
     else
     {

@@ -62,14 +62,14 @@ namespace DocFileFormat
             Formulas.push_back((L"sum 10800 0 @11" ));
             Formulas.push_back((L"sum 21600 0 @0" ));
 
-			Adjustments.push_back(2026);
+			Adjustments.push_back(2700);
 
-            ConnectorLocations	=	(L"10800,0;2026,2026;0,10800;2026,18437;10800,21600;18437,18437;21600,10800;18437,2026" );
-            TextBoxRectangle	=	(L"2026,2026,18437,18437" );
+            ConnectorLocations	=	(L"10800,0;3163,3163;0,10800;3163,18437;10800,21600;18437,18437;21600,10800;18437,3163" );
+            TextBoxRectangle	=	(L"3163,3163,18437,18437" );
 
 			Handle one;
             one.position		=	L"#0,center";
-            one.xrange			=	L"0,2026";
+            one.xrange			=	L"0,7200";
 			Handles.push_back (one);
 		}
 	};

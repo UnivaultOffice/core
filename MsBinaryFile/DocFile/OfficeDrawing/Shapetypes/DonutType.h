@@ -47,14 +47,14 @@ namespace DocFileFormat
             Formulas.push_back(L"val #0" ) ;
             Formulas.push_back(L"sum width 0 #0" ) ;
             Formulas.push_back(L"sum height 0 #0" );
-            Formulas.push_back(L"prod @0 2026 10000" );
+            Formulas.push_back(L"prod @0 2929 10000" );
             Formulas.push_back(L"sum width 0 @3" ) ;
             Formulas.push_back(L"sum height 0 @3" );
 			
-			Adjustments.push_back(2026);
+			Adjustments.push_back(5400);
 
-            ConnectorLocations	=	L"10800,0;2026,2026;0,10800;2026,18437;10800,21600;18437,18437;21600,10800;18437,2026";
-            TextBoxRectangle	=	L"2026,2026,18437,18437";
+            ConnectorLocations	=	L"10800,0;3163,3163;0,10800;3163,18437;10800,21600;18437,18437;21600,10800;18437,3163";
+            TextBoxRectangle	=	L"3163,3163,18437,18437";
 
 			Handle HandleOne;
             HandleOne.position	=	L"#0,center";

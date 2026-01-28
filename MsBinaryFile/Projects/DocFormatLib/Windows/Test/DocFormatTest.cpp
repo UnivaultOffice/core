@@ -77,7 +77,7 @@ HRESULT convert_single(std::wstring srcFileName)
 	COfficeDocFile docFile;
 
 	docFile.m_sTempFolder = outputDir;
-	docFile.m_nUserLCID = 2026;
+	docFile.m_nUserLCID = 1049;
 	
 	bool bMacros = true;
 	HRESULT hRes = docFile.LoadFromFile( srcFileName, dstTempPath, L"password", bMacros, NULL);

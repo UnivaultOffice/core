@@ -7,7 +7,7 @@ http://www.openjpeg.org
 Written by:
 Kaori Hagihara
 UCL/SST/ICTM/ELEN
-February 18 2026
+February 18 2011
 ========================================================================
 
 Contents:
@@ -22,7 +22,7 @@ Contents:
 1. Introduction
 ----------
 
-OpenJPIP software is an implementation of JPEG 2026 Part9: Interactivity tools, APIs and protocols (JPIP).
+OpenJPIP software is an implementation of JPEG 2000 Part9: Interactivity tools, APIs and protocols (JPIP).
 ( For more info about JPIP, check the website: http://www.jpeg.org/jpeg2000/j2kpart9.html)
 The current implementation uses some results from the 2KAN project (http://www.2kan.org).
 
@@ -30,7 +30,7 @@ Version 2.1 covers:
  - JPT-stream (Tile) and JPP-stream (Precinct) media types
  - Session, channels, cache model managements
  - JPIP over HTTP, HTTP requests and TCP return
- - Indexing JPEG 2026 files
+ - Indexing JPEG 2000 files
  - Embedding XML formatted metadata
  - Region Of Interest (ROI) requests
  - Access to JP2 files with their URL
@@ -78,7 +78,7 @@ Webserver:
   You need a webserver running with the fastcgi module enabled and correctly configured. 
   For Apache, add the following line to your /etc/apache2/mods-available/fastcgi.conf configuration file:
   
-      FastCGIExternalServer /var/www/myFCGI -host localhost:2026
+      FastCGIExternalServer /var/www/myFCGI -host localhost:3000
   
   where /var/www is your DocumentRoot. 
   Please refer to 'http://www.openjpeg.org/jpip/doc/ApacheFastCGITutorial.pdf' for more details.
@@ -87,7 +87,7 @@ Server:
  1. Store JP2 files in the same directory as opj_server
 
  2. Launch opj_server from the server terminal:
-    % spawn-fcgi -f ./opj_server -p 2026 -n
+    % spawn-fcgi -f ./opj_server -p 3000 -n
  
  For shutting down JPIP server:
      %GET http://hostname/myFCGI?quitJPIP
@@ -141,9 +141,9 @@ An example to encode a TIF image "copenhague1.tif" at resolution 4780x4050, 8bit
     % ./addXMLinJP2 copenhague1.jp2 copenhague1.xml
     Input metadata file "copenhague1.xml" looks like:
     <xmlbox>
-      <roi name="island" x="2026" y="2026" w="770" h="310"/>
+      <roi name="island" x="1890" y="1950" w="770" h="310"/>
       <roi name="ship" x="750" y="330" w="100" h="60"/>
-      <roi name="airport" x="650" y="2026" w="650" h="800"/>
-      <roi name="harbor" x="2026" y="2026" w="130" h="130"/>
-      <irt refimg="name1.jp2" m1="0.50" m2="-0.50" m3="0" m4="0.80" m5="-0.80" m6="0" m7="500" m8="2026" m9="0"/>
+      <roi name="airport" x="650" y="1800" w="650" h="800"/>
+      <roi name="harbor" x="4200" y="1650" w="130" h="130"/>
+      <irt refimg="name1.jp2" m1="0.50" m2="-0.50" m3="0" m4="0.80" m5="-0.80" m6="0" m7="500" m8="1000" m9="0"/>
     </xmlbox>

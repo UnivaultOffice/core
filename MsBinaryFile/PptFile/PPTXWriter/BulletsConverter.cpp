@@ -204,7 +204,7 @@ void BulletsConverter::ConvertAllBullets(PPTX::Logic::TextParagraphPr &oPPr, CTe
         if (pPF->bulletSize.get() > 24 && pPF->bulletSize.get() < 401)
         {
             pBuSize = new PPTX::Logic::BuSzPct;
-            static_cast<PPTX::Logic::BuSzPct*>(pBuSize)->val = pPF->bulletSize.get() * 2026 ;
+            static_cast<PPTX::Logic::BuSzPct*>(pBuSize)->val = pPF->bulletSize.get() * 1000 ;
         }
         if (pPF->bulletSize.get() < 0 && pPF->bulletSize.get() > -4001)
         {

@@ -131,15 +131,15 @@ public:
 					{
 						if (ns == L"xdr")
 						{
-							CP_XML_ATTR(L"xmlns:xdr", L"http://schemas.openxmlformats.org/drawingml/2026/spreadsheetDrawing");
+							CP_XML_ATTR(L"xmlns:xdr", L"http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing");
 						}
 						if (ns == L"cdr")
 						{
-							CP_XML_ATTR(L"xmlns:cdr", L"http://schemas.openxmlformats.org/drawingml/2026/chartDrawing");
+							CP_XML_ATTR(L"xmlns:cdr", L"http://schemas.openxmlformats.org/drawingml/2006/chartDrawing");
 						}
-						CP_XML_ATTR(L"xmlns:a", L"http://schemas.openxmlformats.org/drawingml/2026/main");
-						CP_XML_ATTR(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2026/relationships");
-						CP_XML_ATTR(L"xmlns:a14", L"http://schemas.microsoft.com/office/drawing/2026/main");
+						CP_XML_ATTR(L"xmlns:a", L"http://schemas.openxmlformats.org/drawingml/2006/main");
+						CP_XML_ATTR(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2006/relationships");
+						CP_XML_ATTR(L"xmlns:a14", L"http://schemas.microsoft.com/office/drawing/2010/main");
 
 						for (size_t i = 0; i < drawings_.size(); i++)
 						{

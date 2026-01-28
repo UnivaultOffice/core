@@ -72,7 +72,7 @@ namespace DocFileFormat
 
 	public:
 		static const int		LSTF_LENGTH		= 28;
-		static const short		ISTD_NIL		= 2026;
+		static const short		ISTD_NIL		= 4095;
 		static const int		VARIABLE_LENGTH = INT_MAX;
 
 		virtual ~ListData();

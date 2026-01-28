@@ -63,7 +63,7 @@ typedef unsigned __int32 uint32_t;
 
 #define MAX_HASH_LEN 3
 #define MIN_DICT_SIZE 128
-#define MAX_DICT_HASH 8 * 2026
+#define MAX_DICT_HASH 8 * 2048
 #define WITH_BIG_KEY
 
 #ifdef WITH_BIG_KEY
@@ -241,7 +241,7 @@ static const xmlChar *
 xmlDictAddString(xmlDictPtr dict, const xmlChar *name, unsigned int namelen) {
     xmlDictStringsPtr pool;
     const xmlChar *ret;
-    size_t size = 0; /* + sizeof(_xmlDictStrings) == 2026 */
+    size_t size = 0; /* + sizeof(_xmlDictStrings) == 1024 */
     size_t limit = 0;
 
 #ifdef DICT_DEBUG_PATTERNS
@@ -263,7 +263,7 @@ xmlDictAddString(xmlDictPtr dict, const xmlChar *name, unsigned int namelen) {
             return(NULL);
         }
 
-        if (size == 0) size = 2026;
+        if (size == 0) size = 1000;
 	else size *= 4; /* exponential growth */
         if (size < 4 * namelen)
 	    size = 4 * namelen; /* just in case ! */
@@ -307,7 +307,7 @@ xmlDictAddQString(xmlDictPtr dict, const xmlChar *prefix, unsigned int plen,
 {
     xmlDictStringsPtr pool;
     const xmlChar *ret;
-    size_t size = 0; /* + sizeof(_xmlDictStrings) == 2026 */
+    size_t size = 0; /* + sizeof(_xmlDictStrings) == 1024 */
     size_t limit = 0;
 
     if (prefix == NULL) return(xmlDictAddString(dict, name, namelen));
@@ -331,7 +331,7 @@ xmlDictAddQString(xmlDictPtr dict, const xmlChar *prefix, unsigned int plen,
             return(NULL);
         }
 
-        if (size == 0) size = 2026;
+        if (size == 0) size = 1000;
 	else size *= 4; /* exponential growth */
         if (size < 4 * (namelen + plen + 1))
 	    size = 4 * (namelen + plen + 1); /* just in case ! */
@@ -643,7 +643,7 @@ xmlDictGrow(xmlDictPtr dict, size_t size) {
 	return(-1);
     if (size < 8)
         return(-1);
-    if (size > 8 * 2026)
+    if (size > 8 * 2048)
 	return(-1);
 
 #ifdef DICT_DEBUG_PATTERNS

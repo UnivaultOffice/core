@@ -642,11 +642,11 @@ cmsToneCurve* Build_sRGBGamma(cmsContext ContextID)
 // Create the ICC virtual profile for sRGB space
 cmsHPROFILE CMSEXPORT cmsCreate_sRGBProfileTHR(cmsContext ContextID)
 {
-       cmsCIExyY       D65 = { 0.2026, 0.2026, 1.0 };
+       cmsCIExyY       D65 = { 0.3127, 0.3290, 1.0 };
        cmsCIExyYTRIPLE Rec709Primaries = {
-                                   {0.2026, 0.2026, 1.0},
-                                   {0.2026, 0.2026, 1.0},
-                                   {0.2026, 0.2026, 1.0}
+                                   {0.6400, 0.3300, 1.0},
+                                   {0.3000, 0.6000, 1.0},
+                                   {0.1500, 0.0600, 1.0}
                                    };
        cmsToneCurve* Gamma22[3];
        cmsHPROFILE  hsRGB;

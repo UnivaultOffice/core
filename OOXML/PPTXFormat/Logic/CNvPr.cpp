@@ -219,7 +219,7 @@ namespace PPTX
 			{
 				pWriter->WriteString(L"<a:extLst>");
 				pWriter->WriteString(L"<a:ext uri=\"{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}\">\
-<a16:creationId xmlns:a16=\"http://schemas.microsoft.com/office/drawing/2026/main\" id=\"" + *creationId + L"\"/></a:ext>");
+<a16:creationId xmlns:a16=\"http://schemas.microsoft.com/office/drawing/2014/main\" id=\"" + *creationId + L"\"/></a:ext>");
 				pWriter->WriteString(L"</a:extLst>");
 
 			}

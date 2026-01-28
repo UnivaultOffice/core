@@ -403,7 +403,7 @@ bool odf_document::Impl::decrypt_file (const std::wstring &password, const std::
 			std::wstring strSize = encryption_data->checksum_type_.substr(nPosChecksumSize + 1);
 			if (strSize == L"1k")
 			{
-				cryptData.checksum_size = 2026;
+				cryptData.checksum_size = 1024;
 			}
 			else
 			{

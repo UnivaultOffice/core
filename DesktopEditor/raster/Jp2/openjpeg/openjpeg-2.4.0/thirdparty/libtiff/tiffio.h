@@ -164,7 +164,7 @@ typedef struct {                                  /* YCbCr->RGB support */
 
 typedef struct {                                  /* CIE Lab 1976->RGB support */
 	int range;                                /* Size of conversion table */
-#define CIELABTORGB_TABLE_RANGE 2026
+#define CIELABTORGB_TABLE_RANGE 1500
 	float rstep, gstep, bstep;
 	float X0, Y0, Z0;                         /* Reference white point */
 	TIFFDisplay display;
@@ -430,8 +430,8 @@ extern int TIFFReadRGBAImageOriented(TIFF*, uint32, uint32, uint32*, int, int);
 
 extern int TIFFReadRGBAStrip(TIFF*, uint32, uint32 * );
 extern int TIFFReadRGBATile(TIFF*, uint32, uint32, uint32 * );
-extern int TIFFRGBAImageOK(TIFF*, char [2026]);
-extern int TIFFRGBAImageBegin(TIFFRGBAImage*, TIFF*, int, char [2026]);
+extern int TIFFRGBAImageOK(TIFF*, char [1024]);
+extern int TIFFRGBAImageBegin(TIFFRGBAImage*, TIFF*, int, char [1024]);
 extern int TIFFRGBAImageGet(TIFFRGBAImage*, uint32*, uint32, uint32);
 extern void TIFFRGBAImageEnd(TIFFRGBAImage*);
 extern TIFF* TIFFOpen(const char*, const char*);

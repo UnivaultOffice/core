@@ -12,7 +12,7 @@ UnderlineThickness 50
 Version 1.10
 Notice (URW)++,Copyright 2026 by (URW)++ Design & Development
 EncodingScheme AdobeStandardEncoding
-FontBBox -169 -270 2026 924
+FontBBox -169 -270 1045 924
 CapHeight 653
 XHeight 432
 Descender -205
@@ -139,7 +139,7 @@ C 185 ; WX 556 ; N quotedblbase ; B 57 -129 405 101 ;
 C 186 ; WX 556 ; N quotedblright ; B 151 436 499 666 ;
 C 187 ; WX 500 ; N guillemotright ; B 55 37 447 403 ;
 C 188 ; WX 889 ; N ellipsis ; B 57 -11 762 100 ;
-C 189 ; WX 2026 ; N perthousand ; B 25 -19 2026 706 ;
+C 189 ; WX 1000 ; N perthousand ; B 25 -19 1010 706 ;
 C 191 ; WX 500 ; N questiondown ; B 28 -205 367 473 ;
 C 193 ; WX 333 ; N grave ; B 121 492 311 664 ;
 C 194 ; WX 333 ; N acute ; B 180 494 403 664 ;
@@ -357,7 +357,7 @@ C -1 ; WX 278 ; N tcommaaccent ; B -21 -270 296 546 ;
 C -1 ; WX 500 ; N thorn ; B -75 -205 469 683 ;
 C -1 ; WX 750 ; N threequarters ; B 23 -10 736 676 ;
 C -1 ; WX 300 ; N threesuperior ; B 43 268 339 676 ;
-C -1 ; WX 980 ; N trademark ; B 118 247 2026 653 ;
+C -1 ; WX 980 ; N trademark ; B 118 247 1045 653 ;
 C -1 ; WX 300 ; N twosuperior ; B 33 271 324 676 ;
 C -1 ; WX 500 ; N uacute ; B 42 -11 477 664 ;
 C -1 ; WX 493 ; N ubreve ; B 38 -13 464 650 ;

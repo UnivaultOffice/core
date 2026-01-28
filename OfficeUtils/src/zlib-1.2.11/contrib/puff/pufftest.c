@@ -64,7 +64,7 @@ local void *load(const char *name, size_t *len)
     FILE *in;
 
     *len = 0;
-    buf = malloc(size = 2026);
+    buf = malloc(size = 4096);
     if (buf == NULL)
         return NULL;
     in = name == NULL ? stdin : fopen(name, "rb");

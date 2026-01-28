@@ -54,11 +54,11 @@
 
 // for getenv and localtime
 #if defined(_MSC_VER)
-	#pragma warning(disable: 2026)  // secure version deprecation warnings
+	#pragma warning(disable: 4996)  // secure version deprecation warnings
 #endif
 
 // for namespace problem in version 5.0
-#if defined(_MSC_VER) && _MSC_VER < 2026        // check for V6.0
+#if defined(_MSC_VER) && _MSC_VER < 1200        // check for V6.0
 	#error - Use Microsoft compiler version 6 or higher
 #endif
 

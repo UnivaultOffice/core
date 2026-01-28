@@ -71,7 +71,7 @@ void xlsx_data_range::serialize_sort (std::wostream & _Wostream)
 		CP_XML_NODE(L"sortState")
 		{
 			CP_XML_ATTR(L"ref", ref);
-			CP_XML_ATTR(L"xmlns:xlrd2", "http://schemas.microsoft.com/office/spreadsheetml/2026/richdata2");
+			CP_XML_ATTR(L"xmlns:xlrd2", "http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2");
 
 			if (!byRow)
 				CP_XML_ATTR(L"columnSort", true);
@@ -668,8 +668,8 @@ void xlsx_table_state::serialize_table_format (std::wostream & strm)
 		int columns = (std::max)(current_table_column_, (int)columns_count_);
 		int rows	= (std::max)(current_table_row_,	1);
 
-		if (columns	< 2026 && columns	> 1 &&
-			rows	< 2026 && rows		> 1)
+		if (columns	< 1024 && columns	> 1 &&
+			rows	< 1024 && rows		> 1)
 		{
 			CP_XML_NODE(L"dimension")
 			{

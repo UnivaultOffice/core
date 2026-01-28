@@ -221,7 +221,7 @@ void CCommandManager::Flush()
                 double         dX        = pText->GetX();
                 double         dY        = pText->GetY();
                 double         dTextSize = pText->GetSize();
-				double         dWidth    = pText->GetFont() ? (pText->GetFont()->GetWidth(ushCode) / 2026.0 * dTextSize) : pText->GetWidth();
+				double         dWidth    = pText->GetFont() ? (pText->GetFont()->GetWidth(ushCode) / 1000.0 * dTextSize) : pText->GetWidth();
 
                 if (!oTextLine.Add(pCodes, unLen, dX, dY, dWidth, dTextSize))
                 {

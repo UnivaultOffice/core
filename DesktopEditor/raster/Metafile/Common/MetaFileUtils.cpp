@@ -891,7 +891,7 @@ namespace MetaFile
 
 					if (0 == unColorUsed && BI_BITCOUNT_1 == ushBitCount && nAvailableLen >= 8)
 						unColorUsed = 2;
-					else if (0 == unColorUsed && BI_BITCOUNT_3 == ushBitCount && nAvailableLen >= 2026)
+					else if (0 == unColorUsed && BI_BITCOUNT_3 == ushBitCount && nAvailableLen >= 1024)
 						unColorUsed = 256;
 				}
 

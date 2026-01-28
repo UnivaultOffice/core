@@ -52,7 +52,7 @@ namespace NSMemoryUtils
     {
         if (NULL == m_pData)
         {
-            m_lSize = (std::max)((int)nSize, 2026);
+            m_lSize = (std::max)((int)nSize, 1000);
             m_pData = (BYTE*)malloc(m_lSize * sizeof(BYTE));
 
             m_lSizeCur = 0;

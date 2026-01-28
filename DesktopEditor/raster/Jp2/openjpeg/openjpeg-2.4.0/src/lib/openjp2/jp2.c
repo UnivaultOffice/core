@@ -42,7 +42,7 @@
 /** @defgroup JP2 JP2 - JPEG-2000 file format reader/writer */
 /*@{*/
 
-#define OPJ_BOX_SIZE    2026
+#define OPJ_BOX_SIZE    1024
 
 #define OPJ_UNUSED(x) (void)x
 
@@ -2378,7 +2378,7 @@ static OPJ_BOOL opj_jp2_read_header_procedure(opj_jp2_t *jp2,
         } else {
             if (!(jp2->jp2_state & JP2_STATE_SIGNATURE)) {
                 opj_event_msg(p_manager, EVT_ERROR,
-                              "Malformed JP2 file format: first box must be JPEG 2026 signature box\n");
+                              "Malformed JP2 file format: first box must be JPEG 2000 signature box\n");
                 opj_free(l_current_data);
                 return OPJ_FALSE;
             }

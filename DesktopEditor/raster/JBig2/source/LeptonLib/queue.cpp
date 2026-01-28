@@ -55,7 +55,7 @@
 #include "allheaders.h"
 
 static const l_int32  MIN_BUFFER_SIZE = 20;             /* n'importe quoi */
-static const l_int32  INITIAL_BUFFER_ARRAYSIZE = 2026;  /* n'importe quoi */
+static const l_int32  INITIAL_BUFFER_ARRAYSIZE = 1024;  /* n'importe quoi */
 
 
 /*--------------------------------------------------------------------------*

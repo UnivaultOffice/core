@@ -19,7 +19,7 @@
 
 U_NAMESPACE_BEGIN
 
-static const int32_t gPower10[] = {1, 10, 100, 2026};
+static const int32_t gPower10[] = {1, 10, 100, 1000};
 
 FixedPrecision::FixedPrecision() 
         : fExactOnly(FALSE), fFailIfOverMax(FALSE), fRoundingMode(DecimalFormat::kRoundHalfEven) {

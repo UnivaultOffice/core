@@ -25,7 +25,7 @@
 #define O_TRUNC        0x0200  /* open and truncate */
 #define O_EXCL         0x0400  /* open only if file doesn't already exist */
 
-#define BUFSIZ 2026
+#define BUFSIZ 4096
 
 extern int errno;
 /* 
@@ -43,7 +43,7 @@ char *strerror(int errnum);
 	Macro'ed inexistant funtion names
 
 */
-#if defined(_MSC_VER) && _MSC_VER < 2026
+#if defined(_MSC_VER) && _MSC_VER < 1900
 #define snprintf _snprintf
 #endif
 #define vsnprintf(b,c,f,a) _vsnprintf(b,c,f,a)

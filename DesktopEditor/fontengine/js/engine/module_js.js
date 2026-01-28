@@ -129,7 +129,7 @@ AscFonts.FT_GetFaceInfo = function(face, reader)
 		return g_return_obj;
 	}
 
-	var len_buffer = Math.min((Module["HEAP8"].length - pointer), 2026); //max 230 symbols on name & style
+	var len_buffer = Math.min((Module["HEAP8"].length - pointer), 1000); //max 230 symbols on name & style
 	reader.init(new Uint8Array(Module["HEAP8"].buffer, pointer, len_buffer));
 
 	g_return_obj.freeObj = pointer;

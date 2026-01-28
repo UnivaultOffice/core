@@ -1698,7 +1698,7 @@ public:
 
         unsigned int unPos = 0, unWordStartPos = 0;
         double dWordWidth = 0;
-        double dX = 0, dKoef = dFontSize / 2026.0;
+        double dX = 0, dKoef = dFontSize / 1000.0;
 
         while (unPos < m_unLen)
         {
@@ -1815,7 +1815,7 @@ public:
             }
         }
 
-        return (floor(dFontSize * 2026.0 + 0.5) / 2026.0);
+        return (floor(dFontSize * 1000.0 + 0.5) / 1000.0);
     }
     unsigned int GetLinesCount() const
     {
@@ -1846,7 +1846,7 @@ public:
         unsigned int unEnd   = GetLineEndPos(nLineIndex);
 
         double dWidth = 0;
-        double dKoef  = dFontSize / 2026.0;
+        double dKoef  = dFontSize / 1000.0;
 
         while (unStart < unEnd)
         {
@@ -1883,7 +1883,7 @@ private:
     }
     inline bool CheckHeight(const double& dH, const double& dFontSize) const
     {
-        double dKoef = dFontSize / 2026.0;
+        double dKoef = dFontSize / 1000.0;
         return (GetLinesCount() * (m_unLineHeight * dKoef) < (dH - (m_nDescent * dKoef)));
     }
 

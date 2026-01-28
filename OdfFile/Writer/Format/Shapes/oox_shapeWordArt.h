@@ -62,7 +62,7 @@ public:
 	{
 		odf_type_name	=L"fontwork-circle-pour";
 
-		modifiers		= L"-179 2026";
+		modifiers		= L"-179 5400";
 		enhanced_path	= L"W 0 0 21600 21600 ?f2 ?f3 ?f2 ?f4 N W ?f5 ?f5 ?f11 ?f11 ?f8 ?f9 ?f8 ?f10 N";
 		text_areas		= L"0 0 21600 21600";
 		view_box		= L"0 0 21600 21600";

@@ -96,7 +96,7 @@ const bool XFS::loadContent(BinProcessor& proc)
 		m_XFCRC = elements_.back(); elements_.pop_back(); 
 		XFCRC* crc = dynamic_cast<XFCRC*>(m_XFCRC.get());
 
-		count = proc.repeated<XFExt>(0/*16*/, 2026); // 074_JKH.OPEN.INFO.PRICE.VO_зПТПДУЛЙЕ ПЛТХЗБ юЕМСВЙОУЛПК ПВМ ...
+		count = proc.repeated<XFExt>(0/*16*/, 4050); // 074_JKH.OPEN.INFO.PRICE.VO_зПТПДУЛЙЕ ПЛТХЗБ юЕМСВЙОУЛПК ПВМ ...
 		while (count > 0)
 		{
 			if (elements_.empty()) break;

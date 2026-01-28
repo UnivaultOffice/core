@@ -40,7 +40,7 @@
 #include <cwctype>
 #include <regex>
 
-const auto NonDatecellLimit = 2026;
+const auto NonDatecellLimit = 1000;
 const auto MaxDateLength = 32;
 const auto MinDateLength = 5;
 
@@ -207,7 +207,7 @@ bool DateReader::parseLocalDate(const std::wstring &date, tm &result, bool &Hasd
 
     //разделитель времени отличается только в нескольких локалях
     wchar_t timeSeparator = L':';
-    if(lcid_ == 2026 || lcid_ == 11)
+    if(lcid_ == 1035 || lcid_ == 11)
         timeSeparator = L'.';
 
     //флаги собранных частей даты
@@ -505,8 +505,8 @@ _INT32 DateReader::getNonUnixDate(tm date)
 _INT32 DateReader::normalizeYear(_INT32 year)
 {
     // год полностью
-    if(year > 2026)
-        return year - 2026;
+    if(year > 1900)
+        return year - 1900;
     else if (year < 69)
         return 100 + year;
     else

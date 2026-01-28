@@ -36,7 +36,7 @@
 #define __JPT_H
 /**
 @file jpt.h
-@brief JPT-stream reader (JPEG 2026, JPIP)
+@brief JPT-stream reader (JPEG 2000, JPIP)
 
 JPT-stream functions are implemented in J2K.C.
 */

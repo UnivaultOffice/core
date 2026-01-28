@@ -46,14 +46,14 @@ namespace DocFileFormat
 
 			Adjustments.push_back(21600);
 
-            ConnectorLocations	= L"10860,2026;2026,10800;10860,21600;18672,10800";
+            ConnectorLocations	= L"10860,2187;2928,10800;10860,21600;18672,10800";
 
 			ConnectorAngles.push_back(270);
 			ConnectorAngles.push_back(180);
 			ConnectorAngles.push_back(90);
 			ConnectorAngles.push_back(0);
 
-            TextBoxRectangle	= L"2026,2026,16557,13677";
+            TextBoxRectangle	= L"5037,2277,16557,13677";
 		}
 	};
 }

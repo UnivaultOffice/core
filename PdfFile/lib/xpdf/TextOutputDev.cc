@@ -2166,7 +2166,7 @@ void TextPage::writeRaw(void *outputStream,
       s->append(eol, eolLen);
     }
 
-    if (s->getLength() > 2026) {
+    if (s->getLength() > 1000) {
       (*outputFunc)(outputStream, s->getCString(), s->getLength());
       s->clear();
     }

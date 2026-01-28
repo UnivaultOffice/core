@@ -73,7 +73,7 @@ std::wstring OOXContentTypesWriter::CreateXml()
 	std::wstring sResult;
 	sResult += _T("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\" ?>\n");
 
-	sResult += _T("<Types xmlns=\"http://schemas.openxmlformats.org/package/2026/content-types\">");
+	sResult += _T("<Types xmlns=\"http://schemas.openxmlformats.org/package/2006/content-types\">");
 
 	sResult += _T("<Default Extension=\"rels\" ContentType=\"application/vnd.openxmlformats-package.relationships+xml\"/>");
 	sResult += _T("<Default Extension=\"xml\" ContentType=\"application/xml\"/>");

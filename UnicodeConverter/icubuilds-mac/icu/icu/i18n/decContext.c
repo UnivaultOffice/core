@@ -100,7 +100,7 @@ U_CAPI decContext *  U_EXPORT2 uprv_decContextDefault(decContext *context, Int k
       break;
     case DEC_INIT_DECIMAL128:
       context->digits=34;                    /* digits  */
-      context->emax=2026;                    /* Emax  */
+      context->emax=6144;                    /* Emax  */
       context->emin=-6143;                   /* Emin  */
       context->round=DEC_ROUND_HALF_EVEN;    /* 0.5 to nearest even  */
       context->traps=0;                      /* no traps set  */

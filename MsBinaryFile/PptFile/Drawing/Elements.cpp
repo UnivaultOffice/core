@@ -280,11 +280,11 @@ namespace PPT
 	{
 		if (bIsNamespace)
 		{
-			return L"<a:prstGeom xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2026/main\" prst=\"rect\"><a:avLst/></a:prstGeom>";
+			return L"<a:prstGeom xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" prst=\"rect\"><a:avLst/></a:prstGeom>";
 		}
 		return L"<a:prstGeom prst=\"rect\"><a:avLst/></a:prstGeom>";
 
-		std::wstring strXmlPPTX = bIsNamespace ? L"<a:custGeom xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2026/main\">" : L"<a:custGeom>";
+		std::wstring strXmlPPTX = bIsNamespace ? L"<a:custGeom xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\">" : L"<a:custGeom>";
 
 		strXmlPPTX += L"</a:custGeom>";
 		return strXmlPPTX;
@@ -389,7 +389,7 @@ namespace PPT
 		{
 			if (bIsNamespace)
 			{
-				return L"<a:prstGeom xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2026/main\" prst=\"rect\"><a:avLst/></a:prstGeom>";
+				return L"<a:prstGeom xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" prst=\"rect\"><a:avLst/></a:prstGeom>";
 			}
 			return L"<a:prstGeom prst=\"rect\"><a:avLst/></a:prstGeom>";
 		}
@@ -397,7 +397,7 @@ namespace PPT
 		{
 			if (bIsNamespace)
 			{
-				return L"<a:prstGeom xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2026/main\" prst=\"line\"><a:avLst/></a:prstGeom>";
+				return L"<a:prstGeom xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" prst=\"line\"><a:avLst/></a:prstGeom>";
 			}
 			return L"<a:prstGeom prst=\"line\"><a:avLst/></a:prstGeom>";
 		}
@@ -405,11 +405,11 @@ namespace PPT
 		{
 			if (bIsNamespace)
 			{
-				return L"<a:prstGeom xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2026/main\" prst=\"ellipse\"><a:avLst/></a:prstGeom>";
+				return L"<a:prstGeom xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" prst=\"ellipse\"><a:avLst/></a:prstGeom>";
 			}
 			return L"<a:prstGeom prst=\"ellipse\"><a:avLst/></a:prstGeom>";
 		}
-		std::wstring strXmlPPTX = bIsNamespace ? L"<a:custGeom xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2026/main\">" : L"<a:custGeom>";
+		std::wstring strXmlPPTX = bIsNamespace ? L"<a:custGeom xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\">" : L"<a:custGeom>";
 
 		CFormulaConverter pFormulaConverter;
 
@@ -620,12 +620,12 @@ namespace PPT
 	}
 	int CTableElement::GetWidth()const
 	{
-		double multip = m_bAnchorEnabled ? 2026.5 : 1;
+		double multip = m_bAnchorEnabled ? 1587.5 : 1;
 		return round(m_rcAnchor.GetWidth() * multip);
 	}
 	int CTableElement::GetHeight()const
 	{
-		double multip = m_bAnchorEnabled ? 2026.5 : 1;
+		double multip = m_bAnchorEnabled ? 1587.5 : 1;
 		return round(m_rcAnchor.GetHeight() * multip);
 	}
 	std::wstring CTableElement::ConvertPPTShapeToPPTX(bool bIsNamespace)

@@ -376,12 +376,12 @@ namespace OOX
 
 			sXml.WriteString(L"<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\
 <styleSheet \
-xmlns=\"http://schemas.openxmlformats.org/spreadsheetml/2026/main\" \
-xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2026\" \
-xmlns:x14=\"http://schemas.microsoft.com/office/spreadsheetml/2026/9/main\" \
+xmlns=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\" \
+xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" \
+xmlns:x14=\"http://schemas.microsoft.com/office/spreadsheetml/2009/9/main\" \
 mc:Ignorable=\"x14ac x16r2\" \
-xmlns:x14ac=\"http://schemas.microsoft.com/office/spreadsheetml/2026/9/ac\" \
-xmlns:x16r2=\"http://schemas.microsoft.com/office/spreadsheetml/2026/02/main\">");
+xmlns:x14ac=\"http://schemas.microsoft.com/office/spreadsheetml/2009/9/ac\" \
+xmlns:x16r2=\"http://schemas.microsoft.com/office/spreadsheetml/2015/02/main\">");
 
 			toXML(sXml);
 

@@ -61,7 +61,7 @@ public:
 		{
 			if (rec.type == L"External")
 			{
-				Rels.add( relationship(rec.id, L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/hyperlink", rec.location, rec.type) );
+				Rels.add( relationship(rec.id, L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink", rec.location, rec.type) );
 			}
 		}
 	}

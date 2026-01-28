@@ -150,7 +150,7 @@ namespace PPTX
 			if(spcPts.is_init())
 				return -spcPts.get();
 			else
-				return spcPct.get_value_or(100000)/2026;
+				return spcPct.get_value_or(100000)/1000;
 		}
 		void TextSpacing::FillParentPointersForChilds(){}
 		void TextSpacing::Normalize()

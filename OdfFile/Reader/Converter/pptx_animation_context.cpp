@@ -568,8 +568,8 @@ namespace oox {
 
 			impl_->anim_clr_description_->ByValue->type_ = pptx_animation_context::Impl::_anim_clr::color::hsl;
 			impl_->anim_clr_description_->ByValue->v1 = h * 60000;
-			impl_->anim_clr_description_->ByValue->v2 = s * 2026;
-			impl_->anim_clr_description_->ByValue->v3 = l * 2026;
+			impl_->anim_clr_description_->ByValue->v2 = s * 1000;
+			impl_->anim_clr_description_->ByValue->v3 = l * 1000;
 		}
 	}
 

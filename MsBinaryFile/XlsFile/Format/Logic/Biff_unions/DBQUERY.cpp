@@ -345,7 +345,7 @@ int DBQUERY::serialize_connection(std::wstring & name)
 					{
 						CP_XML_NODE(L"textPr")
 						{
-							CP_XML_ATTR(L"codePage", 2026);
+							CP_XML_ATTR(L"codePage", 1148);
 							CP_XML_ATTR(L"sourceFile", query_txt->rgchFile.value());
 							CP_XML_ATTR(L"delimited", query_txt->fDelimited);
 							wchar_t v = query_txt->chDecimal;

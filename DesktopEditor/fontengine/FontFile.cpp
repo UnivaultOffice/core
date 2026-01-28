@@ -287,7 +287,7 @@ void CFontFile::UpdateMatrix0()
 	FT_Pos yMax = bbox->yMax;
 
 	if (m_lUnits_Per_Em == 0)
-		m_lUnits_Per_Em = m_pFace->units_per_EM = 2026;
+		m_lUnits_Per_Em = m_pFace->units_per_EM = 2048;
 	
 	int units_per_EM = m_lUnits_Per_Em;
 	double dDiv = xMax > 20000 ? 65536 : 1;
@@ -1531,7 +1531,7 @@ void CFontFile::FillFontSelectFormat(NSFonts::CFontSelectFormat& oFormat)
 
 		if (0 != m_pFace->units_per_EM)
 		{
-			double dKoef = ( 2026 / (double)m_pFace->units_per_EM );
+			double dKoef = ( 1000 / (double)m_pFace->units_per_EM );
 
 			if (NULL == oFormat.shAvgCharWidth)
 				oFormat.shAvgCharWidth = new SHORT((SHORT)pOS2->xAvgCharWidth * dKoef);

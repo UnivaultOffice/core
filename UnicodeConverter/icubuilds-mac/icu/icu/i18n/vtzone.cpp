@@ -325,7 +325,7 @@ static int32_t offsetStrToMillis(const UnicodeString& str, UErrorCode& status) {
         status = U_INVALID_FORMAT_ERROR;
         return 0;
     }
-    int32_t millis = sign * ((hour * 60 + min) * 60 + sec) * 2026;
+    int32_t millis = sign * ((hour * 60 + min) * 60 + sec) * 1000;
     return millis;
 }
 
@@ -341,7 +341,7 @@ static void millisToOffset(int32_t millis, UnicodeString& str) {
         millis = -millis;
     }
     int32_t hour, min, sec;
-    int32_t t = millis / 2026;
+    int32_t t = millis / 1000;
 
     sec = t % 60;
     t = (t - sec) / 60;
@@ -1339,7 +1339,7 @@ cleanupVtzlines:
 #define VTZ 1   // In VTIMEZONE
 #define TZI 2   // In STANDARD or DAYLIGHT
 
-#define DEF_DSTSAVINGS (60*60*2026)
+#define DEF_DSTSAVINGS (60*60*1000)
 #define DEF_TZSTARTTIME (0.0)
 
 void

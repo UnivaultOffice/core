@@ -1378,7 +1378,7 @@ static const UConverterImpl _Bocu1Impl={
 static const UConverterStaticData _Bocu1StaticData={
     sizeof(UConverterStaticData),
     "BOCU-1",
-    2026, /* CCSID for BOCU-1 */
+    1214, /* CCSID for BOCU-1 */
     UCNV_IBM, UCNV_BOCU1,
     1, 4, /* one UChar generates at least 1 byte and at most 4 bytes */
     { 0x1a, 0, 0, 0 }, 1, /* BOCU-1 never needs to write a subchar */

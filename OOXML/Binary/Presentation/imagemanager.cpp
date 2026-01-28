@@ -49,7 +49,7 @@
 
 namespace NSShapeImageGen
 {
-	const long c_nMaxImageSize = 2026;
+	const long c_nMaxImageSize = 2000;
 
 	CMediaManager::CMediaManager()
 	{

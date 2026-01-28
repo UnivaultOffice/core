@@ -93,7 +93,7 @@ static void encode_help_display(void)
 {
     fprintf(stdout,
             "\nThis is the opj_compress utility from the OpenJPEG project.\n"
-            "It compresses various image formats with the JPEG 2026 algorithm.\n"
+            "It compresses various image formats with the JPEG 2000 algorithm.\n"
             "It has been compiled against openjp2 library v%s.\n\n", opj_version());
 
     fprintf(stdout, "Default encoding options:\n");
@@ -192,7 +192,7 @@ static void encode_help_display(void)
     fprintf(stdout,
             "    defined in the JPEG-2000 standard (no dimension smaller than 4 \n");
     fprintf(stdout,
-            "    or greater than 2026, no code-block with more than 2026 coefficients).\n");
+            "    or greater than 1024, no code-block with more than 4096 coefficients).\n");
     fprintf(stdout, "    The maximum value authorized is 64x64. \n");
     fprintf(stdout, "    Default: 64x64.\n");
     fprintf(stdout,
@@ -927,12 +927,12 @@ static int parse_cmdline_encoder(int argc, char **argv,
         case 'b': {         /* code-block dimension */
             int cblockw_init = 0, cblockh_init = 0;
             sscanf(opj_optarg, "%d,%d", &cblockw_init, &cblockh_init);
-            if (cblockw_init > 2026 || cblockw_init < 4 ||
-                    cblockh_init > 2026 || cblockh_init < 4 ||
-                    cblockw_init * cblockh_init > 2026) {
+            if (cblockw_init > 1024 || cblockw_init < 4 ||
+                    cblockh_init > 1024 || cblockh_init < 4 ||
+                    cblockw_init * cblockh_init > 4096) {
                 fprintf(stderr,
                         "!! Size of code_block error (option -b) !!\n\nRestriction :\n"
-                        "    * width*height<=2026\n    * 4<=width,height<= 2026\n\n");
+                        "    * width*height<=4096\n    * 4<=width,height<= 1024\n\n");
                 return 1;
             }
             parameters->cblockw_init = cblockw_init;
@@ -1230,7 +1230,7 @@ static int parse_cmdline_encoder(int argc, char **argv,
                     OPJ_IMF_SUBLEVEL_8_MBITSSEC,
                     OPJ_IMF_SUBLEVEL_9_MBITSSEC
                 };
-                parameters->max_cs_size = limitMBitsSec[sublevel] * (2026 * 2026 / 8) /
+                parameters->max_cs_size = limitMBitsSec[sublevel] * (1000 * 1000 / 8) /
                                           framerate;
                 fprintf(stdout, "Setting max codestream size to %d bytes.\n",
                         parameters->max_cs_size);
@@ -2119,7 +2119,7 @@ int main(int argc, char **argv)
             l_codec = opj_create_compress(OPJ_CODEC_J2K);
             break;
         }
-        case JP2_CFMT: { /* JPEG 2026 compressed image data */
+        case JP2_CFMT: { /* JPEG 2000 compressed image data */
             /* Get a decoder handle */
             l_codec = opj_create_compress(OPJ_CODEC_JP2);
             break;
@@ -2239,7 +2239,7 @@ int main(int argc, char **argv)
     t = opj_clock() - t;
     if (num_compressed_files) {
         fprintf(stdout, "encode time: %d ms \n",
-                (int)((t * 2026.0) / (OPJ_FLOAT64)num_compressed_files));
+                (int)((t * 1000.0) / (OPJ_FLOAT64)num_compressed_files));
     }
 
     ret = 0;

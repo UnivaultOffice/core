@@ -139,7 +139,7 @@ void xlsx_conversion_context::end_table()
 	std::wstring rid = L"tpId" + std::to_wstring(index);
 
 	current_sheet().sheet_rels().add(oox::relationship(rid,
-		L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/table", 
+		L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/table", 
 		L"../tables/table" + std::to_wstring(index) +L".xml"));
 
 	CP_XML_WRITER(current_sheet().tableParts())
@@ -187,7 +187,7 @@ std::wstring xlsx_conversion_context::start_activeX()
 	std::wstring rid = L"ocxId" + std::to_wstring(index);
 
 	current_sheet().sheet_rels().add(oox::relationship(rid,
-		L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/control", 
+		L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/control", 
 		L"../activeX/activeX" + std::to_wstring(index) +L".xml"));
 	
 	return rid;
@@ -235,7 +235,7 @@ void xlsx_conversion_context::add_query_table (const std::wstring & query_table)
 	query_tables_.insert(std::make_pair(target, query_table));
 
 	current_sheet().sheet_rels().add(oox::relationship(rid,
-		L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/queryTable", 
+		L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/queryTable", 
 		L"../queryTables/" + target));
 
 }
@@ -266,7 +266,7 @@ void xlsx_conversion_context::end_document()
 		if (!p1.first.empty())
         {
             const std::wstring dId = p1.second;
-            static const std::wstring kType = L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/drawing"; 
+            static const std::wstring kType = L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/drawing"; 
             const std::wstring dName = std::wstring(L"../drawings/" + p1.first);
             content->add_rel(relationship(dId, kType, dName));
         }
@@ -277,7 +277,7 @@ void xlsx_conversion_context::end_document()
 		if (!p2.first.empty())
         {
             const std::wstring			dId		= p2.second;
-            static const std::wstring	kType	= L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/comments"; 
+            static const std::wstring	kType	= L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/comments"; 
             const std::wstring			dName	= std::wstring(L"../" + p2.first);
             content->add_rel(relationship(dId, kType, dName));
         }
@@ -286,7 +286,7 @@ void xlsx_conversion_context::end_document()
 		if (!p3.first.empty())
         {
             const std::wstring			dId		= p3.second;
-            static const std::wstring	kType	= L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/vmlDrawing"; 
+            static const std::wstring	kType	= L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/vmlDrawing"; 
             const std::wstring			dName	= std::wstring(L"../drawings/" + p3.first);
 			content->add_rel(relationship(dId, kType, dName));
        }
@@ -295,7 +295,7 @@ void xlsx_conversion_context::end_document()
 		if (!p4.first.empty())
         {
             const std::wstring			dId		= p4.second;
-            static const std::wstring	kType	= L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/vmlDrawing"; 
+            static const std::wstring	kType	= L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/vmlDrawing"; 
             const std::wstring			dName	= std::wstring(L"../drawings/" + p4.first);
 			content->add_rel(relationship(dId, kType, dName));
        }
@@ -343,7 +343,7 @@ void xlsx_conversion_context::end_document()
 		{
 			CP_XML_NODE(L"connections")
 			{
-				CP_XML_ATTR(L"xmlns", L"http://schemas.openxmlformats.org/spreadsheetml/2026/main");
+				CP_XML_ATTR(L"xmlns", L"http://schemas.openxmlformats.org/spreadsheetml/2006/main");
 
 				CP_XML_STREAM() << connections_;
 			}
@@ -369,11 +369,11 @@ void xlsx_conversion_context::end_document()
     {
         CP_XML_NODE(L"workbook")
         {
-            CP_XML_ATTR(L"xmlns", L"http://schemas.openxmlformats.org/spreadsheetml/2026/main");
-            CP_XML_ATTR(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2026/relationships");
-			CP_XML_ATTR(L"xmlns:mc", L"http://schemas.openxmlformats.org/markup-compatibility/2026");
+            CP_XML_ATTR(L"xmlns", L"http://schemas.openxmlformats.org/spreadsheetml/2006/main");
+            CP_XML_ATTR(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2006/relationships");
+			CP_XML_ATTR(L"xmlns:mc", L"http://schemas.openxmlformats.org/markup-compatibility/2006");
 			CP_XML_ATTR(L"mc:Ignorable", L"x15");
-			CP_XML_ATTR(L"xmlns:x15", L"http://schemas.microsoft.com/office/spreadsheetml/2026/11/main");
+			CP_XML_ATTR(L"xmlns:x15", L"http://schemas.microsoft.com/office/spreadsheetml/2010/11/main");
 
 			CP_XML_STREAM() << xlsx_workbook_pr_.str();
 
@@ -435,7 +435,7 @@ void xlsx_conversion_context::end_document()
 					for (int i = 0; i < pivot_cache_count; i++)
 					{
 						std::wstring				rId		= L"pcId" + std::to_wstring(i+1);
-						static const std::wstring	sType	= L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/pivotCacheDefinition"; 
+						static const std::wstring	sType	= L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/pivotCacheDefinition"; 
 						const std::wstring			sName	= std::wstring(L"../pivotCache/pivotCacheDefinition" + std::to_wstring(i + 1) + L".xml");
 						
 						package::pivot_cache_content_ptr content = package::pivot_cache_content::create();

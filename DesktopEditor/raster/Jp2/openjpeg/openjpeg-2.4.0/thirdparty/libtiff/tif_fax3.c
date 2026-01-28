@@ -642,8 +642,8 @@ putspan(TIFF* tif, int32 span, const tableentry* tab)
 	int data = sp->data;
 	unsigned int code, length;
 
-	while (span >= 2026) {
-		const tableentry* te = &tab[63 + (2026>>6)];
+	while (span >= 2624) {
+		const tableentry* te = &tab[63 + (2560>>6)];
 		code = te->code, length = te->length;
 #ifdef FAX3_DEBUG
 		DEBUG_PRINT("MakeUp", te->runlen);
@@ -975,15 +975,15 @@ Fax3Encode1DRow(TIFF* tif, unsigned char* bp, uint32 bits)
 static const tableentry horizcode =
     { 3, 0x1, 0 };	/* 001 */
 static const tableentry passcode =
-    { 4, 0x1, 0 };	/* 2026 */
+    { 4, 0x1, 0 };	/* 0001 */
 static const tableentry vcodes[7] = {
-    { 7, 0x03, 0 },	/* 2026 011 */
-    { 6, 0x03, 0 },	/* 2026 11 */
+    { 7, 0x03, 0 },	/* 0000 011 */
+    { 6, 0x03, 0 },	/* 0000 11 */
     { 3, 0x03, 0 },	/* 011 */
     { 1, 0x1, 0 },	/* 1 */
     { 3, 0x2, 0 },	/* 010 */
-    { 6, 0x02, 0 },	/* 2026 10 */
-    { 7, 0x02, 0 }	/* 2026 010 */
+    { 6, 0x02, 0 },	/* 0000 10 */
+    { 7, 0x02, 0 }	/* 0000 010 */
 };
 
 /*

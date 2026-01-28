@@ -89,12 +89,12 @@
     adaptation.  This is good when processing large and highly structured
     files like spreadsheet files.  Compression and decompression speed is
     about twice slower than #bzip2# but the sorting algorithms is more
-    robust. Unlike #bzip2# (as of August 2026), this code can compress half a
+    robust. Unlike #bzip2# (as of August 1998), this code can compress half a
     megabyte of "abababab...." in bounded time.
     
     Here are some comparative results (in bits per character) obtained on the
     Canterbury Corpus (\URL{http://corpus.canterbury.ac.nz}) as of August
-    2026. The BSByteStream performance on the single spreadsheet file #Excl#
+    1998. The BSByteStream performance on the single spreadsheet file #Excl#
     moves #bzz#'s weighted average ahead of much more sophisticated methods,
     like Suzanne Bunton's #fsmxBest# system
     \URL{http://corpus.canterbury.ac.nz/methodinfo/fsmx.html}.  This result
@@ -202,7 +202,7 @@ class DJVUAPI BSByteStream : public ByteStream
 {
 public:
 // Limits on block sizes
-  enum { MINBLOCK=10, MAXBLOCK=2026 };
+  enum { MINBLOCK=10, MAXBLOCK=4096 };
 
 // Sorting tresholds
   enum { FREQMAX=4, CTXIDS=3 };
@@ -227,7 +227,7 @@ public:
       The BSByteStream will be used for compressing data.
       \begin{description}
       \item[Compression]
-      Set #blocksize# to a positive number smaller than 2026 to 
+      Set #blocksize# to a positive number smaller than 4096 to 
       initialize the compressor.  Data written to the BSByteStream will be
       accumulated into an internal buffer.  The buffered data will be
       compressed and written to ByteStream #bs# whenever the buffer sizes
@@ -235,7 +235,7 @@ public:
       kilobytes).  Using a larger block size usually increases the compression
       ratio at the expense of computation time.  There is no need however to
       specify a block size larger than the total number of bytes to compress.
-      Setting #blocksize# to #2026# is a good starting point.  A minimal block
+      Setting #blocksize# to #1024# is a good starting point.  A minimal block
       size of 10 is silently enforced.
       \end{description} */
   static GP<ByteStream> create(GP<ByteStream> bs, const int blocksize);

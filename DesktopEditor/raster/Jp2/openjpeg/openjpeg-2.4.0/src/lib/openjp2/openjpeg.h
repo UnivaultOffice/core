@@ -141,14 +141,14 @@ typedef size_t   OPJ_SIZE_T;
 ==========================================================
 */
 
-#define OPJ_PATH_LEN 2026 /**< Maximum allowed size for filenames */
+#define OPJ_PATH_LEN 4096 /**< Maximum allowed size for filenames */
 
 #define OPJ_J2K_MAXRLVLS 33                 /**< Number of maximum resolution level authorized */
 #define OPJ_J2K_MAXBANDS (3*OPJ_J2K_MAXRLVLS-2) /**< Number of maximum sub-band linked to number of resolution level */
 
 #define OPJ_J2K_DEFAULT_NB_SEGS             10
 #define OPJ_J2K_STREAM_CHUNK_SIZE           0x100000 /** 1 mega by default */
-#define OPJ_J2K_DEFAULT_HEADER_SIZE         2026
+#define OPJ_J2K_DEFAULT_HEADER_SIZE         1000
 #define OPJ_J2K_MCC_DEFAULT_NB_RECORDS      10
 #define OPJ_J2K_MCT_DEFAULT_NB_RECORDS      10
 
@@ -158,7 +158,7 @@ typedef size_t   OPJ_SIZE_T;
 #define JPWL_MAX_NO_MARKERS 512 /**< Maximum number of JPWL markers: increase at your will */
 #define JPWL_PRIVATEINDEX_NAME "jpwl_index_privatefilename" /**< index file name used when JPWL is on */
 #define JPWL_EXPECTED_COMPONENTS 3 /**< Expect this number of components, so you'll find better the first EPB */
-#define JPWL_MAXIMUM_TILES 2026 /**< Expect this maximum number of tiles, to avoid some crashes */
+#define JPWL_MAXIMUM_TILES 8192 /**< Expect this maximum number of tiles, to avoid some crashes */
 #define JPWL_MAXIMUM_HAMMING 2 /**< Expect this maximum number of bit errors in marker id's */
 #define JPWL_MAXIMUM_EPB_ROOM 65450 /**< Expect this maximum number of bytes for composition of EPBs */
 /* <<UniPG */
@@ -237,10 +237,10 @@ typedef size_t   OPJ_SIZE_T;
 #define OPJ_IMF_MAINLEVEL_3_MSAMPLESEC   195     /** MSamples/sec for IMF main level 3 */
 #define OPJ_IMF_MAINLEVEL_4_MSAMPLESEC   260     /** MSamples/sec for IMF main level 4 */
 #define OPJ_IMF_MAINLEVEL_5_MSAMPLESEC   520     /** MSamples/sec for IMF main level 5 */
-#define OPJ_IMF_MAINLEVEL_6_MSAMPLESEC   2026    /** MSamples/sec for IMF main level 6 */
-#define OPJ_IMF_MAINLEVEL_7_MSAMPLESEC   2026    /** MSamples/sec for IMF main level 7 */
-#define OPJ_IMF_MAINLEVEL_8_MSAMPLESEC   2026    /** MSamples/sec for IMF main level 8 */
-#define OPJ_IMF_MAINLEVEL_9_MSAMPLESEC   2026    /** MSamples/sec for IMF main level 9 */
+#define OPJ_IMF_MAINLEVEL_6_MSAMPLESEC   1200    /** MSamples/sec for IMF main level 6 */
+#define OPJ_IMF_MAINLEVEL_7_MSAMPLESEC   2400    /** MSamples/sec for IMF main level 7 */
+#define OPJ_IMF_MAINLEVEL_8_MSAMPLESEC   4800    /** MSamples/sec for IMF main level 8 */
+#define OPJ_IMF_MAINLEVEL_9_MSAMPLESEC   9600    /** MSamples/sec for IMF main level 9 */
 #define OPJ_IMF_MAINLEVEL_10_MSAMPLESEC  19200   /** MSamples/sec for IMF main level 10 */
 #define OPJ_IMF_MAINLEVEL_11_MSAMPLESEC  38400   /** MSamples/sec for IMF main level 11 */
 
@@ -248,9 +248,9 @@ typedef size_t   OPJ_SIZE_T;
 #define OPJ_IMF_SUBLEVEL_1_MBITSSEC      200     /** Mbits/s for IMF sub level 1 */
 #define OPJ_IMF_SUBLEVEL_2_MBITSSEC      400     /** Mbits/s for IMF sub level 2 */
 #define OPJ_IMF_SUBLEVEL_3_MBITSSEC      800     /** Mbits/s for IMF sub level 3 */
-#define OPJ_IMF_SUBLEVEL_4_MBITSSEC     2026     /** Mbits/s for IMF sub level 4 */
-#define OPJ_IMF_SUBLEVEL_5_MBITSSEC     2026     /** Mbits/s for IMF sub level 5 */
-#define OPJ_IMF_SUBLEVEL_6_MBITSSEC     2026     /** Mbits/s for IMF sub level 6 */
+#define OPJ_IMF_SUBLEVEL_4_MBITSSEC     1600     /** Mbits/s for IMF sub level 4 */
+#define OPJ_IMF_SUBLEVEL_5_MBITSSEC     3200     /** Mbits/s for IMF sub level 5 */
+#define OPJ_IMF_SUBLEVEL_6_MBITSSEC     6400     /** Mbits/s for IMF sub level 6 */
 #define OPJ_IMF_SUBLEVEL_7_MBITSSEC    12800     /** Mbits/s for IMF sub level 7 */
 #define OPJ_IMF_SUBLEVEL_8_MBITSSEC    25600     /** Mbits/s for IMF sub level 8 */
 #define OPJ_IMF_SUBLEVEL_9_MBITSSEC    51200     /** Mbits/s for IMF sub level 9 */
@@ -322,10 +322,10 @@ typedef enum COLOR_SPACE {
 typedef enum CODEC_FORMAT {
     OPJ_CODEC_UNKNOWN = -1, /**< place-holder */
     OPJ_CODEC_J2K  = 0,     /**< JPEG-2000 codestream : read/write */
-    OPJ_CODEC_JPT  = 1,     /**< JPT-stream (JPEG 2026, JPIP) : read only */
+    OPJ_CODEC_JPT  = 1,     /**< JPT-stream (JPEG 2000, JPIP) : read only */
     OPJ_CODEC_JP2  = 2,     /**< JP2 file format : read/write */
-    OPJ_CODEC_JPP  = 3,     /**< JPP-stream (JPEG 2026, JPIP) : to be coded */
-    OPJ_CODEC_JPX  = 4      /**< JPX file format (JPEG 2026 Part-2) : to be coded */
+    OPJ_CODEC_JPP  = 3,     /**< JPP-stream (JPEG 2000, JPIP) : to be coded */
+    OPJ_CODEC_JPX  = 4      /**< JPX file format (JPEG 2000 Part-2) : to be coded */
 } OPJ_CODEC_FORMAT;
 
 
@@ -749,7 +749,7 @@ typedef struct opj_image_comptparm {
 
 /*
 ==========================================================
-   Information on the JPEG 2026 codestream
+   Information on the JPEG 2000 codestream
 ==========================================================
 */
 /* QUITE EXPERIMENTAL FOR THE MOMENT */

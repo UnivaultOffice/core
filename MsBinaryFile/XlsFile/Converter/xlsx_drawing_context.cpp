@@ -1043,7 +1043,7 @@ void xlsx_drawing_context::serialize_group()
 					{
 						CP_XML_NODE(L"a:hlinkClick")
 						{
-							CP_XML_ATTR(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2026/relationships");
+							CP_XML_ATTR(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2006/relationships");
 							
 							CP_XML_ATTR(L"r:id", drawing_state->hyperlink);
 						}
@@ -1444,7 +1444,7 @@ void xlsx_drawing_context::serialize_pic(_drawing_state_ptr & drawing_state)
 					{
 						CP_XML_NODE(L"a:hlinkClick")
 						{
-							CP_XML_ATTR(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2026/relationships");
+							CP_XML_ATTR(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2006/relationships");
 							
 							CP_XML_ATTR(L"r:id", drawing_state->hyperlink);
 						}
@@ -1527,10 +1527,10 @@ void xlsx_drawing_context::serialize_chart(_drawing_state_ptr & drawing_state)
             {                   
                 CP_XML_NODE(L"a:graphicData")
 				{
-					CP_XML_ATTR(L"uri", L"http://schemas.openxmlformats.org/drawingml/2026/chart");
+					CP_XML_ATTR(L"uri", L"http://schemas.openxmlformats.org/drawingml/2006/chart");
 					CP_XML_NODE(L"c:chart")
 					{
-						CP_XML_ATTR(L"xmlns:c", L"http://schemas.openxmlformats.org/drawingml/2026/chart");
+						CP_XML_ATTR(L"xmlns:c", L"http://schemas.openxmlformats.org/drawingml/2006/chart");
 						CP_XML_ATTR(L"r:id", drawing_state->objectId);
 					}
 				}
@@ -1572,7 +1572,7 @@ void xlsx_drawing_context::serialize_control(_drawing_state_ptr & drawing_state)
 
 							CP_XML_NODE(L"a14:compatExt")
 							{
-								CP_XML_ATTR(L"xmlns:a14", L"http://schemas.microsoft.com/office/drawing/2026/main");
+								CP_XML_ATTR(L"xmlns:a14", L"http://schemas.microsoft.com/office/drawing/2010/main");
 								CP_XML_ATTR(L"spid", L"_x0000_s" + std::to_wstring(drawing_state->id));
 							}
 						}
@@ -1671,7 +1671,7 @@ void xlsx_drawing_context::serialize_shape(_drawing_state_ptr & drawing_state)
 					{
 						CP_XML_NODE(L"a:hlinkClick")
 						{
-							CP_XML_ATTR(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2026/relationships");
+							CP_XML_ATTR(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2006/relationships");
 							
 							CP_XML_ATTR(L"r:id", drawing_state->hyperlink);
 						}
@@ -2411,9 +2411,9 @@ void xlsx_drawing_context::serialize_text(std::wostream & stream, _drawing_state
 							CP_XML_ATTR(L"kern", 10);
 							
 							if (drawing_state->wordart.spacing > 1) 
-								CP_XML_ATTR(L"spc", (int) ((drawing_state->wordart.spacing - 1 ) * 2026.));
+								CP_XML_ATTR(L"spc", (int) ((drawing_state->wordart.spacing - 1 ) * 3600.));
 							else if (drawing_state->wordart.spacing < 1) 
-								CP_XML_ATTR(L"spc", (int) ((drawing_state->wordart.spacing - 1 ) * 2026.));
+								CP_XML_ATTR(L"spc", (int) ((drawing_state->wordart.spacing - 1 ) * 1800.));
 							else
 								CP_XML_ATTR(L"spc", 0);
 						
@@ -2451,7 +2451,7 @@ void xlsx_drawing_context::serialize_line(std::wostream & stream, _drawing_state
 			if (line.width > 0)
 				CP_XML_ATTR(L"w", line.width);//in emu (1 pt = 12700) ??? 
 			else
-				CP_XML_ATTR(L"w", 2026); //default
+				CP_XML_ATTR(L"w", 9525); //default
 
 			switch(line.endcap)
 			{	
@@ -2480,7 +2480,7 @@ void xlsx_drawing_context::serialize_line(std::wostream & stream, _drawing_state
 						CP_XML_NODE(L"a:miter")
 						{		
 							if (line.miter > 0)
-								CP_XML_ATTR(L"lim", line.miter * 2026);
+								CP_XML_ATTR(L"lim", line.miter * 1000);
 						}break;				
 			case 2:		CP_XML_NODE(L"a:round");	break;
 			}
@@ -2543,15 +2543,15 @@ void xlsx_drawing_context::serialize_bitmap_fill(std::wostream & stream, _drawin
 				{
 					CP_XML_NODE(L"a:lum")
 					{
-						if (fill.brightness)CP_XML_ATTR(L"bright", *fill.brightness * 2026);
-						if (fill.contrast)	CP_XML_ATTR(L"contrast", *fill.contrast * 2026);
+						if (fill.brightness)CP_XML_ATTR(L"bright", *fill.brightness * 1000);
+						if (fill.contrast)	CP_XML_ATTR(L"contrast", *fill.contrast * 1000);
 					}
 				}
 				if (fill.biLevel)
 				{
 					CP_XML_NODE(L"a:biLevel")
 					{
-						CP_XML_ATTR(L"thresh", *fill.biLevel * 2026);
+						CP_XML_ATTR(L"thresh", *fill.biLevel * 1000);
 					}
 				}
 				if (fill.color.opacity > 0.00001)
@@ -2712,7 +2712,7 @@ void xlsx_drawing_context::serialize_control_props(std::wostream & strm, _drawin
     {
 		CP_XML_NODE(L"formControlPr")
 		{
-			CP_XML_ATTR(L"xmlns", L"http://schemas.microsoft.com/office/spreadsheetml/2026/9/main" );
+			CP_XML_ATTR(L"xmlns", L"http://schemas.microsoft.com/office/spreadsheetml/2009/9/main" );
 
 			switch(drawing_state->type_control)
 			{
@@ -3868,11 +3868,11 @@ void xlsx_drawing_context::serialize(std::wostream & strm)
     {
         CP_XML_NODE(L"xdr:wsDr")
         {
-            CP_XML_ATTR(L"xmlns:xdr", L"http://schemas.openxmlformats.org/drawingml/2026/spreadsheetDrawing");
-            CP_XML_ATTR(L"xmlns:a"	, L"http://schemas.openxmlformats.org/drawingml/2026/main");
-            CP_XML_ATTR(L"xmlns:r"	, L"http://schemas.openxmlformats.org/officeDocument/2026/relationships");
-			CP_XML_ATTR(L"xmlns:mc"	, L"http://schemas.openxmlformats.org/markup-compatibility/2026");
-			CP_XML_ATTR(L"xmlns:a14", L"http://schemas.microsoft.com/office/drawing/2026/main");
+            CP_XML_ATTR(L"xmlns:xdr", L"http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing");
+            CP_XML_ATTR(L"xmlns:a"	, L"http://schemas.openxmlformats.org/drawingml/2006/main");
+            CP_XML_ATTR(L"xmlns:r"	, L"http://schemas.openxmlformats.org/officeDocument/2006/relationships");
+			CP_XML_ATTR(L"xmlns:mc"	, L"http://schemas.openxmlformats.org/markup-compatibility/2006");
+			CP_XML_ATTR(L"xmlns:a14", L"http://schemas.microsoft.com/office/drawing/2010/main");
 
 			for (size_t i = 0 ; i < drawing_states.size(); i++)
 			{

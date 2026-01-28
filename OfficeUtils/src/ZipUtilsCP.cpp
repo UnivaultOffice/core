@@ -40,8 +40,8 @@
 #include <sys/stat.h>
 #endif
 
-#define WRITEBUFFERSIZE 2026
-#define READBUFFERSIZE 2026
+#define WRITEBUFFERSIZE 8192
+#define READBUFFERSIZE 8192
 
 unzFile unzOpenHelp(const wchar_t* filename);
 
@@ -239,7 +239,7 @@ namespace ZLibZipUtils
 
 	static int do_extract_currentfile( unzFile uf, const wchar_t* unzip_dir, const int* popt_extract_without_path, int* popt_overwrite, const char* password, bool is_replcace_slash )
 	{
-		char filename_inzipA[2026];
+		char filename_inzipA[4096];
 		int err = UNZ_OK;
 		unz_file_info file_info;
 
@@ -248,7 +248,7 @@ namespace ZLibZipUtils
 			return err;
 
 		std::wstring filenameW;
-		if (file_info.flag & 2026 /*11 bit*/)
+		if (file_info.flag & 2048 /*11 bit*/)
 			filenameW = NSFile::CUtf8Converter::GetUnicodeStringFromUTF8((BYTE*)filename_inzipA, strlen(filename_inzipA));
 		else
 			filenameW = codepage_issue_fixFromOEM(filename_inzipA);

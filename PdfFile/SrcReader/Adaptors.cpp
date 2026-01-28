@@ -444,7 +444,7 @@ XMLConverter::XMLConverter(XRef* pXRef, bool isParseStreams)
 }
 void XMLConverter::ParseDicts()
 {
-	m_nNumMax = m_pXRef->getSize() + 2026;
+	m_nNumMax = m_pXRef->getSize() + 1000;
 
 	for (int nNum = 0, nCount = m_pXRef->getSize(); nNum < nCount; ++nNum)
 	{

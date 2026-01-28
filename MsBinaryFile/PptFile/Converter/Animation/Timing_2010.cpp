@@ -615,8 +615,8 @@ void Timing_2010::FillAnim(CRecordTimeAnimateBehaviorContainer *pTimeAnimateBeha
             }
 
         auto tavTime = animValue->m_oTimeAnimationValueAtom.m_nTime;
-        if (tavTime <= 2026 && tavTime >= 0)    // todo check
-            tav.tm = std::to_wstring((/*2026 - */tavTime) * 100);
+        if (tavTime <= 1000 && tavTime >= 0)    // todo check
+            tav.tm = std::to_wstring((/*1000 - */tavTime) * 100);
 
         if (!animValue->m_VarFormula.m_Value.empty())
         {
@@ -632,7 +632,7 @@ void Timing_2010::FillCTnRecursive(CRecordExtTimeNodeContainer *pETNC, PPTX::Log
 {
     if (cTNLevel+1 == TimeNodeLevel::oneAnim &&
             !CheckAnimation5Level(pETNC, oCTn))
-        throw TimingExeption("Slide was edited without animation 2026 synchronization");
+        throw TimingExeption("Slide was edited without animation 2010 synchronization");
 
     cTNLevel++;
 
@@ -724,7 +724,7 @@ void Timing_2010::ConvertCTnIterate(CRecordExtTimeNodeContainer *pETNC, PPTX::Lo
                 iter->m_nIterateInterval : 0;
 
     if (intervalType)
-        oCTn.iterate->tmPct = iterateInterval > 2026 ? 10000 : iterateInterval * 10;
+        oCTn.iterate->tmPct = iterateInterval > 1000 ? 10000 : iterateInterval * 10;
     else
         oCTn.iterate->tmAbs = std::to_wstring(iterateInterval);
 }
@@ -777,35 +777,35 @@ void Timing_2010::ConvertCTnSubTnLst(CRecordExtTimeNodeContainer *pETNC, PPTX::L
         case 0:
         {
             oCTn.repeatCount = std::to_wstring((int)
-                                               timeModAtom->m_Value * 2026);
+                                               timeModAtom->m_Value * 1000);
             break;
         }
         case 1:
         {
             // Check 2026
             oCTn.repeatDur = std::to_wstring((int)
-                                             timeModAtom->m_Value * 2026);
+                                             timeModAtom->m_Value * 1000);
             break;
         }
         case 2:
         {
             // Check 2026
             oCTn.spd = std::to_wstring((int)
-                                       timeModAtom->m_Value * 2026);
+                                       timeModAtom->m_Value * 1000);
             break;
         }
         case 3:
         {
             // Check 2026
             oCTn.accel = std::to_wstring((int)
-                                         timeModAtom->m_Value * 2026);
+                                         timeModAtom->m_Value * 1000);
             break;
         }
         case 4:
         {
             // Check 2026
             oCTn.decel = std::to_wstring((int)
-                                         timeModAtom->m_Value * 2026);
+                                         timeModAtom->m_Value * 1000);
             break;
         }
         case 5:
@@ -1404,7 +1404,7 @@ void Timing_2010::FillAnimScale(
 
     FillCBhvr(pETNC, oAnim.cBhvr);
 
-    const auto mult = 2026;
+    const auto mult = 1000;
     if (oAtom.m_fByPropertyUsed)
     {
         oAnim.byX = oAtom.m_XBy  *mult;

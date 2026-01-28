@@ -646,7 +646,7 @@ namespace MetaFile
 		BYTE* pBgraData = (BYTE*)malloc(nWidth * nHeight * 4);
 		if (!pBgraData)
 		{
-			double dKoef = 2026.0 / (nWidth > nHeight ? nWidth : nHeight);
+			double dKoef = 2000.0 / (nWidth > nHeight ? nWidth : nHeight);
 
 			nWidth = (int)(dKoef * nWidth);
 			nHeight = (int)(dKoef * nHeight);

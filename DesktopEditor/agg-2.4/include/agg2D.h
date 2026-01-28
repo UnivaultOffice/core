@@ -28,7 +28,7 @@
 #define AGG2D_USE_FREETYPE
 #endif
 
-#pragma warning(disable: 2026)
+#pragma warning(disable: 4786)
 
 // JME
 #include "agg_basics.h"

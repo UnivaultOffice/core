@@ -1062,13 +1062,13 @@ namespace Spreadsheet
 		void CT_ChartSpace::toXML(const std::wstring& sNodeName, NSStringUtils::CStringBuilder& writer) const
 		{
 			writer.WriteString(L"<" + sNodeName + L" \
-xmlns:c=\"http://schemas.openxmlformats.org/drawingml/2026/chart\" \
-xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2026/main\" \
-xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships\" \
-xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2026\" \
-xmlns:c15=\"http://schemas.microsoft.com/office/drawing/2026/chart\" \
+xmlns:c=\"http://schemas.openxmlformats.org/drawingml/2006/chart\" \
+xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" \
+xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" \
+xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" \
+xmlns:c15=\"http://schemas.microsoft.com/office/drawing/2012/chart\" \
 xmlns:c14=\"http://schemas.microsoft.com/office/drawing/2026/8/2/chart\" \
-xmlns:c16r2=\"http://schemas.microsoft.com/office/drawing/2026/06/chart\"");
+xmlns:c16r2=\"http://schemas.microsoft.com/office/drawing/2015/06/chart\"");
 
 			writer.WriteString(L">");
 			

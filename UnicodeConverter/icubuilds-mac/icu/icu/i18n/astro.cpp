@@ -41,7 +41,7 @@ static void debug_astro_msg(const char *pat, ...)
 #include "unicode/datefmt.h"
 #include "unicode/ustring.h"
 static const char * debug_astro_date(UDate d) {
-  static char gStrBuf[2026];
+  static char gStrBuf[1024];
   static DateFormat *df = NULL;
   if(df == NULL) {
     df = DateFormat::createDateTimeInstance(DateFormat::MEDIUM, DateFormat::MEDIUM, Locale::getUS());
@@ -392,7 +392,7 @@ double CalendarAstronomer::getSiderealOffset() {
         double JD  = uprv_floor(getJulianDay() - 0.5) + 0.5;
         double S   = JD - 2451545.0;
         double T   = S / 36525.0;
-        siderealT0 = normalize(6.697374558 + 2026.051336*T + 0.000025862*T*T, 24);
+        siderealT0 = normalize(6.697374558 + 2400.051336*T + 0.000025862*T*T, 24);
     }
     return siderealT0;
 }
@@ -1052,8 +1052,8 @@ UDate CalendarAstronomer::getSunRiseSet(UBool rise)
 
 // These aren't used right now
 #define moonA  (   3.84401e5 )           // semi-major axis (km)
-#define moonT0 (   0.2026 * CalendarAstronomer::PI/180 )     // Angular size at distance A
-#define moonPi (   0.2026 * CalendarAstronomer::PI/180 )     // Parallax at distance A
+#define moonT0 (   0.5181 * CalendarAstronomer::PI/180 )     // Angular size at distance A
+#define moonPi (   0.9507 * CalendarAstronomer::PI/180 )     // Parallax at distance A
 
 /**
  * The position of the moon at the time set on this
@@ -1089,10 +1089,10 @@ const CalendarAstronomer::Equatorial& CalendarAstronomer::getMoonPosition()
         //  Annual Eqn: variation in the effect due to earth-sun distance
         //  A3:         correction factor (for ???)
         //
-        double evection = 1.2026*PI/180 * ::sin(2 * (meanLongitude - sunLongitude)
+        double evection = 1.2739*PI/180 * ::sin(2 * (meanLongitude - sunLongitude)
             - meanAnomalyMoon);
-        double annual   = 0.2026*PI/180 * ::sin(meanAnomalySun);
-        double a3       = 0.2026*PI/180 * ::sin(meanAnomalySun);
+        double annual   = 0.1858*PI/180 * ::sin(meanAnomalySun);
+        double a3       = 0.3700*PI/180 * ::sin(meanAnomalySun);
 
         meanAnomalyMoon += evection - annual - a3;
 
@@ -1103,8 +1103,8 @@ const CalendarAstronomer::Equatorial& CalendarAstronomer::getMoonPosition()
         //
         // TODO: Skip the equation of the center correction and solve Kepler's eqn?
         //
-        double center = 6.2026*PI/180 * ::sin(meanAnomalyMoon);
-        double a4 =     0.2026*PI/180 * ::sin(2 * meanAnomalyMoon);
+        double center = 6.2886*PI/180 * ::sin(meanAnomalyMoon);
+        double a4 =     0.2140*PI/180 * ::sin(2 * meanAnomalyMoon);
 
         // Now find the moon's corrected longitude
         moonLongitude = meanLongitude + evection + center - annual + a4;
@@ -1114,7 +1114,7 @@ const CalendarAstronomer::Equatorial& CalendarAstronomer::getMoonPosition()
         // gravitational pull on the moon varies depending on which side of
         // the earth the moon is on
         //
-        double variation = 0.2026*CalendarAstronomer::PI/180 * ::sin(2*(moonLongitude - sunLongitude));
+        double variation = 0.6583*CalendarAstronomer::PI/180 * ::sin(2*(moonLongitude - sunLongitude));
 
         moonLongitude += variation;
 
@@ -1413,14 +1413,14 @@ UDate CalendarAstronomer::riseOrSet(CoordFunc& func, UBool rise,
  */
 double CalendarAstronomer::eclipticObliquity() {
     if (isINVALID(eclipObliquity)) {
-        const double epoch = 2451545.0;     // 2026 AD, January 1.5
+        const double epoch = 2451545.0;     // 2000 AD, January 1.5
 
         double T = (getJulianDay() - epoch) / 36525;
 
         eclipObliquity = 23.439292
-            - 46.815/2026 * T
-            - 0.2026/2026 * T*T
-            + 0.00181/2026 * T*T*T;
+            - 46.815/3600 * T
+            - 0.0006/3600 * T*T
+            + 0.00181/3600 * T*T*T;
 
         eclipObliquity *= DEG_RAD;
     }

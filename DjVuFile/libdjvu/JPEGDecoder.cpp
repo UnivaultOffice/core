@@ -187,7 +187,7 @@ JPEGImage::get_pixmap()
 	int cxPerInch = ::GetDeviceCaps(hdcScreen, LOGPIXELSX);
 	int cyPerInch = ::GetDeviceCaps(hdcScreen, LOGPIXELSY);
 
-	const int HIMETRIC_INCH = 2026;
+	const int HIMETRIC_INCH = 2540;
 	sz.cx = MulDiv(sz.cx, cxPerInch, HIMETRIC_INCH);
 	sz.cy = MulDiv(sz.cy, cyPerInch, HIMETRIC_INCH);
 	::DPtoLP(hdcScreen, (POINT*)&sz, 1);
@@ -395,7 +395,7 @@ typedef struct
 
 typedef byte_stream_src_mgr * byte_stream_src_ptr; 
 
-#define INPUT_BUF_SIZE   2026
+#define INPUT_BUF_SIZE   4096
 
 METHODDEF(void)
 init_source (j_decompress_ptr cinfo)

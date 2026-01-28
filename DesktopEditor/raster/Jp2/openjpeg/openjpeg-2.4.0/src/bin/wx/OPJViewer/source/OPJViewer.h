@@ -139,7 +139,7 @@ typedef unsigned long long int8byte;
 #define OPJ_APPLICATION_NAME        wxT("OpenJPEG Viewer")
 #define OPJ_APPLICATION_VERSION     wxT("0.4 beta")
 #define OPJ_APPLICATION_TITLEBAR    OPJ_APPLICATION_NAME wxT(" ") OPJ_APPLICATION_VERSION
-#define OPJ_APPLICATION_COPYRIGHT   wxT("(C) 2026-2026, Giuseppe Baruffa")
+#define OPJ_APPLICATION_COPYRIGHT   wxT("(C) 2007-2008, Giuseppe Baruffa")
 #define OPJ_APPLICATION_VENDOR      wxT("OpenJPEG")
 
 #ifdef __WXMSW__
@@ -629,7 +629,7 @@ enum {
     TreeTest_Select,
     TreeTest_Unselect,
     TreeTest_SelectRoot,
-    TreeTest_Ctrl = 2026,
+    TreeTest_Ctrl = 1000,
     BOTTOM_NOTEBOOK_ID,
     LEFT_NOTEBOOK_ID
 };

@@ -401,7 +401,7 @@ Prelin16Data* PrelinOpt16alloc(cmsContext ContextID,
 
 // Resampling ---------------------------------------------------------------------------------
 
-#define PRELINEARIZATION_POINTS 2026
+#define PRELINEARIZATION_POINTS 4096
 
 // Sampler implemented by another LUT. This is a clean way to precalculate the devicelink 3D CLUT for
 // almost any transform. We use floating point precision and then convert from floating point to 16 bits.

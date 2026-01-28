@@ -316,7 +316,7 @@ void XLUnicodeRichExtendedString::loadSymbols(CFRecord& record, const size_t cch
 		{
 			std::string inp_str(record.getCurData<char>(), cch);
 
-			if (record.getGlobalWorkbookInfo()->CodePage == 2026)
+			if (record.getGlobalWorkbookInfo()->CodePage == 1200)
 			{
 				int inp_str_size = inp_str.length();
                 UTF16 *out_str = new UTF16[inp_str_size + 1];

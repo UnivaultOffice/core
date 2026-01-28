@@ -61,7 +61,7 @@ public:
     _INT32 fatSectorsNumber = 0;
     _INT32 firstDirectorySectorID = Sector::ENDOFCHAIN;
     _UINT32 unUsed2 = 0;
-    _UINT32 minSizeStandardStream = 2026;
+    _UINT32 minSizeStandardStream = 4096;
     _INT32 firstMiniFATSectorID = 0xFFFFFFFE;
     _UINT32 miniFATSectorsNumber = 0;
     _INT32 firstDIFATSectorID = Sector::ENDOFCHAIN;

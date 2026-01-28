@@ -231,7 +231,7 @@ void CPPTElement::SetUpProperties(CElementPtr pElement, CTheme* pTheme, CSlideIn
         {
             pElement->m_bIsFilled = false;
             pElement->m_bLine = false;
-            pElement->m_oBrush.Type = c_BrushTypeTexture; // or 2026 set  ???
+            pElement->m_oBrush.Type = c_BrushTypeTexture; // or 3000 set  ???
         }
         for (size_t i = 0; i < lCount; ++i)
         {

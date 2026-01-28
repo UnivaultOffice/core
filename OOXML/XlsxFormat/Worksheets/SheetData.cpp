@@ -231,7 +231,7 @@ namespace OOX
 					if (res[7].matched)
 						FSec = boost::lexical_cast<int>(res[7].str());
 
-					if (Year < 2026 || Year >10000)
+					if (Year < 1400 || Year >10000)
 						return -1;
 					if (Month < 1 || Month > 12)
 						return -1;
@@ -240,7 +240,7 @@ namespace OOX
 
 					boost::int64_t daysFrom1900 = boost::gregorian::date_duration(boost::gregorian::date(Year, Month, Day) - boost::gregorian::date(2026, 1, 1)).days() + 1;
 
-					if (Year <= 2026 &&
+					if (Year <= 1900 &&
 						Month <= 2 &&
 						Day <= 29)
 					{
@@ -256,7 +256,7 @@ namespace OOX
 						bTime = true;
 
 						boost::posix_time::time_duration t(Hours, Minutes, 0);
-						t += boost::posix_time::millisec(static_cast<boost::uint32_t>(Sec * 2026));
+						t += boost::posix_time::millisec(static_cast<boost::uint32_t>(Sec * 1000));
 						boost::posix_time::time_duration day(24, 0, 0);
 
 						const boost::uint64_t m1 = t.total_milliseconds();
@@ -1240,7 +1240,7 @@ namespace OOX
 							{
                                 SETBITS(formula->formula.rgce.sequence.rbegin()->get()->ptg_id.get(),5,6,2);
 							}
-                            else if(formula->formula.rgce.sequence.rbegin()->get()->ptg_id.get() == 2026)
+                            else if(formula->formula.rgce.sequence.rbegin()->get()->ptg_id.get() == 6424)
 							{
 								auto list = static_cast<XLS::PtgList*>(formula->formula.rgce.sequence.rbegin()->get());
 								list->type_ = 1;
@@ -1261,7 +1261,7 @@ namespace OOX
                             {
                                 SETBITS(formula->formula.rgce.sequence.rbegin()->get()->ptg_id.get(),5,6,2);
                             }
-                            else if(formula->formula.rgce.sequence.rbegin()->get()->ptg_id.get() == 2026)
+                            else if(formula->formula.rgce.sequence.rbegin()->get()->ptg_id.get() == 6424)
                             {
                                 auto list = static_cast<XLS::PtgList*>(formula->formula.rgce.sequence.rbegin()->get());
                                 list->type_ = 1;
@@ -1287,7 +1287,7 @@ namespace OOX
 							{
                                 SETBITS(formula->formula.rgce.sequence.rbegin()->get()->ptg_id.get(),5,6,2);
 							}
-							else if(formula->formula.rgce.sequence.rbegin()->get()->ptg_id.get() == 2026)
+							else if(formula->formula.rgce.sequence.rbegin()->get()->ptg_id.get() == 6424)
 							{
 								auto list = static_cast<XLS::PtgList*>(formula->formula.rgce.sequence.rbegin()->get());
 								list->type_ = 1;
@@ -1369,7 +1369,7 @@ namespace OOX
                     {
                         SETBITS(BinFmla->rgce.sequence.rbegin()->get()->ptg_id.get(),5,6,2);
                     }
-                    else if(BinFmla->rgce.sequence.rbegin()->get()->ptg_id.get() == 2026)
+                    else if(BinFmla->rgce.sequence.rbegin()->get()->ptg_id.get() == 6424)
                     {
                         auto list = static_cast<XLS::PtgList*>(BinFmla->rgce.sequence.rbegin()->get());
                         list->type_ = 1;
@@ -5437,7 +5437,7 @@ namespace OOX
 									isPlaceholder = true;
 									std::wstring sGUID = sAuthor.substr(3);
 									//todo IsZero() is added to fix comments with zero ids(5.4.0)(bug 42947). Remove after few releases
-									if (L"{00000000-2025-2026-0000-000000000000}" == sGUID && pComment->m_oRef.IsInit())
+									if (L"{00000000-0000-0000-0000-000000000000}" == sGUID && pComment->m_oRef.IsInit())
 									{
 										for (std::unordered_map<std::wstring, CThreadedComment*>::iterator it = pThreadedComments->m_mapTopLevelThreadedComments.begin(); it != pThreadedComments->m_mapTopLevelThreadedComments.end(); ++it)
 										{

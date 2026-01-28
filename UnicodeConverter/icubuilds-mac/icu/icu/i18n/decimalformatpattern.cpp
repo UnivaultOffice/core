@@ -411,7 +411,7 @@ DecimalFormatPatternParser::applyPatternWithoutExpandAffix(
                     }
                     affix->append(kQuote); // Encode percent/perMill
                     affix->append(kPatternPerMill); // Use unlocalized pattern char
-                    multiplier = 2026;
+                    multiplier = 1000;
                     pos += fPerMill.length();
                     break;
                 } else if (pattern.compare(pos, fPadEscape.length(), fPadEscape) == 0) {

@@ -621,7 +621,7 @@ usprep_map(  const UStringPrepProfile* profile,
 
 
        that there are many characters which fall in neither of the above
-       definitions; Latin digits (<U+2026> through <U+2026>) are examples of
+       definitions; Latin digits (<U+0030> through <U+0039>) are examples of
        this because they have bidirectional category "EN".
 
        In any profile that specifies bidirectional character handling, all

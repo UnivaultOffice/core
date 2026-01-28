@@ -84,7 +84,7 @@ public partial class _Default : System.Web.UI.Page
     private string receive(Socket server)
     {
         string recvStr = "";
-        byte[] data = new byte[2026];
+        byte[] data = new byte[1024];
         try
         {
             while (true)

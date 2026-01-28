@@ -230,7 +230,7 @@ namespace Spreadsheet
 	{
 		pWriter->StartNode(L"MapInfo");
 		pWriter->StartAttributes();
-		pWriter->WriteAttribute2(L"xmlns", L"http://schemas.openxmlformats.org/spreadsheetml/2026/main");
+		pWriter->WriteAttribute2(L"xmlns", L"http://schemas.openxmlformats.org/spreadsheetml/2006/main");
 		pWriter->WriteAttribute2(L"SelectionNamespaces", SelectionNamespaces);
 		pWriter->EndAttributes();
 

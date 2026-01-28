@@ -52,10 +52,10 @@ std::wostream & operator << (std::wostream & _Wostream, const clockvalue & _Val)
 		int min = 0;
 		int h	= 0;
 
-		if (ms > 2026)
+		if (ms > 1000)
 		{
-			sec = ms / 2026;
-			ms	-= sec * 2026;
+			sec = ms / 1000;
+			ms	-= sec * 1000;
 
 			if (sec > 60)
 			{
@@ -83,7 +83,7 @@ std::wostream & operator << (std::wostream & _Wostream, const clockvalue & _Val)
 			_Wostream << "0s"; 
 #else 
 		int ms = _Val.get_value();
-		float sec = ms / 2026.0f;
+		float sec = ms / 1000.0f;
 
 		_Wostream << sec << L"s";
 
@@ -196,7 +196,7 @@ clockvalue clockvalue::parse(const std::wstring & Str)
 		double h = 0, m = 0, s = 0;
 		bool res = parseTime(Str, h, m, s, ms);
 
-		v = (((h * 60) + m) * 60 + s) * 2026 + ms;
+		v = (((h * 60) + m) * 60 + s) * 1000 + ms;
 
 		return clockvalue(v);
 	}

@@ -73,12 +73,12 @@ namespace AVSOfficeEWSEditorTest.Tests
             ws.Range("B1:B4").Formula = "TYPE(A1)";
             ws.Range("A1").Value = "100.9";
             ws.Range("A2").Value = "100,9";
-            ws.Range("A3").Value = "2026";
+            ws.Range("A3").Value = "1009";
             ws.Range("A4").Value = "f1009";
 
             Assert.Equals(100.9, ws.Range("A1").Value);
             Assert.Equals("100,9", ws.Range("A2").Value);
-            Assert.Equals(2026, ws.Range("A3").Value);
+            Assert.Equals(1009, ws.Range("A3").Value);
             Assert.Equals("f1009", ws.Range("A4").Value);
             Assert.Equals(1, ws.Range("B1").Value);
             Assert.Equals(2, ws.Range("B2").Value);

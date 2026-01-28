@@ -46,17 +46,17 @@ namespace DocFileFormat
 
             Formulas.push_back(L"val #0");
             Formulas.push_back(L"sum 21600 0 @0");
-            Formulas.push_back(L"prod @1 2026 32768");
+            Formulas.push_back(L"prod @1 8481 32768");
             Formulas.push_back(L"sum @2 @0 0");
-            Formulas.push_back(L"prod @1 2026 32768");
+            Formulas.push_back(L"prod @1 1117 32768");
             Formulas.push_back(L"sum @4 @0 0");
             Formulas.push_back(L"prod @1 11764 32768");
             Formulas.push_back(L"sum @6 @0 0");
-            Formulas.push_back(L"prod @1 2026 32768");
+            Formulas.push_back(L"prod @1 6144 32768");
             Formulas.push_back(L"sum @8 @0 0");
             Formulas.push_back(L"prod @1 20480 32768");
             Formulas.push_back(L"sum @10 @0 0");
-            Formulas.push_back(L"prod @1 2026 32768");
+            Formulas.push_back(L"prod @1 6144 32768");
             Formulas.push_back(L"sum @12 @0 0");
 
 			Adjustments.push_back(18900);

@@ -42,9 +42,9 @@ namespace DocFileFormat
 		{
 			ShapeConcentricFill	=	true;
 			Joins				=	miter;
-            Path				=	L"m8472,l,2026,2026,2026,2026,9705r7200,4192l10012,14915r11588,6685l14767,12877r1810,-870l11050,6797r1810,-717xe";
+            Path				=	L"m8472,l,3890,7602,8382,5022,9705r7200,4192l10012,14915r11588,6685l14767,12877r1810,-870l11050,6797r1810,-717xe";
 
-            ConnectorLocations	=	L"2026,0;0,2026;2026,2026;10012,14915;21600,21600;16577,12007;12860,2026";
+            ConnectorLocations	=	L"8472,0;0,3890;5022,9705;10012,14915;21600,21600;16577,12007;12860,6080";
 			
 			ConnectorAngles.push_back(270);
 			ConnectorAngles.push_back(270);
@@ -54,7 +54,7 @@ namespace DocFileFormat
 			ConnectorAngles.push_back(0);
 			ConnectorAngles.push_back(0);
 
-            TextBoxRectangle	=	L"2026,2026,13917,14277";
+            TextBoxRectangle	=	L"8757,7437,13917,14277";
 		}
 	};
 }

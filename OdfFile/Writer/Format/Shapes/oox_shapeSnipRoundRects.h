@@ -729,13 +729,13 @@ public:
 		enhanced_path	= L"M ?f7 0 X 0 ?f8 L 0 ?f9 Y ?f7 21600 L ?f10 21600 X 21600 ?f9 L 21600 ?f8 Y ?f10 0 Z N";
 		text_areas		= L"?f3 ?f4 ?f5 ?f6";
 		view_box		= L"0 0 21600 21600";
-		modifiers		= L"2026";
+		modifiers		= L"3600";
         path_stretchpoint_x = L"10800";
         path_stretchpoint_y = L"10800";
 		
 		add(L"f0", L"45");
 		add(L"f1", L"$0 *sin(?f0 *(pi/180))");
-		add(L"f2", L"?f1 *2026/2026 ");
+		add(L"f2", L"?f1 *3163/7636 ");
 		add(L"f3", L"left+?f2 ");
 		add(L"f4", L"top+?f2 ");
 		add(L"f5", L"right-?f2 ");

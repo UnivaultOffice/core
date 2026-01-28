@@ -70,7 +70,7 @@ namespace PPTX
 		std::wstring VariationStyleSchemeLst::toXML() const
 		{
 			XmlUtils::CAttribute oAttr;
-			oAttr.Write(L"xmlns:vt", L"http://schemas.microsoft.com/office/visio/2026/theme");
+			oAttr.Write(L"xmlns:vt", L"http://schemas.microsoft.com/office/visio/2012/theme");
 
 			XmlUtils::CNodeValue oValue;
 			oValue.WriteArray(m_arrItems);
@@ -85,7 +85,7 @@ namespace PPTX
 		void VariationStyleSchemeLst::toXmlWriter(NSBinPptxRW::CXmlWriter* pWriter) const
 		{
 			pWriter->StartNode(L"vt:variationStyleSchemeLst");
-			pWriter->WriteAttribute(L"xmlns:vt", L"http://schemas.microsoft.com/office/visio/2026/theme");
+			pWriter->WriteAttribute(L"xmlns:vt", L"http://schemas.microsoft.com/office/visio/2012/theme");
 			pWriter->EndAttributes();
 
 			pWriter->WriteArray2(m_arrItems);
@@ -321,7 +321,7 @@ namespace PPTX
 		std::wstring FillStyles::toXML() const
 		{
 			XmlUtils::CAttribute oAttr;
-			oAttr.Write(L"xmlns:vt", L"http://schemas.microsoft.com/office/visio/2026/theme");
+			oAttr.Write(L"xmlns:vt", L"http://schemas.microsoft.com/office/visio/2012/theme");
 			
 			XmlUtils::CNodeValue oValue;
 			oValue.WriteArray(m_arrItems);
@@ -336,7 +336,7 @@ namespace PPTX
 		void FillStyles::toXmlWriter(NSBinPptxRW::CXmlWriter* pWriter) const
 		{
 			pWriter->StartNode(L"vt:fillStyles");
-			pWriter->WriteAttribute(L"xmlns:vt", L"http://schemas.microsoft.com/office/visio/2026/theme");
+			pWriter->WriteAttribute(L"xmlns:vt", L"http://schemas.microsoft.com/office/visio/2012/theme");
 			pWriter->EndAttributes();
 
 			pWriter->WriteArray2(m_arrItems);
@@ -512,7 +512,7 @@ namespace PPTX
 		std::wstring FontStylesGroup::toXML() const
 		{
 			XmlUtils::CAttribute oAttr;
-			oAttr.Write(L"xmlns:vt", L"http://schemas.microsoft.com/office/visio/2026/theme");
+			oAttr.Write(L"xmlns:vt", L"http://schemas.microsoft.com/office/visio/2012/theme");
 
 			XmlUtils::CNodeValue oValue;
 			oValue.Write(connectorFontStyles);
@@ -528,7 +528,7 @@ namespace PPTX
 		void FontStylesGroup::toXmlWriter(NSBinPptxRW::CXmlWriter* pWriter) const
 		{
 			pWriter->StartNode(L"vt:fontStylesGroup");
-			pWriter->WriteAttribute(L"xmlns:vt", L"http://schemas.microsoft.com/office/visio/2026/theme");
+			pWriter->WriteAttribute(L"xmlns:vt", L"http://schemas.microsoft.com/office/visio/2012/theme");
 			pWriter->EndAttributes();
 
 			connectorFontStyles.toXmlWriter(pWriter);
@@ -604,7 +604,7 @@ namespace PPTX
 		std::wstring LineStyles::toXML() const
 		{
 			XmlUtils::CAttribute oAttr;
-			oAttr.Write(L"xmlns:vt", L"http://schemas.microsoft.com/office/visio/2026/theme");
+			oAttr.Write(L"xmlns:vt", L"http://schemas.microsoft.com/office/visio/2012/theme");
 
 			XmlUtils::CNodeValue oValue;
 			oValue.Write(fmtConnectorSchemeLineStyles);
@@ -620,7 +620,7 @@ namespace PPTX
 		void LineStyles::toXmlWriter(NSBinPptxRW::CXmlWriter* pWriter) const
 		{
 			pWriter->StartNode(L"vt:lineStyles");
-			pWriter->WriteAttribute(L"xmlns:vt", L"http://schemas.microsoft.com/office/visio/2026/theme");
+			pWriter->WriteAttribute(L"xmlns:vt", L"http://schemas.microsoft.com/office/visio/2012/theme");
 			pWriter->EndAttributes();
 
 			fmtConnectorSchemeLineStyles.toXmlWriter(pWriter);
@@ -1305,7 +1305,7 @@ namespace PPTX
 		std::wstring VariationClrSchemeLst::toXML() const
 		{
 			XmlUtils::CAttribute oAttr;
-			oAttr.Write(L"xmlns:vt", L"http://schemas.microsoft.com/office/visio/2026/theme");
+			oAttr.Write(L"xmlns:vt", L"http://schemas.microsoft.com/office/visio/2012/theme");
 			XmlUtils::CNodeValue oValue;
 			oValue.WriteArray(m_arrItems);
 
@@ -1319,7 +1319,7 @@ namespace PPTX
 		void VariationClrSchemeLst::toXmlWriter(NSBinPptxRW::CXmlWriter* pWriter) const
 		{
 			pWriter->StartNode(L"vt:variationClrSchemeLst");
-			pWriter->WriteAttribute(L"xmlns:vt", L"http://schemas.microsoft.com/office/visio/2026/theme");
+			pWriter->WriteAttribute(L"xmlns:vt", L"http://schemas.microsoft.com/office/visio/2012/theme");
 			pWriter->EndAttributes();
 
 			pWriter->WriteArray2(m_arrItems);
@@ -1369,7 +1369,7 @@ namespace PPTX
 		std::wstring Bkgnd::toXML() const
 		{
 			XmlUtils::CAttribute oAttr;
-			oAttr.Write(L"xmlns:vt", L"http://schemas.microsoft.com/office/visio/2026/theme");
+			oAttr.Write(L"xmlns:vt", L"http://schemas.microsoft.com/office/visio/2012/theme");
 
 			return XmlUtils::CreateNode(L"vt:bkgnd", oAttr, color.toXML());
 		}
@@ -1380,7 +1380,7 @@ namespace PPTX
 		void Bkgnd::toXmlWriter(NSBinPptxRW::CXmlWriter* pWriter) const
 		{
 			pWriter->StartNode(L"vt:bkgnd");
-			pWriter->WriteAttribute(L"xmlns:vt", L"http://schemas.microsoft.com/office/visio/2026/theme");
+			pWriter->WriteAttribute(L"xmlns:vt", L"http://schemas.microsoft.com/office/visio/2012/theme");
 			pWriter->EndAttributes();
 
 			if (color.is_init())
@@ -1429,7 +1429,7 @@ namespace PPTX
 			XmlUtils::CAttribute oAttr;
 			if (bSchemas)
 			{
-				oAttr.Write(L"xmlns:vt", L"http://schemas.microsoft.com/office/visio/2026/theme");
+				oAttr.Write(L"xmlns:vt", L"http://schemas.microsoft.com/office/visio/2012/theme");
 			}
 			oAttr.Write(L"schemeEnum", schemeEnum);
 			oAttr.Write(L"schemeGUID", schemeGUID);
@@ -1450,7 +1450,7 @@ namespace PPTX
 			pWriter->StartNode(L"vt:schemeID");
 			if (bSchemas)
 			{
-				pWriter->WriteAttribute(L"xmlns:vt", L"http://schemas.microsoft.com/office/visio/2026/theme");
+				pWriter->WriteAttribute(L"xmlns:vt", L"http://schemas.microsoft.com/office/visio/2012/theme");
 			}
 			pWriter->WriteAttribute2(L"schemeEnum", schemeEnum);
 			pWriter->WriteAttribute2(L"schemeGUID", schemeGUID);
@@ -1518,7 +1518,7 @@ namespace PPTX
 		std::wstring Scheme::toXML() const
 		{
 			XmlUtils::CAttribute oAttr;
-			oAttr.Write(L"xmlns:vt", L"http://schemas.microsoft.com/office/visio/2026/theme");
+			oAttr.Write(L"xmlns:vt", L"http://schemas.microsoft.com/office/visio/2012/theme");
 
 			XmlUtils::CNodeValue oValue;
 			oValue.WriteNullable(schemeID);
@@ -1532,7 +1532,7 @@ namespace PPTX
 		void Scheme::toXmlWriter(NSBinPptxRW::CXmlWriter* pWriter) const
 		{
 			pWriter->StartNode(node_name);
-			pWriter->WriteAttribute(L"xmlns:vt", L"http://schemas.microsoft.com/office/visio/2026/theme");
+			pWriter->WriteAttribute(L"xmlns:vt", L"http://schemas.microsoft.com/office/visio/2012/theme");
 			pWriter->EndAttributes();
 
 			pWriter->Write(schemeID);

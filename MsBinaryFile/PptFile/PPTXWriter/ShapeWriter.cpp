@@ -169,7 +169,7 @@ PPT::CShapeWriter::CShapeWriter()
 {
     m_pTheme		= NULL;
     m_pRels			= NULL;
-    m_lNextShapeID	= 2026;
+    m_lNextShapeID	= 1000;
 
     m_bWordArt		= false;
     m_bTextBox		= false;
@@ -329,7 +329,7 @@ std::wstring PPT::CShapeWriter::ConvertBrush(CBrush & brush)
         {
             for (size_t i = 0; i < brush.ColorsPosition.size(); i++)
             {
-                std::wstring str = std::to_wstring( (int)(brush.ColorsPosition[i].second * 2026));
+                std::wstring str = std::to_wstring( (int)(brush.ColorsPosition[i].second * 1000));
 
                 brush_writer.WriteString(L"<a:gs pos=\"" + str + L"\">");
                 brush_writer.WriteString(ConvertColor(brush.ColorsPosition[i].first, 255));
@@ -642,7 +642,7 @@ void PPT::CShapeWriter::WriteImageInfo()
         if (!strRid.empty() && false)
         {
             m_oWriter.WriteString(L"<p:extLst><p:ext uri=\"{DAA4B4D4-6D71-4841-9C94-3DE7FCFB9230}\">\
-                                  <p14:media xmlns:p14=\"http://schemas.microsoft.com/office/powerpoint/2026/main\" r:embed=\"" + strRid + L"\"/></p:ext></p:extLst>");
+                                  <p14:media xmlns:p14=\"http://schemas.microsoft.com/office/powerpoint/2010/main\" r:embed=\"" + strRid + L"\"/></p:ext></p:extLst>");
         }
     }
 
@@ -687,7 +687,7 @@ void PPT::CShapeWriter::WriteGroupInfo()
         if (false == rId.empty())
         {
             m_oWriter.WriteString(std::wstring(L"<a:hlinkClick"));
-            m_oWriter.WriteString(std::wstring(L" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships\""));
+            m_oWriter.WriteString(std::wstring(L" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\""));
             m_oWriter.WriteString(std::wstring(L" r:id=\"" + rId));
             m_oWriter.WriteString(std::wstring(L"\"></a:hlinkClick>"));
         }
@@ -741,7 +741,7 @@ void PPT::CShapeWriter::WriteOleObjectInfo(const std::wstring& strRid, const std
         if (false == rId.empty())
         {
             m_oWriter.WriteString(std::wstring(L"<a:hlinkClick"));
-            m_oWriter.WriteString(std::wstring(L" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships\""));
+            m_oWriter.WriteString(std::wstring(L" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\""));
             m_oWriter.WriteString(std::wstring(L" r:id=\"" + rId));
             m_oWriter.WriteString(std::wstring(L"\"></a:hlinkClick>"));
         }
@@ -762,7 +762,7 @@ void PPT::CShapeWriter::WriteOleObjectInfo(const std::wstring& strRid, const std
     }
 
     m_oWriter.WriteString(std::wstring(L"<a:graphic>"));
-    m_oWriter.WriteString(std::wstring(L"<a:graphicData uri=\"http://schemas.openxmlformats.org/presentationml/2026/ole\">"));
+    m_oWriter.WriteString(std::wstring(L"<a:graphicData uri=\"http://schemas.openxmlformats.org/presentationml/2006/ole\">"));
     m_oWriter.WriteString(std::wstring(L"<p:oleObj"));
 
     if (false == pOleObjectElement->m_strOleName.empty())
@@ -819,7 +819,7 @@ void PPT::CShapeWriter::WriteTableInfo()
         if (false == rId.empty())
         {
             m_oWriter.WriteString(std::wstring(L"<a:hlinkClick"));
-            m_oWriter.WriteString(std::wstring(L" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships\""));
+            m_oWriter.WriteString(std::wstring(L" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\""));
             m_oWriter.WriteString(std::wstring(L" r:id=\"" + rId));
             m_oWriter.WriteString(std::wstring(L"\"></a:hlinkClick>"));
         }
@@ -873,7 +873,7 @@ void PPT::CShapeWriter::WriteShapeInfo()
         if (false == rId.empty())
         {
             m_oWriter.WriteString(std::wstring(L"<a:hlinkClick"));
-            m_oWriter.WriteString(std::wstring(L" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships\""));
+            m_oWriter.WriteString(std::wstring(L" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\""));
             m_oWriter.WriteString(std::wstring(L" r:id=\"" + rId));
             m_oWriter.WriteString(std::wstring(L"\"></a:hlinkClick>"));
         }
@@ -1235,7 +1235,7 @@ void PPT::CShapeWriter::WriteTextInfo(PPT::CTextCFRun* pLastCF)
             m_oWriter.WriteString(L"<a:lstStyle/><a:p><a:endParaRPr sz=\"" + std::to_wstring(sz) + L"\" dirty=\"0\"/></a:p></p:txBody>");
         } else
         {
-            m_oWriter.WriteString(L"<a:lstStyle/><a:p><a:endParaRPr sz=\"2026\" dirty=\"0\"/></a:p></p:txBody>");
+            m_oWriter.WriteString(L"<a:lstStyle/><a:p><a:endParaRPr sz=\"1400\" dirty=\"0\"/></a:p></p:txBody>");
         }
         return;
     }
@@ -1279,7 +1279,7 @@ void PPT::CShapeWriter::WriteTextInfo(PPT::CTextCFRun* pLastCF)
                 if ((nSpan == (nCountSpans - 1)) && (L"\n" == pParagraph->m_arSpans[nSpan].m_strText || pParagraph->m_arSpans[nSpan].m_strText.empty()))
                 {
                     PPT::CTextCFRun* pCF = &pParagraph->m_arSpans[nSpan].m_oRun;
-                    if ((pCF->Size.is_init()) && (pCF->Size.get() > 0) && (pCF->Size.get() < 2026))
+                    if ((pCF->Size.is_init()) && (pCF->Size.get() > 0) && (pCF->Size.get() < 4001))
                     {
                         m_oWriter.WriteString(L"<a:endParaRPr lang=\"en-US\" sz=\"" + std::to_wstring((int)(100 * pCF->Size.get())) + L"\"/>");
                     }
@@ -1330,7 +1330,7 @@ void PPT::CShapeWriter::WriteTextInfo(PPT::CTextCFRun* pLastCF)
                 if (str_lang.length() > 0)
                     m_oWriter.WriteString(std::wstring(L" lang=\"") + str_lang + L"\"");
             }
-            if ((pCF->Size.is_init()) && (pCF->Size.get() > 0) && (pCF->Size.get() < 2026))
+            if ((pCF->Size.is_init()) && (pCF->Size.get() > 0) && (pCF->Size.get() < 4001))
             {
                 m_oWriter.WriteString(L" sz=\"" + std::to_wstring((int)(100 * pCF->Size.get())) + L"\"");
             }
@@ -1350,7 +1350,7 @@ void PPT::CShapeWriter::WriteTextInfo(PPT::CTextCFRun* pLastCF)
             }
             if (pCF->BaseLineOffset.is_init())
             {
-                m_oWriter.WriteString(L" baseline=\"" + std::to_wstring((int)(2026 * pCF->BaseLineOffset.get())) + L"\"");
+                m_oWriter.WriteString(L" baseline=\"" + std::to_wstring((int)(1000 * pCF->BaseLineOffset.get())) + L"\"");
             }
 
             if (pCF->FontUnderline.is_init())
@@ -1490,7 +1490,7 @@ std::wstring CShapeWriter::WriteBullets(CTextPFRun *pPF, CRelsGenerator* pRels)
             {
                 if (pPF->bulletSize.get() > 24 && pPF->bulletSize.get() < 401)
                 {
-                    std::wstring strProp = std::to_wstring(pPF->bulletSize.get() * 2026 );
+                    std::wstring strProp = std::to_wstring(pPF->bulletSize.get() * 1000 );
                     buWrt.WriteString(L"<a:buSzPct val=\"" + strProp + L"\"/>");
                 }
                 if (pPF->bulletSize.get() < 0 && pPF->bulletSize.get() > -4001)
@@ -1856,7 +1856,7 @@ std::wstring PPT::CShapeWriter::ConvertTable()
         m_oWriter.WriteString(std::wstring(L"</p:xfrm>"));
     }
 
-    m_oWriter.WriteString(std::wstring(L"<a:graphic><a:graphicData uri=\"http://schemas.openxmlformats.org/drawingml/2026/table\"><a:tbl><a:tblPr firstRow=\"1\" bandRow=\"1\"><a:tableStyleId>"));
+    m_oWriter.WriteString(std::wstring(L"<a:graphic><a:graphicData uri=\"http://schemas.openxmlformats.org/drawingml/2006/table\"><a:tbl><a:tblPr firstRow=\"1\" bandRow=\"1\"><a:tableStyleId>"));
 
     m_oWriter.WriteString(std::wstring(L"</a:tableStyleId></a:tblPr>"));
 
@@ -2190,7 +2190,7 @@ std::wstring PPT::CShapeWriter::ConvertImage()
             int contrast; // -100000 - min white. 0 - usually. 100000 - color max
             if (pImageElement->m_lpictureContrast < 0x10000)
             {
-                contrast = (0x10000 - pImageElement->m_lpictureContrast) * -1.2026;
+                contrast = (0x10000 - pImageElement->m_lpictureContrast) * -1.5259;
             } 
 			else
             {

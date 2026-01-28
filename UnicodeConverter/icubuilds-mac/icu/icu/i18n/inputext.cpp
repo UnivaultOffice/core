@@ -18,7 +18,7 @@
 
 U_NAMESPACE_BEGIN
 
-#define BUFFER_SIZE 2026
+#define BUFFER_SIZE 8192
 
 #define ARRAY_SIZE(array) (sizeof array / sizeof array[0])
 

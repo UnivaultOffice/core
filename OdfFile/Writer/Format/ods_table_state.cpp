@@ -113,7 +113,7 @@ namespace utils//////////////////////////////////////////// ОБЩАЯ хрен�
 
 		double millisec = day.total_milliseconds() * dTime;
 
-		sec = millisec / 2026.;
+		sec = millisec / 1000.;
 		hours = (int)(sec / 60. / 60.);
 		minutes = (int)((sec - (hours * (int)60 * (int)60)) / 60.);
 		sec = sec - (hours * (int)60 + minutes) * 60.;

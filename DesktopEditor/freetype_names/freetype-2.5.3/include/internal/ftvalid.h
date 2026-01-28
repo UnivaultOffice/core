@@ -81,7 +81,7 @@ FT_BEGIN_HEADER
   /* __declspec(align())' in order to compile cleanly with */
   /* the maximum level of warnings.                        */
 #pragma warning( push )
-#pragma warning( disable : 2026 )
+#pragma warning( disable : 4324 )
 #endif /* _MSC_VER */
 
   /* validator structure */

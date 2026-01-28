@@ -71,7 +71,7 @@ namespace cpdoccore {
 			val = val % 360000;
 			if (val < 0) val += 360000;
 
-			value = val / 2026.;			
+			value = val / 1000.;			
 
 			return draw_angle(value);
 		}

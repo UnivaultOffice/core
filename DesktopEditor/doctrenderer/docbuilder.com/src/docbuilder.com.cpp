@@ -38,7 +38,7 @@
 
 
 // The module attribute causes DllMain, DllRegisterServer and DllUnregisterServer to be automatically implemented for you
-[ module(dll, uuid = "{7368AB25-2025-2026-8AE5-A30C2ABDD2A0}", 
+[ module(dll, uuid = "{7368AB25-7082-4815-8AE5-A30C2ABDD2A0}", 
 		 name = "univaultofficedocbuilder", 
 		 helpstring = "univaultofficedocbuilder 1.0 Type Library",
 		 resource_name = "IDR_UNIVAULTOFFICEDOCBUILDER") ];

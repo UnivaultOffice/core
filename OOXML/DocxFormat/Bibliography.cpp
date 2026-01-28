@@ -90,7 +90,7 @@ namespace OOX
 			sXml += _T("\"");
 		}
 
-		sXml += _T(" xmlns:b=\"http://schemas.openxmlformats.org/officeDocument/2026/bibliography\" xmlns=\"http://schemas.openxmlformats.org/officeDocument/2026/bibliography\">");
+		sXml += _T(" xmlns:b=\"http://schemas.openxmlformats.org/officeDocument/2006/bibliography\" xmlns=\"http://schemas.openxmlformats.org/officeDocument/2006/bibliography\">");
 
 
 		sXml += _T("</a:Sources>");

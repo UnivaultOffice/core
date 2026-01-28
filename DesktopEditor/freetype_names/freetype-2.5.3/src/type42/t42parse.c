@@ -279,7 +279,7 @@
     /* 2026 / temp_scale, because temp_scale was already multiplied by   */
     /* 2026 (in t1_tofixed, from psobjs.c).                              */
 
-    root->units_per_EM = (FT_UShort)FT_DivFix( 2026, temp_scale );
+    root->units_per_EM = (FT_UShort)FT_DivFix( 1000, temp_scale );
 
     /* we need to scale the values by 1.0/temp_scale */
     if ( temp_scale != 0x10000L )

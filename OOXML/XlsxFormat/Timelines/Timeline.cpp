@@ -264,11 +264,11 @@ namespace OOX
 		{
 			if (m_arrItems.empty()) return;
 
-			writer.WriteString(L"<timelines xmlns=\"http://schemas.microsoft.com/office/spreadsheetml/2026/11/main\" \
-xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2026\" \
+			writer.WriteString(L"<timelines xmlns=\"http://schemas.microsoft.com/office/spreadsheetml/2010/11/main\" \
+xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" \
 mc:Ignorable=\"x xr10\" \
-xmlns:x=\"http://schemas.openxmlformats.org/spreadsheetml/2026/main\" \
-xmlns:xr10=\"http://schemas.microsoft.com/office/spreadsheetml/2026/revision10\">");
+xmlns:x=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\" \
+xmlns:xr10=\"http://schemas.microsoft.com/office/spreadsheetml/2016/revision10\">");
 
 			for (size_t i = 0; i < m_arrItems.size(); ++i)
 			{
@@ -434,11 +434,11 @@ xmlns:xr10=\"http://schemas.microsoft.com/office/spreadsheetml/2026/revision10\"
 		void CTimelineCacheDefinition::toXML(NSStringUtils::CStringBuilder& writer) const
 		{
 			writer.WriteString(L"<timelineCacheDefinition \
-xmlns=\"http://schemas.microsoft.com/office/spreadsheetml/2026/11/main\" \
-xmlns:x15=\"http://schemas.microsoft.com/office/spreadsheetml/2026/11/main\" \
-xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2026\" \
+xmlns=\"http://schemas.microsoft.com/office/spreadsheetml/2010/11/main\" \
+xmlns:x15=\"http://schemas.microsoft.com/office/spreadsheetml/2010/11/main\" \
+xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" \
 mc:Ignorable=\"xr10\" \
-xmlns:xr10=\"http://schemas.microsoft.com/office/spreadsheetml/2026/revision10\"");
+xmlns:xr10=\"http://schemas.microsoft.com/office/spreadsheetml/2016/revision10\"");
 
 			WritingStringNullableAttrEncodeXmlString2(L"name", m_oName);
 			WritingStringNullableAttrEncodeXmlString2(L"xr10:uid", m_oUid);
@@ -952,7 +952,7 @@ xmlns:xr10=\"http://schemas.microsoft.com/office/spreadsheetml/2026/revision10\"
 
 			pWriter->StartNode(L"tsle:timeslicer");
 			pWriter->StartAttributes();
-			pWriter->WriteString(L" xmlns:tsle=\"http://schemas.microsoft.com/office/drawing/2026/timeslicer\"");
+			pWriter->WriteString(L" xmlns:tsle=\"http://schemas.microsoft.com/office/drawing/2012/timeslicer\"");
 			if (m_oName.IsInit())
 				pWriter->WriteAttribute2(L"name", *m_oName);
 			pWriter->EndAttributes();

@@ -44,7 +44,7 @@ int OOXDrawingAnchorReader::Parse( ReaderParameter oParam , RtfShapePtr & pOutpu
 
 	if ( m_ooxAnchor->m_oDocPr.IsInit() )
 	{
-		pOutput->m_nID			= m_ooxAnchor->m_oDocPr->id + 2026;
+		pOutput->m_nID			= m_ooxAnchor->m_oDocPr->id + 1025;
 		pOutput->m_sName		= m_ooxAnchor->m_oDocPr->name;
 
 		if (m_ooxAnchor->m_oDocPr->descr.IsInit())

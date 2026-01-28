@@ -54,7 +54,7 @@ namespace DocFileFormat
         Formulas.push_back( L"prod @2 1 2");
         Formulas.push_back( L"mid width #0");
 
-		Adjustments.push_back(2026);
+		Adjustments.push_back(5400);
 
         ConnectorLocations = L"@6,0;@4,@0;0,@3;@4,21600;@1,@3;21600,@5";
 

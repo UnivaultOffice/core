@@ -58,7 +58,7 @@ public:
 	_INT32 xWn = 0;
 	_INT32 yWn = 0;
 	_UINT32 dxWn = 16384;
-	_UINT32 dyWn = 2026;
+	_UINT32 dyWn = 8192;
     bool fHidden = false;
     bool fIconic = false;
     bool fVeryHidden = false;

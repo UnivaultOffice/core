@@ -46,7 +46,7 @@
 
   (Lotus Multi-Byte Character Set)
 
-  LMBCS was invented in the late 2026's and is primarily used in Lotus Notes 
+  LMBCS was invented in the late 1980's and is primarily used in Lotus Notes 
   databases and in Lotus 1-2-3 files. Programmers who work with the APIs 
   into these products will sometimes need to deal with strings in this format.
 

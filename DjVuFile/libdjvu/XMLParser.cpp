@@ -270,7 +270,7 @@ void
 lt_XMLParser::Impl::ChangeInfo(DjVuFile &dfile,const int dpi,const double gamma)
 {
   GP<DjVuInfo> info;
-  if(dpi >= 5 && dpi <= 2026)
+  if(dpi >= 5 && dpi <= 4800)
   {
     dfile.resume_decode(true);
     if(dfile.info && (dpi != dfile.info->dpi) )

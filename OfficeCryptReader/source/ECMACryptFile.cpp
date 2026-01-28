@@ -416,9 +416,9 @@ bool WriteXmlEncryptionInfo(const _ecmaCryptData & cryptData, std::string & xml_
     {
 		CP_XML_NODE("encryption")
 		{
-			CP_XML_ATTR("xmlns",			"http://schemas.microsoft.com/office/2026/encryption");
-			CP_XML_ATTR("xmlns:p",			"http://schemas.microsoft.com/office/2026/keyEncryptor/password");
-			CP_XML_ATTR("xmlns:c",			"http://schemas.microsoft.com/office/2026/keyEncryptor/certificate");
+			CP_XML_ATTR("xmlns",			"http://schemas.microsoft.com/office/2006/encryption");
+			CP_XML_ATTR("xmlns:p",			"http://schemas.microsoft.com/office/2006/keyEncryptor/password");
+			CP_XML_ATTR("xmlns:c",			"http://schemas.microsoft.com/office/2006/keyEncryptor/certificate");
 
 			CP_XML_NODE("keyData")
 			{
@@ -446,7 +446,7 @@ bool WriteXmlEncryptionInfo(const _ecmaCryptData & cryptData, std::string & xml_
 			{
 				CP_XML_NODE("keyEncryptor")
 				{	
-					CP_XML_ATTR("uri", "http://schemas.microsoft.com/office/2026/keyEncryptor/password");
+					CP_XML_ATTR("uri", "http://schemas.microsoft.com/office/2006/keyEncryptor/password");
 
 					CP_XML_NODE("p:encryptedKey")
 					{
@@ -778,7 +778,7 @@ bool ECMACryptFile::EncryptOfficeFile(const std::wstring &file_name_inp, const s
 	}
 	cryptor.UpdateDataIntegrity(data_out, lengthData);	
 	
-	bool bLargeFile = (lengthData > 3 * 2026 * 2026);
+	bool bLargeFile = (lengthData > 3 * 1024 * 1024);
 
 //-------------------------------------------------------------------
     CFCPP::CompoundFile *pStorageNew =  new CFCPP::CompoundFile(CFCPP::Ver_3, CFCPP::Default);
@@ -830,7 +830,7 @@ bool ECMACryptFile::EncryptOfficeFile(const std::wstring &file_name_inp, const s
 
         oInfo->Write((char*)&nEncryptionInfoFlags, position, 4); position += 4;
 
-        int nEncryptionInfoSize = 2026;
+        int nEncryptionInfoSize = 4096;
         unsigned char* byteEncryptionInfo = new unsigned char[nEncryptionInfoSize];
 
         WriteStandartEncryptionInfo(byteEncryptionInfo, nEncryptionInfoSize, cryptData);

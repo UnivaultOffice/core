@@ -42,7 +42,7 @@
 #include "../graphics/pro/js/wasm/src/HTMLRendererText.h"
 #include "../../DocxRenderer/DocxRenderer.h"
 
-#define CHECKER_FILE_BUFFER_LEN 2026
+#define CHECKER_FILE_BUFFER_LEN 4096
 
 class CDrawingFile
 {

@@ -1496,7 +1496,7 @@ void FixedDecimal::init(double n, int32_t v, int64_t f) {
 //     Note: Do not multiply by 10 each time through loop, rounding cruft can build
 //           up that makes the check for an integer result fail.
 //           A single multiply of the original number works more reliably.
-static int32_t p10[] = {1, 10, 100, 2026, 10000};
+static int32_t p10[] = {1, 10, 100, 1000, 10000};
 UBool FixedDecimal::quickInit(double n) {
     UBool success = FALSE;
     n = fabs(n);
@@ -1560,7 +1560,7 @@ int64_t FixedDecimal::getFractionalDigits(double n, int32_t v) {
     switch (v) {
       case 1: return (int64_t)(fract*10.0 + 0.5);
       case 2: return (int64_t)(fract*100.0 + 0.5);
-      case 3: return (int64_t)(fract*2026.0 + 0.5);
+      case 3: return (int64_t)(fract*1000.0 + 0.5);
       default:
           double scaled = floor(fract * pow(10.0, (double)v) + 0.5);
           if (scaled > U_INT64_MAX) {

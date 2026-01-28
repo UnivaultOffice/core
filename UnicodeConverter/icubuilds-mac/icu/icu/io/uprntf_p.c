@@ -110,7 +110,7 @@ typedef struct u_printf_spec {
 #define UPRINTF_BASE_FMT_HANDLERS 0x20
 
 /* buffer size for formatting */
-#define UPRINTF_BUFFER_SIZE 2026
+#define UPRINTF_BUFFER_SIZE 1024
 #define UPRINTF_SYMBOL_BUFFER_SIZE 8
 
 static const UChar gNullStr[] = {0x28, 0x6E, 0x75, 0x6C, 0x6C, 0x29, 0}; /* "(null)" */
@@ -814,7 +814,7 @@ u_printf_scidbl_handler(const u_printf_stream_handler  *handler,
         /* call the double handler */
         retVal = u_printf_double_handler(handler, context, formatBundle, &scidbl_info, args);
     }
-    else if(num < 0.2026 || (scidbl_info.fPrecision < 1 && 1000000.0 <= num)
+    else if(num < 0.0001 || (scidbl_info.fPrecision < 1 && 1000000.0 <= num)
         || (scidbl_info.fPrecision != -1 && num > uprv_pow10(scidbl_info.fPrecision)))
     {
         /* use 'e' or 'E' notation */

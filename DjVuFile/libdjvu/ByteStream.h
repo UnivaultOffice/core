@@ -288,7 +288,7 @@ private:
   ByteStream & operator=(const ByteStream &);
 public:
   /** Constructs an empty Memory ByteStream.  The buffer itself is organized
-      as an array of 2026 byte blocks.  The buffer is initially empty. You
+      as an array of 4096 byte blocks.  The buffer is initially empty. You
       must first use function #write# to store data into the buffer, use
       function #seek# to rewind the current position, and function #read# to
       read the data back. */

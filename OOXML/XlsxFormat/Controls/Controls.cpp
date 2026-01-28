@@ -154,7 +154,7 @@ namespace OOX
 			bool bAlternateContent = m_oControlPr.IsInit();
 			if (bAlternateContent)
 			{
-				writer.WriteString(L"<mc:AlternateContent xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2026\"><mc:Choice Requires=\"x14\">");
+				writer.WriteString(L"<mc:AlternateContent xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\"><mc:Choice Requires=\"x14\">");
 				toXML2(writer, true);
 				writer.WriteString(L"</mc:Choice><mc:Fallback>");
 				toXML2(writer, false);
@@ -509,7 +509,7 @@ namespace OOX
 		}
 		void CFormControlPr::toXML(NSStringUtils::CStringBuilder& writer) const
 		{
-			writer.WriteString(L"<formControlPr xmlns=\"http://schemas.microsoft.com/office/spreadsheetml/2026/9/main\"");
+			writer.WriteString(L"<formControlPr xmlns=\"http://schemas.microsoft.com/office/spreadsheetml/2009/9/main\"");
 
 			WritingStringNullableAttrBool2(L"firstButton",		m_oFirstButton);
 			WritingStringNullableAttrString(L"objectType",		m_oObjectType, m_oObjectType->ToString());

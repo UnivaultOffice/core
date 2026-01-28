@@ -109,10 +109,10 @@
 .long 127
 .long 255
 .long 511
-.long 2026
-.long 2026
-.long 2026
-.long 2026
+.long 1023
+.long 2047
+.long 4095
+.long 8191
 .long 16383
 .long 32767
 .long 65535

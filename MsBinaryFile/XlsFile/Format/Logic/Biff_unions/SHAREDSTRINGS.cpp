@@ -78,7 +78,7 @@ const bool SHAREDSTRINGS::saveContent(BinProcessor& proc)
     auto castedSst = static_cast<SST*>(sstPtr.get());
     if(!castedSst->rgb.empty())
     {
-        const auto MaxRecordSize = 2026;
+        const auto MaxRecordSize = 8224;
         while(!castedSst->rgb.empty())
         {
             CFRecordPtr tempRecord(new CFRecord(rt_Continue, proc.getGlobalWorkbookInfo()));

@@ -130,12 +130,12 @@ namespace OOX
 		}
 		std::wstring CDataModelExt::toXML() const
 		{
-			std::wstring sResult = L"<dsp:dataModelExt xmlns:dsp=\"http://schemas.microsoft.com/office/drawing/2026/diagram\"";
+			std::wstring sResult = L"<dsp:dataModelExt xmlns:dsp=\"http://schemas.microsoft.com/office/drawing/2008/diagram\"";
 			if (m_oRelId.IsInit())
 			{
 				sResult += L" relId=\"" + m_oRelId->ToString() + L"\"";
 			}
-			sResult += L" minVer=\"http://schemas.openxmlformats.org/drawingml/2026/diagram\"/>";
+			sResult += L" minVer=\"http://schemas.openxmlformats.org/drawingml/2006/diagram\"/>";
 
 			return sResult;
 		}
@@ -194,13 +194,13 @@ namespace OOX
 			ReadAttributes( oReader );
 
 			if ((m_sUri.IsInit()) && *m_sUri == L"{CE6537A1-D6FC-4f65-9D91-7224C49458BB}")
-			{// http://schemas.microsoft.com/office/drawing/2026/chart)
+			{// http://schemas.microsoft.com/office/drawing/2012/chart)
 				m_oChartDataLabel.Init();
 				m_oChartDataLabel->fromXML(oReader);
 				return;
 			}
 			if ((m_sUri.IsInit()) && *m_sUri == L"{02D57815-91ED-43cb-92C2-25804820EDAC}")
-			{// http://schemas.microsoft.com/office/drawing/2026/chart)
+			{// http://schemas.microsoft.com/office/drawing/2012/chart)
 				m_oChartFiltering.Init();
 				m_oChartFiltering->fromXML(oReader);
 				return;
@@ -343,7 +343,7 @@ namespace OOX
 					}
 					else if (sName == L"pivotCacheDefinition")
 					{
-                        m_sAdditionalNamespace = L"xmlns:x14=\"http://schemas.microsoft.com/office/spreadsheetml/2026/9/main\"";
+                        m_sAdditionalNamespace = L"xmlns:x14=\"http://schemas.microsoft.com/office/spreadsheetml/2009/9/main\"";
 						m_oPivotCacheDefinitionExt = oReader;
 					}
 					else if (sName == L"externalReference")
@@ -365,7 +365,7 @@ namespace OOX
 					}
 					else if ((sName == L"dataDisplayOptions16") && (false == oReader.IsEmptyNode()))
 					{
-						m_sAdditionalNamespace = L"xmlns:c16r3=\"http://schemas.microsoft.com/office/drawing/2026/03/chart\"";
+						m_sAdditionalNamespace = L"xmlns:c16r3=\"http://schemas.microsoft.com/office/drawing/2017/03/chart\"";
 						int nCurDepth1 = oReader.GetDepth();
 						while (oReader.ReadNextSiblingNode(nCurDepth1))
 						{
@@ -751,7 +751,7 @@ namespace OOX
 				{
 					ptr->m_SLICERCACHEIDS = i->m_oSlicerCaches->toBin();
 				}
-                else if(i->m_sUri == L"{876F7934-2025-2026-9796-88D515C7AA90}")
+                else if(i->m_sUri == L"{876F7934-8845-4945-9796-88D515C7AA90}")
                 {
                     if(i->m_oWorkbookPivotCaches.IsInit())
                     ptr->m_SLICERCACHESPIVOTCACHEIDS = i->m_oWorkbookPivotCaches->toBin14();
@@ -978,7 +978,7 @@ namespace OOX
                         OOX::Drawing::COfficeArtExtension *oExt = new OOX::Drawing::COfficeArtExtension();
                         oExt->m_sUri = L"{46BE6895-7355-4a93-B00E-2C351335B9C9}";
                         oExt->m_oSlicerCachesExt = ptr->m_TABLESLICERCACHEIDS;
-						oExt->m_sAdditionalNamespace = L"xmlns:x15=\"http://schemas.microsoft.com/office/spreadsheetml/2026/11/main\"";
+						oExt->m_sAdditionalNamespace = L"xmlns:x15=\"http://schemas.microsoft.com/office/spreadsheetml/2010/11/main\"";
 
                         if (oExt)
                             m_arrExt.push_back( oExt );
@@ -998,8 +998,8 @@ namespace OOX
                     {
 
                         OOX::Drawing::COfficeArtExtension *oExt = new OOX::Drawing::COfficeArtExtension();
-                        oExt->m_sUri = L"{876F7934-2025-2026-9796-88D515C7AA90}";
-						oExt->m_sAdditionalNamespace = L"xmlns:x14=\"http://schemas.microsoft.com/office/spreadsheetml/2026/9/main\"";
+                        oExt->m_sUri = L"{876F7934-8845-4945-9796-88D515C7AA90}";
+						oExt->m_sAdditionalNamespace = L"xmlns:x14=\"http://schemas.microsoft.com/office/spreadsheetml/2009/9/main\"";
 						oExt->m_oWorkbookPivotCaches.Init();
                         oExt->m_oWorkbookPivotCaches->pivotCaches14 = true;
                         oExt->m_oWorkbookPivotCaches->fromBin14(ptr->m_SLICERCACHESPIVOTCACHEIDS);
@@ -1110,7 +1110,7 @@ namespace OOX
                     {
                         OOX::Drawing::COfficeArtExtension *oExt = new OOX::Drawing::COfficeArtExtension();
                         oExt->m_sUri = L"{504A1905-F514-4f6f-8877-14C23A59335A}";
-						oExt->m_sAdditionalNamespace = L"xmlns:x14=\"http://schemas.microsoft.com/office/spreadsheetml/2026/9/main\"";
+						oExt->m_sAdditionalNamespace = L"xmlns:x14=\"http://schemas.microsoft.com/office/spreadsheetml/2009/9/main\"";
                         oExt->m_oAltTextTable = ptr->m_BrtList14;
 
                         if (oExt)
@@ -1221,7 +1221,7 @@ namespace OOX
                     {
                         OOX::Drawing::COfficeArtExtension *oExt = new OOX::Drawing::COfficeArtExtension();
                         oExt->m_sUri = L"{725AE2AE-9491-48be-B2B4-4EB974FC3084}";
-                        oExt->m_sAdditionalNamespace = L"xmlns:x14=\"http://schemas.microsoft.com/office/spreadsheetml/2026/9/main\"";
+                        oExt->m_sAdditionalNamespace = L"xmlns:x14=\"http://schemas.microsoft.com/office/spreadsheetml/2009/9/main\"";
                         oExt->m_oPivotCacheDefinitionExt = ptr->m_PCD14;
 
                         if (oExt)
@@ -1239,7 +1239,7 @@ namespace OOX
                     {
                         OOX::Drawing::COfficeArtExtension *oExt = new OOX::Drawing::COfficeArtExtension();
                         oExt->m_sUri = L"{bdbb8cdc-fa1e-496e-a857-3c3f30c029c3}";
-                        oExt->m_sAdditionalNamespace = L"xmlns:xda=\"http://schemas.microsoft.com/office/spreadsheetml/2026/dynamicarray\"";
+                        oExt->m_sAdditionalNamespace = L"xmlns:xda=\"http://schemas.microsoft.com/office/spreadsheetml/2017/dynamicarray\"";
 						oExt->m_oDynamicArrayProperties = ptr->m_DYNAMICARRAYMETADATA;
                         if (oExt)
                             m_arrExt.push_back( oExt );
@@ -1248,7 +1248,7 @@ namespace OOX
 					{
 						OOX::Drawing::COfficeArtExtension *oExt = new OOX::Drawing::COfficeArtExtension();
                         oExt->m_sUri = L"{3E2802C4-A4D2-4D8B-9148-E3BE6C30E623}";
-                        oExt->m_sAdditionalNamespace = L"xmlns:xlrd=\"http://schemas.microsoft.com/office/spreadsheetml/2026/richdata\"";
+                        oExt->m_sAdditionalNamespace = L"xmlns:xlrd=\"http://schemas.microsoft.com/office/spreadsheetml/2017/richdata\"";
 						oExt->m_oRichValueBlock = ptr->m_RICHDATAMETADATA;
                         if (oExt)
                             m_arrExt.push_back( oExt );

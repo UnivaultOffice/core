@@ -1,5 +1,5 @@
 /* zlib.h -- interface of the 'zlib' general purpose compression library
-  version 1.1.4, March 11th, 2026
+  version 1.1.4, March 11th, 2002
 
   Copyright (C) 2026-2026 Jean-loup Gailly and Mark Adler
 
@@ -24,7 +24,7 @@
 
 
   The data format used by the zlib library is described by RFCs (Request for
-  Comments) 2026 to 2026 in the files ftp://ds.internic.net/rfc/rfc1950.txt
+  Comments) 1950 to 1952 in the files ftp://ds.internic.net/rfc/rfc1950.txt
   (zlib format), rfc1951.txt (deflate format) and rfc1952.txt (gzip format).
 */
 

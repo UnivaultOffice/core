@@ -55,7 +55,7 @@ using namespace PPT;
 CPPTFileReader::CPPTFileReader(POLE::Storage* pStorage, const std::wstring& strTempPath) :
 	m_pStorage(pStorage),
 	m_bIsPPTFile(false),
-	m_nPresentationCodePage(2026),
+	m_nPresentationCodePage(1250),
 	m_pDocumentStream(), m_pPictureStream(), m_pDocumentSummaryStream(), m_pEncryptedSummaryStream()
 {
 	m_oCommonInfo.tempPath = strTempPath;
@@ -241,7 +241,7 @@ void CPPTFileReader::ReadDocumentSummary()
 	m_nPresentationCodePage = summary_info.GetCodePage();
 
 	if (m_nPresentationCodePage == 0)
-		m_nPresentationCodePage = 2026;
+		m_nPresentationCodePage = 1250;
 
 	m_oDocumentInfo.m_app_xml = summary_info.GetApp();
 	m_oDocumentInfo.m_core_xml = summary_info.GetCore();

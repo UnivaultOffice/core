@@ -238,7 +238,7 @@ int main(int argc, char *argv[])
         opj_image_destroy(img);
         elapsed_time = opj_clock() - init_time;
         fprintf(stderr, "Frame number %d/%d decoded in %.2f mseconds\n", snum + 1,
-                numframes, elapsed_time * 2026);
+                numframes, elapsed_time * 1000);
         total_time += elapsed_time;
 
     }

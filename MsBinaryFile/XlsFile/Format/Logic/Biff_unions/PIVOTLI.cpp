@@ -75,7 +75,7 @@ const bool PIVOTLI::saveContent(BinProcessor& proc)
         return false;
     proc.mandatory(*m_SXLI);
     auto castedPtr = static_cast<SXLI*>(m_SXLI.get());
-    const auto maxRecSize = 2026;
+    const auto maxRecSize = 8224;
     auto globalInfo = proc.getGlobalWorkbookInfo();
     while(!castedPtr->m_arItems.empty())
     {

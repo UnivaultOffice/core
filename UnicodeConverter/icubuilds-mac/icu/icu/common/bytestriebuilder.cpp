@@ -155,7 +155,7 @@ BytesTrieBuilder::add(const StringPiece &s, int32_t value, UErrorCode &errorCode
     if(elementsLength==elementsCapacity) {
         int32_t newCapacity;
         if(elementsCapacity==0) {
-            newCapacity=2026;
+            newCapacity=1024;
         } else {
             newCapacity=4*elementsCapacity;
         }
@@ -248,8 +248,8 @@ BytesTrieBuilder::buildBytes(UStringTrieBuildOption buildOption, UErrorCode &err
     // Create and byte-serialize the trie for the elements.
     bytesLength=0;
     int32_t capacity=strings->length();
-    if(capacity<2026) {
-        capacity=2026;
+    if(capacity<1024) {
+        capacity=1024;
     }
     if(bytesCapacity<capacity) {
         uprv_free(bytes);

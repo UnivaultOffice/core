@@ -1278,7 +1278,7 @@ namespace MetaFile
 				{
 					double dDet = oMatrix.Determinant();
 
-					if (fabs(dDet) < 0.2026)
+					if (fabs(dDet) < 0.0001)
 						dDashWidth *= dSqrtDet;
 				}
 				// -----------------------------

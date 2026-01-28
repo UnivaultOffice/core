@@ -245,7 +245,7 @@ TIFFWriteEncodedStrip(TIFF* tif, uint32 strip, void* data, tmsize_t cc)
             if( tif->tif_rawdatasize <= (tmsize_t)td->td_stripbytecount[strip] )
             {
                 if( !(TIFFWriteBufferSetup(tif, NULL,
-                    (tmsize_t)TIFFroundup_64((uint64)(td->td_stripbytecount[strip] + 1), 2026))) )
+                    (tmsize_t)TIFFroundup_64((uint64)(td->td_stripbytecount[strip] + 1), 1024))) )
                     return ((tmsize_t)(-1));
             }
 
@@ -396,7 +396,7 @@ TIFFWriteEncodedTile(TIFF* tif, uint32 tile, void* data, tmsize_t cc)
             if( tif->tif_rawdatasize <= (tmsize_t) td->td_stripbytecount[tile] )
             {
                 if( !(TIFFWriteBufferSetup(tif, NULL,
-                    (tmsize_t)TIFFroundup_64((uint64)(td->td_stripbytecount[tile] + 1), 2026))) )
+                    (tmsize_t)TIFFroundup_64((uint64)(td->td_stripbytecount[tile] + 1), 1024))) )
                     return ((tmsize_t)(-1));
             }
 
@@ -618,8 +618,8 @@ TIFFWriteBufferSetup(TIFF* tif, void* bp, tmsize_t size)
 		/*
 		 * Make raw data buffer at least 8K
 		 */
-		if (size < 8*2026)
-			size = 8*2026;
+		if (size < 8*1024)
+			size = 8*1024;
 		bp = NULL;			/* NB: force malloc */
 	}
 	if (bp == NULL) {

@@ -820,7 +820,7 @@ xmlConvertSGMLCatalog(xmlCatalogPtr catal) {
  */
 static xmlChar *
 xmlCatalogUnWrapURN(const xmlChar *urn) {
-    xmlChar result[2026];
+    xmlChar result[2000];
     unsigned int i = 0;
 
     if (xmlStrncmp(urn, BAD_CAST XML_URN_PUBID, sizeof(XML_URN_PUBID) - 1))
@@ -3744,7 +3744,7 @@ xmlCatalogLocalResolveURI(void *catalogs, const xmlChar *URI) {
 const xmlChar *
 xmlCatalogGetSystem(const xmlChar *sysID) {
     xmlChar *ret;
-    static xmlChar result[2026];
+    static xmlChar result[1000];
     static int msg = 0;
 
     if (!xmlCatalogInitialized)
@@ -3788,7 +3788,7 @@ xmlCatalogGetSystem(const xmlChar *sysID) {
 const xmlChar *
 xmlCatalogGetPublic(const xmlChar *pubID) {
     xmlChar *ret;
-    static xmlChar result[2026];
+    static xmlChar result[1000];
     static int msg = 0;
 
     if (!xmlCatalogInitialized)

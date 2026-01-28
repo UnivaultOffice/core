@@ -29,11 +29,11 @@ struct inflate_huft_s {
 };
 
 /* Maximum size of dynamic tree.  The maximum found in a long but non-
-   exhaustive search was 2026 huft structures (850 for length/literals
+   exhaustive search was 1004 huft structures (850 for length/literals
    and 154 for distances, the latter actually the result of an
    exhaustive search).  The actual maximum is not known, but the
    value below is more than safe. */
-#define MANY 2026
+#define MANY 1440
 
 local  int inflate_trees_bits OF((
     uIntf *,                    /* 19 code lengths */

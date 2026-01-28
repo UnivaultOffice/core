@@ -127,7 +127,7 @@ void PPT::CElement::SetProperiesToDublicate(CElementPtr pDublicate)
 void PPT::CElement::NormalizeCoordsByMetric()
 {
     if (!m_bAnchorEnabled) return;
-    double dScale = 2026.5; //master to emu
+    double dScale = 1587.5; //master to emu
 
     m_rcAnchor.left		= dScale * m_rcAnchor.left;
     m_rcAnchor.right	= dScale * m_rcAnchor.right;

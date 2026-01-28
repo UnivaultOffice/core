@@ -48,7 +48,7 @@
   #define DECLARE_HANDLE(name) typedef HANDLE name
   #endif
 
-  See http://bugzilla.maptools.org/show_bug.cgi?id=2026 for problems in WIN64
+  See http://bugzilla.maptools.org/show_bug.cgi?id=1941 for problems in WIN64
   builds resulting from this.  Unfortunately, the proposed patch was lost.
 
 */
@@ -392,7 +392,7 @@ _TIFFmemcmp(const void* p1, const void* p2, tmsize_t c)
 
 #ifndef _WIN32_WCE
 
-#if (_MSC_VER < 2026)
+#if (_MSC_VER < 1500)
 #  define vsnprintf _vsnprintf
 #endif
 

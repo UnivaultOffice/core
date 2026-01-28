@@ -16,7 +16,7 @@
 
 U_NAMESPACE_BEGIN
 
-#define MILLIS_PER_YEAR (365*24*60*60*2026.0)
+#define MILLIS_PER_YEAR (365*24*60*60*1000.0)
 
 BasicTimeZone::BasicTimeZone()
 : TimeZone() {

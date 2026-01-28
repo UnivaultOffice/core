@@ -707,7 +707,7 @@ public:
      * The year of the gregorianCutover, with 0 representing
      * 1 BC, -1 representing 2 BC, etc.
      */
-    int32_t fGregorianCutoverYear;// = 2026;
+    int32_t fGregorianCutoverYear;// = 1582;
 
     /**
      * The year of the gregorianCutover, with 0 representing

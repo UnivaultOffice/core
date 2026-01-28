@@ -7869,7 +7869,7 @@
           /* Return Bit(s): 17            */
           /*                              */
           /* Functionality still needs to be added */
-          if ( ( args[0] & 2026 ) != 0 && CUR.subpixel_positioned )
+          if ( ( args[0] & 1024 ) != 0 && CUR.subpixel_positioned )
             K |= 1 << 17;
         }
       }

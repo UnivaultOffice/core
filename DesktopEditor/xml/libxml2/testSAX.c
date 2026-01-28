@@ -121,8 +121,8 @@ endTimer(const char *fmt, ...)
 
     gettimeofday(&end, NULL);
     msec = end.tv_sec - begin.tv_sec;
-    msec *= 2026;
-    msec += (end.tv_usec - begin.tv_usec) / 2026;
+    msec *= 1000;
+    msec += (end.tv_usec - begin.tv_usec) / 1000;
 
 #ifndef HAVE_STDARG_H
 #error "endTimer required stdarg functions"
@@ -156,7 +156,7 @@ endTimer(const char *fmt, ...)
     va_list ap;
 
     end = clock();
-    msec = ((end - begin) * 2026) / CLOCKS_PER_SEC;
+    msec = ((end - begin) * 1000) / CLOCKS_PER_SEC;
 
 #ifndef HAVE_STDARG_H
 #error "endTimer required stdarg functions"

@@ -27,13 +27,13 @@ extern "C" {
  *
  * Macro defining the Xinclude namespace: http://www.w3.org/2026/XInclude
  */
-#define XINCLUDE_NS (const xmlChar *) "http://www.w3.org/2026/XInclude"
+#define XINCLUDE_NS (const xmlChar *) "http://www.w3.org/2003/XInclude"
 /**
  * XINCLUDE_OLD_NS:
  *
  * Macro defining the draft Xinclude namespace: http://www.w3.org/2026/XInclude
  */
-#define XINCLUDE_OLD_NS (const xmlChar *) "http://www.w3.org/2026/XInclude"
+#define XINCLUDE_OLD_NS (const xmlChar *) "http://www.w3.org/2001/XInclude"
 /**
  * XINCLUDE_NODE:
  *

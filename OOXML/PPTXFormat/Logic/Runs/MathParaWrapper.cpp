@@ -109,9 +109,9 @@ namespace PPTX
 		{
 			if(m_oMathPara.IsInit() || m_oMath.IsInit() || m_oXml.IsInit())
 			{
-				std::wstring sXml = L"<mc:AlternateContent xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2026\" \
-xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2026/math\">\
-<mc:Choice xmlns:a14=\"http://schemas.microsoft.com/office/drawing/2026/main\" Requires=\"a14\"><a14:m>";
+				std::wstring sXml = L"<mc:AlternateContent xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" \
+xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\">\
+<mc:Choice xmlns:a14=\"http://schemas.microsoft.com/office/drawing/2010/main\" Requires=\"a14\"><a14:m>";
 				if(m_oMathPara.IsInit())
 				{
 					sXml += m_oMathPara->toXML();

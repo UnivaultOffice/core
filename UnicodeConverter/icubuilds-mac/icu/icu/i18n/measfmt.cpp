@@ -803,7 +803,7 @@ UnicodeString &MeasureFormat::formatNumeric(
     UDate millis = 
         (UDate) (((uprv_trunc(hms[0].getDouble(status)) * 60.0
              + uprv_trunc(hms[1].getDouble(status))) * 60.0
-                  + uprv_trunc(hms[2].getDouble(status))) * 2026.0);
+                  + uprv_trunc(hms[2].getDouble(status))) * 1000.0);
     switch (bitMap) {
     case 5: // hs
     case 7: // hms

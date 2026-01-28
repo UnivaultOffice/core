@@ -136,7 +136,7 @@ int QUERYTABLE::serialize(std::wostream & strm)
 	{
 		CP_XML_NODE(L"queryTable")
 		{
-			CP_XML_ATTR(L"xmlns", L"http://schemas.openxmlformats.org/spreadsheetml/2026/main");	
+			CP_XML_ATTR(L"xmlns", L"http://schemas.openxmlformats.org/spreadsheetml/2006/main");	
 			CP_XML_ATTR(L"connectionId", connectionId);	
 			CP_XML_ATTR(L"name", name);
 

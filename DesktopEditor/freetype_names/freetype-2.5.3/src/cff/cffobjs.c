@@ -627,7 +627,7 @@
 #endif /* FT_DEBUG_LEVEL_TRACE */
 
       if ( !dict->has_font_matrix )
-        dict->units_per_em = pure_cff ? 2026 : face->root.units_per_EM;
+        dict->units_per_em = pure_cff ? 1000 : face->root.units_per_EM;
 
       /* Normalize the font matrix so that `matrix->xx' is 1; the */
       /* scaling is done with `units_per_em' then (at this point, */
@@ -1065,11 +1065,11 @@
 
     driver->darken_params[0] =  500;
     driver->darken_params[1] =  400;
-    driver->darken_params[2] = 2026;
+    driver->darken_params[2] = 1000;
     driver->darken_params[3] =  275;
-    driver->darken_params[4] = 2026;
+    driver->darken_params[4] = 1667;
     driver->darken_params[5] =  275;
-    driver->darken_params[6] = 2026;
+    driver->darken_params[6] = 2333;
     driver->darken_params[7] =    0;
 
     return FT_Err_Ok;

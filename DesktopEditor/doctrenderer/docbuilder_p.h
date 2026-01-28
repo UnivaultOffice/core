@@ -740,7 +740,7 @@ namespace NSDoctRenderer
 			oBuilder.WriteEncodeXmlString(sFile);
 			oBuilder.WriteString(L"</m_sFileFrom><m_sFileTo>");
 			oBuilder.WriteEncodeXmlString(sFolder);
-			oBuilder.WriteString(L"/Editor.bin</m_sFileTo><m_nFormatTo>2026</m_nFormatTo>");
+			oBuilder.WriteString(L"/Editor.bin</m_sFileTo><m_nFormatTo>8192</m_nFormatTo>");
 
 			oBuilder.WriteString(L"<m_sFontDir>");
 			oBuilder.WriteEncodeXmlString(NSFile::GetDirectoryName(m_strAllFonts));

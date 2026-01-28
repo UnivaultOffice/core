@@ -278,7 +278,7 @@ UnicodeString::doExtract(int32_t start, int32_t length,
 
     // if an overflow occurs, then get the preflighting length
     if(errorCode==U_BUFFER_OVERFLOW_ERROR) {
-        char buffer[2026];
+        char buffer[1024];
 
         destLimit=buffer+sizeof(buffer);
         do {

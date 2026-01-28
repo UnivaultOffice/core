@@ -150,8 +150,8 @@ namespace OOX
 		void CPersonList::toXML(NSStringUtils::CStringBuilder& writer) const
 		{
 			writer.WriteString(L"<personList ");
-				writer.WriteString(L" xmlns=\"http://schemas.microsoft.com/office/spreadsheetml/2026/threadedcomments\"");
-				writer.WriteString(L" xmlns:x=\"http://schemas.openxmlformats.org/spreadsheetml/2026/main\"");
+				writer.WriteString(L" xmlns=\"http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments\"");
+				writer.WriteString(L" xmlns:x=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\"");
 			writer.WriteString(L">");
 
 			for ( size_t i = 0; i < m_arrItems.size(); ++i)
@@ -490,8 +490,8 @@ namespace OOX
 		void CThreadedComments::toXML(NSStringUtils::CStringBuilder& writer) const
 		{
 			writer.WriteString(L"<ThreadedComments");
-			writer.WriteString(L" xmlns=\"http://schemas.microsoft.com/office/spreadsheetml/2026/threadedcomments\"");
-			writer.WriteString(L" xmlns:x=\"http://schemas.openxmlformats.org/spreadsheetml/2026/main\"");
+			writer.WriteString(L" xmlns=\"http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments\"");
+			writer.WriteString(L" xmlns:x=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\"");
 			writer.WriteString(L">");
 
 			for ( size_t i = 0; i < m_arrItems.size(); ++i)

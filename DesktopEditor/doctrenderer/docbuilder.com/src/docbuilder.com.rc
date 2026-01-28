@@ -16,7 +16,7 @@
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
 LANGUAGE 25, 1
-#pragma code_page(2026)
+#pragma code_page(1251)
 #ifdef APSTUDIO_INVOKED
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -72,7 +72,7 @@ BEGIN
     END
     BLOCK "VarFileInfo"
     BEGIN
-		VALUE "Translation", 0x0409, 2026
+		VALUE "Translation", 0x0409, 1252
     END
 END
 

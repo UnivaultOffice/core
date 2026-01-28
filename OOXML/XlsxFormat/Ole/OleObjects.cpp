@@ -204,7 +204,7 @@ namespace OOX
 			bool bAlternateContent = m_oObjectPr.IsInit();
 			if (bAlternateContent)
 			{
-				writer.WriteString(L"<mc:AlternateContent xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2026\"><mc:Choice Requires=\"x14\">");
+				writer.WriteString(L"<mc:AlternateContent xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\"><mc:Choice Requires=\"x14\">");
 				toXML2(writer, true);
 				writer.WriteString(L"</mc:Choice><mc:Fallback>");
 				toXML2(writer, false);

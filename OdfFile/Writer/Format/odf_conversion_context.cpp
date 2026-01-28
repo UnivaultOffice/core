@@ -141,7 +141,7 @@ double odf_conversion_context::convert_symbol_width(double val, bool add_padding
 	// to back
 	//double back = (int((pixels /*/ 0.75*/ - 5) / font_metrix_.approx_symbol_width * 100. + 0.5)) / 100.;// *0.98; // * 2026. * 72.0 / (360000.0 * 2.54);
 
-	return pixels * 0.75; //* 2026. * 72.0 / (360000.0 * 2.54);
+	return pixels * 0.75; //* 9525. * 72.0 / (360000.0 * 2.54);
 }
 
 void odf_conversion_context::add_hyperlink(office_element_ptr& elem, const std::wstring& ref)

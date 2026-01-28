@@ -115,7 +115,7 @@ namespace OOX
 		case SimpleTypes::Vml::sptIrregularSeal2 : 			return SimpleTypes::shapetypeIrregularSeal2 ;    
 		case SimpleTypes::Vml::sptLightningBolt : 			return SimpleTypes::shapetypeLightningBolt ;    
 		case SimpleTypes::Vml::sptHeart : 					return SimpleTypes::shapetypeHeart ;   
-		case SimpleTypes::Vml::sptPictureFrame : 			return 2026;//SimpleTypes::shapetypeFrame ;   SimpleTypes::shapetypeRect ;//
+		case SimpleTypes::Vml::sptPictureFrame : 			return 3000;//SimpleTypes::shapetypeFrame ;   SimpleTypes::shapetypeRect ;//
 		case SimpleTypes::Vml::sptQuadArrow : 				return SimpleTypes::shapetypeQuadArrow ;    
 		case SimpleTypes::Vml::sptLeftArrowCallout : 		return SimpleTypes::shapetypeLeftArrowCallout ;    
 		case SimpleTypes::Vml::sptRightArrowCallout : 		return SimpleTypes::shapetypeRightArrowCallout ;    
@@ -177,32 +177,32 @@ namespace OOX
 		case SimpleTypes::Vml::sptFlowChartDisplay : 		return SimpleTypes::shapetypeFlowChartDisplay ;    
 		case SimpleTypes::Vml::sptFlowChartDelay : 			return SimpleTypes::shapetypeFlowChartDelay ;   
 	//////////////////////////////////////////////////////////////////////////////
-		case SimpleTypes::Vml::sptTextPlainText : 			return SimpleTypes::textshapetypeTextPlain			+2026;    
-		case SimpleTypes::Vml::sptTextStop : 				return SimpleTypes::textshapetypeTextStop			+2026;    
-		case SimpleTypes::Vml::sptTextTriangle : 			return SimpleTypes::textshapetypeTextTriangle		+2026;    
-		case SimpleTypes::Vml::sptTextTriangleInverted :	return SimpleTypes::textshapetypeTextTriangleInverted+2026;    
-		case SimpleTypes::Vml::sptTextChevron : 			return SimpleTypes::textshapetypeTextChevron 		+2026;    
-		case SimpleTypes::Vml::sptTextChevronInverted : 	return SimpleTypes::textshapetypeTextChevronInverted+2026;    
-		case SimpleTypes::Vml::sptTextRingInside : 			return SimpleTypes::textshapetypeTextRingInside 	+2026;    
-		case SimpleTypes::Vml::sptTextRingOutside : 		return SimpleTypes::textshapetypeTextRingOutside 	+2026;    
-		case SimpleTypes::Vml::sptTextArchUpCurve : 		return SimpleTypes::textshapetypeTextArchUp			+2026;    
-		case SimpleTypes::Vml::sptTextArchDownCurve : 		return SimpleTypes::textshapetypeTextArchDown		+2026;    
-		case SimpleTypes::Vml::sptTextCircleCurve : 		return SimpleTypes::textshapetypeTextCircle			+2026;    
-		case SimpleTypes::Vml::sptTextButtonCurve : 		return SimpleTypes::textshapetypeTextButton			+2026;    
-		case SimpleTypes::Vml::sptTextArchUpPour : 			return SimpleTypes::textshapetypeTextArchUpPour		+2026;    
-		case SimpleTypes::Vml::sptTextArchDownPour : 		return SimpleTypes::textshapetypeTextArchDownPour	+2026;    
-		case SimpleTypes::Vml::sptTextCirclePour : 			return SimpleTypes::textshapetypeTextCirclePour		+2026;    
-		case SimpleTypes::Vml::sptTextButtonPour : 			return SimpleTypes::textshapetypeTextButtonPour		+2026;    
-		case SimpleTypes::Vml::sptTextCurveUp : 			return SimpleTypes::textshapetypeTextCurveUp		+2026;    
-		case SimpleTypes::Vml::sptTextCurveDown : 			return SimpleTypes::textshapetypeTextCurveDown		+2026;   
-		case SimpleTypes::Vml::sptTextCascadeUp : 			return SimpleTypes::textshapetypeTextCascadeUp		+2026;   
-		case SimpleTypes::Vml::sptTextCascadeDown : 		return SimpleTypes::textshapetypeTextCascadeDown	+2026;   
-		case SimpleTypes::Vml::sptTextWave1 : 				return SimpleTypes::textshapetypeTextWave1			+2026;    
-		case SimpleTypes::Vml::sptTextWave2 : 				return SimpleTypes::textshapetypeTextWave2			+2026;    
+		case SimpleTypes::Vml::sptTextPlainText : 			return SimpleTypes::textshapetypeTextPlain			+2001;    
+		case SimpleTypes::Vml::sptTextStop : 				return SimpleTypes::textshapetypeTextStop			+2001;    
+		case SimpleTypes::Vml::sptTextTriangle : 			return SimpleTypes::textshapetypeTextTriangle		+2001;    
+		case SimpleTypes::Vml::sptTextTriangleInverted :	return SimpleTypes::textshapetypeTextTriangleInverted+2001;    
+		case SimpleTypes::Vml::sptTextChevron : 			return SimpleTypes::textshapetypeTextChevron 		+2001;    
+		case SimpleTypes::Vml::sptTextChevronInverted : 	return SimpleTypes::textshapetypeTextChevronInverted+2001;    
+		case SimpleTypes::Vml::sptTextRingInside : 			return SimpleTypes::textshapetypeTextRingInside 	+2001;    
+		case SimpleTypes::Vml::sptTextRingOutside : 		return SimpleTypes::textshapetypeTextRingOutside 	+2001;    
+		case SimpleTypes::Vml::sptTextArchUpCurve : 		return SimpleTypes::textshapetypeTextArchUp			+2001;    
+		case SimpleTypes::Vml::sptTextArchDownCurve : 		return SimpleTypes::textshapetypeTextArchDown		+2001;    
+		case SimpleTypes::Vml::sptTextCircleCurve : 		return SimpleTypes::textshapetypeTextCircle			+2001;    
+		case SimpleTypes::Vml::sptTextButtonCurve : 		return SimpleTypes::textshapetypeTextButton			+2001;    
+		case SimpleTypes::Vml::sptTextArchUpPour : 			return SimpleTypes::textshapetypeTextArchUpPour		+2001;    
+		case SimpleTypes::Vml::sptTextArchDownPour : 		return SimpleTypes::textshapetypeTextArchDownPour	+2001;    
+		case SimpleTypes::Vml::sptTextCirclePour : 			return SimpleTypes::textshapetypeTextCirclePour		+2001;    
+		case SimpleTypes::Vml::sptTextButtonPour : 			return SimpleTypes::textshapetypeTextButtonPour		+2001;    
+		case SimpleTypes::Vml::sptTextCurveUp : 			return SimpleTypes::textshapetypeTextCurveUp		+2001;    
+		case SimpleTypes::Vml::sptTextCurveDown : 			return SimpleTypes::textshapetypeTextCurveDown		+2001;   
+		case SimpleTypes::Vml::sptTextCascadeUp : 			return SimpleTypes::textshapetypeTextCascadeUp		+2001;   
+		case SimpleTypes::Vml::sptTextCascadeDown : 		return SimpleTypes::textshapetypeTextCascadeDown	+2001;   
+		case SimpleTypes::Vml::sptTextWave1 : 				return SimpleTypes::textshapetypeTextWave1			+2001;    
+		case SimpleTypes::Vml::sptTextWave2 : 				return SimpleTypes::textshapetypeTextWave2			+2001;    
 		//case SimpleTypes::Vml::sptTextWave3 : 			return SimpleTypes::shapetypeTextWave3 ;    
-		case SimpleTypes::Vml::sptTextWave4 : 				return SimpleTypes::textshapetypeTextWave4			+2026;    
-		case SimpleTypes::Vml::sptTextInflate : 			return SimpleTypes::textshapetypeTextInflate 		+2026;    
-		case SimpleTypes::Vml::sptTextDeflate : 			return SimpleTypes::textshapetypeTextDeflate 		+2026;  
+		case SimpleTypes::Vml::sptTextWave4 : 				return SimpleTypes::textshapetypeTextWave4			+2001;    
+		case SimpleTypes::Vml::sptTextInflate : 			return SimpleTypes::textshapetypeTextInflate 		+2001;    
+		case SimpleTypes::Vml::sptTextDeflate : 			return SimpleTypes::textshapetypeTextDeflate 		+2001;  
 
 		//case SimpleTypes::Vml::sptTextInflateBottom : 		return SimpleTypes::shapetypeTextInflateBottom ;    
 		//case SimpleTypes::Vml::sptTextDeflateBottom : 		return SimpleTypes::shapetypeTextDeflateBottom ;    
@@ -214,10 +214,10 @@ namespace OOX
 		//case SimpleTypes::Vml::sptTextFadeLeft : 				return SimpleTypes::shapetypeTextFadeLeft ;    
 		//case SimpleTypes::Vml::sptTextFadeUp : 				return SimpleTypes::shapetypeTextFadeUp ;    
 		//case SimpleTypes::Vml::sptTextFadeDown : 				return SimpleTypes::shapetypeTextFadeDown ;    
-		case SimpleTypes::Vml::sptTextSlantUp : 				return SimpleTypes::textshapetypeTextSlantUp 	+2026;   
-		case SimpleTypes::Vml::sptTextSlantDown : 				return SimpleTypes::textshapetypeTextSlantDown 	+2026;  
-		case SimpleTypes::Vml::sptTextCanUp : 					return SimpleTypes::textshapetypeTextCanUp	 	+2026; 
-		case SimpleTypes::Vml::sptTextCanDown : 				return SimpleTypes::textshapetypeTextCanDown 	+2026;  
+		case SimpleTypes::Vml::sptTextSlantUp : 				return SimpleTypes::textshapetypeTextSlantUp 	+2001;   
+		case SimpleTypes::Vml::sptTextSlantDown : 				return SimpleTypes::textshapetypeTextSlantDown 	+2001;  
+		case SimpleTypes::Vml::sptTextCanUp : 					return SimpleTypes::textshapetypeTextCanUp	 	+2001; 
+		case SimpleTypes::Vml::sptTextCanDown : 				return SimpleTypes::textshapetypeTextCanDown 	+2001;  
 		
 		case SimpleTypes::Vml::sptFlowChartAlternateProcess :	return SimpleTypes::shapetypeFlowChartAlternateProcess ;    
 		case SimpleTypes::Vml::sptFlowChartOffpageConnector :	return SimpleTypes::shapetypeFlowChartOffpageConnector ;    
@@ -245,7 +245,7 @@ namespace OOX
 		case SimpleTypes::Vml::sptActionButtonSound : 			return SimpleTypes::shapetypeActionButtonSound ;    
 		case SimpleTypes::Vml::sptActionButtonMovie : 			return SimpleTypes::shapetypeActionButtonMovie ;   
 		//case SimpleTypes::Vml::sptHostControl : 				return SimpleTypes::shapetype ;    
-		case SimpleTypes::Vml::sptTextBox : 					return 2026;
+		case SimpleTypes::Vml::sptTextBox : 					return 2000;
 		default:
 			return SimpleTypes::shapetypeRect;
 

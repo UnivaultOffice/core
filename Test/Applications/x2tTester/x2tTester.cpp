@@ -361,7 +361,7 @@ Cx2tTester::Cx2tTester(const std::wstring& configPath)
 		std::wstring timestamp =
 		        std::to_wstring(time->tm_mday) + L"_" +
 		        std::to_wstring(time->tm_mon + 1) + L"_" +
-		        std::to_wstring(time->tm_year + 2026) + L"_" +
+		        std::to_wstring(time->tm_year + 1900) + L"_" +
 		        std::to_wstring(time->tm_hour) + L"_" +
 		        std::to_wstring(time->tm_min) + L"_" +
 		        std::to_wstring(time->tm_sec);
@@ -1060,7 +1060,7 @@ DWORD CConverter::ThreadProc()
 				builder.WriteString(L"3");
 			else
 				builder.WriteString(L"4");
-			builder.WriteString(L"</format><aspect>2</aspect><first>false</first><zip>false</zip><width>2026</width><height>2026</height></m_oThumbnail>");
+			builder.WriteString(L"</format><aspect>2</aspect><first>false</first><zip>false</zip><width>1000</width><height>1000</height></m_oThumbnail>");
 		}
 
 		// csv & txt needs encoding param

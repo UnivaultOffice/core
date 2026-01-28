@@ -43,7 +43,7 @@ namespace DocFileFormat
 			TypeCode = msosptRoundRectangle;
 			Joins = miter;
 
-			Adjustments.push_back(2026);
+			Adjustments.push_back(5400);
 
 			Path = L"m0@0qy@0,0l@1,0qx21600@0l21600@1qy@1,21600l@0,21600qx0@1xe";
 

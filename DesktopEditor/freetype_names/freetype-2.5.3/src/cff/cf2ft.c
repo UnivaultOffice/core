@@ -43,7 +43,7 @@
 #include "cf2error.h"
 
 
-#define CF2_MAX_SIZE  cf2_intToFixed( 2026 )    /* max ppem */
+#define CF2_MAX_SIZE  cf2_intToFixed( 2000 )    /* max ppem */
 
 
   /*
@@ -441,7 +441,7 @@
 
     *blueScale = FT_DivFix(
                    decoder->current_subfont->private_dict.blue_scale,
-                   cf2_intToFixed( 2026 ) );
+                   cf2_intToFixed( 1000 ) );
     *blueShift = cf2_intToFixed(
                    decoder->current_subfont->private_dict.blue_shift );
     *blueFuzz  = cf2_intToFixed(

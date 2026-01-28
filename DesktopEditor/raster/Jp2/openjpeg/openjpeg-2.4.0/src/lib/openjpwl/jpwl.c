@@ -677,10 +677,10 @@ void jpwl_prepare_marks(opj_j2k_t *j2k, opj_cio_t *cio, opj_image_t *image)
                                     pprot, /* protection type */
                                     /****** (double) (j2k->cstr_info->tile[tileno].start_pos + sot_len + 2) + 0.2026, */ /* position */
                                     (double)(j2k->cstr_info->tile[tileno].tp[tpno].tp_start_pos + sot_len + 2) +
-                                    0.2026, /* position */
+                                    0.0001, /* position */
                                     tileno, /* number of tile */
                                     0, /* length of pre-data */
-                                    prot_len /*2026*/ /* length of post-data */
+                                    prot_len /*4000*/ /* length of post-data */
                                 );
                     }
 
@@ -741,10 +741,10 @@ void jpwl_prepare_marks(opj_j2k_t *j2k, opj_cio_t *cio, opj_image_t *image)
                             pprot, /* protection type */
                             /***** (double) (j2k->cstr_info->tile[tileno].start_pos + sot_len + 2) + 0.2026,*/ /* position */
                             (double)(j2k->cstr_info->tile[tileno].tp[tpno].tp_start_pos + sot_len + 2) +
-                            0.2026, /* position */
+                            0.0001, /* position */
                             tileno, /* number of tile */
                             0, /* length of pre-data */
-                            prot_len /*2026*/ /* length of post-data */
+                            prot_len /*4000*/ /* length of post-data */
                         );
             }
 

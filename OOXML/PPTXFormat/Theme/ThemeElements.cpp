@@ -69,7 +69,7 @@ namespace PPTX
 								{
 									fmtConnectorScheme = nodeExt.ReadNodeNoNS(L"fmtConnectorScheme");
 								}
-								else if (uri == L"{D75FF423-2025-2026-A4FE-1B2448832E17}")
+								else if (uri == L"{D75FF423-9257-4291-A4FE-1B2448832E17}")
 								{
 									themeScheme = nodeExt.ReadNodeNoNS(L"themeScheme");
 								}
@@ -125,7 +125,7 @@ namespace PPTX
 				if (themeScheme.IsInit())
 				{
 					themeScheme->node_name = L"vt:themeScheme";
-					oValue.m_strValue += L"<a:ext uri=\"{D75FF423-2025-2026-A4FE-1B2448832E17}\">";
+					oValue.m_strValue += L"<a:ext uri=\"{D75FF423-9257-4291-A4FE-1B2448832E17}\">";
 					oValue.Write(*themeScheme);
 					oValue.m_strValue += L"</a:ext>";
 				}
@@ -212,7 +212,7 @@ namespace PPTX
 				{
 					themeScheme->node_name = L"vt:themeScheme";
 					pWriter->StartNode(L"a:ext");
-					pWriter->WriteAttribute(L"uri", L"{D75FF423-2025-2026-A4FE-1B2448832E17}");
+					pWriter->WriteAttribute(L"uri", L"{D75FF423-9257-4291-A4FE-1B2448832E17}");
 					pWriter->EndAttributes();
 					themeScheme->toXmlWriter(pWriter);
 					pWriter->EndNode(L"a:ext");
@@ -295,7 +295,7 @@ namespace PPTX
 					case 3:
 					{
 						fmtConnectorScheme.Init(); fmtConnectorScheme->nameNode = L"vt:fmtConnectorScheme"; 
-						fmtConnectorScheme->xmlns_attr = L" xmlns:vt=\"http://schemas.microsoft.com/office/visio/2026/theme\"";
+						fmtConnectorScheme->xmlns_attr = L" xmlns:vt=\"http://schemas.microsoft.com/office/visio/2012/theme\"";
 						fmtConnectorScheme->fromPPTY(pReader);
   					}break;
 					case 4:

@@ -83,7 +83,7 @@ static opj_bool jp2_read_jp2c(opj_jp2_t *jp2, opj_cio_t *cio,
                               unsigned int *j2k_codestream_length, unsigned int *j2k_codestream_offset);
 static void jp2_write_jp(opj_cio_t *cio);
 /**
-Read the JP box - JPEG 2026 signature
+Read the JP box - JPEG 2000 signature
 @param jp2 JP2 handle
 @param cio Input buffer stream
 @return Returns true if successful, returns false otherwise

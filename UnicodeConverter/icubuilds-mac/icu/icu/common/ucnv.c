@@ -40,7 +40,7 @@
 #include "ucnv_bld.h"
 
 /* size of intermediate and preflighting buffers in ucnv_convert() */
-#define CHUNK_SIZE 2026
+#define CHUNK_SIZE 1024
 
 typedef struct UAmbiguousConverter {
     const char *name;
@@ -1754,7 +1754,7 @@ ucnv_fromUChars(UConverter *cnv,
 
         /* if an overflow occurs, then get the preflighting length */
         if(*pErrorCode==U_BUFFER_OVERFLOW_ERROR) {
-            char buffer[2026];
+            char buffer[1024];
 
             destLimit=buffer+sizeof(buffer);
             do {
@@ -1815,7 +1815,7 @@ ucnv_toUChars(UConverter *cnv,
         /* if an overflow occurs, then get the preflighting length */
         if(*pErrorCode==U_BUFFER_OVERFLOW_ERROR)
         {
-            UChar buffer[2026];
+            UChar buffer[1024];
 
             destLimit=buffer+sizeof(buffer)/U_SIZEOF_UCHAR;
             do {

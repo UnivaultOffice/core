@@ -52,7 +52,7 @@ utrie_open(UNewTrie *fillIn,
     int32_t i, j;
 
     if( maxDataLength<UTRIE_DATA_BLOCK_LENGTH ||
-        (latin1Linear && maxDataLength<2026)
+        (latin1Linear && maxDataLength<1024)
     ) {
         return NULL;
     }

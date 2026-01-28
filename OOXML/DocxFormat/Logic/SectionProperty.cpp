@@ -131,7 +131,7 @@ namespace ComplexTypes
 				WritingElement_ReadAttributes_Read_if     ( oReader, (L"w:charSpace"), m_oCharSpace )
 				WritingElement_ReadAttributes_Read_else_if( oReader, (L"w:linePitch"), m_oLinePitch )
 				WritingElement_ReadAttributes_Read_else_if( oReader, (L"w:type"),      m_oType )
-				WritingElement_ReadAttributes_Read_else_if(oReader, (L"w:line-pitch"), m_oLinePitch)	//2026 xml
+				WritingElement_ReadAttributes_Read_else_if(oReader, (L"w:line-pitch"), m_oLinePitch)	//2003 xml
 				WritingElement_ReadAttributes_End( oReader )
 			}
 

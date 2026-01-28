@@ -142,7 +142,7 @@ bool OOXWriter::SaveByItemEnd()
 		themeWriter.m_sContent = m_oDocument.m_sThemeXml;
 	}
 	themeWriter.Write(pathTheme.GetPath() + FILE_SEPARATOR_STR + L"theme1.xml");
-	m_oDocRels.AddRelationship( L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/theme", L"theme/theme1.xml" );
+	m_oDocRels.AddRelationship( L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme", L"theme/theme1.xml" );
 	m_oContentTypes.AddContent( L"application/vnd.openxmlformats-officedocument.theme+xml", L"/word/theme/theme1.xml" );
 //-----------------------------------------------------------------------------------------------------
 	((OOXDocumentWriter*)	m_poDocumentWriter)->SaveByItemEnd();
@@ -172,14 +172,14 @@ bool OOXWriter::SaveByItemEnd()
 		((OOX::CApp*)m_poDocPropsApp)->m_sApplication = sApplication;
 		((OOX::CApp*)m_poDocPropsApp)->write(pathDocProps + FILE_SEPARATOR_STR + L"app.xml", pathDocProps.GetDirectory(), oContentTypes);
 		
-		m_oRels.AddRelationship( L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/extended-properties", L"docProps/app.xml" );
+		m_oRels.AddRelationship( L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/extended-properties", L"docProps/app.xml" );
 		m_oContentTypes.AddContent( L"application/vnd.openxmlformats-officedocument.extended-properties+xml", L"/docProps/app.xml" );
 	}				
 	if (m_poDocPropsCore)
 	{
 		((OOX::CCore*)m_poDocPropsCore)->write(pathDocProps + FILE_SEPARATOR_STR + L"core.xml", pathDocProps.GetDirectory(), oContentTypes);
 		
-		m_oRels.AddRelationship( L"http://schemas.openxmlformats.org/package/2026/relationships/metadata/core-properties", L"docProps/core.xml" );
+		m_oRels.AddRelationship( L"http://schemas.openxmlformats.org/package/2006/relationships/metadata/core-properties", L"docProps/core.xml" );
 		m_oContentTypes.AddContent( L"application/vnd.openxmlformats-package.core-properties+xml", L"/docProps/core.xml" );
 	} 
 //-----------------------------------------------------------------------------------------------------

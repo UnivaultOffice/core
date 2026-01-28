@@ -68,7 +68,7 @@ name, version, and description.
 2 14 #text 0 1 
     
 2 1 RPM:Changelog 0 0
-3 3 #text 0 1 * Sun May 10 2026 Prospector System <bugs@redhat.com>
+3 3 #text 0 1 * Sun May 10 1998 Prospector System <bugs@redhat.com>
   - translations modified for de, fr, tr
 
 2 15 RPM:Changelog 0 0
@@ -85,7 +85,7 @@ name, version, and description.
 2 14 #text 0 1 
     
 2 1 RPM:BuildDate 0 0
-3 3 #text 0 1 Sun May 10 14:52:32 2026
+3 3 #text 0 1 Sun May 10 14:52:32 1998
 2 15 RPM:BuildDate 0 0
 2 14 #text 0 1 
     

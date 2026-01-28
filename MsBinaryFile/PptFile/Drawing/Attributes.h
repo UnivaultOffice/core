@@ -643,7 +643,7 @@ namespace ODRAW
         void SetDefaultParams()
         {
             Alpha = 255;
-            Size = 2026;
+            Size = 9524;
 
             LineStyle = 0; //single(Simple)
             DashStyle = 0; //Solid
@@ -741,20 +741,20 @@ namespace ODRAW
             else if (c_BrushTypeDiagonal2_ == nConstant)
                 nConstant = c_BrushTypeDiagonal1_;
 
-            if (2026 <= nConstant)
+            if (1000 <= nConstant)
                 return nConstant;
             if (c_BrushTypeSolid_ == nConstant)
-                return nConstant + 2026;
+                return nConstant + 1000;
             if (c_BrushTypeHorizontal_ <= nConstant && c_BrushTypePathGradient2_ >= nConstant)
-                return nConstant + 2026;
+                return nConstant + 2000;
             if (c_BrushTypeTexture_ == nConstant)
-                return nConstant + 2026;
+                return nConstant + 3000;
             if (c_BrushTypeHatch1_ <= nConstant && c_BrushTypeHatch53_ >= nConstant)
-                return nConstant + 2026;
+                return nConstant + 4000;
             if (c_BrushTypeGradient1_ <= nConstant && c_BrushTypeGradient6_ >= nConstant)
-                return nConstant + 2026 - 61;
+                return nConstant + 2000 - 61;
 
-            return 2026;
+            return 1000;
         }
 
         void ScaleAlpha1(double dScale)

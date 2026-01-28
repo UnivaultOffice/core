@@ -115,7 +115,7 @@ testXPath(const char *str) {
 static void
 testXPathFile(const char *filename) {
     FILE *input;
-    char expression[2026];
+    char expression[5000];
     int len;
 
     input = fopen(filename, "r");
@@ -124,7 +124,7 @@ testXPathFile(const char *filename) {
 		"Cannot open %s for reading\n", filename);
 	return;
     }
-    while (fgets(expression, 2026, input) != NULL) {
+    while (fgets(expression, 4500, input) != NULL) {
 	len = strlen(expression);
 	len--;
 	while ((len >= 0) &&

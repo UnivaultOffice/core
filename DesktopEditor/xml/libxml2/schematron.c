@@ -1380,7 +1380,7 @@ xmlSchematronReportSuccess(xmlSchematronValidCtxtPtr ctxt,
         TODO
     } else {
         xmlChar *path;
-	char msg[2026];
+	char msg[1000];
 	long line;
 	const xmlChar *report = NULL;
 
@@ -1456,7 +1456,7 @@ xmlSchematronReportPattern(xmlSchematronValidCtxtPtr ctxt,
     if (ctxt->flags & XML_SCHEMATRON_OUT_XML) {
         TODO
     } else {
-	char msg[2026];
+	char msg[1000];
 
 	if (pattern->name == NULL)
 	    return;

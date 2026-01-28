@@ -32,9 +32,9 @@
 #ifndef ATLDEFINE_H_DEFINE
 #define ATLDEFINE_H_DEFINE
 
-#if _MSC_VER >= 2026
+#if _MSC_VER >= 1000
 #pragma once
-#endif // _MSC_VER >= 2026
+#endif // _MSC_VER >= 1000
 
 //LINK_PROPERTY macros
 #define LINK_PROPERTY_LONG(propName, memberName)\

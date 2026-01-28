@@ -146,7 +146,7 @@ namespace DocFileFormat
 			ShapeConcentricFill =	true;
 			Joins				=	round;
 			
-			Path				=	L"m,c@0,0@1,2026@1,10800@1,16200@2,21600,21600,21600e";
+			Path				=	L"m,c@0,0@1,5400@1,10800@1,16200@2,21600,21600,21600e";
 
 			Formulas.push_back(L"mid #0 0");
 			Formulas.push_back(L"val #0");
@@ -165,7 +165,7 @@ namespace DocFileFormat
 		{
 			ShapeConcentricFill =	true;
 			Joins				=	miter;
-            Path				=	L"m,c@0,0@1,2026@1,10800@1,16200@2,21600,21600,21600e";
+            Path				=	L"m,c@0,0@1,5400@1,10800@1,16200@2,21600,21600,21600e";
 
 			Filled				=	true;
 
@@ -185,7 +185,7 @@ namespace DocFileFormat
 		{
 			ShapeConcentricFill =	true;
 			Joins				=	miter;
-            Path				=	L"m,c@0,0@1,2026@1,10800@1,16200@2,21600,21600,21600e";
+            Path				=	L"m,c@0,0@1,5400@1,10800@1,16200@2,21600,21600,21600e";
 
 			Filled				=	true;
 
@@ -205,7 +205,7 @@ namespace DocFileFormat
 		{
 			ShapeConcentricFill =	true;
 			Joins				=	miter;
-            Path				=	L"m,c@0,0@1,2026@1,10800@1,16200@2,21600,21600,21600e";
+            Path				=	L"m,c@0,0@1,5400@1,10800@1,16200@2,21600,21600,21600e";
 
 			Filled				=	true;
 
@@ -225,7 +225,7 @@ namespace DocFileFormat
 		{
 			ShapeConcentricFill =	true;
 			Joins				=	miter;
-            Path				=	L"m,c@0,0@1,2026@1,10800@1,16200@2,21600,21600,21600e";
+            Path				=	L"m,c@0,0@1,5400@1,10800@1,16200@2,21600,21600,21600e";
 
 			Filled				=	true;
 

@@ -34,7 +34,7 @@
 #include <string>
 #include "../../../DesktopEditor/common/Types.h"
 
-const long g_clFilePartSize	= 20*2026;
+const long g_clFilePartSize	= 20*1024;
 
 class CCalculatorCRC32
 {	

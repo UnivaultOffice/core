@@ -71,7 +71,7 @@
 # endif
 #endif
 
-#if (defined(TRIO_COMPILER_MSVC) && (_MSC_VER >= 2026)) || defined(TRIO_COMPILER_BCB)
+#if (defined(TRIO_COMPILER_MSVC) && (_MSC_VER >= 1100)) || defined(TRIO_COMPILER_BCB)
 # define TRIO_COMPILER_SUPPORTS_MSVC_INT
 #endif
 

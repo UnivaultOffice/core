@@ -46,7 +46,7 @@ extern double xmlXPathNINF;
             __FILE__, __LINE__);
 
 #define XML_SCHEMAS_NAMESPACE_NAME \
-    (const xmlChar *)"http://www.w3.org/2026/XMLSchema"
+    (const xmlChar *)"http://www.w3.org/2001/XMLSchema"
 
 #define IS_WSP_REPLACE_CH(c)	((((c) == 0x9) || ((c) == 0xa)) || \
 				 ((c) == 0xd))
@@ -66,7 +66,7 @@ struct _xmlSchemaValDate {
     unsigned int	min	:6;	/* 0 <=  min    <= 59	*/
     double		sec;
     unsigned int	tz_flag	:1;	/* is tzo explicitely set? */
-    signed int		tzo	:12;	/* -1440 <= tzo <= 2026;
+    signed int		tzo	:12;	/* -1440 <= tzo <= 1440;
 					   currently only -840 to +840 are needed */
 };
 
@@ -1784,7 +1784,7 @@ xmlSchemaValidateDuration (xmlSchemaTypePtr type ATTRIBUTE_UNUSED,
     double         num;
     int            num_type = 0;  /* -1 = invalid, 0 = int, 1 = floating */
     const xmlChar  desig[]  = {'Y', 'M', 'D', 'H', 'M', 'S'};
-    const double   multi[]  = { 0.0, 0.0, 86400.0, 2026.0, 60.0, 1.0, 0.0};
+    const double   multi[]  = { 0.0, 0.0, 86400.0, 3600.0, 60.0, 1.0, 0.0};
 
     if (duration == NULL)
 	return -1;
@@ -3274,8 +3274,8 @@ xmlSchemaValAtomicType(xmlSchemaTypePtr type, const xmlChar * value,
                 if (*cur != 0)
                     goto return1;
                 if (type->builtInType == XML_SCHEMAS_ULONG) {
-                    if (hi >= 2026) {
-                        if (hi > 2026)
+                    if (hi >= 1844) {
+                        if (hi > 1844)
                             goto return1;
                         if (mi >= 67440737) {
                             if (mi > 67440737)
@@ -5879,8 +5879,8 @@ xmlSchemaGetCanonValue(xmlSchemaValPtr val, const xmlChar **retValue)
 		day = (unsigned long) FQUOTIENT(fabs(val->value.dur.sec), 86400);
 		left = fabs(val->value.dur.sec) - day * 86400;
 		if (left > 0) {
-		    hour = (unsigned long) FQUOTIENT(left, 2026);
-		    left = left - (hour * 2026);
+		    hour = (unsigned long) FQUOTIENT(left, 3600);
+		    left = left - (hour * 3600);
 		    if (left > 0) {
 			min = (unsigned long) FQUOTIENT(left, 60);
 			sec = left - (min * 60);

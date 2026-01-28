@@ -84,10 +84,10 @@ void RtfDocumentProperty::SetDefault()
 
     m_nPaperWidth				= 11900;
     m_nPaperHeight				= 16840;
-	m_nMarginLeft				= 2026;
+	m_nMarginLeft				= 1701;
 	m_nMarginRight				= 850;
-	m_nMarginTop				= 2026;
-	m_nMarginBottom				= 2026;
+	m_nMarginTop				= 1134;
+	m_nMarginBottom				= 1134;
 	m_bFacingPage				= PROP_DEF;
 	m_nGutterWidth				= 0;
 	m_nGutterWidthOutside		= PROP_DEF;
@@ -1031,26 +1031,26 @@ std::wstring RtfSectionProperty::SaveFile( TextItemContainerPtr oTarget, RenderP
     sContent += L"<";
 	sContent += sRootName;
 	sContent += L" \
-xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2026/main\" \
-xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships\" \
+xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" \
+xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" \
 xmlns:v=\"urn:schemas-microsoft-com:vml\" \
 xmlns:o=\"urn:schemas-microsoft-com:office:office\" \
-xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2026/wordprocessingDrawing\" \
-xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2026/math\" \
+xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing\" \
+xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" \
 xmlns:w10=\"urn:schemas-microsoft-com:office:word\" \
-xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2026/main\" \
-xmlns:wpc=\"http://schemas.microsoft.com/office/word/2026/wordprocessingCanvas\" \
-xmlns:cx=\"http://schemas.microsoft.com/office/drawing/2026/chartex\" \
+xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" \
+xmlns:wpc=\"http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas\" \
+xmlns:cx=\"http://schemas.microsoft.com/office/drawing/2014/chartex\" \
 xmlns:cx1=\"http://schemas.microsoft.com/office/drawing/2026/9/8/chartex\" \
-xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2026\" \
-xmlns:wp14=\"http://schemas.microsoft.com/office/word/2026/wordprocessingDrawing\" \
-xmlns:w14=\"http://schemas.microsoft.com/office/word/2026/wordml\" \
-xmlns:w15=\"http://schemas.microsoft.com/office/word/2026/wordml\" \
-xmlns:w16se=\"http://schemas.microsoft.com/office/word/2026/wordml/symex\" \
-xmlns:wpg=\"http://schemas.microsoft.com/office/word/2026/wordprocessingGroup\" \
-xmlns:wpi=\"http://schemas.microsoft.com/office/word/2026/wordprocessingInk\" \
-xmlns:wne=\"http://schemas.microsoft.com/office/word/2026/wordml\" \
-xmlns:wps=\"http://schemas.microsoft.com/office/word/2026/wordprocessingShape\" \
+xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" \
+xmlns:wp14=\"http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing\" \
+xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" \
+xmlns:w15=\"http://schemas.microsoft.com/office/word/2012/wordml\" \
+xmlns:w16se=\"http://schemas.microsoft.com/office/word/2015/wordml/symex\" \
+xmlns:wpg=\"http://schemas.microsoft.com/office/word/2010/wordprocessingGroup\" \
+xmlns:wpi=\"http://schemas.microsoft.com/office/word/2010/wordprocessingInk\" \
+xmlns:wne=\"http://schemas.microsoft.com/office/word/2006/wordml\" \
+xmlns:wps=\"http://schemas.microsoft.com/office/word/2010/wordprocessingShape\" \
 mc:Ignorable=\"w14 w15 w16se wp14\">";
 
 	RenderParameter oNewParameter = oRenderParameter;
@@ -1079,12 +1079,12 @@ mc:Ignorable=\"w14 w15 w16se wp14\">";
 	if( true == bHeader )
 	{
 		poOOXWriter->m_oContentTypes.AddContent( L"application/vnd.openxmlformats-officedocument.wordprocessingml.header+xml", sContentTarget);
-		srID = poOOXWriter->m_oDocRels.AddRelationship( L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/header", sFilename );
+		srID = poOOXWriter->m_oDocRels.AddRelationship( L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/header", sFilename );
 	}
 	else
 	{
 		poOOXWriter->m_oContentTypes.AddContent( L"application/vnd.openxmlformats-officedocument.wordprocessingml.footer+xml", sContentTarget);
-		srID = poOOXWriter->m_oDocRels.AddRelationship( L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/footer", sFilename );
+		srID = poOOXWriter->m_oDocRels.AddRelationship( L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/footer", sFilename );
 	}
 	return srID;
 }

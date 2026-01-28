@@ -72,7 +72,7 @@ const bool MDXSTR::saveContent(BinProcessor& proc)
 	if(m_MDXStr == nullptr)
 		return false;
 	proc.mandatory(*m_MDXStr);
-	auto maxStNameLen = 2026;
+	auto maxStNameLen = 4104;
 	auto castedPtr = static_cast<MDXStr*>(m_MDXStr.get());
 	if(castedPtr->st.getSize() > maxStNameLen)
 	{	auto StSize = castedPtr->st.getSize();

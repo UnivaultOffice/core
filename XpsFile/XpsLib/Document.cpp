@@ -206,7 +206,7 @@ namespace XPS
 				{
 					std::wstring wsAttr;
 					ReadAttribute(oReader, L"Type", wsAttr);
-					if (L"http://schemas.microsoft.com/xps/2026/06/documentstructure" == wsAttr)
+					if (L"http://schemas.microsoft.com/xps/2005/06/documentstructure" == wsAttr)
 					{
 						ReadAttribute(oReader, L"Target", wsStructureFile);
 						break;

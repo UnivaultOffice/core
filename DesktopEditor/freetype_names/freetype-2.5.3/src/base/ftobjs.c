@@ -52,7 +52,7 @@
   /* the maximum level of warnings: `md5.c' is non-FreeType  */
   /* code, and it gets used during development builds only.  */
 #pragma warning( push )
-#pragma warning( disable : 2026 )
+#pragma warning( disable : 4244 )
 #endif /* _MSC_VER */
 
   /* it's easiest to include `md5.c' directly */

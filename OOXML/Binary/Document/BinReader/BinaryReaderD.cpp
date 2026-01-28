@@ -5875,7 +5875,7 @@ int Binary_DocumentTableReader::ReadHyperlink(BYTE type, long length, void* poRe
 		{
 			unsigned int rId;
 			std::wstring sHref = XmlUtils::EncodeXmlString(pHyperlink->sLink);
-			m_oFileWriter.m_pDrawingConverter->WriteRels(std::wstring(_T("http://schemas.openxmlformats.org/officeDocument/2026/relationships/hyperlink")), sHref, std::wstring(L"External"), &rId);
+			m_oFileWriter.m_pDrawingConverter->WriteRels(std::wstring(_T("http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink")), sHref, std::wstring(L"External"), &rId);
 			pHyperlink->rId = L"rId" + std::to_wstring(rId);
 		}
 		m_pCurWriter = pPrevWriter;
@@ -8368,7 +8368,7 @@ int Binary_DocumentTableReader::ReadRunContent(BYTE type, long length, void* poR
 
             sNewImgRel = XmlUtils::EncodeXmlString(sNewImgRel);
 			unsigned int rId;
-            m_oFileWriter.m_pDrawingConverter->WriteRels(std::wstring(_T("http://schemas.openxmlformats.org/officeDocument/2026/relationships/image")), sNewImgRel, std::wstring(), &rId);
+            m_oFileWriter.m_pDrawingConverter->WriteRels(std::wstring(_T("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image")), sNewImgRel, std::wstring(), &rId);
             odocImg.srId = L"rId" + std::to_wstring(rId);
 			//odocImg.srId = m_oMediaWriter.m_poDocumentRelsWriter->AddRels(_T("http://schemas.openxmlformats.org/officeDocument/2026/relationships/image"), sNewImgRel, false);
 			//odocImg.srId = m_oMediaWriter.m_aImageRels[odocImg.MediaId];
@@ -10561,10 +10561,10 @@ int BinaryFileReader::ReadMainTable()
 		m_oFileWriter.m_pDrawingConverter->SetDstContentRels();
 		unsigned int stamdartRId;
        
-		m_oFileWriter.m_pDrawingConverter->WriteRels(L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/styles",		L"styles.xml",		L"", &stamdartRId);
-        m_oFileWriter.m_pDrawingConverter->WriteRels(L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/settings",	L"settings.xml",	L"", &stamdartRId);
-        m_oFileWriter.m_pDrawingConverter->WriteRels(L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/webSettings",L"webSettings.xml", L"", &stamdartRId);
-        m_oFileWriter.m_pDrawingConverter->WriteRels(L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/fontTable",	L"fontTable.xml",	L"", &stamdartRId);
+		m_oFileWriter.m_pDrawingConverter->WriteRels(L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles",		L"styles.xml",		L"", &stamdartRId);
+        m_oFileWriter.m_pDrawingConverter->WriteRels(L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/settings",	L"settings.xml",	L"", &stamdartRId);
+        m_oFileWriter.m_pDrawingConverter->WriteRels(L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/webSettings",L"webSettings.xml", L"", &stamdartRId);
+        m_oFileWriter.m_pDrawingConverter->WriteRels(L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/fontTable",	L"fontTable.xml",	L"", &stamdartRId);
        
 		if (m_oFileWriter.m_bGlossaryMode)
 		{
@@ -10572,10 +10572,10 @@ int BinaryFileReader::ReadMainTable()
 		}
 		else
 		{
-			m_oFileWriter.m_pDrawingConverter->WriteRels(L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/theme", L"theme/theme1.xml", L"", &stamdartRId);
+			m_oFileWriter.m_pDrawingConverter->WriteRels(L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme", L"theme/theme1.xml", L"", &stamdartRId);
 			if (m_oFileWriter.m_pVbaProject.IsInit())
 			{
-				m_oFileWriter.m_pDrawingConverter->WriteRels(L"http://schemas.microsoft.com/office/2026/relationships/vbaProject", L"vbaProject.bin", L"", &stamdartRId);
+				m_oFileWriter.m_pDrawingConverter->WriteRels(L"http://schemas.microsoft.com/office/2006/relationships/vbaProject", L"vbaProject.bin", L"", &stamdartRId);
 
 				m_oFileWriter.m_pDrawingConverter->Registration(L"application/vnd.ms-word.document.macroEnabled.main+xml", L"/word", L"document.xml");
 				m_oFileWriter.m_pDrawingConverter->Registration(L"application/vnd.ms-office.vbaProject", L"/word", L"vbaProject.bin");
@@ -10598,12 +10598,12 @@ int BinaryFileReader::ReadMainTable()
 		if (false == m_oFileWriter.m_bGlossaryMode && false == m_oFileWriter.IsEmptyGlossary())
 		{
 			unsigned int rId;
-			m_oFileWriter.m_pDrawingConverter->WriteRels(L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/glossaryDocument", L"glossary/document.xml", L"", &rId);
+			m_oFileWriter.m_pDrawingConverter->WriteRels(L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/glossaryDocument", L"glossary/document.xml", L"", &rId);
 		}
 		if (false == m_oFileWriter.get_numbering_writer().IsEmpty())
 		{
 			unsigned int rId;
-            m_oFileWriter.m_pDrawingConverter->WriteRels(L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/numbering", L"numbering.xml", std::wstring(), &rId);
+            m_oFileWriter.m_pDrawingConverter->WriteRels(L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/numbering", L"numbering.xml", std::wstring(), &rId);
 			m_oFileWriter.m_pDrawingConverter->Registration(
 				L"application/vnd.openxmlformats-officedocument.wordprocessingml.numbering+xml", 
 				L"/word" + std::wstring(m_oFileWriter.m_bGlossaryMode ? L"/glossary" : L""), L"numbering.xml");
@@ -10611,7 +10611,7 @@ int BinaryFileReader::ReadMainTable()
         if (false == m_oFileWriter.get_footnotes_writer().IsEmpty())
 		{
 			unsigned int rId;
-            m_oFileWriter.m_pDrawingConverter->WriteRels(L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/footnotes", L"footnotes.xml", std::wstring(), &rId);
+            m_oFileWriter.m_pDrawingConverter->WriteRels(L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/footnotes", L"footnotes.xml", std::wstring(), &rId);
 			m_oFileWriter.m_pDrawingConverter->Registration(
 				L"application/vnd.openxmlformats-officedocument.wordprocessingml.footnotes+xml", 
 				L"/word" + std::wstring(m_oFileWriter.m_bGlossaryMode ? L"/glossary" : L""), L"footnotes.xml");
@@ -10619,7 +10619,7 @@ int BinaryFileReader::ReadMainTable()
         if (false == m_oFileWriter.get_endnotes_writer().IsEmpty())
 		{
 			unsigned int rId;
-            m_oFileWriter.m_pDrawingConverter->WriteRels(L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/endnotes", L"endnotes.xml", std::wstring(), &rId);
+            m_oFileWriter.m_pDrawingConverter->WriteRels(L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/endnotes", L"endnotes.xml", std::wstring(), &rId);
 			m_oFileWriter.m_pDrawingConverter->Registration(
 				L"application/vnd.openxmlformats-officedocument.wordprocessingml.endnotes+xml",
 				L"/word" + std::wstring(m_oFileWriter.m_bGlossaryMode ? L"/glossary" : L""), L"endnotes.xml");
@@ -10630,7 +10630,7 @@ int BinaryFileReader::ReadMainTable()
 			if (false == pHeader->IsEmpty())
 			{
 				unsigned int rId;
-                m_oFileWriter.m_pDrawingConverter->WriteRels(L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/header", pHeader->m_sFilename, std::wstring(), &rId);
+                m_oFileWriter.m_pDrawingConverter->WriteRels(L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/header", pHeader->m_sFilename, std::wstring(), &rId);
                 pHeader->rId = L"rId" + std::to_wstring( rId );
 				
 				m_oFileWriter.m_pDrawingConverter->Registration(
@@ -10644,7 +10644,7 @@ int BinaryFileReader::ReadMainTable()
 			if (false == pFooter->IsEmpty())
 			{
 				unsigned int rId;
-                m_oFileWriter.m_pDrawingConverter->WriteRels(L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/footer", pFooter->m_sFilename, std::wstring(), &rId);
+                m_oFileWriter.m_pDrawingConverter->WriteRels(L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/footer", pFooter->m_sFilename, std::wstring(), &rId);
                 pFooter->rId = L"rId" + std::to_wstring( rId );
 				
 				m_oFileWriter.m_pDrawingConverter->Registration(

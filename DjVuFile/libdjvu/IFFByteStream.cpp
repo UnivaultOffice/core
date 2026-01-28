@@ -538,7 +538,7 @@ IFFByteStream::compare(IFFByteStream &iff)
         retval=true;
         break;
       }
-      char buf[2026];
+      char buf[4096];
       int len;
       while((len=read(buf,sizeof(buf))))
       {

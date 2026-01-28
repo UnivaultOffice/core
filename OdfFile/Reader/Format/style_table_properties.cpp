@@ -108,7 +108,7 @@ void table_format_properties::docx_convert(oox::docx_conversion_context & Contex
 
     else
     {
-        _tblPr << L"<w:tblW w:type=\"pct\" w:w=\"2026\"/>";
+        _tblPr << L"<w:tblW w:type=\"pct\" w:w=\"5000\"/>";
     }
 
     if (common_break_attlist_.fo_break_before_)

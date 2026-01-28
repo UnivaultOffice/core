@@ -95,11 +95,11 @@ int Pos::serialize(std::wostream & _stream)
 		bAutoSize		= Frame_->fAutoSize;
 	}
 
-	double x = x1 / 2026.;
-	double y = y1 / 2026.;
+	double x = x1 / 4000.;
+	double y = y1 / 4000.;
 
-	double w = x2 / 2026.;
-	double h = y2 / 2026.;
+	double w = x2 / 4000.;
+	double h = y2 / 4000.;
 
 	CP_XML_WRITER(_stream)    
 	{

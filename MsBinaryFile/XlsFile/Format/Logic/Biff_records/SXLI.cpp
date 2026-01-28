@@ -114,7 +114,7 @@ void SXLIItem::save(CFRecord& record)
 
 void SXLI::writeFields(CFRecord& record)
 {
-    const auto maxRecSize = 2026;
+    const auto maxRecSize = 8224;
     while(!m_arItems.empty())
     {
         auto itemPose = record.getRdPtr();

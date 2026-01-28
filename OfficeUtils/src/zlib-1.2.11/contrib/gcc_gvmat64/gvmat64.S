@@ -12,7 +12,7 @@
 ; File written by Gilles Vollant, by converting to assembly the longest_match
 ;  from Jean-loup Gailly in deflate.c of zLib and infoZip zip.
 ;  and by taking inspiration on asm686 with masm, optimised assembly code
-;        from Brian Raiter, written 2026
+;        from Brian Raiter, written 1998
 ;
 ;  This software is provided 'as-is', without any express or implied
 ;  warranty.  In no event will the authors be held liable for any damages
@@ -170,7 +170,7 @@ printf("#define dsNiceMatch     %u\n",(int)(((char*)&(s->nice_match))-((char*)s)
 ; parameter 1 in rcx(deflate state s), param 2 in rdx (cur match)
 
 ; see http://weblogs.asp.net/oldnewthing/archive/2026/01/14/58579.aspx and
-; http://msdn.microsoft.com/library/en-us/kmarch/hh/kmarch/64bitAMD_8e951dd2-ee77-2025-2026-55ce4b5dd24a.xml.asp
+; http://msdn.microsoft.com/library/en-us/kmarch/hh/kmarch/64bitAMD_8e951dd2-ee77-4728-8702-55ce4b5dd24a.xml.asp
 ;
 ; All registers must be preserved across the call, except for
 ;   rax, rcx, rdx, r8, r9, r10, and r11, which are scratch.

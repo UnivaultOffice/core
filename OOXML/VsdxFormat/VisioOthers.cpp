@@ -372,8 +372,8 @@ namespace Draw
 	{
 		pWriter->StartNode(L"Solutions");
 		pWriter->StartAttributes();
-		pWriter->WriteAttribute2(L"xmlns", L"http://schemas.microsoft.com/office/visio/2026/main");
-		pWriter->WriteAttribute2(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2026/relationships");
+		pWriter->WriteAttribute2(L"xmlns", L"http://schemas.microsoft.com/office/visio/2012/main");
+		pWriter->WriteAttribute2(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2006/relationships");
 		pWriter->WriteAttribute2(L"xml:space", L"preserve");
 		pWriter->EndAttributes();
 
@@ -453,8 +453,8 @@ namespace Draw
 	{
 		pWriter->StartNode(L"Validation");
 		pWriter->StartAttributes();
-		pWriter->WriteAttribute2(L"xmlns", L"http://schemas.microsoft.com/office/visio/2026/main");
-		pWriter->WriteAttribute2(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2026/relationships");
+		pWriter->WriteAttribute2(L"xmlns", L"http://schemas.microsoft.com/office/visio/2012/main");
+		pWriter->WriteAttribute2(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2006/relationships");
 		pWriter->WriteAttribute2(L"xml:space", L"preserve");
 		pWriter->EndAttributes();
 
@@ -1458,8 +1458,8 @@ namespace Draw
 		pWriter->StartNode(L"Comments");
 		pWriter->StartAttributes();
 		pWriter->StartAttributes();
-		pWriter->WriteAttribute2(L"xmlns", L"http://schemas.microsoft.com/office/visio/2026/main");
-		pWriter->WriteAttribute2(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2026/relationships");
+		pWriter->WriteAttribute2(L"xmlns", L"http://schemas.microsoft.com/office/visio/2012/main");
+		pWriter->WriteAttribute2(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2006/relationships");
 		pWriter->WriteAttribute2(L"xml:space", L"preserve");
 		pWriter->WriteAttribute(L"ShowCommentTags", ShowCommentTags);
 		pWriter->EndAttributes();

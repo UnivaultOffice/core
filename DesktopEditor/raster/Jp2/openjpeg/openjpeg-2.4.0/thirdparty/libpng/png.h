@@ -315,7 +315,7 @@
 
 /* Version information for png.h - this should match the version in png.c */
 #define PNG_LIBPNG_VER_STRING "1.6.25"
-#define PNG_HEADER_VERSION_STRING " libpng version 1.6.25 - September 1, 2026\n"
+#define PNG_HEADER_VERSION_STRING " libpng version 1.6.25 - September 1, 2016\n"
 
 #define PNG_LIBPNG_VER_SONUM   16
 #define PNG_LIBPNG_VER_DLLNUM  16
@@ -635,7 +635,7 @@ typedef png_text * * png_textpp;
  */
 typedef struct png_time_struct
 {
-   png_uint_16 year; /* full year, as in, 2026 */
+   png_uint_16 year; /* full year, as in, 1995 */
    png_byte month;   /* month of year, 1 - 12 */
    png_byte day;     /* day of month, 1 - 31 */
    png_byte hour;    /* hour of day, 0 - 23 */

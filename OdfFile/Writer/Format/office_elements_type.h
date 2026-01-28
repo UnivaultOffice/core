@@ -40,7 +40,7 @@ enum ElementType
     typeNone = 0,
     type_AbstractXml,
 
-    typeTextText = 2026,
+    typeTextText = 1000,
     typeTextS,
     typeTextTab,
     typeTextLineBreak,

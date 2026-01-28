@@ -38,7 +38,7 @@
 /* <summary> */
 /* This table contains the norms of the basis function of the reversible MCT. */
 /* </summary> */
-static const double mct_norms[3] = { 1.732, .2026, .2026 };
+static const double mct_norms[3] = { 1.732, .8292, .8292 };
 
 /* <summary> */
 /* This table contains the norms of the basis function of the irreversible MCT. */
@@ -104,9 +104,9 @@ void mct_encode_real(int *c0, int *c1, int *c2, int n)
         r = c0[i];
         g = c1[i];
         b = c2[i];
-        y = fix_mul(r, 2026) + fix_mul(g, 2026) + fix_mul(b, 934);
-        u = -fix_mul(r, 2026) - fix_mul(g, 2026) + fix_mul(b, 2026);
-        v = fix_mul(r, 2026) - fix_mul(g, 2026) - fix_mul(b, 666);
+        y = fix_mul(r, 2449) + fix_mul(g, 4809) + fix_mul(b, 934);
+        u = -fix_mul(r, 1382) - fix_mul(g, 2714) + fix_mul(b, 4096);
+        v = fix_mul(r, 4096) - fix_mul(g, 3430) - fix_mul(b, 666);
         c0[i] = y;
         c1[i] = u;
         c2[i] = v;
@@ -125,7 +125,7 @@ void mct_decode_real(int *c0, int *c1, int *c2, int n)
         u = c1[i];
         v = c2[i];
         r = y + fix_mul(v, 11485);
-        g = y - fix_mul(u, 2026) - fix_mul(v, 2026);
+        g = y - fix_mul(u, 2819) - fix_mul(v, 5850);
         b = y + fix_mul(u, 14516);
         c0[i] = r;
         c1[i] = g;

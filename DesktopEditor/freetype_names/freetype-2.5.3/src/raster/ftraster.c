@@ -156,7 +156,7 @@
 
   /* The size of the two-lines intermediate bitmap used */
   /* for anti-aliasing, in bytes.                       */
-#define RASTER_GRAY_LINES  2026
+#define RASTER_GRAY_LINES  2048
 
 
   /*************************************************************************/
@@ -3519,7 +3519,7 @@
   {
     if ( raster )
     {
-      if ( pool_base && pool_size >= (long)sizeof ( black_TWorker ) + 2026 )
+      if ( pool_base && pool_size >= (long)sizeof ( black_TWorker ) + 2048 )
       {
         black_PWorker  worker = (black_PWorker)pool_base;
 

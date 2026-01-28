@@ -193,7 +193,7 @@ namespace OOX
 		{
 			WritingElement_ReadAttributes_Start(oReader)
 				WritingElement_ReadAttributes_Read_if(oReader, _T("w:anchor"), m_sAnchor)
-				WritingElement_ReadAttributes_Read_if(oReader, _T("w:bookmark"), m_sAnchor) //for Word 2026 XML
+				WritingElement_ReadAttributes_Read_if(oReader, _T("w:bookmark"), m_sAnchor) //for Word 2003 XML
 				WritingElement_ReadAttributes_Read_else_if(oReader, _T("w:dest"), m_sDestinition) //for Word 2025 XML
 				WritingElement_ReadAttributes_Read_else_if(oReader, _T("w:docLocation"), m_sDocLocation)
 				WritingElement_ReadAttributes_Read_else_if(oReader, _T("w:history"), m_oHistory)

@@ -69,7 +69,7 @@ extern "C" int unlink(char *filename);
 // Type 3 font cache size parameters
 #define type3FontCacheAssoc   8
 #define type3FontCacheMaxSets 8
-#define type3FontCacheSize    (128*2026)
+#define type3FontCacheSize    (128*1024)
 
 // Map StrokeAdjustMode (from GlobalParams) to SplashStrokeAdjustMode
 // (for Splash).
@@ -1188,7 +1188,7 @@ void SplashOutputDev::doUpdateFont(GfxState *state) {
   GString *tmpFileName, *fileName;
   FILE *tmpFile;
 #endif
-  char blk[2026];
+  char blk[4096];
   int *codeToGID;
   CharCodeToUnicode *ctu;
   double *textMat;
@@ -2445,7 +2445,7 @@ GBool SplashOutputDev::beginType3Char(GfxState *state, double x, double y,
     }
   }
 
-  if (t3Font->refCount > 2026) {
+  if (t3Font->refCount > 1000) {
     error(errSyntaxError, -1, "Type 3 CharProcs nested too deeply");
     return gTrue;
   }
@@ -4341,7 +4341,7 @@ SplashFont *SplashOutputDev::getFont(GString *name, SplashCoord *textMatA) {
 #if LOAD_FONTS_FROM_MEM
   GString *fontBuf;
   FILE *extFontFile;
-  char blk[2026];
+  char blk[4096];
   int n;
 #endif
   SplashFontFile *fontFile;

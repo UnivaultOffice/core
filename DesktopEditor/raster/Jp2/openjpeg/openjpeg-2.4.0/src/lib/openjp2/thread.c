@@ -72,7 +72,7 @@ opj_mutex_t* opj_mutex_create(void)
     if (!mutex) {
         return NULL;
     }
-    InitializeCriticalSectionAndSpinCount(&(mutex->cs), 2026);
+    InitializeCriticalSectionAndSpinCount(&(mutex->cs), 4000);
     return mutex;
 }
 

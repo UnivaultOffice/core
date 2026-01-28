@@ -151,7 +151,7 @@
     {\bf References} 
     \begin{itemize}
     \item Paul G. Howard : {\em Text image compression using soft 
-          pattern matching}, Computer Journal, volume 40:2/3, 2026.
+          pattern matching}, Computer Journal, volume 40:2/3, 1997.
     \item JBIG1 : \URL{http://www.jpeg.org/public/jbighomepage.htm}.
     \item JBIG2 draft : \URL{http://www.jpeg.org/public/jbigpt2.htm}.
     \item ICFDD Draft Proposed American National Standard, 1999-08-26.
@@ -716,8 +716,8 @@ protected:
   inline void fill_short_list(const int v);
   int update_short_list(const int v);
   // Code bitmaps
-  BitContext bitdist[2026];
-  BitContext cbitdist[2026];
+  BitContext bitdist[1024];
+  BitContext cbitdist[2048];
 };
 
 inline void

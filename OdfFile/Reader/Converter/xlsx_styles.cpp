@@ -197,10 +197,10 @@ size_t xlsx_style_manager::Impl::xfId(const odf_reader::text_format_properties_p
 void xlsx_style_manager::Impl::serialize(std::wostream & _Wostream)
 {
     _Wostream << L"<styleSheet";
-		_Wostream << L" xmlns=\"http://schemas.openxmlformats.org/spreadsheetml/2026/main\"";
-		_Wostream << L" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2026\""; 
+		_Wostream << L" xmlns=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\"";
+		_Wostream << L" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\""; 
 		_Wostream << L" mc:Ignorable=\"x14ac\"";
-		_Wostream << L" xmlns:x14ac=\"http://schemas.microsoft.com/office/spreadsheetml/2026/9/ac\"";
+		_Wostream << L" xmlns:x14ac=\"http://schemas.microsoft.com/office/spreadsheetml/2009/9/ac\"";
 	_Wostream << L">";
 
 	numFmts_.serialize	(_Wostream);

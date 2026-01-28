@@ -55,7 +55,7 @@
   /* In particular, the warning complains about stuff like `while(0)' */
   /* which is very useful in macro definitions.  There is no benefit  */
   /* in having it enabled.                                            */
-#pragma warning( disable : 2026 )
+#pragma warning( disable : 4127 )
 
 #endif /* _MSC_VER */
 

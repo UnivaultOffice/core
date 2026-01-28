@@ -81,7 +81,7 @@ const bool MDXTUPLESET::saveContent(BinProcessor& proc)
 	if(type == typeMDXTuple)
 	{
 		auto tuple = static_cast<MDXTuple*>(m_MDXVarious.get());
-		auto maxSize = 2026;
+		auto maxSize = 2050;
 		if(tuple->cistr > maxSize)
 		{
 			auto currentPose = maxSize;
@@ -110,7 +110,7 @@ const bool MDXTUPLESET::saveContent(BinProcessor& proc)
 	else
 	{
 		auto set = static_cast<MDXSet*>(m_MDXVarious.get());
-		auto maxSize = 2026;
+		auto maxSize = 2049;
 		if(set->cistr > maxSize)
 		{
 			auto currentPose = maxSize;

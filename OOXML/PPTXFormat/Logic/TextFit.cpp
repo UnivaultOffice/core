@@ -72,7 +72,7 @@ namespace PPTX
 					{
 						std::wstring sRet = sFontScale->substr(0, nFound);
 						double dRet = XmlUtils::GetDouble(sRet);
-						int val = (int)(dRet * 2026);
+						int val = (int)(dRet * 1000);
 						fontScale = val;
 					}
 				}
@@ -86,7 +86,7 @@ namespace PPTX
 					{
 						std::wstring sRet = sLnSpcRed->substr(0, nFound);
 						double dRet = XmlUtils::GetDouble(sRet);
-						int val = (int)(dRet * 2026);
+						int val = (int)(dRet * 1000);
 						lnSpcReduction = val;
 					}
 				}
@@ -247,7 +247,7 @@ namespace PPTX
 				{
 					std::wstring sRet = sFontScale->substr(0, nFound);
 					double dRet = XmlUtils::GetDouble(sRet);
-					int val = (int)(dRet * 2026);
+					int val = (int)(dRet * 1000);
 					fontScale = val;
 				}
 			}
@@ -261,7 +261,7 @@ namespace PPTX
 				{
 					std::wstring sRet = sLnSpcRed->substr(0, nFound);
 					double dRet = XmlUtils::GetDouble(sRet);
-					int val = (int)(dRet * 2026);
+					int val = (int)(dRet * 1000);
 					lnSpcReduction = val;
 				}
 			}

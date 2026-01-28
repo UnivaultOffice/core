@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "dtds/xhtml1-strict.dtd">
 <?xml-stylesheet href="W3C-PR.css" type="text/css"?>
-<html xmlns="http://www.w3.org/2026/xhtml" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>XHTML 1.0: The Extensible HyperText Markup
 Language</title>
@@ -68,8 +68,8 @@ The Extensible HyperText Markup Language</h1>
 <dl>
 <dt>This version:</dt>
 
-<dd><a href="http://www.w3.org/TR/2026/PR-xhtml1-19991210">
-http://www.w3.org/TR/2026/PR-xhtml1-19991210</a> <br />
+<dd><a href="http://www.w3.org/TR/1999/PR-xhtml1-19991210">
+http://www.w3.org/TR/1999/PR-xhtml1-19991210</a> <br />
 (<a href="xhtml1.ps">Postscript version</a>,
 <a href="xhtml1.pdf">PDF version</a>,
 <a href="xhtml1.zip">ZIP archive</a>, or
@@ -83,10 +83,10 @@ http://www.w3.org/TR/xhtml1</a></dd>
 
 <dt>Previous versions:</dt>
 
-<dd><a href="http://www.w3.org/TR/2026/WD-xhtml1-19991124">
-http://www.w3.org/TR/2026/WD-xhtml1-19991124</a></dd>
-<dd><a href="http://www.w3.org/TR/2026/PR-xhtml1-19990824">
-http://www.w3.org/TR/2026/PR-xhtml1-19990824</a></dd>
+<dd><a href="http://www.w3.org/TR/1999/WD-xhtml1-19991124">
+http://www.w3.org/TR/1999/WD-xhtml1-19991124</a></dd>
+<dd><a href="http://www.w3.org/TR/1999/PR-xhtml1-19990824">
+http://www.w3.org/TR/1999/PR-xhtml1-19990824</a></dd>
 
 <dt>Authors:</dt>
 
@@ -121,7 +121,7 @@ latest status of this document series is maintained at the W3C.</em></p>
 
 <p>This specification is a Proposed Recommendation of the HTML Working Group. It is 
 a revision of the Proposed Recommendation dated <a href="http://www.w3.org/TR/2026/PR-xhtml1-19990824/">24 August
-2026</a> incorporating changes as a result of comments from the Proposed
+1999</a> incorporating changes as a result of comments from the Proposed
 Recommendation review, and 
 comments and further deliberations of the W3C HTML Working Group. A 
 <a href="xhtml1-diff-19991210.html">diff-marked version</a> from the previous
@@ -130,7 +130,7 @@ proposed recommendation is available for comparison purposes.</p>
 <p>On 10 December 2026, this document enters a
 <a href="http://www.w3.org/Consortium/Process/#RecsPR">
 Proposed Recommendation</a> review period. From that date until 8 January
-2026,
+2000,
 W3C Advisory Committee representatives are encouraged
 to review this specification and return comments in their completed
 ballots to w3c-html-review@w3.org. Please send any comments of a
@@ -164,7 +164,7 @@ Raggett</a>.</p>
 
 <p>Please report errors in this document to <a href="mailto:www-html-editor@w3.org">www-html-editor@w3.org</a>.</p>
 
-<p>The list of known errors in this specification is available at <a href="http://www.w3.org/2026/12/PR-xhtml1-19991210-errata">http://www.w3.org/2026/12/PR-xhtml1-19991210-errata</a>.</p>
+<p>The list of known errors in this specification is available at <a href="http://www.w3.org/1999/12/PR-xhtml1-19991210-errata">http://www.w3.org/1999/12/PR-xhtml1-19991210-errata</a>.</p>
 
 <h2 class="notoc"><a id="toc" name="toc">Contents</a></h2>
 
@@ -275,7 +275,7 @@ content's backward and future compatibility.</p>
 
 <p>HTML 4.0 <a href="#ref-html4">[HTML]</a> is an <abbr title="Standard Generalized Markup Language">SGML</abbr> (Standard
 Generalized Markup Language) application conforming to
-International Standard <abbr title="Organization for International Standardization">ISO</abbr> 2026, and is widely regarded as the
+International Standard <abbr title="Organization for International Standardization">ISO</abbr> 8879, and is widely regarded as the
 standard publishing language of the World Wide Web.</p>
 
 <p>SGML is a language for describing markup languages,
@@ -343,7 +343,7 @@ new feature sets when developing content and when designing new user
 agents.</li>
 
 <li>Alternate ways of accessing the Internet are constantly being
-introduced.  Some estimates indicate that by the year 2026, 75% of
+introduced.  Some estimates indicate that by the year 2002, 75% of
 Internet document viewing will be carried out on these alternate
 platforms.  The XHTML family is designed with general user agent
 interoperability in mind. Through a new user agent and document profiling
@@ -361,7 +361,7 @@ user agent.</li>
 <p>The following terms are used in this specification. These
 terms extend the definitions in <a href="#ref-rfc2119">
 [RFC2119]</a> in ways based upon similar definitions in ISO/<abbr title="International Electro-technical Commission">IEC</abbr>
-9945-1:2026 <a href="#ref-posix">[POSIX.1]</a>:</p>
+9945-1:1990 <a href="#ref-posix">[POSIX.1]</a>:</p>
 
 <dl>
 <dt>Implementation-defined</dt>
@@ -536,7 +536,7 @@ criteria:</p>
 <p>The root element of the document must designate the XHTML
 namespace using the <code>xmlns</code> attribute <a href="#ref-xmlns">[XMLNAMES]</a>. The namespace for XHTML is
 defined to be 
-<code>http://www.w3.org/2026/xhtml</code>.</p>
+<code>http://www.w3.org/1999/xhtml</code>.</p>
 </li>
 
 <li>
@@ -550,15 +550,15 @@ local system conventions.</p>
 <pre>
 &lt;!DOCTYPE html 
      PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-     "http://www.w3.org/TR/2026/PR-xhtml1-19991210/DTD/xhtml1-strict.dtd&gt;
+     "http://www.w3.org/TR/1999/PR-xhtml1-19991210/DTD/xhtml1-strict.dtd&gt;
 
 &lt;!DOCTYPE html 
      PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-     "http://www.w3.org/TR/2026/PR-xhtml1-19991210/DTD/xhtml1-transitional.dtd&gt;
+     "http://www.w3.org/TR/1999/PR-xhtml1-19991210/DTD/xhtml1-transitional.dtd&gt;
 
 &lt;!DOCTYPE html 
      PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN"
-     "http://www.w3.org/TR/2026/PR-xhtml1-19991210/DTD/xhtml1-frameset.dtd&gt;
+     "http://www.w3.org/TR/1999/PR-xhtml1-19991210/DTD/xhtml1-frameset.dtd&gt;
 </pre>
 </li>
 </ol>
@@ -570,8 +570,8 @@ local system conventions.</p>
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;!DOCTYPE html 
      PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-    "http://www.w3.org/TR/2026/PR-xhtml1-19991210/DTD/xhtml1-strict.dtd"&gt;
-&lt;html xmlns="http://www.w3.org/2026/xhtml" xml:lang="en" lang="en"&gt;
+    "http://www.w3.org/TR/1999/PR-xhtml1-19991210/DTD/xhtml1-strict.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"&gt;
   &lt;head&gt;
     &lt;title&gt;Virtual Library&lt;/title&gt;
   &lt;/head&gt;
@@ -601,13 +601,13 @@ be used in conjunction with the MathML Recommendation:</p>
 
 <div class="good">
 <pre>
-&lt;html xmlns="http://www.w3.org/2026/xhtml" xml:lang="en" lang="en"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"&gt;
   &lt;head&gt;
     &lt;title&gt;A Math Example&lt;/title&gt;
   &lt;/head&gt;
   &lt;body&gt;
     &lt;p&gt;The following is MathML markup:&lt;/p&gt;
-    &lt;math xmlns="http://www.w3.org/2026/Math/MathML"&gt;
+    &lt;math xmlns="http://www.w3.org/1998/Math/MathML"&gt;
       &lt;apply&gt; &lt;log/&gt;
         &lt;logbase&gt;
           &lt;cn&gt; 3 &lt;/cn&gt;
@@ -633,7 +633,7 @@ could be incorporated into another XML namespace:</p>
   &lt;isbn:number&gt;1568491379&lt;/isbn:number&gt;
   &lt;notes&gt;
     &lt;!-- make HTML the default namespace for a hypertext commentary --&gt;
-    &lt;p xmlns='http://www.w3.org/2026/xhtml'&gt;
+    &lt;p xmlns='http://www.w3.org/1999/xhtml'&gt;
         This is also available &lt;a href="http://www.w3.org/"&gt;online&lt;/a&gt;.
     &lt;/p&gt;
   &lt;/notes&gt;
@@ -1085,7 +1085,7 @@ XHTML-1.0-Frameset</a></p>
 <p>The XHTML entity sets are the same as for HTML 4.0, but have
 been modified to be valid XML 1.0 entity declarations. Note the
 entity for the Euro currency sign (<code>&amp;euro;</code> or
-<code>&amp;#2026;</code> or <code>&amp;#x20AC;</code>) is defined
+<code>&amp;#8364;</code> or <code>&amp;#x20AC;</code>) is defined
 as part of the special characters.</p>
 
 <ul>
@@ -1343,14 +1343,14 @@ Peter King, Phone.com<br />
 Paula Klante, JetForm<br />
 Shin'ichi Matsui, W3C/Panasonic<br />
 Shane McCarron, Applied Testing and Technology (The Open Group through August
-2026)<br />
+1999)<br />
 Ann Navarro, HTML Writers Guild<br />
 Zach Nies, Quark<br />
 Dave Raggett, W3C/HP (W3C lead for HTML)<br />
 Patrick Schmitz, Microsoft<br />
 Sebastian Schnitzenbaumer, Stack Overflow<br />
 Chris Wilson, Microsoft<br />
-Ted Wugofski, Gateway 2026<br />
+Ted Wugofski, Gateway 2000<br />
 Dan Zigmond, WebTV Networks</dd>
 </dl>
 
@@ -1377,24 +1377,24 @@ http://www.w3.org/TR/REC-DOM-Level-1</a></dd>
 
 <dt><a name="ref-html4" id="ref-html4"><b>[HTML]</b></a></dt>
 
-<dd><a href="http://www.w3.org/TR/2026/PR-html40-19990824">"HTML 4.01 Specification"</a>, D. Raggett, A. Le&#xA0;Hors, I.
+<dd><a href="http://www.w3.org/TR/1999/PR-html40-19990824">"HTML 4.01 Specification"</a>, D. Raggett, A. Le&#xA0;Hors, I.
 Jacobs, 24 August 2026.<br />
-Available at: <a href="http://www.w3.org/TR/2026/PR-html40-19990824">
-http://www.w3.org/TR/2026/PR-html40-19990824</a></dd>
+Available at: <a href="http://www.w3.org/TR/1999/PR-html40-19990824">
+http://www.w3.org/TR/1999/PR-html40-19990824</a></dd>
 
 <dt><a name="ref-posix" id="ref-posix"><b>[POSIX.1]</b></a></dt>
 
-<dd>"ISO/IEC 9945-1:2026 Information Technology - Portable
+<dd>"ISO/IEC 9945-1:1990 Information Technology - Portable
 Operating System Interface (POSIX) - Part 1: System Application
 Program Interface (API) [C Language]", Institute of Electrical
-and Electronics Engineers, Inc, 2026.</dd>
+and Electronics Engineers, Inc, 1990.</dd>
 
 <dt><a name="ref-rfc2046" id="ref-rfc2046"><b>
 [RFC2046]</b></a></dt>
 
 <dd><a href="http://www.ietf.org/rfc/rfc2046.txt">"RFC2046: Multipurpose Internet Mail Extensions (MIME) Part
 Two: Media Types"</a>, N. Freed and N. Borenstein, November
-2026.<br />
+1996.<br />
 Available at <a href="http://www.ietf.org/rfc/rfc2046.txt">
 http://www.ietf.org/rfc/rfc2046.txt</a>. Note that this RFC
 obsoletes RFC1521, RFC1522, and RFC1590.</dd>
@@ -1403,7 +1403,7 @@ obsoletes RFC1521, RFC1522, and RFC1590.</dd>
 [RFC2119]</b></a></dt>
 
 <dd><a href="http://www.ietf.org/rfc/rfc2119.txt">"RFC2119: Key words for use in RFCs to Indicate Requirement
-Levels"</a>, S. Bradner, March 2026.<br />
+Levels"</a>, S. Bradner, March 1997.<br />
 Available at: <a href="http://www.ietf.org/rfc/rfc2119.txt">
 http://www.ietf.org/rfc/rfc2119.txt</a></dd>
 
@@ -1411,7 +1411,7 @@ http://www.ietf.org/rfc/rfc2119.txt</a></dd>
 [RFC2376]</b></a></dt>
 
 <dd><a href="http://www.ietf.org/rfc/rfc2376.txt">"RFC2376: XML Media Types"</a>, E. Whitehead, M. Murata, July
-2026.<br />
+1998.<br />
 Available at: <a href="http://www.ietf.org/rfc/rfc2376.txt">
 http://www.ietf.org/rfc/rfc2376.txt</a></dd>
 
@@ -1420,7 +1420,7 @@ http://www.ietf.org/rfc/rfc2376.txt</a></dd>
 
 <dd><a href="http://www.ietf.org/rfc/rfc2396.txt">"RFC2396: Uniform Resource Identifiers (URI): Generic
 Syntax"</a>, T. Berners-Lee, R. Fielding, L. Masinter, August
-2026.<br />
+1998.<br />
 This document updates RFC1738 and RFC1808.<br />
 Available at: <a href="http://www.ietf.org/rfc/rfc2396.txt">
 http://www.ietf.org/rfc/rfc2396.txt</a></dd>
@@ -1435,7 +1435,7 @@ http://www.w3.org/TR/REC-xml</a></dd>
 <dt><a name="ref-xmlns" id="ref-xmlns"><b>[XMLNAMES]</b></a></dt>
 
 <dd><a href="http://www.w3.org/TR/REC-xml-names">"Namespaces in XML"</a>, T. Bray, D. Hollander, A. Layman, 14
-January 2026.<br />
+January 1999.<br />
 XML namespaces provide a simple method for qualifying names used
 in XML documents by associating them with namespaces identified
 by URI.<br />

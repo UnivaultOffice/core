@@ -58,7 +58,7 @@ public:
         {
             CP_XML_NODE(L"comments")
             {
-                CP_XML_ATTR(L"xmlns", L"http://schemas.openxmlformats.org/spreadsheetml/2026/main");
+                CP_XML_ATTR(L"xmlns", L"http://schemas.openxmlformats.org/spreadsheetml/2006/main");
 
 				CP_XML_NODE(L"authors")
 				{

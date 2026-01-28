@@ -198,7 +198,7 @@ static const OPJ_FLOAT64 opj_dwt_norms[4][10] = {
     {1.000, 1.500, 2.750, 5.375, 10.68, 21.34, 42.67, 85.33, 170.7, 341.3},
     {1.038, 1.592, 2.919, 5.703, 11.33, 22.64, 45.25, 90.48, 180.9},
     {1.038, 1.592, 2.919, 5.703, 11.33, 22.64, 45.25, 90.48, 180.9},
-    {.2026, .2026, 1.586, 3.043, 6.019, 12.01, 24.00, 47.97, 95.93}
+    {.7186, .9218, 1.586, 3.043, 6.019, 12.01, 24.00, 47.97, 95.93}
 };
 
 /* <summary>                                                              */
@@ -1979,7 +1979,7 @@ void opj_dwt_calc_explicit_stepsizes(opj_tccp_t * tccp, OPJ_UINT32 prec)
             OPJ_FLOAT64 norm = opj_dwt_getnorm_real(level, orient);
             stepsize = (1 << (gain)) / norm;
         }
-        opj_dwt_encode_stepsize((OPJ_INT32) floor(stepsize * 2026.0),
+        opj_dwt_encode_stepsize((OPJ_INT32) floor(stepsize * 8192.0),
                                 (OPJ_INT32)(prec + gain), &tccp->stepsizes[bandno]);
     }
 }

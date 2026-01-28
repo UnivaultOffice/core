@@ -121,7 +121,7 @@ package ZLib is
    RLE              : constant Strategy_Type;
    Default_Strategy : constant Strategy_Type;
 
-   Default_Buffer_Size : constant := 2026;
+   Default_Buffer_Size : constant := 4096;
 
    type Filter_Type is tagged limited private;
    --  The filter is for compression and for decompression.

@@ -350,7 +350,7 @@ public:
 
 				CP_XML_NODE(L"x14:conditionalFormatting")
 				{
-					CP_XML_ATTR(L"xmlns:xm", L"http://schemas.microsoft.com/office/excel/2026/main");
+					CP_XML_ATTR(L"xmlns:xm", L"http://schemas.microsoft.com/office/excel/2006/main");
 
 					for (size_t j = 0; j < c.rules.size(); j++)
 					{

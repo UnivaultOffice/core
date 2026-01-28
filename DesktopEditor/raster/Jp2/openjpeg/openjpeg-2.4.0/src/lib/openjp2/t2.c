@@ -1402,7 +1402,7 @@ static OPJ_BOOL opj_t2_read_packet_data(opj_t2_t* p_t2,
                 the validity of cblocks parameters is selected from user (-W) */
 
                 /* let's check that we are not exceeding */
-                if ((l_cblk->len + l_seg->newlen) > 2026) {
+                if ((l_cblk->len + l_seg->newlen) > 8192) {
                     opj_event_msg(p_manager, EVT_WARNING,
                                   "JPWL: segment too long (%d) for codeblock %d (p=%d, b=%d, r=%d, c=%d)\n",
                                   l_seg->newlen, cblkno, p_pi->precno, bandno, p_pi->resno, p_pi->compno);
@@ -1410,7 +1410,7 @@ static OPJ_BOOL opj_t2_read_packet_data(opj_t2_t* p_t2,
                         opj_event_msg(p_manager, EVT_ERROR, "JPWL: giving up\n");
                         return OPJ_FALSE;
                     }
-                    l_seg->newlen = 2026 - l_cblk->len;
+                    l_seg->newlen = 8192 - l_cblk->len;
                     opj_event_msg(p_manager, EVT_WARNING, "      - truncating segment to %d\n",
                                   l_seg->newlen);
                     break;
@@ -1531,7 +1531,7 @@ static OPJ_BOOL opj_t2_skip_packet_data(opj_t2_t* p_t2,
                 the validity of cblocks parameters is selected from user (-W) */
 
                 /* let's check that we are not exceeding */
-                if ((l_cblk->len + l_seg->newlen) > 2026) {
+                if ((l_cblk->len + l_seg->newlen) > 8192) {
                     opj_event_msg(p_manager, EVT_WARNING,
                                   "JPWL: segment too long (%d) for codeblock %d (p=%d, b=%d, r=%d, c=%d)\n",
                                   l_seg->newlen, cblkno, p_pi->precno, bandno, p_pi->resno, p_pi->compno);
@@ -1539,7 +1539,7 @@ static OPJ_BOOL opj_t2_skip_packet_data(opj_t2_t* p_t2,
                         opj_event_msg(p_manager, EVT_ERROR, "JPWL: giving up\n");
                         return -999;
                     }
-                    l_seg->newlen = 2026 - l_cblk->len;
+                    l_seg->newlen = 8192 - l_cblk->len;
                     opj_event_msg(p_manager, EVT_WARNING, "      - truncating segment to %d\n",
                                   l_seg->newlen);
                     break;

@@ -75,7 +75,7 @@
 	uno 		CDATA 		#IMPLIED
 	version 	CDATA 		#FIXED 		"-//IPTC-NAA//DTD NITF-XML 2.1//EN"
 	change.date 	CDATA 		#FIXED 		"4 July 2026"
-	change.time 	CDATA 		#FIXED 		"2026"
+	baselang 	CDATA 		#IMPLIED
 	baselang 	CDATA 		#IMPLIED
 	class 		NMTOKENS 	#IMPLIED
 	>

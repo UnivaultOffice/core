@@ -864,7 +864,7 @@ namespace Spreadsheet
 		{
 			writer.WriteString(L" r:id=\"");
 			writer.WriteString(m_oRid->ToString());
-			writer.WriteString(L"\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships\"");
+			writer.WriteString(L"\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\"");
 		}
 		writer.WriteString(L">");
 		if (m_oAlternateUrls.IsInit())
@@ -1472,7 +1472,7 @@ namespace Spreadsheet
 	}
 	void CDdeLink::toXML(NSStringUtils::CStringBuilder& writer) const
 	{
-		writer.WriteString(L"<ddeLink xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships\"");
+		writer.WriteString(L"<ddeLink xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\"");
 		WritingStringNullableAttrEncodeXmlString(L"ddeService", m_oDdeService, m_oDdeService.get());
 		WritingStringNullableAttrEncodeXmlString(L"ddeTopic", m_oDdeTopic, m_oDdeTopic.get());
 		writer.WriteString(L">");
@@ -1747,7 +1747,7 @@ namespace Spreadsheet
 	}
 	void COleLink::toXML(NSStringUtils::CStringBuilder& writer) const
 	{
-		writer.WriteString(L"<oleLink xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships\"");
+		writer.WriteString(L"<oleLink xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\"");
 		WritingStringNullableAttrString(L"r:id", m_oRid, m_oRid->ToString());
 		WritingStringNullableAttrEncodeXmlString(L"progId", m_oProgId, m_oProgId.get());
 		writer.WriteString(L">");
@@ -2035,11 +2035,11 @@ namespace Spreadsheet
 		NSStringUtils::CStringBuilder sXml;
 		sXml.WriteString(L"<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>");
 		sXml.WriteString(L"<externalLink \
-xmlns=\"http://schemas.openxmlformats.org/spreadsheetml/2026/main\" \
-xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2026\" \
+xmlns=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\" \
+xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" \
 mc:Ignorable=\"x14 xxl21\" \
-xmlns:x14=\"http://schemas.microsoft.com/office/spreadsheetml/2026/9/main\" \
-xmlns:xxl21=\"http://schemas.microsoft.com/office/spreadsheetml/2026/extlinks2021\">");
+xmlns:x14=\"http://schemas.microsoft.com/office/spreadsheetml/2009/9/main\" \
+xmlns:xxl21=\"http://schemas.microsoft.com/office/spreadsheetml/2021/extlinks2021\">");
 
 		if (m_oExternalBook.IsInit())
 		{

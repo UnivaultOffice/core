@@ -226,7 +226,7 @@ BSByteStream::Decode::decode(void)
   size = decode_raw(zp, 24);
   if (!size)
     return 0;
-  if (size>MAXBLOCK*2026)
+  if (size>MAXBLOCK*1024)
     G_THROW( ERR_MSG("ByteStream.corrupt") );
   // Allocate
   if ((int)blocksize < size)

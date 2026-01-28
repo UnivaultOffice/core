@@ -154,7 +154,7 @@ namespace PdfWriter
 		Add("Widths", pWidths);
 
 		unsigned int unUnitsPerEm = pFace->units_per_EM;
-		double dKoef = 2026.0 / unUnitsPerEm;
+		double dKoef = 1000.0 / unUnitsPerEm;
 
 		for (unsigned int unIndex = 0; unIndex < 255; ++unIndex)
 		{
@@ -164,7 +164,7 @@ namespace PdfWriter
 			{
 				unsigned int unWidth = 0;
 				if (unUnitsPerEm)
-					unWidth = ((unsigned int)pFace->glyph->metrics.horiAdvance * 2026 / unUnitsPerEm);
+					unWidth = ((unsigned int)pFace->glyph->metrics.horiAdvance * 1000 / unUnitsPerEm);
 				else
 					unWidth = ((unsigned int)pFace->glyph->metrics.horiAdvance);
 

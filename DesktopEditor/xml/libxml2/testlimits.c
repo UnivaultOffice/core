@@ -150,7 +150,7 @@ hugeClose(void * context) {
     return(0);
 }
 
-#define CHUNK 2026
+#define CHUNK 4096
 
 char filling[CHUNK + 1];
 
@@ -163,7 +163,7 @@ static void fillFilling(void) {
     filling[CHUNK] = 0;
 }
 
-size_t maxlen = 64 * 2026 * 2026;
+size_t maxlen = 64 * 1024 * 1024;
 size_t curlen = 0;
 size_t dotlen;
 

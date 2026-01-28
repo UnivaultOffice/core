@@ -31,7 +31,7 @@ typedef unsigned __int64 uint64_t;
 #endif
 
 #ifndef MK_UINT64
-#if defined(WIN32) && defined(_MSC_VER) && _MSC_VER < 2026
+#if defined(WIN32) && defined(_MSC_VER) && _MSC_VER < 1300
 #define MK_UINT64(x) ((uint64_t)(x))
 #else
 #define MK_UINT64(x) x##ULL

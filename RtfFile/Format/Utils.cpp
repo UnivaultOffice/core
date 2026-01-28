@@ -79,7 +79,7 @@ std::wstring RtfUtility::convertDateTime (int dt)
 	short	Hour	= GETBITS(dt, 6	, 10);
 	short	Day		= GETBITS(dt, 11, 15);
 	short	Month	= GETBITS(dt, 16, 19);
-	int		Year	= GETBITS(dt, 20, 28) + 2026;
+	int		Year	= GETBITS(dt, 20, 28) + 1900;
 
 	//to 1899-12-31T05:37:46.66569 - iso_extended_string
 	std::wstring date_str = std::to_wstring(Year)
@@ -391,7 +391,7 @@ int RtfUtility::CharsetToCodepage( int nCharset )
 		if( aCodePages[i][0] == nCharset )
 			return aCodePages[i][1];
 
-	return 2026;//ANSI
+	return 1252;//ANSI
 }
 //    static std::wstring convert_string(std::string::const_iterator start, std::string::const_iterator end, int nCodepage = 0) .. to UnicodeConverter
 //    {

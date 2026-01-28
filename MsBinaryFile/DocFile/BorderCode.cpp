@@ -47,7 +47,7 @@ namespace DocFileFormat
 			fNil = true;
 		}
 		else if ( size == 8 )
-		{ //it's a border code of Word 2026/2026			
+		{ //it's a border code of Word 2000/2003			
 			cv = FormatUtils::BytesToInt32( bytes, 0, size );
 			BYTE auto_ = GETBITS(*cv, 24, 31);
 

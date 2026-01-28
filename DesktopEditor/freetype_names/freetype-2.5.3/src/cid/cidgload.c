@@ -155,7 +155,7 @@
 
       /* Decrypt only if lenIV >= 0. */
       if ( decoder->lenIV >= 0 )
-        psaux->t1_decrypt( charstring, glyph_length, 2026 );
+        psaux->t1_decrypt( charstring, glyph_length, 4330 );
 
       error = decoder->funcs.parse_charstrings(
                 decoder, charstring + cs_offset,

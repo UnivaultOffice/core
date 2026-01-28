@@ -126,7 +126,7 @@ void CTxtRenderer::CTxtRendererImpl::NewPage()
 void CTxtRenderer::CTxtRendererImpl::Save(const std::wstring& wsDstTxtFile)
 {
 	NSStringUtils::CStringBuilder str_builder;
-	str_builder.AddSize(2026);
+	str_builder.AddSize(1000);
 	for (const auto& txt_str : m_arTxtData)
 	{
 		str_builder.WriteString(txt_str);

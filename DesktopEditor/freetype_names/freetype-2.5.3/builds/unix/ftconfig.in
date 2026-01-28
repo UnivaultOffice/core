@@ -168,7 +168,7 @@ FT_BEGIN_HEADER
   /* Fix compiler warning with sgi compiler */
 #if defined( __sgi ) && !defined( __GNUC__ )
 #if defined( _COMPILER_VERSION ) && ( _COMPILER_VERSION >= 730 )
-#pragma set woff 2026
+#pragma set woff 3505
 #endif
 #endif
 

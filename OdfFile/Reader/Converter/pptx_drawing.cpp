@@ -177,7 +177,7 @@ void pptx_serialize_media(std::wostream & strm, _pptx_drawing & val)
 							CP_XML_ATTR(L"uri",	L"{DAA4B4D4-6D71-4841-9C94-3DE7FCFB9230}");
 							CP_XML_NODE(L"p14:media")
 							{	
-								CP_XML_ATTR(L"xmlns:p14", L"http://schemas.microsoft.com/office/powerpoint/2026/main");
+								CP_XML_ATTR(L"xmlns:p14", L"http://schemas.microsoft.com/office/powerpoint/2010/main");
 								if (val.extExternal)
 								{
 									CP_XML_ATTR(L"r:link",	val.extId);
@@ -392,11 +392,11 @@ void pptx_serialize_chart(std::wostream & strm, _pptx_drawing & val)
             {                   
                 CP_XML_NODE(L"a:graphicData")
 				{
-					CP_XML_ATTR(L"uri", L"http://schemas.openxmlformats.org/drawingml/2026/chart");
+					CP_XML_ATTR(L"uri", L"http://schemas.openxmlformats.org/drawingml/2006/chart");
 					CP_XML_NODE(L"c:chart")
 					{
-						CP_XML_ATTR(L"xmlns:c", L"http://schemas.openxmlformats.org/drawingml/2026/chart");
-						CP_XML_ATTR(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2026/relationships");
+						CP_XML_ATTR(L"xmlns:c", L"http://schemas.openxmlformats.org/drawingml/2006/chart");
+						CP_XML_ATTR(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2006/relationships");
 						CP_XML_ATTR(L"r:id", val.objectId);
 					}
 				}
@@ -430,7 +430,7 @@ void pptx_serialize_table(std::wostream & strm, _pptx_drawing & val)
             {                   
                 CP_XML_NODE(L"a:graphicData")
 				{
-					CP_XML_ATTR(L"uri", L"http://schemas.openxmlformats.org/drawingml/2026/table");
+					CP_XML_ATTR(L"uri", L"http://schemas.openxmlformats.org/drawingml/2006/table");
 					
 					_CP_OPT(std::wstring) strTableContent;
 					odf_reader::GetProperty(val.additional,L"table-content",strTableContent);
@@ -509,7 +509,7 @@ void pptx_serialize_object(std::wostream & strm, _pptx_drawing & val)
             {                   
                 CP_XML_NODE(L"a:graphicData")
 				{
-					CP_XML_ATTR(L"uri", L"http://schemas.openxmlformats.org/presentationml/2026/ole");
+					CP_XML_ATTR(L"uri", L"http://schemas.openxmlformats.org/presentationml/2006/ole");
 					CP_XML_NODE(L"p:oleObj")
 					{
 						CP_XML_ATTR(L"r:id",	val.objectId);

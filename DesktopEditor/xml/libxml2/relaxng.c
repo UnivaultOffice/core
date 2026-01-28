@@ -2087,7 +2087,7 @@ static xmlChar *
 xmlRelaxNGGetErrorString(xmlRelaxNGValidErr err, const xmlChar * arg1,
                          const xmlChar * arg2)
 {
-    char msg[2026];
+    char msg[1000];
     xmlChar *result;
 
     if (arg1 == NULL)
@@ -2102,27 +2102,27 @@ xmlRelaxNGGetErrorString(xmlRelaxNGValidErr err, const xmlChar * arg1,
         case XML_RELAXNG_ERR_MEMORY:
             return (xmlCharStrdup("out of memory\n"));
         case XML_RELAXNG_ERR_TYPE:
-            snprintf(msg, 2026, "failed to validate type %s\n", arg1);
+            snprintf(msg, 1000, "failed to validate type %s\n", arg1);
             break;
         case XML_RELAXNG_ERR_TYPEVAL:
-            snprintf(msg, 2026, "Type %s doesn't allow value '%s'\n", arg1,
+            snprintf(msg, 1000, "Type %s doesn't allow value '%s'\n", arg1,
                      arg2);
             break;
         case XML_RELAXNG_ERR_DUPID:
-            snprintf(msg, 2026, "ID %s redefined\n", arg1);
+            snprintf(msg, 1000, "ID %s redefined\n", arg1);
             break;
         case XML_RELAXNG_ERR_TYPECMP:
-            snprintf(msg, 2026, "failed to compare type %s\n", arg1);
+            snprintf(msg, 1000, "failed to compare type %s\n", arg1);
             break;
         case XML_RELAXNG_ERR_NOSTATE:
             return (xmlCharStrdup("Internal error: no state\n"));
         case XML_RELAXNG_ERR_NODEFINE:
             return (xmlCharStrdup("Internal error: no define\n"));
         case XML_RELAXNG_ERR_INTERNAL:
-            snprintf(msg, 2026, "Internal error: %s\n", arg1);
+            snprintf(msg, 1000, "Internal error: %s\n", arg1);
             break;
         case XML_RELAXNG_ERR_LISTEXTRA:
-            snprintf(msg, 2026, "Extra data in list: %s\n", arg1);
+            snprintf(msg, 1000, "Extra data in list: %s\n", arg1);
             break;
         case XML_RELAXNG_ERR_INTERNODATA:
             return (xmlCharStrdup
@@ -2130,78 +2130,78 @@ xmlRelaxNGGetErrorString(xmlRelaxNGValidErr err, const xmlChar * arg1,
         case XML_RELAXNG_ERR_INTERSEQ:
             return (xmlCharStrdup("Invalid sequence in interleave\n"));
         case XML_RELAXNG_ERR_INTEREXTRA:
-            snprintf(msg, 2026, "Extra element %s in interleave\n", arg1);
+            snprintf(msg, 1000, "Extra element %s in interleave\n", arg1);
             break;
         case XML_RELAXNG_ERR_ELEMNAME:
-            snprintf(msg, 2026, "Expecting element %s, got %s\n", arg1,
+            snprintf(msg, 1000, "Expecting element %s, got %s\n", arg1,
                      arg2);
             break;
         case XML_RELAXNG_ERR_ELEMNONS:
-            snprintf(msg, 2026, "Expecting a namespace for element %s\n",
+            snprintf(msg, 1000, "Expecting a namespace for element %s\n",
                      arg1);
             break;
         case XML_RELAXNG_ERR_ELEMWRONGNS:
-            snprintf(msg, 2026,
+            snprintf(msg, 1000,
                      "Element %s has wrong namespace: expecting %s\n", arg1,
                      arg2);
             break;
         case XML_RELAXNG_ERR_ELEMWRONG:
-            snprintf(msg, 2026, "Did not expect element %s there\n", arg1);
+            snprintf(msg, 1000, "Did not expect element %s there\n", arg1);
             break;
         case XML_RELAXNG_ERR_TEXTWRONG:
-            snprintf(msg, 2026,
+            snprintf(msg, 1000,
                      "Did not expect text in element %s content\n", arg1);
             break;
         case XML_RELAXNG_ERR_ELEMEXTRANS:
-            snprintf(msg, 2026, "Expecting no namespace for element %s\n",
+            snprintf(msg, 1000, "Expecting no namespace for element %s\n",
                      arg1);
             break;
         case XML_RELAXNG_ERR_ELEMNOTEMPTY:
-            snprintf(msg, 2026, "Expecting element %s to be empty\n", arg1);
+            snprintf(msg, 1000, "Expecting element %s to be empty\n", arg1);
             break;
         case XML_RELAXNG_ERR_NOELEM:
-            snprintf(msg, 2026, "Expecting an element %s, got nothing\n",
+            snprintf(msg, 1000, "Expecting an element %s, got nothing\n",
                      arg1);
             break;
         case XML_RELAXNG_ERR_NOTELEM:
             return (xmlCharStrdup("Expecting an element got text\n"));
         case XML_RELAXNG_ERR_ATTRVALID:
-            snprintf(msg, 2026, "Element %s failed to validate attributes\n",
+            snprintf(msg, 1000, "Element %s failed to validate attributes\n",
                      arg1);
             break;
         case XML_RELAXNG_ERR_CONTENTVALID:
-            snprintf(msg, 2026, "Element %s failed to validate content\n",
+            snprintf(msg, 1000, "Element %s failed to validate content\n",
                      arg1);
             break;
         case XML_RELAXNG_ERR_EXTRACONTENT:
-            snprintf(msg, 2026, "Element %s has extra content: %s\n",
+            snprintf(msg, 1000, "Element %s has extra content: %s\n",
                      arg1, arg2);
             break;
         case XML_RELAXNG_ERR_INVALIDATTR:
-            snprintf(msg, 2026, "Invalid attribute %s for element %s\n",
+            snprintf(msg, 1000, "Invalid attribute %s for element %s\n",
                      arg1, arg2);
             break;
         case XML_RELAXNG_ERR_LACKDATA:
-            snprintf(msg, 2026, "Datatype element %s contains no data\n",
+            snprintf(msg, 1000, "Datatype element %s contains no data\n",
                      arg1);
             break;
         case XML_RELAXNG_ERR_DATAELEM:
-            snprintf(msg, 2026, "Datatype element %s has child elements\n",
+            snprintf(msg, 1000, "Datatype element %s has child elements\n",
                      arg1);
             break;
         case XML_RELAXNG_ERR_VALELEM:
-            snprintf(msg, 2026, "Value element %s has child elements\n",
+            snprintf(msg, 1000, "Value element %s has child elements\n",
                      arg1);
             break;
         case XML_RELAXNG_ERR_LISTELEM:
-            snprintf(msg, 2026, "List element %s has child elements\n",
+            snprintf(msg, 1000, "List element %s has child elements\n",
                      arg1);
             break;
         case XML_RELAXNG_ERR_DATATYPE:
-            snprintf(msg, 2026, "Error validating datatype %s\n", arg1);
+            snprintf(msg, 1000, "Error validating datatype %s\n", arg1);
             break;
         case XML_RELAXNG_ERR_VALUE:
-            snprintf(msg, 2026, "Error validating value %s\n", arg1);
+            snprintf(msg, 1000, "Error validating value %s\n", arg1);
             break;
         case XML_RELAXNG_ERR_LIST:
             return (xmlCharStrdup("Error validating list\n"));
@@ -2213,9 +2213,9 @@ xmlRelaxNGGetErrorString(xmlRelaxNGValidErr err, const xmlChar * arg1,
             return (xmlCharStrdup("Unknown error !\n"));
     }
     if (msg[0] == 0) {
-        snprintf(msg, 2026, "Unknown error code %d\n", err);
+        snprintf(msg, 1000, "Unknown error code %d\n", err);
     }
-    msg[2026 - 1] = 0;
+    msg[1000 - 1] = 0;
     result = xmlCharStrdup(msg);
     return (xmlEscapeFormatString(&result));
 }
@@ -2419,7 +2419,7 @@ xmlRelaxNGSchemaTypeHave(void *data ATTRIBUTE_UNUSED, const xmlChar * type)
         return (-1);
     typ = xmlSchemaGetPredefinedType(type,
                                      BAD_CAST
-                                     "http://www.w3.org/2026/XMLSchema");
+                                     "http://www.w3.org/2001/XMLSchema");
     if (typ == NULL)
         return (0);
     return (1);
@@ -2450,7 +2450,7 @@ xmlRelaxNGSchemaTypeCheck(void *data ATTRIBUTE_UNUSED,
         return (-1);
     typ = xmlSchemaGetPredefinedType(type,
                                      BAD_CAST
-                                     "http://www.w3.org/2026/XMLSchema");
+                                     "http://www.w3.org/2001/XMLSchema");
     if (typ == NULL)
         return (-1);
     ret = xmlSchemaValPredefTypeNode(typ, value,
@@ -2491,7 +2491,7 @@ xmlRelaxNGSchemaFacetCheck(void *data ATTRIBUTE_UNUSED,
         return (-1);
     typ = xmlSchemaGetPredefinedType(type,
                                      BAD_CAST
-                                     "http://www.w3.org/2026/XMLSchema");
+                                     "http://www.w3.org/2001/XMLSchema");
     if (typ == NULL)
         return (-1);
 
@@ -2583,7 +2583,7 @@ xmlRelaxNGSchemaTypeCompare(void *data ATTRIBUTE_UNUSED,
         return (-1);
     typ = xmlSchemaGetPredefinedType(type,
                                      BAD_CAST
-                                     "http://www.w3.org/2026/XMLSchema");
+                                     "http://www.w3.org/2001/XMLSchema");
     if (typ == NULL)
         return (-1);
     if (comp1 == NULL) {
@@ -2815,7 +2815,7 @@ xmlRelaxNGInitTypes(void)
         return (-1);
     }
     xmlRelaxNGRegisterTypeLibrary(BAD_CAST
-                                  "http://www.w3.org/2026/XMLSchema-datatypes",
+                                  "http://www.w3.org/2001/XMLSchema-datatypes",
                                   NULL, xmlRelaxNGSchemaTypeHave,
                                   xmlRelaxNGSchemaTypeCheck,
                                   xmlRelaxNGSchemaTypeCompare,
@@ -3669,7 +3669,7 @@ xmlRelaxNGParseData(xmlRelaxNGParserCtxtPtr ctxt, xmlNodePtr node)
                 if ((xmlStrEqual
                      (library,
                       BAD_CAST
-                      "http://www.w3.org/2026/XMLSchema-datatypes"))
+                      "http://www.w3.org/2001/XMLSchema-datatypes"))
                     && ((xmlStrEqual(def->name, BAD_CAST "IDREF"))
                         || (xmlStrEqual(def->name, BAD_CAST "IDREFS")))) {
                 ctxt->idref = 1;
@@ -5299,7 +5299,7 @@ xmlRelaxNGParseNameClass(xmlRelaxNGParserCtxtPtr ctxt, xmlNodePtr node,
         ret->ns = val;
         if ((ctxt->flags & XML_RELAXNG_IN_ATTRIBUTE) &&
             (val != NULL) &&
-            (xmlStrEqual(val, BAD_CAST "http://www.w3.org/2026/xmlns"))) {
+            (xmlStrEqual(val, BAD_CAST "http://www.w3.org/2000/xmlns"))) {
 	    xmlRngPErr(ctxt, node, XML_RNGP_XML_NS,
                         "Attribute with namespace '%s' is not allowed\n",
                         val, NULL);
@@ -5330,7 +5330,7 @@ xmlRelaxNGParseNameClass(xmlRelaxNGParserCtxtPtr ctxt, xmlNodePtr node,
         if ((ctxt->flags & XML_RELAXNG_IN_ATTRIBUTE) &&
             (ret->ns != NULL) &&
             (xmlStrEqual
-             (ret->ns, BAD_CAST "http://www.w3.org/2026/xmlns"))) {
+             (ret->ns, BAD_CAST "http://www.w3.org/2000/xmlns"))) {
             xmlRngPErr(ctxt, node, XML_RNGP_XML_NS,
                        "Attribute with namespace '%s' is not allowed\n",
                        ret->ns, NULL);

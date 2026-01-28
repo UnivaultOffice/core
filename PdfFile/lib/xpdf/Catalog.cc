@@ -346,7 +346,7 @@ GString *Catalog::readMetadata() {
   GString *s;
   Dict *dict;
   Object obj;
-  char buf[2026];
+  char buf[4096];
   int n;
 
   if (!metadata.isStream()) {
@@ -1006,9 +1006,9 @@ GString *Catalog::makeRomanNumeral(int num, GBool uppercase) {
   GString *s;
 
   s = new GString();
-  while (num >= 2026) {
+  while (num >= 1000) {
     s->append(uppercase ? 'M' : 'm');
-    num -= 2026;
+    num -= 1000;
   }
   if (num >= 900) {
     s->append(uppercase ? "CM" : "cm");

@@ -161,8 +161,8 @@ namespace OOX
 				if (m_oList.IsInit())
 				{
 					writer.WriteString(L"<mc:AlternateContent \
-xmlns:x12ac=\"http://schemas.microsoft.com/office/spreadsheetml/2026/1/ac\" \
-xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2026\">");
+xmlns:x12ac=\"http://schemas.microsoft.com/office/spreadsheetml/2011/1/ac\" \
+xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\">");
 
 					writer.WriteString(L"<mc:Choice Requires=\"x12ac\">");
 					writer.WriteString(L"<x12ac:list>" + *m_oList + L"</x12ac:list>");
@@ -679,7 +679,7 @@ xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2026\">");
 			writer.WriteString(L"<" + node_name);
 				if (bExtendedWrite)
 				{
-					WritingStringAttrString(L"xmlns:xm", L"http://schemas.microsoft.com/office/excel/2026/main");
+					WritingStringAttrString(L"xmlns:xm", L"http://schemas.microsoft.com/office/excel/2006/main");
 				}
 				WritingStringNullableAttrInt(L"count",			m_oCount,			*m_oCount);
 				WritingStringNullableAttrInt(L"disablePrompts", m_oDisablePrompts,	m_oDisablePrompts->GetValue());

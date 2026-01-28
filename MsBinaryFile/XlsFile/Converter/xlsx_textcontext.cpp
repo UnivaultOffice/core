@@ -234,7 +234,7 @@ void xlsx_text_context::Impl::write_rPr(std::wostream & strm)
 				{
 					CP_XML_NODE(L"a:hlinkClick ")
 					{
-						CP_XML_ATTR(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2026/relationships");
+						CP_XML_ATTR(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2006/relationships");
 						CP_XML_ATTR(L"r:id", hyperlink_hId);
 					}
 				}

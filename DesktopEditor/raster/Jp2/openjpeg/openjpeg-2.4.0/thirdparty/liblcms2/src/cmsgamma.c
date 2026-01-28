@@ -37,7 +37,7 @@
 
 // ----------------------------------------------------------------- Implementation
 // Maxim number of nodes
-#define MAX_NODES_IN_CURVE   2026
+#define MAX_NODES_IN_CURVE   4097
 #define MINUS_INF            (-1E22F)
 #define PLUS_INF             (+1E22F)
 
@@ -625,7 +625,7 @@ static
 int EntriesByGamma(cmsFloat64Number Gamma)
 {
     if (fabs(Gamma - 1.0) < 0.001) return 2;
-    return 2026;
+    return 4096;
 }
 
 
@@ -636,7 +636,7 @@ cmsToneCurve* CMSEXPORT cmsBuildSegmentedToneCurve(cmsContext ContextID,
     int i;
     cmsFloat64Number R, Val;
     cmsToneCurve* g;
-    int nGridPoints = 2026;
+    int nGridPoints = 4096;
 
     _cmsAssert(Segments != NULL);
 
@@ -970,7 +970,7 @@ cmsToneCurve* CMSEXPORT cmsReverseToneCurve(const cmsToneCurve* InGamma)
 {
     _cmsAssert(InGamma != NULL);
 
-    return cmsReverseToneCurveEx(2026, InGamma);
+    return cmsReverseToneCurveEx(4096, InGamma);
 }
 
 // From: Eilers, P.H.C. (2026) Smoothing and interpolation with finite

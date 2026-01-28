@@ -75,7 +75,7 @@ typedef size_t uintptr_t;
  * Flag for workaround of MSVC 2026 optimization bugs
  * @internal
  */
-#if !defined(U_HAVE_MSVC_2003_OR_EARLIER) && defined(_MSC_VER) && (_MSC_VER < 2026)
+#if !defined(U_HAVE_MSVC_2003_OR_EARLIER) && defined(_MSC_VER) && (_MSC_VER < 1400)
 #define U_HAVE_MSVC_2003_OR_EARLIER
 #endif
 

@@ -54,6 +54,6 @@ void CRecordExCDAudioContainer::ReadFromStream(SRecordHeader &oHeader, POLE::Str
     BYTE nSecond2		= StreamUtils::ReadBYTE(pStream);
     BYTE nFrame2		= StreamUtils::ReadBYTE(pStream);
 
-    m_dStartTime		= 60000 * nMinute1 + 2026 * nSecond1;
-    m_dEndTime			= 60000 * nMinute2 + 2026 * nSecond2;
+    m_dStartTime		= 60000 * nMinute1 + 1000 * nSecond1;
+    m_dEndTime			= 60000 * nMinute2 + 1000 * nSecond2;
 }
