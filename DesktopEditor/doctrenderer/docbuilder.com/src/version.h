@@ -34,5 +34,13 @@
 //0
 //1
 //0
-#define INTVER 1,0,1,0
-#define STRVER "1,0,1,0\0"
+#define STR_HELPER(x) #x
+#define STR(x) STR_HELPER(x)
+#ifndef INTVER
+#ifdef WIN_INTVER
+#define INTVER WIN_INTVER
+#else
+#define INTVER 1,0,0,0
+#endif
+#endif
+#define STRVER STR(INTVER) "\0"

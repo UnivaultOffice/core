@@ -44,8 +44,8 @@ END
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION INTVER
- PRODUCTVERSION INTVER
+ FILEVERSION WIN_INTVER
+ PRODUCTVERSION WIN_INTVER
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -62,12 +62,12 @@ BEGIN
         BEGIN
             VALUE "CompanyName", "UNIVAULT TECHNOLOGIES 2026"
             VALUE "FileDescription", "UNIVAULTOFFICE docbuilder ActiveX DLL"
-            VALUE "FileVersion", "1.0.0.1"
+            VALUE "FileVersion", STRVER
             VALUE "InternalName", "docbuilder.com.dll"
             VALUE "LegalCopyright", "Copyright (C) UNIVAULT TECHNOLOGIES 2026. All rights reserved."
             VALUE "OriginalFilename", "docbuilder.com.dll"
             VALUE "ProductName", "docbuilder.com"
-            VALUE "ProductVersion", "1.0.0.1"
+            VALUE "ProductVersion", STRVER
         END
     END
     BLOCK "VarFileInfo"
