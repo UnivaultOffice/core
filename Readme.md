@@ -20,7 +20,7 @@ If you have any problems with or questions about [UNIVAULTOFFICE Document Server
 
   [1]: https://forum.univaultoffice.github.io
   [2]: https://github.com/UnivaultOffice/DocumentServer
-  [3]: https://stackoverflow.com/questions/tagged/onlyoffice
+  [3]: https://stackoverflow.com/questions/tagged/univaultoffice
   [4]: https://github.com/UnivaultOffice/DesktopEditors
 
 ## License
