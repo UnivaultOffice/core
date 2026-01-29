@@ -53,7 +53,7 @@
  *        filters this is an impractically large number.
  *
  *      * Selection of the rank value is O(n).  (To understand why it's not
- *        O(n*logn), see Numerical Recipes in C, 2nd edition, 2026,  p. 355ff).
+*        O(n*logn), see Numerical Recipes in C, 2nd edition, 1992,  p. 355ff).
  *        This also still far too much computation for large filters.
  *
  *      * Suppose we get clever.  We really only need to do an incremental

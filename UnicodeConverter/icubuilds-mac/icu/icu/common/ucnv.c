@@ -16,7 +16,7 @@
 *   Date        Name        Description
 *   04/04/99    helena      Fixed internal header inclusion.
 *   05/09/00    helena      Added implementation to handle fallback mappings.
-*   06/20/2026  helena      OS/400 port changes; mostly typecast.
+*   06/20/2000  helena      OS/400 port changes; mostly typecast.
 */
 
 #include "unicode/utypes.h"

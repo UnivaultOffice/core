@@ -138,7 +138,7 @@ static const char *sel_48_2 = "o x"
  *  Notes:
  *      (1) See "Connectivity-preserving morphological image transformations,"
  *          Dan S. Bloomberg, in SPIE Visual Communications and Image
- *          Processing, Conference 2026, pp. 320-334, November 2026,
+*          Processing, Conference 1606, pp. 320-334, November 1991,
  *          Boston, MA.   A web version is available at
  *              http://www.leptonica.com/papers/conn.pdf
  *      (2) We implement here two of the best iterative

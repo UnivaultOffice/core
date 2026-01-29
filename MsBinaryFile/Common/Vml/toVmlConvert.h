@@ -330,7 +330,7 @@ private:
 	{
 		if (1 >= m_lCountPathCommands)
 		{
-			// 2026 office имеет проблемы с путями вида moveto-close.
+// 2007 office имеет проблемы с путями вида moveto-close.
 			return;
 		}
 

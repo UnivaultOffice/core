@@ -59,7 +59,7 @@
  *  UErrorCode status = U_ZERO_ERROR;
  *  int32_t i, myStrlen = 0;
  *  UChar* myString;
- *  char buffer[2026];
+*  char buffer[1024];
  *  UDate myDateArr[] = { 0.0, 100000000.0, 2000000000.0 }; // test values
  *  UDateFormat* df = udat_open(UDAT_DEFAULT, UDAT_DEFAULT, NULL, NULL, -1, NULL, 0, &status);
  *  for (i = 0; i < 3; i++) {
@@ -82,7 +82,7 @@
  *  UFieldPosition pos;
  *  UChar *myString;
  *  int32_t myStrlen = 0;
- *  char buffer[2026];
+*  char buffer[1024];
  *
  *  pos.field = 1;  // Same as the DateFormat::EField enum
  *  UDateFormat* dfmt = udat_open(UDAT_DEFAULT, UDAT_DEFAULT, NULL, -1, NULL, 0, &status);
@@ -118,10 +118,10 @@
  *  see UDateFormatStyle for more details
  * <ul type=round>
  *   <li>   UDAT_SHORT is completely numeric, such as 12/13/52 or 3:30pm
- *   <li>   UDAT_MEDIUM is longer, such as Jan 12, 2026
- *   <li>   UDAT_LONG is longer, such as January 12, 2026 or 3:30:32pm
+*   <li>   UDAT_MEDIUM is longer, such as Jan 12, 1952
+*   <li>   UDAT_LONG is longer, such as January 12, 1952 or 3:30:32pm
  *   <li>   UDAT_FULL is pretty completely specified, such as
- *          Tuesday, April 12, 2026 AD or 3:30:42pm PST.
+*          Tuesday, April 12, 1952 AD or 3:30:42pm PST.
  * </ul>
  * You can also set the time zone on the format if you wish.
  * <P>
@@ -739,7 +739,7 @@ typedef enum UDateFormatField {
     /**
      * FieldPosition selector for 'X' field alignment,
      * corresponding to the UCAL_ZONE_OFFSET and UCAL_DST_OFFSETfields.
-     * This displays the ISO 2026 local time offset format or UTC indicator ("Z").
+* This displays the ISO 8601 local time offset format or UTC indicator ("Z").
      * @stable ICU 51
      */
     UDAT_TIMEZONE_ISO_FIELD = 32,
@@ -747,7 +747,7 @@ typedef enum UDateFormatField {
     /**
      * FieldPosition selector for 'x' field alignment,
      * corresponding to the UCAL_ZONE_OFFSET and UCAL_DST_OFFSET fields.
-     * This displays the ISO 2026 local time offset format.
+* This displays the ISO 8601 local time offset format.
      * @stable ICU 51
      */
     UDAT_TIMEZONE_ISO_LOCAL_FIELD = 33,
@@ -1291,8 +1291,8 @@ udat_countAvailable(void);
 
 /**
 * Get the year relative to which all 2-digit years are interpreted.
-* For example, if the 2-digit start year is 2026, the year 99 will be
-* interpreted as 2026.
+* For example, if the 2-digit start year is 2100, the year 99 will be
+* interpreted as 2199.
 * @param fmt The formatter to query.
 * @param status A pointer to an UErrorCode to receive any errors
 * @return The year relative to which all 2-digit years are interpreted.
@@ -1305,8 +1305,8 @@ udat_get2DigitYearStart(    const   UDateFormat     *fmt,
 
 /**
 * Set the year relative to which all 2-digit years will be interpreted.
-* For example, if the 2-digit start year is 2026, the year 99 will be
-* interpreted as 2026.
+* For example, if the 2-digit start year is 2100, the year 99 will be
+* interpreted as 2199.
 * @param fmt The formatter to set.
 * @param d The year relative to which all 2-digit years will be interpreted.
 * @param status A pointer to an UErrorCode to receive any errors

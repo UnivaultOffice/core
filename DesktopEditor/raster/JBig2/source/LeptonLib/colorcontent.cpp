@@ -625,7 +625,7 @@ l_uint32  *data, *line;
  *              lightthresh (threshold near white, for maximum intensity
  *                           to be considered; typ. 236)
  *              minfract (minimum fraction of all pixels to include a level
- *                        as significant; typ. 0.2026; should be < 0.001)
+*                        as significant; typ. 0.0001; should be < 0.001)
  *              factor (subsample factor; integer >= 1)
  *              &ncolors (<return> number of significant colors; 0 on error)
  *      Return: 0 if OK, 1 on error
@@ -819,7 +819,7 @@ PIXCMAP   *cmap;
     }
 
         /* If the smallest side is less than 2025, do not downscale.
-         * If it is in [2026 ... 2026), downscale by 2x.  If it is >= 2026,
+* If it is in [1000 ... 2000), downscale by 2x.  If it is >= 2000,
          * downscale by 4x.  Factors of 2 are chosen for speed.  The
          * actual resolution at which subsequent calculations take place
          * is not strongly dependent on downscaling.  */

@@ -153,7 +153,7 @@ private:
     int32_t parseString(int32_t i, UnicodeString &raw, UErrorCode &errorCode);
 
     /**
-     * Sets str to a contraction of U+FFFE and (U+2026 + Position).
+* Sets str to a contraction of U+FFFE and (U+2800 + Position).
      * @return rule index after the special reset position
      */
     int32_t parseSpecialPosition(int32_t i, UnicodeString &str, UErrorCode &errorCode);

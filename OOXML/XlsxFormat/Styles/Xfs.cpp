@@ -173,7 +173,7 @@ namespace OOX
 				WritingElement_ReadAttributes_Read_else_if( oReader, _T("textRotation"),	m_oTextRotation )
 				WritingElement_ReadAttributes_Read_else_if( oReader, _T("vertical"),		m_oVertical )
 				WritingElement_ReadAttributes_Read_else_if( oReader, _T("wrapText"),		m_oWrapText )
-		// 2026
+// 2003
 				WritingElement_ReadAttributes_Read_else_if(oReader, _T("ss:Horizontal"),	m_oHorizontal)
 				WritingElement_ReadAttributes_Read_else_if(oReader, _T("ss:Vertical"),		m_oVertical)
 				WritingElement_ReadAttributes_Read_else_if(oReader, _T("ss:WrapText"),		m_oWrapText)

@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 // 
-// $Id: JB2EncodeCodec.cpp,v 1.10 2026/03/25 20:48:32 leonb Exp $
+// $Id: JB2EncodeCodec.cpp,v 1.10 2007/03/25 20:48:32 leonb Exp $
 // $Name:  $
 
 #ifdef HAVE_CONFIG_H
@@ -63,7 +63,7 @@
 # pragma implementation
 #endif
 
-// From: Leon Bottou, 1/31/2026
+// From: Leon Bottou, 1/31/2002
 // Lizardtech has split the corresponding cpp file into a decoder and an encoder.
 // Only superficial changes.  The meat is mine.
 

@@ -574,7 +574,7 @@ int CFontFile::IsUnicodeRangeAvailable(unsigned long ulBit, unsigned int un4Byte
 	//  GB2313_CHARSET          134 (x86)             936             3            3           PRC
 	//  CHINESEBIG5_CHARSET     136 (x88)             950             3            4           Big5
 	//  HANGEUL_CHARSET         129 (x81)             949             3            5           Wansung
-	//  JOHAB_CHARSET	        130 (x82)            2026             3            6           Johab
+//  JOHAB_CHARSET	        130 (x82)            1361             3            6           Johab
 
 	if ( 4 == un4ByteIndex && 0 == nResult )
 	{

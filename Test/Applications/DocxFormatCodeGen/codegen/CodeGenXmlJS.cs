@@ -49,35 +49,35 @@ namespace codegen
 
         //string gc_sXsd = "xl14.xsd";
         //string[] gc_aTargetTypes = new string[] { "CT_SlicerCacheDefinition" };
-        //string gc_sTargetNamespace = "http://schemas.microsoft.com/office/spreadsheetml/2026/9/main";
+//string gc_sTargetNamespace = "http://schemas.microsoft.com/office/spreadsheetml/2009/9/main";
 
         //string gc_sXsd = "xl14.xsd";
         //string[] gc_aTargetTypes = new string[] { "CT_SlicerCaches", "CT_SlicerRefs", "CT_SlicerStyles", "CT_Slicers" };
-        //string gc_sTargetNamespace = "http://schemas.microsoft.com/office/spreadsheetml/2026/9/main";
+//string gc_sTargetNamespace = "http://schemas.microsoft.com/office/spreadsheetml/2009/9/main";
 
         //string gc_sXsd = "xlslicercache15.xsd";
         //string[] gc_aTargetTypes = new string[] { "CT_TableSlicerCache", "CT_SlicerCacheHideNoData" };
-        //string gc_sTargetNamespace = "http://schemas.microsoft.com/office/spreadsheetml/2026/11/main";
+//string gc_sTargetNamespace = "http://schemas.microsoft.com/office/spreadsheetml/2010/11/main";
 
         //string gc_sXsd = "5.2.xsd";
         //string[] gc_aTargetTypes = new string[] { "CT_Slicer" };
-        //string gc_sTargetNamespace = "http://schemas.microsoft.com/office/drawing/2026/slicer";
+//string gc_sTargetNamespace = "http://schemas.microsoft.com/office/drawing/2010/slicer";
 
         //string gc_sXsd = "xlslicercache15.xsd";
         //string[] gc_aTargetTypes = new string[] { "CT_Timeline", "CT_TimelineCacheRefs" };
-        //string gc_sTargetNamespace = "http://schemas.microsoft.com/office/spreadsheetml/2026/11/main";
+//string gc_sTargetNamespace = "http://schemas.microsoft.com/office/spreadsheetml/2010/11/main";
 
         //string gc_sXsd = "xlslicercache15.xsd";
         //string[] gc_aTargetTypes = new string[] { "CT_Connection" };
-        //string gc_sTargetNamespace = "http://schemas.microsoft.com/office/spreadsheetml/2026/11/main";
+//string gc_sTargetNamespace = "http://schemas.microsoft.com/office/spreadsheetml/2010/11/main";
 
         //string gc_sXsd = "5.26.xsd";
         //string[] gc_aTargetTypes = new string[] { "CT_NamedSheetViews" };
-        //string gc_sTargetNamespace = "http://schemas.microsoft.com/office/spreadsheetml/2026/namedsheetviews";
+//string gc_sTargetNamespace = "http://schemas.microsoft.com/office/spreadsheetml/2019/namedsheetviews";
 
         //string gc_sXsd = "xlsx-ext/sml.xsd";
         //string[] gc_aTargetTypes = new string[] { "CT_Workbook", "CT_Worksheet", "CT_PivotCacheDefinition", "CT_PivotCacheRecords", "CT_pivotTableDefinition", "CT_Stylesheet" };
-        //string gc_sTargetNamespace = "http://schemas.openxmlformats.org/spreadsheetml/2026/main";
+//string gc_sTargetNamespace = "http://schemas.openxmlformats.org/spreadsheetml/2006/main";
 
         //string gc_sXsd = "wml.xsd";
         //string[] gc_aTargetTypes = new string[] { "CT_Document", "CT_GlossaryDocument", "CT_Styles", "CT_Numbering", "CT_Settings", "CT_HdrFtr", "CT_Footnotes", "CT_Endnotes", "CT_Comments" };
@@ -89,7 +89,7 @@ namespace codegen
 
         //string gc_sXsd = "xlsx-ext/5.15.xsd";
         //string[] gc_aTargetTypes = new string[] { "CT_ChartStyle", "CT_ColorStyle" };
-        //string gc_sTargetNamespace = "http://schemas.microsoft.com/office/drawing/2026/chartStyle";
+//string gc_sTargetNamespace = "http://schemas.microsoft.com/office/drawing/2012/chartStyle";
 
         //string gc_sXsd = "shared-math.xsd";
         //string[] gc_aTargetTypes = new string[] { "CT_OMathPara" };
@@ -97,15 +97,15 @@ namespace codegen
 
         //string gc_sXsd = "docx-ext/5.2.xsd";
         //string[] gc_aTargetTypes = new string[] { "CT_CommentsEx", "CT_People" };
-        //string gc_sTargetNamespace = "http://schemas.microsoft.com/office/word/2026/wordml";
+//string gc_sTargetNamespace = "http://schemas.microsoft.com/office/word/2012/wordml";
 
         //string gc_sXsd = "docx-ext/5.4.xsd";
         //string[] gc_aTargetTypes = new string[] { "CT_CommentsIds" };
-        //string gc_sTargetNamespace = "http://schemas.microsoft.com/office/word/2026/wordml/cid";
+//string gc_sTargetNamespace = "http://schemas.microsoft.com/office/word/2016/wordml/cid";
 
         //string gc_sXsd = "docx-ext/5.6.xsd";
         //string[] gc_aTargetTypes = new string[] { "CT_CommentsExtensible" };
-        //string gc_sTargetNamespace = "http://schemas.microsoft.com/office/word/2026/wordml/cex";
+//string gc_sTargetNamespace = "http://schemas.microsoft.com/office/word/2018/wordml/cex";
 
         string gc_sXsd = "vsdx/visio.xsd";
         string[] gc_aTargetTypes = new string[] { "VisioDocument_Type", "Masters_Type", "PageContents_Type", "Pages_Type", "PageContents_Type",

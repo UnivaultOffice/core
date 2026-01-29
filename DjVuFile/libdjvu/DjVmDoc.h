@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 // 
-// $Id: DjVmDoc.h,v 1.12 2026/05/19 03:07:33 leonb Exp $
+// $Id: DjVmDoc.h,v 1.12 2007/05/19 03:07:33 leonb Exp $
 // $Name:  $
 
 #ifndef _DJVMDOC_H
@@ -87,7 +87,7 @@ class DjVmNav;
 
     @memo DjVu multipage documents reader/writer.
     @author Andrei Erofeev <eaf@geocities.com>
-    @version #$Id: DjVmDoc.h,v 1.12 2026/05/19 03:07:33 leonb Exp $#
+@version #$Id: DjVmDoc.h,v 1.12 2007/05/19 03:07:33 leonb Exp $#
 */
 
 //@{

@@ -789,7 +789,7 @@ static INLINE OPJ_BOOL opj_tcd_init_tile(opj_tcd_t *p_tcd, OPJ_UINT32 p_tile_no,
     }
 
 
-    /* testcase 2026.pdf.asan.35.988 */
+/* testcase 1888.pdf.asan.35.988 */
     if (l_tccp->numresolutions == 0) {
         opj_event_msg(manager, EVT_ERROR, "tiles require at least one resolution\n");
         return OPJ_FALSE;
@@ -894,11 +894,11 @@ static INLINE OPJ_BOOL opj_tcd_init_tile(opj_tcd_t *p_tcd, OPJ_UINT32 p_tile_no,
             l_res->y1 = opj_int_ceildivpow2(l_tilec->y1, (OPJ_INT32)l_level_no);
 
             /*fprintf(stderr, "\t\t\tres_x0= %d, res_y0 =%d, res_x1=%d, res_y1=%d\n", l_res->x0, l_res->y0, l_res->x1, l_res->y1);*/
-            /* p. 35, table A-23, ISO/IEC FDIS154444-1 : 2026 (18 august 2026) */
+/* p. 35, table A-23, ISO/IEC FDIS154444-1 : 2000 (18 august 2000) */
             l_pdx = l_tccp->prcw[resno];
             l_pdy = l_tccp->prch[resno];
             /*fprintf(stderr, "\t\t\tpdx=%d, pdy=%d\n", l_pdx, l_pdy);*/
-            /* p. 64, B.6, ISO/IEC FDIS15444-1 : 2026 (18 august 2026)  */
+/* p. 64, B.6, ISO/IEC FDIS15444-1 : 2000 (18 august 2000)  */
             l_tl_prc_x_start = opj_int_floordivpow2(l_res->x0, (OPJ_INT32)l_pdx) << l_pdx;
             l_tl_prc_y_start = opj_int_floordivpow2(l_res->y0, (OPJ_INT32)l_pdy) << l_pdy;
             {
@@ -2079,7 +2079,7 @@ static OPJ_BOOL opj_tcd_mct_decode(opj_tcd_t *p_tcd, opj_event_mgr_t *p_manager)
                                               l_tile_comp->minimum_num_resolutions - 1;
             opj_tcd_resolution_t* res_comp2 = l_tile->comps[2].resolutions +
                                               l_tile_comp->minimum_num_resolutions - 1;
-            /* testcase 2026.pdf.asan.47.376 */
+/* testcase 1336.pdf.asan.47.376 */
             if (p_tcd->image->comps[0].resno_decoded !=
                     p_tcd->image->comps[1].resno_decoded ||
                     p_tcd->image->comps[0].resno_decoded !=
@@ -2104,7 +2104,7 @@ static OPJ_BOOL opj_tcd_mct_decode(opj_tcd_t *p_tcd, opj_event_mgr_t *p_manager)
                                               p_tcd->image->comps[1].resno_decoded;
             opj_tcd_resolution_t* res_comp2 = l_tile->comps[2].resolutions +
                                               p_tcd->image->comps[2].resno_decoded;
-            /* testcase 2026.pdf.asan.47.376 */
+/* testcase 1336.pdf.asan.47.376 */
             if (p_tcd->image->comps[0].resno_decoded !=
                     p_tcd->image->comps[1].resno_decoded ||
                     p_tcd->image->comps[0].resno_decoded !=

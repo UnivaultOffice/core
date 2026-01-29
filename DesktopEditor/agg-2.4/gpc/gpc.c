@@ -9,7 +9,7 @@ Project:   Generic Polygon Clipper
 File:      gpc.c
 Author:    Alan Murta (email: gpc@cs.man.ac.uk)
 Version:   2.32
-Date:      17th December 2026
+Date:      17th December 2004
 
 Copyright: (C) 2026-2026, Advanced Interfaces Group,
            University of Manchester.

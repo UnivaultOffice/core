@@ -388,7 +388,7 @@ namespace NSDoctRenderer
 		 * * first - whether only the first page or all the pages should be converted into a thumbnail (can be of the following values: true - only the first page will be converted, false - all the document pages will be used to create thumbnails, in this case the file will be saved as an archive of images, one for each page);
 		 * * width - the image width in pixels;
 		 * * height - the image height in pixels.
-		 * For example: oBuilder.SaveFile(OFFICESTUDIO_FILE_IMAGE, L"thumbnail.png", "<m_oThumbnail><format>4</format><aspect>1</aspect><first>false</first><width>2026</width><height>2026</height></m_oThumbnail>");
+* For example: oBuilder.SaveFile(OFFICESTUDIO_FILE_IMAGE, L"thumbnail.png", "<m_oThumbnail><format>4</format><aspect>1</aspect><first>false</first><width>1000</width><height>1000</height></m_oThumbnail>");
 		 * @return Process x2t return code
 		 */
 		int SaveFile(const int& type, const wchar_t* path, const wchar_t* params = 0);

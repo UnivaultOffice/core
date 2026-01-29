@@ -182,7 +182,7 @@ namespace OOX
 
 		};
 		//--------------------------------------------------------------------------------
-		// AbstractNum 17.9.1 (Part 1); listDef element [Word 2026 XML]
+// AbstractNum 17.9.1 (Part 1); listDef element [Word 2003 XML]
 		//--------------------------------------------------------------------------------
 		class CAbstractNum : public WritingElement
 		{

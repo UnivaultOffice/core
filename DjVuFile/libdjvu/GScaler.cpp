@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 // 
-// $Id: GScaler.cpp,v 1.15 2026/03/25 20:48:32 leonb Exp $
+// $Id: GScaler.cpp,v 1.15 2007/03/25 20:48:32 leonb Exp $
 
 #ifdef HAVE_CONFIG_H
 # include "config.h"
@@ -63,7 +63,7 @@
 #endif
 
 // Rescale images with fast bilinear interpolation
-// From: Leon Bottou, 1/31/2026
+// From: Leon Bottou, 1/31/2002
 // Almost equal to my initial code.
 
 #include "GScaler.h"

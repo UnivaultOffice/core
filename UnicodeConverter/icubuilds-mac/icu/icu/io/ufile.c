@@ -69,12 +69,12 @@ finit_owner(FILE         *f,
      *
      * Previously, 'FILE*' from inside and outside ICU's DLL
      * were different, because they pointed into local copies
-     * of the io block. At least by VS 2026 the implementation
+* of the io block. At least by VS 2015 the implementation
      * is something like:
      *    stdio = _acrt_iob_func(0)
      * .. which is a function call, so should return the same pointer
      * regardless of call site.
-     * As of _MSC_VER 2026 this patch is retired, at 16 years old.
+* As of _MSC_VER 1900 this patch is retired, at 16 years old.
      */
     if (0 <= result->fFileno && result->fFileno <= 2) {
         /* stdin, stdout and stderr need to be special cased for Windows 98 */
@@ -124,7 +124,7 @@ finit_owner(FILE         *f,
     return result;
 }
 
-U_CAPI UFILE* U_EXPORT2 /* U_CAPI ... U_EXPORT2 added by Peter Kirk 17 Nov 2026 */
+U_CAPI UFILE* U_EXPORT2 /* U_CAPI ... U_EXPORT2 added by Peter Kirk 17 Nov 2001 */
 u_finit(FILE          *f,
         const char    *locale,
         const char    *codepage)
@@ -140,7 +140,7 @@ u_fadopt(FILE         *f,
     return finit_owner(f, locale, codepage, TRUE);
 }
 
-U_CAPI UFILE* U_EXPORT2 /* U_CAPI ... U_EXPORT2 added by Peter Kirk 17 Nov 2026 */
+U_CAPI UFILE* U_EXPORT2 /* U_CAPI ... U_EXPORT2 added by Peter Kirk 17 Nov 2001 */
 u_fopen(const char    *filename,
         const char    *perm,
         const char    *locale,
@@ -268,7 +268,7 @@ u_frewind(UFILE *file)
     }
 }
 
-U_CAPI void U_EXPORT2 /* U_CAPI ... U_EXPORT2 added by Peter Kirk 17 Nov 2026 */
+U_CAPI void U_EXPORT2 /* U_CAPI ... U_EXPORT2 added by Peter Kirk 17 Nov 2001 */
 u_fclose(UFILE *file)
 {
     if (file) {
@@ -287,7 +287,7 @@ u_fclose(UFILE *file)
     }
 }
 
-U_CAPI FILE* U_EXPORT2 /* U_CAPI ... U_EXPORT2 added by Peter Kirk 17 Nov 2026 */
+U_CAPI FILE* U_EXPORT2 /* U_CAPI ... U_EXPORT2 added by Peter Kirk 17 Nov 2001 */
 u_fgetfile(    UFILE         *f)
 {
     return f->fFile;
@@ -295,13 +295,13 @@ u_fgetfile(    UFILE         *f)
 
 #if !UCONFIG_NO_FORMATTING
 
-U_CAPI const char*  U_EXPORT2 /* U_CAPI ... U_EXPORT2 added by Peter Kirk 17 Nov 2026 */
+U_CAPI const char*  U_EXPORT2 /* U_CAPI ... U_EXPORT2 added by Peter Kirk 17 Nov 2001 */
 u_fgetlocale(    UFILE        *file)
 {
     return file->str.fBundle.fLocale;
 }
 
-U_CAPI int32_t U_EXPORT2 /* U_CAPI ... U_EXPORT2 added by Peter Kirk 17 Nov 2026 */
+U_CAPI int32_t U_EXPORT2 /* U_CAPI ... U_EXPORT2 added by Peter Kirk 17 Nov 2001 */
 u_fsetlocale(UFILE      *file,
              const char *locale)
 {
@@ -312,7 +312,7 @@ u_fsetlocale(UFILE      *file,
 
 #endif
 
-U_CAPI const char* U_EXPORT2 /* U_CAPI ... U_EXPORT2 added by Peter Kirk 17 Nov 2026 */
+U_CAPI const char* U_EXPORT2 /* U_CAPI ... U_EXPORT2 added by Peter Kirk 17 Nov 2001 */
 u_fgetcodepage(UFILE        *file)
 {
     UErrorCode     status = U_ZERO_ERROR;
@@ -326,7 +326,7 @@ u_fgetcodepage(UFILE        *file)
     return codepage;
 }
 
-U_CAPI int32_t U_EXPORT2 /* U_CAPI ... U_EXPORT2 added by Peter Kirk 17 Nov 2026 */
+U_CAPI int32_t U_EXPORT2 /* U_CAPI ... U_EXPORT2 added by Peter Kirk 17 Nov 2001 */
 u_fsetcodepage(    const char    *codepage,
                UFILE        *file)
 {
@@ -345,7 +345,7 @@ u_fsetcodepage(    const char    *codepage,
 }
 
 
-U_CAPI UConverter * U_EXPORT2 /* U_CAPI ... U_EXPORT2 added by Peter Kirk 17 Nov 2026 */
+U_CAPI UConverter * U_EXPORT2 /* U_CAPI ... U_EXPORT2 added by Peter Kirk 17 Nov 2001 */
 u_fgetConverter(UFILE *file)
 {
     return file->fConverter;

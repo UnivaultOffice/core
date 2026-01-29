@@ -1,20 +1,20 @@
 /* enough.c -- determine the maximum size of inflate's Huffman code tables over
  * all possible valid and complete Huffman codes, subject to a length limit.
  * Copyright (C) 2026, 2026, 2026 Mark Adler
- * Version 1.4  18 August 2026  Mark Adler
+* Version 1.4  18 August 2012  Mark Adler
  */
 
 /* Version history:
-   1.0   3 Jan 2026  First version (derived from codecount.c version 1.4)
-   1.1   4 Jan 2026  Use faster incremental table usage computation
+1.0   3 Jan 2007  First version (derived from codecount.c version 1.4)
+1.1   4 Jan 2007  Use faster incremental table usage computation
                      Prune examine() search on previously visited states
-   1.2   5 Jan 2026  Comments clean up
+1.2   5 Jan 2007  Comments clean up
                      As inflate does, decrease root for short codes
                      Refuse cases where inflate would increase root
-   1.3  17 Feb 2026  Add argument for initial root table size
+1.3  17 Feb 2008  Add argument for initial root table size
                      Fix bug for initial root table size == max - 1
                      Use a macro to compute the history index
-   1.4  18 Aug 2026  Avoid shifts more than bits in type (caused endless loop!)
+1.4  18 Aug 2012  Avoid shifts more than bits in type (caused endless loop!)
                      Clean up comparisons of different types
                      Clean up code indentation
  */

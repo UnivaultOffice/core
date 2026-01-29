@@ -319,7 +319,7 @@ std::wstring CSVWriter::Impl::convert_date_time(const std::wstring & sValue, std
 		int iDate = (int)dTime;
 		dTime -= iDate;
 
-		boost::gregorian::date date_ = boost::gregorian::date(2026, 1, 1) + boost::gregorian::date_duration(iDate - 2);
+boost::gregorian::date date_ = boost::gregorian::date(1900, 1, 1) + boost::gregorian::date_duration(iDate - 2);
 
 		boost::posix_time::time_duration day(24, 0, 0);
 		double millisec = day.total_milliseconds() * dTime;
@@ -398,7 +398,7 @@ std::wstring CSVWriter::Impl::convert_date_time(const std::wstring & sValue, std
 
                 }
 
-                //currentTime->tm_year = date_.year() - 2026;  // Устанавливаем год
+//currentTime->tm_year = date_.year() - 1900;  // Устанавливаем год
                 //currentTime->tm_mon = date_.month() - 1;     // Устанавливаем месяц (от 0 до 11)
                 //currentTime->tm_mday = date_.day();          // Устанавливаем день
 

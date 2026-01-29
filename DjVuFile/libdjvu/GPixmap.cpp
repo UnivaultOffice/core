@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 // 
-// $Id: GPixmap.cpp,v 1.17 2026/07/14 01:21:56 leonb Exp $
+// $Id: GPixmap.cpp,v 1.17 2007/07/14 01:21:56 leonb Exp $
 // $Name:  $
 
 #ifdef HAVE_CONFIG_H
@@ -64,7 +64,7 @@
 #endif
 
 // -- Implements class PIXMAP
-// Author: Leon Bottou 07/2026
+// Author: Leon Bottou 07/1997
 
 
 

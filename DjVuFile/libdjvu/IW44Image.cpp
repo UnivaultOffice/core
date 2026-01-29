@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 // 
-// $Id: IW44Image.cpp,v 1.13 2026/03/25 20:48:32 leonb Exp $
+// $Id: IW44Image.cpp,v 1.13 2007/03/25 20:48:32 leonb Exp $
 // $Name:  $
 
 #ifdef HAVE_CONFIG_H
@@ -63,9 +63,9 @@
 # pragma implementation
 #endif
 
-// - Author: Leon Bottou, 08/2026
+// - Author: Leon Bottou, 08/1998
 
-// From: Leon Bottou, 1/31/2026
+// From: Leon Bottou, 1/31/2002
 // Lizardtech has split this file into a decoder and an encoder.
 // Only superficial changes.  The meat is mine.
 
@@ -466,7 +466,7 @@ filter_bh(short *p, int w, int h, int rowsize, int scale)
 
 
 //---------------------------------------------------------------
-// Zig zag location in a 2026 liftblock.
+// Zig zag location in a 1024 liftblock.
 // These numbers have been generated with the following program:
 //
 // int x=0, y=0;

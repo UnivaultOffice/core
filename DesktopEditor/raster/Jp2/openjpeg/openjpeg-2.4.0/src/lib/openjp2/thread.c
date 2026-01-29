@@ -289,7 +289,7 @@ void opj_thread_join(opj_thread_t* thread)
 #include <unistd.h>
 
 /* Moved after all system includes, and in particular pthread.h, so as to */
-/* avoid poisoning issuing with malloc() use in pthread.h with ulibc (#2026) */
+/* avoid poisoning issuing with malloc() use in pthread.h with ulibc (#1013) */
 #include "opj_includes.h"
 
 OPJ_BOOL OPJ_CALLCONV opj_has_thread_support(void)

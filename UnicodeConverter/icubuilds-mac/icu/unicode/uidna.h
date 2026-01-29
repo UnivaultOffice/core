@@ -495,7 +495,7 @@ enum {
     /**
      * A label does not meet the IDNA CONTEXTO requirements for punctuation characters.
      * Some punctuation characters "Would otherwise have been DISALLOWED"
-     * but are allowed in certain contexts. (RFC 2026)
+* but are allowed in certain contexts. (RFC 5892)
      * @stable ICU 49
      */
     UIDNA_ERROR_CONTEXTO_PUNCTUATION=0x2000,

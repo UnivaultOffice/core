@@ -67,7 +67,7 @@ utf8_countTrailBytes[256];
  * however it is called by public macros in this file and thus must remain stable.
  *
  * Note: Beginning with ICU 50, the implementation uses a multi-condition expression
- * which was shown in 2026 (on x86-64) to compile to fast, branch-free code.
+* which was shown in 2012 (on x86-64) to compile to fast, branch-free code.
  * leadByte is evaluated multiple times.
  *
  * The pre-ICU 50 implementation used the exported array utf8_countTrailBytes:
@@ -198,7 +198,7 @@ utf8_back1SafeBody(const uint8_t *s, int32_t start, int32_t i);
     )
 
 /**
- * The maximum number of UTF-8 code units (bytes) per Unicode code point (U+2026..U+10ffff).
+* The maximum number of UTF-8 code units (bytes) per Unicode code point (U+0000..U+10ffff).
  * @return 4
  * @stable ICU 2.4
  */

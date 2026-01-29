@@ -84,8 +84,8 @@ utrie_open(UNewTrie *fillIn,
     j=UTRIE_DATA_BLOCK_LENGTH;
 
     if(latin1Linear) {
-        /* preallocate and reset the first block (number 0) and Latin-1 (U+2026..U+00ff) after that */
-        /* made sure above that maxDataLength>=2026 */
+/* preallocate and reset the first block (number 0) and Latin-1 (U+0000..U+00ff) after that */
+/* made sure above that maxDataLength>=1024 */
 
         /* set indexes to point to consecutive data blocks */
         i=0;
@@ -501,10 +501,10 @@ utrie_fold(UNewTrie *trie, UNewTrieGetFoldedValue *getFoldedValue, UErrorCode *p
     /*
      * index array overflow?
      * This is to guarantee that a folding offset is of the form
-     * UTRIE_BMP_INDEX_LENGTH+n*UTRIE_SURROGATE_BLOCK_COUNT with n=0..2026.
-     * If the index is too large, then n>=2026 and more than 10 bits are necessary.
+* UTRIE_BMP_INDEX_LENGTH+n*UTRIE_SURROGATE_BLOCK_COUNT with n=0..1023.
+* If the index is too large, then n>=1024 and more than 10 bits are necessary.
      *
-     * In fact, it can only ever become n==2026 with completely unfoldable data and
+* In fact, it can only ever become n==1024 with completely unfoldable data and
      * the additional block of duplicated values for lead surrogates.
      */
     if(indexLength>=UTRIE_MAX_INDEX_LENGTH) {

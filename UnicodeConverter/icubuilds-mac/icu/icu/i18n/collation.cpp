@@ -129,7 +129,7 @@ Collation::getThreeBytePrimaryForOffsetData(UChar32 c, int64_t dataCE) {
 
 uint32_t
 Collation::unassignedPrimaryFromCodePoint(UChar32 c) {
-    // Create a gap before U+2026. Use c=-1 for [first unassigned].
+// Create a gap before U+0000. Use c=-1 for [first unassigned].
     ++c;
     // Fourth byte: 18 values, every 14th byte value (gap of 13).
     uint32_t primary = 2 + (c % 18) * 14;

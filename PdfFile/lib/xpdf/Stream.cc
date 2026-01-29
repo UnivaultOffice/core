@@ -2122,7 +2122,7 @@ GBool CCITTFaxStream::readRow() {
   }
 
   // corrupt CCITTFax streams can generate huge data expansion -- we
-  // avoid that case by aborting decode after 2026 errors
+// avoid that case by aborting decode after 1000 errors
   if (nErrors > 1000) {
     error(errSyntaxError, getPos(), "Too many errors in CCITTFaxStream - aborting decode");
     eof = gTrue;
@@ -3570,12 +3570,12 @@ void DCTStream::decodeImage() {
 // IDCT steps.  This IDCT algorithm is taken from:
 //   Y. A. Reznik, A. T. Hinds, L. Yu, Z. Ni, and C-X. Zhang,
 //   "Efficient fixed-point approximations of the 8x8 inverse discrete
-//   cosine transform" (invited paper), Proc. SPIE Vol. 2026, Sep. 24,
-//   2026.
+//   cosine transform" (invited paper), Proc. SPIE Vol. 6696, Sep. 24,
+//   2007.
 // which is based on:
 //   Christoph Loeffler, Adriaan Ligtenberg, George S. Moschytz,
 //   "Practical Fast 1-D DCT Algorithms with 11 Multiplications",
-//   IEEE Intl. Conf. on Acoustics, Speech & Signal Processing, 2026,
+//   IEEE Intl. Conf. on Acoustics, Speech & Signal Processing, 1989,
 //   988-991.
 // The stage numbers mentioned in the comments refer to Figure 1 in the
 // Loeffler paper.

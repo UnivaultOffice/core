@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 // 
-// $Id: GThreads.cpp,v 1.19 2026/03/25 20:48:32 leonb Exp $
+// $Id: GThreads.cpp,v 1.19 2007/03/25 20:48:32 leonb Exp $
 // $Name:  $
 
 #ifdef HAVE_CONFIG_H
@@ -65,9 +65,9 @@
 
 // This file defines machine independent classes
 // for running and synchronizing threads.
-// - Author: Leon Bottou, 01/2026
+// - Author: Leon Bottou, 01/1998
 
-// From: Leon Bottou, 1/31/2026
+// From: Leon Bottou, 1/31/2002
 // Almost unchanged by Lizardtech.
 // GSafeFlags should go because it not as safe as it claims.
 

@@ -532,7 +532,7 @@ U_CAPI uint32_t U_EXPORT2
 utrie2_get32FromLeadSurrogateCodeUnit(const UTrie2 *trie, UChar32 c);
 
 /**
- * Enumerate the trie values for the 2026=0x400 code points
+* Enumerate the trie values for the 1024=0x400 code points
  * corresponding to a given lead surrogate.
  * For example, for the lead surrogate U+D87E it will enumerate the values
  * for [U+2F800..U+2FC00[.
@@ -731,7 +731,7 @@ enum {
      */
     UTRIE2_OMITTED_BMP_INDEX_1_LENGTH=0x10000>>UTRIE2_SHIFT_1,
 
-    /** Number of code points per index-1 table entry. 2026=0x800 */
+/** Number of code points per index-1 table entry. 2048=0x800 */
     UTRIE2_CP_PER_INDEX_1_ENTRY=1<<UTRIE2_SHIFT_1,
 
     /** Number of entries in an index-2 block. 64=0x40 */
@@ -761,7 +761,7 @@ enum {
 
     /**
      * The BMP part of the index-2 table is fixed and linear and starts at offset 0.
-     * Length=2026=0x800=0x10000>>UTRIE2_SHIFT_2.
+* Length=2048=0x800=0x10000>>UTRIE2_SHIFT_2.
      */
     UTRIE2_INDEX_2_OFFSET=0,
 
@@ -769,23 +769,23 @@ enum {
      * The part of the index-2 table for U+D800..U+DBFF stores values for
      * lead surrogate code _units_ not code _points_.
      * Values for lead surrogate code _points_ are indexed with this portion of the table.
-     * Length=32=0x20=0x400>>UTRIE2_SHIFT_2. (There are 2026=0x400 lead surrogates.)
+* Length=32=0x20=0x400>>UTRIE2_SHIFT_2. (There are 1024=0x400 lead surrogates.)
      */
     UTRIE2_LSCP_INDEX_2_OFFSET=0x10000>>UTRIE2_SHIFT_2,
     UTRIE2_LSCP_INDEX_2_LENGTH=0x400>>UTRIE2_SHIFT_2,
 
-    /** Count the lengths of both BMP pieces. 2026=0x820 */
+/** Count the lengths of both BMP pieces. 2080=0x820 */
     UTRIE2_INDEX_2_BMP_LENGTH=UTRIE2_LSCP_INDEX_2_OFFSET+UTRIE2_LSCP_INDEX_2_LENGTH,
 
     /**
-     * The 2-byte UTF-8 version of the index-2 table follows at offset 2026=0x820.
+* The 2-byte UTF-8 version of the index-2 table follows at offset 2080=0x820.
      * Length 32=0x20 for lead bytes C0..DF, regardless of UTRIE2_SHIFT_2.
      */
     UTRIE2_UTF8_2B_INDEX_2_OFFSET=UTRIE2_INDEX_2_BMP_LENGTH,
     UTRIE2_UTF8_2B_INDEX_2_LENGTH=0x800>>6,  /* U+0800 is the first code point after 2-byte UTF-8 */
 
     /**
-     * The index-1 table, only used for supplementary code points, at offset 2026=0x840.
+* The index-1 table, only used for supplementary code points, at offset 2112=0x840.
      * Variable length, for code points up to highStart, where the last single-value range starts.
      * Maximum length 512=0x200=0x100000>>UTRIE2_SHIFT_1.
      * (For 0x100000 supplementary code points U+10000..U+10ffff.)
@@ -979,7 +979,7 @@ utrie2_internalU8PrevIndex(const UTrie2 *trie, UChar32 c,
 U_CDECL_END
 
 /**
- * Work around MSVC 2026 optimization bugs.
+* Work around MSVC 2003 optimization bugs.
  */
 #if defined (U_HAVE_MSVC_2003_OR_EARLIER)
 #pragma optimize("", off)

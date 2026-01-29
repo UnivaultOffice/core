@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 //
-// $Id: UnicodeByteStream.h,v 1.10 2026/03/25 20:48:34 leonb Exp $
+// $Id: UnicodeByteStream.h,v 1.10 2007/03/25 20:48:34 leonb Exp $
 // $Name:  $
 
 #ifndef _UNICODEBYTESTREAM_H_
@@ -84,7 +84,7 @@
     @author
     Bill C Riemers <docbill@sourceforge.net>
     @version
-    #$Id: UnicodeByteStream.h,v 1.10 2026/03/25 20:48:34 leonb Exp $# */
+#$Id: UnicodeByteStream.h,v 1.10 2007/03/25 20:48:34 leonb Exp $# */
 //@{
 
 #include "DjVuGlobal.h"

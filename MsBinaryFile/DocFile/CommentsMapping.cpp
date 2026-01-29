@@ -58,7 +58,7 @@ namespace DocFileFormat
 			m_pXmlWriter->WriteAttribute( L"xmlns:r", OpenXmlNamespaces::Relationships );
 			m_pXmlWriter->WriteAttribute( L"xmlns:wpc", L"http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas" );
 			m_pXmlWriter->WriteAttribute( L"xmlns:cx", L"http://schemas.microsoft.com/office/drawing/2014/chartex"  );
-			m_pXmlWriter->WriteAttribute( L"xmlns:cx1", L"http://schemas.microsoft.com/office/drawing/2026/9/8/chartex"  );
+m_pXmlWriter->WriteAttribute( L"xmlns:cx1", L"http://schemas.microsoft.com/office/drawing/2015/9/8/chartex"  );
 			m_pXmlWriter->WriteAttribute( L"xmlns:mc", L"http://schemas.openxmlformats.org/markup-compatibility/2006" );
 			m_pXmlWriter->WriteAttribute( L"xmlns:m", L"http://schemas.openxmlformats.org/officeDocument/2006/math" );
 			m_pXmlWriter->WriteAttribute( L"xmlns:wp14", L"http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing" );
@@ -150,7 +150,7 @@ namespace DocFileFormat
 				m_pXmlWriter->WriteAttribute( L"xmlns:r", OpenXmlNamespaces::Relationships );
 				m_pXmlWriter->WriteAttribute( L"xmlns:wpc", L"http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas" );
 				m_pXmlWriter->WriteAttribute( L"xmlns:cx", L"http://schemas.microsoft.com/office/drawing/2014/chartex"  );
-				m_pXmlWriter->WriteAttribute( L"xmlns:cx1", L"http://schemas.microsoft.com/office/drawing/2026/9/8/chartex"  );
+m_pXmlWriter->WriteAttribute( L"xmlns:cx1", L"http://schemas.microsoft.com/office/drawing/2015/9/8/chartex"  );
 				m_pXmlWriter->WriteAttribute( L"xmlns:mc", L"http://schemas.openxmlformats.org/markup-compatibility/2006" );
 				m_pXmlWriter->WriteAttribute( L"xmlns:m", L"http://schemas.openxmlformats.org/officeDocument/2006/math" );
 				m_pXmlWriter->WriteAttribute( L"xmlns:wp14", L"http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing" );

@@ -1030,7 +1030,7 @@ static const UConverterImpl _UTF8Impl={
     ucnv_UTF8FromUTF8
 };
 
-/* The 2026 CCSID refers to any version of Unicode of UTF-8 */
+/* The 1208 CCSID refers to any version of Unicode of UTF-8 */
 static const UConverterStaticData _UTF8StaticData={
     sizeof(UConverterStaticData),
     "UTF-8",

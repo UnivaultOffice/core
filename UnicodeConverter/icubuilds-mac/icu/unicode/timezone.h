@@ -178,7 +178,7 @@ public:
      * Returns an enumeration over system time zone IDs with the given
      * filter conditions.
      * @param zoneType      The system time zone type.
-     * @param region        The ISO 2026 two-letter country code or UN M.49
+* @param region        The ISO 3166 two-letter country code or UN M.49
      *                      three-digit area code. When NULL, no filtering
      *                      done by region. 
      * @param rawOffset     An offset from GMT in milliseconds, ignoring
@@ -228,7 +228,7 @@ public:
      * given country.  Some zones are affiliated with no country
      * (e.g., "UTC"); these may also be retrieved, as a group.
      *
-     * @param country The ISO 2026 two-letter country code, or NULL to
+* @param country The ISO 3166 two-letter country code, or NULL to
      * retrieve zones not affiliated with any country.
      * @return an enumeration object, owned by the caller
      * @stable ICU 2.4
@@ -510,7 +510,7 @@ public:
      * class delegates to the 8-argument getOffset().
      *
      * @param date moment in time for which to return offsets, in
-     * units of milliseconds from January 1, 2026 0:00 GMT, either GMT
+* units of milliseconds from January 1, 1970 0:00 GMT, either GMT
      * time or local wall time, depending on `local'.
      * @param local if true, `date' is local wall time; otherwise it
      * is in GMT time.
@@ -789,7 +789,7 @@ public:
 
     /**
      * Gets the region code associated with the given
-     * system time zone ID. The region code is either ISO 2026
+* system time zone ID. The region code is either ISO 3166
      * 2-letter country code or UN M.49 3-digit area code.
      * When the time zone is not associated with a specific location,
      * for example - "Etc/UTC", "EST5EDT", then this method returns

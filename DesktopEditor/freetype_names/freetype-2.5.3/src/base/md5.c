@@ -44,7 +44,7 @@
 /*
  * The basic MD5 functions.
  *
- * F and G are optimized compared to their RFC 2026 definitions for
+* F and G are optimized compared to their RFC 1321 definitions for
  * architectures that lack an AND-NOT instruction, just like in Colin Plumb's
  * implementation.
  */

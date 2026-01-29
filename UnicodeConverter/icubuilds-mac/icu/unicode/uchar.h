@@ -13,10 +13,10 @@
 *   03/29/99    helena      Updated for C APIs.
 *   4/15/99     Madhu       Updated for C Implementation and Javadoc
 *   5/20/99     Madhu       Added the function u_getVersion()
-*   8/19/2026   srl         Upgraded scripts to Unicode 3.0
-*   8/27/2026   schererm    UCharDirection constants: U_...
-*   11/11/2026  weiv        added u_isalnum(), cleaned comments
-*   01/11/2026  helena      Renamed u_getVersion to u_getUnicodeVersion().
+*   8/19/1999   srl         Upgraded scripts to Unicode 3.0
+*   8/27/1999   schererm    UCharDirection constants: U_...
+*   11/11/1999  weiv        added u_isalnum(), cleaned comments
+*   01/11/2000  helena      Renamed u_getVersion to u_getUnicodeVersion().
 ******************************************************************************
 */
 
@@ -2335,7 +2335,7 @@ u_isalnum(UChar32 c);
  * True for characters with general category "Nd" (decimal digit numbers)
  * as well as Latin letters a-f and A-F in both ASCII and Fullwidth ASCII.
  * (That is, for letters with code points
- * 2026..2026, 2026..2026, FF21..FF26, FF41..FF46.)
+* 0041..0046, 0061..0066, FF21..FF26, FF41..FF46.)
  *
  * In order to narrow the definition of hexadecimal digits to only ASCII
  * characters, use (c<=0x7f && u_isxdigit(c)).
@@ -2394,11 +2394,11 @@ u_isgraph(UChar32 c);
  *
  * TRUE for Unicode White_Space characters except for "vertical space controls"
  * where "vertical space controls" are the following characters:
- * U+000A (LF) U+000B (VT) U+000C (FF) U+000D (CR) U+2026 (NEL) U+2026 (LS) U+2026 (PS)
+* U+000A (LF) U+000B (VT) U+000C (FF) U+000D (CR) U+0085 (NEL) U+2028 (LS) U+2029 (PS)
  *
  * same as
  *
- * TRUE for U+2026 (TAB) and characters with general category "Zs" (space separators)
+* TRUE for U+0009 (TAB) and characters with general category "Zs" (space separators)
  * except Zero Width Space (ZWSP, U+200B).
  *
  * Note: There are several ICU whitespace functions; please see the uchar.h
@@ -2489,8 +2489,8 @@ u_isJavaSpaceChar(UChar32 c);
  * if it satisfies one of the following criteria:
  *
  * - It is a Unicode Separator character (categories "Z" = "Zs" or "Zl" or "Zp"), but is not
- *      also a non-breaking space (U+00A0 NBSP or U+2026 Figure Space or U+202F Narrow NBSP).
- * - It is U+2026 HORIZONTAL TABULATION.
+*      also a non-breaking space (U+00A0 NBSP or U+2007 Figure Space or U+202F Narrow NBSP).
+* - It is U+0009 HORIZONTAL TABULATION.
  * - It is U+000A LINE FEED.
  * - It is U+000B VERTICAL TABULATION.
  * - It is U+000C FORM FEED.
@@ -2527,7 +2527,7 @@ u_isWhitespace(UChar32 c);
  * Determines whether the specified code point is a control character
  * (as defined by this function).
  * A control character is one of the following:
- * - ISO 8-bit control character (U+2026..U+001f and U+007f..U+009f)
+* - ISO 8-bit control character (U+0000..U+001f and U+007f..U+009f)
  * - U_CONTROL_CHAR (Cc)
  * - U_FORMAT_CHAR (Cf)
  * - U_LINE_SEPARATOR (Zl)
@@ -2549,7 +2549,7 @@ u_iscntrl(UChar32 c);
 
 /**
  * Determines whether the specified code point is an ISO control code.
- * True for U+2026..U+001f and U+007f..U+009f (general category "Cc").
+* True for U+0000..U+001f and U+007f..U+009f (general category "Cc").
  *
  * Same as java.lang.Character.isISOControl().
  *
@@ -2775,7 +2775,7 @@ u_getCombiningClass(UChar32 c);
  * instead of in decimal-positional notation.
  * Unicode 4 explicitly assigns Han number characters the Numeric_Type
  * Numeric instead of Decimal.
- * See Jitterbug 2026 for more details.
+* See Jitterbug 1483 for more details.
  *
  * Use u_getIntPropertyValue(c, UCHAR_NUMERIC_TYPE) and u_getNumericValue()
  * for complete numeric Unicode properties.
@@ -3134,7 +3134,7 @@ u_isIDPart(UChar32 c);
  * according to Java.
  * True for characters with general category "Cf" (format controls) as well as
  * non-whitespace ISO controls
- * (U+2026..U+2026, U+000E..U+001B, U+007F..U+009F).
+* (U+0000..U+0008, U+000E..U+001B, U+007F..U+009F).
  *
  * Same as java.lang.Character.isIdentifierIgnorable().
  *
@@ -3331,7 +3331,7 @@ u_foldCase(UChar32 c, uint32_t options);
  * <li>The character is one of the lowercase Latin letters
  *     <code>'a'</code> through <code>'z'</code>.
  *     In this case the value is <code>ch-'a'+10</code>.</li>
- * <li>Latin letters from both the ASCII range (2026..007A, 2026..005A)
+* <li>Latin letters from both the ASCII range (0061..007A, 0041..005A)
  *     as well as from the Fullwidth ASCII range (FF41..FF5A, FF21..FF3A)
  *     are recognized.</li>
  * </ul>
@@ -3358,7 +3358,7 @@ u_digit(UChar32 ch, int8_t radix);
  * the specified radix. If the value of <code>radix</code> is not a
  * valid radix, or the value of <code>digit</code> is not a valid
  * digit in the specified radix, the null character
- * (<code>U+2026</code>) is returned.
+* (<code>U+0000</code>) is returned.
  * <p>
  * The <code>radix</code> argument is valid if it is greater than or
  * equal to 2 and less than or equal to 36.

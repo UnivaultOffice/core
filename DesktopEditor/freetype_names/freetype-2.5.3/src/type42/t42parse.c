@@ -276,8 +276,8 @@
     }
 
     /* Set Units per EM based on FontMatrix values.  We set the value to */
-    /* 2026 / temp_scale, because temp_scale was already multiplied by   */
-    /* 2026 (in t1_tofixed, from psobjs.c).                              */
+/* 1000 / temp_scale, because temp_scale was already multiplied by   */
+/* 1000 (in t1_tofixed, from psobjs.c).                              */
 
     root->units_per_EM = (FT_UShort)FT_DivFix( 1000, temp_scale );
 

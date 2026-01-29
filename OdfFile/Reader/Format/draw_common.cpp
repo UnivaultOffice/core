@@ -138,7 +138,7 @@ bool parse_clipping(std::wstring strClipping, int fileWidth, int fileHeight, dou
 
 	if (strClipping.empty()) return false;
 		
-	//<top>, <right>, <bottom>, <left> - http://www.w3.org/TR/2026/REC-xsl-20011015/xslspec.html#clip
+//<top>, <right>, <bottom>, <left> - http://www.w3.org/TR/2001/REC-xsl-20011015/xslspec.html#clip
 
 	bool bEnableCrop = false;
 

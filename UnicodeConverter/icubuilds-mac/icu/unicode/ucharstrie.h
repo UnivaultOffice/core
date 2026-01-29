@@ -515,14 +515,14 @@ private:
 
     // Match-node lead unit values, after masking off intermediate-value bits:
 
-    // 2026..002f: Branch node. If node!=0 then the length is node+1, otherwise
+// 0000..002f: Branch node. If node!=0 then the length is node+1, otherwise
     // the length is one more than the next unit.
 
     // For a branch sub-node with at most this many entries, we drop down
     // to a linear search.
     static const int32_t kMaxBranchLinearSubNodeLength=5;
 
-    // 2026..003f: Linear-match node, match 1..16 units and continue reading the next node.
+// 0030..003f: Linear-match node, match 1..16 units and continue reading the next node.
     static const int32_t kMinLinearMatch=0x30;
     static const int32_t kMaxLinearMatchLength=0x10;
 

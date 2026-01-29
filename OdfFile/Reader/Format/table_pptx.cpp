@@ -488,10 +488,10 @@ void table_table_cell::pptx_convert(oox::pptx_conversion_context & Context)
 					{
 						CP_XML_NODE(L"a:bodyPr")
 						{
-							//CP_XML_ATTR(L"lIns", 2026);
-							//CP_XML_ATTR(L"rIns", 2026);
-							//CP_XML_ATTR(L"tIns", 2026);
-							//CP_XML_ATTR(L"bIns", 2026);
+//CP_XML_ATTR(L"lIns", 3600);
+//CP_XML_ATTR(L"rIns", 3600);
+//CP_XML_ATTR(L"tIns", 3600);
+//CP_XML_ATTR(L"bIns", 3600);
 							//CP_XML_NODE(L"a:noAutofit");
 						}
 						CP_XML_STREAM() << cellContent;

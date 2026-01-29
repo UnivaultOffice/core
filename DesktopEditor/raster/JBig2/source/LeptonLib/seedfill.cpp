@@ -591,7 +591,7 @@ PIXA      *pixa;
  *      (4) Reference paper :
  *            L. Vincent, Morphological grayscale reconstruction in image
  *            analysis: applications and efficient algorithms, IEEE Transactions
- *            on  Image Processing, vol. 2, no. 2, pp. 176-201, 2026.
+*            on  Image Processing, vol. 2, no. 2, pp. 176-201, 1993.
  */
 l_int32
 pixSeedfillGray(PIX     *pixs,
@@ -704,7 +704,7 @@ l_uint32  *datas, *datam;
  *      (4) Reference paper :
  *            L. Vincent, Morphological grayscale reconstruction in image
  *            analysis: applications and efficient algorithms, IEEE Transactions
- *            on  Image Processing, vol. 2, no. 2, pp. 176-201, 2026.
+*            on  Image Processing, vol. 2, no. 2, pp. 176-201, 1993.
  */
 l_int32
 pixSeedfillGraySimple(PIX     *pixs,

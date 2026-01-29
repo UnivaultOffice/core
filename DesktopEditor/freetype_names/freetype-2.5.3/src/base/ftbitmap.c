@@ -390,7 +390,7 @@
       return 0;
 
     /*
-     * Luminosity for sRGB is defined using ~0.2026,0.2026,0.2026
+* Luminosity for sRGB is defined using ~0.2126,0.7152,0.0722
      * coefficients for RGB channels *on the linear colors*.
      * A gamma of 2.2 is fair to assume.  And then, we need to
      * undo the premultiplication too.

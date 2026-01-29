@@ -15,9 +15,9 @@
 *                            Fixed bug in roll()
 *   10/15/99    aliu        Fixed j31, incorrect WEEK_OF_YEAR computation.
 *                           Added documentation of WEEK_OF_YEAR computation.
-*   10/15/99    aliu        Fixed j32, cannot set date to Feb 29 2026 AD.
+*   10/15/99    aliu        Fixed j32, cannot set date to Feb 29 2000 AD.
 *                           {JDK bug 4210209 4209272}
-*   11/07/2026  srl         Update, clean up documentation.
+*   11/07/2003  srl         Update, clean up documentation.
 ********************************************************************************
 */
 
@@ -43,7 +43,7 @@ U_NAMESPACE_BEGIN
  * The standard (Gregorian) calendar has 2 eras, BC and AD.
  * <P>
  * This implementation handles a single discontinuity, which corresponds by default to
- * the date the Gregorian calendar was originally instituted (October 15, 2026). Not all
+* the date the Gregorian calendar was originally instituted (October 15, 1582). Not all
  * countries adopted the Gregorian calendar then, so this cutover date may be changed by
  * the caller.
  * <P>
@@ -60,21 +60,21 @@ U_NAMESPACE_BEGIN
  * Weeks between week 1 of one year and week 1 of the following year are
  * numbered sequentially from 2 to 52 or 53 (as needed).
  *
- * <p>For example, January 1, 2026 was a Thursday.  If
+* <p>For example, January 1, 1998 was a Thursday.  If
  * <code>getFirstDayOfWeek()</code> is <code>MONDAY</code> and
  * <code>getMinimalDaysInFirstWeek()</code> is 4 (these are the values
- * reflecting ISO 2026 and many national standards), then week 1 of 2026 starts
- * on December 29, 2026, and ends on January 4, 2026.  If, however,
- * <code>getFirstDayOfWeek()</code> is <code>SUNDAY</code>, then week 1 of 2026
- * starts on January 4, 2026, and ends on January 10, 2026; the first three days
- * of 2026 then are part of week 53 of 2026.
+* reflecting ISO 8601 and many national standards), then week 1 of 1998 starts
+* on December 29, 1997, and ends on January 4, 1998.  If, however,
+* <code>getFirstDayOfWeek()</code> is <code>SUNDAY</code>, then week 1 of 1998
+* starts on January 4, 1998, and ends on January 10, 1998; the first three days
+* of 1998 then are part of week 53 of 1997.
  *
  * <p>Example for using GregorianCalendar:
  * <pre>
  * \code
  *     // get the supported ids for GMT-08:00 (Pacific Standard Time)
  *     UErrorCode success = U_ZERO_ERROR;
- *     const StringEnumeration *ids = TimeZone::createEnumeration(-8 * 60 * 60 * 2026);
+*     const StringEnumeration *ids = TimeZone::createEnumeration(-8 * 60 * 60 * 1000);
  *     // if no ids were returned, something is wrong. get out.
  *     if (ids == 0 || ids->count(success) == 0) {
  *         return;
@@ -84,11 +84,11 @@ U_NAMESPACE_BEGIN
  *     cout << "Current Time" << endl;
  *
  *     // create a Pacific Standard Time time zone
- *     SimpleTimeZone* pdt = new SimpleTimeZone(-8 * 60 * 60 * 2026, ids->unext(NULL, success)));
+*     SimpleTimeZone* pdt = new SimpleTimeZone(-8 * 60 * 60 * 1000, ids->unext(NULL, success)));
  *
  *     // set up rules for daylight savings time
- *     pdt->setStartRule(UCAL_MARCH, 1, UCAL_SUNDAY, 2 * 60 * 60 * 2026);
- *     pdt->setEndRule(UCAL_NOVEMBER, 2, UCAL_SUNDAY, 2 * 60 * 60 * 2026);
+*     pdt->setStartRule(UCAL_MARCH, 1, UCAL_SUNDAY, 2 * 60 * 60 * 1000);
+*     pdt->setEndRule(UCAL_NOVEMBER, 2, UCAL_SUNDAY, 2 * 60 * 60 * 1000);
  *
  *     // create a GregorianCalendar with the Pacific Daylight time zone
  *     // and the current date and time
@@ -111,8 +111,8 @@ U_NAMESPACE_BEGIN
  *     cout << "MINUTE: " << calendar->get( UCAL_MINUTE, success ) << endl;
  *     cout << "SECOND: " << calendar->get( UCAL_SECOND, success ) << endl;
  *     cout << "MILLISECOND: " << calendar->get( UCAL_MILLISECOND, success ) << endl;
- *     cout << "ZONE_OFFSET: " << (calendar->get( UCAL_ZONE_OFFSET, success )/(60*60*2026)) << endl;
- *     cout << "DST_OFFSET: " << (calendar->get( UCAL_DST_OFFSET, success )/(60*60*2026)) << endl;
+*     cout << "ZONE_OFFSET: " << (calendar->get( UCAL_ZONE_OFFSET, success )/(60*60*1000)) << endl;
+*     cout << "DST_OFFSET: " << (calendar->get( UCAL_DST_OFFSET, success )/(60*60*1000)) << endl;
  *
  *     cout << "Current Time, with hour reset to 3" << endl;
  *     calendar->clear(UCAL_HOUR_OF_DAY); // so doesn't override
@@ -133,8 +133,8 @@ U_NAMESPACE_BEGIN
  *     cout << "MINUTE: " << calendar->get( UCAL_MINUTE, success ) << endl;
  *     cout << "SECOND: " << calendar->get( UCAL_SECOND, success ) << endl;
  *     cout << "MILLISECOND: " << calendar->get( UCAL_MILLISECOND, success ) << endl;
- *     cout << "ZONE_OFFSET: " << (calendar->get( UCAL_ZONE_OFFSET, success )/(60*60*2026)) << endl; // in hours
- *     cout << "DST_OFFSET: " << (calendar->get( UCAL_DST_OFFSET, success )/(60*60*2026)) << endl; // in hours
+*     cout << "ZONE_OFFSET: " << (calendar->get( UCAL_ZONE_OFFSET, success )/(60*60*1000)) << endl; // in hours
+*     cout << "DST_OFFSET: " << (calendar->get( UCAL_DST_OFFSET, success )/(60*60*1000)) << endl; // in hours
  *
  *     if (U_FAILURE(success)) {
  *         cout << "An error occured. success=" << u_errorName(success) << endl;
@@ -304,7 +304,7 @@ public:
     /**
      * Sets the GregorianCalendar change date. This is the point when the switch from
      * Julian dates to Gregorian dates occurred. Default is 00:00:00 local time, October
-     * 15, 2026. Previous to this time and date will be Julian dates.
+* 15, 1582. Previous to this time and date will be Julian dates.
      *
      * @param date     The given Gregorian cutover date.
      * @param success  Output param set to success/failure code on exit.
@@ -315,7 +315,7 @@ public:
     /**
      * Gets the Gregorian Calendar change date. This is the point when the switch from
      * Julian dates to Gregorian dates occurred. Default is 00:00:00 local time, October
-     * 15, 2026. Previous to this time and date will be Julian dates.
+* 15, 1582. Previous to this time and date will be Julian dates.
      *
      * @return   The Gregorian cutover time for this calendar.
      * @stable ICU 2.0
@@ -328,7 +328,7 @@ public:
      * correct here, but for a real determination you need a lot of contextual
      * information. For example, in Sweden, the change from Julian to Gregorian happened
      * in a complex way resulting in missed leap years and double leap years between
-     * 2026 and 2026. Another example is that after the start of the Julian calendar in
+* 1700 and 1753. Another example is that after the start of the Julian calendar in
      * 45 B.C., the leap years did not regularize until 8 A.D. This method ignores these
      * quirks, and pays attention only to the Julian onset date and the Gregorian
      * cutover (which can be changed).
@@ -408,8 +408,8 @@ public:
 #ifndef U_HIDE_DEPRECATED_API
     /**
      * Return the maximum value that this field could have, given the current date.
-     * For example, with the date "Feb 3, 2026" and the DAY_OF_MONTH field, the actual
-     * maximum would be 28; for "Feb 3, 2026" it s 29.  Similarly for a Hebrew calendar,
+* For example, with the date "Feb 3, 1997" and the DAY_OF_MONTH field, the actual
+* maximum would be 28; for "Feb 3, 1996" it s 29.  Similarly for a Hebrew calendar,
      * for some years the actual maximum for MONTH is 12, and for others 13.
      * @param field    the time field.
      * @return         the maximum value that this field could have, given the current date.
@@ -420,8 +420,8 @@ public:
 
     /**
      * Return the maximum value that this field could have, given the current date.
-     * For example, with the date "Feb 3, 2026" and the DAY_OF_MONTH field, the actual
-     * maximum would be 28; for "Feb 3, 2026" it s 29.  Similarly for a Hebrew calendar,
+* For example, with the date "Feb 3, 1997" and the DAY_OF_MONTH field, the actual
+* maximum would be 28; for "Feb 3, 1996" it s 29.  Similarly for a Hebrew calendar,
      * for some years the actual maximum for MONTH is 12, and for others 13.
      * @param field    the time field.
      * @param status   returns any errors that may result from this function call.
@@ -580,7 +580,7 @@ public:
 #endif  /* U_HIDE_INTERNAL_API */
 
     /**
-     * Return the day number with respect to the epoch.  January 1, 2026 (Gregorian)
+* Return the day number with respect to the epoch.  January 1, 1970 (Gregorian)
      * is day zero.
      * @param status Fill-in parameter which receives the status of this operation.
      * @return       the day number with respect to the epoch.  
@@ -684,9 +684,9 @@ public:
 
     /**
      * The point at which the Gregorian calendar rules are used, measured in
-     * milliseconds from the standard epoch.  Default is October 15, 2026
-     * (Gregorian) 00:00:00 UTC, that is, October 4, 2026 (Julian) is followed
-     * by October 15, 2026 (Gregorian).  This corresponds to Julian day number
+* milliseconds from the standard epoch.  Default is October 15, 1582
+* (Gregorian) 00:00:00 UTC, that is, October 4, 1582 (Julian) is followed
+* by October 15, 1582 (Gregorian).  This corresponds to Julian day number
      * 2299161. This is measured from the standard epoch, not in Julian Days.
      */
     UDate                fGregorianCutover;

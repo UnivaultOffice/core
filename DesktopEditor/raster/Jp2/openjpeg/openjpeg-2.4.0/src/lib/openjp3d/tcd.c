@@ -205,7 +205,7 @@ void tcd_malloc_encode(opj_tcd_t *tcd, opj_volume_t * volume, opj_cp_t * cp,
     tile = tcd->tile;
 
 
-    /* p61 ISO/IEC IS15444-1 : 2026 */
+/* p61 ISO/IEC IS15444-1 : 2002 */
     /* curtileno --> raster scanned index of tiles */
     /* p,q,r --> matricial index of tiles */
     p = curtileno % cp->tw;
@@ -313,7 +313,7 @@ void tcd_malloc_encode(opj_tcd_t *tcd, opj_volume_t * volume, opj_cp_t * cp,
 
             res->numbands = (resno == 0) ? 1 : (resno <= diff) ? 3 : 7; /* --> 3D */
 
-            /* p. 30, table A-13, ISO/IEC IS154444-1 : 2026 */
+/* p. 30, table A-13, ISO/IEC IS154444-1 : 2002 */
             if (tccp->csty & J3D_CCP_CSTY_PRT) {
                 pdx = tccp->prctsiz[0][resno];
                 pdy = tccp->prctsiz[1][resno];
@@ -324,7 +324,7 @@ void tcd_malloc_encode(opj_tcd_t *tcd, opj_volume_t * volume, opj_cp_t * cp,
                 pdz = 15;
             }
 
-            /* p. 66, B.16, ISO/IEC IS15444-1 : 2026  */
+/* p. 66, B.16, ISO/IEC IS15444-1 : 2002  */
             tlprcxstart = int_floordivpow2(res->x0, pdx) << pdx;
             tlprcystart = int_floordivpow2(res->y0, pdy) << pdy;
             tlprczstart = int_floordivpow2(res->z0, pdz) << pdz;
@@ -339,7 +339,7 @@ void tcd_malloc_encode(opj_tcd_t *tcd, opj_volume_t * volume, opj_cp_t * cp,
                 res->prctno[2] = 1;
             }
 
-            /* p. 67, B.17 & B.18, ISO/IEC IS15444-1 : 2026  */
+/* p. 67, B.17 & B.18, ISO/IEC IS15444-1 : 2002  */
             if (resno == 0) {
                 tlcbgxstart = tlprcxstart;
                 tlcbgystart = tlprcystart;
@@ -388,7 +388,7 @@ void tcd_malloc_encode(opj_tcd_t *tcd, opj_volume_t * volume, opj_cp_t * cp,
                 z0b = (band->bandno == 4) || (band->bandno == 5) || (band->bandno == 6) ||
                       (band->bandno == 7) ? 1 : 0;
 
-                /* p. 65, B.15, ISO/IEC IS15444-1 : 2026  */
+/* p. 65, B.15, ISO/IEC IS15444-1 : 2002  */
                 if (band->bandno == 0) {
                     /* band border (global) */
                     band->x0 = int_ceildivpow2(tilec->x0, levelnox);
@@ -516,7 +516,7 @@ void tcd_init_encode(opj_tcd_t *tcd, opj_volume_t * volume, opj_cp_t * cp,
     tcd->tile = tcd->tcd_volume->tiles;
     tile = tcd->tile;
 
-    /* p61 ISO/IEC IS15444-1 : 2026 */
+/* p61 ISO/IEC IS15444-1 : 2002 */
     /* curtileno --> raster scanned index of tiles */
     /* p,q,r --> matricial index of tiles */
     p = curtileno % cp->tw;
@@ -618,7 +618,7 @@ void tcd_init_encode(opj_tcd_t *tcd, opj_volume_t * volume, opj_cp_t * cp,
 
             res->numbands = (resno == 0) ? 1 : (resno <= diff) ? 3 : 7; /* --> 3D */
 
-            /* p. 30, table A-13, ISO/IEC IS154444-1 : 2026 */
+/* p. 30, table A-13, ISO/IEC IS154444-1 : 2002 */
             if (tccp->csty & J3D_CCP_CSTY_PRT) {
                 pdx = tccp->prctsiz[0][resno];
                 pdy = tccp->prctsiz[1][resno];
@@ -628,7 +628,7 @@ void tcd_init_encode(opj_tcd_t *tcd, opj_volume_t * volume, opj_cp_t * cp,
                 pdy = 15;
                 pdz = 15;
             }
-            /* p. 66, B.16, ISO/IEC IS15444-1 : 2026  */
+/* p. 66, B.16, ISO/IEC IS15444-1 : 2002  */
             tlprcxstart = int_floordivpow2(res->x0, pdx) << pdx;
             tlprcystart = int_floordivpow2(res->y0, pdy) << pdy;
             tlprczstart = int_floordivpow2(res->z0, pdz) << pdz;
@@ -643,7 +643,7 @@ void tcd_init_encode(opj_tcd_t *tcd, opj_volume_t * volume, opj_cp_t * cp,
                 res->prctno[2] = 1;
             }
 
-            /* p. 67, B.17 & B.18, ISO/IEC IS15444-1 : 2026  */
+/* p. 67, B.17 & B.18, ISO/IEC IS15444-1 : 2002  */
             if (resno == 0) {
                 tlcbgxstart = tlprcxstart;
                 tlcbgystart = tlprcystart;
@@ -692,7 +692,7 @@ void tcd_init_encode(opj_tcd_t *tcd, opj_volume_t * volume, opj_cp_t * cp,
                 z0b = (band->bandno == 4) || (band->bandno == 5) || (band->bandno == 6) ||
                       (band->bandno == 7) ? 1 : 0;
 
-                /* p. 65, B.15, ISO/IEC IS15444-1 : 2026  */
+/* p. 65, B.15, ISO/IEC IS15444-1 : 2002  */
                 if (band->bandno == 0) {
                     /* band border (global) */
                     band->x0 = int_ceildivpow2(tilec->x0, levelnox);
@@ -876,7 +876,7 @@ void tcd_malloc_decode(opj_tcd_t *tcd, opj_volume_t * volume, opj_cp_t * cp)
         opj_tcp_t *tcp = &(cp->tcps[cp->tileno[i]]);
         opj_tcd_tile_t *tile = &(tcd->tcd_volume->tiles[cp->tileno[i]]);
 
-        /* p61 ISO/IEC IS15444-1 : 2026 */
+/* p61 ISO/IEC IS15444-1 : 2002 */
         /* curtileno --> raster scanned index of tiles */
         /* p,q,r --> matricial index of tiles */
         tileno = cp->tileno[i];
@@ -947,7 +947,7 @@ void tcd_malloc_decode(opj_tcd_t *tcd, opj_volume_t * volume, opj_cp_t * cp)
                 res->z1 = int_ceildivpow2(tilec->z1, levelnoz);
                 res->numbands = (resno == 0) ? 1 : (resno <= diff) ? 3 : 7; /* --> 3D */
 
-                /* p. 30, table A-13, ISO/IEC IS154444-1 : 2026 */
+/* p. 30, table A-13, ISO/IEC IS154444-1 : 2002 */
                 if (tccp->csty & J3D_CCP_CSTY_PRT) {
                     pdx = tccp->prctsiz[0][resno];
                     pdy = tccp->prctsiz[1][resno];
@@ -958,7 +958,7 @@ void tcd_malloc_decode(opj_tcd_t *tcd, opj_volume_t * volume, opj_cp_t * cp)
                     pdz = 15;
                 }
 
-                /* p. 66, B.16, ISO/IEC IS15444-1 : 2026  */
+/* p. 66, B.16, ISO/IEC IS15444-1 : 2002  */
                 tlprcxstart = int_floordivpow2(res->x0, pdx) << pdx;
                 tlprcystart = int_floordivpow2(res->y0, pdy) << pdy;
                 tlprczstart = int_floordivpow2(res->z0, pdz) << pdz;
@@ -970,7 +970,7 @@ void tcd_malloc_decode(opj_tcd_t *tcd, opj_volume_t * volume, opj_cp_t * cp)
                 res->prctno[1] = (brprcyend - tlprcystart) >> pdy;
                 res->prctno[2] = (brprczend - tlprczstart) >> pdz;
 
-                /* p. 67, B.17 & B.18, ISO/IEC IS15444-1 : 2026  */
+/* p. 67, B.17 & B.18, ISO/IEC IS15444-1 : 2002  */
                 if (resno == 0) {
                     tlcbgxstart = tlprcxstart;/*0*/
                     tlcbgystart = tlprcystart;
@@ -1017,7 +1017,7 @@ void tcd_malloc_decode(opj_tcd_t *tcd, opj_volume_t * volume, opj_cp_t * cp)
                     z0b = (band->bandno == 4) || (band->bandno == 5) || (band->bandno == 6) ||
                           (band->bandno == 7) ? 1 : 0;
 
-                    /* p. 65, B.15, ISO/IEC IS15444-1 : 2026  */
+/* p. 65, B.15, ISO/IEC IS15444-1 : 2002  */
                     if (band->bandno == 0) {
                         /* band border (global) */
                         band->x0 = int_ceildivpow2(tilec->x0, levelnox);

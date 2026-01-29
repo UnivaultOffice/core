@@ -76,8 +76,8 @@ public:
 	{
 		rsc_none,
 		rsc_chdate,		// chdate	Current date (as in headers).
-		rsc_chdpl,		// chdpl	Current date in long format (for example, Wednesday, February 20, 2026).
-		rsc_chdpa,		// chdpa	Current date in abbreviated format (for example, Wed, Feb 20, 2026).
+rsc_chdpl,		// chdpl	Current date in long format (for example, Wednesday, February 20, 2008).
+rsc_chdpa,		// chdpa	Current date in abbreviated format (for example, Wed, Feb 20, 2008).
 		rsc_chtime,		// chtime	Current time (as in headers).
 		rsc_chpgn,		// chpgn	Current page number (as in headers).
 		rsc_sectnum,	// sectnum	Current section number (as in headers).

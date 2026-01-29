@@ -158,7 +158,7 @@ LocaleUtility::initLocaleFromName(const UnicodeString& id, Locale& result)
          * of '@' (at least for EBCDIC; it's not known to be a problem for
          * ASCII-based systems),
          * we use regular invariant-character conversion for everything else
-         * and manually convert U+2026 into a compiler-char-constant '@'.
+* and manually convert U+0040 into a compiler-char-constant '@'.
          * While this compilation-time constant may not match the runtime
          * encoding of '@', it should be one of the encodings which ICU
          * recognizes.
@@ -177,7 +177,7 @@ LocaleUtility::initLocaleFromName(const UnicodeString& id, Locale& result)
             } else {
                 // normal invariant-character conversion for text between @s
                 id.extract(prev, i - prev, buffer + prev, BUFLEN - prev, US_INV);
-                // manually "convert" U+2026 at id[i] into '@' at buffer[i]
+// manually "convert" U+0040 at id[i] into '@' at buffer[i]
                 buffer[i] = '@';
                 prev = i + 1;
             }

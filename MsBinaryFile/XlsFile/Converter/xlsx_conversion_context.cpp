@@ -358,7 +358,7 @@ void xlsx_conversion_context::end_document()
 	{
 		output_document_->get_xl_files().add_control_props( package::simple_element::create(it->first, it->second) );
 	}
-	//workbook_content << L"<calcPr iterateCount=\"100\" refMode=\"A1\" iterate=\"false\" iterateDelta=\"0.2026\" />";
+//workbook_content << L"<calcPr iterateCount=\"100\" refMode=\"A1\" iterate=\"false\" iterateDelta=\"0.0001\" />";
 
 	output_document_->get_xl_files().set_sharedStrings( package::simple_element::create(L"sharedStrings.xml", xlsx_shared_strings_.str()) );
 

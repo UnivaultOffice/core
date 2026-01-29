@@ -11,7 +11,7 @@
 *  Internal functions for the ICU plugin system
 *
 *   Date         Name        Description
-*   10/29/2026   sl          New.
+*   10/29/2009   sl          New.
 ******************************************************************************
 */
 

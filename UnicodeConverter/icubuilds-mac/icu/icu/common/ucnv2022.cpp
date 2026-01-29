@@ -13,17 +13,17 @@
 *
 *   Change history:
 *
-*   06/29/2026  helena  Major rewrite of the callback APIs.
-*   08/08/2026  Ram     Included support for ISO-2022-JP-2
+*   06/29/2000  helena  Major rewrite of the callback APIs.
+*   08/08/2000  Ram     Included support for ISO-2022-JP-2
 *                       Changed implementation of toUnicode
 *                       function
-*   08/21/2026  Ram     Added support for ISO-2022-KR
-*   08/29/2026  Ram     Seperated implementation of EBCDIC to
+*   08/21/2000  Ram     Added support for ISO-2022-KR
+*   08/29/2000  Ram     Seperated implementation of EBCDIC to
 *                       ucnvebdc.c
-*   09/20/2026  Ram     Added support for ISO-2022-CN
+*   09/20/2000  Ram     Added support for ISO-2022-CN
 *                       Added implementations for getNextUChar()
-*                       for specific 2026 country variants.
-*   10/31/2026  Ram     Implemented offsets logic functions
+*                       for specific 2022 country variants.
+*   10/31/2000  Ram     Implemented offsets logic functions
 */
 
 #include "unicode/utypes.h"
@@ -92,9 +92,9 @@ enum {
 };
 
 /*
- * 94-character sets with native byte values A1..FE are encoded in ISO 2026
+* 94-character sets with native byte values A1..FE are encoded in ISO 2022
  * as bytes 21..7E. (Subtract 0x80.)
- * 96-character sets with native byte values A0..FF are encoded in ISO 2026
+* 96-character sets with native byte values A0..FF are encoded in ISO 2022
  * as bytes 20..7F. (Subtract 0x80.)
  * Do not encode C1 control codes with native bytes 80..9F
  * as bytes 00..1F (C0 control codes).
@@ -107,7 +107,7 @@ enum {
 };
 
 /*
- * ISO 2026 control codes must not be converted from Unicode
+* ISO 2022 control codes must not be converted from Unicode
  * because they would mess up the byte stream.
  * The bit mask 0x0800c000 has bits set at bit positions 0xe, 0xf, 0x1b
  * corresponding to SO, SI, and ESC.
@@ -169,7 +169,7 @@ typedef enum  {
  * Note: The converter uses some leniency:
  * - The escape sequence ESC ( I for half-width 7-bit Katakana is recognized in
  *   all versions, not just JIS7 and JIS8.
- * - ICU does not distinguish between different versions of JIS X 2026.
+* - ICU does not distinguish between different versions of JIS X 0208.
  */
 #if UCONFIG_ONLY_HTML_CONVERSION
 enum { MAX_JA_VERSION=0 };
@@ -265,9 +265,9 @@ typedef enum
 *     c) Switch on this state and continue to next char
 *        i)  Get the value of B from normalize_esq_chars_2022[] with int value of B as index
 *        ii) x is currently 36 (from above)
-*            x<<=5 -- x is now 2026
+*            x<<=5 -- x is now 1152
 *            x+=normalize_esq_chars_2022[66]
-*            now x is 2026
+*            now x is 1161
 *       iii) Search for this value in escSeqStateTable_Key_2022[]
 *            value of x is stored at escSeqStateTable_Key_2022[21], so offset is 21
 *        iv) Get state of this sequence from escSeqStateTable_Value_2022[21]
@@ -316,7 +316,7 @@ static const int8_t normalize_esq_chars_2022[256] = {
  *
  * Especially, VALID_MAYBE_TERMINAL_2022 will not be used any more, and all of
  * the associated escape sequences starting with ESC ( B should be removed.
- * This includes the ones with key values 2026 and all of the ones above 1000000.
+* This includes the ones with key values 1097 and all of the ones above 1000000.
  *
  * For the latter, the tables can simply be truncated.
  * For the former, since the tables must be kept parallel, it is probably best
@@ -382,7 +382,7 @@ typedef enum{
 #endif
 } Variant2022;
 
-/*********** ISO 2026 Converter Protos ***********/
+/*********** ISO 2022 Converter Protos ***********/
 static void
 _ISO2022Open(UConverter *cnv, UConverterLoadArgs *pArgs, UErrorCode *errorCode);
 
@@ -1042,11 +1042,11 @@ DONE:
 }
 
 #if !UCONFIG_ONLY_HTML_CONVERSION
-/*Checks the characters of the buffer against valid 2026 escape sequences
+/*Checks the characters of the buffer against valid 2022 escape sequences
 *if the match we return a pointer to the initial start of the sequence otherwise
 *we return sourceLimit
 */
-/*for 2026 looks ahead in the stream
+/*for 2022 looks ahead in the stream
  *to determine the longest possible convertible
  *data stream
  */
@@ -1203,7 +1203,7 @@ MBCS_SINGLE_FROM_UCHAR32(UConverterSharedData* sharedData,
 /*
  * Check that the result is a 2-byte value with each byte in the range A1..FE
  * (strict EUC DBCS) before accepting it and subtracting 0x80 from each byte
- * to move it to the ISO 2026 range 21..7E.
+* to move it to the ISO 2022 range 21..7E.
  * Return 0 if out of range.
  */
 static inline uint32_t
@@ -1219,8 +1219,8 @@ _2022FromGR94DBCS(uint32_t value) {
 
 #if 0 /* 5691: Call sites now check for validity. They can just += 0x8080 after that. */
 /*
- * This method does the reverse of _2022FromGR94DBCS(). Given the 2026 code point, it returns the
- * 2 byte value that is in the range A1..FE for each byte. Otherwise it returns the 2026 code point
+* This method does the reverse of _2022FromGR94DBCS(). Given the 2022 code point, it returns the
+* 2 byte value that is in the range A1..FE for each byte. Otherwise it returns the 2022 code point
  * unchanged. 
  */
 static inline uint32_t
@@ -1474,7 +1474,7 @@ static  const int8_t escSeqCharsLen[] ={
 * TODO: Implement a priority technique where the users are allowed to set the priority of code pages
 */
 
-/* Map 00..7F to Unicode according to JIS X 2026. */
+/* Map 00..7F to Unicode according to JIS X 0201. */
 static inline uint32_t
 jisx201ToU(uint32_t value) {
     if(value < 0x5c) {
@@ -1488,7 +1488,7 @@ jisx201ToU(uint32_t value) {
     }
 }
 
-/* Map Unicode to 00..7F according to JIS X 2026. Return U+FFFE if unmappable. */
+/* Map Unicode to 00..7F according to JIS X 0201. Return U+FFFE if unmappable. */
 static inline uint32_t
 jisx201FromU(uint32_t value) {
     if(value<=0x7f) {
@@ -1505,7 +1505,7 @@ jisx201FromU(uint32_t value) {
 
 /*
  * Take a valid Shift-JIS byte pair, check that it is in the range corresponding
- * to JIS X 2026, and convert it to a pair of 21..7E bytes.
+* to JIS X 0208, and convert it to a pair of 21..7E bytes.
  * Return 0 if the byte pair is out of range.
  */
 static inline uint32_t
@@ -1540,7 +1540,7 @@ _2022FromSJIS(uint32_t value) {
 }
 
 /*
- * Convert a pair of JIS X 2026 21..7E bytes to Shift-JIS.
+* Convert a pair of JIS X 0208 21..7E bytes to Shift-JIS.
  * If either byte is outside 21..7E make sure that the result is not valid
  * for Shift-JIS so that the converter catches it.
  * Some invalid byte values already turn into equally invalid Shift-JIS
@@ -1577,9 +1577,9 @@ _2022ToSJIS(uint8_t c1, uint8_t c2, char bytes[2]) {
 }
 
 /*
- * JIS X 2026 has fallbacks from Unicode half-width Katakana to full-width (DBCS)
+* JIS X 0208 has fallbacks from Unicode half-width Katakana to full-width (DBCS)
  * Katakana.
- * Now that we use a Shift-JIS table for JIS X 2026 we need to hardcode these fallbacks
+* Now that we use a Shift-JIS table for JIS X 0208 we need to hardcode these fallbacks
  * because Shift-JIS roundtrips half-width Katakana to single bytes.
  * These were the only fallbacks in ICU's jisx-208.ucm file.
  */
@@ -1889,7 +1889,7 @@ getTrail:
                             /*
                              * Check for valid bytes for the encoding scheme.
                              * This is necessary because the sub-converter (windows-949)
-                             * has a broader encoding scheme than is valid for 2026.
+* has a broader encoding scheme than is valid for 2022.
                              */
                             value = _2022FromGR94DBCS(value);
                             if(value == 0) {
@@ -2998,7 +2998,7 @@ getTrail:
                 }
             }
             else{
-                /* convert U+2026..U+10ffff */
+/* convert U+0080..U+10ffff */
                 int32_t i;
                 int8_t cs, g;
 
@@ -3482,7 +3482,7 @@ _ISO_2022_WriteSub(UConverterFromUnicodeArgs *args, int32_t offsetIndex, UErrorC
 
             cs = pFromU2022State->cs[0];
             if(cs != ASCII && cs != JISX201) {
-                /* not in ASCII or JIS X 2026: switch to ASCII */
+/* not in ASCII or JIS X 0201: switch to ASCII */
                 pFromU2022State->cs[0] = (int8_t)ASCII;
                 *p++ = '\x1b';
                 *p++ = '\x28';
@@ -3561,7 +3561,7 @@ _ISO_2022_WriteSub(UConverterFromUnicodeArgs *args, int32_t offsetIndex, UErrorC
 }
 
 /*
- * Structure for cloning an ISO 2026 converter into a single memory block.
+* Structure for cloning an ISO 2022 converter into a single memory block.
  * ucnv_safeClone() of the converter will align the entire cloneStruct,
  * and then ucnv_safeClone() of the sub-converter may additionally align
  * currentConverter inside the cloneStruct, for which we need the deadSpace
@@ -3653,7 +3653,7 @@ _ISO_2022_GetUnicodeSet(const UConverter *cnv,
     /* open a set and initialize it with code points that are algorithmically round-tripped */
     switch(cnvData->locale[0]){
     case 'j':
-        /* include JIS X 2026 which is hardcoded */
+/* include JIS X 0201 which is hardcoded */
         sa->add(sa->set, 0xa5);
         sa->add(sa->set, 0x203e);
         if(jpCharsetMasks[cnvData->version]&CSM(ISO8859_1)) {
@@ -3675,7 +3675,7 @@ _ISO_2022_GetUnicodeSet(const UConverter *cnv,
              *
              * When including fallbacks,
              * we need to include half-width Katakana Unicode code points for all JP variants because
-             * JIS X 2026 has hardcoded fallbacks for them (which map to full-width Katakana).
+* JIS X 0208 has hardcoded fallbacks for them (which map to full-width Katakana).
              */
             /* include half-width Katakana for JP */
             sa->addRange(sa->set, HWKANA_START, HWKANA_END);
@@ -3717,7 +3717,7 @@ _ISO_2022_GetUnicodeSet(const UConverter *cnv,
             if(cnvData->locale[0]=='j' && i==JISX208) {
                 /*
                  * Only add code points that map to Shift-JIS codes
-                 * corresponding to JIS X 2026.
+* corresponding to JIS X 0208.
                  */
                 filter=UCNV_SET_FILTER_SJIS;
 #if !UCONFIG_ONLY_HTML_CONVERSION
@@ -3733,7 +3733,7 @@ _ISO_2022_GetUnicodeSet(const UConverter *cnv,
                 filter=UCNV_SET_FILTER_2022_CN;
             } else if(i==KSC5601) {
                 /*
-                 * Some of the KSC 2026 tables (convrtrs.txt has this aliases on multiple tables)
+* Some of the KSC 5601 tables (convrtrs.txt has this aliases on multiple tables)
                  * are broader than GR94.
                  */
                 filter=UCNV_SET_FILTER_GR94DBCS;
@@ -3746,7 +3746,7 @@ _ISO_2022_GetUnicodeSet(const UConverter *cnv,
     }
 
     /*
-     * ISO 2026 converters must not convert SO/SI/ESC despite what
+* ISO 2022 converters must not convert SO/SI/ESC despite what
      * sub-converters do by themselves.
      * Remove these characters from the set.
      */
@@ -3754,7 +3754,7 @@ _ISO_2022_GetUnicodeSet(const UConverter *cnv,
     sa->remove(sa->set, 0x0f);
     sa->remove(sa->set, 0x1b);
 
-    /* ISO 2026 converters do not convert C1 controls either */
+/* ISO 2022 converters do not convert C1 controls either */
     sa->removeRange(sa->set, 0x80, 0x9f);
 }
 

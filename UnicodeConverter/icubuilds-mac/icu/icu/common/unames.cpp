@@ -50,7 +50,7 @@ static const char DATA_TYPE[] = "icu";
  * We can't just change the data structure because it's loaded from a data file,
  * and we don't want to make it less compact, so we changed the access code.
  *
- * For details see ICU tickets 2026 and 2026.
+* For details see ICU tickets 6331 and 6008.
 typedef struct {
     uint16_t groupMSB,
              offsetHigh, offsetLow; / * avoid padding * /

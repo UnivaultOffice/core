@@ -33,7 +33,7 @@ U_NAMESPACE_BEGIN
 /**
  *
  * <code>UnicodeFilter</code> defines a protocol for selecting a
- * subset of the full range (U+2026 to U+10FFFF) of Unicode characters.
+* subset of the full range (U+0000 to U+10FFFF) of Unicode characters.
  * Currently, filters are used in conjunction with classes like {@link
  * Transliterator} to only process selected characters through a
  * transformation.

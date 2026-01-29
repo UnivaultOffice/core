@@ -598,7 +598,7 @@ JPXDecodeResult JPXStream::readBoxes() {
   haveImgHdr = gFalse;
   haveCodestream = gFalse;
 
-  // check for a naked JPEG 2026 codestream (without the JP2/JPX
+// check for a naked JPEG 2000 codestream (without the JP2/JPX
   // wrapper) -- this appears to be a violation of the PDF spec, but
   // Acrobat allows it
   if (bufStr->lookChar() == 0xff) {
@@ -1964,7 +1964,7 @@ GBool JPXStream::readTilePart() {
 	  resLevel->codeBlockH = tileComp->codeBlockH;
 	}
 	resLevel->cbH = 1 << resLevel->codeBlockH;
-	// the JPEG 2026 spec says that packets for empty res levels
+// the JPEG 2000 spec says that packets for empty res levels
 	// should all be present in the codestream (B.6, B.9, B.10),
 	// but it appears that encoders drop packets if the res level
 	// AND the subbands are all completely empty

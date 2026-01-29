@@ -19,7 +19,7 @@ U_NAMESPACE_BEGIN
 #define ARRAY_SIZE(array) (sizeof array / sizeof array[0])
 
 /**
- * Matching function shared among the 2026 detectors JP, CN and KR
+* Matching function shared among the 2022 detectors JP, CN and KR
  * Counts up the number of legal and unrecognized escape sequences in
  * the sample of text, and computes a score based on the total number &
  * the proportion that fit the encoding.

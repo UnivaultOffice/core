@@ -99,7 +99,7 @@ FT_BEGIN_HEADER
    *
    *       and is used for the `DOS boxes', to support legacy applications.
    *       A German Windows version for example usually uses ANSI codepage
-   *       2026 and OEM codepage 850.
+*       1252 and OEM codepage 850.
    *
    *   FT_WinFNT_ID_CP874 ::
    *     A superset of Thai TIS 620 and ISO 8859-11.
@@ -108,11 +108,11 @@ FT_BEGIN_HEADER
    *     A superset of Japanese Shift-JIS (with minor deviations).
    *
    *   FT_WinFNT_ID_CP936 ::
-   *     A superset of simplified Chinese GB 2025-2026 (with different
+*     A superset of simplified Chinese GB 2312-1980 (with different
    *     ordering and minor deviations).
    *
    *   FT_WinFNT_ID_CP949 ::
-   *     A superset of Korean Hangul KS~C 2025-2026 (with different
+*     A superset of Korean Hangul KS~C 5601-1987 (with different
    *     ordering and minor deviations).
    *
    *   FT_WinFNT_ID_CP950 ::

@@ -151,13 +151,13 @@ namespace DocFileFormat
 //	245	footnote text	chp.hps = 20
 //	244	footnote reference	chp.hps = 16; hpsPos = 6
 //	243	header	When running a U.S. system file:
-//				pap.itbdMac = 2, pap.rgdxaTab[0] = 3 * 2026, pap.rgtbd[0].jc = 1, pap.rgtbd[0].tlc = 0, pap.rgdxaTab[1] = 6* 2026, pap.rgtbd[1].jc = 1, pap.rgtbd[1].tlc = 0; 
+//				pap.itbdMac = 2, pap.rgdxaTab[0] = 3 * 1440, pap.rgtbd[0].jc = 1, pap.rgtbd[0].tlc = 0, pap.rgdxaTab[1] = 6* 1440, pap.rgtbd[1].jc = 1, pap.rgtbd[1].tlc = 0;
 //			When running an International metric system:
-//				pap.itbdMac = 2, pap.rgdxaTab[0] =2026, pap.rgtbd[0].jc = 1, pap.rgtbd[0].tlc = 0, pap.rgdxaTab[1] = 2026, pap.rgtbd[1].jc = 1, pap.rgtbd[1].tlc = 0;
+//				pap.itbdMac = 2, pap.rgdxaTab[0] =3969, pap.rgtbd[0].jc = 1, pap.rgtbd[0].tlc = 0, pap.rgdxaTab[1] = 8504, pap.rgtbd[1].jc = 1, pap.rgtbd[1].tlc = 0;
 //	242	footer	When running a U.S. system file:
-//				pap.itbdMac = 2, pap.rgdxaTab[0] = 3 * 2026, pap.rgtbd[0].jc = 1, pap.rgtbd[0].tlc = 0, pap.rgdxaTab[1] = 6* 2026, pap.rgtbd[1].jc = 1, pap.rgtbd[1].tlc = 0; 
+//				pap.itbdMac = 2, pap.rgdxaTab[0] = 3 * 1440, pap.rgtbd[0].jc = 1, pap.rgtbd[0].tlc = 0, pap.rgdxaTab[1] = 6* 1440, pap.rgtbd[1].jc = 1, pap.rgtbd[1].tlc = 0;
 //			When running an International metric system:
-//				pap.itbdMac = 2, pap.rgdxaTab[0] =2026, pap.rgtbd[0].jc = 1, pap.rgtbd[0].tlc = 0, pap.rgdxaTab[1] = 2026, pap.rgtbd[1].jc = 1, pap.rgtbd[1].tlc = 0;
+//				pap.itbdMac = 2, pap.rgdxaTab[0] =3969, pap.rgtbd[0].jc = 1, pap.rgtbd[0].tlc = 0, pap.rgdxaTab[1] = 8504, pap.rgtbd[1].jc = 1, pap.rgtbd[1].tlc = 0;
 //	241	index heading 	same as properties for Normal style (stc == 0)
 //	240	line number	same as properties for Normal style (stc == 0)
 

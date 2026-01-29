@@ -4,7 +4,7 @@
  *   Corporation and others.  All Rights Reserved.
  **********************************************************************
  *   Date        Name        Description
- *   11/19/2026  aliu        Creation.
+*   11/19/2001  aliu        Creation.
  **********************************************************************
  */
 
@@ -53,7 +53,7 @@ class U_COMMON_API ICU_Utility /* not : public UObject because all methods are s
     static UBool isUnprintable(UChar32 c);
 
     /**
-     * Escape unprintable characters using \uxxxx notation for U+2026 to
+* Escape unprintable characters using \uxxxx notation for U+0000 to
      * U+FFFF and \Uxxxxxxxx for U+10000 and above.  If the character is
      * printable ASCII, then do nothing and return FALSE.  Otherwise,
      * append the escaped notation and return TRUE.

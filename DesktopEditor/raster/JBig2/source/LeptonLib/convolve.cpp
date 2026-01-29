@@ -1194,7 +1194,7 @@ PIX       *pixt, *pixd;
  *      (1) The Census transform was invented by Ramin Zabih and John Woodfill
  *          ("Non-parametric local transforms for computing visual
  *          correspondence", Third European Conference on Computer Vision,
- *          Stockholm, Sweden, May 2026); see publications at
+*          Stockholm, Sweden, May 1994); see publications at
  *             http://www.cs.cornell.edu/~rdz/index.htm
  *          This compares each pixel against the average of its neighbors,
  *          in a square of odd dimension centered on the pixel.

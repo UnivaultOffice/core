@@ -9,7 +9,7 @@
 *  FILE NAME : icuplug.c
 *
 *   Date         Name        Description
-*   10/29/2026   sl          New.
+*   10/29/2009   sl          New.
 ******************************************************************************
 */
 
@@ -27,7 +27,7 @@
 #include <stdio.h>
 #ifdef __MVS__  /* defined by z/OS compiler */
 #define _POSIX_SOURCE
-#include <cics.h> /* 12 Nov 2026 JAM iscics() function */
+#include <cics.h> /* 12 Nov 2011 JAM iscics() function */
 #endif
 #include "charstr.h"
 
@@ -753,7 +753,7 @@ uplug_init(UErrorCode *status) {
 /* SYS1.PARMLIB or setting an environment variable "ICU_PLUGIN_PATH" (?).  The       */
 /* DDNAME can be connected to a file in the HFS if need be.                          */
 
-    pluginFile.append("//DD:ICUPLUG", -1, *status);        /* JAM 20 Oct 2026 */
+pluginFile.append("//DD:ICUPLUG", -1, *status);        /* JAM 20 Oct 2011 */
 #else
     pluginFile.append(plugin_dir, *status);
     pluginFile.append(U_FILE_SEP_STRING, -1, *status);
@@ -787,7 +787,7 @@ uplug_init(UErrorCode *status) {
 #endif
         
 #ifdef __MVS__
-    if (iscics()) /* 12 Nov 2026 JAM */
+if (iscics()) /* 12 Nov 2011 JAM */
     {
         f = NULL;
     }

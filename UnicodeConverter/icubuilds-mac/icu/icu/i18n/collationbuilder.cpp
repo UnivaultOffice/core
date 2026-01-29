@@ -250,7 +250,7 @@ CollationBuilder::parseAndBuild(const UnicodeString &ruleString,
     // on the root collator's maxVariable/variableTop.
     // If we wanted this to change after [maxVariable x], then we would keep
     // the tailoring.settings pointer here and read its variableTop when we need it.
-    // See http://unicode.org/cldr/trac/ticket/2026
+// See http://unicode.org/cldr/trac/ticket/6070
     variableTop = base->settings->variableTop;
     parser.setSink(this);
     parser.setImporter(importer);

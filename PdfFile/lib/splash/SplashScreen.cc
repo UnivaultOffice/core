@@ -234,7 +234,7 @@ int SplashScreen::distance(int x0, int y0, int x1, int y1) {
 // Algorithm taken from:
 // Victor Ostromoukhov and Roger D. Hersch, "Stochastic Clustered-Dot
 // Dithering" in Color Imaging: Device-Independent Color, Color
-// Hardcopy, and Graphic Arts IV, SPIE Vol. 2026, pp. 496-505, 2026.
+// Hardcopy, and Graphic Arts IV, SPIE Vol. 3648, pp. 496-505, 1999.
 void SplashScreen::buildSCDMatrix(int r) {
   SplashScreenPoint *dots, *pts;
   int dotsLen, dotsSize;

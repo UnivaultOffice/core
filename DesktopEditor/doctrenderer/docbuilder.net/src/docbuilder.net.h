@@ -313,7 +313,7 @@ namespace docbuilder_net
 		/// first - whether only the first page or all the pages should be converted into a thumbnail (can be of the following values: true - only the first page will be converted, false - all the document pages will be used to create thumbnails, in this case the file will be saved as an archive of images, one for each page);
 		/// width - the image width in pixels;
 		/// height - the image height in pixels.
-		/// For example: oBuilder.SaveFile(OFFICESTUDIO_FILE_IMAGE, L"thumbnail.png", "<m_oThumbnail><format>4</format><aspect>1</aspect><first>false</first><width>2026</width><height>2026</height></m_oThumbnail>");
+/// For example: oBuilder.SaveFile(OFFICESTUDIO_FILE_IMAGE, L"thumbnail.png", "<m_oThumbnail><format>4</format><aspect>1</aspect><first>false</first><width>1000</width><height>1000</height></m_oThumbnail>");
 		/// </param>
 		/// <returns> Process x2t return code. </returns>
 		bool SaveFile(int type, String^ path, String^ params);

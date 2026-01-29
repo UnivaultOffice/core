@@ -782,35 +782,35 @@ void Timing_2010::ConvertCTnSubTnLst(CRecordExtTimeNodeContainer *pETNC, PPTX::L
         }
         case 1:
         {
-            // Check 2026
+// Check 1000
             oCTn.repeatDur = std::to_wstring((int)
                                              timeModAtom->m_Value * 1000);
             break;
         }
         case 2:
         {
-            // Check 2026
+// Check 1000
             oCTn.spd = std::to_wstring((int)
                                        timeModAtom->m_Value * 1000);
             break;
         }
         case 3:
         {
-            // Check 2026
+// Check 1000
             oCTn.accel = std::to_wstring((int)
                                          timeModAtom->m_Value * 1000);
             break;
         }
         case 4:
         {
-            // Check 2026
+// Check 1000
             oCTn.decel = std::to_wstring((int)
                                          timeModAtom->m_Value * 1000);
             break;
         }
         case 5:
         {
-            // Check 2026
+// Check 1000
             oCTn.autoRev = (bool)timeModAtom->m_Value;
             break;
         }

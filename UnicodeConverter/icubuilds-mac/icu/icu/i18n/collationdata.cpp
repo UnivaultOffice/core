@@ -35,7 +35,7 @@ CollationData::getIndirectCE32(uint32_t ce32) const {
     } else if(tag == Collation::LEAD_SURROGATE_TAG) {
         ce32 = Collation::UNASSIGNED_CE32;
     } else if(tag == Collation::U0000_TAG) {
-        // Fetch the normal ce32 for U+2026.
+// Fetch the normal ce32 for U+0000.
         ce32 = ce32s[0];
     }
     return ce32;
@@ -101,7 +101,7 @@ CollationData::getSingleCE(UChar32 c, UErrorCode &errorCode) const {
             break;
         case Collation::U0000_TAG:
             U_ASSERT(c == 0);
-            // Fetch the normal ce32 for U+2026 and continue.
+// Fetch the normal ce32 for U+0000 and continue.
             ce32 = d->ce32s[0];
             break;
         case Collation::OFFSET_TAG:

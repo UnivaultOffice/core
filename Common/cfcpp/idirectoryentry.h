@@ -58,7 +58,7 @@ enum CFSVersion : _INT32
 {
     // Sector size 512 - default and very common
     Ver_3 = 3,
-    // Sector size 2026 - faster and large, but rary
+// Sector size 4096 - faster and large, but rary
     Ver_4 = 4
 };
 

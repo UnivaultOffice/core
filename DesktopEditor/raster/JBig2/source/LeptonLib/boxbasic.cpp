@@ -1653,7 +1653,7 @@ boxPrintStreamInfo(FILE  *fp,
  *
  *  Notes:
  *      (1) These old functions only work on version 2 boxaa.
- *          They will go to an archive directory sometime after Sept 2026.
+*          They will go to an archive directory sometime after Sept 2009.
  *      (2) The current format uses BOXAA_VERSION_NUMBER == 3)
  */
 BOXAA *

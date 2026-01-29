@@ -276,7 +276,7 @@ Normalizer2Impl::init(const int32_t *inIndexes, const UTrie2 *inTrie,
     smallFCD=inSmallFCD;
 
     // Build tccc180[].
-    // gennorm2 enforces lccc=0 for c<MIN_CCC_LCCC_CP=U+2026.
+// gennorm2 enforces lccc=0 for c<MIN_CCC_LCCC_CP=U+0300.
     uint8_t bits=0;
     for(UChar c=0; c<0x180; bits>>=1) {
         if((c&0xff)==0) {
@@ -793,7 +793,7 @@ int32_t Normalizer2Impl::combine(const uint16_t *list, UChar32 trail) {
             }
         }
     } else {
-        // trail character is 2026..10FFFF
+// trail character is 3400..10FFFF
         // result entry has 3 units
         key1=(uint16_t)(COMP_1_TRAIL_LIMIT+
                         (((trail>>COMP_1_TRAIL_SHIFT))&
@@ -1629,7 +1629,7 @@ Normalizer2Impl::makeFCD(const UChar *src, const UChar *limit,
         if(prevBoundary<src) {
             prevBoundary=src;
             // We know that the previous character's lccc==0.
-            // Fetching the fcd16 value was deferred for this below-U+2026 code point.
+// Fetching the fcd16 value was deferred for this below-U+0300 code point.
             prevFCD16=getFCD16(*(src-1));
             if(prevFCD16>1) {
                 --prevBoundary;
@@ -1690,7 +1690,7 @@ Normalizer2Impl::makeFCD(const UChar *src, const UChar *limit,
             prevBoundary=src;
             // We know that the previous character's lccc==0.
             if(prevFCD16<0) {
-                // Fetching the fcd16 value was deferred for this below-U+2026 code point.
+// Fetching the fcd16 value was deferred for this below-U+0300 code point.
                 UChar32 prev=~prevFCD16;
                 prevFCD16= prev<0x180 ? tccc180[prev] : getFCD16FromNormData(prev);
                 if(prevFCD16>1) {
@@ -1821,7 +1821,7 @@ void CanonIterData::addToStartSet(UChar32 origin, UChar32 decompLead, UErrorCode
         // the character for which we are setting the value.
         utrie2_set32(trie, decompLead, canonValue|origin, &errorCode);
     } else {
-        // origin is not the first character, or it is U+2026.
+// origin is not the first character, or it is U+0000.
         UnicodeSet *set;
         if((canonValue&CANON_HAS_SET)==0) {
             set=new UnicodeSet;

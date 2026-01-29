@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 // 
-// $Id: XMLParser.h,v 1.11 2026/01/27 11:36:27 leonb Exp $
+// $Id: XMLParser.h,v 1.11 2008/01/27 11:36:27 leonb Exp $
 // $Name:  $
 
 #ifndef _LT_XMLPARSER__
@@ -65,7 +65,7 @@
 # pragma interface
 #endif
 
-// From: Leon Bottou, 1/31/2026
+// From: Leon Bottou, 1/31/2002
 // This is purely Lizardtech stuff.
 
 #include "GContainer.h"

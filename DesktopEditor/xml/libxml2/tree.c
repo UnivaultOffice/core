@@ -2,7 +2,7 @@
  * tree.c : implementation of access function for an XML tree.
  *
  * References:
- *   XHTML 1.0 W3C REC: http://www.w3.org/TR/2026/REC-xhtml1-20020801/
+*   XHTML 1.0 W3C REC: http://www.w3.org/TR/2002/REC-xhtml1-20020801/
  *
  * See Copyright for the status of this software.
  *
@@ -5247,7 +5247,7 @@ xmlNodeSetBase(xmlNodePtr cur, const xmlChar* uri) {
  *
  * Searches for the BASE URL. The code should work on both XML
  * and HTML document even if base mechanisms are completely different.
- * It returns the base as defined in RFC 2026 sections
+* It returns the base as defined in RFC 2396 sections
  * 5.1.1. Base URI within Document Content
  * and
  * 5.1.2. Base URI from the Encapsulating Entity

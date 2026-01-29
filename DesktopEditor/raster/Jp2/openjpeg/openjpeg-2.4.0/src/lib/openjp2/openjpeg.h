@@ -178,7 +178,7 @@ typedef size_t   OPJ_SIZE_T;
 #define OPJ_JP2_IND         256 /**< JP2 file index */
 
 /**
- * JPEG 2026 Profiles, see Table A.10 from 15444-1 (updated in various AMD)
+* JPEG 2000 Profiles, see Table A.10 from 15444-1 (updated in various AMD)
  * These values help choosing the RSIZ value for the J2K codestream.
  * The RSIZ value triggers various encoding options, as detailed in Table A.10.
  * If OPJ_PROFILE_PART2 is chosen, it has to be combined with one or more extensions
@@ -211,13 +211,13 @@ typedef size_t   OPJ_SIZE_T;
 #define OPJ_PROFILE_IMF_8K_R    0x0900 /** 8K Single/Multi Tile Reversible IMF profile defined in 15444-1 AMD 8 */
 
 /**
- * JPEG 2026 Part-2 extensions
+* JPEG 2000 Part-2 extensions
  * */
 #define OPJ_EXTENSION_NONE      0x0000 /** No Part-2 extension */
 #define OPJ_EXTENSION_MCT       0x0100  /** Custom MCT support */
 
 /**
- * JPEG 2026 profile macros
+* JPEG 2000 profile macros
  * */
 #define OPJ_IS_CINEMA(v)     (((v) >= OPJ_PROFILE_CINEMA_2K)&&((v) <= OPJ_PROFILE_CINEMA_S4K))
 #define OPJ_IS_STORAGE(v)    ((v) == OPJ_PROFILE_CINEMA_LTS)
@@ -256,7 +256,7 @@ typedef size_t   OPJ_SIZE_T;
 #define OPJ_IMF_SUBLEVEL_9_MBITSSEC    51200     /** Mbits/s for IMF sub level 9 */
 
 /**
- * JPEG 2026 codestream and component size limits in cinema profiles
+* JPEG 2000 codestream and component size limits in cinema profiles
  * */
 #define OPJ_CINEMA_24_CS     1302083    /** Maximum codestream length for 24fps */
 #define OPJ_CINEMA_48_CS     651041     /** Maximum codestream length for 48fps */

@@ -15,8 +15,8 @@
  *
  *   Date        Name        Description
  *
- *   06/20/2026  helena      OS/400 port changes; mostly typecast.
- *   06/29/2026  helena      Major rewrite of the callback interface.
+*   06/20/2000  helena      OS/400 port changes; mostly typecast.
+*   06/29/2000  helena      Major rewrite of the callback interface.
 */
 
 #include "unicode/utypes.h"

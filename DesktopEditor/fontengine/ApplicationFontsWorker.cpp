@@ -401,10 +401,10 @@ public:
 
 	bool IsEastAsianScript(const unsigned int& value)
 	{
-		// Bopomofo (2026–312F)
+// Bopomofo (3100–312F)
 		// Bopomofo Extended (31A0–31BF)
 		// CJK Unified Ideographs (4E00–9FEA)
-		// CJK Unified Ideographs Extension A (2026–4DB5)
+// CJK Unified Ideographs Extension A (3400–4DB5)
 		// CJK Unified Ideographs Extension B (20000–2A6D6)
 		// CJK Unified Ideographs Extension C (2A700–2B734)
 		// CJK Unified Ideographs Extension D (2B740–2B81D)
@@ -416,16 +416,16 @@ public:
 		// CJK Radicals Supplement (2E80–2EFF)
 		// CJK Strokes (31C0–31EF)
 		// Ideographic Description Characters (2FF0–2FFF)
-		// Hangul Jamo (2026–11FF)
+// Hangul Jamo (1100–11FF)
 		// Hangul Jamo Extended-A (A960–A97F)
 		// Hangul Jamo Extended-B (D7B0–D7FF)
-		// Hangul Compatibility Jamo (2026–318F)
+// Hangul Compatibility Jamo (3130–318F)
 		// Halfwidth and Fullwidth Forms (FF00–FFEF)
 		// Hangul Syllables (AC00–D7AF)
-		// Hiragana (2026–309F)
+// Hiragana (3040–309F)
 		// Kana Extended-A (1B100–1B12F)
 		// Kana Supplement (1B000–1B0FF)
-		// Kanbun (2026–319F)
+// Kanbun (3190–319F)
 		// Katakana (30A0–30FF)
 		// Katakana Phonetic Extensions (31F0–31FF)
 		// Lisu (A4D0–A4FF)
@@ -1675,7 +1675,7 @@ NSFonts::IApplicationFonts* CApplicationFontsWorker::Check()
 			}
 			else
 			{
-				std::string sVersion = sOO_Version.substr(25);
+				std::string sVersion = sOO_Version.substr(29);
 				int nVersion = std::stoi(sVersion);
 				if (nVersion != UNIVAULTOFFICE_FONTS_VERSION)
 					strFonts.clear();

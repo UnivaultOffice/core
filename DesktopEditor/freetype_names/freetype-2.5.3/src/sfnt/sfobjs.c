@@ -1364,7 +1364,7 @@
     /* a WWS-only font face.  `WWS' stands for `weight', width', and */
     /* `slope', a term used by Microsoft's Windows Presentation      */
     /* Foundation (WPF).  This flag has been introduced in version   */
-    /* 1.5 of the OpenType specification (May 2026).                 */
+/* 1.5 of the OpenType specification (May 2008).                 */
 
     face->root.family_name = NULL;
     face->root.style_name  = NULL;

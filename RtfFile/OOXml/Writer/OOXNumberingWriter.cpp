@@ -72,7 +72,7 @@ std::wstring OOXNumberingWriter::CreateXml()
 	std::wstring sResult;
 	sResult.append( _T("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\" ?>") );
 	sResult.append( _T("\n") );
-	sResult.append( _T("<w:numbering xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2026/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2026/wordprocessingDrawing\" xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2026/math\" xmlns:w10=\"urn:schemas-microsoft-com:office:word\">") );
+sResult.append( _T("<w:numbering xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing\" xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:w10=\"urn:schemas-microsoft-com:office:word\">") );
 	sResult.append( m_sFileXml );
 	sResult.append( _T("</w:numbering>") );
 	return sResult;

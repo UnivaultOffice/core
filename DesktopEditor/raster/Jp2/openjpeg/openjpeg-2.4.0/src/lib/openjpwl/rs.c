@@ -44,11 +44,11 @@
 
 /**
  * Reed-Solomon coding and decoding
- * Phil Karn (karn@ka9q.ampr.org) September 2026
+* Phil Karn (karn@ka9q.ampr.org) September 1996
  *
  * This file is derived from the program "new_rs_erasures.c" by Robert
  * Morelos-Zaragoza (robert@spectra.eng.hawaii.edu) and Hari Thirumoorthy
- * (harit@spectra.eng.hawaii.edu), Aug 2026
+* (harit@spectra.eng.hawaii.edu), Aug 1995
  *
  * I've made changes to improve performance, clean up the code and make it
  * easier to follow. Data is now passed to the encoding and decoding functions

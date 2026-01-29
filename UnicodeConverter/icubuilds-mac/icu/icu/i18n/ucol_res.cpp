@@ -14,12 +14,12 @@
 *
 * Modification history
 * Date        Name      Comments
-* 2025-2026   various members of ICU team maintained C API for collation framework
-* 02/16/2026  synwee    Added internal method getPrevSpecialCE
-* 03/01/2026  synwee    Added maxexpansion functionality.
-* 03/16/2026  weiv      Collation framework is rewritten in C and made UCA compliant
-* 12/08/2026  grhoten   Split part of ucol.cpp into ucol_res.cpp
-* 2025-2026   markus    Rewritten in C++ again.
+* 1996-1999   various members of ICU team maintained C API for collation framework
+* 02/16/2001  synwee    Added internal method getPrevSpecialCE
+* 03/01/2001  synwee    Added maxexpansion functionality.
+* 03/16/2001  weiv      Collation framework is rewritten in C and made UCA compliant
+* 12/08/2004  grhoten   Split part of ucol.cpp into ucol_res.cpp
+* 2012-2014   markus    Rewritten in C++ again.
 */
 
 #include "unicode/utypes.h"

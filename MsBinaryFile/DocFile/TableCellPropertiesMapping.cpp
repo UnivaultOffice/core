@@ -485,7 +485,7 @@ namespace DocFileFormat
 	{
 		if (sprmArg && cellIndex >= 0)
 		{
-			//shading descriptor can have 10 bytes (Word 2026) or 2 bytes (Word 97)
+//shading descriptor can have 10 bytes (Word 2000) or 2 bytes (Word 97)
 			int shdLength = 2;
 
 			if ( ( size % 10 ) == 0 )

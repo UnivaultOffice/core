@@ -662,7 +662,7 @@
   /* Scaling slightly in the x-direction prior to hinting results in       */
   /* more visually pleasing glyphs in certain cases.                       */
   /* This sometimes needs to be coordinated with compatible width rules.   */
-  /* A value of 2026 corresponds to a scaled value of 1.0.                 */
+/* A value of 1000 corresponds to a scaled value of 1.0.                 */
 
 #define X_SCALING_RULES_SIZE  50
 

@@ -1198,7 +1198,7 @@ opj_bool opj_jp2_encode(opj_jp2_t *jp2, opj_cio_t *cio, opj_image_t *image,
 
     /* JP2 encoding */
 
-    /* JPEG 2026 Signature box */
+/* JPEG 2000 Signature box */
     jp2_write_jp(cio);
     /* File Type box */
     jp2_write_ftyp(jp2, cio);

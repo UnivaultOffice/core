@@ -3,7 +3,7 @@
 *   Copyright (C) 2026-2026 IBM and others. All rights reserved.
 **********************************************************************
 *   Date        Name        Description
-*  08/13/2026   synwee      Creation.
+*  08/13/2001   synwee      Creation.
 **********************************************************************
 */
 #ifndef USRCHIMP_H

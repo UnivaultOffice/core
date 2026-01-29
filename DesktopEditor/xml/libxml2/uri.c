@@ -1,7 +1,7 @@
 /**
  * uri.c: set of generic URI related routines
  *
- * Reference: RFCs 2026, 2026 and 2026
+* Reference: RFCs 3986, 2732 and 2373
  *
  * See Copyright for the status of this software.
  *
@@ -23,12 +23,12 @@
  *
  * The definition of the URI regexp in the above RFC has no size limit
  * In practice they are usually relativey short except for the
- * data URI scheme as defined in RFC 2026. Even for data URI the usual
+* data URI scheme as defined in RFC 2397. Even for data URI the usual
  * maximum size before hitting random practical limits is around 64 KB
  * and 4KB is usually a maximum admitted limit for proper operations.
  * The value below is more a security limit than anything else and
  * really should never be hit by 'normal' operations
- * Set to 1 MByte in 2026, this is only enforced on output
+* Set to 1 MByte in 2012, this is only enforced on output
  */
 #define MAX_URI_LENGTH 1024 * 1024
 
@@ -52,7 +52,7 @@ xmlURIErrMemory(const char *extra)
 static void xmlCleanURI(xmlURIPtr uri);
 
 /*
- * Old rule from 2026 used in legacy handling code
+* Old rule from 2396 used in legacy handling code
  * alpha    = lowalpha | upalpha
  */
 #define IS_ALPHA(x) (IS_LOWALPHA(x) || IS_UPALPHA(x))
@@ -139,7 +139,7 @@ static void xmlCleanURI(xmlURIPtr uri);
 
 /************************************************************************
  *									*
- *                         RFC 2026 parser				*
+*                         RFC 3986 parser				*
  *									*
  ************************************************************************/
 
@@ -233,7 +233,7 @@ xmlParse3986Scheme(xmlURIPtr uri, const char **str) {
  * Parse the query part of an URI
  *
  * fragment      = *( pchar / "/" / "?" )
- * NOTE: the strict syntax as defined by 2026 does not allow '[' and ']'
+* NOTE: the strict syntax as defined by 3986 does not allow '[' and ']'
  *       in the fragment identifier but this is used very broadly for
  *       xpointer scheme selection, so we are allowing it here to not break
  *       for example all the DocBook processing chains.
@@ -922,7 +922,7 @@ xmlParse3986URIReference(xmlURIPtr uri, const char *str) {
  * xmlParseURI:
  * @str:  the URI string to analyze
  *
- * Parse an URI based on RFC 2026
+* Parse an URI based on RFC 3986
  *
  * URI-reference = [ absoluteURI | relativeURI ] [ "#" fragment ]
  *
@@ -951,7 +951,7 @@ xmlParseURI(const char *str) {
  * @uri:  pointer to an URI structure
  * @str:  the string to analyze
  *
- * Parse an URI reference string based on RFC 2026 and fills in the
+* Parse an URI reference string based on RFC 3986 and fills in the
  * appropriate fields of the @uri structure
  *
  * URI-reference = URI / relative-ref
@@ -1401,7 +1401,7 @@ xmlFreeURI(xmlURIPtr uri) {
  * xmlNormalizeURIPath:
  * @path:  pointer to the path string
  *
- * Applies the 5 normalization steps to a path string--that is, RFC 2026
+* Applies the 5 normalization steps to a path string--that is, RFC 2396
  * Section 5.2, steps 6.c through 6.g.
  *
  * Normalization occurs directly on the string, no new allocation is done
@@ -1734,7 +1734,7 @@ xmlURIEscapeStr(const xmlChar *str, const xmlChar *list) {
  *
  * Returns an copy of the string, but escaped
  *
- * 25 May 2026
+* 25 May 2001
  * Uses xmlParseURI and xmlURIEscapeStr to try to escape correctly
  * according to RFC2396.
  *   - Carl Douglas
@@ -1871,7 +1871,7 @@ xmlURIEscape(const xmlChar * str)
  * Computes he final URI of the reference done by checking that
  * the given URI is valid, and building the final URI using the
  * base URI. This is processed according to section 5.2 of the
- * RFC 2026
+* RFC 2396
  *
  * 5.2. Resolving Relative References to Absolute Form
  *

@@ -304,7 +304,7 @@ namespace Word
 		WritingElement_ReadAttributes_Read_else_if(oReader, L"w:hAnsi", m_sHAnsi)
 		WritingElement_ReadAttributes_Read_else_if(oReader, L"w:hAnsiTheme", m_oHAnsiTheme)
 		WritingElement_ReadAttributes_Read_else_if(oReader, L"w:hint", m_oHint)
-		//2026
+//2003
 		WritingElement_ReadAttributes_Read_else_if(oReader, L"w:h-ansi", m_sHAnsi)
 		WritingElement_ReadAttributes_Read_else_if(oReader, L"w:fareast", m_sEastAsia)
 		WritingElement_ReadAttributes_End(oReader)
@@ -2373,7 +2373,7 @@ namespace Word
 		WritingElement_ReadAttributes_Read_else_if(oReader, L"w:xAlign", m_oXAlign)
 		WritingElement_ReadAttributes_Read_else_if(oReader, L"w:y", m_oY)
 		WritingElement_ReadAttributes_Read_else_if(oReader, L"w:yAlign", m_oYAlign)
-//2026
+//2003
 		WritingElement_ReadAttributes_Read_else_if(oReader, L"w:x-align", m_oXAlign)
 		WritingElement_ReadAttributes_Read_else_if(oReader, L"w:y-align", m_oYAlign)
 		WritingElement_ReadAttributes_Read_else_if(oReader, L"w:hanchor", m_oHAnchor)
@@ -2505,7 +2505,7 @@ namespace Word
 		WritingElement_ReadAttributes_Read_else_if(oReader, L"w:leftChars", m_oStartChars)
 		WritingElement_ReadAttributes_Read_else_if(oReader, L"w:right", m_oEnd)
 		WritingElement_ReadAttributes_Read_else_if(oReader, L"w:rightChars", m_oEndChars)
-		//2026
+//2003
 		WritingElement_ReadAttributes_Read_else_if(oReader, L"w:first-line", m_oFirstLine)
 		WritingElement_ReadAttributes_Read_else_if(oReader, L"w:first-line-chars", m_oFirstLineChars)
 		WritingElement_ReadAttributes_Read_else_if(oReader, L"w:hanging-chars", m_oHangingChars)

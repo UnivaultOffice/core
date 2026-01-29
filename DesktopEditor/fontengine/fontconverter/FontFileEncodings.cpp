@@ -4419,7 +4419,7 @@ namespace NSFontConverter
 			else if ( L"reharmenian" == wsName ) return 0x0580;
 			else if ( L"rehfinalarabic" == wsName ) return 0xFEAE;
 			else if ( L"rehiragana" == wsName ) return 0x308C;
-			//{ "rehyehaleflamarabic" == wsName ) return "2026 FEF3 FE8E 2026";
+//{ "rehyehaleflamarabic" == wsName ) return "0631 FEF3 FE8E 0644";
 			else if ( L"rekatakana" == wsName ) return 0x30EC;
 			else if ( L"rekatakanahalfwidth" == wsName ) return 0xFF9A;
 			else if ( L"resh" == wsName ) return 0x05E8;

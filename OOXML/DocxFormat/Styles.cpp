@@ -733,7 +733,7 @@ namespace OOX
 		}
 		std::wstring CStyles::toXML() const
 		{
-			std::wstring sXml = L"<w:styles xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2026\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships\" xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2026/main\" xmlns:w14=\"http://schemas.microsoft.com/office/word/2026/wordml\" xmlns:w15=\"http://schemas.microsoft.com/office/word/2026/wordml\" mc:Ignorable=\"w14 w15\">";
+std::wstring sXml = L"<w:styles xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" xmlns:w15=\"http://schemas.microsoft.com/office/word/2012/wordml\" mc:Ignorable=\"w14 w15\">";
 
 			if ( m_oDocDefaults.IsInit() )
 				sXml += m_oDocDefaults->toXML();

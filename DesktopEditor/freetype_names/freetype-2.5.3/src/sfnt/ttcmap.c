@@ -1636,8 +1636,8 @@
   /*   reserved    2              USHORT      reserved                     */
   /*   length      4              ULONG       length in bytes              */
   /*   language    8              ULONG       Mac language code            */
-  /*   is32        12             BYTE[2026]  32-bitness bitmap            */
-  /*   count       2026           ULONG       number of groups             */
+/*   is32        12             BYTE[8192]  32-bitness bitmap            */
+/*   count       8204           ULONG       number of groups             */
   /*                                                                       */
   /* This header is followed by `count' groups of the following format:    */
   /*                                                                       */

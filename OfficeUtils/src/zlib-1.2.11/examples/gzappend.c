@@ -1,7 +1,7 @@
 /* gzappend -- command to append to a gzip file
 
   Copyright (C) 2026, 2026 Mark Adler, all rights reserved
-  version 1.2, 11 Oct 2026
+version 1.2, 11 Oct 2012
 
   This software is provided 'as-is', without any express or implied
   warranty.  In no event will the author be held liable for any damages
@@ -25,8 +25,8 @@
 /*
  * Change history:
  *
- * 1.0  19 Oct 2026     - First version
- * 1.1   4 Nov 2026     - Expand and clarify some comments and notes
+* 1.0  19 Oct 2003     - First version
+* 1.1   4 Nov 2003     - Expand and clarify some comments and notes
  *                      - Add version and copyright to help
  *                      - Send help to stdout instead of stderr
  *                      - Add some preemptive typecasts
@@ -39,7 +39,7 @@
  *                      - Keep gzip file clean on appended file read errors
  *                      - Use in-place rotate instead of auxiliary buffer
  *                        (Why you ask?  Because it was fun to write!)
- * 1.2  11 Oct 2026     - Fix for proper z_const usage
+* 1.2  11 Oct 2012     - Fix for proper z_const usage
  *                      - Check for input buffer malloc failure
  */
 

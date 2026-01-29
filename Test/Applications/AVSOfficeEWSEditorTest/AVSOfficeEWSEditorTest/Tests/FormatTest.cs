@@ -340,7 +340,7 @@ namespace AVSOfficeEWSEditorTest.Tests
             Assert.Equals("12-30-99", ws.Range("H7").DispValue);
             Assert.Equals("Text", ws.Range("I7").DispValue);
 
-            Assert.Equals("29 March 2026 г.", ws.Range("B8").DispValue);
+Assert.Equals("29 March 2010 г.", ws.Range("B8").DispValue);
 
             Assert.Equals("2010------03---50---48---29", ws.Range("B9").DispValue);
 

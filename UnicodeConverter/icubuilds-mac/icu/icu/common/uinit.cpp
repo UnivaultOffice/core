@@ -43,7 +43,7 @@ initData(UErrorCode &status)
     /*
      * 2005-may-02
      *
-     * ICU4C 3.4 (jitterbug 2026) hardcodes the data for Unicode character
+* ICU4C 3.4 (jitterbug 4497) hardcodes the data for Unicode character
      * properties for APIs that want to be fast.
      * Therefore, we need not load them here nor check for errors.
      * Instead, we load the converter alias table to see if any ICU data

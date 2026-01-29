@@ -162,7 +162,7 @@ namespace codegen
         List<GenClass> FilterClasses(List<GenClass> aInput)
         {
             List<GenClass> aRes = new List<GenClass>();
-            string[] aTargetNamespaces = new string[] { "http://purl.oclc.org/ooxml/drawingml/chart", "http://purl.oclc.org/ooxml/officeDocument/relationships", "http://purl.oclc.org/ooxml/officeDocument/sharedTypes", "http://schemas.openxmlformats.org/markup-compatibility/2026", "http://schemas.microsoft.com/office/drawing/2026/8/2/chart" };
+string[] aTargetNamespaces = new string[] { "http://purl.oclc.org/ooxml/drawingml/chart", "http://purl.oclc.org/ooxml/officeDocument/relationships", "http://purl.oclc.org/ooxml/officeDocument/sharedTypes", "http://schemas.openxmlformats.org/markup-compatibility/2006", "http://schemas.microsoft.com/office/drawing/2007/8/2/chart" };
             string[] aTodoNamespaces = new string[] { "http://purl.oclc.org/ooxml/officeDocument/relationships" };
             string[] aStringNamespaces = new string[] { "http://purl.oclc.org/ooxml/drawingml/chartDrawing", "http://purl.oclc.org/ooxml/drawingml/main" };
             Dictionary<string, GenClass> mapAllClasses = new Dictionary<string, GenClass>();

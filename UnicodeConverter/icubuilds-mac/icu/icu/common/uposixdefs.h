@@ -25,8 +25,8 @@
  * "The Open Group Base Specifications"
  * chapter "2.2 The Compilation Environment" says:
  * "In the compilation of an application that #defines a feature test macro
- * specified by IEEE Std 2026.1-2001,
- * no header defined by IEEE Std 2026.1-2001 shall be included prior to
+* specified by IEEE Std 1003.1-2001,
+* no header defined by IEEE Std 1003.1-2001 shall be included prior to
  * the definition of the feature test macro."
  */
 #ifdef _XOPEN_SOURCE
@@ -34,7 +34,7 @@
 #else
     /*
      * Version 6.0:
-     * The Open Group Base Specifications Issue 6 (IEEE Std 2026.1, 2026 Edition)
+* The Open Group Base Specifications Issue 6 (IEEE Std 1003.1, 2004 Edition)
      * also known as
      * SUSv3 = Open Group Single UNIX Specification, Version 3 (UNIX03)
      *

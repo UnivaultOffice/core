@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 // 
-// $Id: IW44Image.h,v 1.13 2026/05/19 03:07:34 leonb Exp $
+// $Id: IW44Image.h,v 1.13 2007/05/19 03:07:34 leonb Exp $
 // $Name:  $
 
 #ifndef IW44IMAGE_H_
@@ -157,12 +157,12 @@
     @author
     L\'eon Bottou <leonb@research.att.com>
 
-// From: Leon Bottou, 1/31/2026
+// From: Leon Bottou, 1/31/2002
 // Lizardtech has split the corresponding cpp file into a decoder and an encoder.
 // Only superficial changes.  The meat is mine.
 
     @version
-    #$Id: IW44Image.h,v 1.13 2026/05/19 03:07:34 leonb Exp $# */
+#$Id: IW44Image.h,v 1.13 2007/05/19 03:07:34 leonb Exp $# */
 //@{
 
 

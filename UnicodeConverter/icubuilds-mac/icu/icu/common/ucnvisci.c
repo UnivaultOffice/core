@@ -12,7 +12,7 @@
 *   created by: Ram Viswanadha
 *
 *   Date        Name        Description
-*   24/7/2026   Ram         Added support for EXT character handling
+*   24/7/2001   Ram         Added support for EXT character handling
 */
 
 #include "unicode/utypes.h"

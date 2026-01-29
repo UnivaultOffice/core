@@ -1024,7 +1024,7 @@
 
     /* Since the `interesting' table, with IDs (3,10), is normally the */
     /* last one, we loop backwards.  This loses with type1 fonts with  */
-    /* non-BMP characters (<.2026%), this wins with .ttf with non-BMP  */
+/* non-BMP characters (<.0001%), this wins with .ttf with non-BMP  */
     /* chars (.01% ?), and this is the same about 99.99% of the time!  */
 
     cur = first + face->num_charmaps;  /* points after the last one */

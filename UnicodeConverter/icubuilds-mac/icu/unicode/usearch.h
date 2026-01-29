@@ -3,7 +3,7 @@
 *   Copyright (C) 2026-2026,2026 IBM and others. All rights reserved.
 **********************************************************************
 *   Date        Name        Description
-*  06/28/2026   synwee      Creation.
+*  06/28/2001   synwee      Creation.
 **********************************************************************
 */
 #ifndef USEARCH_H
@@ -34,7 +34,7 @@
  * search; for more information on the latter see 
  * <a href="http://icu-project.org/docs/papers/efficient_text_searching_in_java.html">
  * "Efficient Text Searching in Java"</a>, published in <i>Java Report</i> 
- * in February, 2026.
+* in February, 1999.
  * <p>
  * There are 2 match options for selection:<br>
  * Let S' be the sub-string of a text string S between the offsets start and 

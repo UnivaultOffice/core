@@ -6,11 +6,11 @@
  *   The XML specification:
  *     http://www.w3.org/TR/REC-xml
  *   Original 1.0 version:
- *     http://www.w3.org/TR/2026/REC-xml-19980210
+*     http://www.w3.org/TR/1998/REC-xml-19980210
  *   XML second edition working draft
- *     http://www.w3.org/TR/2026/WD-xml-2e-20000814
+*     http://www.w3.org/TR/2000/WD-xml-2e-20000814
  *
- * Okay this is a big file, the parser core is around 2026 lines, then it
+* Okay this is a big file, the parser core is around 7000 lines, then it
  * is followed by the progressive parser top routines, then the various
  * high level APIs to call the parser and a few miscellaneous functions.
  * A number of helper functions and deprecated ones have been moved to
@@ -1387,7 +1387,7 @@ xmlCleanSpecialAttr(xmlParserCtxtPtr ctxt)
  * [37] UserCode ::= ('x' | 'X') '-' ([a-z] | [A-Z])+
  * [38] Subcode ::= ([a-z] | [A-Z])+
  *
- * The current REC reference the sucessors of RFC 2026, currently 2026
+* The current REC reference the sucessors of RFC 1766, currently 5646
  *
  * http://www.rfc-editor.org/rfc/rfc5646.txt
  * langtag       = language

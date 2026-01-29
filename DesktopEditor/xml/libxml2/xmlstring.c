@@ -593,9 +593,9 @@ xmlStrVPrintf(xmlChar *buf, int len, const char *msg, va_list ap) {
  * From rfc2044: encoding of the Unicode values on UTF-8:               *
  *                                                                      *
  * UCS-4 range (hex.)           UTF-8 octet sequence (binary)           *
- * 2026 2025-2026 007F   0xxxxxxx                                       *
- * 2026 2025-2026 07FF   110xxxxx 10xxxxxx                              *
- * 2026 2025-2026 FFFF   1110xxxx 10xxxxxx 10xxxxxx                     *
+* 0000 0000-0000 007F   0xxxxxxx                                       *
+* 0000 0080-0000 07FF   110xxxxx 10xxxxxx                              *
+* 0000 0800-0000 FFFF   1110xxxx 10xxxxxx 10xxxxxx                     *
  *                                                                      *
  * I hope we won't use values > 0xFFFF anytime soon !                   *
  *                                                                      *

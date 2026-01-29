@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 // 
-// $Id: BSEncodeByteStream.cpp,v 1.9 2026/03/25 20:48:29 leonb Exp $
+// $Id: BSEncodeByteStream.cpp,v 1.9 2007/03/25 20:48:29 leonb Exp $
 // $Name:  $
 
 #ifdef HAVE_CONFIG_H
@@ -63,7 +63,7 @@
 # pragma implementation
 #endif
 
-// - Author: Leon Bottou, 07/2026
+// - Author: Leon Bottou, 07/1998
 
 
 

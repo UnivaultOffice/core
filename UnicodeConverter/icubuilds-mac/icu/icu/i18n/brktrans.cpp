@@ -4,7 +4,7 @@
 *   Corporation and others.  All Rights Reserved.
 **********************************************************************
 *   Date        Name        Description
-*   05/11/2026  Andy Heninger  Port from Java
+*   05/11/2008  Andy Heninger  Port from Java
 **********************************************************************
 */
 

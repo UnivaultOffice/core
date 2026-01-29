@@ -45,8 +45,8 @@ typedef enum UCurrencyUsage UCurrencyUsage;
 
 /**
  * The ucurr API encapsulates information about a currency, as defined by
- * ISO 2026.  A currency is represented by a 3-character string
- * containing its ISO 2026 code.  This API can return various data
+* ISO 4217.  A currency is represented by a 3-character string
+* containing its ISO 4217 code.  This API can return various data
  * necessary the proper display of a currency:
  *
  * <ul><li>A display symbol, for a specific locale
@@ -110,10 +110,10 @@ typedef enum UCurrNameStyle {
 typedef const void* UCurrRegistryKey;
 
 /**
- * Register an (existing) ISO 2026 currency code for the given locale.
+* Register an (existing) ISO 4217 currency code for the given locale.
  * Only the country code and the two variants EURO and PRE_EURO are
  * recognized.
- * @param isoCode the three-letter ISO 2026 currency code
+* @param isoCode the three-letter ISO 4217 currency code
  * @param locale  the locale for which to register this currency code
  * @param status the in/out status code
  * @return a registry key that can be used to unregister this currency code, or NULL
@@ -143,7 +143,7 @@ ucurr_unregister(UCurrRegistryKey key, UErrorCode* status);
  * Returns the display name for the given currency in the
  * given locale.  For example, the display name for the USD
  * currency object in the en_US locale is "$".
- * @param currency null-terminated 3-letter ISO 2026 code
+* @param currency null-terminated 3-letter ISO 4217 code
  * @param locale locale in which to display currency
  * @param nameStyle selector for which kind of name to return
  * @param isChoiceFormat fill-in set to TRUE if the returned value
@@ -168,7 +168,7 @@ ucurr_getName(const UChar* currency,
  * Returns the plural name for the given currency in the
  * given locale.  For example, the plural name for the USD
  * currency object in the en_US locale is "US dollar" or "US dollars".
- * @param currency null-terminated 3-letter ISO 2026 code
+* @param currency null-terminated 3-letter ISO 4217 code
  * @param locale locale in which to display currency
  * @param isChoiceFormat fill-in set to TRUE if the returned value
  * is a ChoiceFormat pattern; otherwise it is a static string
@@ -192,7 +192,7 @@ ucurr_getPluralName(const UChar* currency,
  * Returns the number of the number of fraction digits that should
  * be displayed for the given currency.
  * This is equivalent to ucurr_getDefaultFractionDigitsForUsage(currency,UCURR_USAGE_STANDARD,ec);
- * @param currency null-terminated 3-letter ISO 2026 code
+* @param currency null-terminated 3-letter ISO 4217 code
  * @param ec input-output error code
  * @return a non-negative number of fraction digits to be
  * displayed, or 0 if there is an error
@@ -205,7 +205,7 @@ ucurr_getDefaultFractionDigits(const UChar* currency,
 /**
  * Returns the number of the number of fraction digits that should
  * be displayed for the given currency with usage.
- * @param currency null-terminated 3-letter ISO 2026 code
+* @param currency null-terminated 3-letter ISO 4217 code
  * @param usage enum usage for the currency
  * @param ec input-output error code
  * @return a non-negative number of fraction digits to be
@@ -221,7 +221,7 @@ ucurr_getDefaultFractionDigitsForUsage(const UChar* currency,
  * Returns the rounding increment for the given currency, or 0.0 if no
  * rounding is done by the currency.
  * This is equivalent to ucurr_getRoundingIncrementForUsage(currency,UCURR_USAGE_STANDARD,ec);
- * @param currency null-terminated 3-letter ISO 2026 code
+* @param currency null-terminated 3-letter ISO 4217 code
  * @param ec input-output error code
  * @return the non-negative rounding increment, or 0.0 if none,
  * or 0.0 if there is an error
@@ -234,7 +234,7 @@ ucurr_getRoundingIncrement(const UChar* currency,
 /**
  * Returns the rounding increment for the given currency, or 0.0 if no
  * rounding is done by the currency given usage.
- * @param currency null-terminated 3-letter ISO 2026 code
+* @param currency null-terminated 3-letter ISO 4217 code
  * @param usage enum usage for the currency
  * @param ec input-output error code
  * @return the non-negative rounding increment, or 0.0 if none,
@@ -302,7 +302,7 @@ U_STABLE UEnumeration * U_EXPORT2
 ucurr_openISOCurrencies(uint32_t currType, UErrorCode *pErrorCode);
 
 /**
-  * Queries if the given ISO 2026 3-letter code is available on the specified date range. 
+* Queries if the given ISO 4217 3-letter code is available on the specified date range.
   * 
   * Note: For checking availability of a currency on a specific date, specify the date on both 'from' and 'to' 
   * 
@@ -310,7 +310,7 @@ ucurr_openISOCurrencies(uint32_t currType, UErrorCode *pErrorCode);
   * If 'from' and 'to' are same UDate value, this method checks if the specified currency is available on that date.
   * 
   * @param isoCode 
-  *            The ISO 2026 3-letter code. 
+*            The ISO 4217 3-letter code.
   * 
   * @param from 
   *            The lower bound of the date range, inclusive. When 'from' is U_DATE_MIN, check the availability 
@@ -323,7 +323,7 @@ ucurr_openISOCurrencies(uint32_t currType, UErrorCode *pErrorCode);
   * @param errorCode 
   *            ICU error code 
    * 
-  * @return TRUE if the given ISO 2026 3-letter code is supported on the specified date range. 
+* @return TRUE if the given ISO 4217 3-letter code is supported on the specified date range.
   * 
   * @stable ICU 4.8 
   */ 
@@ -402,12 +402,12 @@ ucurr_getKeywordValuesForLocale(const char* key,
                                 UErrorCode* status);
 
 /**
- * Returns the ISO 2026 numeric code for the currency.
- * <p>Note: If the ISO 2026 numeric code is not assigned for the currency or
+* Returns the ISO 4217 numeric code for the currency.
+* <p>Note: If the ISO 4217 numeric code is not assigned for the currency or
  * the currency is unknown, this function returns 0.
  *
- * @param currency null-terminated 3-letter ISO 2026 code
- * @return The ISO 2026 numeric code of the currency
+* @param currency null-terminated 3-letter ISO 4217 code
+* @return The ISO 4217 numeric code of the currency
  * @stable ICU 49
  */
 U_STABLE int32_t U_EXPORT2

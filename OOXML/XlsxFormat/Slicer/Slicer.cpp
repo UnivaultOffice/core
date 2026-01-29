@@ -86,7 +86,7 @@ void CSlicers::toXML(NSStringUtils::CStringBuilder& writer, const std::wstring& 
 {
 	writer.StartNode(sName);
 	writer.StartAttributes();
-	writer.WriteString(L" xmlns=\"http://schemas.microsoft.com/office/spreadsheetml/2026/9/main\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2026\" mc:Ignorable=\"x xr10\" xmlns:x=\"http://schemas.openxmlformats.org/spreadsheetml/2026/main\" xmlns:xr10=\"http://schemas.microsoft.com/office/spreadsheetml/2026/revision10\"");
+writer.WriteString(L" xmlns=\"http://schemas.microsoft.com/office/spreadsheetml/2009/9/main\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" mc:Ignorable=\"x xr10\" xmlns:x=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\" xmlns:xr10=\"http://schemas.microsoft.com/office/spreadsheetml/2016/revision10\"");
 	writer.EndAttributes();
 	if(m_oSlicer.size() > 0)
 	{

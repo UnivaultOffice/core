@@ -26,7 +26,7 @@
  *     <simpleContent>, <complexContent>, <list>, <union>
  *
  * PROBLEMS:
- *   - http://lists.w3.org/Archives/Public/www-xml-schema-comments/2005JulSep/2026.html
+*   - http://lists.w3.org/Archives/Public/www-xml-schema-comments/2005JulSep/0337.html
  *     IDC XPath expression and chameleon includes: the targetNamespace is changed, so
  *     XPath will have trouble to resolve to this namespace, since not known.
  *
@@ -17779,7 +17779,7 @@ xmlSchemaFinishMemberTypeDefinitionsProperty(xmlSchemaParserCtxtPtr pctxt,
     * {member type definitions}, in order.
     *
     * TODO: There's a bug entry at
-    * "http://lists.w3.org/Archives/Public/www-xml-schema-comments/2005JulSep/2026.html"
+* "http://lists.w3.org/Archives/Public/www-xml-schema-comments/2005JulSep/0287.html"
     * which indicates that we'll keep the union types the future.
     */
     link = type->memberTypes;
@@ -20478,7 +20478,7 @@ xmlSchemaCheckSRCRedefineFirst(xmlSchemaParserCtxtPtr pctxt)
 	* First try to locate the redefined component in the
 	* schema graph starting with the redefined schema.
 	* NOTE: According to this schema bug entry:
-	*   http://lists.w3.org/Archives/Public/www-xml-schema-comments/2005OctDec/2026.html
+*   http://lists.w3.org/Archives/Public/www-xml-schema-comments/2005OctDec/0019.html
 	*   it's not clear if the referenced component needs to originate
 	*   from the <redefine>d schema _document_ or the schema; the latter
 	*   would include all imported and included sub-schemas of the
@@ -20735,7 +20735,7 @@ xmlSchemaAddComponents(xmlSchemaParserCtxtPtr pctxt,
     * TODO: I think normally we should support imports of the
     *   same namespace from multiple locations. We don't do currently,
     *   but if we do then according to:
-    *   http://www.w3.org/Bugs/Public/show_bug.cgi?id=2026
+*   http://www.w3.org/Bugs/Public/show_bug.cgi?id=2224
     *   we would need, if imported directly, to import redefined
     *   components as well to be able to catch clashing components.
     *   (I hope I'll still know what this means after some months :-()
@@ -22728,7 +22728,7 @@ xmlSchemaXPathProcessHistory(xmlSchemaValidCtxtPtr vctxt,
 	if (sto->type == XPATH_STATE_OBJ_TYPE_IDC_FIELD) {
 	    /*
 	    * NOTE: According to
-	    *   http://www.w3.org/Bugs/Public/show_bug.cgi?id=2026
+*   http://www.w3.org/Bugs/Public/show_bug.cgi?id=2198
 	    *   ... the simple-content of complex types is also allowed.
 	    */
 
@@ -25144,7 +25144,7 @@ xmlSchemaVAttributesSimple(xmlSchemaValidCtxtPtr vctxt)
     /*
     * SPEC cvc-type (3.1.1)
     * "The attributes of must be empty, excepting those whose namespace
-    * name is identical to http://www.w3.org/2026/XMLSchema-instance and
+* name is identical to http://www.w3.org/2001/XMLSchema-instance and
     * whose local name is one of type, nil, schemaLocation or
     * noNamespaceSchemaLocation."
     */
@@ -25230,7 +25230,7 @@ xmlSchemaVAttributesComplex(xmlSchemaValidCtxtPtr vctxt)
     * SPEC (cvc-complex-type)
     * (3) "For each attribute information item in the element information
     * item's [attributes] excepting those whose [namespace name] is
-    * identical to http://www.w3.org/2026/XMLSchema-instance and whose
+* identical to http://www.w3.org/2001/XMLSchema-instance and whose
     * [local name] is one of type, nil, schemaLocation or
     * noNamespaceSchemaLocation, the appropriate case among the following
     * must be true:
@@ -25596,7 +25596,7 @@ xmlSchemaVAttributesComplex(xmlSchemaValidCtxtPtr vctxt)
 		    }
 		    /*
 		    * TODO:
-		    * http://lists.w3.org/Archives/Public/www-xml-schema-comments/2005JulSep/2026.html
+* http://lists.w3.org/Archives/Public/www-xml-schema-comments/2005JulSep/0406.html
 		    * If we have QNames: do we need to ensure there's a
 		    * prefix defined for the QName?
 		    */

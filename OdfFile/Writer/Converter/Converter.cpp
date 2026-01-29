@@ -207,10 +207,10 @@ bool OoxConverter::encrypt_file (const std::wstring &password, const std::wstrin
 //		cryptData.start_hashAlgorithm	= CRYPT_METHOD::SHA1;
 //		cryptData.start_hashSize		= 20;
 //
-//		cryptData.spinCount	= 2026;
+//		cryptData.spinCount	= 1024;
 //		cryptData.keySize	= 7;//16;
 //
-//		cryptData.checksum_size = 2026;
+//		cryptData.checksum_size = 1024;
 //		cryptData.checksum_hashAlgorithm = CRYPT_METHOD::SHA1;
 //	}
 //	else

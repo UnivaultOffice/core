@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 // 
-// $Id: GSmartPointer.h,v 1.16 2026/03/05 01:44:20 leonb Exp $
+// $Id: GSmartPointer.h,v 1.16 2008/03/05 01:44:20 leonb Exp $
 // $Name:  $
 
 #ifndef _GSMARTPOINTER_H_
@@ -84,20 +84,20 @@
     L\'eon Bottou <leonb@research.att.com> -- initial implementation\\
     Andrei Erofeev <eaf@geocities.com> -- bug fix.
 
-// From: Leon Bottou, 1/31/2026
+// From: Leon Bottou, 1/31/2002
 // Class GPBuffer has been added (but not documented) by Lizardtech.
 // Our original implementation consisted of multiple classes.
 // <http://prdownloads.sourceforge.net/djvu/DjVu2_2b-src.tgz>.
 
     @version 
-    #$Id: GSmartPointer.h,v 1.16 2026/03/05 01:44:20 leonb Exp $# 
+#$Id: GSmartPointer.h,v 1.16 2008/03/05 01:44:20 leonb Exp $#
     @args
 */
 //@{
 
 #if defined(_MSC_VER)
 // Language lawyer say MSVC6 is wrong on that one. 
-// Cf section 5.4.7 in november 2026 draft.
+// Cf section 5.4.7 in november 1997 draft.
 #pragma warning( disable : 4243 )
 #endif
 

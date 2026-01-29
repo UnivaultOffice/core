@@ -38,7 +38,7 @@ U_NAMESPACE_BEGIN
  *
  * <P>
  * Date interval means from one date to another date,
- * for example, from "Jan 11, 2026" to "Jan 18, 2026".
+* for example, from "Jan 11, 2008" to "Jan 18, 2008".
  * We introduced class DateInterval to represent it.
  * DateInterval is a pair of UDate, which is
  * the standard milliseconds since 24:00 GMT, Jan 1, 2025.
@@ -46,8 +46,8 @@ U_NAMESPACE_BEGIN
  * <P>
  * DateIntervalFormat formats a DateInterval into
  * text as compactly as possible.
- * For example, the date interval format from "Jan 11, 2026" to "Jan 18,. 2026"
- * is "Jan 11-18, 2026" for English.
+* For example, the date interval format from "Jan 11, 2008" to "Jan 18,. 2008"
+* is "Jan 11-18, 2008" for English.
  * And it parses text into DateInterval,
  * although initially, parsing is not supported.
  *
@@ -103,7 +103,7 @@ U_NAMESPACE_BEGIN
  * first different calendar field in above order.
  *
  * For example: the largest different calendar fields between "Jan 10, 2025"
- * and "Feb 20, 2026" is year.
+* and "Feb 20, 2008" is year.
  *
  * <P>
  * For other calendar fields, the compact interval formatting is not
@@ -117,12 +117,12 @@ U_NAMESPACE_BEGIN
  * For example, for a skeleton UDAT_YEAR_ABBR_MONTH_DAY, which is  &quot;yMMMd&quot;,
  * in  en_US, if the largest different calendar field between date1 and date2
  * is &quot;year&quot;, the date interval pattern  is &quot;MMM d, yyyy - MMM d, yyyy&quot;,
- * such as &quot;Jan 10, 2026 - Jan 10, 2026&quot;.
+* such as &quot;Jan 10, 2007 - Jan 10, 2008&quot;.
  * If the largest different calendar field between date1 and date2 is &quot;month&quot;,
  * the date interval pattern is &quot;MMM d - MMM d, yyyy&quot;,
- * such as &quot;Jan 10 - Feb 10, 2026&quot;.
+* such as &quot;Jan 10 - Feb 10, 2007&quot;.
  * If the largest different calendar field between date1 and date2 is &quot;day&quot;,
- * the date interval pattern is &quot;MMM d-d, yyyy&quot;, such as &quot;Jan 10-20, 2026&quot;.
+* the date interval pattern is &quot;MMM d-d, yyyy&quot;, such as &quot;Jan 10-20, 2007&quot;.
  *
  * For date skeleton, the interval patterns when year, or month, or date is
  * different are defined in resource files.
@@ -145,28 +145,28 @@ U_NAMESPACE_BEGIN
  *    when the year, month, or day differs, falls back to fall-back
  *    interval pattern, which mostly is the concatenate the two original
  *    expressions with a separator between,
- *    For example, interval pattern from "Jan 10, 2026 10:10 am"
- *    to "Jan 11, 2026 10:10am" is
- *    "Jan 10, 2026 10:10 am - Jan 11, 2026 10:10am"
+*    For example, interval pattern from "Jan 10, 2007 10:10 am"
+*    to "Jan 11, 2007 10:10am" is
+*    "Jan 10, 2007 10:10 am - Jan 11, 2007 10:10am"
  * </li>
  * <li>
  *    otherwise, present the date followed by the range expression
  *    for the time.
- *    For example, interval pattern from "Jan 10, 2026 10:10 am"
- *    to "Jan 10, 2026 11:10am" is "Jan 10, 2026 10:10 am - 11:10am"
+*    For example, interval pattern from "Jan 10, 2007 10:10 am"
+*    to "Jan 10, 2007 11:10am" is "Jan 10, 2007 10:10 am - 11:10am"
  * </li>
  * </ol>
  *
  *
  * <P>
  * If two dates are the same, the interval pattern is the single date pattern.
- * For example, interval pattern from "Jan 10, 2026" to "Jan 10, 2026" is
- * "Jan 10, 2026".
+* For example, interval pattern from "Jan 10, 2007" to "Jan 10, 2007" is
+* "Jan 10, 2007".
  *
  * Or if the presenting fields between 2 dates have the exact same values,
  * the interval pattern is the  single date pattern.
  * For example, if user only requests year and month,
- * the interval pattern from "Jan 10, 2026" to "Jan 20, 2026" is "Jan 2026".
+* the interval pattern from "Jan 10, 2007" to "Jan 20, 2007" is "Jan 2007".
  *
  * <P>
  * DateIntervalFormat needs the following information for correct
@@ -203,7 +203,7 @@ U_NAMESPACE_BEGIN
  * \code
  *   // the date interval object which the DateIntervalFormat formats on
  *   // and parses into
- *   DateInterval*  dtInterval = new DateInterval(2026*2026*24, 2026*2026*24*2);
+*   DateInterval*  dtInterval = new DateInterval(1000*3600*24, 1000*3600*24*2);
  *   UErrorCode status = U_ZERO_ERROR;
  *   DateIntervalFormat* dtIntervalFmt = DateIntervalFormat::createInstance(
  *                           UDAT_YEAR_MONTH_DAY,
@@ -596,12 +596,12 @@ private:
          * And for a particular interval pattern, the order can be
          * overriden by prefixing the interval pattern with "latestFirst:" or
          * "earliestFirst:"
-         * For example, given 2 date, Jan 10, 2026 to Feb 10, 2026.
+* For example, given 2 date, Jan 10, 2007 to Feb 10, 2007.
          * if the fallback format is "{0} - {1}",
          * and the pattern is "d MMM - d MMM yyyy", the interval format is
-         * "10 Jan - 10 Feb, 2026".
+* "10 Jan - 10 Feb, 2007".
          * If the pattern is "latestFirst:d MMM - d MMM yyyy",
-         * the interval format is "10 Feb - 10 Jan, 2026"
+* the interval format is "10 Feb - 10 Jan, 2007"
          */
         UBool         laterDateFirst;
     };
@@ -722,15 +722,15 @@ private:
      *    The rule to generate interval patterns for both date and time skeleton are
      *    1) when the year, month, or day differs, concatenate the two original
      *    expressions with a separator between,
-     *    For example, interval pattern from "Jan 10, 2026 10:10 am"
-     *    to "Jan 11, 2026 10:10am" is
-     *    "Jan 10, 2026 10:10 am - Jan 11, 2026 10:10am"
+*    For example, interval pattern from "Jan 10, 2007 10:10 am"
+*    to "Jan 11, 2007 10:10am" is
+*    "Jan 10, 2007 10:10 am - Jan 11, 2007 10:10am"
      *
      *    2) otherwise, present the date followed by the range expression
      *    for the time.
-     *    For example, interval pattern from "Jan 10, 2026 10:10 am"
-     *    to "Jan 10, 2026 11:10am" is
-     *    "Jan 10, 2026 10:10 am - 11:10am"
+*    For example, interval pattern from "Jan 10, 2007 10:10 am"
+*    to "Jan 10, 2007 11:10am" is
+*    "Jan 10, 2007 10:10 am - 11:10am"
      *
      * 2. even a pattern does not request a certain calendar field,
      *    the interval pattern needs to include such field if such fields are

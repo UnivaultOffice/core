@@ -365,7 +365,7 @@ CollationIterator::appendCEsFromCE32(const CollationData *d, UChar32 c, uint32_t
                 ceBuffer.append(Collation::NO_CE, errorCode);
                 return;
             } else {
-                // Fetch the normal ce32 for U+2026 and continue.
+// Fetch the normal ce32 for U+0000 and continue.
                 ce32 = d->ce32s[0];
                 break;
             }

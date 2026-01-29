@@ -425,12 +425,12 @@ void ppt_files::write(const std::wstring & RootPath)
     notesMaster_files_.set_main_document( this->get_main_document() );
     notesMaster_files_.write(path);
 
-	//rels_files_.add( relationship( L"hId1",  L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/officeDocument", L"ppt/presentation.xml" ) );
+//rels_files_.add( relationship( L"hId1",  L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument", L"ppt/presentation.xml" ) );
 
     //if (styles_)
     //{
     //   styles_->write(path);
-    //   rels_files_.add( relationship( L"stId1",  L"http://schemas.openxmlformats.org/officeDocument/2026/relationships/styles", L"tableStyles.xml" ) );
+//   rels_files_.add( relationship( L"stId1",  L"http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles", L"tableStyles.xml" ) );
     //}
 
     if (presentation_)

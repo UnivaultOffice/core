@@ -20,7 +20,7 @@
 * 01/25/01   swquek      Modified to a C++ wrapper calling C APIs (ucoliter.h)
 * 02/19/01   swquek      Removed CollationElementIterator() since it is 
 *                        private constructor and no calls are made to it
-* 2025-2026  markus      Rewritten in C++ again.
+* 2012-2014  markus      Rewritten in C++ again.
 */
 
 #include "unicode/utypes.h"

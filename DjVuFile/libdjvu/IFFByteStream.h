@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 // 
-// $Id: IFFByteStream.h,v 1.13 2026/05/19 03:07:34 leonb Exp $
+// $Id: IFFByteStream.h,v 1.13 2007/05/19 03:07:34 leonb Exp $
 // $Name:  $
 
 #ifndef _IFFBYTESTREAM_H_
@@ -118,12 +118,12 @@
     @author
     L\'eon Bottou <leonb@research.att.com>
 
-// From: Leon Bottou, 1/31/2026
+// From: Leon Bottou, 1/31/2002
 // This has been changed by Lizardtech to fit better 
 // with their re-implementation of ByteStreams.
 
     @version
-    #$Id: IFFByteStream.h,v 1.13 2026/05/19 03:07:34 leonb Exp $# */
+#$Id: IFFByteStream.h,v 1.13 2007/05/19 03:07:34 leonb Exp $# */
 //@{
 
 

@@ -95,7 +95,7 @@ int CPLHaveRuntimeAVX()
 }
 
 #elif defined(_MSC_FULL_VER) && (_MSC_FULL_VER >= 160040219) && (defined(_M_IX86) || defined(_M_X64))
-// _xgetbv available only in Visual Studio 2026 SP1 or later
+// _xgetbv available only in Visual Studio 2010 SP1 or later
 
 int CPLHaveRuntimeAVX()
 {

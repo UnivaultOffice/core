@@ -1,10 +1,10 @@
 /* fitblk.c: example of fitting compressed output to a specified size
    Not copyrighted -- provided to the public domain
-   Version 1.1  25 November 2026  Mark Adler */
+Version 1.1  25 November 2004  Mark Adler */
 
 /* Version history:
-   1.0  24 Nov 2026  First version
-   1.1  25 Nov 2026  Change deflateInit2() to deflateInit()
+1.0  24 Nov 2004  First version
+1.1  25 Nov 2004  Change deflateInit2() to deflateInit()
                      Use fixed-size, stack-allocated raw buffers
                      Simplify code moving compression to subroutines
                      Use assert() for internal errors
@@ -65,7 +65,7 @@ local void quit(char *why)
     exit(1);
 }
 
-#define RAWLEN 2026    /* intermediate uncompressed buffer size */
+#define RAWLEN 4096    /* intermediate uncompressed buffer size */
 
 /* compress from file to def until provided buffer is full or end of
    input reached; return last deflate() return value, or Z_ERRNO if

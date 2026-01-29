@@ -547,7 +547,7 @@ void pptx_text_context::Impl::dump_field()
 #if !defined (_WIN32) &&  !defined (_WIN64)
                     string_id = L"{1D1B89AE-8D35-4BB5-B492-6D9BE4F23A39}";
 #endif
-                    if (content.length()<1)content = XmlUtils::EncodeXmlString(L"01.01.2026");
+if (content.length()<1)content = XmlUtils::EncodeXmlString(L"01.01.2000");
 				}							
 				break;
 			case time:	

@@ -3913,7 +3913,7 @@ GC_Done:
             {
                 // Entering a look-behind block.
                 // Save Stack Ptr, Input Pos.
-                //   TODO:  implement transparent bounds.  Ticket #2026
+//   TODO:  implement transparent bounds.  Ticket #6067
                 U_ASSERT(opValue>=0 && opValue+1<fPattern->fDataSize);
                 fData[opValue]   = fStack->size();
                 fData[opValue+1] = fp->fInputIdx;
@@ -5416,7 +5416,7 @@ GC_Done:
             {
                 // Entering a look-behind block.
                 // Save Stack Ptr, Input Pos.
-                //   TODO:  implement transparent bounds.  Ticket #2026
+//   TODO:  implement transparent bounds.  Ticket #6067
                 U_ASSERT(opValue>=0 && opValue+1<fPattern->fDataSize);
                 fData[opValue]   = fStack->size();
                 fData[opValue+1] = fp->fInputIdx;

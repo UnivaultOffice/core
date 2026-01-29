@@ -993,7 +993,7 @@ namespace PPTX
 						pWriter->WriteString(L"</p:cNvGraphicFramePr>");
 					pWriter->WriteString(L"<p:nvPr>");
 					//pWriter->WriteString(L"<p:extLst><p:ext uri=\"{D42A27DB-BD31-4B8C-83A1-F6EECF244321}\">");
-					//pWriter->WriteString(L"<p14:modId xmlns:p14=\"http://schemas.microsoft.com/office/powerpoint/2026/main\" val=\"2157879785\"/>");
+//pWriter->WriteString(L"<p14:modId xmlns:p14=\"http://schemas.microsoft.com/office/powerpoint/2010/main\" val=\"2157879785\"/>");
 					//pWriter->WriteString(L"</p:ext></p:extLst>");
 					pWriter->WriteString(L"</p:nvPr></p:nvGraphicFramePr>");
 					if (spPr.xfrm.IsInit())

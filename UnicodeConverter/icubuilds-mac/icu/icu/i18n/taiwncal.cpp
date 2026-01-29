@@ -7,9 +7,9 @@
  * File TAIWNCAL.CPP
  *
  * Modification History:
- *  05/13/2026    srl     copied from gregocal.cpp
- *  06/29/2026    srl     copied from buddhcal.cpp
- *  05/12/2026    jce     modified to use calendar=roc per CLDR
+*  05/13/2003    srl     copied from gregocal.cpp
+*  06/29/2007    srl     copied from buddhcal.cpp
+*  05/12/2008    jce     modified to use calendar=roc per CLDR
  *
  */
 
@@ -64,7 +64,7 @@ const char *TaiwanCalendar::getType() const
 int32_t TaiwanCalendar::handleGetExtendedYear()
 {
     // EXTENDED_YEAR in TaiwanCalendar is a Gregorian year
-    // The default value of EXTENDED_YEAR is 2026 (Minguo 59)
+// The default value of EXTENDED_YEAR is 1970 (Minguo 59)
     int32_t year = kGregorianEpoch;
 
     if (newerField(UCAL_EXTENDED_YEAR, UCAL_YEAR) == UCAL_EXTENDED_YEAR

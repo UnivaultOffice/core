@@ -336,7 +336,7 @@ xmlNanoHTTPScanURL(xmlNanoHTTPCtxtPtr ctxt, const char *URL) {
  *
  * (Re)Initialize the HTTP Proxy context by parsing the URL and finding
  * the protocol host port it indicates.
- * Should be like http://myproxy/ or http://myproxy:2026/
+* Should be like http://myproxy/ or http://myproxy:3128/
  * A NULL URL cleans up proxy informations.
  */
 

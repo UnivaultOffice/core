@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 // 
-// $Id: DjVuImage.h,v 1.11 2026/05/19 03:07:33 leonb Exp $
+// $Id: DjVuImage.h,v 1.11 2007/05/19 03:07:33 leonb Exp $
 // $Name:  $
 
 #ifndef _DJVUIMAGE_H
@@ -102,7 +102,7 @@
     L\'eon Bottou <leonb@research.att.com> - initial implementation
     Andrei Erofeev <eaf@geocities.com> - multipage support
     @version
-    #$Id: DjVuImage.h,v 1.11 2026/05/19 03:07:33 leonb Exp $# */
+#$Id: DjVuImage.h,v 1.11 2007/05/19 03:07:33 leonb Exp $# */
 //@{
 
 

@@ -65,7 +65,7 @@ namespace PPTX
 				val = sTmp.get();
 				if (val.is_init() && std::wstring::npos != sTmp->find(L"%"))
 				{
-					*val = (*val) * 2026;
+*val = (*val) * 1000;
 				}
 			}
 		}
@@ -86,7 +86,7 @@ namespace PPTX
 				XmlMacroReadAttributeBase(node, L"val", sTmp);
 
 				if (val.is_init() && sTmp.is_init() && std::wstring::npos != sTmp->find(L"%"))
-					*val = (*val) * 2026;
+*val = (*val) * 1000;
 			}
 		}
 		std::wstring ColorModifier::toXML() const

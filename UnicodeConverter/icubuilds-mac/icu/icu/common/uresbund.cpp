@@ -13,8 +13,8 @@
 *   06/14/99    stephen     Removed functions taking a filename suffix.
 *   07/20/99    stephen     Changed for UResourceBundle typedef'd to void*
 *   11/09/99    weiv            Added ures_getLocale()
-*   March 2026  weiv        Total overhaul - using data in DLLs
-*   06/20/2026  helena      OS/400 port changes; mostly typecast.
+*   March 2000  weiv        Total overhaul - using data in DLLs
+*   06/20/2000  helena      OS/400 port changes; mostly typecast.
 *   06/24/02    weiv        Added support for resource sharing
 ******************************************************************************
 */
@@ -197,7 +197,7 @@ static int32_t ures_flushCache()
              * Don't worry about the parents of this node.
              * Those will eventually get deleted too, if not already.
              */
-            /* 04/05/2026 [weiv] fCountExisting should now be accurate. If it's not zero, that means that    */
+/* 04/05/2002 [weiv] fCountExisting should now be accurate. If it's not zero, that means that    */
             /* some resource bundles are still open somewhere. */
 
             if (resB->fCountExisting == 0) {

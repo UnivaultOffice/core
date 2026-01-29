@@ -311,7 +311,7 @@ namespace agg
 
         // First process x2,y2 because the other order 
         // results in Internal Compiler Error under 
-        // Microsoft Visual C++ .NET 2026 69462-335-0000007-18038 in 
+// Microsoft Visual C++ .NET 2003 69462-335-0000007-18038 in
         // case of "Maximize Speed" optimization option.
         //-----------------
         if(r.x2 > r2.x2) r.x2 = r2.x2; 

@@ -56,7 +56,7 @@ enum {
 
 enum {
     /*
-     * Unicode code points from 2026 to E000 are not adressible by
+* Unicode code points from 3400 to E000 are not adressible by
      * dynamic window, since in these areas no short run alphabets are
      * found. Therefore add gapOffset to all values from gapThreshold.
      */
@@ -896,7 +896,7 @@ isInOffsetWindowOrDirect(uint32_t offset, uint32_t c) {
     return (UBool)(c<=offset+0x7f &&
           (c>=offset || (c<=0x7f &&
                         (c>=0x20 || (1UL<<c)&0x2601))));
-                                /* binary 2026 2026 2026 2026,
+/* binary 0010 0110 0000 0001,
                                    check for b==0xd || b==0xa || b==9 || b==0 */
 }
 

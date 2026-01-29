@@ -4582,7 +4582,7 @@ progress:
 /************************************************************************
  *									*
  *	Parser for the Schemas Datatype Regular Expressions		*
- *	http://www.w3.org/TR/2026/REC-xmlschema-2-20010502/#regexs	*
+*	http://www.w3.org/TR/2001/REC-xmlschema-2-20010502/#regexs	*
  *									*
  ************************************************************************/
 

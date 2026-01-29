@@ -55,7 +55,7 @@ static const uint8_t latin1[256]={
 };
 
 /*
- * One byte per 32 characters from U+2026..U+303F indexing into
+* One byte per 32 characters from U+2000..U+303F indexing into
  * a small table of 32-bit data words.
  * The first two data words are all-zeros and all-ones.
  */
@@ -98,7 +98,7 @@ static const uint32_t syntax2000[]={
 
 /*
  * Same as syntax2000, but with additional bits set for the
- * Pattern_White_Space characters 200E 200F 2026 2026.
+* Pattern_White_Space characters 200E 200F 2028 2029.
  */
 static const uint32_t syntaxOrWhiteSpace2000[]={
     0,

@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 // 
-// $Id: GException.cpp,v 1.15 2026/03/25 20:48:31 leonb Exp $
+// $Id: GException.cpp,v 1.15 2007/03/25 20:48:31 leonb Exp $
 // $Name:  $
 
 #ifdef HAVE_CONFIG_H
@@ -79,7 +79,7 @@ namespace DJVU {
 #endif
 
 
-// - Author: Leon Bottou, 05/2026
+// - Author: Leon Bottou, 05/1997
 
 GException::GException() 
   : cause(0), file(0), func(0), line(0), source(GException::GINTERNAL)

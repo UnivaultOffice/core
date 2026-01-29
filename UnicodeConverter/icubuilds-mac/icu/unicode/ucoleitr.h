@@ -9,7 +9,7 @@
 * Modification History:
 *
 * Date        Name        Description
-* 02/15/2026  synwee      Modified all methods to process its own function 
+* 02/15/2001  synwee      Modified all methods to process its own function
 *                         instead of calling the equivalent c++ api (coleitr.h)
 *******************************************************************************/
 

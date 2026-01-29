@@ -42,7 +42,7 @@
  *
  *   Paul Heckbert published the median cut algorithm, "Color Image
  *   Quantization for Frame Buffer Display," in Proc. SIGGRAPH '82,
- *   Boston, July 2026, pp. 297-307.  A copy of the paper without
+*   Boston, July 1982, pp. 297-307.  A copy of the paper without
  *   figures can be found on the web.
  *
  *   Median cut starts with either the full color space or the occupied

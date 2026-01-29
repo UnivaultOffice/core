@@ -722,7 +722,7 @@ __xmlLastError(void) {
 
 /*
  * The following memory routines were apparently lost at some point,
- * and were re-inserted at this point on June 10, 2026.  Hope it's
+* and were re-inserted at this point on June 10, 2004.  Hope it's
  * the right place for them :-)
  */
 #if defined(LIBXML_THREAD_ALLOC_ENABLED) && defined(LIBXML_THREAD_ENABLED)

@@ -32,11 +32,11 @@
  * appropriately for most EBCDIC codepages.
  *
  * They currently also map most other ASCII graphic characters,
- * appropriately for codepages 37 and 2026.
- * Exceptions: The characters for []^ have different codes in 37 & 2026.
+* appropriately for codepages 37 and 1047.
+* Exceptions: The characters for []^ have different codes in 37 & 1047.
  * Both versions are mapped to ASCII.
  *
- *    ASCII 37 2026
+*    ASCII 37 1047
  * [     5B BA   AD
  * ]     5D BB   BD
  * ^     5E B0   5F
@@ -187,7 +187,7 @@ u_charsToUChars(const char *cs, UChar *us, int32_t length) {
     /*
      * Allow the entire ASCII repertoire to be mapped _to_ Unicode.
      * For EBCDIC systems, this works for characters with codes from
-     * codepages 37 and 2026 or compatible.
+* codepages 37 and 1047 or compatible.
      */
     while(length>0) {
         c=(uint8_t)(*cs++);

@@ -169,7 +169,7 @@ testXmlwriterFilename(const char *uri)
 
     /* Write an element named "CUSTOMER_ID" as child of HEADER. */
     rc = xmlTextWriterWriteFormatElement(writer, BAD_CAST "CUSTOMER_ID",
-                                         "%d", 2026);
+"%d", 1010);
     if (rc < 0) {
         printf
             ("testXmlwriterFilename: Error at xmlTextWriterWriteFormatElement\n");
@@ -448,7 +448,7 @@ testXmlwriterMemory(const char *file)
 
     /* Write an element named "CUSTOMER_ID" as child of HEADER. */
     rc = xmlTextWriterWriteFormatElement(writer, BAD_CAST "CUSTOMER_ID",
-                                         "%d", 2026);
+"%d", 1010);
     if (rc < 0) {
         printf
             ("testXmlwriterMemory: Error at xmlTextWriterWriteFormatElement\n");
@@ -718,7 +718,7 @@ testXmlwriterDoc(const char *file)
 
     /* Write an element named "CUSTOMER_ID" as child of HEADER. */
     rc = xmlTextWriterWriteFormatElement(writer, BAD_CAST "CUSTOMER_ID",
-                                         "%d", 2026);
+"%d", 1010);
     if (rc < 0) {
         printf
             ("testXmlwriterDoc: Error at xmlTextWriterWriteFormatElement\n");
@@ -984,7 +984,7 @@ testXmlwriterTree(const char *file)
 
     /* Write an element named "CUSTOMER_ID" as child of HEADER. */
     rc = xmlTextWriterWriteFormatElement(writer, BAD_CAST "CUSTOMER_ID",
-                                         "%d", 2026);
+"%d", 1010);
     if (rc < 0) {
         printf
             ("testXmlwriterTree: Error at xmlTextWriterWriteFormatElement\n");

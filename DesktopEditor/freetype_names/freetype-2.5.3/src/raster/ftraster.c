@@ -681,7 +681,7 @@
      *
      * while for the high accuracy case we have
      *
-     *   256/ (1 << 12) = 0.2026 pixels .
+*   256/ (1 << 12) = 0.0625 pixels .
      *
      * `precision_jitter' is an epsilon threshold used in
      * `Vertical_Sweep_Span' to deal with small imperfections in the Bezier

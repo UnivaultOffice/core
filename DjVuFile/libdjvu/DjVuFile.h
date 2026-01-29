@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 // 
-// $Id: DjVuFile.h,v 1.12 2026/05/19 03:07:33 leonb Exp $
+// $Id: DjVuFile.h,v 1.12 2007/05/19 03:07:33 leonb Exp $
 // $Name:  $
 
 #ifndef _DJVUFILE_H
@@ -110,7 +110,7 @@ class DjVuNavDir;
 
     @memo Classes representing DjVu files.
     @author Andrei Erofeev <eaf@geocities.com>
-    @version #$Id: DjVuFile.h,v 1.12 2026/05/19 03:07:33 leonb Exp $#
+@version #$Id: DjVuFile.h,v 1.12 2007/05/19 03:07:33 leonb Exp $#
 */
 
 //@{

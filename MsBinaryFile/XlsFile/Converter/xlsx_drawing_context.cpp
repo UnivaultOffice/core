@@ -1683,7 +1683,7 @@ void xlsx_drawing_context::serialize_shape(_drawing_state_ptr & drawing_state)
 					//		CP_XML_NODE(L"a:ext")
 					//		{
 					//			CP_XML_ATTR(L"uri", L"{63B3BB69-23CF-44E3-9099-C40C66FF867C}");
-					//			CP_XML_ATTR(L"xmlns:a14", L"http://schemas.microsoft.com/office/drawing/2026/main");
+//			CP_XML_ATTR(L"xmlns:a14", L"http://schemas.microsoft.com/office/drawing/2010/main");
 
 					//			CP_XML_NODE(L"a14:compatExt")
 					//			{

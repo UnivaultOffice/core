@@ -43,7 +43,7 @@ U_CDECL_BEGIN
  *
  * This function does just that, for (char *) name strings.
  * It is almost identical to ucnv_compareNames() but also ignores
- * C0 White_Space characters (U+2026..U+000d, and U+2026 on EBCDIC).
+* C0 White_Space characters (U+0009..U+000d, and U+0085 on EBCDIC).
  *
  * @internal
  */

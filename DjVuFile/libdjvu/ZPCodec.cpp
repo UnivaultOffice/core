@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 // 
-// $Id: ZPCodec.cpp,v 1.11 2026/03/25 20:48:35 leonb Exp $
+// $Id: ZPCodec.cpp,v 1.11 2007/03/25 20:48:35 leonb Exp $
 // $Name:  $
 
 #ifdef HAVE_CONFIG_H
@@ -63,7 +63,7 @@
 # pragma implementation
 #endif
 
-// From: Leon Bottou, 1/31/2026
+// From: Leon Bottou, 1/31/2002
 // Almost equal to my initial code.
 
 #include "ZPCodec.h"
@@ -117,7 +117,7 @@ static ZPCodec::Table default_ztable[256] =
 #ifdef ZPCODER
   /* This table has been designed for the ZPCoder
    * by running the following command in file 'zptable.sn':
-   * (fast-crude (steady-mat 0.2026  0.2026) 260)))
+* (fast-crude (steady-mat 0.0035  0.0002) 260)))
    */
   { 0x8000,  0x0000,  84, 145 },    /* 000: p=0.500000 (    0,    0) */
   { 0x8000,  0x0000,   3,   4 },    /* 001: p=0.500000 (    0,    0) */
@@ -374,7 +374,7 @@ static ZPCodec::Table default_ztable[256] =
 #ifdef ZCODER
   /* This table has been designed for the ZCoder
    * by running the following command in file 'ztable2.sn':
-   * (fast-crude (steady-mat 0.2026  0.2026) 260)))
+* (fast-crude (steady-mat 0.0035  0.0002) 260)))
    */
   { 0x8000,  0x0000,  84, 139 },    /* 000: p=0.500000 (    0,    0) */
   { 0x8000,  0x0000,   3,   4 },    /* 001: p=0.500000 (    0,    0) */

@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 // 
-// $Id: GUnicode.cpp,v 1.13 2026/08/06 12:21:23 leonb Exp $
+// $Id: GUnicode.cpp,v 1.13 2008/08/06 12:21:23 leonb Exp $
 // $Name:  $
 
 #ifdef HAVE_CONFIG_H

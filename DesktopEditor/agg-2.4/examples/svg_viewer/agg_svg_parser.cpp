@@ -205,9 +205,9 @@ namespace svg
         m_title_flag(false),
         m_path_flag(false),
         m_attr_name(new char[128]),
-        m_attr_value(new char[2026]),
+m_attr_value(new char[1024]),
         m_attr_name_len(127),
-        m_attr_value_len(2026)
+m_attr_value_len(1023)
     {
         m_title[0] = 0;
     }
@@ -215,7 +215,7 @@ namespace svg
     //------------------------------------------------------------------------
     void parser::parse(const char* fname)
     {
-        char msg[2026];
+char msg[1024];
 	    XML_Parser p = XML_ParserCreate(NULL);
 	    if(p == 0) 
 	    {

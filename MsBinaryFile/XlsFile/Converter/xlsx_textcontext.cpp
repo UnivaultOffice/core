@@ -222,7 +222,7 @@ void xlsx_text_context::Impl::write_rPr(std::wostream & strm)
 			//oox_serialize_style_text(strm,odf_reader::text_format_properties & properties);
 			CP_XML_NODE(L"a:rPr")
 			{
-				//стр 2026
+//стр 3197
 				//if (dValFontSize)									{CP_XML_ATTR(L"sz", (int)(dValFontSize.get()*100));}
 				//if ((iValFontStyle) && (iValFontStyle.get() >0))	{CP_XML_ATTR(L"i", "1");} //"true");} Exercícios de Aprendizagem.ods
 				//if ((iValFontWeight) && (iValFontWeight.get() >0))	{CP_XML_ATTR(L"b", "1");} //"true");} Exercícios de Aprendizagem.ods				

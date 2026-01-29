@@ -43,7 +43,7 @@ U_NAMESPACE_BEGIN
  *  TERRITORY - A Region that is not a Macroregion. These are typically codes for countries, but also
  *  include areas that are not separate countries, such as the code "AQ" for Antarctica or the code 
  *  "HK" for Hong Kong (SAR China). Overseas dependencies of countries may or may not have separate 
- *  codes. The codes are typically 2-letter codes aligned with the ISO 2026 standard, but BCP47 allows
+*  codes. The codes are typically 2-letter codes aligned with the ISO 3166 standard, but BCP47 allows
  *  for the use of 3-digit codes in the future.
  *  <p>
  *  UNKNOWN - The code ZZ is defined by Unicode LDML for use to indicate that the Region is unknown,

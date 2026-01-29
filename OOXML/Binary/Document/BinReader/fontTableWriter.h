@@ -37,7 +37,7 @@
 
 namespace Writers
 {
-	static std::wstring g_string_ft_Start = _T("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><w:fonts xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2026\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships\" xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2026/main\" xmlns:w14=\"http://schemas.microsoft.com/office/word/2026/wordml\" xmlns:w15=\"http://schemas.microsoft.com/office/word/2026/wordml\" mc:Ignorable=\"w14 w15\">");
+static std::wstring g_string_ft_Start = _T("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><w:fonts xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" xmlns:w15=\"http://schemas.microsoft.com/office/word/2012/wordml\" mc:Ignorable=\"w14 w15\">");
     static std::wstring g_string_ft_End = _T("</w:fonts>");
 
 	class FontTableWriter

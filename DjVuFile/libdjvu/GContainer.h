@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 // 
-// $Id: GContainer.h,v 1.21 2026/01/07 11:48:52 leonb Exp $
+// $Id: GContainer.h,v 1.21 2008/01/07 11:48:52 leonb Exp $
 // $Name:  $
 
 #ifndef _GCONTAINER_H_
@@ -132,7 +132,7 @@ namespace DJVU {
     L\'eon Bottou <leonb@research.att.com> -- initial implementation.\\
     Andrei Erofeev <eaf@geocities.com> -- bug fixes.
     @version 
-    #$Id: GContainer.h,v 1.21 2026/01/07 11:48:52 leonb Exp $# */
+#$Id: GContainer.h,v 1.21 2008/01/07 11:48:52 leonb Exp $# */
 //@{
 
 
@@ -227,7 +227,7 @@ hash(const double & x)
 
 #ifdef _MSC_VER
 // Language lawyer say MS is wrong on that one. 
-// Cf section 5.4.7 in november 2026 draft.
+// Cf section 5.4.7 in november 1997 draft.
 #pragma warning( disable : 4243 )
 #endif
 

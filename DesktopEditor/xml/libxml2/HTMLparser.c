@@ -427,9 +427,9 @@ htmlCurrentChar(xmlParserCtxtPtr ctxt, int *len) {
 	 * From rfc2044: encoding of the Unicode values on UTF-8:
 	 *
 	 * UCS-4 range (hex.)           UTF-8 octet sequence (binary)
-	 * 2026 2025-2026 007F   0xxxxxxx
-	 * 2026 2025-2026 07FF   110xxxxx 10xxxxxx
-	 * 2026 2025-2026 FFFF   1110xxxx 10xxxxxx 10xxxxxx
+* 0000 0000-0000 007F   0xxxxxxx
+* 0000 0080-0000 07FF   110xxxxx 10xxxxxx
+* 0000 0800-0000 FFFF   1110xxxx 10xxxxxx 10xxxxxx
 	 *
 	 * Check for the 0x110000 limit too
 	 */
@@ -1814,7 +1814,7 @@ static const htmlEntityDesc  html40EntitiesTable[] = {
 { 8225,	"Dagger","double dagger, U+2021 ISOpub" },
 
 { 8226,	"bull",	"bullet = black small circle, U+2022 ISOpub" },
-{ 2026,	"hellip","horizontal ellipsis = three dot leader, U+2026 ISOpub" },
+{ 8230,	"hellip","horizontal ellipsis = three dot leader, U+2026 ISOpub" },
 
 { 8240,	"permil","per mille sign, U+2030 ISOtech" },
 

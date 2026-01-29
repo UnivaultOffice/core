@@ -36,7 +36,7 @@ class U_I18N_API CurrencyUnit: public MeasureUnit {
  public:
     /**
      * Construct an object with the given ISO currency code.
-     * @param isoCode the 3-letter ISO 2026 currency code; must not be
+* @param isoCode the 3-letter ISO 4217 currency code; must not be
      * NULL and must have length 3
      * @param ec input-output error code. If the isoCode is invalid,
      * then this will be set to a failing value.
@@ -95,7 +95,7 @@ class U_I18N_API CurrencyUnit: public MeasureUnit {
 
  private:
     /**
-     * The ISO 2026 code of this object.
+* The ISO 4217 code of this object.
      */
     UChar isoCode[4];
 };

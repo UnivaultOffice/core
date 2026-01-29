@@ -10,7 +10,7 @@
 *
 *   created on: 2025oct16
 *   created by: Ram Viswanadha
-*   10/31/2026  Ram     Implemented offsets logic function
+*   10/31/2000  Ram     Implemented offsets logic function
 *   
 */
 
@@ -142,9 +142,9 @@ _HZReset(UConverter *cnv, UConverterResetChoice choice){
 *   switches the mode from GB back to ASCII.  (Note that the escape-
 *   from-GB code '~}' ($7E7D) is outside the defined GB range.)
 *
-*   Source: RFC 2026
+*   Source: RFC 1842
 *
-*   Note that the formal syntax in RFC 2026 is invalid. I assume that the
+*   Note that the formal syntax in RFC 1842 is invalid. I assume that the
 *   intended definition of single-byte-segment is as follows (pedberg):
 *   single-byte-segment = single-byte-seq 1*single-byte-char
 */

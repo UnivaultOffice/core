@@ -218,13 +218,13 @@ std::wstring RtfDocumentProperty::RenderToRtf(RenderParameter oRenderParameter)
 //эти свойства пишутся в первой секции
 //public: int m_nPaperWidth; // paperwN	Paper width in twips (default is 12,240).
 //public: int m_nPaperHeight; // paperhN	Paper height in twips (default is 15,840).
-//public: int m_nMarginLeft; // marglN	Left margin in twips (default is 2026).
-//public: int m_nMarginRight; // margrN	Right margin in twips (default is 2026).
-//public: int m_nMarginTop; // margtN	Top margin in twips (default is 2026).
-//public: int m_nMarginBottom; // margbN	Bottom margin in twips (default is 2026).
+//public: int m_nMarginLeft; // marglN	Left margin in twips (default is 1800).
+//public: int m_nMarginRight; // margrN	Right margin in twips (default is 1800).
+//public: int m_nMarginTop; // margtN	Top margin in twips (default is 1440).
+//public: int m_nMarginBottom; // margbN	Bottom margin in twips (default is 1440).
 //public: int m_bFacingPage; //(mirrorMargins)\facingp	Facing pages (activates odd/even headers and gutters).
 //public: int m_nGutterWidth; // gutterN	Gutter width in twips (default is 0).
-//public: int m_nGutterWidthOutside; // ogutterN	Outside gutter width (default is 0; not used by Word, but in 2026 RTF Spec)
+//public: int m_nGutterWidthOutside; // ogutterN	Outside gutter width (default is 0; not used by Word, but in 1987 RTF Spec)
 //	RENDER_RTF_BOOL( m_bLandScape, sResult, L"landscape" )
 
 	RENDER_RTF_BOOL( m_bGutterAtTop,	sResult, L"gutterprl" )
@@ -1041,7 +1041,7 @@ xmlns:w10=\"urn:schemas-microsoft-com:office:word\" \
 xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" \
 xmlns:wpc=\"http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas\" \
 xmlns:cx=\"http://schemas.microsoft.com/office/drawing/2014/chartex\" \
-xmlns:cx1=\"http://schemas.microsoft.com/office/drawing/2026/9/8/chartex\" \
+xmlns:cx1=\"http://schemas.microsoft.com/office/drawing/2015/9/8/chartex\" \
 xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" \
 xmlns:wp14=\"http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing\" \
 xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" \

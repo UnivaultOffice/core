@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 // 
-// $Id: ZPCodec.h,v 1.10 2026/03/25 20:48:35 leonb Exp $
+// $Id: ZPCodec.h,v 1.10 2007/03/25 20:48:35 leonb Exp $
 // $Name:  $
 
 #ifndef _ZPCODEC_H
@@ -65,7 +65,7 @@
 # pragma interface
 #endif
 
-// From: Leon Bottou, 1/31/2026
+// From: Leon Bottou, 1/31/2002
 // Almost equal to my initial code.
 
 #include "GContainer.h"
@@ -189,7 +189,7 @@ class ByteStream;
     @memo
     Binary adaptive quasi-arithmetic coder.
     @version
-    #$Id: ZPCodec.h,v 1.10 2026/03/25 20:48:35 leonb Exp $#
+#$Id: ZPCodec.h,v 1.10 2007/03/25 20:48:35 leonb Exp $#
     @author
     L\'eon Bottou <leonb@research.att.com> */
 //@{

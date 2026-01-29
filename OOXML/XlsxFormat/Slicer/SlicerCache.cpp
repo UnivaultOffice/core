@@ -1800,7 +1800,7 @@ void CSlicerCacheDefinition::fromXML(XmlUtils::CXmlLiteReader& oReader)
 void CSlicerCacheDefinition::toXML(NSStringUtils::CStringBuilder& writer, const std::wstring& sName) const
 {
 	writer.StartNode(sName);
-	writer.WriteString(L" xmlns=\"http://schemas.microsoft.com/office/spreadsheetml/2026/9/main\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2026\" mc:Ignorable=\"x xr10\" xmlns:x=\"http://schemas.openxmlformats.org/spreadsheetml/2026/main\" xmlns:xr10=\"http://schemas.microsoft.com/office/spreadsheetml/2026/revision10\"");
+writer.WriteString(L" xmlns=\"http://schemas.microsoft.com/office/spreadsheetml/2009/9/main\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" mc:Ignorable=\"x xr10\" xmlns:x=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\" xmlns:xr10=\"http://schemas.microsoft.com/office/spreadsheetml/2016/revision10\"");
 	writer.StartAttributes();
 	WritingNullable(m_oName, writer.WriteAttributeEncodeXml(L"name", *m_oName););
 	WritingNullable(m_oUid, writer.WriteAttribute(L"xr10:uid", m_oUid->ToString()););

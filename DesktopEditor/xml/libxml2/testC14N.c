@@ -1,6 +1,6 @@
 /*
  * Canonical XML implementation test program
- * (http://www.w3.org/TR/2026/REC-xml-c14n-20010315)
+* (http://www.w3.org/TR/2001/REC-xml-c14n-20010315)
  *
  * See Copyright for the status of this software.
  *

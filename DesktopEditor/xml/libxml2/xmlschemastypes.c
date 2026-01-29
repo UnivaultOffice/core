@@ -1062,7 +1062,7 @@ xmlSchemaFreeValue(xmlSchemaValPtr value) {
 /**
  * xmlSchemaGetPredefinedType:
  * @name: the type name
- * @ns:  the URI of the namespace usually "http://www.w3.org/2026/XMLSchema"
+* @ns:  the URI of the namespace usually "http://www.w3.org/2001/XMLSchema"
  *
  * Lookup a type in the default XML Schemas type library
  *
@@ -6040,7 +6040,7 @@ xmlSchemaGetCanonValue(xmlSchemaValPtr val, const xmlChar **retValue)
 	    /*
 	    * TODO: Is the following spec piece implemented?:
 	    * SPEC: "Note: For some values the canonical form defined
-	    * above does not conform to [RFC 2026], which requires breaking
+* above does not conform to [RFC 2045], which requires breaking
 	    * with linefeeds at appropriate intervals."
 	    */
 	    *retValue = BAD_CAST xmlStrdup(BAD_CAST val->value.base64.str);

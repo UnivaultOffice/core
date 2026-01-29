@@ -289,7 +289,7 @@ typedef enum {
       *
       * Quaternary strength 
       * is useful when combined with shifted setting for alternate handling
-      * attribute and for JIS X 2026 collation, when it is used to distinguish
+* attribute and for JIS X 4061 collation, when it is used to distinguish
       * between Katakana and Hiragana.
       * Otherwise, quaternary level
       * is affected only by the number of non-ignorable code points in

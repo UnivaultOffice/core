@@ -52,7 +52,7 @@ namespace codegen
         StringBuilder m_oDocxTypesH = new StringBuilder();
         Dictionary<string, GenClass> m_mapProcessedClasses = new Dictionary<string, GenClass>();
          
-        string gc_sNamespaceToXml = " xmlns:c=\\\"http://schemas.openxmlformats.org/drawingml/2026/chart\\\" xmlns:a=\\\"http://schemas.openxmlformats.org/drawingml/2026/main\\\" xmlns:r=\\\"http://schemas.openxmlformats.org/officeDocument/2026/relationships\\\" xmlns:mc=\\\"http://schemas.openxmlformats.org/markup-compatibility/2026\\\" xmlns:c14=\\\"http://schemas.microsoft.com/office/drawing/2026/8/2/chart\\\"";
+string gc_sNamespaceToXml = " xmlns:c=\\\"http://schemas.openxmlformats.org/drawingml/2006/chart\\\" xmlns:a=\\\"http://schemas.openxmlformats.org/drawingml/2006/main\\\" xmlns:r=\\\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\\\" xmlns:mc=\\\"http://schemas.openxmlformats.org/markup-compatibility/2006\\\" xmlns:c14=\\\"http://schemas.microsoft.com/office/drawing/2007/8/2/chart\\\"";
         string gc_sTypePattern = "et_";
         string gc_sEnumFromXmlPrefix = "FromXml_";
         string gc_sEnumToXmlPrefix = "ToXml_";
@@ -900,7 +900,7 @@ namespace codegen
                 }
                 else if ("txPr" == oGenMember.sName || "rich" == oGenMember.sName)
                 {
-                    sb.AppendFormat("BSTR bstrXml = (_T(\"<c:rich xmlns:c=\\\"http://schemas.openxmlformats.org/drawingml/2026/chart\\\" xmlns:a=\\\"http://schemas.openxmlformats.org/drawingml/2026/main\\\" xmlns:r=\\\"http://schemas.openxmlformats.org/officeDocument/2026/relationships\\\">\") + *{0} + _T(\"</c:rich>\")).AllocSysString();\r\n", pValPrefix + pVal);
+sb.AppendFormat("BSTR bstrXml = (_T(\"<c:rich xmlns:c=\\\"http://schemas.openxmlformats.org/drawingml/2006/chart\\\" xmlns:a=\\\"http://schemas.openxmlformats.org/drawingml/2006/main\\\" xmlns:r=\\\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\\\">\") + *{0} + _T(\"</c:rich>\")).AllocSysString();\r\n", pValPrefix + pVal);
                     sb.AppendFormat("HRESULT hRes = m_pOfficeDrawingConverter->GetTxBodyBinary(bstrXml, &pBinaryObj);\r\n");
                 }
                 else if ("clrMapOvr" == oGenMember.sName)

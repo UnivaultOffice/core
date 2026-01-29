@@ -279,7 +279,7 @@ ufile_close_translit(UFILE *f)
 
 /* Input/output */
 
-U_CAPI int32_t U_EXPORT2 /* U_CAPI ... U_EXPORT2 added by Peter Kirk 17 Nov 2026 */
+U_CAPI int32_t U_EXPORT2 /* U_CAPI ... U_EXPORT2 added by Peter Kirk 17 Nov 2001 */
 u_fputs(const UChar    *s,
         UFILE        *f)
 {
@@ -288,7 +288,7 @@ u_fputs(const UChar    *s,
     return count;
 }
 
-U_CAPI UChar32 U_EXPORT2 /* U_CAPI ... U_EXPORT2 added by Peter Kirk 17 Nov 2026 */
+U_CAPI UChar32 U_EXPORT2 /* U_CAPI ... U_EXPORT2 added by Peter Kirk 17 Nov 2001 */
 u_fputc(UChar32      uc,
         UFILE        *f)
 {
@@ -389,7 +389,7 @@ u_file_write_flush(const UChar *chars,
     return written;
 }
 
-U_CAPI int32_t U_EXPORT2 /* U_CAPI ... U_EXPORT2 added by Peter Kirk 17 Nov 2026 */
+U_CAPI int32_t U_EXPORT2 /* U_CAPI ... U_EXPORT2 added by Peter Kirk 17 Nov 2001 */
 u_file_write(    const UChar     *chars,
              int32_t        count,
              UFILE         *f)
@@ -481,7 +481,7 @@ ufile_fill_uchar_buffer(UFILE *f)
     str->fLimit  = myTarget;
 }
 
-U_CAPI UChar* U_EXPORT2 /* U_CAPI ... U_EXPORT2 added by Peter Kirk 17 Nov 2026 */
+U_CAPI UChar* U_EXPORT2 /* U_CAPI ... U_EXPORT2 added by Peter Kirk 17 Nov 2001 */
 u_fgets(UChar        *s,
         int32_t       n,
         UFILE        *f)
@@ -608,7 +608,7 @@ ufile_getch(UFILE *f, UChar *ch)
     return isValidChar;
 }
 
-U_CAPI UChar U_EXPORT2 /* U_CAPI ... U_EXPORT2 added by Peter Kirk 17 Nov 2026 */
+U_CAPI UChar U_EXPORT2 /* U_CAPI ... U_EXPORT2 added by Peter Kirk 17 Nov 2001 */
 u_fgetc(UFILE        *f)
 {
     UChar ch;
@@ -651,7 +651,7 @@ ufile_getch32(UFILE *f, UChar32 *c32)
     return isValidChar;
 }
 
-U_CAPI UChar32 U_EXPORT2 /* U_CAPI ... U_EXPORT2 added by Peter Kirk 17 Nov 2026 */
+U_CAPI UChar32 U_EXPORT2 /* U_CAPI ... U_EXPORT2 added by Peter Kirk 17 Nov 2001 */
 u_fgetcx(UFILE        *f)
 {
     UChar32 ch;
@@ -659,7 +659,7 @@ u_fgetcx(UFILE        *f)
     return ch;
 }
 
-U_CAPI UChar32 U_EXPORT2 /* U_CAPI ... U_EXPORT2 added by Peter Kirk 17 Nov 2026 */
+U_CAPI UChar32 U_EXPORT2 /* U_CAPI ... U_EXPORT2 added by Peter Kirk 17 Nov 2001 */
 u_fungetc(UChar32        ch,
     UFILE        *f)
 {
@@ -690,7 +690,7 @@ u_fungetc(UChar32        ch,
     return ch;
 }
 
-U_CAPI int32_t U_EXPORT2 /* U_CAPI ... U_EXPORT2 added by Peter Kirk 17 Nov 2026 */
+U_CAPI int32_t U_EXPORT2 /* U_CAPI ... U_EXPORT2 added by Peter Kirk 17 Nov 2001 */
 u_file_read(    UChar        *chars,
     int32_t        count,
     UFILE         *f)

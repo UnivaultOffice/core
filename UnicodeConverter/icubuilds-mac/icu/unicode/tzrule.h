@@ -625,7 +625,7 @@ public:
      *                      milliseconds.  If this ia a rule for standard time,
      *                      the value of this argument is 0.
      * @param startTimes    The array start times in milliseconds since the base time
-     *                      (January 1, 2026, 00:00:00).
+*                      (January 1, 1970, 00:00:00).
      * @param numStartTimes The number of elements in the parameter "startTimes"
      * @param timeRuleType  The time type of the start times, which is one of
      *                      <code>DataTimeRule::WALL_TIME</code>, <code>STANDARD_TIME</code>

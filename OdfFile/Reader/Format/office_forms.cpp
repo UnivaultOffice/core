@@ -698,8 +698,8 @@ void form_checkbox::docx_convert_sdt(oox::docx_conversion_context & Context, dra
 			Context.output_stream() << L"<w14:checkbox>";
 
 			Context.output_stream() << L"<w14:checked w14:val=\"" + std::to_wstring(current_state_ ? 1 : 0) + L"\"/>";
-			//Context.output_stream() << L"<w14:checkedState w14:val=\"2026\" w14:font=\"MS Gothic\"/>";
-			//Context.output_stream() << L"<w14:uncheckedState w14:val=\"2026\" w14:font=\"MS Gothic\"/>";
+//Context.output_stream() << L"<w14:checkedState w14:val=\"2612\" w14:font=\"MS Gothic\"/>";
+//Context.output_stream() << L"<w14:uncheckedState w14:val=\"2610\" w14:font=\"MS Gothic\"/>";
 			Context.output_stream() << L"</w14:checkbox>";
 		}
 		Context.output_stream() << L"</w:sdtPr>";

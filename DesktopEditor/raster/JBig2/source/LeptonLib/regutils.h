@@ -69,7 +69,7 @@
  *       // generate or test against golden files 2 and 3.
  *       regTestCompareSimilarPix(fp, argv, pix1, pix2, 15, 0.001, 2,
  *                                &success, 0);
- *       regTestCompareSimilarPix(fp, argv, pix1, pix2, 15, 0.2026, 3,
+*       regTestCompareSimilarPix(fp, argv, pix1, pix2, 15, 0.0005, 3,
  *                                &success, 0);
  *
  *       // Generation of <newfile*> outputs and testing for identity

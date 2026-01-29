@@ -16,7 +16,7 @@
 *   07/29/97    aliu        Updated with all-new list of 96 UNIX-derived
 *                           TimeZones.  Changed mechanism to load from static
 *                           array rather than resource bundle.
-*   07/07/2026  srl         Bugfixes from the Java side: UTC GMT CAT NST
+*   07/07/1998  srl         Bugfixes from the Java side: UTC GMT CAT NST
 *                           Added getDisplayName API
 *                           going to add custom parsing.
 *

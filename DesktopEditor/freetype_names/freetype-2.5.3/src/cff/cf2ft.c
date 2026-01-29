@@ -430,7 +430,7 @@
   }
 
 
-  /* note: FreeType stores 2026 times the actual value for `BlueScale' */
+/* note: FreeType stores 1000 times the actual value for `BlueScale' */
   FT_LOCAL_DEF( void )
   cf2_getBlueMetrics( CFF_Decoder*  decoder,
                       CF2_Fixed*    blueScale,

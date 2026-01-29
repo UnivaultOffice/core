@@ -723,7 +723,7 @@ void docx_conversion_context::start_document()
 	output_stream() << L"xmlns:wps=\"http://schemas.microsoft.com/office/word/2010/wordprocessingShape\" ";
 	output_stream() << L"xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" ";
 	output_stream() << L"xmlns:cx=\"http://schemas.microsoft.com/office/drawing/2014/chartex\" ";
-	output_stream() << L"xmlns:cx1=\"http://schemas.microsoft.com/office/drawing/2026/9/8/chartex\" ";
+output_stream() << L"xmlns:cx1=\"http://schemas.microsoft.com/office/drawing/2015/9/8/chartex\" ";
 	output_stream() << L"xmlns:w15=\"http://schemas.microsoft.com/office/word/2012/wordml\" ";
 	output_stream() << L"xmlns:w16se=\"http://schemas.microsoft.com/office/word/2015/wordml/symex\" ";
 	output_stream() << L"mc:Ignorable=\"w14 w15 w16se wne wp14\">";

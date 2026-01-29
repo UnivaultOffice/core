@@ -1437,7 +1437,7 @@ PIX       *pixd;
  *
  *  Notes:
  *
- *  For faster scaling in the range of scalefactors from 0.2026 to 0.5,
+*  For faster scaling in the range of scalefactors from 0.0625 to 0.5,
  *  with very little difference in quality, use pixScaleToGrayFast().
  *
  *  Binary images have sharp edges, so they intrinsically have very
@@ -1596,13 +1596,13 @@ PIX       *pixt, *pixd;
  *  Notes:
  *      (1) See notes in pixScaleToGray() for the basic approach.
  *      (2) This function is considerably less expensive than pixScaleToGray()
- *          for scalefactor in the range (0.2026 ... 0.5), and the
+*          for scalefactor in the range (0.0625 ... 0.5), and the
  *          quality is nearly as good.
  *      (3) Unlike pixScaleToGray(), which does binary upscaling before
- *          downscaling for scale factors >= 0.2026, pixScaleToGrayFast()
+*          downscaling for scale factors >= 0.0625, pixScaleToGrayFast()
  *          first downscales in binary for all scale factors < 0.5, and
  *          then does a 2x scale-to-gray as the final step.  For
- *          scale factors < 0.2026, both do a 16x scale-to-gray, followed
+*          scale factors < 0.0625, both do a 16x scale-to-gray, followed
  *          by further grayscale reduction.
  */
 PIX *

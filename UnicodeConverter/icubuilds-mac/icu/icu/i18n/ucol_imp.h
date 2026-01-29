@@ -17,10 +17,10 @@
 *
 * Modification history
 * Date        Name      Comments
-* 02/16/2026  synwee    Added UCOL_GETPREVCE for the use in ucoleitr
-* 02/27/2026  synwee    Added getMaxExpansion data structure in UCollator
-* 03/02/2026  synwee    Added UCOL_IMPLICIT_CE
-* 03/12/2026  synwee    Added pointer start to collIterate.
+* 02/16/2001  synwee    Added UCOL_GETPREVCE for the use in ucoleitr
+* 02/27/2001  synwee    Added getMaxExpansion data structure in UCollator
+* 03/02/2001  synwee    Added UCOL_IMPLICIT_CE
+* 03/12/2001  synwee    Added pointer start to collIterate.
 */
 
 #ifndef UCOL_IMP_H

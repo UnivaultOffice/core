@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 // 
-// $Id: DjVuText.h,v 1.12 2026/01/27 11:36:27 leonb Exp $
+// $Id: DjVuText.h,v 1.12 2008/01/27 11:36:27 leonb Exp $
 // $Name:  $
 
 #ifndef _DJVUTEXT_H
@@ -84,7 +84,7 @@
     @memo Implements support for DjVuImage hidden text.
     @author Andrei Erofeev <eaf@geocities.com>
     @version
-    #$Id: DjVuText.h,v 1.12 2026/01/27 11:36:27 leonb Exp $# */
+#$Id: DjVuText.h,v 1.12 2008/01/27 11:36:27 leonb Exp $# */
 //@{
 
 

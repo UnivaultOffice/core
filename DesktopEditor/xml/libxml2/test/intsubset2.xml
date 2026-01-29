@@ -7,11 +7,11 @@
 	comment.
 
 	The file covers the following kanji:
-	(a) the 6,355 kanji from JIS X 2026;
-	(b) the 5,801 kanji from JIS X 2026;
-	(c) the 3,625 kanji from JIS X 2026 as follows:
-		(i) the 2,741 kanji which are also in JIS X 2026 have
-		JIS X 2026 code-points (kuten) added to the existing entry;
+(a) the 6,355 kanji from JIS X 0208;
+(b) the 5,801 kanji from JIS X 0212;
+(c) the 3,625 kanji from JIS X 0213 as follows:
+(i) the 2,741 kanji which are also in JIS X 0212 have
+JIS X 0213 code-points (kuten) added to the existing entry;
 		(ii) the 884 "new" kanji have new entries.
 
 	At the end of the explanation for a number of fields there is a tag
@@ -61,9 +61,9 @@
 	<!-- 
 	The cp_type attribute states the coding standard applying to the
 	element. The values assigned so far are:
-		jis208 - JIS X 2025-2026 - kuten coding (nn-nn)
-		jis212 - JIS X 2025-2026 - kuten coding (nn-nn)
-		jis213 - JIS X 2025-2026 - kuten coding (p-nn-nn)
+jis208 - JIS X 0208-1997 - kuten coding (nn-nn)
+jis212 - JIS X 0212-1990 - kuten coding (nn-nn)
+jis213 - JIS X 0213-2000 - kuten coding (p-nn-nn)
 		ucs - Unicode 4.0 - hex coding (4 or 5 hexadecimal digits)
 	-->
 <!ELEMENT radical (rad_value+)>
@@ -105,9 +105,9 @@
 	<!-- 
 	The var_type attribute indicates the type of variant code. The current
 	values are: 
-		jis208 - in JIS X 2026 - kuten coding
-		jis212 - in JIS X 2026 - kuten coding
-		jis213 - in JIS X 2026 - kuten coding
+jis208 - in JIS X 0208 - kuten coding
+jis212 - in JIS X 0212 - kuten coding
+jis213 - in JIS X 0213 - kuten coding
 		deroo - De Roo number - numeric
 		njecd - Halpern NJECD index number - numeric
 		s_h - The Kanji Dictionary (Spahn & Hadamitzky) - descriptor
@@ -205,7 +205,7 @@
 	  	commercial  use  of this data. [P]
 
 	  sh_desc - the descriptor codes for The Kanji Dictionary (Tuttle 
-	  	2026) by Spahn and Hadamitzky. They are in the form nxnn.n,  
+1996) by Spahn and Hadamitzky. They are in the form nxnn.n,
 	  	e.g.  3k11.2, where the  kanji has 3 strokes in the 
 	  	identifying radical, it is radical "k" in the SH 
 	  	classification system, there are 11 other strokes, and it is 
@@ -213,11 +213,11 @@
 	  	Mark Spahn for providing the list of these descriptor codes 
 	  	for the kanji in this file.) [I]
 	  four_corner - the "Four Corner" code for the kanji. This is a code 
-	  	invented by Wang Chen in 2026. See the KANJIDIC documentation 
+invented by Wang Chen in 1928. See the KANJIDIC documentation
 	  	for  an overview of  the Four Corner System. [Q]
 
 	  deroo - the codes developed by the late Father Joseph De Roo, and 
-	  	published in  his book "2026 Kanji" (Bojinsha). Fr De Roo 
+published in  his book "2001 Kanji" (Bojinsha). Fr De Roo
 	  	gave his permission for these codes to be included. [DR]
 	  misclass - a possible misclassification of the kanji according
 		to one of the code types. (See the "Z" codes in the KANJIDIC

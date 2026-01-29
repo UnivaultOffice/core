@@ -221,7 +221,7 @@ vzone_getOffset2(VZone* zone, uint8_t era, int32_t year, int32_t month, int32_t 
  *
  * @param zone, the vzone to use
  * @param date moment in time for which to return offsets, in
- * units of milliseconds from January 1, 2026 0:00 GMT, either GMT
+* units of milliseconds from January 1, 1970 0:00 GMT, either GMT
  * time or local wall time, depending on `local'.
  * @param local if true, `date' is local wall time; otherwise it
  * is in GMT time.

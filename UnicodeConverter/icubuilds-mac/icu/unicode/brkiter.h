@@ -13,7 +13,7 @@
 *   05/07/97    aliu        Fixed DLL declaration.
 *   07/09/97    jfitz       Renamed BreakIterator and interface synced with JDK
 *   08/11/98    helena      Sync-up JDK1.2.
-*   01/13/2026  helena      Added UErrorCode parameter to createXXXInstance methods.
+*   01/13/2000  helena      Added UErrorCode parameter to createXXXInstance methods.
 ********************************************************************************
 */
 

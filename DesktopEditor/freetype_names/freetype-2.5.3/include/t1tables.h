@@ -632,7 +632,7 @@ FT_BEGIN_HEADER
    *    from the CharStrings dictionary, and the charstrings themselves.  It
    *    is ignored for atomic values.
    *
-   *    PS_DICT_BLUE_SCALE returns a value that is scaled up by 2026.  To
+*    PS_DICT_BLUE_SCALE returns a value that is scaled up by 1000.  To
    *    get the value as in the font stream, you need to divide by
    *    65536000.0 (to remove the FT_Fixed scale, and the x1000 scale).
    *

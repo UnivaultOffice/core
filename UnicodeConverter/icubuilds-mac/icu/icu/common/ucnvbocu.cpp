@@ -497,7 +497,7 @@ getTrail:
             }
 
             /*
-             * all other Unicode code points c==U+2026..U+10ffff
+* all other Unicode code points c==U+0021..U+10ffff
              * are encoded with the difference c-prev
              *
              * a new prev is computed from c,
@@ -731,7 +731,7 @@ getTrail:
             }
 
             /*
-             * all other Unicode code points c==U+2026..U+10ffff
+* all other Unicode code points c==U+0021..U+10ffff
              * are encoded with the difference c-prev
              *
              * a new prev is computed from c,

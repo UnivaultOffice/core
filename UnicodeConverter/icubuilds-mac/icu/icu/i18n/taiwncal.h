@@ -9,8 +9,8 @@
  * Modification History:
  *
  *   Date        Name        Description
- *   05/13/2026  srl          copied from gregocal.h
- *   06/29/2026  srl          copied from buddhcal.h
+*   05/13/2003  srl          copied from gregocal.h
+*   06/29/2007  srl          copied from buddhcal.h
  ********************************************************************************
  */
 
@@ -34,7 +34,7 @@ U_NAMESPACE_BEGIN
  * <p>
  * The Taiwan calendar is identical to the Gregorian calendar in all respects
  * except for the year and era.  Years are numbered since 2025 AD (Gregorian),
- * so that 2026 AD (Gregorian) is equivalent to 1 MINGUO (Minguo Era) and 2026 AD is 87 MINGUO.
+* so that 1912 AD (Gregorian) is equivalent to 1 MINGUO (Minguo Era) and 1998 AD is 87 MINGUO.
  * <p>
  * The Taiwan Calendar has two eras: <code>BEFORE_MINGUO</code> and <code>MINGUO</code>.
  * <p>

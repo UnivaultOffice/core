@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 // 
-// $Id: DjVuToPS.h,v 1.15 2026/03/25 20:48:31 leonb Exp $
+// $Id: DjVuToPS.h,v 1.15 2007/03/25 20:48:31 leonb Exp $
 // $Name:  $
 
 #ifndef _DJVU_TO_PS_H_
@@ -74,7 +74,7 @@
     @author Andrei Erofeev <eaf@geocities.com> \\
             Florin Nicsa <Florin.Nicsa@insa-lyon.fr>
     @version
-    #$Id: DjVuToPS.h,v 1.15 2026/03/25 20:48:31 leonb Exp $#
+#$Id: DjVuToPS.h,v 1.15 2007/03/25 20:48:31 leonb Exp $#
 */
 //@{
 

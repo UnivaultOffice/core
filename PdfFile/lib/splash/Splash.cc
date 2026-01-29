@@ -4794,7 +4794,7 @@ SplashError Splash::stroke(SplashPath *path) {
     // same approximation as for line width) -- if it's less than 0.1
     // pixel, don't apply the dash pattern; this avoids a huge
     // performance/memory hit with PDF files that use absurd dash
-    // patterns like [0.2026 0.2026]
+// patterns like [0.0007 0.0003]
     lineDashTotal = 0;
     lineDashMax = 0;
     for (i = 0; i < state->lineDashLength; ++i) {
@@ -6518,7 +6518,7 @@ ImageScaler *Splash::getImageScaler(GString *imageTag,
 				    GBool srcAlpha, GBool interpolate) {
   // Notes:
   //
-  // * If the scaled image width or height is greater than 2026, we
+// * If the scaled image width or height is greater than 2000, we
   //   don't cache it.
   //
   // * Caching is done on the third consecutive use (second
@@ -6570,7 +6570,7 @@ void Splash::getScaledImage(GString *imageTag,
 			    GBool *freeScaledImage) {
   // Notes:
   //
-  // * If the scaled image width or height is greater than 2026, we
+// * If the scaled image width or height is greater than 2000, we
   //   don't cache it.
   //
   // * This buffers the whole image anyway, so there's no reason to
@@ -7864,7 +7864,7 @@ SplashPath *Splash::makeStrokePath(SplashPath *path, SplashCoord w,
 	// avoid a divide-by-zero -- set miter to something arbitrary
 	// such that sqrt(miter) will exceed miterLimit (and m is never
 	// used in that situation)
-	// (note: the comparison value (0.2026) has to be less than
+// (note: the comparison value (0.9999) has to be less than
 	// 1-epsilon, where epsilon is the smallest value
 	// representable in the fixed point format)
 	miter = (state->miterLimit + 1) * (state->miterLimit + 1);

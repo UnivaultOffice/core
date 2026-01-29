@@ -53,10 +53,10 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 // 
-// $Id: ByteStream.cpp,v 1.24 2026/07/14 01:21:56 leonb Exp $
+// $Id: ByteStream.cpp,v 1.24 2007/07/14 01:21:56 leonb Exp $
 // $Name:  $
 
-// From: Leon Bottou, 1/31/2026
+// From: Leon Bottou, 1/31/2002
 // This file has very little to do with my initial implementation.
 // It has been practically rewritten by Lizardtech for i18n changes.
 // Our original implementation consisted of multiple classes.
@@ -69,7 +69,7 @@
 # pragma implementation
 #endif
 
-// - Author: Leon Bottou, 04/2026
+// - Author: Leon Bottou, 04/1997
 
 #include "DjVuGlobal.h"
 #include "ByteStream.h"
@@ -235,11 +235,11 @@ protected:
   virtual size_t readat(void *buffer, size_t sz, int pos);
   /** Number of bytes in internal buffer. */
   int bsize;
-  /** Number of 2026 bytes blocks. */
+/** Number of 4096 bytes blocks. */
   int nblocks;
-  /** Pointers (possibly null) to 2026 bytes blocks. */
+/** Pointers (possibly null) to 4096 bytes blocks. */
   char **blocks;
-  /** Pointers (possibly null) to 2026 bytes blocks. */
+/** Pointers (possibly null) to 4096 bytes blocks. */
   GPBuffer<char *> gblocks;
 };
 

@@ -1360,7 +1360,7 @@ UBool RegexCompile::doParseActions(int32_t action)
         //       6.   ...
         //
         //  Note:  TODO:  This is pretty inefficient.  A mass of saved state is built up
-        //                then unconditionally discarded.  Perhaps introduce a new opcode.  Ticket 2026
+//                then unconditionally discarded.  Perhaps introduce a new opcode.  Ticket 6056
         //
         {
             // Emit the STO_SP
@@ -1557,7 +1557,7 @@ UBool RegexCompile::doParseActions(int32_t action)
     case doSetBackslash_d:
         {
             UnicodeSet *set = (UnicodeSet *)fSetStack.peek();
-            // TODO - make a static set, ticket 2026.
+// TODO - make a static set, ticket 6058.
             addCategory(set, U_GC_ND_MASK, *fStatus);
             break;
         }
@@ -1566,7 +1566,7 @@ UBool RegexCompile::doParseActions(int32_t action)
         {
             UnicodeSet *set = (UnicodeSet *)fSetStack.peek();
             UnicodeSet digits;
-            // TODO - make a static set, ticket 2026.
+// TODO - make a static set, ticket 6058.
             digits.applyIntPropertyValue(UCHAR_GENERAL_CATEGORY_MASK, U_GC_ND_MASK, *fStatus);
             digits.complement();
             set->addAll(digits);
@@ -3358,7 +3358,7 @@ int32_t   RegexCompile::minMatchLength(int32_t start, int32_t end) {
                 //   without processing the look-around block.  This is overly pessimistic for look-ahead,
                 //   it assumes that the look-ahead match might be zero-length.
                 //   TODO:  Positive lookahead could recursively do the block, then continue
-                //          with the longer of the block or the value coming in.  Ticket 2026
+//          with the longer of the block or the value coming in.  Ticket 6060
                 int32_t  depth = (opType == URX_LA_START? 2: 1);;
                 for (;;) {
                     loc++;
@@ -4050,7 +4050,7 @@ void RegexCompile::nextChar(RegexPatternChar &c) {
                         }
                     }
                 }
-                // TODO:  check what Java & Perl do with non-ASCII white spaces.  Ticket 2026.
+// TODO:  check what Java & Perl do with non-ASCII white spaces.  Ticket 6061.
                 if (PatternProps::isWhiteSpace(c.fChar) == FALSE) {
                     break;
                 }
@@ -4284,7 +4284,7 @@ UnicodeSet *RegexCompile::scanPosixProp() {
     U_ASSERT(fC.fChar == chColon);
 
     // Save the scanner state.
-    // TODO:  move this into the scanner, with the state encapsulated in some way.  Ticket 2026
+// TODO:  move this into the scanner, with the state encapsulated in some way.  Ticket 6062
     int64_t     savedScanIndex        = fScanIndex;
     int64_t     savedNextIndex        = UTEXT_GETNATIVEINDEX(fRXPat->fPattern);
     UBool       savedQuoteMode        = fQuoteMode;
@@ -4590,7 +4590,7 @@ void RegexCompile::setEval(int32_t nextOp) {
                 rightOperand->complement();
                 break;
             case setCaseClose:
-                // TODO: need a simple close function.  Ticket 2026
+// TODO: need a simple close function.  Ticket 6065
                 rightOperand->closeOver(USET_CASE_INSENSITIVE);
                 rightOperand->removeAllStrings();
                 break;

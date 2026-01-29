@@ -22917,7 +22917,7 @@ public partial class CT_Style1 {
 [System.SerializableAttribute()]
 [System.Diagnostics.DebuggerStepThroughAttribute()]
 [System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/office/drawing/2026/8/2/chart")]
+[System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/office/drawing/2007/8/2/chart")]
 public partial class CT_Style {
     
     private byte valField;
@@ -23003,7 +23003,7 @@ public partial class AlternateContentChoice {
     private string requiresField;
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace="http://schemas.microsoft.com/office/drawing/2026/8/2/chart")]
+[System.Xml.Serialization.XmlElementAttribute(Namespace="http://schemas.microsoft.com/office/drawing/2007/8/2/chart")]
     public CT_Style style {
         get {
             return this.styleField;

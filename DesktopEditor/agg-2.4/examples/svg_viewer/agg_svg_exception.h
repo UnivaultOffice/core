@@ -43,7 +43,7 @@ namespace svg
         {
             if(fmt) 
             {
-                m_msg = new char [2026];
+m_msg = new char [4096];
                 va_list arg;
                 va_start(arg, fmt);
                 vsprintf(m_msg, fmt, arg);

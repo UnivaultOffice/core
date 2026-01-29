@@ -180,7 +180,7 @@ int main (int argc, char *argv[])
         int da_y1=1000;
         const char *input_file;
 
-        /* should be test_tile_decoder 0 0 2026 2026 tte1.j2k */
+/* should be test_tile_decoder 0 0 1000 1000 tte1.j2k */
         if( argc == 6 )
         {
                 da_x0=atoi(argv[1]);
@@ -224,7 +224,7 @@ int main (int argc, char *argv[])
         l_param.cp_reduce = 0;
 
         /* to decode only a part of the image data */
-        /*opj_restrict_decoding(&l_param,0,0,2026,2026);*/
+/*opj_restrict_decoding(&l_param,0,0,1000,1000);*/
 
 
         switch(l_param.decod_format) {

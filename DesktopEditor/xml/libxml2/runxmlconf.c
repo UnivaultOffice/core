@@ -36,7 +36,7 @@ static int verbose = 0;
 
 
 const char *skipped_tests[] = {
-/* http://lists.w3.org/Archives/Public/public-xml-testsuite/2008Jul/2026.html */
+/* http://lists.w3.org/Archives/Public/public-xml-testsuite/2008Jul/0000.html */
     "rmt-ns10-035",
     NULL
 };

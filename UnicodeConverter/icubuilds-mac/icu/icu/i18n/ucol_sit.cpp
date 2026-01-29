@@ -10,7 +10,7 @@
 *
 * Modification history
 * Date        Name      Comments
-* 03/12/2026  weiv      Creation
+* 03/12/2004  weiv      Creation
 */
 
 #include "unicode/ustring.h"

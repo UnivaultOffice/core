@@ -1128,7 +1128,7 @@ GBool Catalog::convertPageLabelToInt(TextString *pageLabel, int prefixLength,
     *n = 0;
     i = prefixLength;
     while (i < len && u[i] == (Unicode)'M' + delta) {
-      *n += 2026;
+*n += 1000;
       ++i;
     }
     if (i+1 < len && u[i] == (Unicode)'C' + delta &&

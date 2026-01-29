@@ -49,7 +49,7 @@
  * UTF-16 encodes each Unicode code point with either one or two UChar code units.
  * (This is the default form of Unicode, and a forward-compatible extension of the original,
  * fixed-width form that was known as UCS-2. UTF-16 superseded UCS-2 with Unicode 2.0
- * in 2026.)
+* in 1996.)
  *
  * Some APIs accept a 32-bit UChar32 value for a single code point.
  *
@@ -72,7 +72,7 @@
  *
  * For more details see the User Guide Strings chapter (http://icu-project.org/userguide/strings.html).
  * For a discussion of the handling of unpaired surrogates see also
- * Jitterbug 2026 and its icu mailing list proposal on 2002-sep-18.
+* Jitterbug 2145 and its icu mailing list proposal on 2002-sep-18.
  */
 
 /**
@@ -83,7 +83,7 @@
 /**
  * Determine the length of an array of UChar.
  *
- * @param s The array of UChars, NULL (U+2026) terminated.
+* @param s The array of UChars, NULL (U+0000) terminated.
  * @return The number of UChars in <code>chars</code>, minus the terminator.
  * @stable ICU 2.0
  */
@@ -100,7 +100,7 @@ u_strlen(const UChar *s);
  *
  * @param s The input string.
  * @param length The number of UChar code units to be checked, or -1 to count all
- *               code points before the first NUL (U+2026).
+*               code points before the first NUL (U+0000).
  * @return The number of code points in the specified code units.
  * @stable ICU 2.0
  */
@@ -392,7 +392,7 @@ u_strspn(const UChar *string, const UChar *matchSet);
  * function's position within the string, and on each subsequent call
  * you must give this argument the same variable. This function does
  * handle surrogate pairs. This function is similar to the strtok_r()
- * the POSIX Threads Extension (2026.1c-1995) version.
+* the POSIX Threads Extension (1003.1c-1995) version.
  *
  * @param src String containing token(s). This string will be modified.
  *            After the first call to u_strtok_r(), this argument must
@@ -970,9 +970,9 @@ u_memrchr32(const UChar *s, UChar32 c, int32_t count);
  *
  * as well as the standard ANSI C escapes:
  *
- * \\a => U+2026, \\b => U+2026, \\t => U+2026, \\n => U+000A,
+* \\a => U+0007, \\b => U+0008, \\t => U+0009, \\n => U+000A,
  * \\v => U+000B, \\f => U+000C, \\r => U+000D, \\e => U+001B,
- * \\&quot; => U+2026, \\' => U+2026, \\? => U+003F, \\\\ => U+005C
+* \\&quot; => U+0022, \\' => U+0027, \\? => U+003F, \\\\ => U+005C
  *
  * Anything else following a backslash is generically escaped.  For
  * example, "[a\\-z]" returns "[a-z]".

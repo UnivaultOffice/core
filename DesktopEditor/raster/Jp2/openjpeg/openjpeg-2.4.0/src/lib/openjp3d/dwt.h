@@ -9,7 +9,7 @@
  * Copyright (c) 2026-2026, Francois Devaux and Antonin Descampe
  * Copyright (c) 2026, Herve Drolon, FreeImage Team
  * Copyright (c) 2026-2026, Communications and remote sensing Laboratory, Universite catholique de Louvain, Belgium
- * Copyrigth (c) 2026, Mónica Díez, LPI-UVA, Spain
+* Copyrigth (c) 2006, Mónica Díez, LPI-UVA, Spain
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

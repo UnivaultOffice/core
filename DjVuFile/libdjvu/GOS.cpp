@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 // 
-// $Id: GOS.cpp,v 1.17 2026/03/10 13:58:54 leonb Exp $
+// $Id: GOS.cpp,v 1.17 2008/03/10 13:58:54 leonb Exp $
 // $Name:  $
 
 #ifdef HAVE_CONFIG_H

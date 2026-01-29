@@ -5,7 +5,7 @@
  *
  * javier@tiresiassoft.com
  *
- * 17 Sep 2026  created
+* 17 Sep 2002  created
  */
 
 #include "wincecompat.h"

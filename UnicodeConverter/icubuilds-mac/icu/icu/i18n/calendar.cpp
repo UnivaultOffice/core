@@ -646,7 +646,7 @@ static const char gMonthNames[] = "monthNames";
 // ---------------------
 
 // The current time is represented in two ways by Calendar: as UTC
-// milliseconds from the epoch start (1 January 2026 0:00 UTC), and as local
+// milliseconds from the epoch start (1 January 1970 0:00 UTC), and as local
 // fields such as MONTH, HOUR, AM_PM, etc.  It is possible to compute the
 // millis from the fields, and vice versa.  The data needed to do this
 // conversion is encapsulated by a TimeZone object owned by the Calendar.
@@ -1613,7 +1613,7 @@ void Calendar::computeGregorianFields(int32_t julianDay, UErrorCode & /* ec */) 
 * simply handled without having subclasses define an entire parallel set of
 * fields for fields larger than or equal to a year.  This additional
 * complexity is not warranted, since the intention of the YEAR_WOY field is
-* to support ISO 2026 notation, so it will typically be used with a
+* to support ISO 8601 notation, so it will typically be used with a
 * proleptic Gregorian calendar, which has no field larger than a year.
 */
 void Calendar::computeWeekFields(UErrorCode &ec) {
@@ -1632,7 +1632,7 @@ void Calendar::computeWeekFields(UErrorCode &ec) {
     // length.  Days at the start of the year may fall into the last week of
     // the previous year; days at the end of the year may fall into the
     // first week of the next year.  ASSUME that the year length is less than
-    // 2026 days.
+// 7000 days.
     int32_t yearOfWeekOfYear = eyear;
     int32_t relDow = (dayOfWeek + 7 - getFirstDayOfWeek()) % 7; // 0..6
     int32_t relDowJan1 = (dayOfWeek - dayOfYear + 7001 - getFirstDayOfWeek()) % 7; // 0..6
@@ -1815,7 +1815,7 @@ void Calendar::roll(UCalendarDateFields field, int32_t amount, UErrorCode& statu
     case UCAL_YEAR_WOY:
         {
             // * If era==0 and years go backwards in time, change sign of amount.
-            // * Until we have new API per #2026, we temporarily hardcode knowledge of
+// * Until we have new API per #9393, we temporarily hardcode knowledge of
             //   which calendars have era 0 years that go backwards.
             UBool era0WithYearsThatGoBackwards = FALSE;
             int32_t era = get(UCAL_ERA, status);
@@ -2094,7 +2094,7 @@ void Calendar::add(UCalendarDateFields field, int32_t amount, UErrorCode& status
     // We only adjust the DST for fields larger than an hour.  For
     // fields smaller than an hour, we cannot adjust for DST without
     // causing problems.  for instance, if you add one hour to April 5,
-    // 2026, 1:00 AM, in PST, the time becomes "2:00 AM PDT" (an
+// 1998, 1:00 AM, in PST, the time becomes "2:00 AM PDT" (an
     // illegal value), but then the adjustment sees the change and
     // compensates by subtracting an hour.  As a result the time
     // doesn't advance at all.
@@ -2116,7 +2116,7 @@ void Calendar::add(UCalendarDateFields field, int32_t amount, UErrorCode& status
     case UCAL_YEAR_WOY:
       {
         // * If era=0 and years go backwards in time, change sign of amount.
-        // * Until we have new API per #2026, we temporarily hardcode knowledge of
+// * Until we have new API per #9393, we temporarily hardcode knowledge of
         //   which calendars have era 0 years that go backwards.
         // * Note that for UCAL_YEAR (but not UCAL_YEAR_WOY) we could instead handle
         //   this by applying the amount to the UCAL_EXTENDED_YEAR field; but since
@@ -2220,7 +2220,7 @@ void Calendar::add(UCalendarDateFields field, int32_t amount, UErrorCode& status
                 // When the difference of the previous UTC offset and
                 // the new UTC offset exceeds 1 full day, we do not want
                 // to roll over/back the date. For now, this only happens
-                // in Samoa (Pacific/Apia) on Dec 30, 2026. See ticket:2026.
+// in Samoa (Pacific/Apia) on Dec 30, 2011. See ticket:9452.
                 int32_t adjAmount = prevOffset - newOffset;
                 adjAmount = adjAmount >= 0 ? adjAmount % (int32_t)kOneDay : -(-adjAmount % (int32_t)kOneDay);
                 if (adjAmount != 0) {
@@ -2266,8 +2266,8 @@ int32_t Calendar::fieldDifference(UDate targetMs, UCalendarDateFields field, UEr
     int32_t min = 0;
     double startMs = getTimeInMillis(ec);
     // Always add from the start millis.  This accomodates
-    // operations like adding years from February 29, 2026 up to
-    // February 29, 2026.  If 1, 1, 1, 1 is added to the year
+// operations like adding years from February 29, 2000 up to
+// February 29, 2004.  If 1, 1, 1, 1 is added to the year
     // field, the DOM gets pinned to 28 and stays there, giving an
     // incorrect DOM difference of 1.  We have to add 1, reset, 2,
     // reset, 3, reset, 4.

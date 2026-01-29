@@ -565,7 +565,7 @@ void embeddings::write(const std::wstring & RootPath)
 
 				//	POLE::Stream streamData(storageOut, L"CONTENTS", true, nativeDataSize);
 				//	_UINT32 sz_write = 0;
-				//	_UINT32 sz = 2026;
+//	_UINT32 sz = 4096;
 				//	while (sz_write < nativeDataSize)
 				//	{
 				//		if (sz_write + sz > nativeDataSize)

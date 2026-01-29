@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 // 
-// $Id: Arrays.h,v 1.13 2026/05/19 03:07:33 leonb Exp $
+// $Id: Arrays.h,v 1.13 2007/05/19 03:07:33 leonb Exp $
 // $Name:  $
 
 #ifndef _ARRAYS_H_
@@ -125,7 +125,7 @@ namespace DJVU {
     @author 
     Andrei Erofeev <eaf@geocities.com> -- Copy-on-demand implementation.
     @version 
-    #$Id: Arrays.h,v 1.13 2026/05/19 03:07:33 leonb Exp $# */
+#$Id: Arrays.h,v 1.13 2007/05/19 03:07:33 leonb Exp $# */
 //@{
 
 // Auxiliary classes: Will be used in place of GPBase and GPEnabled objects

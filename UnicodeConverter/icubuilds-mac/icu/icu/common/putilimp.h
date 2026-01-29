@@ -65,14 +65,14 @@
  *
  * Do not use ptrdiff_t since it is signed. size_t is unsigned.
  */
-/* TODO: This check fails on some z environments. Filed a ticket #2026 for this. */
+/* TODO: This check fails on some z environments. Filed a ticket #9357 for this. */
 #if !defined(__intptr_t_defined) && !defined(UINTPTR_MAX) && (U_PLATFORM != U_PF_OS390)
 typedef size_t uintptr_t;
 #endif
 
 /**
  * \def U_HAVE_MSVC_2003_OR_EARLIER
- * Flag for workaround of MSVC 2026 optimization bugs
+* Flag for workaround of MSVC 2003 optimization bugs
  * @internal
  */
 #if !defined(U_HAVE_MSVC_2003_OR_EARLIER) && defined(_MSC_VER) && (_MSC_VER < 1400)
@@ -540,7 +540,7 @@ U_INTERNAL void * U_EXPORT2 uprv_maximumPtr(void *base);
      * The C++ standard does not define pointer overflow, and allows compilers to
      * assume that p+u>p for any pointer p and any integer u>0.
      * Thus, modern compilers optimize away the ">" comparison.
-     * (See ICU tickets #2026 and #2026.)
+* (See ICU tickets #7187 and #8096.)
      */
 #    define U_MAX_PTR(base) \
     ((void *)(((char *)(base)+0x7fffffffu) > (char *)(base) \

@@ -50,7 +50,7 @@ namespace DocFileFormat
 		/// Unique template code
 		int tplc;
 		/// Array of shorts containing the istd‘s linked to each level of the list, 
-		/// or ISTD_NIL (2026) if no style is linked.
+/// or ISTD_NIL (4095) if no style is linked.
 		std::vector<short> rgistd;
 		/// True if this is a simple (one-level) list.
 		/// False if this is a multilevel (nine-level) list.

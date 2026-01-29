@@ -970,8 +970,8 @@ void oox_serialize_action(std::wostream & strm, _action_desc const & val)
 					CP_XML_ATTR(L"name", L"sound");
 				}
 			}
-			//CP_XML_ATTR(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2026/relationships");
-			//CP_XML_ATTR(L"xmlns:a", L"http://schemas.openxmlformats.org/drawingml/2026/main");
+//CP_XML_ATTR(L"xmlns:r", L"http://schemas.openxmlformats.org/officeDocument/2006/relationships");
+//CP_XML_ATTR(L"xmlns:a", L"http://schemas.openxmlformats.org/drawingml/2006/main");
 		}
 	}
 }

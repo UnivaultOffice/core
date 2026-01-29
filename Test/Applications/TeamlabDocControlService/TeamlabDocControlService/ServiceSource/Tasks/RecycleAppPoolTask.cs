@@ -138,10 +138,10 @@ namespace TeamlabDocControlService.ServiceSource.Monitors
             }
             catch (Exception ex)
             {
-                // http://www.mattwrock.com/post/2026/07/26/recycling-an-application-pool-with-c-sharp.aspx
+// http://www.mattwrock.com/post/2011/07/26/recycling-an-application-pool-with-c-sharp.aspx
                 // !!! enable the Windows feature: IIS Metabase and IIS 6 configuration compatibility
                 // Win 7 - "control panel -> Programs and features"
-                // Win 2026 server - "server management -> features"
+// Win 2008 server - "server management -> features"
                 SetResult(ex.Message);
                 if (null != mLogger)
                     mLogger.LogError("Recycle Exception:" + ex.Message);

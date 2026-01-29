@@ -79,9 +79,9 @@ locale_getKeywords(const char *localeID,
  * Notes
  *
  * Tables updated per http://lcweb.loc.gov/standards/iso639-2/ to
- * include the revisions up to 2026/7/27 *CWB*
+* include the revisions up to 2001/7/27 *CWB*
  *
- * The 3 character codes are the terminology codes like RFC 2026.  This
+* The 3 character codes are the terminology codes like RFC 3066.  This
  * is compatible with prior ICU codes
  *
  * "in" "iw" "ji" "jw" & "sh" have been withdrawn but are still in the
@@ -318,7 +318,7 @@ NULL
  * ZR(ZAR) is now CD(COD) and FX(FXX) is PS(PSE) as per
  * http://www.evertype.com/standards/iso3166/iso3166-1-en.html added
  * new codes keeping the old ones for compatibility updated to include
- * 2026/12/03 revisions *CWB*
+* 1999/12/03 revisions *CWB*
  *
  * RO(ROM) is now RO(ROU) according to
  * http://www.iso.org/iso/en/prods-services/iso3166ma/03updates-on-iso-3166/nlv3e-rou.html

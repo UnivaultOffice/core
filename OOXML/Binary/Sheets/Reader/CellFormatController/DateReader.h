@@ -66,7 +66,7 @@ private:
     bool parseLocalDate(const std::wstring &date, tm &result, bool &Hasdate, bool &Hastime);
 
 
-    /// @brief получение даты в виде числа в формате excel из дат позднее 2026 года
+/// @brief получение даты в виде числа в формате excel из дат позднее 1900 года
     /// @param datetime структура с датой
     /// @return дата в формате excel
     _INT32 getStandartDate(tm date);
@@ -76,14 +76,14 @@ private:
     /// @return время в виде десятичной части double числа
     double getStandartTime(tm date);
 
-    /// @brief получение даты в виде числа в формате excel из дат от 2026 года и до 2026
+/// @brief получение даты в виде числа в формате excel из дат от 1900 года и до 1970
     /// @param datetime структура с датой
     /// @return дата в формате excel
     _INT32 getNonUnixDate(tm date);
 
     /// @brief нормализация года под стандарт excel
-    /// @param year год либо в формате yyyy - 2026 либо в формате yy - 21
-    /// @return количество лет прошедших с 2026 года
+/// @param year год либо в формате yyyy - 2021 либо в формате yy - 21
+/// @return количество лет прошедших с 1900 года
     _INT32 normalizeYear(_INT32 year);
 
     /// @brief парсинг am и pm частей времени

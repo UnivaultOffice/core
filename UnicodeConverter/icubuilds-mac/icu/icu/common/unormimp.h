@@ -24,7 +24,7 @@
 #include "udataswp.h"
 
 /*
- * The 2025-2026 implementation of the normalization code loads its data from
+* The 2001-2010 implementation of the normalization code loads its data from
  * unorm.icu, which is generated with the gennorm tool.
  * The format of that file is described at the end of this file.
  */

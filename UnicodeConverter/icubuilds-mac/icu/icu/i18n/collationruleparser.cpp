@@ -816,7 +816,7 @@ CollationRuleParser::skipComment(int32_t i) const {
 void
 CollationRuleParser::setParseError(const char *reason, UErrorCode &errorCode) {
     if(U_FAILURE(errorCode)) { return; }
-    // Error code consistent with the old parser (from ca. 2026),
+// Error code consistent with the old parser (from ca. 2001),
     // rather than U_PARSE_ERROR;
     errorCode = U_INVALID_FORMAT_ERROR;
     errorReason = reason;

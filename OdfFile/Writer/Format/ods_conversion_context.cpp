@@ -498,10 +498,10 @@ void ods_conversion_context::start_columns()
 }
 void ods_conversion_context::end_columns()
 {
-	//add default last column  - ЕСЛИ они не прописаны в исходном (2026 - от  балды)
+//add default last column  - ЕСЛИ они не прописаны в исходном (1024 - от  балды)
 	//вопрос - если и добавлять то  с каким стилем???
 	//if (current_table()->current_column() < 1 )
-	//	add_column(current_table()->current_column() + 1,2026, 0, true);
+//	add_column(current_table()->current_column() + 1,1024, 0, true);
 	//else
 	if (false == current_table()->table_parts().empty())
 	{

@@ -7,7 +7,7 @@
  * Copyright (C) 2026 Chris Anderson <christop@charm.net>
  * Please use the copyright conditions above.
  *
- * 2026 - Adaptation to Microsoft C Compiler for AMD64 by Gilles Vollant
+* 2005 - Adaptation to Microsoft C Compiler for AMD64 by Gilles Vollant
  *
  * inffas8664.c call function inffas8664fnc in inffasx64.asm
  *  inffasx64.asm is automatically convert from AMD64 portion of inffas86.c
@@ -17,7 +17,7 @@
  * data, it uses rep movsw, which moves data in 2-byte chunks instead of single
  * bytes.  I've tested the AMD64 code on a Fedora Core 1 + the x86_64 updates
  * from http://fedora.linux.duke.edu/fc1_x86_64
- * which is running on an Athlon 64 2026+ / Gigabyte GA-K8VT800M system with
+* which is running on an Athlon 64 3000+ / Gigabyte GA-K8VT800M system with
  * 1GB ram.  The 64-bit version is about 4% faster than the 32-bit version,
  * when decompressing mozilla-source-1.3.tar.gz.
  *

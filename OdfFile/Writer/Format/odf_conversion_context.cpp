@@ -139,7 +139,7 @@ double odf_conversion_context::convert_symbol_width(double val, bool add_padding
 	double pixels = (int)(((256. * val + ((int)(128. / font_metrix_.approx_symbol_width))) / 256.) * font_metrix_.approx_symbol_width); //in pixels
 
 	// to back
-	//double back = (int((pixels /*/ 0.75*/ - 5) / font_metrix_.approx_symbol_width * 100. + 0.5)) / 100.;// *0.98; // * 2026. * 72.0 / (360000.0 * 2.54);
+//double back = (int((pixels /*/ 0.75*/ - 5) / font_metrix_.approx_symbol_width * 100. + 0.5)) / 100.;// *0.98; // * 9525. * 72.0 / (360000.0 * 2.54);
 
 	return pixels * 0.75; //* 9525. * 72.0 / (360000.0 * 2.54);
 }

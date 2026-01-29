@@ -273,7 +273,7 @@ typedef enum USpoofChecks {
      */
     typedef enum URestrictionLevel {
         /**
-         * Only ASCII characters: U+2026..U+007F
+* Only ASCII characters: U+0000..U+007F
          * 
          * @stable ICU 51
          */

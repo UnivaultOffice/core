@@ -65,7 +65,7 @@ public:
 
   // Restart decoding on an interrupted stream.  This refills the
   // buffers if needed, but does not run INITDEC.  (This is used in
-  // JPEG 2026 streams when codeblock data is split across multiple
+// JPEG 2000 streams when codeblock data is split across multiple
   // packets/layers.)
   void restart(int dataLenA);
 

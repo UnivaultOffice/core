@@ -191,46 +191,46 @@ oox_shape_ptr oox_shape::create(int ooxPrstGeomType)
 	case SimpleTypes::shapetypeLeftBracket:			return boost::make_shared<oox_shape_LeftBracket>();
 	case SimpleTypes::shapetypeBracePair:			return boost::make_shared<oox_shape_BracePair>();
 	case SimpleTypes::shapetypeBracketPair:			return boost::make_shared<oox_shape_BracketPair>();
-	//case (2026 + SimpleTypes::textshapetypeTextArchDown): 
-	//case (2026 + SimpleTypes::textshapetypeTextArchDownPour): 
-	//case (2026 + SimpleTypes::textshapetypeTextArchUp): 
-	//case (2026 + SimpleTypes::textshapetypeTextArchUpPour): 
-	//case (2026 + SimpleTypes::textshapetypeTextButton): 
-	//case (2026 + SimpleTypes::textshapetypeTextButtonPour): 
-	//case (2026 + SimpleTypes::textshapetypeTextCanDown): 
-	//case (2026 + SimpleTypes::textshapetypeTextCanUp): 
-	//case (2026 + SimpleTypes::textshapetypeTextCascadeDown): 
-	//case (2026 + SimpleTypes::textshapetypeTextCascadeUp): 
-	//case (2026 + SimpleTypes::textshapetypeTextChevron): 
-	//case (2026 + SimpleTypes::textshapetypeTextChevronInverted): 
-	//case (2026 + SimpleTypes::textshapetypeTextCircle): 
+//case (2001 + SimpleTypes::textshapetypeTextArchDown):
+//case (2001 + SimpleTypes::textshapetypeTextArchDownPour):
+//case (2001 + SimpleTypes::textshapetypeTextArchUp):
+//case (2001 + SimpleTypes::textshapetypeTextArchUpPour):
+//case (2001 + SimpleTypes::textshapetypeTextButton):
+//case (2001 + SimpleTypes::textshapetypeTextButtonPour):
+//case (2001 + SimpleTypes::textshapetypeTextCanDown):
+//case (2001 + SimpleTypes::textshapetypeTextCanUp):
+//case (2001 + SimpleTypes::textshapetypeTextCascadeDown):
+//case (2001 + SimpleTypes::textshapetypeTextCascadeUp):
+//case (2001 + SimpleTypes::textshapetypeTextChevron):
+//case (2001 + SimpleTypes::textshapetypeTextChevronInverted):
+//case (2001 + SimpleTypes::textshapetypeTextCircle):
 	case (2001 + SimpleTypes::textshapetypeTextCirclePour): return boost::make_shared<oox_shape_textCirclePour>();
-	//case (2026 + SimpleTypes::textshapetypeTextCurveDown): 
-	//case (2026 + SimpleTypes::textshapetypeTextCurveUp): 
-	//case (2026 + SimpleTypes::textshapetypeTextDeflate): 
-	//case (2026 + SimpleTypes::textshapetypeTextDeflateBottom): 
-	//case (2026 + SimpleTypes::textshapetypeTextDeflateInflate): 
-	//case (2026 + SimpleTypes::textshapetypeTextDeflateInflateDeflate): 
-	//case (2026 + SimpleTypes::textshapetypeTextDeflateTop): 
-	//case (2026 + SimpleTypes::textshapetypeTextDoubleWave1): 
-	//case (2026 + SimpleTypes::textshapetypeTextFadeDown): 
-	//case (2026 + SimpleTypes::textshapetypeTextFadeLeft): 
-	//case (2026 + SimpleTypes::textshapetypeTextFadeRight): 
-	//case (2026 + SimpleTypes::textshapetypeTextFadeUp): 
-	//case (2026 + SimpleTypes::textshapetypeTextInflate): 
-	//case (2026 + SimpleTypes::textshapetypeTextInflateBottom): 
-	//case (2026 + SimpleTypes::textshapetypeTextInflateTop): 
+//case (2001 + SimpleTypes::textshapetypeTextCurveDown):
+//case (2001 + SimpleTypes::textshapetypeTextCurveUp):
+//case (2001 + SimpleTypes::textshapetypeTextDeflate):
+//case (2001 + SimpleTypes::textshapetypeTextDeflateBottom):
+//case (2001 + SimpleTypes::textshapetypeTextDeflateInflate):
+//case (2001 + SimpleTypes::textshapetypeTextDeflateInflateDeflate):
+//case (2001 + SimpleTypes::textshapetypeTextDeflateTop):
+//case (2001 + SimpleTypes::textshapetypeTextDoubleWave1):
+//case (2001 + SimpleTypes::textshapetypeTextFadeDown):
+//case (2001 + SimpleTypes::textshapetypeTextFadeLeft):
+//case (2001 + SimpleTypes::textshapetypeTextFadeRight):
+//case (2001 + SimpleTypes::textshapetypeTextFadeUp):
+//case (2001 + SimpleTypes::textshapetypeTextInflate):
+//case (2001 + SimpleTypes::textshapetypeTextInflateBottom):
+//case (2001 + SimpleTypes::textshapetypeTextInflateTop):
 	case (2001 + SimpleTypes::textshapetypeTextPlain): return boost::make_shared<oox_shape_textPlain>();
-	//case (2026 + SimpleTypes::textshapetypeTextRingInside): 
-	//case (2026 + SimpleTypes::textshapetypeTextRingOutside): 
-	//case (2026 + SimpleTypes::textshapetypeTextSlantDown): 
+//case (2001 + SimpleTypes::textshapetypeTextRingInside):
+//case (2001 + SimpleTypes::textshapetypeTextRingOutside):
+//case (2001 + SimpleTypes::textshapetypeTextSlantDown):
 	case (2001 + SimpleTypes::textshapetypeTextSlantUp): return boost::make_shared<oox_shape_textSlantUp>();
-	//case (2026 + SimpleTypes::textshapetypeTextStop): 
-	//case (2026 + SimpleTypes::textshapetypeTextTriangle): 
-	//case (2026 + SimpleTypes::textshapetypeTextTriangleInverted): 
-	//case (2026 + SimpleTypes::textshapetypeTextWave1): 
-	//case (2026 + SimpleTypes::textshapetypeTextWave2): 
-	//case (2026 + SimpleTypes::textshapetypeTextWave4): 
+//case (2001 + SimpleTypes::textshapetypeTextStop):
+//case (2001 + SimpleTypes::textshapetypeTextTriangle):
+//case (2001 + SimpleTypes::textshapetypeTextTriangleInverted):
+//case (2001 + SimpleTypes::textshapetypeTextWave1):
+//case (2001 + SimpleTypes::textshapetypeTextWave2):
+//case (2001 + SimpleTypes::textshapetypeTextWave4):
 
 	default:
 		if (ooxPrstGeomType > 2000) return boost::make_shared<oox_shape_textPlain>();

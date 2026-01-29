@@ -2119,7 +2119,7 @@ static OPJ_BOOL opj_j2k_read_siz(opj_j2k_t *p_j2k,
         return OPJ_FALSE;
     }
 
-    /* testcase 2026.pdf.SIGSEGV.d8b.2026 */
+/* testcase 4035.pdf.SIGSEGV.d8b.3375 */
     /* testcase issue427-null-image-size.jp2 */
     if ((l_image->x0 >= l_image->x1) || (l_image->y0 >= l_image->y1)) {
         opj_event_msg(p_manager, EVT_ERROR,
@@ -2128,7 +2128,7 @@ static OPJ_BOOL opj_j2k_read_siz(opj_j2k_t *p_j2k,
                       (OPJ_INT64)l_image->y1 - l_image->y0);
         return OPJ_FALSE;
     }
-    /* testcase 2026.pdf.SIGFPE.706.2026 (also 2026.pdf.SIGFPE.706.2026 and 2026.pdf.SIGFPE.706.2026 and maybe more) */
+/* testcase 2539.pdf.SIGFPE.706.1712 (also 3622.pdf.SIGFPE.706.2916 and 4008.pdf.SIGFPE.706.3345 and maybe more) */
     if ((l_cp->tdx == 0U) || (l_cp->tdy == 0U)) {
         opj_event_msg(p_manager, EVT_ERROR,
                       "Error with SIZ marker: invalid tile size (tdx: %d, tdy: %d)\n", l_cp->tdx,
@@ -4342,7 +4342,7 @@ static OPJ_BOOL opj_j2k_read_sot(opj_j2k_t *p_j2k,
 
     l_cp = &(p_j2k->m_cp);
 
-    /* testcase 2.pdf.SIGFPE.706.2026 */
+/* testcase 2.pdf.SIGFPE.706.1112 */
     if (p_j2k->m_current_tile_number >= l_cp->tw * l_cp->th) {
         opj_event_msg(p_manager, EVT_ERROR, "Invalid tile number %d\n",
                       p_j2k->m_current_tile_number);
@@ -4455,7 +4455,7 @@ static OPJ_BOOL opj_j2k_read_sot(opj_j2k_t *p_j2k,
     }
 
     if (l_tcp->m_nb_tile_parts != 0 && l_current_part >= l_tcp->m_nb_tile_parts) {
-        /* Fixes https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2026 */
+/* Fixes https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=2851 */
         opj_event_msg(p_manager, EVT_ERROR,
                       "In SOT marker, TPSot (%d) is not valid regards to the previous "
                       "number of tile-part (%d), giving up\n", l_current_part,
@@ -4468,7 +4468,7 @@ static OPJ_BOOL opj_j2k_read_sot(opj_j2k_t *p_j2k,
             0) { /* Number of tile-part header is provided by this tile-part header */
         l_num_parts += p_j2k->m_specific_param.m_decoder.m_nb_tile_parts_correction;
         /* Useful to manage the case of textGBR.jp2 file because two values of TNSot are allowed: the correct numbers of
-         * tile-parts for that tile and zero (A.4.2 of 15444-1 : 2026). */
+* tile-parts for that tile and zero (A.4.2 of 15444-1 : 2002). */
         if (l_tcp->m_nb_tile_parts) {
             if (l_current_part >= l_tcp->m_nb_tile_parts) {
                 opj_event_msg(p_manager, EVT_ERROR,
@@ -4480,7 +4480,7 @@ static OPJ_BOOL opj_j2k_read_sot(opj_j2k_t *p_j2k,
             }
         }
         if (l_current_part >= l_num_parts) {
-            /* testcase 451.pdf.SIGSEGV.ce9.2026 */
+/* testcase 451.pdf.SIGSEGV.ce9.3723 */
             opj_event_msg(p_manager, EVT_ERROR,
                           "In SOT marker, TPSot (%d) is not valid regards to the current "
                           "number of tile-part (header) (%d), giving up\n", l_current_part, l_num_parts);
@@ -5167,7 +5167,7 @@ static OPJ_BOOL opj_j2k_read_rgn(opj_j2k_t *p_j2k,
     };
 #endif /* USE_JPWL */
 
-    /* testcase 2026.pdf.asan.77.2026 */
+/* testcase 3635.pdf.asan.77.2930 */
     if (l_comp_no >= l_nb_comp) {
         opj_event_msg(p_manager, EVT_ERROR,
                       "bad component number in RGN (%d when there are only %d)\n",
@@ -5777,7 +5777,7 @@ static OPJ_BOOL opj_j2k_read_mct(opj_j2k_t *p_j2k,
         return OPJ_FALSE;
     }
 
-    /* Imct -> no need for other values, take the first, type is double with decorrelation x0000 2026 2026 2026*/
+/* Imct -> no need for other values, take the first, type is double with decorrelation x0000 1101 0000 0000*/
     opj_read_bytes(p_header_data, &l_tmp, 2);                       /* Imct */
     p_header_data += 2;
 
@@ -8601,7 +8601,7 @@ static OPJ_BOOL opj_j2k_encoding_validation(opj_j2k_t * p_j2k,
     /* make sure a validation list is present */
     l_is_valid &= (p_j2k->m_validation_list != 00);
 
-    /* ISO 15444-1:2026 states between 1 & 33 (0 -> 32) */
+/* ISO 15444-1:2004 states between 1 & 33 (0 -> 32) */
     /* 33 (32) would always fail the check below (if a cast to 64bits was done) */
     /* FIXME Shall we change OPJ_J2K_MAXRLVLS to 32 ? */
     if ((p_j2k->m_cp.tcps->tccps->numresolutions <= 0) ||
@@ -9934,7 +9934,7 @@ static OPJ_BOOL opj_j2k_update_image_data(opj_tcd_t * p_tcd,
                 (l_offset_y1_src < 0)) {
             return OPJ_FALSE;
         }
-        /* testcase 2026.pdf.asan.67.2026 */
+/* testcase 2977.pdf.asan.67.2198 */
         if ((OPJ_INT32)l_width_dest < 0 || (OPJ_INT32)l_height_dest < 0) {
             return OPJ_FALSE;
         }

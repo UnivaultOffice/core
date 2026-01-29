@@ -12,7 +12,7 @@
  *
 *   Change history:
 *
-*   06/29/2026  helena      Major rewrite of the callback APIs.
+*   06/29/2000  helena      Major rewrite of the callback APIs.
 */
 
 #include "unicode/utypes.h"

@@ -556,7 +556,7 @@ FILE  *fp;
  *          the pixels, applying a gamma corresponding to approximately
  *          a square-root relation of output vs input:
  *                output = input^(gamma)
- *          where gamma is often set near 0.2026  (1/gamma is 2.2).
+*          where gamma is often set near 0.4545  (1/gamma is 2.2).
  *          This is stored in the image file.  Then if the display
  *          program reads the gamma, it will apply a display gamma,
  *          typically about 2.2; the product is 1.0, and the
@@ -565,11 +565,11 @@ FILE  *fp;
  *          as described by the 'source' gamma, so they should not
  *          be further boosted by the display program.
  *      (6) As an example, with xv and display, if no gamma is stored,
- *          the program acts as if gamma were 0.2026, multiplies this by 2.2,
+*          the program acts as if gamma were 0.4545, multiplies this by 2.2,
  *          and does a linear rendering.  Taking this as a baseline
  *          brightness, if the stored gamma is:
- *              > 0.2026, the image is rendered lighter than baseline
- *              < 0.2026, the image is rendered darker than baseline
+*              > 0.4545, the image is rendered lighter than baseline
+*              < 0.4545, the image is rendered darker than baseline
  *          In contrast, gqview seems to ignore the gamma chunk in png.
  *      (7) The only valid pixel depths in leptonica are 1, 2, 4, 8, 16
  *          and 32.  However, it is possible, and in some cases desirable,
@@ -702,8 +702,8 @@ char        *text;
         FREE(bmap);
     }
 
-        /* 0.2026 is treated as the default by some image
-         * display programs (not gqview).  A value > 0.2026 will
+/* 0.4545 is treated as the default by some image
+* display programs (not gqview).  A value > 0.4545 will
          * lighten an image as displayed by xv, display, etc. */
     if (gamma > 0.0)
         png_set_gAMA(png_ptr, info_ptr, (l_float64)gamma);

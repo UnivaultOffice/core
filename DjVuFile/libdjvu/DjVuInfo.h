@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 // 
-// $Id: DjVuInfo.h,v 1.17 2026/01/27 11:36:27 leonb Exp $
+// $Id: DjVuInfo.h,v 1.17 2008/01/27 11:36:27 leonb Exp $
 // $Name:  $
 
 #ifndef _DJVUINFO_H
@@ -75,7 +75,7 @@
     @author
     L\'eon Bottou <leonb@research.att.com>
     @version
-    #$Id: DjVuInfo.h,v 1.17 2026/01/27 11:36:27 leonb Exp $# */
+#$Id: DjVuInfo.h,v 1.17 2008/01/27 11:36:27 leonb Exp $# */
 //@{
 
 

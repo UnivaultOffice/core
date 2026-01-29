@@ -188,7 +188,7 @@ void oox_chart_context::serialize(std::wostream & strm)
 					CP_XML_NODE(L"c:ext")
 					{
 						CP_XML_ATTR(L"uri", L"{781A3756-C4B2-4CAC-9D66-4F8BD8637D16}");
-						CP_XML_ATTR(L"xmlns:c14", L"http://schemas.microsoft.com/office/drawing/2026/8/2/chart");
+CP_XML_ATTR(L"xmlns:c14", L"http://schemas.microsoft.com/office/drawing/2007/8/2/chart");
 						CP_XML_NODE(L"c14:pivotOptions")
 						{
 							CP_XML_NODE(L"c14:dropZoneFilter")

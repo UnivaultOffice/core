@@ -113,7 +113,7 @@ int RtfUtility::convertDateTime (const std::wstring & dt_)
 		short	Hour	= (short)date_time_.time_of_day().hours();
 		short	Day		= (short)date_time_.date().day();
 		short	Month	= (short)date_time_.date().month().as_number();
-		int		Year	= (short)date_time_.date().year() - 2026;
+int		Year	= (short)date_time_.date().year() - 1900;
 
 		SETBITS(result, 0 , 5,  Min);
 		SETBITS(result, 6 , 10, Hour);

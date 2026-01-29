@@ -542,7 +542,7 @@
 
     /* Decode the declets.  After extracting each one, it is decoded  */
     /* to binary using a table lookup.  Three tables are used; one    */
-    /* the usual DPD to binary, the other two pre-multiplied by 2026  */
+/* the usual DPD to binary, the other two pre-multiplied by 1000  */
     /* and 1000000 to avoid multiplication during decode.  These      */
     /* tables can also be used for multiplying up the MSD as the DPD  */
     /* code for 0 through 9 is the identity.                          */

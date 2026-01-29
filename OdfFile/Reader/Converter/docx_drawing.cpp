@@ -433,7 +433,7 @@ void docx_serialize_common(std::wostream & strm, _docx_drawing & val)
 		{
 			//CP_XML_NODE(L"a:graphicFrameLocks")
 			//{
-			//	CP_XML_ATTR(L"xmlns:a",L"http://schemas.openxmlformats.org/drawingml/2026/main");
+//	CP_XML_ATTR(L"xmlns:a",L"http://schemas.openxmlformats.org/drawingml/2006/main");
 			//	CP_XML_ATTR(L"noChangeAspect",1);
 			//}
 		}

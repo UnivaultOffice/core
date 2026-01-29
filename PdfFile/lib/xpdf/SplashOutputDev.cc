@@ -120,7 +120,7 @@ static void splashOutBlendOverlay(SplashColorPtr src, SplashColorPtr dest,
   int i;
 
   for (i = 0; i < splashColorModeNComps[cm]; ++i) {
-    // the spec says "if Cs <= 0.5" -- note that 0x80 is 128/255=0.2026
+// the spec says "if Cs <= 0.5" -- note that 0x80 is 128/255=0.5020
     blend[i] = dest[i] < 0x80
                  ? (Guchar)((src[i] * 2 * dest[i]) / 255)
                  : (Guchar)(255 - 2 * ((255 - src[i]) * (255 - dest[i])) / 255);
@@ -181,7 +181,7 @@ static void splashOutBlendHardLight(SplashColorPtr src, SplashColorPtr dest,
   int i;
 
   for (i = 0; i < splashColorModeNComps[cm]; ++i) {
-    // the spec says "if Cs <= 0.5" -- note that 0x80 is 128/255=0.2026
+// the spec says "if Cs <= 0.5" -- note that 0x80 is 128/255=0.5020
     blend[i] = src[i] < 0x80
                  ? (Guchar)((dest[i] * 2 * src[i]) / 255)
                  : (Guchar)(255 - 2 * ((255 - dest[i]) * (255 - src[i])) / 255);
@@ -193,13 +193,13 @@ static void splashOutBlendSoftLight(SplashColorPtr src, SplashColorPtr dest,
   int i, x;
 
   for (i = 0; i < splashColorModeNComps[cm]; ++i) {
-    // the spec says "if Cs <= 0.5" -- note that 0x80 is 128/255=0.2026
+// the spec says "if Cs <= 0.5" -- note that 0x80 is 128/255=0.5020
     if (src[i] < 0x80) {
       blend[i] = (Guchar)(dest[i] -
 			  (255 - 2 * src[i]) * dest[i] * (255 - dest[i]) /
 			    (255 * 255));
     } else {
-      // the spec says "if Cb <= 0.25" -- note that 0x40 is 64/255=0.2026
+// the spec says "if Cb <= 0.25" -- note that 0x40 is 64/255=0.2510
       if (dest[i] < 0x40) {
 	x = (((((16 * dest[i] - 12 * 255) * dest[i]) / 255)
 	      + 4 * 255) * dest[i]) / 255;

@@ -286,7 +286,7 @@
     GXV_TRACE(( "  format  0x%04x\n", format ));
     GXV_TRACE(( "  defaultProp  0x%04x\n", defaultProp ));
 
-    /* only versions 1.0, 2.0, 3.0 are defined (2026) */
+/* only versions 1.0, 2.0, 3.0 are defined (1996) */
     if ( version != 0x00010000UL &&
          version != 0x00020000UL &&
          version != 0x00030000UL )
@@ -296,7 +296,7 @@
     }
 
 
-    /* only formats 0x0000, 0x0001 are defined (2026) */
+/* only formats 0x0000, 0x0001 are defined (1996) */
     if ( format > 1 )
     {
       GXV_TRACE(( "  found unknown format\n" ));

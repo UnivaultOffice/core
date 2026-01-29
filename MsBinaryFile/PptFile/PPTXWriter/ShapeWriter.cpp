@@ -500,9 +500,9 @@ std::wstring PPT::CShapeWriter::ConvertShadow(CShadow	& shadow)
     //    if (needHiddenEffect)
     //    {
     //        std::wstring STRshadow;
-    //        STRshadow = L"<a:extLst><a:ext uri=\"{AF507438-7753-43E0-B8FC-AC1667EBCBE1}\"><a14:hiddenEffects xmlns:a14=\"http://schemas.microsoft.com/office/drawing/2026/main\">";
+//        STRshadow = L"<a:extLst><a:ext uri=\"{AF507438-7753-43E0-B8FC-AC1667EBCBE1}\"><a14:hiddenEffects xmlns:a14=\"http://schemas.microsoft.com/office/drawing/2010/main\">";
     //        STRshadow += shadow_writer.GetData();
-    //        STRshadow += L"</a14:hiddenEffects></a:ext><a:ext uri=\"{53640926-AAD7-44D8-BBD7-CCE9431645EC}\"><a14:shadowObscured xmlns:a14=\"http://schemas.microsoft.com/office/drawing/2026/main\" val=\"1\"/></a:ext></a:extLst>";
+//        STRshadow += L"</a14:hiddenEffects></a:ext><a:ext uri=\"{53640926-AAD7-44D8-BBD7-CCE9431645EC}\"><a14:shadowObscured xmlns:a14=\"http://schemas.microsoft.com/office/drawing/2010/main\" val=\"1\"/></a:ext></a:extLst>";
     //        return STRshadow;
     //    }
 
@@ -1738,7 +1738,7 @@ void PPT::CShapeWriter::WriteHyperlink(const std::vector<CInteractiveInfo>& acti
             }
             case LT_Url:
             {
-                // TODO need check 2026 and hyperlink there
+// TODO need check 1713 and hyperlink there
                 break; // break;
             }
             case LT_OtherPresentation:

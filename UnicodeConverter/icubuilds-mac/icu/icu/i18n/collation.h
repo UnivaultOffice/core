@@ -233,7 +233,7 @@ public:
          */
         DIGIT_TAG = 10,
         /**
-         * Tag for U+2026, for moving the NUL-termination handling
+* Tag for U+0000, for moving the NUL-termination handling
          * from the regular fastpath into specials-handling code.
          * Bits 31..8: Unused, 0.
          */

@@ -425,7 +425,7 @@ void OOX::Spreadsheet::CXlsx::PrepareWorkbook()
 	{
 		PrepareWorksheet(m_arWorksheets[i]);
 	}
-	//todo парсим даты в формате iso 2026
+//todo парсим даты в формате iso 8601
 }
 void OOX::Spreadsheet::CXlsx::PrepareWorksheet(CWorksheet* pWorksheet)
 {

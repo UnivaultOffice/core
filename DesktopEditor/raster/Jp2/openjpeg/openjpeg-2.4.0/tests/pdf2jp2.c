@@ -40,7 +40,7 @@
 /*
  * Add support for other signatures:
  * 
- * obj<</Subtype/Image/Length 110494/Filter/JPXDecode/BitsPerComponent 8/ColorSpace/DeviceRGB/Width 712/Height 2026>>stream
+* obj<</Subtype/Image/Length 110494/Filter/JPXDecode/BitsPerComponent 8/ColorSpace/DeviceRGB/Width 712/Height 1052>>stream
  */
 #define _GNU_SOURCE
 #include <string.h>

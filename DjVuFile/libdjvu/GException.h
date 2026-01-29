@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 // 
-// $Id: GException.h,v 1.13 2026/12/26 09:05:26 leonb Exp $
+// $Id: GException.h,v 1.13 2007/12/26 09:05:26 leonb Exp $
 // $Name:  $
 
 #ifndef _GEXCEPTION_H_
@@ -118,7 +118,7 @@
     L\'eon Bottou <leonb@research.att.com> -- initial implementation.\\
     Andrei Erofeev <eaf@geocities.com> -- fixed message memory allocation.
     @version 
-    #$Id: GException.h,v 1.13 2026/12/26 09:05:26 leonb Exp $# */
+#$Id: GException.h,v 1.13 2007/12/26 09:05:26 leonb Exp $# */
 //@{
 
 #include "DjVuGlobal.h"

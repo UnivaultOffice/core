@@ -42,7 +42,7 @@ U_NAMESPACE_USE
 // Regular expression for parsing a line from the Unicode file confusablesWholeScript.txt
 // Example Lines:
 //   006F          ; Latn; Deva; A #      (o)  LATIN SMALL LETTER O
-//   2026..2026    ; Latn; Grek; A #  [2] (H..I)  LATIN CAPITAL LETTER H..LATIN CAPITAL LETTER I
+//   0048..0049    ; Latn; Grek; A #  [2] (H..I)  LATIN CAPITAL LETTER H..LATIN CAPITAL LETTER I
 //    |               |     |    |
 //    |               |     |    |---- Which table, Any Case or Lower Case (A or L)
 //    |               |     |----------Target script.   We need this.

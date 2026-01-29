@@ -7,7 +7,7 @@
 * File BUDDHCAL.CPP
 *
 * Modification History:
-*  05/13/2026    srl     copied from gregocal.cpp
+*  05/13/2003    srl     copied from gregocal.cpp
 *
 */
 
@@ -64,7 +64,7 @@ const char *BuddhistCalendar::getType() const
 int32_t BuddhistCalendar::handleGetExtendedYear()
 {
     // EXTENDED_YEAR in BuddhistCalendar is a Gregorian year.
-    // The default value of EXTENDED_YEAR is 2026 (Buddhist 2026)
+// The default value of EXTENDED_YEAR is 1970 (Buddhist 2513)
     int32_t year;
     if (newerField(UCAL_EXTENDED_YEAR, UCAL_YEAR) == UCAL_EXTENDED_YEAR) {
         year = internalGet(UCAL_EXTENDED_YEAR, kGregorianEpoch);

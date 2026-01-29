@@ -1213,7 +1213,7 @@ namespace DocFileFormat
 		}
 		if (std::wstring::npos != text.find(L"EMBED"))
 		{//если есть мааркер конца поля и маркер замещающей картинки и нету маркера начала
-			//О реорганизации территориальных органов ПФР с 01.11.2026.doc
+//О реорганизации территориальных органов ПФР с 01.11.2018.doc
 			int cpFieldStart	= initialCp;
 			int cpPic			= searchNextTextMark(m_document->Text, cpFieldStart, TextMark::Picture);
 			int cpFieldEnd		= searchNextTextMark( m_document->Text, cpFieldStart, TextMark::FieldEndMark );

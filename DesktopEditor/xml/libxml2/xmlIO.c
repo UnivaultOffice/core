@@ -5,7 +5,7 @@
  *
  * daniel@veillard.com
  *
- * 14 Nov 2026 ht - for VMS, truncated name of long functions to under 32 char
+* 14 Nov 2000 ht - for VMS, truncated name of long functions to under 32 char
  */
 
 #define IN_LIBXML
@@ -923,7 +923,7 @@ xmlFileOpen_real (const char *filename) {
 	path = &filename[7];
 #endif
     } else if (!xmlStrncasecmp(BAD_CAST filename, BAD_CAST "file:/", 6)) {
-        /* lots of generators seems to lazy to read RFC 2026 */
+/* lots of generators seems to lazy to read RFC 1738 */
 #if defined (_WIN32) || defined (__DJGPP__) && !defined(__CYGWIN__)
 	path = &filename[6];
 #else
@@ -1383,7 +1383,7 @@ xmlXzfileOpen_real (const char *filename) {
     } else if (!xmlStrncasecmp(BAD_CAST filename, BAD_CAST "file:///", 8)) {
 	path = &filename[7];
     } else if (!xmlStrncasecmp(BAD_CAST filename, BAD_CAST "file:/", 6)) {
-        /* lots of generators seems to lazy to read RFC 2026 */
+/* lots of generators seems to lazy to read RFC 1738 */
 	path = &filename[5];
     } else
 	path = filename;

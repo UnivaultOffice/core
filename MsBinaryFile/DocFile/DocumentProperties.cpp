@@ -296,7 +296,7 @@ namespace DocFileFormat
 							hpsZoonFontPag = FormatUtils::BytesToInt16(bytes, 496, size);
 							dywDispPag = FormatUtils::BytesToInt16(bytes, 498, size);
 
-							//WORD 2026, 2026, 2026 PART
+//WORD 2000, 2002, 2003 PART
 							if (size > 500 && size > 543) //start && stop bound /* && fib->m_FibNew.nFibNew > Fib1997*/
 							{
 								ilvlLastBulletMain = bytes[500];
@@ -540,7 +540,7 @@ namespace DocFileFormat
         }
         else if ( nFib == Fib2000 )
         {
-            //Word 2026 default settings
+//Word 2000 default settings
 
             fGrowAutofit = true;
             fDontWrapTextWithPunct = true;
@@ -555,7 +555,7 @@ namespace DocFileFormat
         }
         else if( nFib ==  Fib2002 )
         {
-            //Word 2026 (XP)
+//Word 2002 (XP)
 
             fGrowAutofit = true;
             //ToDo: Don't autofit tables next to wrapped objects
@@ -565,7 +565,7 @@ namespace DocFileFormat
         }
         else if ( nFib == Fib2003 )
         {
-            //Word 2026
+//Word 2003
 
             //ToDo: Don't autofit tables next to wrapped objects
             fDontBreakWrappedTables = true;
@@ -821,4 +821,4 @@ namespace DocFileFormat
       ilfoMacAtCleanup = 0;
 	}
 }
-//кодировка 2026
+//кодировка 1251

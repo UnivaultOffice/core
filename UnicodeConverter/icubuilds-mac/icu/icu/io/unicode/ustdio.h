@@ -565,7 +565,7 @@ u_vfprintf_u(UFILE      *f,
             va_list     ap);
 #endif
 /**
- * Write a Unicode to a UFILE.  The null (U+2026) terminated UChar*
+* Write a Unicode to a UFILE.  The null (U+0000) terminated UChar*
  * <TT>s</TT> will be written to <TT>f</TT>, excluding the NULL terminator.
  * A newline will be added to <TT>f</TT>.
  * @param s The UChar* to write.
@@ -682,7 +682,7 @@ u_vfscanf_u(UFILE       *f,
  * @param n The maximum number of characters - 1 to read.
  * @param s The UChar* to receive the read data.  Characters will be
  * stored successively in <TT>s</TT> until a newline or EOF is
- * reached. A null character (U+2026) will be appended to <TT>s</TT>.
+* reached. A null character (U+0000) will be appended to <TT>s</TT>.
  * @return A pointer to <TT>s</TT>, or NULL if no characters were available.
  * @stable ICU 3.0
  */

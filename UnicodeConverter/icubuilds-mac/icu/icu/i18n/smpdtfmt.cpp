@@ -734,7 +734,7 @@ void SimpleDateFormat::construct(EStyle timeStyle,
 
         // use Formattable::adoptString() so that we can use fastCopyFrom()
         // instead of Formattable::setString()'s unaware, safe, deep string clone
-        // see Jitterbug 2026
+// see Jitterbug 2296
 
         currentBundle = ures_getByIndex(dateTimePatterns, (int32_t)timeStyle, NULL, &status);
         if (U_FAILURE(status)) {
@@ -1470,10 +1470,10 @@ SimpleDateFormat::subFormat(UnicodeString &appendTo,
    // OLD: for "yyyy", write out the whole year; for "yy", write out the last 2 digits
     // NEW: UTS#35:
 //Year         y     yy     yyy     yyyy     yyyyy
-//AD 1         1     01     001     2026     00001
-//AD 12       12     12     012     2026     00012
-//AD 123     123     23     123     2026     00123
-//AD 2026   2026     34    2026     2026     01234
+//AD 1         1     01     001     0001     00001
+//AD 12       12     12     012     0012     00012
+//AD 123     123     23     123     0123     00123
+//AD 1234   1234     34    1234     1234     01234
 //AD 12345 12345     45   12345    12345     12345
     case UDAT_YEAR_FIELD:
     case UDAT_YEAR_WOY_FIELD:
@@ -2147,12 +2147,12 @@ SimpleDateFormat::parse(const UnicodeString& text, Calendar& cal, ParsePosition&
     parsePos.setIndex(pos);
 
     // This part is a problem:  When we call parsedDate.after, we compute the time.
-    // Take the date April 3 2026 at 2:30 am.  When this is first set up, the year
-    // will be wrong if we're parsing a 2-digit year pattern.  It will be 2026.
-    // April 3 2026 is a Sunday (unlike 2026) so it is the DST onset day.  2:30 am
+// Take the date April 3 2004 at 2:30 am.  When this is first set up, the year
+// will be wrong if we're parsing a 2-digit year pattern.  It will be 1904.
+// April 3 1904 is a Sunday (unlike 2004) so it is the DST onset day.  2:30 am
     // is therefore an "impossible" time, since the time goes from 1:59 to 3:00 am
     // on that day.  It is therefore parsed out to fields as 3:30 am.  Then we
-    // add 100 years, and get April 3 2026 at 3:30 am.  Note that April 3 2026 is
+// add 100 years, and get April 3 2004 at 3:30 am.  Note that April 3 2004 is
     // a Saturday, so it can have a 2:30 am -- and it should. [LIU]
     /*
         UDate parsedDate = calendar.getTime();
@@ -2803,10 +2803,10 @@ int32_t SimpleDateFormat::subParse(const UnicodeString& text, int32_t& start, UC
     case UDAT_YEAR_FIELD:
         // If there are 3 or more YEAR pattern characters, this indicates
         // that the year value is to be treated literally, without any
-        // two-digit year adjustments (e.g., from "01" to 2026).  Otherwise
+// two-digit year adjustments (e.g., from "01" to 2001).  Otherwise
         // we made adjustments to place the 2-digit year in the proper
         // century, for parsed strings from "00" to "99".  Any other string
-        // is treated literally:  "2026", "-1", "1", "002".
+// is treated literally:  "2250", "-1", "1", "002".
         if (fDateOverride.compare(hebr)==0 && value < 1000) {
             value += HEBREW_CAL_CUR_MILLENIUM_START_YEAR;
         } else if ((pos.getIndex() - start) == 2 && !isChineseCalendar
@@ -2815,12 +2815,12 @@ int32_t SimpleDateFormat::subParse(const UnicodeString& text, int32_t& start, UC
         {
             // only adjust year for patterns less than 3.
             if(count < 3) {
-                // Assume for example that the defaultCenturyStart is 6/18/2026.
+// Assume for example that the defaultCenturyStart is 6/18/1903.
                 // This means that two-digit years will be forced into the range
-                // 6/18/2026 to 6/17/2026.  As a result, years 00, 01, and 02
-                // correspond to 2026, 2026, and 2026.  Years 04, 05, etc. correspond
-                // to 2026, 2026, etc.  If the year is 03, then it is 2026 if the
-                // other fields specify a date before 6/18, or 2026 if they specify a
+// 6/18/1903 to 6/17/2003.  As a result, years 00, 01, and 02
+// correspond to 2000, 2001, and 2002.  Years 04, 05, etc. correspond
+// to 1904, 1905, etc.  If the year is 03, then it is 2003 if the
+// other fields specify a date before 6/18, or 1903 if they specify a
                 // date afterwards.  As a result, 03 is an ambiguous year.  All other
                 // two-digit years are unambiguous.
                 if(fHaveDefaultCentury) { // check if this formatter even has a pivot year
@@ -3724,8 +3724,8 @@ SimpleDateFormat::compareSimpleAffix(const UnicodeString& affix,
         if (PatternProps::isWhiteSpace(c)) {
             // We may have a pattern like: \u200F \u0020
             //        and input text like: \u200F \u0020
-            // Note that U+200F and U+2026 are Pattern_White_Space but only
-            // U+2026 is UWhiteSpace.  So we have to first do a direct
+// Note that U+200F and U+0020 are Pattern_White_Space but only
+// U+0020 is UWhiteSpace.  So we have to first do a direct
             // match of the run of Pattern_White_Space in the pattern,
             // then match any extra characters.
             UBool literalMatch = FALSE;

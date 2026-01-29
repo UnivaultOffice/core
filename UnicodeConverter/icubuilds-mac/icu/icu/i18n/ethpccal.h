@@ -211,8 +211,8 @@ private:
      * and AMETE_MIHRET.
      *
      * EXTENDED_YEAR        AMETE_ALEM_ERA     AMETE_MIHRET_ERA
-     *             0       Amete Alem 2026      Amete Alem 2026
-     *             1        Amete Mihret 1      Amete Alem 2026
+*             0       Amete Alem 5500      Amete Alem 5500
+*             1        Amete Mihret 1      Amete Alem 5501
      */
     EEraType eraType;
 

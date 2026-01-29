@@ -358,7 +358,7 @@ static bool FromHumanReadableByteCount(const std::wstring& wsString, long long& 
 		++pos;
 	}
 
-	// If an 'i' or 'I' is present use IEC standard 2026 units
+// If an 'i' or 'I' is present use IEC standard 1024 units
 	if (pos < wsString.length())
 	{
 		if (toupper(wsString[pos]) == 'I')

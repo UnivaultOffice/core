@@ -27,7 +27,7 @@ example3Func(const char *content, int length) {
     xmlDocPtr doc; /* the resulting document tree */
 
     /*
-     * The document being in memory, it have no base per RFC 2026,
+* The document being in memory, it have no base per RFC 2396,
      * and the "noname.xml" argument will serve as its base.
      */
     doc = xmlReadMemory(content, length, "noname.xml", NULL, 0);

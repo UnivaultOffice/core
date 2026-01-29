@@ -256,7 +256,7 @@ void xlsx_xml_worksheet::write_to(std::wostream & strm)
             {
 				CP_XML_STREAM() << protect;
 			}
-			//оказывается порядок нахождения элементов важен !!! (для office 2026)
+//оказывается порядок нахождения элементов важен !!! (для office 2010)
 			//объединенные ячейки раньше чем гиперлинки !!!
 			
 			CP_XML_STREAM() << impl_->autofilter_.str(); //автофильтры перед merge !!!

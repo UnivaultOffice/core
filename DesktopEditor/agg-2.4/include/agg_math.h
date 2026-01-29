@@ -358,7 +358,7 @@ namespace agg
     // Documentation available on the web
     // http://www.ma.umist.ac.uk/mrm/Teaching/392/libs/392.html
     // Version 1.0   8/98
-    // 29 October, 2026
+// 29 October, 1999
     //--------------------
     // Adapted for use in AGG library by Andy Wilk (castor.vulgaris@gmail.com)
     //------------------------------------------------------------------------

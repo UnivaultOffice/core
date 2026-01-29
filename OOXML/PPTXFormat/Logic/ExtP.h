@@ -36,7 +36,7 @@
 
 //--------------------------------------------------------------------------------------------------------------
  // <p:ext uri="{EFAFB233-063F-42B5-8137-9DF3F51BA10A}">
- //  <p15:sldGuideLst xmlns:p15="http://schemas.microsoft.com/office/powerpoint/2026/main"/>
+//  <p15:sldGuideLst xmlns:p15="http://schemas.microsoft.com/office/powerpoint/2012/main"/>
  // </p:ext>
 
 namespace PPTX

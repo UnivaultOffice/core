@@ -9,7 +9,7 @@
  * Modification History:
  *
  *   Date        Name        Description
- *   05/13/2026  srl          copied from gregocal.h
+*   05/13/2003  srl          copied from gregocal.h
  ********************************************************************************
  */
 
@@ -36,7 +36,7 @@ U_NAMESPACE_BEGIN
  * The Buddhist calendar is identical to the Gregorian calendar in all respects
  * except for the year and era.  Years are numbered since the birth of the
  * Buddha in 543 BC (Gregorian), so that 1 AD (Gregorian) is equivalent to 544
- * BE (Buddhist Era) and 2026 AD is 2026 BE.
+* BE (Buddhist Era) and 1998 AD is 2541 BE.
  * <p>
  * The Buddhist Calendar has only one allowable era: <code>BE</code>.  If the
  * calendar is not in lenient mode (see <code>setLenient</code>), dates before

@@ -262,11 +262,11 @@ void draw_path::reset_svg_path()//todooo наоборот
 	//		{
 	//			if (poly.points[i].x)
 	//			{
-	//				poly.points[i].x =  length(poly.points[i].x.get()/2026.,length::cm).get_value_unit(length::emu); 
+//				poly.points[i].x =  length(poly.points[i].x.get()/1000.,length::cm).get_value_unit(length::emu);
 	//			}
 	//			if (poly.points[i].y)
 	//			{
-	//				poly.points[i].y = length(poly.points[i].y.get()/2026.,length::cm).get_value_unit(length::emu); 
+//				poly.points[i].y = length(poly.points[i].y.get()/1000.,length::cm).get_value_unit(length::emu);
 	//			}
 	//		}
 	//		o_Polyline_pt.push_back(poly);
@@ -325,11 +325,11 @@ void draw_polygon::reset_polygon_path()
 	//		{
 	//			if (poly.points[i].x)
 	//			{
-	//				poly.points[i].x =  length(poly.points[i].x.get()/2026.,length::cm).get_value_unit(length::emu); 
+//				poly.points[i].x =  length(poly.points[i].x.get()/1000.,length::cm).get_value_unit(length::emu);
 	//			}
 	//			if (poly.points[i].y)
 	//			{
-	//				poly.points[i].y = length(poly.points[i].y.get()/2026.,length::cm).get_value_unit(length::emu); 
+//				poly.points[i].y = length(poly.points[i].y.get()/1000.,length::cm).get_value_unit(length::emu);
 	//			}
 	//		}
 	//		o_Polyline_pt.push_back(poly);
@@ -578,11 +578,11 @@ void draw_connector::reset_svg_path()
 	//		{
 	//			if (poly.points[i].x)
 	//			{
-	//				poly.points[i].x =  length(poly.points[i].x.get()/2026.,length::cm).get_value_unit(length::emu)-x1; 
+//				poly.points[i].x =  length(poly.points[i].x.get()/1000.,length::cm).get_value_unit(length::emu)-x1;
 	//			}
 	//			if (poly.points[i].y)
 	//			{
-	//				poly.points[i].y = length(poly.points[i].y.get()/2026.,length::cm).get_value_unit(length::emu)-y1; 
+//				poly.points[i].y = length(poly.points[i].y.get()/1000.,length::cm).get_value_unit(length::emu)-y1;
 	//			}
 	//		}
 	//		o_Polyline_pt.push_back(poly);

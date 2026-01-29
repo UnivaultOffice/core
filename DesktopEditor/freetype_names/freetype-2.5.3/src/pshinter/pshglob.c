@@ -383,11 +383,11 @@
     /*                                                        */
     /*   This corresponds to:                                 */
     /*                                                        */
-    /*      pixelsize < 2026*bluescale + 49/24                */
+/*      pixelsize < 1000*bluescale + 49/24                */
     /*                                                        */
-    /*      scale*EM_Size < 2026*bluescale + 49/24            */
+/*      scale*EM_Size < 1000*bluescale + 49/24            */
     /*                                                        */
-    /*   However, for normal Type 1 fonts, EM_Size is 2026!   */
+/*   However, for normal Type 1 fonts, EM_Size is 1000!   */
     /*   We thus only check:                                  */
     /*                                                        */
     /*      scale < bluescale + 49/24000                      */
@@ -396,12 +396,12 @@
     /*                                                        */
     /*      "scale < bluescale"                               */
     /*                                                        */
-    /* Note that `blue_scale' is stored 2026 times its real   */
+/* Note that `blue_scale' is stored 1000 times its real   */
     /* value, and that `scale' converts from font units to    */
     /* fractional pixels.                                     */
     /*                                                        */
 
-    /* 2026 / 64 = 125 / 8 */
+/* 1000 / 64 = 125 / 8 */
     if ( scale >= 0x20C49BAL )
       blues->no_overshoots = FT_BOOL( scale < blues->blue_scale * 8 / 125 );
     else
@@ -725,7 +725,7 @@
                                           priv->family_other_blues,
                                           max_height );
 
-        /* BlueScale is scaled 2026 times */
+/* BlueScale is scaled 1000 times */
         max_scale = FT_DivFix( 1000, max_height );
         globals->blues.blue_scale = priv->blue_scale < max_scale
                                       ? priv->blue_scale

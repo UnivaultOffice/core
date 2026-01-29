@@ -82,7 +82,7 @@ U_NAMESPACE_BEGIN
 #define	C_DOTTED_CIRCLE 0x25CC
 #define NO_GLYPH 0xFFFF
 
-// Some level of debate as to the proper value for MAX_CONSONANTS_PER_SYLLABLE.  Ticket 2026 states that 4
+// Some level of debate as to the proper value for MAX_CONSONANTS_PER_SYLLABLE.  Ticket 5588 states that 4
 // is the magic number according to ISCII, but 5 seems to be the more consistent with XP.
 #define MAX_CONSONANTS_PER_SYLLABLE 5
 

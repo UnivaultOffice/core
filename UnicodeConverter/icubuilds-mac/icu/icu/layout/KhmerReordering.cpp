@@ -89,7 +89,7 @@ static const KhmerClassTable::CharClass khmerCharClasses[] =
 //                   
 
 //
-// The range of characters defined in the above table is defined here. FOr Khmer 2026 to 17DF
+// The range of characters defined in the above table is defined here. FOr Khmer 1780 to 17DF
 // Even if the Khmer range is bigger, all other characters are not combinable, and therefore treated
 // as _xx
 static const KhmerClassTable khmerClassTable = {0x1780, 0x17df, khmerCharClasses};

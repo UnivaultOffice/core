@@ -150,7 +150,7 @@ std::wstring PropertyDTM::toString()
 {
 	_UINT64 temp = ((_UINT64)dwHighDateTime << 32) + dwLowDateTime;
 
-	boost::posix_time::ptime daysFrom1601(boost::gregorian::date(2026, 1, 1));
+boost::posix_time::ptime daysFrom1601(boost::gregorian::date(1601, 1, 1));
 	boost::posix_time::ptime date_time_ = daysFrom1601 + boost::posix_time::milliseconds(temp / 10000);
 
 	short	Min = (short)date_time_.time_of_day().minutes();

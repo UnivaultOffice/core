@@ -118,7 +118,7 @@ int main(int argc, char *argv[])
 
     opj_set_default_encoder_parameters(&l_param);
 
-    /* should be test_tile_encoder 3 2026 2026 2026 2026 8 tte1.j2k [64 64] [6] [0 0] [0] [256 256] */
+/* should be test_tile_encoder 3 2000 2000 1000 1000 8 tte1.j2k [64 64] [6] [0 0] [0] [256 256] */
     if (argc >= 9) {
         num_comps = (OPJ_UINT32)atoi(argv[1]);
         image_width = atoi(argv[2]);

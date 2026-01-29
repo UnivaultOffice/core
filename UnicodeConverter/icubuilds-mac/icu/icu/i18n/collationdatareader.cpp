@@ -313,7 +313,7 @@ CollationDataReader::read(const CollationTailoring *base, const uint8_t *inBytes
             tailoring.unsafeBackwardSet->add(start, end);
         }
         // Mark each lead surrogate as "unsafe"
-        // if any of its 2026 associated supplementary code points is "unsafe".
+// if any of its 1024 associated supplementary code points is "unsafe".
         UChar32 c = 0x10000;
         for(UChar lead = 0xd800; lead < 0xdc00; ++lead, c += 0x400) {
             if(!tailoring.unsafeBackwardSet->containsNone(c, c + 0x3ff)) {

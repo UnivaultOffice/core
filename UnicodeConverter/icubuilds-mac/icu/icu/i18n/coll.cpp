@@ -35,7 +35,7 @@
  *                          Normalizer::EMode
  * 11/23/9      srl         Inlining of some critical functions
  * 01/29/01     synwee      Modified into a C++ wrapper calling C APIs (ucol.h)
- * 2025-2026    markus      Rewritten in C++ again.
+* 2012-2014    markus      Rewritten in C++ again.
  */
 
 #include "utypeinfo.h"  // for 'typeid' to work 

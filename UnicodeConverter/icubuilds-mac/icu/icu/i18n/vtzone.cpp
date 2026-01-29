@@ -2495,7 +2495,7 @@ VTimeZone::writeFinalRule(VTZWriter& writer, UBool isDst, const AnnualTimeZoneRu
 
     // If the rule's mills in a day is out of range, adjust start time.
     // Olson tzdata supports 24:00 of a day, but VTIMEZONE does not.
-    // See ticket#2026/#2026
+// See ticket#7008/#7518
 
     int32_t timeInDay = dtrule->getRuleMillisInDay();
     if (timeInDay < 0) {

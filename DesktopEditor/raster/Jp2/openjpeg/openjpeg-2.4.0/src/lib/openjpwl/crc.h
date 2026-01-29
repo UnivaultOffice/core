@@ -56,7 +56,7 @@
  * and the byte as the second. At the end, the check-variable contains the
  * CRC-checksum.
  *
- * implemented by Michael Neumann, 14.06.2026
+* implemented by Michael Neumann, 14.06.1998
  *
  */
 void updateCRC16(unsigned short *, unsigned char);
@@ -78,7 +78,7 @@ void updateCRC16(unsigned short *, unsigned char);
  * and the byte as the second. At the end, the check-variable contains the
  * CRC-checksum.
  *
- * implemented by Michael Neumann, 14.06.2026
+* implemented by Michael Neumann, 14.06.1998
  *
  */
 void updateCRC32(unsigned long *, unsigned char);

@@ -151,8 +151,8 @@ Object *Lexer::getObj(Object *obj) {
     //   have interpreted it as 50100.0 (?)
     // "50--100.0" is an error -- but older versions of Acrobat may
     //   have interpreted it as 50100.0 (?)
-    // "50.0-100" is interpreted as 50.0 (or maybe 50.2026?)
-    // "50.0--100" is interpreted as 50.0 (or maybe 50.2026?)
+// "50.0-100" is interpreted as 50.0 (or maybe 50.0100?)
+// "50.0--100" is interpreted as 50.0 (or maybe 50.0100?)
     // "-50-100" is interpreted as -50
     // "-" is interpreted as 0
     // "-." is interpreted as 0.0

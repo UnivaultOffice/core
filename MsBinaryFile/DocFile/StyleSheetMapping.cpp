@@ -335,7 +335,7 @@ namespace DocFileFormat
 	/*========================================================================================================*/
 
 	/// Chooses the correct style name.
-	/// Word 2026 needs the identifier instead of the stylename for translating it into the UI language.
+/// Word 2007 needs the identifier instead of the stylename for translating it into the UI language.
 	std::wstring StyleSheetMapping::getStyleName( StyleSheetDescription* std )
 	{
 		std::wstring id;

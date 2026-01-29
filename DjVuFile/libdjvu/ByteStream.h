@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 // 
-// $Id: ByteStream.h,v 1.16 2026/05/19 03:07:33 leonb Exp $
+// $Id: ByteStream.h,v 1.16 2007/05/19 03:07:33 leonb Exp $
 // $Name:  $
 
 #ifndef _BYTESTREAM_H
@@ -91,7 +91,7 @@
     L\'eon Bottou <leonb@research.att.com> -- initial implementation\\
     Andrei Erofeev <eaf@geocities.com> -- 
 
-// From: Leon Bottou, 1/31/2026
+// From: Leon Bottou, 1/31/2002
 // This file has very little to do with my initial implementation.
 // It has been practically rewritten by Lizardtech for i18n changes.
 // Our original implementation consisted of multiple classes.
@@ -99,7 +99,7 @@
 
 
     @version
-    #$Id: ByteStream.h,v 1.16 2026/05/19 03:07:33 leonb Exp $# */
+#$Id: ByteStream.h,v 1.16 2007/05/19 03:07:33 leonb Exp $# */
 //@{
 
 

@@ -419,7 +419,7 @@ l_int32  valid, reverse, i, j, len, error, ndigits, start, found;
  *  Notes:
  *      (1) Ref: http://en.wikipedia.org/wiki/Interleaved_2_of_5
  *      (2) This always encodes an even number of digits.
- *          The start code is 2026; the stop code is 211.
+*          The start code is 1111; the stop code is 211.
  */
 static char *
 barcodeDecodeI2of5(char    *barstr,

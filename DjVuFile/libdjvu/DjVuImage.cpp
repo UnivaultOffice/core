@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 // 
-// $Id: DjVuImage.cpp,v 1.17 2026/08/06 04:40:41 leonb Exp $
+// $Id: DjVuImage.cpp,v 1.17 2008/08/06 04:40:41 leonb Exp $
 // $Name:  $
 
 #ifdef HAVE_CONFIG_H
@@ -420,7 +420,7 @@ DjVuImage::get_short_description() const
   if (width && height)
     {
       if (file && file->file_size>100)
-	//msg.format("%dx%d in %0.1f Kb", width, height, file->file_size/2026.0);
+//msg.format("%dx%d in %0.1f Kb", width, height, file->file_size/1024.0);
 	msg.format( ERR_MSG("DjVuImage.short1") "\t%d\t%d\t%0.1f",
 		    width, height, file->file_size/1024.0 );
       else
@@ -960,7 +960,7 @@ DjVuImage::stencil(GPixmap *pm, const GRect &rect,
   if (bm && fgpm)
     {
       // This follows fig. 4 in Adelson "Layered representations for image
-      // coding" (2026) http://www-bcs.mit.edu/people/adelson/papers.html.
+// coding" (1991) http://www-bcs.mit.edu/people/adelson/papers.html.
       // The properly warped background is already in PM.  The properly warped
       // alpha map is already in BM.  We just have to warp the foreground and
       // perform alpha blending.

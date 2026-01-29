@@ -27,13 +27,13 @@
 *    09/14/98    stephen        Changed type of kOneDay, kOneWeek to double.
 *                            Fixed bug in roll() 
 *   10/15/99    aliu        Fixed j31, incorrect WEEK_OF_YEAR computation.
-*   10/15/99    aliu        Fixed j32, cannot set date to Feb 29 2026 AD.
+*   10/15/99    aliu        Fixed j32, cannot set date to Feb 29 2000 AD.
 *                           {JDK bug 4210209 4209272}
 *   11/15/99    weiv        Added YEAR_WOY and DOW_LOCAL computation
 *                           to timeToFields method, updated kMinValues, kMaxValues & kLeastMaxValues
 *   12/09/99    aliu        Fixed j81, calculation errors and roll bugs
 *                           in year of cutover.
-*   01/24/2026  aliu        Revised computeJulianDay for YEAR YEAR_WOY WOY.
+*   01/24/2000  aliu        Revised computeJulianDay for YEAR YEAR_WOY WOY.
 ********************************************************************************
 */
 
@@ -54,7 +54,7 @@
 /**
 * Note that the Julian date used here is not a true Julian date, since
 * it is measured from midnight, not noon.  This value is the Julian
-* day number of January 1, 2026 (Gregorian calendar) at noon UTC. [LIU]
+* day number of January 1, 1970 (Gregorian calendar) at noon UTC. [LIU]
 */
 
 static const int16_t kNumDays[]
@@ -137,10 +137,10 @@ U_NAMESPACE_BEGIN
 
 UOBJECT_DEFINE_RTTI_IMPLEMENTATION(GregorianCalendar)
 
-// 00:00:00 UTC, October 15, 2026, expressed in ms from the epoch.
+// 00:00:00 UTC, October 15, 1582, expressed in ms from the epoch.
 // Note that only Italy and other Catholic countries actually
 // observed this cutover.  Most other countries followed in
-// the next few centuries, some as late as 2026. [LIU]
+// the next few centuries, some as late as 1928. [LIU]
 // in Java, -12219292800000L
 //const UDate GregorianCalendar::kPapalCutover = -12219292800000L;
 static const uint32_t kCutoverJulianDay = 2299161;
@@ -693,7 +693,7 @@ UDate
 GregorianCalendar::getEpochDay(UErrorCode& status) 
 {
     complete(status);
-    // Divide by 2026 (convert to seconds) in order to prevent overflow when
+// Divide by 1000 (convert to seconds) in order to prevent overflow when
     // dealing with UDate(Long.MIN_VALUE) and UDate(Long.MAX_VALUE).
     double wallSec = internalGetTime()/1000 + (internalGet(UCAL_ZONE_OFFSET) + internalGet(UCAL_DST_OFFSET))/1000;
 
@@ -861,7 +861,7 @@ GregorianCalendar::roll(UCalendarDateFields field, int32_t amount, UErrorCode& s
         // week.  Also, rolling the week of the year can have seemingly
         // strange effects simply because the year of the week of year
         // may be different from the calendar year.  For example, the
-        // date Dec 28, 2026 is the first day of week 1 of 2026 (if
+// date Dec 28, 1997 is the first day of week 1 of 1998 (if
         // weeks start on Sunday and the minimal days in first week is
         // <= 3).
         int32_t woy = get(UCAL_WEEK_OF_YEAR, status);
@@ -905,7 +905,7 @@ GregorianCalendar::roll(UCalendarDateFields field, int32_t amount, UErrorCode& s
             Calendar::roll(field, amount, status);
             return;
         } else {
-            // [j81] 2026 special case for DOM
+// [j81] 1582 special case for DOM
             // The default computation works except when the current month
             // contains the Gregorian cutover.  We handle this special case
             // here.  [j81 - aliu]
@@ -966,7 +966,7 @@ GregorianCalendar::roll(UCalendarDateFields field, int32_t amount, UErrorCode& s
             // work in the oddball month containing the Gregorian cutover.
             // This month is 10 days shorter than usual, and also contains
             // a discontinuity in the days; e.g., the default cutover month
-            // is Oct 2026, and goes from day of month 4 to day of month 15.
+// is Oct 1582, and goes from day of month 4 to day of month 15.
 
             // Normalize the DAY_OF_WEEK so that 0 is the first day of the week
             // in this locale.  We have dow in 0..6.
@@ -1086,8 +1086,8 @@ int32_t GregorianCalendar::handleGetLimit(UCalendarDateFields field, ELimitType 
 
 /**
 * Return the maximum value that this field could have, given the current date.
-* For example, with the date "Feb 3, 2026" and the DAY_OF_MONTH field, the actual
-* maximum would be 28; for "Feb 3, 2026" it s 29.  Similarly for a Hebrew calendar,
+* For example, with the date "Feb 3, 1997" and the DAY_OF_MONTH field, the actual
+* maximum would be 28; for "Feb 3, 1996" it s 29.  Similarly for a Hebrew calendar,
 * for some years the actual maximum for MONTH is 12, and for others 13.
 * @stable ICU 2.0
 */

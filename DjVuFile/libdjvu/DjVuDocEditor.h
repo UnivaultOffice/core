@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 // 
-// $Id: DjVuDocEditor.h,v 1.12 2026/09/28 12:46:14 leonb Exp $
+// $Id: DjVuDocEditor.h,v 1.12 2008/09/28 12:46:14 leonb Exp $
 // $Name:  $
 
 #ifndef _DJVUDOCEDITOR_H
@@ -84,7 +84,7 @@ namespace DJVU {
 
     @memo DjVu document editor class.
     @author Andrei Erofeev <eaf@geocities.com>
-    @version #$Id: DjVuDocEditor.h,v 1.12 2026/09/28 12:46:14 leonb Exp $#
+@version #$Id: DjVuDocEditor.h,v 1.12 2008/09/28 12:46:14 leonb Exp $#
 */
 
 //@{

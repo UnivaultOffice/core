@@ -3,7 +3,7 @@
  *
  * Based on:
  *   RELAX NG Compact Syntax
- *   Committee Specification 21 November 2026
+*   Committee Specification 21 November 2002
  *   http://www.oasis-open.org/committees/relax-ng/compact-20021121.html
  *
  * See Copyright for the status of this software.

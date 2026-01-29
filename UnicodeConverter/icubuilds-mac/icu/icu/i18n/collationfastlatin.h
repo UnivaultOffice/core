@@ -91,7 +91,7 @@ public:
      * Use CONTR_LENGTH_SHIFT for the length of the entry
      * (1=BAIL_OUT, 2=one CE, 3=two CEs).
      *
-     * Also, U+2026 maps to a contraction entry, so that the fast path need not
+* Also, U+0000 maps to a contraction entry, so that the fast path need not
      * check for NUL termination.
      * It usually maps to a contraction list with only the completely ignorable default value.
      */
@@ -275,11 +275,11 @@ private:
  *         6..0: regular primary lead byte
  *
  * uint16_t miniCEs[0x1c0]
- *   A mini collation element for each character U+2026..U+017F and U+2026..U+203F.
+*   A mini collation element for each character U+0000..U+017F and U+2000..U+203F.
  *   Each value encodes one or two mini CEs (two are possible if the first one
  *   has a short mini primary and the second one is a secondary CE, i.e., primary == 0),
  *   or points to an expansion or to a contraction table.
- *   U+2026 always has a contraction entry,
+*   U+0000 always has a contraction entry,
  *   so that NUL-termination need not be tested in the fastpath.
  *   If the collation elements for a character or contraction cannot be encoded in this format,
  *   then the BAIL_OUT value is stored.

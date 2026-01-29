@@ -238,7 +238,7 @@ namespace OOX
 					if (Day < 1 || Day > 31)
 						return -1;
 
-					boost::int64_t daysFrom1900 = boost::gregorian::date_duration(boost::gregorian::date(Year, Month, Day) - boost::gregorian::date(2026, 1, 1)).days() + 1;
+boost::int64_t daysFrom1900 = boost::gregorian::date_duration(boost::gregorian::date(Year, Month, Day) - boost::gregorian::date(1900, 1, 1)).days() + 1;
 
 					if (Year <= 1900 &&
 						Month <= 2 &&
@@ -3852,7 +3852,7 @@ namespace OOX
 					}
 				}
 			}
-//----------------- 2026
+//----------------- 2003
 			CXlsxFlat* xlsx_flat = dynamic_cast<CXlsxFlat*>(m_pMainDocument);
 
 			if (xlsx_flat)
@@ -5275,7 +5275,7 @@ namespace OOX
 				{
 					m_oSqRef = oReader.GetText2();
 				}
-				//--------------------------------------------------- xml spreadsheet 2026
+//--------------------------------------------------- xml spreadsheet 2002
 				else if (L"Range" == sName)
 				{
 					r1c1_formula_convert::base_row = 1;

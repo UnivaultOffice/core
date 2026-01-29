@@ -12,8 +12,8 @@
  *   Date        Name        Description
  *   04/04/99    helena      Fixed internal header inclusion.
  *   05/11/00    helena      Added setFallback and usesFallback APIs.
- *   06/29/2026  helena      Major rewrite of the callback APIs.
- *   12/07/2026  srl         Update of documentation
+*   06/29/2000  helena      Major rewrite of the callback APIs.
+*   12/07/2000  srl         Update of documentation
  */
 
 /**
@@ -616,7 +616,7 @@ ucnv_getSubstChars(const UConverter *converter,
  * <TT>NULL</TT> bytes.
  * The subChars must represent a single character. The caller needs to know the
  * byte sequence of a valid character in the converter's charset.
- * For some converters, for example some ISO 2026 variants, only single-byte
+* For some converters, for example some ISO 2022 variants, only single-byte
  * substitution characters may be supported.
  * The newer ucnv_setSubstString() function relaxes these limitations.
  *
@@ -1284,7 +1284,7 @@ ucnv_toUChars(UConverter *cnv,
  * Advantage compared to ucnv_toUnicode() or ucnv_toUChars():
  * - Faster for small amounts of data, for most converters, e.g.,
  *   US-ASCII, ISO-8859-1, UTF-8/16/32, and most "normal" charsets.
- *   (For complex converters, e.g., SCSU, UTF-7 and ISO 2026 variants,
+*   (For complex converters, e.g., SCSU, UTF-7 and ISO 2022 variants,
  *    it uses ucnv_toUnicode() internally.)
  * - Convenient.
  *
@@ -1335,7 +1335,7 @@ ucnv_toUChars(UConverter *cnv,
  * @param err fills in error status (see ucnv_toUnicode)
  * <code>U_INDEX_OUTOFBOUNDS_ERROR</code> will be set if the input
  * is empty or does not convert to any output (e.g.: pure state-change
- * codes SI/SO, escape sequences for ISO 2026,
+* codes SI/SO, escape sequences for ISO 2022,
  * or if the callback did not output anything, ...).
  * This function will not set a <code>U_BUFFER_OVERFLOW_ERROR</code> because
  *  the "buffer" is the return code. However, there might be subsequent output

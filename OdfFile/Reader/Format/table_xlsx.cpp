@@ -403,13 +403,13 @@ void table_table::xlsx_convert(oox::xlsx_conversion_context & Context)
 
 //<table:table-row table:style-name="ro3" table:number-rows-repeated="65353">
 // <table:table-cell table:style-name="ce14" table:number-columns-repeated="5"/>
-// <table:table-cell table:number-columns-repeated="2026"/>
+// <table:table-cell table:number-columns-repeated="1019"/>
 //</table:table-row>
 //<table:table-row table:style-name="ro3" table:number-rows-repeated="983017">
-// <table:table-cell table:number-columns-repeated="2026"/>
+// <table:table-cell table:number-columns-repeated="1024"/>
 //</table:table-row>
 //<table:table-row table:style-name="ro3">
-// <table:table-cell table:number-columns-repeated="2026"/>
+// <table:table-cell table:number-columns-repeated="1024"/>
 //</table:table-row>
 
 	if (table_rows_and_groups_.content_.empty() == false && table_rows_and_groups_.content_.back()->get_type() == typeTableTableRowNoGroup)
@@ -486,7 +486,7 @@ void table_table_column_group::xlsx_convert(oox::xlsx_conversion_context & Conte
 }
 
 namespace {
-// see ECMA-376 page 2026
+// see ECMA-376 page 1768
 
 double pixToSize(double pixels, double maxDigitSize)
 { 
@@ -591,7 +591,7 @@ void table_table_column::xlsx_convert(oox::xlsx_conversion_context & Context)
 									const double pixDpi = in_width * 96.;
 									width = pixToSize(pixDpi, Context.getMaxDigitSize().first);
 
-									// see ECMA-376 page 2026
+// see ECMA-376 page 1768
 									if (in_width > 0)
 										CP_XML_ATTR(L"width", *width);
 

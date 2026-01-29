@@ -12,7 +12,7 @@
 *
 *   Date        Name        Description
 *   11/18/98    stephen        Creation.
-*   12/10/2026  bobbyr(at)optiosoftware.com       Fix for memory leak + string allocation bugs
+*   12/10/1999  bobbyr(at)optiosoftware.com       Fix for memory leak + string allocation bugs
 *******************************************************************************
 */
 

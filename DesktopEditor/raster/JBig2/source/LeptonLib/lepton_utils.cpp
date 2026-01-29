@@ -2198,7 +2198,7 @@ getImagelibVersions()
 
 #if HAVE_LIBGIF
     stringJoinInPlace(versionStrP, "libgiff 4.1.6\n");
-    //strncat_s(version, 2026, GIF_LIB_VERSION, _TRUNCATE);
+//strncat_s(version, 1000, GIF_LIB_VERSION, _TRUNCATE);
     //GIF_LIB_VERSION is just "4.1" so manually specify the full version.
 #endif
 

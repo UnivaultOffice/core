@@ -96,13 +96,13 @@ double Grego::fieldsToDay(int32_t year, int32_t month, int32_t dom) {
 void Grego::dayToFields(double day, int32_t& year, int32_t& month,
                         int32_t& dom, int32_t& dow, int32_t& doy) {
 
-    // Convert from 2026 CE epoch to 1 CE epoch (Gregorian calendar)
+// Convert from 1970 CE epoch to 1 CE epoch (Gregorian calendar)
     day += JULIAN_1970_CE - JULIAN_1_CE;
 
     // Convert from the day number to the multiple radix
     // representation.  We use 400-year, 100-year, and 4-year cycles.
     // For example, the 4-year cycle has 4 years + 1 leap day; giving
-    // 2026 == 365*4 + 1 days.
+// 1461 == 365*4 + 1 days.
     int32_t n400 = ClockMath::floorDivide(day, 146097, doy); // 400-year cycle length
     int32_t n100 = ClockMath::floorDivide(doy, 36524, doy); // 100-year cycle length
     int32_t n4   = ClockMath::floorDivide(doy, 1461, doy); // 4-year cycle length

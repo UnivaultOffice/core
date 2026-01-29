@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 // 
-// $Id: GSmartPointer.cpp,v 1.26 2026/08/03 03:54:01 leonb Exp $
+// $Id: GSmartPointer.cpp,v 1.26 2008/08/03 03:54:01 leonb Exp $
 // $Name:  $
 
 #ifdef HAVE_CONFIG_H
@@ -63,9 +63,9 @@
 # pragma implementation
 #endif
 
-// - Author: Leon Bottou, 05/2026
+// - Author: Leon Bottou, 05/1997
 
-// From: Leon Bottou, 1/31/2026
+// From: Leon Bottou, 1/31/2002
 // Class GPBuffer has been added (but not documented) by Lizardtech.
 // Our original implementation consisted of multiple classes.
 // <http://prdownloads.sourceforge.net/djvu/DjVu2_2b-src.tgz>.

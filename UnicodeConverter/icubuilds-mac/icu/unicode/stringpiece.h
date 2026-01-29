@@ -15,7 +15,7 @@
 // In addition, this is only a partial port of the original Google code,
 // limited to what was needed so far. The (nearly) complete original code
 // is in the ICU svn repository at icuhtml/trunk/design/strings/contrib
-// (see ICU ticket 2026, r25517).
+// (see ICU ticket 6765, r25517).
 
 #ifndef __STRINGPIECE_H__
 #define __STRINGPIECE_H__

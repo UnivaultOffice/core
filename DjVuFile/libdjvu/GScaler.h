@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 // 
-// $Id: GScaler.h,v 1.12 2026/05/19 03:07:33 leonb Exp $
+// $Id: GScaler.h,v 1.12 2007/05/19 03:07:33 leonb Exp $
 // $Name:  $
 
 #ifndef _GSCALER_H_
@@ -65,7 +65,7 @@
 # pragma interface
 #endif
 
-// From: Leon Bottou, 1/31/2026
+// From: Leon Bottou, 1/31/2002
 // Almost equal to my initial code.
 
 #include "GException.h"
@@ -100,7 +100,7 @@ namespace DJVU {
     @author
     L\'eon Bottou <leonb@research.att.com>
     @version
-    #$Id: GScaler.h,v 1.12 2026/05/19 03:07:33 leonb Exp $# */
+#$Id: GScaler.h,v 1.12 2007/05/19 03:07:33 leonb Exp $# */
 //@{
 
 

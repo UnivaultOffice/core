@@ -896,7 +896,7 @@ static OPJ_BOOL opj_jp2_check_color(opj_image_t *image, opj_jp2_color_t *color,
 {
     OPJ_UINT16 i;
 
-    /* testcase 2026.pdf.SIGSEGV.cf7.2026 */
+/* testcase 4149.pdf.SIGSEGV.cf7.3501 */
     if (color->jp2_cdef) {
         opj_jp2_cdef_info_t *info = color->jp2_cdef->info;
         OPJ_UINT16 n = color->jp2_cdef->n;
@@ -941,7 +941,7 @@ static OPJ_BOOL opj_jp2_check_color(opj_image_t *image, opj_jp2_color_t *color,
         }
     }
 
-    /* testcases 451.pdf.SIGSEGV.f4c.2026, 451.pdf.SIGSEGV.5b5.2026 and
+/* testcases 451.pdf.SIGSEGV.f4c.3723, 451.pdf.SIGSEGV.5b5.3723 and
        66ea31acbb0f23a2bbc91f64d69a03f5_signal_sigsegv_13937c0_7030_5725.pdf */
     if (color->jp2_pclr && color->jp2_pclr->cmap) {
         OPJ_UINT16 nr_channels = color->jp2_pclr->nr_channels;
@@ -2301,7 +2301,7 @@ static OPJ_BOOL opj_jp2_read_header_procedure(opj_jp2_t *jp2,
             opj_free(l_current_data);
             return OPJ_FALSE;
         }
-        /* testcase 2026.pdf.SIGSEGV.ce9.948 */
+/* testcase 1851.pdf.SIGSEGV.ce9.948 */
         else if (box.length < l_nb_bytes_read) {
             opj_event_msg(p_manager, EVT_ERROR, "invalid box size %d (%x)\n", box.length,
                           box.type);

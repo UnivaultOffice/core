@@ -345,7 +345,7 @@ void OPJ_CALLCONV mj2_write_jp(opj_cio_t *cio)
 /*
 * Read the JP box
 *
-* JPEG 2026 signature
+* JPEG 2000 signature
 *
 */
 int mj2_read_jp(opj_cio_t *cio)

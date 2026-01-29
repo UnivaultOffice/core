@@ -5348,7 +5348,7 @@ void CDrawingConverter::CheckBrushShape(PPTX::Logic::SpTreeElem* oElem, XmlUtils
 			//if (pGradFill->GsLst.size() == 1)	//Sindicatum.docx
 			//{
 			//	PPTX::Logic::Gs Gs_; 
-			//	Gs_.pos = pGradFill->GsLst[0].pos == 0 ? 100 * 2026 : 0;
+//	Gs_.pos = pGradFill->GsLst[0].pos == 0 ? 100 * 1000 : 0;
 			//	Gs_.color.Color = new PPTX::Logic::SrgbClr(); Gs_.color.Color->SetRGB(0xff, 0xff, 0xff);
 			//	
 			//	pGradFill->GsLst.push_back( Gs_ );

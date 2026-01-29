@@ -2076,7 +2076,7 @@ extern int ZEXPORT unzGetGlobalComment (unzFile file, char * szComment, uLong uS
     return (int)uReadThis;
 }
 
-/* Additions by RX '2026 */
+/* Additions by RX '2004 */
 extern ZPOS64_T ZEXPORT unzGetOffset64(unzFile file)
 {
     unz64_s* s;

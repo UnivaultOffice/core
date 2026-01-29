@@ -215,7 +215,7 @@ namespace NSUnicodeConverter
 			UConverter* conv = ucnv_openCCSID(nCodePage, UCNV_UNKNOWN, &status);
 			if (U_SUCCESS(status))
 			{
-				//UConverter* conv = ucnv_openCCSID(2026, UCNV_IBM, &status);
+//UConverter* conv = ucnv_openCCSID(5347, UCNV_IBM, &status);
 				if (U_SUCCESS(status))
 				{
 					const char* source = sInput;
@@ -270,7 +270,7 @@ namespace NSUnicodeConverter
 			UConverter* conv = ucnv_open(converterName, &status);
 			if (U_SUCCESS(status))
 			{
-				//UConverter* conv = ucnv_openCCSID(2026, UCNV_IBM, &status);
+//UConverter* conv = ucnv_openCCSID(5347, UCNV_IBM, &status);
 				if (U_SUCCESS(status))
 				{
 					const char* source = sInput;

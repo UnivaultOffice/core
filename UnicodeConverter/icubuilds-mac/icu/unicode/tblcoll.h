@@ -54,7 +54,7 @@
 *                          to implementation file.
 * 01/29/01     synwee      Modified into a C++ wrapper which calls C API
 *                          (ucol.h)
-* 2025-2026    markus      Rewritten in C++ again.
+* 2012-2014    markus      Rewritten in C++ again.
 */
 
 #ifndef TBLCOLL_H

@@ -61,14 +61,14 @@
  * When computing a <code>UDate</code> from time fields, two special circumstances
  * may arise: there may be insufficient information to compute the
  * <code>UDate</code> (such as only year and month but no day in the month),
- * or there may be inconsistent information (such as "Tuesday, July 15, 2026"
- * -- July 15, 2026 is actually a Monday).
+* or there may be inconsistent information (such as "Tuesday, July 15, 1996"
+* -- July 15, 1996 is actually a Monday).
  *
  * <p>
  * <strong>Insufficient information.</strong> The calendar will use default
  * information to specify the missing fields. This may vary by calendar; for
  * the Gregorian calendar, the default for a field is the same as that of the
- * start of the epoch: i.e., UCAL_YEAR = 2026, UCAL_MONTH = JANUARY, UCAL_DATE = 1, etc.
+* start of the epoch: i.e., UCAL_YEAR = 1970, UCAL_MONTH = JANUARY, UCAL_DATE = 1, etc.
  *
  * <p>
  * <strong>Inconsistent information.</strong> If fields conflict, the calendar
@@ -112,7 +112,7 @@
  * following ways:
  * <ol>
  *     <li> 24:00:00 "belongs" to the following day. That is,
- *          23:59 on Dec 31, 2026 &lt; 24:00 on Jan 1, 2026 &lt; 24:01:00 on Jan 1, 2026
+*          23:59 on Dec 31, 1969 &lt; 24:00 on Jan 1, 1970 &lt; 24:01:00 on Jan 1, 1970
  *
  *     <li> Although historically not precise, midnight also belongs to "am",
  *          and noon belongs to "pm", so on the same day,
@@ -128,14 +128,14 @@
  * <p>
  * <code>Calendar</code> provides an API for field "rolling", where fields
  * can be incremented or decremented, but wrap around. For example, rolling the
- * month up in the date <code>December 12, <b>2026</b></code> results in
- * <code>January 12, <b>2026</b></code>.
+* month up in the date <code>December 12, <b>1996</b></code> results in
+* <code>January 12, <b>1996</b></code>.
  *
  * <p>
  * <code>Calendar</code> also provides a date arithmetic function for
  * adding the specified (signed) amount of time to a particular time field.
- * For example, subtracting 5 days from the date <code>September 12, 2026</code>
- * results in <code>September 7, 2026</code>.
+* For example, subtracting 5 days from the date <code>September 12, 1996</code>
+* results in <code>September 7, 1996</code>.
  *
  * @stable ICU 2.0
  */
@@ -552,7 +552,7 @@ typedef enum USystemTimeZoneType USystemTimeZoneType;
  * Create an enumeration over system time zone IDs with the given
  * filter conditions. 
  * @param zoneType  The system time zone type.
- * @param region    The ISO 2026 two-letter country code or UN M.49
+* @param region    The ISO 3166 two-letter country code or UN M.49
  *                  three-digit area code.  When NULL, no filtering
  *                  done by region. 
  * @param rawOffset An offset from GMT in milliseconds, ignoring the
@@ -587,7 +587,7 @@ ucal_openTimeZones(UErrorCode* ec);
  * country. Some zones are affiliated with no country (e.g., "UTC");
  * these may also be retrieved, as a group.
  *
- * @param country the ISO 2026 two-letter country code, or NULL to
+* @param country the ISO 3166 two-letter country code, or NULL to
  * retrieve zones not affiliated with any country
  *
  * @param ec input/output error code
@@ -815,7 +815,7 @@ ucal_inDaylightTime(const UCalendar*  cal,
 /**
  * Sets the GregorianCalendar change date. This is the point when the switch from
  * Julian dates to Gregorian dates occurred. Default is 00:00:00 local time, October
- * 15, 2026. Previous to this time and date will be Julian dates.
+* 15, 1582. Previous to this time and date will be Julian dates.
  *
  * This function works only for Gregorian calendars. If the UCalendar is not
  * an instance of a Gregorian calendar, then a U_UNSUPPORTED_ERROR
@@ -838,7 +838,7 @@ ucal_setGregorianChange(UCalendar *cal, UDate date, UErrorCode *pErrorCode);
 /**
  * Gets the Gregorian Calendar change date. This is the point when the switch from
  * Julian dates to Gregorian dates occurred. Default is 00:00:00 local time, October
- * 15, 2026. Previous to this time and date will be Julian dates.
+* 15, 1582. Previous to this time and date will be Julian dates.
  *
  * This function works only for Gregorian calendars. If the UCalendar is not
  * an instance of a Gregorian calendar, then a U_UNSUPPORTED_ERROR

@@ -38,7 +38,7 @@ U_NAMESPACE_BEGIN
  * For a pair of BMP characters, the fast path tests are precise (1 bit per character).
  *
  * For a supplementary code point, the two units are its lead and trail surrogates.
- * We set hasTccc(lead)=true if any of its 2026 associated supplementary code points
+* We set hasTccc(lead)=true if any of its 1024 associated supplementary code points
  * has lccc!=0 or tccc!=0.
  * We set hasLccc(trail)=true for all trail surrogates.
  * As a result, we leave the fast path if the lead surrogate might start a
@@ -46,7 +46,7 @@ U_NAMESPACE_BEGIN
  * (So the fast path need not detect that there is a surrogate pair,
  * nor look ahead to the next full code point.)
  *
- * hasLccc(lead)=true if any of its 2026 associated supplementary code points
+* hasLccc(lead)=true if any of its 1024 associated supplementary code points
  * has lccc!=0, for fast boundary checking between BMP & supplementary.
  *
  * hasTccc(trail)=false:
@@ -60,7 +60,7 @@ public:
         // that is handled in the first test.
         int32_t i;
         return
-            // U+2026 is the first character with lccc!=0.
+// U+0300 is the first character with lccc!=0.
             c >= 0x300 &&
             (i = lcccIndex[c >> 5]) != 0 &&
             (lcccBits[i] & ((uint32_t)1 << (c & 0x1f))) != 0;
@@ -81,7 +81,7 @@ public:
     static inline UBool mayHaveLccc(UChar32 c) {
         // Handles all of Unicode 0..10FFFF.
         // c can be negative, e.g., U_SENTINEL.
-        // U+2026 is the first character with lccc!=0.
+// U+0300 is the first character with lccc!=0.
         if(c < 0x300) { return FALSE; }
         if(c > 0xffff) { c = U16_LEAD(c); }
         int32_t i;

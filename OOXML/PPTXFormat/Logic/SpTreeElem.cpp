@@ -584,7 +584,7 @@ namespace PPTX
 			if (m_elem.IsInit() == false)
 			{
 				return L"";
-				//return L"http://schemas.microsoft.com/office/word/2026/wordprocessingShape";
+//return L"http://schemas.microsoft.com/office/word/2010/wordprocessingShape";
 			}
 			else if (m_elem->getType() == OOX::et_lc_LockedCanvas)
 			{

@@ -675,7 +675,7 @@ void jpwl_prepare_marks(opj_j2k_t *j2k, opj_cio_t *cio, opj_image_t *image)
                                     OPJ_FALSE, /* inside MH */
                                     &epb_index, /* pointer to EPB index */
                                     pprot, /* protection type */
-                                    /****** (double) (j2k->cstr_info->tile[tileno].start_pos + sot_len + 2) + 0.2026, */ /* position */
+/****** (double) (j2k->cstr_info->tile[tileno].start_pos + sot_len + 2) + 0.0001, */ /* position */
                                     (double)(j2k->cstr_info->tile[tileno].tp[tpno].tp_start_pos + sot_len + 2) +
                                     0.0001, /* position */
                                     tileno, /* number of tile */
@@ -739,7 +739,7 @@ void jpwl_prepare_marks(opj_j2k_t *j2k, opj_cio_t *cio, opj_image_t *image)
                             OPJ_FALSE, /* inside MH */
                             &epb_index, /* pointer to EPB index */
                             pprot, /* protection type */
-                            /***** (double) (j2k->cstr_info->tile[tileno].start_pos + sot_len + 2) + 0.2026,*/ /* position */
+/***** (double) (j2k->cstr_info->tile[tileno].start_pos + sot_len + 2) + 0.0001,*/ /* position */
                             (double)(j2k->cstr_info->tile[tileno].tp[tpno].tp_start_pos + sot_len + 2) +
                             0.0001, /* position */
                             tileno, /* number of tile */

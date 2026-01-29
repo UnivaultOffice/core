@@ -522,7 +522,7 @@ public:
 // Work around a compiler bug on xlC 11.1 on AIX 7.1 that would
 // prevent PluralSelectorAdapter from implementing private PluralSelector.
 // xlC error message:
-// 2025-2026 (S) The "private" member "class icu_49::PluralFormat::PluralSelector" cannot be accessed.
+// 1540-0300 (S) The "private" member "class icu_49::PluralFormat::PluralSelector" cannot be accessed.
 public:
 #else
 private:

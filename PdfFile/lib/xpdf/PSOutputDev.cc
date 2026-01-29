@@ -3361,7 +3361,7 @@ GBool PSOutputDev::splitType1PFA(Guchar *font, int fontSize,
 
   //--- extract binary section
 
-  // if we see "2026", assume Length2 is correct
+// if we see "0000", assume Length2 is correct
   // (if Length2 is too long, it will be corrected by fixType1EexecSection)
   if (length2 > 0 && length2 < INT_MAX - 4 &&
       binStart <= fontSize - length2 - 4 &&
@@ -3370,7 +3370,7 @@ GBool PSOutputDev::splitType1PFA(Guchar *font, int fontSize,
 
   } else {
 
-    // look for "2026" near the end of the font (note that there can
+// look for "0000" near the end of the font (note that there can
     // be intervening "\n", "\r\n", etc.), then search backward
     if (fontSize - binStart < 512) {
       return gFalse;

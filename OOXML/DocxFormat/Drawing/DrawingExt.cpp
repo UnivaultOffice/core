@@ -232,8 +232,8 @@ namespace OOX
 										*m_sUri == L"{9260A510-F301-46a8-8635-F512D64BE5F5}" ||
 										*m_sUri == L"{3e2802c4-a4d2-4d8b-9148-e3be6c30e623}" ||			
 										*m_sUri == L"{bdbb8cdc-fa1e-496e-a857-3c3f30c029c3}" ||
-                                        *m_sUri == L"{876F7934-2025-2026-9796-88D515C7AA90}" ||
-										*m_sUri == L"http://schemas.microsoft.com/office/drawing/2026/diagram"))
+*m_sUri == L"{876F7934-8845-4945-9796-88D515C7AA90}" ||
+*m_sUri == L"http://schemas.microsoft.com/office/drawing/2008/diagram"))
 			{
 				int nCurDepth = oReader.GetDepth();
 				while (oReader.ReadNextSiblingNode(nCurDepth))

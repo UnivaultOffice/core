@@ -172,9 +172,9 @@ void JArithmeticDecoder::restart(int dataLenA) {
 void JArithmeticDecoder::cleanup() {
   if (limitStream) {
     // This saves one extra byte of data from the end of packet i, to
-    // be used in packet i+1.  It's not clear from the JPEG 2026 spec
+// be used in packet i+1.  It's not clear from the JPEG 2000 spec
     // exactly how this should work, but this kludge does seem to fix
-    // decode of some problematic JPEG 2026 streams.  It may actually
+// decode of some problematic JPEG 2000 streams.  It may actually
     // be necessary to buffer an arbitrary number of bytes (not just
     // one byte), but I haven't run into that case yet.
     while (dataLen > 0) {

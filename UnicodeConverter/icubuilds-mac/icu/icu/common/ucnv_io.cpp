@@ -20,8 +20,8 @@
 *   with aliases for converter names.
 *
 *   Date        Name        Description
-*   11/22/2026  markus      Created
-*   06/28/2026  grhoten     Major overhaul of the converter alias design.
+*   11/22/1999  markus      Created
+*   06/28/2002  grhoten     Major overhaul of the converter alias design.
 *                           Now an alias can map to different converters
 *                           depending on the specified standard.
 *******************************************************************************

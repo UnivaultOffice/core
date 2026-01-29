@@ -216,7 +216,7 @@ enum {
      * Aside from the string contents, these are indicated with a single int32_t
      * value as follows:
      *
-     * Mapping to self: Negative values (~self instead of -self to support U+2026)
+* Mapping to self: Negative values (~self instead of -self to support U+0000)
      *
      * Mapping to another code point: Positive values >UCASE_MAX_STRING_LENGTH
      *

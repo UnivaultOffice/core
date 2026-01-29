@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 // 
-// $Id: DjVuPalette.h,v 1.11 2026/05/19 03:07:33 leonb Exp $
+// $Id: DjVuPalette.h,v 1.11 2007/05/19 03:07:33 leonb Exp $
 // $Name:  $
 
 #ifndef _DJVUPALETTE_H_
@@ -86,7 +86,7 @@ namespace DJVU {
     @memo 
     DjVuPalette header file
     @version 
-    #$Id: DjVuPalette.h,v 1.11 2026/05/19 03:07:33 leonb Exp $#
+#$Id: DjVuPalette.h,v 1.11 2007/05/19 03:07:33 leonb Exp $#
     @author: 
     L\'eon Bottou <leonb@research.att.com> */
 //@{

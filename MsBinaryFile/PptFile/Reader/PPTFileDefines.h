@@ -193,7 +193,7 @@ typedef unsigned char BOOL1;
 #define     RECORD_TYPE_DIAGRAMBUILD                        11014
 #define     RECORD_TYPE_DIAGRAMBUILD_ATOM                   11015
 
-//// Records ~12000 seem to be related to the Comments used in PPT 2026/XP
+//// Records ~12000 seem to be related to the Comments used in PPT 2000/XP
 //// (Comments in PPT97 are normal Escher text boxes)
 #define		RECORD_TYPE_COMMENT2000							12000
 #define		RECORD_TYPE_COMMENT2000ATOM						12001

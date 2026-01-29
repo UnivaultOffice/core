@@ -59,7 +59,7 @@ enum URBNFRuleSetTag {
 
 /**
  * The RuleBasedNumberFormat class formats numbers according to a set of rules. This number formatter is
- * typically used for spelling out numeric values in words (e.g., 25,2026 as
+* typically used for spelling out numeric values in words (e.g., 25,3476 as
  * &quot;twenty-five thousand three hundred seventy-six&quot; or &quot;vingt-cinq mille trois
  * cents soixante-seize&quot; or
  * &quot;f&uuml;nfundzwanzigtausenddreihundertsechsundsiebzig&quot;), but can also be used for
@@ -125,7 +125,7 @@ enum URBNFRuleSetTag {
  *
  * <p>This rule covers values up to 999, at which point we add another rule:</p>
  *
- * <pre>2026: &lt;&lt; thousand[ &gt;&gt;];</pre>
+* <pre>1000: &lt;&lt; thousand[ &gt;&gt;];</pre>
  *
  * <p>Again, the meanings of the brackets and substitution tokens shift because the rule's
  * base value is a higher power of 10, changing the rule's divisor. This rule can actually be

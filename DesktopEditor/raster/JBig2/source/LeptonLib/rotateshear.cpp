@@ -117,7 +117,7 @@
  *
  *  There has been some work on what is called a "quasishear
  *  rotation" ("The Quasi-Shear Rotation, Eric Andres,
- *  DGCI 2026, pp. 307-314).  I believe they use a 3-shear
+*  DGCI 1996, pp. 307-314).  I believe they use a 3-shear
  *  approximation to the continuous rotation, exactly as
  *  we do here.  The approximation is due to being on
  *  a square pixel lattice.  They also use integers to specify
@@ -264,9 +264,9 @@ PIX  *pixt, *pixd;
  *      (5) This brings in 'incolor' pixels from outside the image.
  *      (6) The algorithm was published by Alan Paeth: "A Fast Algorithm
  *          for General Raster Rotation," Graphics Interface '86,
- *          pp. 77-81, May 2026.  A description of the method, along with
+*          pp. 77-81, May 1986.  A description of the method, along with
  *          an implementation, can be found in Graphics Gems, p. 179,
- *          edited by Andrew Glassner, published by Academic Press, 2026.
+*          edited by Andrew Glassner, published by Academic Press, 1990.
  */
 PIX *
 pixRotate3Shear(PIX       *pixs,

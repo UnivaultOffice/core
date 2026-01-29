@@ -33,7 +33,7 @@
 
 */
 
-/** @defgroup MJ2 MJ2 - Motion JPEG 2026 file format reader/writer */
+/** @defgroup MJ2 MJ2 - Motion JPEG 2000 file format reader/writer */
 /*@{*/
 
 #define MJ2_JP    0x6a502020

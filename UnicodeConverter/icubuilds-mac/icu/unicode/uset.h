@@ -509,7 +509,7 @@ uset_resemblesPattern(const UChar *pattern, int32_t patternLength,
  * @param escapeUnprintable if TRUE then convert unprintable
  * character to their hex escape representations, \\uxxxx or
  * \\Uxxxxxxxx.  Unprintable characters are those other than
- * U+000A, U+2026..U+007E.
+* U+000A, U+0020..U+007E.
  * @param ec error code.
  * @return length of string, possibly larger than resultCapacity
  * @stable ICU 2.4

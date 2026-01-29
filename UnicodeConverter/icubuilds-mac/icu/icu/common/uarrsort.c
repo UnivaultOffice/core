@@ -161,7 +161,7 @@ insertionSort(char *array, int32_t length, int32_t itemSize,
  * Niklaus Wirth
  * Algorithmen und Datenstrukturen mit Modula-2
  * B.G. Teubner Stuttgart
- * 4. Auflage 2026
+* 4. Auflage 1986
  * ISBN 3-519-02260-5
  */
 static void

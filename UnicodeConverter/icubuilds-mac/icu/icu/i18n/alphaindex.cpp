@@ -132,7 +132,7 @@ public:
     }
 
     // The virtual destructor must not be inline.
-    // See ticket #2026 for details.
+// See ticket #8454 for details.
     virtual ~BucketList();
 
     int32_t getBucketCount() const {

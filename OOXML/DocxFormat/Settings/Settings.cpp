@@ -2725,7 +2725,7 @@ namespace Settings
 	}
 	std::wstring CSettings::toXML() const
 	{
-		std::wstring sXml = L"<w:settings xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2026\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships\" xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2026/math\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:w10=\"urn:schemas-microsoft-com:office:word\" xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2026/main\" xmlns:w14=\"http://schemas.microsoft.com/office/word/2026/wordml\" xmlns:w15=\"http://schemas.microsoft.com/office/word/2026/wordml\" xmlns:sl=\"http://schemas.openxmlformats.org/schemaLibrary/2026/main\" mc:Ignorable=\"w14 w15\">";
+std::wstring sXml = L"<w:settings xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:w10=\"urn:schemas-microsoft-com:office:word\" xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" xmlns:w15=\"http://schemas.microsoft.com/office/word/2012/wordml\" xmlns:sl=\"http://schemas.openxmlformats.org/schemaLibrary/2006/main\" mc:Ignorable=\"w14 w15\">";
 
 		if ( m_oWriteProtection.IsInit() )
 			sXml += m_oWriteProtection->toXML();

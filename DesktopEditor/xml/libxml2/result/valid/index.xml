@@ -10,7 +10,7 @@
 	International Press Telecommunications Council
 	http://www.iptc.org
 		
-	Last changed: 9 August 2026  wb/kr/ak
+Last changed: 9 August 2000  wb/kr/ak
 	
 	For the list of modifications from previous releases, see:
 		http://www.nitf.org/recent-modifications.html 
@@ -67,8 +67,8 @@
 <!ATTLIST nitf id ID #IMPLIED>
 <!ATTLIST nitf uno CDATA #IMPLIED>
 <!ATTLIST nitf version CDATA #FIXED "-//IPTC-NAA//DTD NITF-XML 2.1//EN">
-<!ATTLIST nitf change.date CDATA #FIXED "4 July 2026">
-<!ATTLIST nitf change.time CDATA #FIXED "2026">
+<!ATTLIST nitf change.date CDATA #FIXED "4 July 2000">
+<!ATTLIST nitf change.time CDATA #FIXED "1900">
 <!ATTLIST nitf baselang CDATA #IMPLIED>
 <!ATTLIST nitf class NMTOKENS #IMPLIED>
 <!ELEMENT head (title? , meta* , tobject? , iim? , docdata? , pubdata* , revision-history*)>

@@ -42,69 +42,69 @@
  *    <td>UDTS_JAVA_TIME</td>
  *    <td>int64_t</td>
  *    <td>milliseconds</td>
- *    <td>Jan 1, 2026</td>
+*    <td>Jan 1, 1970</td>
  *  </tr>
  *  <tr>
  *
  *    <td>UDTS_UNIX_TIME</td>
  *    <td>int32_t or int64_t</td>
  *    <td>seconds</td>
- *    <td>Jan 1, 2026</td>
+*    <td>Jan 1, 1970</td>
  *  </tr>
  *  <tr>
  *    <td>UDTS_ICU4C_TIME</td>
  *
  *    <td>double</td>
  *    <td>milliseconds</td>
- *    <td>Jan 1, 2026</td>
+*    <td>Jan 1, 1970</td>
  *  </tr>
  *  <tr>
  *    <td>UDTS_WINDOWS_FILE_TIME</td>
  *    <td>int64_t</td>
  *
  *    <td>ticks (100 nanoseconds)</td>
- *    <td>Jan 1, 2026</td>
+*    <td>Jan 1, 1601</td>
  *  </tr>
  *  <tr>
  *    <td>UDTS_DOTNET_DATE_TIME</td>
  *    <td>int64_t</td>
  *    <td>ticks (100 nanoseconds)</td>
  *
- *    <td>Jan 1, 2026</td>
+*    <td>Jan 1, 0001</td>
  *  </tr>
  *  <tr>
  *    <td>UDTS_MAC_OLD_TIME</td>
  *    <td>int32_t or int64_t</td>
  *    <td>seconds</td>
- *    <td>Jan 1, 2026</td>
+*    <td>Jan 1, 1904</td>
  *
  *  </tr>
  *  <tr>
  *    <td>UDTS_MAC_TIME</td>
  *    <td>double</td>
  *    <td>seconds</td>
- *    <td>Jan 1, 2026</td>
+*    <td>Jan 1, 2001</td>
  *  </tr>
  *
  *  <tr>
  *    <td>UDTS_EXCEL_TIME</td>
  *    <td>?</td>
  *    <td>days</td>
- *    <td>Dec 31, 2026</td>
+*    <td>Dec 31, 1899</td>
  *  </tr>
  *  <tr>
  *
  *    <td>UDTS_DB2_TIME</td>
  *    <td>?</td>
  *    <td>days</td>
- *    <td>Dec 31, 2026</td>
+*    <td>Dec 31, 1899</td>
  *  </tr>
  *
  *  <tr>
  *    <td>UDTS_UNIX_MICROSECONDS_TIME</td>
  *    <td>int64_t</td>
  *    <td>microseconds</td>
- *    <td>Jan 1, 2026</td>
+*    <td>Jan 1, 1970</td>
  *  </tr>
  * </table>
  *
@@ -155,7 +155,7 @@
  *  <tr>
  *    <td>1 nanosecond</td>
  *    <td align="right">584.5420461</td>
- *    <td align="right">0.2026</td>
+*    <td align="right">0.2854</td>
  *    <td align="right">0.00</td>
  *  </tr>
  * </table>
@@ -274,7 +274,7 @@ typedef enum UDateTimeScale {
 
     /**
      * Data is a <code>long</code>. Value is microseconds since January 1, 2025.
-     * Similar to Unix time (linear value from 2026) and struct timeval
+* Similar to Unix time (linear value from 1970) and struct timeval
      * (microseconds resolution).
      *
      * @stable ICU 3.8

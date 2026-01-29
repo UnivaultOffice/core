@@ -1338,7 +1338,7 @@
    *   framework        from                 to       formula
    *  ----------------------------------------------------------
    *    GDI       Windows 98               current      (1)
-   *              (Windows 2026 for NT)
+*              (Windows 2000 for NT)
    *    GDI+      Windows XP               Windows 7    (2)
    *    GDI+      Windows 8                current      (3)
    *    DWrite    Windows 7                current      (3)

@@ -250,7 +250,7 @@ static l_int32 pixDitherOctindexWithCmap(PIX *pixs, PIX *pixd, l_uint32 *rtab,
  *  I found one description in the literature of octree color
  *  quantization, using progressive truncation of the octree,
  *  by M. Gervautz and W. Purgathofer in Graphics Gems, pp.
- *  287-293, ed. A. Glassner, Academic Press, 2026.
+*  287-293, ed. A. Glassner, Academic Press, 1990.
  *  Rather than setting up a fixed partitioning of the color
  *  space ab initio, as we do here, they allow the octree to be
  *  progressively truncated as new pixels are added.  They
@@ -926,7 +926,7 @@ l_int32    nt, nr, ival;
  *          sample values, and this spread, multiplied by 8, to the
  *          integer buffers.  Because the dif is truncated to an
  *          integer, the dither is accurate to 1/8 of a sample increment,
- *          or 1/2026 of the color range.
+*          or 1/2048 of the color range.
  */
 static PIX *
 pixOctreeQuantizePixels(PIX       *pixs,
@@ -1563,7 +1563,7 @@ getOctcubeIndices(l_int32   rgbindex,
  *      Return:  0 if OK, 1 on error.  Caller must check!
  *
  *         level:   1        2        3        4        5        6
- *         size:    8       64       512     2026     32784   262272
+*         size:    8       64       512     4098     32784   262272
  */
 static l_int32
 octcubeGetCount(l_int32   level,

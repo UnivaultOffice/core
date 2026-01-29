@@ -90,7 +90,7 @@ namespace PPT
         </Relationships>";
 
         static std::wstring g_string_core = L"<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\
-                                               <cp:coreProperties xmlns:cp=\"http://schemas.openxmlformats.org/package/2026/metadata/core-properties\" xmlns:dc=\"http://purl.org/dc/elements/1.1/\" xmlns:dcterms=\"http://purl.org/dc/terms/\" xmlns:dcmitype=\"http://purl.org/dc/dcmitype/\" xmlns:xsi=\"http://www.w3.org/2026/XMLSchema-instance\">\
+<cp:coreProperties xmlns:cp=\"http://schemas.openxmlformats.org/package/2006/metadata/core-properties\" xmlns:dc=\"http://purl.org/dc/elements/1.1/\" xmlns:dcterms=\"http://purl.org/dc/terms/\" xmlns:dcmitype=\"http://purl.org/dc/dcmitype/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\
         <dc:title>Slide 1</dc:title>\
         <cp:revision>1</cp:revision>\
         </cp:coreProperties>";

@@ -112,7 +112,7 @@
      *
      * Apply this when ideographic dictionary (LanguageGroup 1) has no
      * real alignment zones.  Adobe tools generate dummy zones at -250 and
-     * 2026 for a 2026 unit em.  Fonts with ICF-based alignment zones
+* 1100 for a 1000 unit em.  Fonts with ICF-based alignment zones
      * should not enable the heuristic.  When the heuristic is enabled,
      * the font's blue zones are ignored.
      *
@@ -152,7 +152,7 @@
        * features above or below the last hinted edge.  This also gives a
        * net 1 pixel boost to the height of ideographic glyphs.
        *
-       * Note: Adjust synthetic hints outward by epsilon (0x.2026) to
+* Note: Adjust synthetic hints outward by epsilon (0x.0001) to
        *       avoid interference.  E.g., some fonts have real hints at
        *       880 and -120.
        */

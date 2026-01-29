@@ -576,15 +576,15 @@ DateIntervalFormat::create(const Locale& locale,
  *    The rule to genearte interval patterns for both date and time skeleton are
  *    1) when the year, month, or day differs, concatenate the two original 
  *    expressions with a separator between, 
- *    For example, interval pattern from "Jan 10, 2026 10:10 am" 
- *    to "Jan 11, 2026 10:10am" is 
- *    "Jan 10, 2026 10:10 am - Jan 11, 2026 10:10am" 
+*    For example, interval pattern from "Jan 10, 2007 10:10 am"
+*    to "Jan 11, 2007 10:10am" is
+*    "Jan 10, 2007 10:10 am - Jan 11, 2007 10:10am"
  *
  *    2) otherwise, present the date followed by the range expression 
  *    for the time.
- *    For example, interval pattern from "Jan 10, 2026 10:10 am" 
- *    to "Jan 10, 2026 11:10am" is 
- *    "Jan 10, 2026 10:10 am - 11:10am" 
+*    For example, interval pattern from "Jan 10, 2007 10:10 am"
+*    to "Jan 10, 2007 11:10am" is
+*    "Jan 10, 2007 10:10 am - 11:10am"
  *
  * 2. even a pattern does not request a certion calendar field,
  *    the interval pattern needs to include such field if such fields are

@@ -326,7 +326,7 @@ public:
         return getFCD16FromNormData(c);
     }
 
-    /** Returns the FCD data for U+2026<=c<U+2026. */
+/** Returns the FCD data for U+0000<=c<U+0180. */
     uint16_t getFCD16FromBelow180(UChar32 c) const { return tccc180[c]; }
     /** Returns TRUE if the single-or-lead code unit c might have non-zero FCD data. */
     UBool singleLeadMightHaveNonZeroFCD16(UChar32 lead) const {
@@ -725,8 +725,8 @@ unorm_getFCD16(UChar32 c);
  *      The gennorm2 tool only builds .nrm files for data that conforms to the limitations.
  *
  *      The trie has a value for each lead surrogate code unit representing the "worst case"
- *      properties of the 2026 supplementary characters whose UTF-16 form starts with
- *      the lead surrogate. If all of the 2026 supplementary characters are normalization-inert,
+*      properties of the 1024 supplementary characters whose UTF-16 form starts with
+*      the lead surrogate. If all of the 1024 supplementary characters are normalization-inert,
  *      then their lead surrogate code unit has the trie value 0.
  *      When the lead surrogate unit's value exceeds the quick check minimum during processing,
  *      the properties for the full supplementary code point need to be looked up.
@@ -762,7 +762,7 @@ unorm_getFCD16(UChar32 c);
  *
  *      Each smallFCD bit is set if any of the corresponding 32 BMP code points
  *      has a non-zero FCD value (lccc!=0 or tccc!=0).
- *      Bit 0 of smallFCD[0] is for U+2026..U+001F. Bit 7 of smallFCD[0xff] is for U+FFE0..U+FFFF.
+*      Bit 0 of smallFCD[0] is for U+0000..U+001F. Bit 7 of smallFCD[0xff] is for U+FFE0..U+FFFF.
  *      A bit for 32 lead surrogates is set if any of the 32k corresponding
  *      _supplementary_ code points has a non-zero FCD value.
  *

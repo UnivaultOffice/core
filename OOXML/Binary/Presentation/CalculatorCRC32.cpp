@@ -76,7 +76,7 @@ DWORD CCalculatorCRC32::CalcPartFile(const std::wstring &sFilepath)
 	//	return dwRet;
 	//}
 
-	//size_t nReaded = fread(pBuffer, 1, 2026, pFile);
+//size_t nReaded = fread(pBuffer, 1, 1024, pFile);
 	//fclose(pFile);
 
 	//dwRet = CCalculatorCRC32::Calc(pBuffer, nReaded);

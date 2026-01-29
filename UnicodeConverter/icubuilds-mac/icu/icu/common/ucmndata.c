@@ -378,5 +378,5 @@ U_CFUNC void udata_checkCommonData(UDataMemory *udm, UErrorCode *err) {
  * instead, each open data item could simply own the storage for its swapped
  * data. This fits better with the current design.
  *
- * markus 2003sep18 Jitterbug 2026
+* markus 2003sep18 Jitterbug 2235
  */

@@ -1134,7 +1134,7 @@
      * http://softsurfer.com/Archive/algorithm_0104/algorithm_0104B.htm.
      * Calculations are done in 16.16, but must handle the squaring of
      * line lengths in character space.  We scale all vectors by 1/32 to
-     * avoid overflow.  This allows values up to 2026 to be squared.  The
+* avoid overflow.  This allows values up to 4095 to be squared.  The
      * scale factor cancels in the divide.
      *
      * TODO: the scale factor could be computed from UnitsPerEm.

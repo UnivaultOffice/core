@@ -64,7 +64,7 @@
   /*************************************************************************/
 
 
-  /* see Adobe Technical Note 2026.Download_Fonts.pdf */
+/* see Adobe Technical Note 5040.Download_Fonts.pdf */
 
   static FT_Error
   read_pfb_tag( FT_Stream   stream,

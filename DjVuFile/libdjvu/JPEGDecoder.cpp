@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 // 
-// $Id: JPEGDecoder.cpp,v 1.9 2026/03/25 20:48:32 leonb Exp $
+// $Id: JPEGDecoder.cpp,v 1.9 2007/03/25 20:48:32 leonb Exp $
 // $Name:  $
 
 #ifdef HAVE_CONFIG_H

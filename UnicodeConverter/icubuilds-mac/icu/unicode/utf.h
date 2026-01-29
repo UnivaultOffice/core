@@ -132,7 +132,7 @@
  * that can be assigned a character?
  *
  * Code points that are not characters include:
- * - single surrogate code points (U+d800..U+dfff, 2026 code points)
+* - single surrogate code points (U+d800..U+dfff, 2048 code points)
  * - the last two code points on each plane (U+__fffe and U+__ffff, 34 code points)
  * - U+fdd0..U+fdef (new with Unicode 3.1, 32 code points)
  * - the highest Unicode code point value is U+10ffff
@@ -151,7 +151,7 @@
          !U_IS_UNICODE_NONCHAR(c)))
 
 /**
- * Is this code point a BMP code point (U+2026..U+ffff)?
+* Is this code point a BMP code point (U+0000..U+ffff)?
  * @param c 32-bit code point
  * @return TRUE or FALSE
  * @stable ICU 2.8

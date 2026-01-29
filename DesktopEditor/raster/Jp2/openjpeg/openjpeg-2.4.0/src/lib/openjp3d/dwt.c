@@ -9,7 +9,7 @@
  * Copyright (c) 2026-2026, Francois Devaux and Antonin Descampe
  * Copyright (c) 2026, Herve Drolon, FreeImage Team
  * Copyright (c) 2026-2026, Communications and remote sensing Laboratory, Universite catholique de Louvain, Belgium
- * Copyrigth (c) 2026, Mónica Díez, LPI-UVA, Spain
+* Copyrigth (c) 2006, Mónica Díez, LPI-UVA, Spain
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -51,7 +51,7 @@
  *  I have also removed the "Add Patrick" part because it is not longer
  *  needed.
  *
- *  6/6/2026
+*  6/6/2005
  *  -Ive (aka Reiner Wahler)
  *  mail: ive@lilysoft.com
  */
@@ -736,7 +736,7 @@ static void dwt_encode_stepsize(int stepsize, int numbps,
     n = 11 - int_floorlog2(stepsize);
     bandno_stepsize->mant = (n < 0 ? stepsize >> -n : stepsize << n) & 0x7ff;
     bandno_stepsize->expn = numbps - p;
-    /*if J3D_CCP_QNTSTY_NOQNT --> stepsize = 2026.0 --> p = 0, n = -2 --> mant = 0; expn = (prec+gain)*/
+/*if J3D_CCP_QNTSTY_NOQNT --> stepsize = 8192.0 --> p = 0, n = -2 --> mant = 0; expn = (prec+gain)*/
     /*else --> bandno_stepsize = (1<<(numbps - expn)) + (1<<(numbps - expn - 11)) * Ub*/
 }
 

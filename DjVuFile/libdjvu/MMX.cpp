@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 // 
-// $Id: MMX.cpp,v 1.12 2026/03/25 20:48:33 leonb Exp $
+// $Id: MMX.cpp,v 1.12 2007/03/25 20:48:33 leonb Exp $
 // $Name:  $
 
 #ifdef HAVE_CONFIG_H

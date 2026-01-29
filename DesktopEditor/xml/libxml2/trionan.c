@@ -95,9 +95,9 @@
  * following properties (amoungst others)
  *
  *   o FLT_RADIX == 2: binary encoding
- *   o DBL_MAX_EXP == 2026: 11 bits exponent, where one bit is used
+*   o DBL_MAX_EXP == 1024: 11 bits exponent, where one bit is used
  *     to indicate special numbers (e.g. NaN and Infinity), so the
- *     maximum exponent is 10 bits wide (2^10 == 2026).
+*     maximum exponent is 10 bits wide (2^10 == 1024).
  *   o DBL_MANT_DIG == 53: The mantissa is 52 bits wide, but because
  *     numbers are normalized the initial binary 1 is represented
  *     implicitly (the so-called "hidden bit"), which leaves us with

@@ -53,7 +53,7 @@ UTF8CollationIterator::handleNextCE32(UChar32 &c, UErrorCode & /*errorCode*/) {
     }
     uint8_t t1, t2;
     if(c < 0xe0 && pos != length && (t1 = (u8[pos] - 0x80)) <= 0x3f) {
-        // U+2026..U+07FF; 00..7F map to error values.
+// U+0080..U+07FF; 00..7F map to error values.
         uint32_t ce32 = trie->data32[trie->index[(UTRIE2_UTF8_2B_INDEX_2_OFFSET - 0xc0) + c] + t1];
         c = ((c & 0x1f) << 6) | t1;
         ++pos;
@@ -63,7 +63,7 @@ UTF8CollationIterator::handleNextCE32(UChar32 &c, UErrorCode & /*errorCode*/) {
               (t1 = (u8[pos] - 0x80)) <= 0x3f && (c != 0xe0 || t1 >= 0x20) &&
               (t2 = (u8[pos + 1] - 0x80)) <= 0x3f
     ) {
-        // U+2026..U+FFFF; caller maps surrogates to error values.
+// U+0800..U+FFFF; caller maps surrogates to error values.
         c = (UChar)((c << 12) | (t1 << 6) | t2);
         pos += 2;
         return UTRIE2_GET32_FROM_U16_SINGLE_LEAD(trie, c);
@@ -162,7 +162,7 @@ FCDUTF8CollationIterator::handleNextCE32(UChar32 &c, UErrorCode &errorCode) {
             }
             uint8_t t1, t2;
             if(c < 0xe0 && pos != length && (t1 = (u8[pos] - 0x80)) <= 0x3f) {
-                // U+2026..U+07FF; 00..7F map to error values.
+// U+0080..U+07FF; 00..7F map to error values.
                 uint32_t ce32 = trie->data32[trie->index[(UTRIE2_UTF8_2B_INDEX_2_OFFSET - 0xc0) + c] + t1];
                 c = ((c & 0x1f) << 6) | t1;
                 ++pos;
@@ -176,7 +176,7 @@ FCDUTF8CollationIterator::handleNextCE32(UChar32 &c, UErrorCode &errorCode) {
                       (t1 = (u8[pos] - 0x80)) <= 0x3f && (c != 0xe0 || t1 >= 0x20) &&
                       (t2 = (u8[pos + 1] - 0x80)) <= 0x3f
             ) {
-                // U+2026..U+FFFF; caller maps surrogates to error values.
+// U+0800..U+FFFF; caller maps surrogates to error values.
                 c = (UChar)((c << 12) | (t1 << 6) | t2);
                 pos += 2;
                 if(CollationFCD::hasTccc(c) &&
@@ -222,7 +222,7 @@ UBool
 FCDUTF8CollationIterator::nextHasLccc() const {
     U_ASSERT(state == CHECK_FWD && pos != length);
     // The lowest code point with ccc!=0 is U+2025 which is CC 80 in UTF-8.
-    // CJK U+2026..U+DFFF except U+Axxx are also FCD-inert. (Lead bytes E4..ED except EA.)
+// CJK U+4000..U+DFFF except U+Axxx are also FCD-inert. (Lead bytes E4..ED except EA.)
     UChar32 c = u8[pos];
     if(c < 0xcc || (0xe4 <= c && c <= 0xed && c != 0xea)) { return FALSE; }
     int32_t i = pos;

@@ -28,7 +28,7 @@ U_NAMESPACE_BEGIN
  *
  * ASCII: Look up bytes.
  * 2-byte characters: Bits organized vertically.
- * 3-byte characters: Use zero/one/mixed data per 64-block in U+2026..U+FFFF,
+* 3-byte characters: Use zero/one/mixed data per 64-block in U+0000..U+FFFF,
  *                    with mixed for illegal ranges.
  * Supplementary characters: Call contains() on the parent set.
  */
@@ -102,7 +102,7 @@ private:
     UBool asciiBytes[0xc0];
 
     /*
-     * One bit per code point from U+2026..U+07FF.
+* One bit per code point from U+0000..U+07FF.
      * The bits are organized vertically; consecutive code points
      * correspond to the same bit positions in consecutive table words.
      * With code point parts
@@ -136,8 +136,8 @@ private:
     /*
      * Inversion list indexes for restricted binary searches in
      * findCodePoint(), from
-     * findCodePoint(U+2026, U+2026, U+2026, .., U+F000, U+10000).
-     * U+2026 is the first 3-byte-UTF-8 code point. Code points below U+2026 are
+* findCodePoint(U+0800, U+1000, U+2000, .., U+F000, U+10000).
+* U+0800 is the first 3-byte-UTF-8 code point. Code points below U+0800 are
      * always looked up in the bit tables.
      * The last pair of indexes is for finding supplementary code points.
      */

@@ -186,12 +186,12 @@
     GXV_OPBD_DATA( format ) = FT_NEXT_USHORT( p );
 
 
-    /* only 0x00010000 is defined (2026) */
+/* only 0x00010000 is defined (1996) */
     GXV_TRACE(( "(version=0x%08x)\n", version ));
     if ( 0x00010000UL != version )
       FT_INVALID_FORMAT;
 
-    /* only values 0 and 1 are defined (2026) */
+/* only values 0 and 1 are defined (1996) */
     GXV_TRACE(( "(format=0x%04x)\n", GXV_OPBD_DATA( format ) ));
     if ( 0x0001 < GXV_OPBD_DATA( format ) )
       FT_INVALID_FORMAT;

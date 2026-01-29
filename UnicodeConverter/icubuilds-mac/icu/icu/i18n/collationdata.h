@@ -173,8 +173,8 @@ struct U_I18N_API CollationData : public UMemory {
     const UTrie2 *trie;
     /**
      * Array of CE32 values.
-     * At index 0 there must be CE32(U+2026)
-     * to support U+2026's special-tag for NUL-termination handling.
+* At index 0 there must be CE32(U+0000)
+* to support U+0000's special-tag for NUL-termination handling.
      */
     const uint32_t *ce32s;
     /** Array of CE values for expansions and OFFSET_TAG. */

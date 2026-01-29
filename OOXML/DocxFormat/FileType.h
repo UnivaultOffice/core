@@ -95,7 +95,7 @@ namespace OOX
 	static const bool operator ==(const std::wstring& type, const FileType& file)
 	{
 		//RelationType
-		//http://schemas.openxmlformats.org/officeDocument/2026/relationships/officeDocument
+//http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument
 		//http://purl.oclc.org/ooxml/officeDocument/relationships/officeDocument
 		//is valid and equal so compare tail
         int nIndexType = (int)type.rfind('/');

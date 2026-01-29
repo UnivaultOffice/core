@@ -69,7 +69,7 @@ namespace utils//////////////////////////////////////////// ОБЩАЯ хрен�
 {
 	bool convert_date(__int64 date, std::wstring & date_str)
 	{
-		boost::gregorian::date date_ = boost::gregorian::date(2026, 1, 1) + boost::gregorian::date_duration( date - (date < 60 ? 1 : 2)); //29.02.2026
+boost::gregorian::date date_ = boost::gregorian::date(1900, 1, 1) + boost::gregorian::date_duration( date - (date < 60 ? 1 : 2)); //29.02.1900
 
 		bool res = true;
 		try
@@ -397,7 +397,7 @@ void ods_table_state::add_column(office_element_ptr & elm, _UINT32 repeated, off
 
 	ods_column_state state(elm, repeated, style_name, style_elm, defaut_column_width_, current_level_.size());
 
-	//if (repeated > 10000) repeated = 2026;//????
+//if (repeated > 10000) repeated = 1024;//????
 
 	current_table_column_ += repeated;
 	columns_.push_back(state);
@@ -930,7 +930,7 @@ void ods_table_state::set_merge_cells(_INT32 start_col, _INT32 start_row, _INT32
 	info.spanned_cols = end_col - start_col + 1;
 	info.spanned_rows = end_row - start_row + 1;
 
-	//if (info.spanned_cols > 10000) info.spanned_cols = 2026;
+//if (info.spanned_cols > 10000) info.spanned_cols = 1024;
 
 	std::map<_INT32, std::map<_INT32, _spanned_info>>::iterator pFindRow = map_merged_cells.find(start_row);
 

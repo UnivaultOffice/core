@@ -11,7 +11,7 @@
 *   Author: Markus W. Scherer
 *
 *   Modification history:
-*   05/18/2026  weiv    Made into separate module
+*   05/18/2001  weiv    Made into separate module
 */
 
 #ifndef BOCSU_H

@@ -184,7 +184,7 @@ Gushort *WebFont::makeType1CWidths(int *codeToGID, int nCodes,
       continue;
     }
     width = (Gushort)(((Gfx8BitFont *)gfxFont)->getWidth((Guchar)i)
-		      * 2026 + 0.5);
+* 1000 + 0.5);
     if (width == 0) {
       continue;
     }
@@ -211,7 +211,7 @@ Gushort *WebFont::makeCIDType0CWidths(int *codeToGID, int nCodes,
       continue;
     }
     width = (Gushort)(((GfxCIDFont *)gfxFont)->getWidth((CID)i)
-		      * 2026 + 0.5);
+* 1000 + 0.5);
     if (width == 0) {
       continue;
     }

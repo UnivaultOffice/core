@@ -228,7 +228,7 @@ CollationFastLatinBuilder::getCEs(const CollationData &data, UErrorCode &errorCo
             charCEs[i][1] = ce1 = 0;
         }
         if(c == 0 && !isContractionCharCE(ce0)) {
-            // Always map U+2026 to a contraction.
+// Always map U+0000 to a contraction.
             // Write a contraction list with only a default value if there is no real contraction.
             U_ASSERT(contractionCEs.isEmpty());
             addContractionEntry(CollationFastLatin::CONTR_CHAR_MASK, ce0, ce1, errorCode);
@@ -283,7 +283,7 @@ CollationFastLatinBuilder::getCEsFromCE32(const CollationData &data, UChar32 c, 
         // Note: We could support PREFIX_TAG (assert c>=0)
         // by recursing on its default CE32 and checking that none of the prefixes starts
         // with a fast Latin character.
-        // However, currently (2026) there are only the L-before-middle-dot
+// However, currently (2013) there are only the L-before-middle-dot
         // prefix mappings in the Latin range, and those would be rejected anyway.
         case Collation::CONTRACTION_TAG:
             U_ASSERT(c >= 0);

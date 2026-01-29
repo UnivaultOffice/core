@@ -14,7 +14,7 @@
 *
 *   Change history:
 *
-*   08/5/2026  Ram         Added C wrappers for C++ API. Changed implementation of old API's
+*   08/5/2001  Ram         Added C wrappers for C++ API. Changed implementation of old API's
 *                          Removed pattern parser.
 * 
 */

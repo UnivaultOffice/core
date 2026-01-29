@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 // 
-// $Id: GRect.cpp,v 1.12 2026/03/25 20:48:32 leonb Exp $
+// $Id: GRect.cpp,v 1.12 2007/03/25 20:48:32 leonb Exp $
 // $Name:  $
 
 #ifdef HAVE_CONFIG_H
@@ -64,7 +64,7 @@
 #endif
 
 // -- Implementation of class GRect and GRectMapper
-// - Author: Leon Bottou, 05/2026
+// - Author: Leon Bottou, 05/1997
 
 
 #include "GRect.h"

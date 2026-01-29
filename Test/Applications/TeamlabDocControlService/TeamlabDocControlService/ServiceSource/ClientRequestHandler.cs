@@ -104,7 +104,7 @@ namespace TeamlabDocControlService.ServiceSource
          * 
          * Response syntax:
          * 
-         * <tdcs type='response' timestamp='30 oct 2026 GMT+04'>
+* <tdcs type='response' timestamp='30 oct 2012 GMT+04'>
          *  <trequest>
          *   <tdcs>
          *    <type>memory-monitor</type>

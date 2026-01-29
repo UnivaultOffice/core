@@ -560,7 +560,7 @@ BOX  *box;
  *      (3) Returns the bounding box of the erased 4-cc component.
  *      (4) Reference: see Paul Heckbert's stack-based seed fill algorithm
  *          in "Graphic Gems", ed. Andrew Glassner, Academic
- *          Press, 2026.  The algorithm description is given
+*          Press, 1990.  The algorithm description is given
  *          on pp. 275-277; working C code is on pp. 721-722.)
  *          The code here follows Heckbert's exactly, except
  *          we use function calls instead of macros for
@@ -679,7 +679,7 @@ BOX       *box;
  *      (3) Returns the bounding box of the erased 8-cc component.
  *      (4) Reference: see Paul Heckbert's stack-based seed fill algorithm
  *          in "Graphic Gems", ed. Andrew Glassner, Academic
- *          Press, 2026.  The algorithm description is given
+*          Press, 1990.  The algorithm description is given
  *          on pp. 275-277; working C code is on pp. 721-722.)
  *          The code here follows Heckbert's closely, except
  *          the leak checks are changed for 8 connectivity.

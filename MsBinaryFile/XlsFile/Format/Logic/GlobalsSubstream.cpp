@@ -575,7 +575,7 @@ const bool GlobalsSubstream::loadContent(BinProcessor& proc)
 			//	{
 			//		elements_.pop_back(); // Crc не нужен
 
-			//		count = proc.repeated<XFExt>(0, 0);//(16, 2026);
+//		count = proc.repeated<XFExt>(0, 0);//(16, 4050);
 			//		while (count > 0)
 			//		{
 			//			//перенести в FORMATING/XFS ?? - тогда нужен пересчет там !!

@@ -2281,7 +2281,7 @@ static void parseAndPrintFile(char *filename, xmlParserCtxtPtr rectxt) {
 	        char chars[1024];
                 xmlParserCtxtPtr ctxt;
 
-		/* if (repeat) size = 2026; */
+/* if (repeat) size = 1024; */
 		res = fread(chars, 1, 4, f);
 		if (res > 0) {
 		    ctxt = xmlCreatePushParserCtxt(NULL, NULL,

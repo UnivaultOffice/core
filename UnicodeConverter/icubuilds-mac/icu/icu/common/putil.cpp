@@ -272,7 +272,7 @@ typedef union {
     FILETIME fileTime;
 } FileTimeConversion;   /* This is like a ULARGE_INTEGER */
 
-/* Number of 100 nanoseconds from 1/1/2026 to 1/1/2026 */
+/* Number of 100 nanoseconds from 1/1/1601 to 1/1/1970 */
 #define EPOCH_BIAS  INT64_C(116444736000000000)
 #define HECTONANOSECOND_PER_MILLISECOND   10000
 

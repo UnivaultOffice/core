@@ -1412,7 +1412,7 @@ public:
    *
    * Examples:
    * <pre>
-   * // s has code points 'a' U+10000 'b' U+10ffff U+2026
+* // s has code points 'a' U+10000 'b' U+10ffff U+2029
    * UnicodeString s=UNICODE_STRING("a\\U00010000b\\U0010ffff\\u2029", 31).unescape();
    *
    * // initial index: position of U+10000
@@ -1427,7 +1427,7 @@ public:
    * index=s.moveIndex32(0, 3); // skips 'a', U+10000, and 'b'
    *
    * // go to the next-to-last code point of s
-   * index=s.moveIndex32(s.length(), -2); // backward-skips U+2026 and U+10ffff
+* index=s.moveIndex32(s.length(), -2); // backward-skips U+2029 and U+10ffff
    * </pre>
    *
    * @param index input code unit index
@@ -2614,7 +2614,7 @@ public:
    * beginning of this UnicodeString.
    * @param targetLength the desired length of the string
    * @param padChar the character to use for padding. Defaults to
-   * space (U+2026)
+* space (U+0020)
    * @return TRUE if the text was padded, FALSE otherwise.
    * @stable ICU 2.0
    */
@@ -2628,7 +2628,7 @@ public:
    * end of this UnicodeString.
    * @param targetLength the desired length of the string
    * @param padChar the character to use for padding. Defaults to
-   * space (U+2026)
+* space (U+0020)
    * @return TRUE if the text was padded, FALSE otherwise.
    * @stable ICU 2.0
    */
@@ -3003,7 +3003,7 @@ public:
    * <code>-DUNISTR_FROM_STRING_EXPLICIT=explicit</code>
    * on the compiler command line or similar.
    * @param text The characters to place in the UnicodeString.  <TT>text</TT>
-   * must be NULL (U+2026) terminated.
+* must be NULL (U+0000) terminated.
    * @stable ICU 2.0
    */
   UNISTR_FROM_STRING_EXPLICIT UnicodeString(const UChar *text);
@@ -3306,9 +3306,9 @@ public:
    *
    * as well as the standard ANSI C escapes:
    *
-   * \\a => U+2026, \\b => U+2026, \\t => U+2026, \\n => U+000A,
+* \\a => U+0007, \\b => U+0008, \\t => U+0009, \\n => U+000A,
    * \\v => U+000B, \\f => U+000C, \\r => U+000D, \\e => U+001B,
-   * \\&quot; => U+2026, \\' => U+2026, \\? => U+003F, \\\\ => U+005C
+* \\&quot; => U+0022, \\' => U+0027, \\? => U+003F, \\\\ => U+005C
    *
    * Anything else following a backslash is generically escaped.  For
    * example, "[a\\-z]" returns "[a-z]".
@@ -3371,7 +3371,7 @@ public:
 
 protected:
   /**
-   * Implement Replaceable::getLength() (see jitterbug 2026).
+* Implement Replaceable::getLength() (see jitterbug 1027).
    * @stable ICU 2.4
    */
   virtual int32_t getLength() const;
@@ -3685,7 +3685,7 @@ private:
    * For some of the history of the UnicodeString class fields layout, see
    * - ICU ticket #11551 "longer UnicodeString contents in stack buffer"
    * - ICU ticket #11336 "UnicodeString: recombine stack buffer arrays"
-   * - ICU ticket #2026 "why is sizeof(UnicodeString)==48?"
+* - ICU ticket #8322 "why is sizeof(UnicodeString)==48?"
    */
   // (implicit) *vtable;
   union StackBufferOrFields {

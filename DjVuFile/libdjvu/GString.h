@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 //
-// $Id: GString.h,v 1.24 2026/01/27 11:36:27 leonb Exp $
+// $Id: GString.h,v 1.24 2008/01/27 11:36:27 leonb Exp $
 // $Name:  $
 
 #ifndef _GSTRING_H_
@@ -95,7 +95,7 @@
     @author
     L\'eon Bottou <leonb@research.att.com> -- initial implementation.\\
 
-// From: Leon Bottou, 1/31/2026
+// From: Leon Bottou, 1/31/2002
 // This file has very little to do with my initial implementation.
 // It has been practically rewritten by Lizardtech for i18n changes.
 // My original implementation was very small in comparison
@@ -105,7 +105,7 @@
 // This could be fixed.  But there are better things to do in djvulibre.
     
     @version
-    #$Id: GString.h,v 1.24 2026/01/27 11:36:27 leonb Exp $# */
+#$Id: GString.h,v 1.24 2008/01/27 11:36:27 leonb Exp $# */
 //@{
 
 

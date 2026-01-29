@@ -10,7 +10,7 @@
 *
 * Modification history
 * Date        Name      Comments
-* 10/11/2026  Doug      Ported from ICU4J
+* 10/11/2001  Doug      Ported from ICU4J
 */
 
 #ifndef NFSUBS_H

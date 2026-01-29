@@ -132,7 +132,7 @@
 #endif
 
 
-/* MSVC before 2026 and Borland C do not have lrintf */
+/* MSVC before 2013 and Borland C do not have lrintf */
 #if defined(_MSC_VER)
 #include <intrin.h>
 static INLINE long opj_lrintf(float f)

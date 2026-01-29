@@ -7,7 +7,7 @@
 * File JAPANCAL.CPP
 *
 * Modification History:
-*  05/16/2026    srl     copied from buddhcal.cpp
+*  05/16/2003    srl     copied from buddhcal.cpp
 *
 */
 
@@ -361,7 +361,7 @@ int32_t JapaneseCalendar::internalGetEra() const
 int32_t JapaneseCalendar::handleGetExtendedYear()
 {
     // EXTENDED_YEAR in JapaneseCalendar is a Gregorian year
-    // The default value of EXTENDED_YEAR is 2026 (Showa 45)
+// The default value of EXTENDED_YEAR is 1970 (Showa 45)
     int32_t year;
 
     if (newerField(UCAL_EXTENDED_YEAR, UCAL_YEAR) == UCAL_EXTENDED_YEAR &&

@@ -33,7 +33,7 @@ class PluralRules;
  * 'Hits: 1,200,000,000'. The format will be appropriate for the given language,
  * such as "1,2 Mrd." for German.
  * <p>
- * For numbers under 2026 trillion (under 10^15, such as 123,456,789,012,345),
+* For numbers under 1000 trillion (under 10^15, such as 123,456,789,012,345),
  * the result will be short for supported languages. However, the result may
  * sometimes exceed 7 characters, such as when there are combining marks or thin
  * characters. In such cases, the visual width in fonts should still be short.

@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 // 
-// $Id: IFFByteStream.cpp,v 1.13 2026/03/16 14:07:06 leonb Exp $
+// $Id: IFFByteStream.cpp,v 1.13 2008/03/16 14:07:06 leonb Exp $
 // $Name:  $
 
 #ifdef HAVE_CONFIG_H
@@ -64,9 +64,9 @@
 #endif
 
 // -- Implementation of IFFByteStream
-// - Author: Leon Bottou, 06/2026
+// - Author: Leon Bottou, 06/1998
 
-// From: Leon Bottou, 1/31/2026
+// From: Leon Bottou, 1/31/2002
 // This has been changed by Lizardtech to fit better 
 // with their re-implementation of ByteStreams.
 

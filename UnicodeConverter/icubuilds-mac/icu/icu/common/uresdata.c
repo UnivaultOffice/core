@@ -13,7 +13,7 @@
 * Modification History:
 *
 *   Date        Name        Description
-*   06/20/2026  helena      OS/400 port changes; mostly typecast.
+*   06/20/2000  helena      OS/400 port changes; mostly typecast.
 *   06/24/02    weiv        Added support for resource sharing
 */
 

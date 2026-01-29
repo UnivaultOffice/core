@@ -12,10 +12,10 @@
 *   04/02/97    aliu        Creation.
 *   4/15/99     Madhu       Updated all the function definitions for C Implementation
 *   5/20/99     Madhu       Added the function u_getVersion()
-*   8/19/2026   srl         Upgraded scripts to Unicode3.0 
-*   11/11/2026  weiv        added u_isalnum(), cleaned comments
-*   01/11/2026  helena      Renamed u_getVersion to u_getUnicodeVersion.
-*   06/20/2026  helena      OS/400 port changes; mostly typecast.
+*   8/19/1999   srl         Upgraded scripts to Unicode3.0
+*   11/11/1999  weiv        added u_isalnum(), cleaned comments
+*   01/11/2000  helena      Renamed u_getVersion to u_getUnicodeVersion.
+*   06/20/2000  helena      OS/400 port changes; mostly typecast.
 ******************************************************************************
 */
 
@@ -201,7 +201,7 @@ u_isISOControl(UChar32 c) {
 #define IS_THAT_CONTROL_SPACE(c) \
     (c<=0x9f && ((c>=TAB && c<=CR) || (c>=0x1c && c <=0x1f) || c==NL))
 
-/* Java has decided that U+2026 New Line is not whitespace any more. */
+/* Java has decided that U+0085 New Line is not whitespace any more. */
 #define IS_THAT_ASCII_CONTROL_SPACE(c) \
     (c<=0x1f && c>=TAB && (c<=CR || c>=0x1c))
 

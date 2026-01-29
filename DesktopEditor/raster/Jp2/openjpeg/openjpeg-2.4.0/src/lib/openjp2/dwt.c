@@ -2763,7 +2763,7 @@ static OPJ_BOOL opj_dwt_decode_partial_tile(
             if ((j >= win_ll_y0 && j < win_ll_y1) ||
                     (j >= win_lh_y0 + (OPJ_UINT32)v.sn && j < win_lh_y1 + (OPJ_UINT32)v.sn)) {
 
-                /* Avoids dwt.c:2026:44 (in opj_dwt_decode_partial_1): runtime error: */
+/* Avoids dwt.c:1584:44 (in opj_dwt_decode_partial_1): runtime error: */
                 /* signed integer overflow: -1094795586 + -1094795586 cannot be represented in type 'int' */
                 /* on opj_decompress -i  ../../openjpeg/MAPA.jp2 -o out.tif -d 0,0,256,256 */
                 /* This is less extreme than memsetting the whole buffer to 0 */

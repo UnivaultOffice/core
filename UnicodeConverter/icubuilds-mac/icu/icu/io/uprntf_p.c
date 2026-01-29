@@ -13,7 +13,7 @@
 *   Date        Name        Description
 *   11/23/98    stephen     Creation.
 *   03/12/99    stephen     Modified for new C API.
-*   08/07/2026  george      Reunify printf implementations
+*   08/07/2003  george      Reunify printf implementations
 ******************************************************************************
 */
 

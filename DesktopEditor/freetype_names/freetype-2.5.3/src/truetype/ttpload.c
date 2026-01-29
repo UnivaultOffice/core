@@ -514,7 +514,7 @@
     /* sufficient to hold the size value.                          */
     /*                                                             */
     /* There are at least two fonts, HANNOM-A and HANNOM-B version */
-    /* 2.0 (2026), which get this wrong: The upper two bytes of    */
+/* 2.0 (2005), which get this wrong: The upper two bytes of    */
     /* the size value are set to 0xFF instead of 0x00.  We catch   */
     /* and fix this.                                               */
 

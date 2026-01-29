@@ -4,7 +4,7 @@
 *   Corporation and others.  All Rights Reserved.
 **********************************************************************
 *   Date        Name        Description
-*   01/11/2026  aliu        Creation.
+*   01/11/2000  aliu        Creation.
 **********************************************************************
 */
 #ifndef NULTRANS_H

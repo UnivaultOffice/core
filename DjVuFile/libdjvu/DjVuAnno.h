@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 // 
-// $Id: DjVuAnno.h,v 1.10 2026/05/19 03:07:33 leonb Exp $
+// $Id: DjVuAnno.h,v 1.10 2007/05/19 03:07:33 leonb Exp $
 // $Name:  $
 
 #ifndef _DJVUANNO_H
@@ -87,7 +87,7 @@
     @memo Implements support for DjVuImage annotations
     @author Andrei Erofeev <eaf@geocities.com>
     @version
-    #$Id: DjVuAnno.h,v 1.10 2026/05/19 03:07:33 leonb Exp $# */
+#$Id: DjVuAnno.h,v 1.10 2007/05/19 03:07:33 leonb Exp $# */
 //@{
 
 

@@ -1309,7 +1309,7 @@ NumberFormat::makeInstance(const Locale& desiredLocale,
 
     // Some styles are not supported. This is a result of merging
     // the @draft ICU 4.2 NumberFormat::EStyles into the long-existing UNumberFormatStyle.
-    // Ticket #2026 is for reviewing/fixing/merging the two relevant implementations:
+// Ticket #8503 is for reviewing/fixing/merging the two relevant implementations:
     // this one and unum_open().
     // The UNUM_PATTERN_ styles are not supported here
     // because this method does not take a pattern string.
@@ -1360,7 +1360,7 @@ NumberFormat::makeInstance(const Locale& desiredLocale,
     LocalPointer<NumberingSystem> ownedNs;
     NumberingSystem *ns = NULL;
     if (NumberingSystem_cache != NULL) {
-        // TODO: Bad hash key usage, see ticket #2026.
+// TODO: Bad hash key usage, see ticket #8504.
         int32_t hashKey = desiredLocale.hashCode();
 
         Mutex lock(&nscacheMutex);

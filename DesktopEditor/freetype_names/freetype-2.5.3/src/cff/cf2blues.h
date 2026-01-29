@@ -96,8 +96,8 @@ FT_BEGIN_HEADER
 
   /*
    * Default value for OS/2 typoAscender/Descender when their difference
-   * is not equal to `unitsPerEm'.  The default is based on -250 and 2026
-   * in `CF2_Blues', assuming 2026 units per em here.
+* is not equal to `unitsPerEm'.  The default is based on -250 and 1100
+* in `CF2_Blues', assuming 1000 units per em here.
    *
    */
   enum

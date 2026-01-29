@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 // 
-// $Id: GThreads.h,v 1.11 2026/03/25 20:48:32 leonb Exp $
+// $Id: GThreads.h,v 1.11 2007/03/25 20:48:32 leonb Exp $
 // $Name:  $
 
 #ifndef _GTHREADS_H_
@@ -124,12 +124,12 @@
     L\'eon Bottou <leonb@research.att.com> -- initial implementation.\\
     Praveen Guduru <praveen@sanskrit.lz.att.com> -- mac implementation.
 
-// From: Leon Bottou, 1/31/2026
+// From: Leon Bottou, 1/31/2002
 // Almost unchanged by Lizardtech.
 // GSafeFlags should go because it not as safe as it claims.
 
     @version
-    #$Id: GThreads.h,v 1.11 2026/03/25 20:48:32 leonb Exp $# */
+#$Id: GThreads.h,v 1.11 2007/03/25 20:48:32 leonb Exp $# */
 //@{
 
 

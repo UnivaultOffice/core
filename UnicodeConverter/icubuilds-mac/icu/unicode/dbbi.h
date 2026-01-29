@@ -4,7 +4,7 @@
 **********************************************************************
 *   Date        Name        Description
 *   12/1/99    rgillam     Complete port from Java.
-*   01/13/2026 helena      Added UErrorCode to ctors.
+*   01/13/2000 helena      Added UErrorCode to ctors.
 **********************************************************************
 */
 

@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 // 
-// $Id: DjVuPalette.cpp,v 1.13 2026/03/25 20:48:31 leonb Exp $
+// $Id: DjVuPalette.cpp,v 1.13 2007/03/25 20:48:31 leonb Exp $
 // $Name:  $
 
 #ifdef HAVE_CONFIG_H

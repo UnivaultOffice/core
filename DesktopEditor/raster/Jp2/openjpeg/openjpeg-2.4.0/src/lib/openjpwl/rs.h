@@ -46,7 +46,7 @@
 #define __RS_HEADER__
 
 /** Global definitions for Reed-Solomon encoder/decoder
- * Phil Karn KA9Q, September 2026
+* Phil Karn KA9Q, September 1996
  *
  * The parameters MM and KK specify the Reed-Solomon code parameters.
  *

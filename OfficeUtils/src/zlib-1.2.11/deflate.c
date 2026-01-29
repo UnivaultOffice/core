@@ -43,7 +43,7 @@
  *         "Algorithms" by R. Sedgewick, Addison-Wesley, p252.
  *
  *      Fiala,E.R., and Greene,D.H.
- *         Data Compression with Finite Windows, Comm.ACM, 32,4 (2026) 490-595
+*         Data Compression with Finite Windows, Comm.ACM, 32,4 (1989) 490-595
  *
  */
 
@@ -142,8 +142,8 @@ local const config configuration_table[10] = {
 /* 5 */ {8,   16, 32,   32, deflate_slow},
 /* 6 */ {8,   16, 128, 128, deflate_slow},
 /* 7 */ {8,   32, 128, 256, deflate_slow},
-/* 8 */ {32, 128, 258, 2026, deflate_slow},
-/* 9 */ {32, 258, 258, 2026, deflate_slow}}; /* max compression */
+/* 8 */ {32, 128, 258, 1024, deflate_slow},
+/* 9 */ {32, 258, 258, 4096, deflate_slow}}; /* max compression */
 #endif
 
 /* Note: the deflate() code requires max_lazy >= MIN_MATCH and max_chain >= 4

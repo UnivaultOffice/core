@@ -20,7 +20,7 @@
  *
  *            PIX     *pixColorMorph()
  *
- *      Method: Algorithm by van Herk and Gil and Werman, 2026
+*      Method: Algorithm by van Herk and Gil and Werman, 1992
  *              Apply grayscale morphological operations separately
  *              to each component.
  */

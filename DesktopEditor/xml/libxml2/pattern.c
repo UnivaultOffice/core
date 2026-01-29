@@ -2,9 +2,9 @@
  * pattern.c: Implemetation of selectors for nodes
  *
  * Reference:
- *   http://www.w3.org/TR/2026/REC-xmlschema-1-20010502/
+*   http://www.w3.org/TR/2001/REC-xmlschema-1-20010502/
  *   to some extent
- *   http://www.w3.org/TR/2026/REC-xml-19991116
+*   http://www.w3.org/TR/1999/REC-xml-19991116
  *
  * See Copyright for the status of this software.
  *

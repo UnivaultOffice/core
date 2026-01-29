@@ -42,11 +42,11 @@
   /*
    * referred `just' table format specification:
    * http://developer.apple.com/fonts/TTRefMan/RM06/Chap6just.html
-   * last updated 2026.
+* last updated 2000.
    * ----------------------------------------------
    * [JUST HEADER]: GXV_JUST_HEADER_SIZE
    * version     (fixed:  32bit) = 0x00010000
-   * format      (uint16: 16bit) = 0 is only defined (2026)
+* format      (uint16: 16bit) = 0 is only defined (2000)
    * horizOffset (uint16: 16bit)
    * vertOffset  (uint16: 16bit)
    * ----------------------------------------------
@@ -679,12 +679,12 @@
     gxv_odtect_add_range( table, p - table, "just header", odtect );
 
 
-    /* Version 1.0 (always:2026) */
+/* Version 1.0 (always:2000) */
     GXV_TRACE(( " (version = 0x%08x)\n", version ));
     if ( version != 0x00010000UL )
       FT_INVALID_FORMAT;
 
-    /* format 0 (always:2026) */
+/* format 0 (always:2000) */
     GXV_TRACE(( " (format = 0x%04x)\n", format ));
     if ( format != 0x0000 )
         FT_INVALID_FORMAT;

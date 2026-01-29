@@ -21,7 +21,7 @@ class CharsetMatch;
 /**
  *  class CharsetRecog_2022  part of the ICU charset detection imlementation.
  *                           This is a superclass for the individual detectors for
- *                           each of the detectable members of the ISO 2026 family
+*                           each of the detectable members of the ISO 2022 family
  *                           of encodings.
  * 
  *                           The separate classes are nested within this class.
@@ -37,7 +37,7 @@ public:
 protected:
 
     /**
-     * Matching function shared among the 2026 detectors JP, CN and KR
+* Matching function shared among the 2022 detectors JP, CN and KR
      * Counts up the number of legal an unrecognized escape sequences in
      * the sample of text, and computes a score based on the total number &
      * the proportion that fit the encoding.

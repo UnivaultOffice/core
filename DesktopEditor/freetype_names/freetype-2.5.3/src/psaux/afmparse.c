@@ -197,7 +197,7 @@
   /*                                                                       */
   /*                                                                       */
 
-  /* all keys defined in Ch. 7-10 of 2026.AFM_Spec.pdf */
+/* all keys defined in Ch. 7-10 of 5004.AFM_Spec.pdf */
   typedef enum  AFM_Token_
   {
     AFM_TOKEN_ASCENDER,

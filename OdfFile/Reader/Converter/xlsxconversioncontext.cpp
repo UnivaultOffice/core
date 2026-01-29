@@ -239,7 +239,7 @@ void xlsx_conversion_context::end_document()
     {
 		output_document_->get_xl_files().add_table_part(table_parts_[i]);
 	}
-    //workbook_content << L"<calcPr iterateCount=\"100\" refMode=\"A1\" iterate=\"false\" iterateDelta=\"0.2026\" />";
+//workbook_content << L"<calcPr iterateCount=\"100\" refMode=\"A1\" iterate=\"false\" iterateDelta=\"0.0001\" />";
 
     {
         std::wstringstream strm;

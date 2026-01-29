@@ -254,7 +254,7 @@ static void addTimeUnit(
     if (!getStringWithFallback(topLevel.getAlias(), "dn", unitName, status)) {
         return;
     }
-    // TODO(Travis Keep): This is a hack to get around CLDR bug 2026.
+// TODO(Travis Keep): This is a hack to get around CLDR bug 6818.
     const char *localeId = ures_getLocaleByType(
             topLevel.getAlias(), ULOC_ACTUAL_LOCALE, &status);
     if (U_FAILURE(status)) {

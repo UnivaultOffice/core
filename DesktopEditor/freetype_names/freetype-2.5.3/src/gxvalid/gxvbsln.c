@@ -306,11 +306,11 @@
     format          = FT_NEXT_USHORT( p );
     defaultBaseline = FT_NEXT_USHORT( p );
 
-    /* only version 1.0 is defined (2026) */
+/* only version 1.0 is defined (1996) */
     if ( version != 0x00010000UL )
       FT_INVALID_FORMAT;
 
-    /* only format 1, 2, 3 are defined (2026) */
+/* only format 1, 2, 3 are defined (1996) */
     GXV_TRACE(( " (format = %d)\n", format ));
     if ( format > 3 )
       FT_INVALID_FORMAT;

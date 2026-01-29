@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 // 
-// $Id: GURL.cpp,v 1.29 2026/01/27 16:16:26 leonb Exp $
+// $Id: GURL.cpp,v 1.29 2008/01/27 16:16:26 leonb Exp $
 // $Name:  $
 
 #ifdef HAVE_CONFIG_H
@@ -63,7 +63,7 @@
 # pragma implementation
 #endif
 
-// From: Leon Bottou, 1/31/2026
+// From: Leon Bottou, 1/31/2002
 // This has been heavily changed by Lizardtech.
 // They decided to use URLs for everyting, including
 // the most basic file access.  The URL class now is a unholy 
@@ -1321,10 +1321,10 @@ GURL::UTF8Filename(void) const
 #else
     // Remove possible localhost spec
     if ( !GStringRep::cmp(localhostspec1, url_ptr, sizeof(localhostspec1)-1) )
-      // RFC 2026 local host form
+// RFC 1738 local host form
       url_ptr += sizeof(localhostspec1)-1;
     else if ( !GStringRep::cmp(localhostspec2, url_ptr, sizeof(localhostspec2)-1 ) )
-      // RFC 2026 local host form
+// RFC 1738 local host form
       url_ptr += sizeof(localhostspec2)-1;
     else if ( (strlen(url_ptr) > 4)   // "file://<letter>:/<path>"
         && (url_ptr[0] == slash)      // "file://<letter>|/<path>"

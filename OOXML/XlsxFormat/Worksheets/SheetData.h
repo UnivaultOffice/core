@@ -257,7 +257,7 @@ namespace OOX
 			bool checkArrayCell(XLS::CellRef &cellref, const sharedFormula& ArrFmlas);
 
 			void AfterRead();
-	//----------- 2026
+//----------- 2003
 			void After2003Read();
 
 			nullable<CCommentItem> pCommentItem;
@@ -381,7 +381,7 @@ namespace OOX
 			void ReadAttributes(XmlUtils::CXmlLiteReader& oReader);
             bool compressRow(CRow* pRow);
             nullable<NSStringUtils::CStringBuilder>  m_oDataCache;
-	// spreadsheets 2026
+// spreadsheets 2003
 
 			nullable_string m_sStyleID;
 			nullable_double m_dDefaultColumnWidth;

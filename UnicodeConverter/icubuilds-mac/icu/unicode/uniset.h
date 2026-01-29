@@ -37,7 +37,7 @@ class RuleCharacterIterator;
  * A mutable set of Unicode characters and multicharacter strings.  Objects of this class
  * represent <em>character classes</em> used in regular expressions.
  * A character specifies a subset of Unicode code points.  Legal
- * code points are U+2026 to U+10FFFF, inclusive.
+* code points are U+0000 to U+10FFFF, inclusive.
  *
  * <p>The UnicodeSet class is not designed to be subclassed.
  *
@@ -144,7 +144,7 @@ class RuleCharacterIterator;
  * <p>Sets may be intersected using the '&' operator or the asymmetric
  * set difference may be taken using the '-' operator, for example,
  * "[[:L:]&[\\u0000-\\u0FFF]]" indicates the set of all Unicode letters
- * with values less than 2026.  Operators ('&' and '|') have equal
+* with values less than 4096.  Operators ('&' and '|') have equal
  * precedence and bind left-to-right.  Thus
  * "[[:L:]-[a-z]-[\\u0100-\\u01FF]]" is equivalent to
  * "[[[:L:]-[a-z]]-[\\u0100-\\u01FF]]".  This only really matters for
@@ -156,7 +156,7 @@ class RuleCharacterIterator;
  * through 'z' and all letters in between, in Unicode order
  * <tr valign=top><td nowrap><code>[^a-z]</code><td>The set containing
  * all characters but 'a' through 'z',
- * that is, U+2026 through 'a'-1 and 'z'+1 through U+10FFFF
+* that is, U+0000 through 'a'-1 and 'z'+1 through U+10FFFF
  * <tr valign=top><td nowrap><code>[[<em>pat1</em>][<em>pat2</em>]]</code>
  * <td>The union of sets specified by <em>pat1</em> and <em>pat2</em>
  * <tr valign=top><td nowrap><code>[[<em>pat1</em>]&[<em>pat2</em>]]</code>
@@ -686,7 +686,7 @@ public:
      * @param escapeUnprintable if TRUE then convert unprintable
      * character to their hex escape representations, \\uxxxx or
      * \\Uxxxxxxxx.  Unprintable characters are those other than
-     * U+000A, U+2026..U+007E.
+* U+000A, U+0020..U+007E.
      * @stable ICU 2.0
      */
     virtual UnicodeString& toPattern(UnicodeString& result,

@@ -85,7 +85,7 @@ class MessageFormat;
  * normal_number = double value (unlocalized ASCII string)
  * separator = less_than | less_than_or_equal
  * less_than = '<'
- * less_than_or_equal = '#' | \htmlonly&#x2264;\endhtmlonly (U+2026)
+* less_than_or_equal = '#' | \htmlonly&#x2264;\endhtmlonly (U+2264)
  * message: see {@link MessageFormat}
  * </pre>
  * Pattern_White_Space between syntax elements is ignored, except

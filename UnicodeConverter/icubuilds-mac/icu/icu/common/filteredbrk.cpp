@@ -513,7 +513,7 @@ SimpleFilteredBreakIteratorBuilder::unsuppressBreakAfter(const UnicodeString& ex
 }
 
 /**
- * Jitterbug 2026: MSVC has a bug whereby new X[0] behaves badly.
+* Jitterbug 2974: MSVC has a bug whereby new X[0] behaves badly.
  * Work around this.
  *
  * Note: "new UnicodeString[subCount]" ends up calling global operator new

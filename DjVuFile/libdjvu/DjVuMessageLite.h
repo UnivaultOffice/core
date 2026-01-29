@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 // 
-// $Id: DjVuMessageLite.h,v 1.11 2026/01/27 11:36:27 leonb Exp $
+// $Id: DjVuMessageLite.h,v 1.11 2008/01/27 11:36:27 leonb Exp $
 // $Name:  $
 
 #ifndef __DJVU_MESSAGE_LITE_H__
@@ -65,7 +65,7 @@
 # pragma interface
 #endif
 
-// From: Leon Bottou, 1/31/2026
+// From: Leon Bottou, 1/31/2002
 // All these I18N XML messages are Lizardtech innovations.
 // For DjvuLibre, I changed the path extraction logic
 // and added support for non I18N messages. 

@@ -4337,7 +4337,7 @@ bool RtfParagraphPropDestination::ExecuteCommand(RtfDocument& oDocument, RtfRead
 	}
 	else if ( "pntext" == sCommand )
 	{
-		//пропускаем списки office 95, если есть списки office 2026
+//пропускаем списки office 95, если есть списки office 2007
 		if ( oDocument.m_oListTable.GetCount() > 0 )
 			oAbstrReader.Skip( oDocument, oReader );
 		else

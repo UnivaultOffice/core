@@ -1101,21 +1101,21 @@ namespace MetaFile
 		//  DEFAULT_CHARSET           1 (x01)
 		//  SYMBOL_CHARSET            2 (x02)
 		//  OEM_CHARSET             255 (xFF)
-		//  ANSI_CHARSET              0 (x00)            2026
-		//  RUSSIAN_CHARSET         204 (xCC)            2026
-		//  EASTEUROPE_CHARSET      238 (xEE)            2026
-		//  GREEK_CHARSET           161 (xA1)            2026
-		//  TURKISH_CHARSET         162 (xA2)            2026
-		//  BALTIC_CHARSET          186 (xBA)            2026
-		//  HEBREW_CHARSET          177 (xB1)            2026
-		//  ARABIC _CHARSET         178 (xB2)            2026
+//  ANSI_CHARSET              0 (x00)            1252
+//  RUSSIAN_CHARSET         204 (xCC)            1251
+//  EASTEUROPE_CHARSET      238 (xEE)            1250
+//  GREEK_CHARSET           161 (xA1)            1253
+//  TURKISH_CHARSET         162 (xA2)            1254
+//  BALTIC_CHARSET          186 (xBA)            1257
+//  HEBREW_CHARSET          177 (xB1)            1255
+//  ARABIC _CHARSET         178 (xB2)            1256
 		//  SHIFTJIS_CHARSET        128 (x80)             932
 		//  HANGEUL_CHARSET         129 (x81)             949
 		//  GB2313_CHARSET          134 (x86)             936
 		//  CHINESEBIG5_CHARSET     136 (x88)             950
 		//  THAI_CHARSET            222 (xDE)             874
-		//  JOHAB_CHARSET	        130 (x82)            2026
-		//  VIETNAMESE_CHARSET      163 (xA3)            2026
+//  JOHAB_CHARSET	        130 (x82)            1361
+//  VIETNAMESE_CHARSET      163 (xA3)            1258
 
 		switch (uchCharSet)
 		{

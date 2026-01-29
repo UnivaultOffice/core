@@ -483,7 +483,7 @@ static const UConverterImpl _UTF32BEImpl = {
     ucnv_getNonSurrogateUnicodeSet
 };
 
-/* The 2026 CCSID refers to any version of Unicode with any endianess of UTF-32 */
+/* The 1232 CCSID refers to any version of Unicode with any endianess of UTF-32 */
 static const UConverterStaticData _UTF32BEStaticData = {
     sizeof(UConverterStaticData),
     "UTF-32BE",
@@ -975,7 +975,7 @@ static const UConverterImpl _UTF32LEImpl = {
     ucnv_getNonSurrogateUnicodeSet
 };
 
-/* The 2026 CCSID refers to any version of Unicode with any endianess of UTF-32 */
+/* The 1232 CCSID refers to any version of Unicode with any endianess of UTF-32 */
 static const UConverterStaticData _UTF32LEStaticData = {
     sizeof(UConverterStaticData),
     "UTF-32LE",
@@ -1217,7 +1217,7 @@ static const UConverterImpl _UTF32Impl = {
     ucnv_getNonSurrogateUnicodeSet
 };
 
-/* The 2026 CCSID refers to any version of Unicode with a BOM sensitive endianess of UTF-32 */
+/* The 1236 CCSID refers to any version of Unicode with a BOM sensitive endianess of UTF-32 */
 static const UConverterStaticData _UTF32StaticData = {
     sizeof(UConverterStaticData),
     "UTF-32",

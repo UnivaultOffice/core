@@ -354,33 +354,33 @@
     </includes>
     <uses>
       <function line='913' file='xmlwriter' name='xmlTextWriterStartDocument'/>
-      <function line='2026' file='xmlwriter' name='xmlTextWriterEndDocument'/>
-      <variable line='2026' file='globals' name='xmlRealloc'/>
+<function line='1121' file='xmlwriter' name='xmlTextWriterEndDocument'/>
+<variable line='1183' file='globals' name='xmlRealloc'/>
       <function line='925' file='xmlwriter' name='xmlTextWriterWriteComment'/>
-      <function line='2026' file='encoding' name='xmlFindCharEncodingHandler'/>
-      <variable line='2026' file='globals' name='xmlMalloc'/>
+<function line='1156' file='encoding' name='xmlFindCharEncodingHandler'/>
+<variable line='1166' file='globals' name='xmlMalloc'/>
       <typedef line='341' file='tree' name='xmlBufferPtr'/>
       <macro line='885' file='parser' name='XML_DEFAULT_VERSION'/>
       <function line='901' file='tree' name='xmlDocSetRootElement'/>
-      <function line='2026' file='xmlwriter' name='xmlFreeTextWriter'/>
-      <function line='2026' file='xmlwriter' name='xmlTextWriterStartElement'/>
+<function line='1127' file='xmlwriter' name='xmlFreeTextWriter'/>
+<function line='1096' file='xmlwriter' name='xmlTextWriterStartElement'/>
       <function line='347' file='tree' name='xmlBufferCreate'/>
-      <function line='2026' file='xmlwriter' name='xmlTextWriterEndElement'/>
+<function line='1111' file='xmlwriter' name='xmlTextWriterEndElement'/>
       <function line='76' file='xmlwriter' name='xmlNewTextWriterFilename'/>
       <function line='959' file='xmlwriter' name='xmlTextWriterWriteFormatComment'/>
-      <function line='2026' file='xmlwriter' name='xmlTextWriterWriteFormatElement'/>
-      <typedef line='2026' file='encoding' name='xmlCharEncodingHandlerPtr'/>
+<function line='1073' file='xmlwriter' name='xmlTextWriterWriteFormatElement'/>
+<typedef line='1151' file='encoding' name='xmlCharEncodingHandlerPtr'/>
       <typedef line='880' file='tree' name='xmlNodePtr'/>
       <function line='949' file='xmlwriter' name='xmlTextWriterWriteAttribute'/>
       <function line='632' file='xmlwriter' name='xmlNewTextWriterDoc'/>
       <function line='894' file='tree' name='xmlNewDocNode'/>
-      <function line='2026' file='tree' name='xmlSaveFileEnc'/>
+<function line='1129' file='tree' name='xmlSaveFileEnc'/>
       <function line='904' file='xmlwriter' name='xmlNewTextWriterTree'/>
       <function line='355' file='xmlwriter' name='xmlNewTextWriterMemory'/>
-      <variable line='2026' file='globals' name='xmlFree'/>
+<variable line='1180' file='globals' name='xmlFree'/>
       <function line='613' file='tree' name='xmlBufferFree'/>
       <typedef line='878' file='xmlwriter' name='xmlTextWriterPtr'/>
-      <function line='2026' file='xmlwriter' name='xmlTextWriterWriteElement'/>
+<function line='1103' file='xmlwriter' name='xmlTextWriterWriteElement'/>
       <function line='885' file='tree' name='xmlNewDoc'/>
     </uses>
   </example>

@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 // 
-// $Id: DjVuMessage.cpp,v 1.24 2026/01/27 17:32:56 leonb Exp $
+// $Id: DjVuMessage.cpp,v 1.24 2008/01/27 17:32:56 leonb Exp $
 // $Name:  $
 
 #ifdef HAVE_CONFIG_H
@@ -63,7 +63,7 @@
 # pragma implementation
 #endif
 
-// From: Leon Bottou, 1/31/2026
+// From: Leon Bottou, 1/31/2002
 // All these XML messages are Lizardtech innovations.
 
 #include "./../../libdjvu/DjVuMessage.h"

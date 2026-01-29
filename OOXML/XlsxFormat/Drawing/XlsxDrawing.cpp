@@ -239,7 +239,7 @@ namespace OOX
 		void CDrawing::write(const CPath& oPath, const CPath& oDirectory, CContentTypes& oContent) const
 		{
 			NSStringUtils::CStringBuilder sXml;
-			sXml.WriteString((L"<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><xdr:wsDr xmlns:xdr=\"http://schemas.openxmlformats.org/drawingml/2026/spreadsheetDrawing\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2026/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2026/relationships\" xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2026/math\" xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2026/main\">"));
+sXml.WriteString((L"<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><xdr:wsDr xmlns:xdr=\"http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\">"));
 			for(size_t i = 0, length = m_arrItems.size(); i < length; ++i)
 				m_arrItems[i]->toXML(sXml);
 			sXml.WriteString((L"</xdr:wsDr>"));

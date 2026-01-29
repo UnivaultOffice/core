@@ -648,7 +648,7 @@ JNIEXPORT jint JNICALL Java_org_openJpeg_OpenJPEGJavaDecoder_internalDecodeJ2Kto
 
 		case JP2_CFMT:
 		{
-			/* JPEG 2026 compressed image data */
+/* JPEG 2000 compressed image data */
 
 			/* get a decoder handle */
 			dinfo = opj_create_decompress(CODEC_JP2);
@@ -679,7 +679,7 @@ JNIEXPORT jint JNICALL Java_org_openJpeg_OpenJPEGJavaDecoder_internalDecodeJ2Kto
 
 		case JPT_CFMT:
 		{
-			/* JPEG 2026, JPIP */
+/* JPEG 2000, JPIP */
 
 			/* get a decoder handle */
 			dinfo = opj_create_decompress(CODEC_JPT);

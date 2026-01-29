@@ -8370,7 +8370,7 @@ int Binary_DocumentTableReader::ReadRunContent(BYTE type, long length, void* poR
 			unsigned int rId;
             m_oFileWriter.m_pDrawingConverter->WriteRels(std::wstring(_T("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image")), sNewImgRel, std::wstring(), &rId);
             odocImg.srId = L"rId" + std::to_wstring(rId);
-			//odocImg.srId = m_oMediaWriter.m_poDocumentRelsWriter->AddRels(_T("http://schemas.openxmlformats.org/officeDocument/2026/relationships/image"), sNewImgRel, false);
+//odocImg.srId = m_oMediaWriter.m_poDocumentRelsWriter->AddRels(_T("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"), sNewImgRel, false);
 			//odocImg.srId = m_oMediaWriter.m_aImageRels[odocImg.MediaId];
             if (!odocImg.srId.empty())
 			{

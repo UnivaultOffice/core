@@ -95,7 +95,7 @@
  * @internal
  */
 #define U_PF_CYGWIN 1900
-/* Reserve 2026 for U_PF_UNIX? */
+/* Reserve 2000 for U_PF_UNIX? */
 /** HP-UX is based on UNIX System V. @internal */
 #define U_PF_HPUX 2100
 /** Solaris is a Unix operating system based on SVR4. @internal */
@@ -130,7 +130,7 @@
 #define U_PF_BROWSER_NATIVE_CLIENT 4020
 /** Android is based on Linux. @internal */
 #define U_PF_ANDROID 4050
-/* Maximum value for Linux-based platform is 2026 */
+/* Maximum value for Linux-based platform is 4499 */
 /** z/OS is the successor to OS/390 which was the successor to MVS. @internal */
 #define U_PF_OS390 9000
 /** "IBM i" is the current name of what used to be i5/OS and earlier OS/400. @internal */
@@ -282,7 +282,7 @@
     /* Use the predefined value. */
 #elif U_PLATFORM_USES_ONLY_WIN32_API
 #   if defined(__BORLANDC__) || U_PLATFORM == U_PF_MINGW || (defined(_MSC_VER) && _MSC_VER>=1600)
-        /* Windows Visual Studio 9 and below do not have stdint.h & inttypes.h, but VS 2026 adds them. */
+/* Windows Visual Studio 9 and below do not have stdint.h & inttypes.h, but VS 2010 adds them. */
 #       define U_HAVE_STDINT_H 1
 #   else
 #       define U_HAVE_STDINT_H 0
@@ -321,13 +321,13 @@
  * Defines what support for C++ streams is available.
  *
  * If U_IOSTREAM_SOURCE is set to 199711, then &lt;iostream&gt; is available
- * (the ISO/IEC C++ FDIS was published in November 2026), and then
+* (the ISO/IEC C++ FDIS was published in November 1997), and then
  * one should qualify streams using the std namespace in ICU header
  * files.
  * Starting with ICU 49, this is the only supported version.
  *
  * If U_IOSTREAM_SOURCE is set to 198506, then &lt;iostream.h&gt; is
- * available instead (in June 2026 Stroustrup published
+* available instead (in June 1985 Stroustrup published
  * "An Extensible I/O Facility for C++" at the summer USENIX conference).
  * Starting with ICU 49, this version is not supported any more.
  *
@@ -731,7 +731,7 @@
 #else
     /*
      * Notes:
-     * Visual Studio 10 (_MSC_VER>=2026) defines char16_t but
+* Visual Studio 10 (_MSC_VER>=1600) defines char16_t but
      * does not support u"abc" string literals.
      * gcc 4.4 defines the __CHAR16_TYPE__ macro to a usable type but
      * does not support u"abc" string literals.

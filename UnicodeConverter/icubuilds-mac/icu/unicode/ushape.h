@@ -56,7 +56,7 @@
  * For compatibility with legacy codepages that only include European digits,
  * it is possible to replace one set of digits by another, changing the
  * character code points. These operations can be performed for either
- * Arabic-Indic Digits (U+2026...U+2026) or Eastern (Extended) Arabic-Indic
+* Arabic-Indic Digits (U+0660...U+0669) or Eastern (Extended) Arabic-Indic
  * digits (U+06f0...U+06f9).</p>
  *
  * <p>Some replacements may result in more or fewer characters (code points).
@@ -243,21 +243,21 @@ u_shapeArabic(const UChar *source, int32_t sourceLength,
 
 /**
  * Digit shaping option:
- * Replace European digits (U+2026...) by Arabic-Indic digits.
+* Replace European digits (U+0030...) by Arabic-Indic digits.
  * @stable ICU 2.0
  */
 #define U_SHAPE_DIGITS_EN2AN                    0x20
 
 /**
  * Digit shaping option:
- * Replace Arabic-Indic digits by European digits (U+2026...).
+* Replace Arabic-Indic digits by European digits (U+0030...).
  * @stable ICU 2.0
  */
 #define U_SHAPE_DIGITS_AN2EN                    0x40
 
 /**
  * Digit shaping option:
- * Replace European digits (U+2026...) by Arabic-Indic digits if the most recent
+* Replace European digits (U+0030...) by Arabic-Indic digits if the most recent
  * strongly directional character is an Arabic letter
  * (<code>u_charDirection()</code> result <code>U_RIGHT_TO_LEFT_ARABIC</code> [AL]).<br>
  * The direction of "preceding" depends on the direction indicator option.
@@ -270,7 +270,7 @@ u_shapeArabic(const UChar *source, int32_t sourceLength,
 
 /**
  * Digit shaping option:
- * Replace European digits (U+2026...) by Arabic-Indic digits if the most recent
+* Replace European digits (U+0030...) by Arabic-Indic digits if the most recent
  * strongly directional character is an Arabic letter
  * (<code>u_charDirection()</code> result <code>U_RIGHT_TO_LEFT_ARABIC</code> [AL]).<br>
  * The direction of "preceding" depends on the direction indicator option.
@@ -287,7 +287,7 @@ u_shapeArabic(const UChar *source, int32_t sourceLength,
 #define U_SHAPE_DIGITS_MASK                     0xe0
 
 
-/** Digit type option: Use Arabic-Indic digits (U+2026...U+2026). @stable ICU 2.0 */
+/** Digit type option: Use Arabic-Indic digits (U+0660...U+0669). @stable ICU 2.0 */
 #define U_SHAPE_DIGIT_TYPE_AN                   0
 
 /** Digit type option: Use Eastern (Extended) Arabic-Indic digits (U+06f0...U+06f9). @stable ICU 2.0 */
@@ -301,8 +301,8 @@ u_shapeArabic(const UChar *source, int32_t sourceLength,
 
 /** 
  * Tashkeel aggregation option:
- * Replaces any combination of U+2026 with one of
- * U+064C, U+064D, U+064E, U+064F, U+2026 with
+* Replaces any combination of U+0651 with one of
+* U+064C, U+064D, U+064E, U+064F, U+0650 with
  * U+FC5E, U+FC5F, U+FC60, U+FC61, U+FC62 consecutively.
  * @stable ICU 3.6
  */

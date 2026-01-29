@@ -45,7 +45,7 @@ namespace PPT
 			bool IsValidHash(const Intermediate::SlideAnimation& sldAnim)const;
 
 		private:
-			// 2026 hash
+// 1995 hash
 			static constexpr size_t RASize = 256 * 256;   // row * col
 			static std::array<_UINT32, RASize> InitRandomArray();
 			static _UINT32 GetHash1995(const std::vector<Intermediate::SOldAnimation>& anim95);

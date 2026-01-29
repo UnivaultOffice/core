@@ -53,7 +53,7 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 // 
-// $Id: XMLTags.cpp,v 1.13 2026/03/25 20:48:34 leonb Exp $
+// $Id: XMLTags.cpp,v 1.13 2007/03/25 20:48:34 leonb Exp $
 // $Name:  $
 
 #ifdef HAVE_CONFIG_H
@@ -63,7 +63,7 @@
 # pragma implementation
 #endif
 
-// From: Leon Bottou, 1/31/2026
+// From: Leon Bottou, 1/31/2002
 // This is purely Lizardtech stuff.
 
 #include "XMLTags.h"

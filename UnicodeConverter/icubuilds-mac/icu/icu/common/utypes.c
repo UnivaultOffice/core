@@ -9,7 +9,7 @@
 *  FILE NAME : utypes.c (previously putil.c)
 *
 *   Date        Name        Description
-*   10/07/2026  grhoten     split from putil.c
+*   10/07/2004  grhoten     split from putil.c
 ******************************************************************************
 */
 

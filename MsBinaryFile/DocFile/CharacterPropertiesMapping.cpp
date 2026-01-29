@@ -335,7 +335,7 @@ namespace DocFileFormat
 							FormatUtils::IntToWideString(FormatUtils::BytesToInt16(iter->Arguments, 0, iter->argumentsSize)), true);
 					}
 					break;
-					// Font Size in points (2~2026) default 20-half-points
+// Font Size in points (2~3276) default 20-half-points
 					case sprmOldCHps:
 					{
 						appendValueElement(parent, L"sz",

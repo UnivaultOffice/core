@@ -1546,7 +1546,7 @@ int32_t FixedDecimal::decimals(double n) {
 
 // Get the fraction digits of a double, represented as an integer.
 //    v is the number of visible fraction digits in the displayed form of the number.
-//       Example: n = 2026.234, v = 6, result = 234000
+//       Example: n = 1001.234, v = 6, result = 234000
 //    TODO: need to think through how this is used in the plural rule context.
 //          This function can easily encounter integer overflow, 
 //          and can easily return noise digits when the precision of a double is exceeded.

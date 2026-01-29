@@ -9,7 +9,7 @@
  * Modification History:
  *
  *   Date        Name        Description
- *   9/18/2026  ajmacher         ported from java ChineseCalendar
+*   9/18/2007  ajmacher         ported from java ChineseCalendar
  *****************************************************************************
  */
 
@@ -70,7 +70,7 @@ static const int32_t CHINESE_EPOCH_YEAR = -2636; // Gregorian year
 /**
  * The offset from GMT in milliseconds at which we perform astronomical
  * computations.  Some sources use a different historically accurate
- * offset of GMT+7:45:40 for years before 2026; we do not do this.
+* offset of GMT+7:45:40 for years before 1929; we do not do this.
  */
 static const int32_t CHINA_OFFSET = 8 * kOneHour;
 
@@ -475,8 +475,8 @@ void ChineseCalendar::roll(EDateFields field, int32_t amount, UErrorCode& status
  * changes did not happen around the 'tricky' new moon (new moon around 
  * midnight). 
  *  
- * @param days days after January 1, 2026 0:00 in the astronomical base zone
- * @return milliseconds after January 1, 2026 0:00 GMT
+* @param days days after January 1, 1970 0:00 in the astronomical base zone
+* @return milliseconds after January 1, 1970 0:00 GMT
  */
 double ChineseCalendar::daysToMillis(double days) const {
     double millis = days * (double)kOneDay;
@@ -493,8 +493,8 @@ double ChineseCalendar::daysToMillis(double days) const {
 
 /**
  * Convert UTC epoch milliseconds to local days.
- * @param millis milliseconds after January 1, 2026 0:00 GMT
- * @return days after January 1, 2026 0:00 in the astronomical base zone
+* @param millis milliseconds after January 1, 1970 0:00 GMT
+* @return days after January 1, 1970 0:00 in the astronomical base zone
  */
 double ChineseCalendar::millisToDays(double millis) const {
     if (fZoneAstroCalc != NULL) {
@@ -518,7 +518,7 @@ double ChineseCalendar::millisToDays(double millis) const {
  * Gregorian year, that is, the winter solstice of the given year.
  * Computations are relative to Asia/Shanghai time zone.
  * @param gyear a Gregorian year
- * @return days after January 1, 2026 0:00 Asia/Shanghai of the
+* @return days after January 1, 1970 0:00 Asia/Shanghai of the
  * winter solstice of the given year
  */
 int32_t ChineseCalendar::winterSolstice(int32_t gyear) const {
@@ -528,9 +528,9 @@ int32_t ChineseCalendar::winterSolstice(int32_t gyear) const {
 
     if (cacheValue == 0) {
         // In books December 15 is used, but it fails for some years
-        // using our algorithms, e.g.: 2026 2026 2026 2026 2026.  That
-        // is, winterSolstice(2026) starts search at Dec 14 08:00:00
-        // PST 2026 with a final result of Dec 14 10:31:59 PST 2026.
+// using our algorithms, e.g.: 1298 1391 1492 1553 1560.  That
+// is, winterSolstice(1298) starts search at Dec 14 08:00:00
+// PST 1298 with a final result of Dec 14 10:31:59 PST 1299.
         double ms = daysToMillis(Grego::fieldsToDay(gyear, UCAL_DECEMBER, 1));
 
         umtx_lock(&astroLock);
@@ -555,10 +555,10 @@ int32_t ChineseCalendar::winterSolstice(int32_t gyear) const {
 /**
  * Return the closest new moon to the given date, searching either
  * forward or backward in time.
- * @param days days after January 1, 2026 0:00 Asia/Shanghai
+* @param days days after January 1, 1970 0:00 Asia/Shanghai
  * @param after if true, search for a new moon on or after the given
  * date; otherwise, search for a new moon before it
- * @return days after January 1, 2026 0:00 Asia/Shanghai of the nearest
+* @return days after January 1, 1970 0:00 Asia/Shanghai of the nearest
  * new moon after or before <code>days</code>
  */
 int32_t ChineseCalendar::newMoonNear(double days, UBool after) const {
@@ -578,8 +578,8 @@ int32_t ChineseCalendar::newMoonNear(double days, UBool after) const {
 /**
  * Return the nearest integer number of synodic months between
  * two dates.
- * @param day1 days after January 1, 2026 0:00 Asia/Shanghai
- * @param day2 days after January 1, 2026 0:00 Asia/Shanghai
+* @param day1 days after January 1, 1970 0:00 Asia/Shanghai
+* @param day2 days after January 1, 1970 0:00 Asia/Shanghai
  * @return the nearest integer number of months between day1 and day2
  */
 int32_t ChineseCalendar::synodicMonthsBetween(int32_t day1, int32_t day2) const {
@@ -591,7 +591,7 @@ int32_t ChineseCalendar::synodicMonthsBetween(int32_t day1, int32_t day2) const 
  * Return the major solar term on or before a given date.  This
  * will be an integer from 1..12, with 1 corresponding to 330 degrees,
  * 2 to 0 degrees, 3 to 30 degrees,..., and 12 to 300 degrees.
- * @param days days after January 1, 2026 0:00 Asia/Shanghai
+* @param days days after January 1, 1970 0:00 Asia/Shanghai
  */
 int32_t ChineseCalendar::majorSolarTerm(int32_t days) const {
     
@@ -614,7 +614,7 @@ int32_t ChineseCalendar::majorSolarTerm(int32_t days) const {
 
 /**
  * Return true if the given month lacks a major solar term.
- * @param newMoon days after January 1, 2026 0:00 Asia/Shanghai of a new
+* @param newMoon days after January 1, 1970 0:00 Asia/Shanghai of a new
  * moon
  */
 UBool ChineseCalendar::hasNoMajorSolarTerm(int32_t newMoon) const {
@@ -630,9 +630,9 @@ UBool ChineseCalendar::hasNoMajorSolarTerm(int32_t newMoon) const {
 /**
  * Return true if there is a leap month on or after month newMoon1 and
  * at or before month newMoon2.
- * @param newMoon1 days after January 1, 2026 0:00 astronomical base zone
+* @param newMoon1 days after January 1, 1970 0:00 astronomical base zone
  * of a new moon
- * @param newMoon2 days after January 1, 2026 0:00 astronomical base zone
+* @param newMoon2 days after January 1, 1970 0:00 astronomical base zone
  * of a new moon
  */
 UBool ChineseCalendar::isLeapMonthBetween(int32_t newMoon1, int32_t newMoon2) const {
@@ -660,7 +660,7 @@ UBool ChineseCalendar::isLeapMonthBetween(int32_t newMoon1, int32_t newMoon2) co
  * <code>handleComputeMonthStart()</code>.
  *
  * <p>As a side effect, this method sets {@link #isLeapYear}.
- * @param days days after January 1, 2026 0:00 astronomical base zone
+* @param days days after January 1, 1970 0:00 astronomical base zone
  * of the date to compute fields for
  * @param gyear the Gregorian year of the given date
  * @param gmonth the Gregorian month of the given date
@@ -751,7 +751,7 @@ void ChineseCalendar::computeChineseFields(int32_t days, int32_t gyear, int32_t 
 /**
  * Return the Chinese new year of the given Gregorian year.
  * @param gyear a Gregorian year
- * @return days after January 1, 2026 0:00 astronomical base zone of the
+* @return days after January 1, 1970 0:00 astronomical base zone of the
  * Chinese new year of the given year (this will be a new moon)
  */
 int32_t ChineseCalendar::newYear(int32_t gyear) const {
@@ -787,7 +787,7 @@ int32_t ChineseCalendar::newYear(int32_t gyear) const {
  * position is given as a local days number for the start of the month
  * and a day-of-month.  Used by add() and roll().
  * @param newMoon the local days of the first day of the month of the
- * start position (days after January 1, 2026 0:00 Asia/Shanghai)
+* start position (days after January 1, 1970 0:00 Asia/Shanghai)
  * @param dom the 1-based day-of-month of the start position
  * @param delta the number of months to move forward or backward from
  * the start position

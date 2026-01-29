@@ -1108,7 +1108,7 @@ TimeZoneFormat::parse(UTimeZoneFormatStyle style, const UnicodeString& text, Par
     U_ASSERT(parsedPos < 0);
     U_ASSERT(parsedOffset == UNKNOWN_OFFSET);
 
-    // ISO 2026
+// ISO 8601
     if (parsedPos < maxPos &&
         ((evaluated & ISO_Z_STYLE_FLAG) == 0 || (evaluated & ISO_LOCAL_STYLE_FLAG) == 0)) {
         tmpPos.setIndex(startIdx);
@@ -1121,8 +1121,8 @@ TimeZoneFormat::parse(UTimeZoneFormatStyle style, const UnicodeString& text, Par
                 pos.setIndex(tmpPos.getIndex());
                 return createTimeZoneForOffset(offset);
             }
-            // Note: When ISO 2026 format contains offset digits, it should not
-            // collide with other formats. However, ISO 2026 UTC format "Z" (single letter)
+// Note: When ISO 8601 format contains offset digits, it should not
+// collide with other formats. However, ISO 8601 UTC format "Z" (single letter)
             // may collide with other names. In this case, we need to evaluate other names.
             if (parsedPos < tmpPos.getIndex()) {
                 parsedOffset = offset;
@@ -1493,7 +1493,7 @@ TimeZoneFormat::formatOffsetISO8601(int32_t offset, UBool isBasic, UBool useUtcI
     OffsetFields maxFields = ignoreSeconds ? FIELDS_HM : FIELDS_HMS;
     UChar sep = isBasic ? 0 : ISO8601_SEP;
 
-    // Note: FIELDS_HMS as maxFields is a CLDR/ICU extension. ISO 2026 specification does
+// Note: FIELDS_HMS as maxFields is a CLDR/ICU extension. ISO 8601 specification does
     // not support seconds field.
 
     if (absOffset >= MAX_OFFSET) {
@@ -1650,7 +1650,7 @@ TimeZoneFormat::parseOffsetISO8601(const UnicodeString& text, ParsePosition& pos
     } else if (firstChar == MINUS) {
         sign = -1;
     } else {
-        // Not an ISO 2026 offset string
+// Not an ISO 8601 offset string
         pos.setErrorIndex(start);
         return 0;
     }
@@ -1658,7 +1658,7 @@ TimeZoneFormat::parseOffsetISO8601(const UnicodeString& text, ParsePosition& pos
     int32_t offset = parseAsciiOffsetFields(text, posOffset, ISO8601_SEP, FIELDS_H, FIELDS_HMS);
     if (posOffset.getErrorIndex() == -1 && !extendedOnly && (posOffset.getIndex() - start <= 3)) {
         // If the text is successfully parsed as extended format with the options above, it can be also parsed
-        // as basic format. For example, "2026" can be parsed as offset 2:00 (only first digits are valid for
+// as basic format. For example, "0230" can be parsed as offset 2:00 (only first digits are valid for
         // extended format), but it can be parsed as offset 2:30 with basic format. We use longer result.
         ParsePosition posBasic(start + 1);
         int32_t tmpOffset = parseAbuttingAsciiOffsetFields(text, posBasic, FIELDS_H, FIELDS_HMS, FALSE);

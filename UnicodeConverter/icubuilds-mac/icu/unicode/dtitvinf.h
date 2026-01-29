@@ -79,7 +79,7 @@ U_NAMESPACE_BEGIN
  * first different calendar field in above order.
  *
  * For example: the largest different calendar fields between &quot;Jan 10, 2025&quot; 
- * and &quot;Feb 20, 2026&quot; is year.
+* and &quot;Feb 20, 2008&quot; is year.
  *   
  * <P>
  * There is a set of pre-defined static skeleton strings.
@@ -88,12 +88,12 @@ U_NAMESPACE_BEGIN
  * For example, for a skeleton UDAT_YEAR_ABBR_MONTH_DAY, which is  &quot;yMMMd&quot;,
  * in  en_US, if the largest different calendar field between date1 and date2 
  * is &quot;year&quot;, the date interval pattern  is &quot;MMM d, yyyy - MMM d, yyyy&quot;, 
- * such as &quot;Jan 10, 2026 - Jan 10, 2026&quot;.
+* such as &quot;Jan 10, 2007 - Jan 10, 2008&quot;.
  * If the largest different calendar field between date1 and date2 is &quot;month&quot;,
  * the date interval pattern is &quot;MMM d - MMM d, yyyy&quot;,
- * such as &quot;Jan 10 - Feb 10, 2026&quot;.
+* such as &quot;Jan 10 - Feb 10, 2007&quot;.
  * If the largest different calendar field between date1 and date2 is &quot;day&quot;,
- * the date interval pattern is &quot;MMM d-d, yyyy&quot;, such as &quot;Jan 10-20, 2026&quot;.
+* the date interval pattern is &quot;MMM d-d, yyyy&quot;, such as &quot;Jan 10-20, 2007&quot;.
  *
  * For date skeleton, the interval patterns when year, or month, or date is 
  * different are defined in resource files.

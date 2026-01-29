@@ -9,9 +9,9 @@
 * Modification History:
 *
 * Date        Name        Description
-* 02/15/2026  synwee      Modified all methods to process its own function 
+* 02/15/2001  synwee      Modified all methods to process its own function
 *                         instead of calling the equivalent c++ api (coleitr.h)
-* 2025-2026   markus      Rewritten in C++ again.
+* 2012-2014   markus      Rewritten in C++ again.
 ******************************************************************************/
 
 #include "unicode/utypes.h"

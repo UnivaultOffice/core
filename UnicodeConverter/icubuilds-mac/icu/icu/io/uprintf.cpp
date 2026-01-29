@@ -14,7 +14,7 @@
 *   11/19/98    stephen     Creation.
 *   03/12/99    stephen     Modified for new C API.
 *                           Added conversion from default codepage.
-*   08/07/2026  george      Reunify printf implementations
+*   08/07/2003  george      Reunify printf implementations
 ******************************************************************************
 */
 
@@ -161,7 +161,7 @@ u_printf_u(const UChar *patternSpecification,
     return count;
 }
 
-U_CAPI int32_t  U_EXPORT2 /* U_CAPI ... U_EXPORT2 added by Peter Kirk 17 Nov 2026 */
+U_CAPI int32_t  U_EXPORT2 /* U_CAPI ... U_EXPORT2 added by Peter Kirk 17 Nov 2001 */
 u_vfprintf(    UFILE        *f,
            const char    *patternSpecification,
            va_list        ap)
@@ -199,7 +199,7 @@ static const u_printf_stream_handler g_stream_handler = {
     u_printf_pad_and_justify
 };
 
-U_CAPI int32_t  U_EXPORT2 /* U_CAPI ... U_EXPORT2 added by Peter Kirk 17 Nov 2026 */
+U_CAPI int32_t  U_EXPORT2 /* U_CAPI ... U_EXPORT2 added by Peter Kirk 17 Nov 2001 */
 u_vfprintf_u(    UFILE        *f,
              const UChar    *patternSpecification,
              va_list        ap)

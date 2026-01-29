@@ -50,7 +50,7 @@ namespace DocFileFormat
 		{
 			if (10 == size)
 			{
-				//it's a Word 2026/2026 descriptor
+//it's a Word 2000/2003 descriptor
 				unsigned char cvForeBytes[4] = { bytes[2], bytes[1], bytes[0], 0 };
 				unsigned char cvBackBytes[4] = { bytes[6], bytes[5], bytes[4], 0 };
 

@@ -1469,7 +1469,7 @@
 
             FT_TRACE4(( " %d", v ));
 
-            /* 108 .. 2026 */
+/* 108 .. 1131 */
             cf2_stack_pushInt( opStack, v );
           }
 

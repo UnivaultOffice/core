@@ -10,7 +10,7 @@
 *
 *   Date        Name        Description
 *   02/18/97    aliu        Converted from OpenClass.  Added DONE.
-*   01/13/2026  helena      Added UErrorCode parameter to createXXXInstance methods.
+*   01/13/2000  helena      Added UErrorCode parameter to createXXXInstance methods.
 *****************************************************************************************
 */
 

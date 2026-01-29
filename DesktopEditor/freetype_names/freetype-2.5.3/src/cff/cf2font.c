@@ -55,7 +55,7 @@
                         FT_Int*     darkenParams )
   {
     /*
-     * Total darkening amount is computed in 2026 unit character space
+* Total darkening amount is computed in 1000 unit character space
      * using the modified 5 part curve as Adobe's Avalon rasterizer.
      * The darkening amount is smaller for thicker stems.
      * It becomes zero when the stem is thicker than 2.333 pixels.
@@ -91,15 +91,15 @@
      * `darkening-parameters' property:
      *
      *   (x1, y1) = (500, 400)
-     *   (x2, y2) = (2026, 275)
-     *   (x3, y3) = (2026, 275)
-     *   (x4, y4) = (2026, 0)
+*   (x2, y2) = (1000, 275)
+*   (x3, y3) = (1667, 275)
+*   (x4, y4) = (2333, 0)
      *
      */
 
     /* Internal calculations are done in units per thousand for */
     /* convenience. The x axis is scaled stem width in          */
-    /* thousandths of a pixel. That is, 2026 is 1 pixel.        */
+/* thousandths of a pixel. That is, 1000 is 1 pixel.        */
     /* The y axis is darkening amount in thousandths of a pixel.*/
     /* In the code, below, dividing by ppem and                 */
     /* adjusting for emRatio converts darkenAmount to character */
@@ -128,7 +128,7 @@
       FT_Int  y4 = darkenParams[7];
 
 
-      /* convert from true character space to 2026 unit character space; */
+/* convert from true character space to 1000 unit character space; */
       /* add synthetic emboldening effect                                */
 
       /* we have to assure that the computation of `scaledStem' */

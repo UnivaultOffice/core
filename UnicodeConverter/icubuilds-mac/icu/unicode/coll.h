@@ -44,7 +44,7 @@
 * 05/15/00     helena      Added version information API.
 * 01/29/01     synwee      Modified into a C++ wrapper which calls C apis
 *                          (ucol.h).
-* 2025-2026    markus      Rewritten in C++ again.
+* 2012-2014    markus      Rewritten in C++ again.
 */
 
 #ifndef COLL_H

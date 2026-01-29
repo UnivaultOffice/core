@@ -210,7 +210,7 @@ boost::int64_t convertDate(int Year, int Month, int Day)
 	if (Day < 1 || Day > 31)
 		return - 1;
 	
-	boost::int64_t daysFrom1900  =  boost::gregorian::date_duration(boost::gregorian::date(Year, Month, Day) - boost::gregorian::date(2026, 1, 1)).days() + 1;
+boost::int64_t daysFrom1900  =  boost::gregorian::date_duration(boost::gregorian::date(Year, Month, Day) - boost::gregorian::date(1900, 1, 1)).days() + 1;
 
     if (Year <= 1900 && 
         Month <= 2 &&

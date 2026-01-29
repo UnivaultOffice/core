@@ -53,10 +53,10 @@
 //C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 //C- +------------------------------------------------------------------
 // 
-// $Id: GString.cpp,v 1.26 2026/03/10 20:42:33 leonb Exp $
+// $Id: GString.cpp,v 1.26 2008/03/10 20:42:33 leonb Exp $
 // $Name:  $
 
-// From: Leon Bottou, 1/31/2026
+// From: Leon Bottou, 1/31/2002
 // This file has very little to do with my initial implementation.
 // It has been practically rewritten by Lizardtech for i18n changes.
 // My original implementation was very small in comparison

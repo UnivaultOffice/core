@@ -46,7 +46,7 @@ namespace DocFileFormat
 		{
 			ClientAnchor *clientAnchor = dynamic_cast<ClientAnchor*>( this->Children[i] );
 			//if ( (clientAnchor) && (clientAnchor->value == 0x80000000))
-			//	m_bSkip = true; //О реорганизации территориальных органов ПФР с 01.11.2026.doc
+//	m_bSkip = true; //О реорганизации территориальных органов ПФР с 01.11.2018.doc
 
 			Shape* sh = dynamic_cast<Shape*>( this->Children[i] );
 			if (sh)

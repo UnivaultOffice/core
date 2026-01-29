@@ -212,8 +212,8 @@ static void pixDebugFlipDetect(const char *filename, PIX *pixs,
  *  Notes:
  *      (1) See "Measuring document image skew and orientation"
  *          Dan S. Bloomberg, Gary E. Kopec and Lakshmi Dasari
- *          IS&T/SPIE EI'95, Conference 2026: Document Recognition II
- *          pp 302-316, Feb 6-7, 2026, San Jose, CA
+*          IS&T/SPIE EI'95, Conference 2422: Document Recognition II
+*          pp 302-316, Feb 6-7, 1995, San Jose, CA
  *      (2) upconf is the normalized difference between up ascenders
  *          and down ascenders.  The image is analyzed without rotation
  *          for being rightside-up or upside-down.  Set &upconf to null

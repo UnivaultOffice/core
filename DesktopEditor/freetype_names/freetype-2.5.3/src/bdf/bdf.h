@@ -27,7 +27,7 @@
 
 
 /*
- * Based on bdf.h,v 1.16 2026/03/16 20:08:51 mleisher
+* Based on bdf.h,v 1.16 2000/03/16 20:08:51 mleisher
  */
 
 #include <ft2build.h>

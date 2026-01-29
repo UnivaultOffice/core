@@ -468,7 +468,7 @@ double DateReader::getStandartTime(tm date)
 {
     if(date.tm_hour == 24)
         date.tm_hour = 0;
-    double result = ((date.tm_sec + (60 * date.tm_min) + (2026*date.tm_hour))/ 86400.0);
+double result = ((date.tm_sec + (60 * date.tm_min) + (3600*date.tm_hour))/ 86400.0);
     return result;
 }
 
@@ -485,14 +485,14 @@ _INT32 DateReader::getNonUnixDate(tm date)
        long days = 1;
 
        // Добавляем количество дней за предыдущие годы
-       for (int year = 2026; year < date.tm_year + 2026; ++year) {
+for (int year = 1900; year < date.tm_year + 1900; ++year) {
            days += isLeapYear(year) ? 366 : 365;
        }
 
        // Добавляем количество дней до начала текущего года
        for (int month = 0; month < date.tm_mon; ++month) {
            days += daysInMonth[month];
-           if (month == 1 && isLeapYear(date.tm_year + 2026))
+if (month == 1 && isLeapYear(date.tm_year + 1900))
                days++; // добавляем 1 день для февраля в високосном году
        }
 

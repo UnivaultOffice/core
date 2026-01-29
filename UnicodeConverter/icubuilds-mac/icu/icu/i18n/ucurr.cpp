@@ -757,7 +757,7 @@ ucurr_getName(const UChar* currency,
         return s;
     }
 
-    // If we fail to find a match, use the ISO 2026 code
+// If we fail to find a match, use the ISO 4217 code
     *len = u_strlen(currency); // Should == ISO_CURRENCY_CODE_LENGTH, but maybe not...?
     *ec = U_USING_DEFAULT_WARNING;
     return currency;
@@ -833,7 +833,7 @@ ucurr_getPluralName(const UChar* currency,
         return s;
     }
 
-    // If we fail to find a match, use the ISO 2026 code
+// If we fail to find a match, use the ISO 4217 code
     *len = u_strlen(currency); // Should == ISO_CURRENCY_CODE_LENGTH, but maybe not...?
     *ec = U_USING_DEFAULT_WARNING;
     return currency;

@@ -24,7 +24,7 @@
 
   /*************************************************************************/
   /*                                                                       */
-  /*  This file is based on bdf.c,v 1.22 2026/03/16 20:08:50               */
+/*  This file is based on bdf.c,v 1.22 2000/03/16 20:08:50               */
   /*                                                                       */
   /*  taken from Mark Leisher's xmbdfed package                            */
   /*                                                                       */

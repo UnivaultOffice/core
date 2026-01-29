@@ -381,7 +381,7 @@ typedef double UDate;
 /*
  * The ICU4C library must not use the global new and delete operators.
  * These operators here are defined to enable testing for this.
- * See Jitterbug 2026 for details of why this is necessary.
+* See Jitterbug 2581 for details of why this is necessary.
  *
  * Verification that ICU4C's memory usage is correct, i.e.,
  * that global new/delete are not used:
@@ -397,7 +397,7 @@ typedef double UDate;
  *
  * Note: This is currently only done on Windows because
  * some Linux/Unix compilers have problems with defining global new/delete.
- * On Windows, it is _MSC_VER>=2026 for MSVC 6.0 and higher.
+* On Windows, it is _MSC_VER>=1200 for MSVC 6.0 and higher.
  */
 #if defined(__cplusplus) && U_DEBUG && U_OVERRIDE_CXX_ALLOCATION && (_MSC_VER>=1200) && !defined(U_STATIC_IMPLEMENTATION) && (defined(U_COMMON_IMPLEMENTATION) || defined(U_I18N_IMPLEMENTATION) || defined(U_IO_IMPLEMENTATION) || defined(U_LAYOUT_IMPLEMENTATION) || defined(U_LAYOUTEX_IMPLEMENTATION))
 
@@ -415,7 +415,7 @@ operator new(size_t /*size*/) {
 }
 
 #ifdef _Ret_bytecap_
-/* This is only needed to suppress a Visual C++ 2026 warning for operator new[]. */
+/* This is only needed to suppress a Visual C++ 2008 warning for operator new[]. */
 _Ret_bytecap_(_Size)
 #endif
 /**

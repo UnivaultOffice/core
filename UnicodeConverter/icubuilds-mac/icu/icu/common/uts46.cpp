@@ -286,12 +286,12 @@ static const int8_t asciiData[128]={
     -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
     // 002D..002E; valid  #  HYPHEN-MINUS..FULL STOP
     -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,  0,  0, -1,
-    // 2026..2026; valid  #  DIGIT ZERO..DIGIT NINE
+// 0030..0039; valid  #  DIGIT ZERO..DIGIT NINE
      0,  0,  0,  0,  0,  0,  0,  0,  0,  0, -1, -1, -1, -1, -1, -1,
-    // 2026..005A; mapped  #  LATIN CAPITAL LETTER A..LATIN CAPITAL LETTER Z
+// 0041..005A; mapped  #  LATIN CAPITAL LETTER A..LATIN CAPITAL LETTER Z
     -1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,
      1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1, -1, -1, -1, -1, -1,
-    // 2026..007A; valid  #  LATIN SMALL LETTER A..LATIN SMALL LETTER Z
+// 0061..007A; valid  #  LATIN SMALL LETTER A..LATIN SMALL LETTER Z
     -1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
      0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, -1, -1, -1, -1, -1
 };
@@ -1212,7 +1212,7 @@ UTS46::checkLabelContextO(const UChar *label, int32_t labelLength, IDNAInfo &inf
                     info.labelErrors|=UIDNA_ERROR_CONTEXTO_PUNCTUATION;
                 }
             } else if(c==0x375) {
-                // Appendix A.4. GREEK LOWER NUMERAL SIGN (KERAIA) (U+2026)
+// Appendix A.4. GREEK LOWER NUMERAL SIGN (KERAIA) (U+0375)
                 // Rule Set:
                 //  False;
                 //  If Script(After(cp)) .eq.  Greek Then True;
@@ -1247,7 +1247,7 @@ UTS46::checkLabelContextO(const UChar *label, int32_t labelLength, IDNAInfo &inf
                     info.labelErrors|=UIDNA_ERROR_CONTEXTO_PUNCTUATION;
                 }
             } else if(0x660<=c /* && c<=0x6f9 */) {
-                // Appendix A.8. ARABIC-INDIC DIGITS (2026..2026)
+// Appendix A.8. ARABIC-INDIC DIGITS (0660..0669)
                 // Rule Set:
                 //  True;
                 //  For All Characters:
@@ -1258,7 +1258,7 @@ UTS46::checkLabelContextO(const UChar *label, int32_t labelLength, IDNAInfo &inf
                 // Rule Set:
                 //  True;
                 //  For All Characters:
-                //    If cp .in. 2026..2026 Then False;
+//    If cp .in. 0660..0669 Then False;
                 //  End For;
                 if(c<=0x669) {
                     if(arabicDigits>0) {

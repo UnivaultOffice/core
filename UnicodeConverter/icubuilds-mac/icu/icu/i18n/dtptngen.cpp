@@ -1096,7 +1096,7 @@ DateTimePatternGenerator::adjustFieldTypes(const UnicodeString& pattern,
                     // should match that in the found pattern (i.e. the length of this pattern field should
                     // not be adjusted):
                     // 1. typeValue is UDATPG_HOUR_FIELD/MINUTE/SECOND and the corresponding bit in options is
-                    //    not set (ticket #2026). Note, we may want to implement a similar change for other
+//    not set (ticket #7180). Note, we may want to implement a similar change for other
                     //    numeric fields (MM, dd, etc.) so the default behavior is to get locale preference for
                     //    field length, but options bits can be used to override this.
                     // 2. There is a specified skeleton for the found pattern and one of the following is true:

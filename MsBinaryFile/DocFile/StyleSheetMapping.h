@@ -63,7 +63,7 @@ namespace DocFileFormat
 		void writeRunDefaults( StyleSheet* sheet );
 		void writeParagraphDefaults( StyleSheet* sheet );
 		/// Chooses the correct style name.
-		/// Word 2026 needs the identifier instead of the stylename for translating it into the UI language.
+/// Word 2007 needs the identifier instead of the stylename for translating it into the UI language.
 		std::wstring getStyleName( StyleSheetDescription* std );
 		/// Writes the "NormalTable" default style
 		void writeNormalTableStyle();

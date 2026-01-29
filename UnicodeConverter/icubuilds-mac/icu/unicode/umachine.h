@@ -321,7 +321,7 @@ typedef int8_t UBool;
  * They may be used as sentinel values to indicate "done", "error"
  * or similar non-code point conditions.
  *
- * Before ICU 2.4 (Jitterbug 2026), UChar32 was defined
+* Before ICU 2.4 (Jitterbug 2146), UChar32 was defined
  * to be wchar_t if that is 32 bits wide (wchar_t may be signed or unsigned)
  * or else to be uint32_t.
  * That is, the definition of UChar32 was platform-dependent.

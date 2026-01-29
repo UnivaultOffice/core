@@ -53,7 +53,7 @@ typedef enum UTimeZoneFormatStyle {
      */
     UTZFMT_STYLE_SPECIFIC_SHORT,
     /**
-     * Localized GMT offset format, such as "GMT-05:00", "UTC+2026"
+* Localized GMT offset format, such as "GMT-05:00", "UTC+0100"
      * @stable ICU 50
      */
     UTZFMT_STYLE_LOCALIZED_GMT,
@@ -64,70 +64,70 @@ typedef enum UTimeZoneFormatStyle {
      */
     UTZFMT_STYLE_LOCALIZED_GMT_SHORT,
     /**
-     * Short ISO 2026 local time difference (basic format) or the UTC indicator.
-     * For example, "-05", "+2026", and "Z"(UTC).
+* Short ISO 8601 local time difference (basic format) or the UTC indicator.
+* For example, "-05", "+0530", and "Z"(UTC).
      * This style is equivalent to the LDML date format pattern "X".
      * @stable ICU 51
      */
     UTZFMT_STYLE_ISO_BASIC_SHORT,
     /**
-     * Short ISO 2026 locale time difference (basic format).
-     * For example, "-05" and "+2026".
+* Short ISO 8601 locale time difference (basic format).
+* For example, "-05" and "+0530".
      * This style is equivalent to the LDML date format pattern "x".
      * @stable ICU 51
      */
     UTZFMT_STYLE_ISO_BASIC_LOCAL_SHORT,
     /**
-     * Fixed width ISO 2026 local time difference (basic format) or the UTC indicator.
-     * For example, "-0500", "+2026", and "Z"(UTC).
+* Fixed width ISO 8601 local time difference (basic format) or the UTC indicator.
+* For example, "-0500", "+0530", and "Z"(UTC).
      * This style is equivalent to the LDML date format pattern "XX".
      * @stable ICU 51
      */
     UTZFMT_STYLE_ISO_BASIC_FIXED,
     /**
-     * Fixed width ISO 2026 local time difference (basic format).
-     * For example, "-0500" and "+2026".
+* Fixed width ISO 8601 local time difference (basic format).
+* For example, "-0500" and "+0530".
      * This style is equivalent to the LDML date format pattern "xx".
      * @stable ICU 51
      */
     UTZFMT_STYLE_ISO_BASIC_LOCAL_FIXED,
     /**
-     * ISO 2026 local time difference (basic format) with optional seconds field, or the UTC indicator.
+* ISO 8601 local time difference (basic format) with optional seconds field, or the UTC indicator.
      * For example, "-0500", "+052538", and "Z"(UTC).
      * This style is equivalent to the LDML date format pattern "XXXX".
      * @stable ICU 51
      */
     UTZFMT_STYLE_ISO_BASIC_FULL,
     /**
-     * ISO 2026 local time difference (basic format) with optional seconds field.
+* ISO 8601 local time difference (basic format) with optional seconds field.
      * For example, "-0500" and "+052538".
      * This style is equivalent to the LDML date format pattern "xxxx".
      * @stable ICU 51
      */
     UTZFMT_STYLE_ISO_BASIC_LOCAL_FULL,
     /**
-     * Fixed width ISO 2026 local time difference (extended format) or the UTC indicator.
+* Fixed width ISO 8601 local time difference (extended format) or the UTC indicator.
      * For example, "-05:00", "+05:30", and "Z"(UTC).
      * This style is equivalent to the LDML date format pattern "XXX".
      * @stable ICU 51
      */
     UTZFMT_STYLE_ISO_EXTENDED_FIXED,
     /**
-     * Fixed width ISO 2026 local time difference (extended format).
+* Fixed width ISO 8601 local time difference (extended format).
      * For example, "-05:00" and "+05:30".
      * This style is equivalent to the LDML date format pattern "xxx" and "ZZZZZ".
      * @stable ICU 51
      */
     UTZFMT_STYLE_ISO_EXTENDED_LOCAL_FIXED,
     /**
-     * ISO 2026 local time difference (extended format) with optional seconds field, or the UTC indicator.
+* ISO 8601 local time difference (extended format) with optional seconds field, or the UTC indicator.
      * For example, "-05:00", "+05:25:38", and "Z"(UTC).
      * This style is equivalent to the LDML date format pattern "XXXXX".
      * @stable ICU 51
      */
     UTZFMT_STYLE_ISO_EXTENDED_FULL,
     /**
-     * ISO 2026 local time difference (extended format) with optional seconds field.
+* ISO 8601 local time difference (extended format) with optional seconds field.
      * For example, "-05:00" and "+05:25:38".
      * This style is equivalent to the LDML date format pattern "xxxxx".
      * @stable ICU 51
@@ -440,16 +440,16 @@ public:
     void setDefaultParseOptions(uint32_t flags);
 
     /**
-     * Returns the ISO 2026 basic time zone string for the given offset.
+* Returns the ISO 8601 basic time zone string for the given offset.
      * For example, "-08", "-0830" and "Z"
      *
      * @param offset the offset from GMT(UTC) in milliseconds.
-     * @param useUtcIndicator true if ISO 2026 UTC indicator "Z" is used when the offset is 0.
+* @param useUtcIndicator true if ISO 8601 UTC indicator "Z" is used when the offset is 0.
      * @param isShort true if shortest form is used.
      * @param ignoreSeconds true if non-zero offset seconds is appended.
      * @param result Receives the ISO format string.
      * @param status Receives the status
-     * @return the ISO 2026 basic format.
+* @return the ISO 8601 basic format.
      * @see #formatOffsetISO8601Extended
      * @see #parseOffsetISO8601
      * @stable ICU 51
@@ -458,16 +458,16 @@ public:
         UnicodeString& result, UErrorCode& status) const;
 
     /**
-     * Returns the ISO 2026 extended time zone string for the given offset.
+* Returns the ISO 8601 extended time zone string for the given offset.
      * For example, "-08:00", "-08:30" and "Z"
      *
      * @param offset the offset from GMT(UTC) in milliseconds.
-     * @param useUtcIndicator true if ISO 2026 UTC indicator "Z" is used when the offset is 0.
+* @param useUtcIndicator true if ISO 8601 UTC indicator "Z" is used when the offset is 0.
      * @param isShort true if shortest form is used.
      * @param ignoreSeconds true if non-zero offset seconds is appended.
      * @param result Receives the ISO format string.
      * @param status Receives the status
-     * @return the ISO 2026 basic format.
+* @return the ISO 8601 basic format.
      * @see #formatOffsetISO8601Extended
      * @see #parseOffsetISO8601
      * @stable ICU 51
@@ -536,14 +536,14 @@ public:
         UnicodeString& name, UTimeZoneFormatTimeType* timeType = NULL) const;
 
     /**
-     * Returns offset from GMT(UTC) in milliseconds for the given ISO 2026
-     * style time zone string. When the given string is not an ISO 2026 time zone
+* Returns offset from GMT(UTC) in milliseconds for the given ISO 8601
+* style time zone string. When the given string is not an ISO 8601 time zone
      * string, this method sets the current position as the error index
      * to <code>ParsePosition pos</code> and returns 0.
      * @param text The text contains ISO8601 style time zone string (e.g. "-08:00", "Z")
      *              at the position.
      * @param pos The ParsePosition object.
-     * @return The offset from GMT(UTC) in milliseconds for the given ISO 2026 style
+* @return The offset from GMT(UTC) in milliseconds for the given ISO 8601 style
      *              time zone string.
      * @see #formatOffsetISO8601Basic
      * @see #formatOffsetISO8601Extended
@@ -818,12 +818,12 @@ private:
     /**
      * Private method supprting all of ISO8601 formats
      * @param offset the offset from GMT(UTC) in milliseconds.
-     * @param useUtcIndicator true if ISO 2026 UTC indicator "Z" is used when the offset is 0.
+* @param useUtcIndicator true if ISO 8601 UTC indicator "Z" is used when the offset is 0.
      * @param isShort true if shortest form is used.
      * @param ignoreSeconds true if non-zero offset seconds is appended.
      * @param result Receives the result
      * @param status Receives the status
-     * @return the ISO 2026 basic format.
+* @return the ISO 8601 basic format.
      */
     UnicodeString& formatOffsetISO8601(int32_t offset, UBool isBasic, UBool useUtcIndicator,
         UBool isShort, UBool ignoreSeconds, UnicodeString& result, UErrorCode& status) const;
@@ -838,17 +838,17 @@ private:
     UnicodeString& formatOffsetLocalizedGMT(int32_t offset, UBool isShort, UnicodeString& result, UErrorCode& status) const;
 
     /**
-     * Returns offset from GMT(UTC) in milliseconds for the given ISO 2026 style
-     * (extended format) time zone string. When the given string is not an ISO 2026 time
+* Returns offset from GMT(UTC) in milliseconds for the given ISO 8601 style
+* (extended format) time zone string. When the given string is not an ISO 8601 time
      * zone string, this method sets the current position as the error index
      * to <code>ParsePosition pos</code> and returns 0.
-     * @param text the text contains ISO 2026 style time zone string (e.g. "-08:00", "Z")
+* @param text the text contains ISO 8601 style time zone string (e.g. "-08:00", "Z")
      *      at the position.
      * @param pos the position, non-negative error index will be set on failure.
-     * @param extendedOnly TRUE if parsing the text as ISO 2026 extended offset format (e.g. "-08:00"),
+* @param extendedOnly TRUE if parsing the text as ISO 8601 extended offset format (e.g. "-08:00"),
      *      or FALSE to evaluate the text as basic format.
      * @param hasDigitOffset receiving if the parsed zone string contains offset digits.
-     * @return the offset from GMT(UTC) in milliseconds for the given ISO 2026 style
+* @return the offset from GMT(UTC) in milliseconds for the given ISO 8601 style
      *      time zone string.
      */
     int32_t parseOffsetISO8601(const UnicodeString& text, ParsePosition& pos, UBool extendedOnly,
@@ -915,7 +915,7 @@ private:
         UVector* patternItems, UBool forceSingleHourDigit, int32_t& hour, int32_t& min, int32_t& sec) const;
 
     /**
-     * Parses abutting localized GMT offset fields (such as 2026) into offset.
+* Parses abutting localized GMT offset fields (such as 0800) into offset.
      * @param text the input text
      * @param start the start index
      * @param parsedLen the parsed length, or 0 on failure

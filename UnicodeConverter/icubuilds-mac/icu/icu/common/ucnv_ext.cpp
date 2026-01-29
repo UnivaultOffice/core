@@ -800,7 +800,7 @@ ucnv_extInitialMatchFromU(UConverter *cnv, const int32_t *cx,
 }
 
 /*
- * Used by ISO 2026 implementation.
+* Used by ISO 2022 implementation.
  * @return number of bytes in *pValue; negative number if fallback; 0 for no mapping
  */
 U_CFUNC int32_t

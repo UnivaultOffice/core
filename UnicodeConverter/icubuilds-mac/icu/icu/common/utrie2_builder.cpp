@@ -86,7 +86,7 @@ enum {
     UNEWTRIE2_DATA_START_OFFSET=UNEWTRIE2_DATA_NULL_OFFSET+0x40,
 
     /**
-     * The start of data blocks for U+2026 and above.
+* The start of data blocks for U+0800 and above.
      * Below, compaction uses a block length of 64 for 2-byte UTF-8.
      * From here on, compaction uses UTRIE2_DATA_BLOCK_LENGTH.
      * Data values for 0x780 code points beyond ASCII.
@@ -219,7 +219,7 @@ utrie2_open(uint32_t initialValue, uint32_t errorValue, UErrorCode *pErrorCode) 
     }
 
     /*
-     * Preallocate and reset data for U+2026..U+07ff,
+* Preallocate and reset data for U+0080..U+07ff,
      * for 2-byte UTF-8 which will be compacted in 64-blocks
      * even if UTRIE2_DATA_BLOCK_LENGTH is smaller.
      */

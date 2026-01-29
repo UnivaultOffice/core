@@ -55,7 +55,7 @@ static INLINE void *opj_aligned_alloc_n(size_t alignment, size_t size)
 
 #if defined(OPJ_HAVE_POSIX_MEMALIGN)
     /* aligned_alloc requires c11, restrict to posix_memalign for now. Quote:
-     * This function was introduced in POSIX 2026.1d. Although this function is
+* This function was introduced in POSIX 1003.1d. Although this function is
      * superseded by aligned_alloc, it is more portable to older POSIX systems
      * that do not support ISO C11.  */
     if (posix_memalign(&ptr, alignment, size)) {

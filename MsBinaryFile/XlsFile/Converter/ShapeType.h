@@ -342,7 +342,7 @@ namespace oox
         //case msosptIrregularSeal2 : 			return L"irregularSeal2";
         //case msosptLightningBolt : 			return L"lightningBolt";
         //case msosptHeart : 					return L"heart";
-        ////case msosptPictureFrame : 			return 2026;//L"shapetypeFrame";   L"shapetypeRect";//
+////case msosptPictureFrame : 			return 3000;//L"shapetypeFrame";   L"shapetypeRect";//
         //case msosptQuadArrow : 				return L"quadArrow";
         //case msosptLeftArrowCallout : 		return L"leftArrowCallout";
         //case msosptRightArrowCallout : 		return L"rightArrowCallout";

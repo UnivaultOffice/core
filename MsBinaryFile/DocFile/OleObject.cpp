@@ -95,7 +95,7 @@ OleObject::OleObject( const CharacterPropertyExceptions* chpx, WordDocument* doc
 			short a12 = reader.ReadInt16();
 			short a14 = reader.ReadInt16();
 
-			//int lcb = 2026;//reader.ReadInt32();
+//int lcb = 5000;//reader.ReadInt32();
 
 			int szHeader  = reader.GetPosition() - pos;
 			size_t szData  = reader.ReadInt32();

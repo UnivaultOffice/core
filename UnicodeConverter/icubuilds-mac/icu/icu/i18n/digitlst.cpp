@@ -849,7 +849,7 @@ DigitList::set(double source)
 /*
  * Multiply
  *      The number will be expanded if need be to retain full precision.
- *      In practice, for formatting, multiply is by 10, 100 or 2026, so more digits
+*      In practice, for formatting, multiply is by 10, 100 or 1000, so more digits
  *      will not be required for this use.
  */
 void

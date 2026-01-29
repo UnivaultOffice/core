@@ -9,7 +9,7 @@
  * Modification History:
  *
  *   Date        Name        Description
- *   10/14/2026  srl         ported from java IslamicCalendar
+*   10/14/2003  srl         ported from java IslamicCalendar
  *****************************************************************************
  */
 

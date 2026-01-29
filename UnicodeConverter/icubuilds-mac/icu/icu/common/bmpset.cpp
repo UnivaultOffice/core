@@ -32,8 +32,8 @@ BMPSet::BMPSet(const int32_t *parentList, int32_t parentListLength) :
 
     /*
      * Set the list indexes for binary searches for
-     * U+2026, U+2026, U+2026, .., U+F000, U+10000.
-     * U+2026 is the first 3-byte-UTF-8 code point. Lower code points are
+* U+0800, U+1000, U+2000, .., U+F000, U+10000.
+* U+0800 is the first 3-byte-UTF-8 code point. Lower code points are
      * looked up in the bit tables.
      * The last pair of indexes is for finding supplementary code points.
      */

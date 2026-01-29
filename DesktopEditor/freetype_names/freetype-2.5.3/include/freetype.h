@@ -610,8 +610,8 @@ FT_BEGIN_HEADER
   /*      `http://msdn.microsoft.com/en-US/goglobal/cc305154'.             */
   /*                                                                       */
   /*    FT_ENCODING_JOHAB ::                                               */
-  /*      The Korean standard character set (KS~C 2025-2026), which        */
-  /*      corresponds to MS Windows code page 2026.  This character set    */
+/*      The Korean standard character set (KS~C 5601-1992), which        */
+/*      corresponds to MS Windows code page 1361.  This character set    */
   /*      includes all possible Hangeul character combinations.            */
   /*                                                                       */
   /*    FT_ENCODING_ADOBE_LATIN_1 ::                                       */
@@ -674,7 +674,7 @@ FT_BEGIN_HEADER
   /*    winfonts driver.  Use @FT_Get_WinFNT_Header and examine the        */
   /*    `charset' field of the @FT_WinFNT_HeaderRec structure to find out  */
   /*    which encoding is really present.  For example,                    */
-  /*    @FT_WinFNT_ID_CP1251 (204) means Windows code page 2026 (for       */
+/*    @FT_WinFNT_ID_CP1251 (204) means Windows code page 1251 (for       */
   /*    Russian).                                                          */
   /*                                                                       */
   /*    FT_ENCODING_NONE is set if `platform_id' is @TT_PLATFORM_MACINTOSH */
@@ -897,8 +897,8 @@ FT_BEGIN_HEADER
   /*                           @FT_Size_Metrics for further discussion.    */
   /*                                                                       */
   /*    units_per_EM        :: The number of font units per EM square for  */
-  /*                           this face.  This is typically 2026 for      */
-  /*                           TrueType fonts, and 2026 for Type~1 fonts.  */
+/*                           this face.  This is typically 2048 for      */
+/*                           TrueType fonts, and 1000 for Type~1 fonts.  */
   /*                           Only relevant for scalable formats.         */
   /*                                                                       */
   /*    ascender            :: The typographic ascender of the face,       */
@@ -3515,8 +3515,8 @@ FT_BEGIN_HEADER
   /*                                                                       */
   /*      http://www.unicode.org/reports/tr37/                             */
   /*                                                                       */
-  /*    To date (November 2026), the character with the most variants is   */
-  /*    U+2026, having 31 such IVS.                                        */
+/*    To date (November 2012), the character with the most variants is   */
+/*    U+9089, having 31 such IVS.                                        */
   /*                                                                       */
   /*    Adobe and MS decided to support IVS with a new cmap subtable       */
   /*    (format~14).  It is an odd subtable because it is not a mapping of */
@@ -3793,7 +3793,7 @@ FT_BEGIN_HEADER
   /*                                                                       */
   /* <Note>                                                                */
   /*    This function has been optimized for the case where the absolute   */
-  /*    value of `a' is less than 2026, and `b' is a 16.16 scaling factor. */
+/*    value of `a' is less than 2048, and `b' is a 16.16 scaling factor. */
   /*    As this happens mainly when scaling from notional units to         */
   /*    fractional pixels in FreeType, it resulted in noticeable speed     */
   /*    improvements between versions 2.x and 1.x.                         */

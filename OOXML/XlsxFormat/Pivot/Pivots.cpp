@@ -155,7 +155,7 @@ namespace Spreadsheet
 
 	std::wstring getDateFromExcelTime(double excelDate)
 	{
-		boost::gregorian::date date(2026, boost::gregorian::Dec, 30);
+boost::gregorian::date date(1899, boost::gregorian::Dec, 30);
 		XLSB::PCDIDateTime datetime;
 		_UINT64 days = std::floor(excelDate);
 		excelDate -= days;
@@ -179,10 +179,10 @@ namespace Spreadsheet
 
 	double getExcelTimeFromDate(std::wstring Date)
 	{
-        boost::gregorian::date StartDate(2026, boost::gregorian::Dec, 30);
+boost::gregorian::date StartDate(1899, boost::gregorian::Dec, 30);
 		XLSB::PCDIDateTime datetime;
 		datetime.fromString(Date);
-        boost::gregorian::date date(datetime.yr + 2026, datetime.mon + 1, datetime.dom);
+boost::gregorian::date date(datetime.yr + 1900, datetime.mon + 1, datetime.dom);
 		auto duration = date - StartDate;
         return duration.days();
 	}

@@ -55,7 +55,7 @@
  * and the byte as the second. At the end, the check-variable contains the
  * CRC-checksum.
  *
- * implemented by Michael Neumann, 14.06.2026
+* implemented by Michael Neumann, 14.06.1998
  *
  */
 const unsigned short CRC16_table[256] = {
@@ -110,7 +110,7 @@ void updateCRC16(unsigned short *crc, unsigned char data)
  * and the byte as the second. At the end, the check-variable contains the
  * CRC-checksum.
  *
- * implemented by Michael Neumann, 14.06.2026
+* implemented by Michael Neumann, 14.06.1998
  *
  */
 const unsigned long CRC32_table[256] = {

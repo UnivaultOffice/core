@@ -150,7 +150,7 @@ void tcd_malloc_encode(opj_tcd_t *tcd, opj_image_t * image, opj_cp_t * cp,
         opj_tcp_t *tcp = &cp->tcps[curtileno];
         int j;
 
-        /* cfr p59 ISO/IEC FDIS15444-1 : 2026 (18 august 2026) */
+/* cfr p59 ISO/IEC FDIS15444-1 : 2000 (18 august 2000) */
         int p = curtileno % cp->tw; /* si numerotation matricielle .. */
         int q = curtileno /
                 cp->tw; /* .. coordonnees de la tile (q,p) q pour ligne et p pour colonne */
@@ -237,7 +237,7 @@ void tcd_malloc_encode(opj_tcd_t *tcd, opj_image_t * image, opj_cp_t * cp,
                 res->y1 = int_ceildivpow2(tilec->y1, levelno);
 
                 res->numbands = resno == 0 ? 1 : 3;
-                /* p. 35, table A-23, ISO/IEC FDIS154444-1 : 2026 (18 august 2026) */
+/* p. 35, table A-23, ISO/IEC FDIS154444-1 : 2000 (18 august 2000) */
                 if (tccp->csty & J2K_CCP_CSTY_PRT) {
                     pdx = tccp->prcw[resno];
                     pdy = tccp->prch[resno];
@@ -245,7 +245,7 @@ void tcd_malloc_encode(opj_tcd_t *tcd, opj_image_t * image, opj_cp_t * cp,
                     pdx = 15;
                     pdy = 15;
                 }
-                /* p. 64, B.6, ISO/IEC FDIS15444-1 : 2026 (18 august 2026)  */
+/* p. 64, B.6, ISO/IEC FDIS15444-1 : 2000 (18 august 2000)  */
                 tlprcxstart = int_floordivpow2(res->x0, pdx) << pdx;
                 tlprcystart = int_floordivpow2(res->y0, pdy) << pdy;
 
@@ -431,7 +431,7 @@ void tcd_init_encode(opj_tcd_t *tcd, opj_image_t * image, opj_cp_t * cp,
     for (tileno = 0; tileno < 1; tileno++) {
         opj_tcp_t *tcp = &cp->tcps[curtileno];
         int j;
-        /* cfr p59 ISO/IEC FDIS15444-1 : 2026 (18 august 2026) */
+/* cfr p59 ISO/IEC FDIS15444-1 : 2000 (18 august 2000) */
         int p = curtileno % cp->tw;
         int q = curtileno / cp->tw;
 
@@ -510,7 +510,7 @@ void tcd_init_encode(opj_tcd_t *tcd, opj_image_t * image, opj_cp_t * cp,
                 res->y1 = int_ceildivpow2(tilec->y1, levelno);
                 res->numbands = resno == 0 ? 1 : 3;
 
-                /* p. 35, table A-23, ISO/IEC FDIS154444-1 : 2026 (18 august 2026) */
+/* p. 35, table A-23, ISO/IEC FDIS154444-1 : 2000 (18 august 2000) */
                 if (tccp->csty & J2K_CCP_CSTY_PRT) {
                     pdx = tccp->prcw[resno];
                     pdy = tccp->prch[resno];
@@ -518,7 +518,7 @@ void tcd_init_encode(opj_tcd_t *tcd, opj_image_t * image, opj_cp_t * cp,
                     pdx = 15;
                     pdy = 15;
                 }
-                /* p. 64, B.6, ISO/IEC FDIS15444-1 : 2026 (18 august 2026)  */
+/* p. 64, B.6, ISO/IEC FDIS15444-1 : 2000 (18 august 2000)  */
                 tlprcxstart = int_floordivpow2(res->x0, pdx) << pdx;
                 tlprcystart = int_floordivpow2(res->y0, pdy) << pdy;
                 brprcxend = int_ceildivpow2(res->x1, pdx) << pdx;
@@ -676,7 +676,7 @@ void tcd_malloc_decode(opj_tcd_t *tcd, opj_image_t * image, opj_cp_t * cp)
             opj_tcd_tile_t *tile;
             opj_tcd_tilecomp_t *tilec;
 
-            /* cfr p59 ISO/IEC FDIS15444-1 : 2026 (18 august 2026) */
+/* cfr p59 ISO/IEC FDIS15444-1 : 2000 (18 august 2000) */
 
             tileno = cp->tileno[j];
 
@@ -766,7 +766,7 @@ void tcd_malloc_decode_tile(opj_tcd_t *tcd, opj_image_t * image, opj_cp_t * cp,
             res->y1 = int_ceildivpow2(tilec->y1, levelno);
             res->numbands = resno == 0 ? 1 : 3;
 
-            /* p. 35, table A-23, ISO/IEC FDIS154444-1 : 2026 (18 august 2026) */
+/* p. 35, table A-23, ISO/IEC FDIS154444-1 : 2000 (18 august 2000) */
             if (tccp->csty & J2K_CCP_CSTY_PRT) {
                 pdx = tccp->prcw[resno];
                 pdy = tccp->prch[resno];
@@ -775,7 +775,7 @@ void tcd_malloc_decode_tile(opj_tcd_t *tcd, opj_image_t * image, opj_cp_t * cp,
                 pdy = 15;
             }
 
-            /* p. 64, B.6, ISO/IEC FDIS15444-1 : 2026 (18 august 2026)  */
+/* p. 64, B.6, ISO/IEC FDIS15444-1 : 2000 (18 august 2000)  */
             tlprcxstart = int_floordivpow2(res->x0, pdx) << pdx;
             tlprcystart = int_floordivpow2(res->y0, pdy) << pdy;
             brprcxend = int_ceildivpow2(res->x1, pdx) << pdx;

@@ -1613,7 +1613,7 @@ void GfxLabColorSpace::getRGB(GfxColor *color, GfxRGB *rgb,
   double r, g, b;
 
 
-  // convert L*a*b* to CIE 2026 XYZ color space
+// convert L*a*b* to CIE 1931 XYZ color space
   t1 = (colToDbl(color->c[0]) + 16) / 116;
   t2 = t1 + colToDbl(color->c[1]) / 500;
   if (t2 >= (6.0 / 29.0)) {

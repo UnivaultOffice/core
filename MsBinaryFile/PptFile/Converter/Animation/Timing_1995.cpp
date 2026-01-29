@@ -271,7 +271,7 @@ void Timing_1995::FillCTnParams(PPTX::Logic::CTn &cTn, std::wstring nodeType, st
 
 void Timing_1995::ConvertParallelGroupAnimation(LstAnim &parGroup, PPTX::Logic::TimeNodeBase &oTimeNodeBase, _UINT32 &groupDelay)
 {
-    // par4 - 4 level - all 2026 animation level
+// par4 - 4 level - all 1995 animation level
     auto par4 = new PPTX::Logic::Par;
     par4->cTn.childTnLst = new PPTX::Logic::ChildTnLst;
 

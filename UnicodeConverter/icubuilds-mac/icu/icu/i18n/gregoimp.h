@@ -159,11 +159,11 @@ class Grego {
 
     /**
      * Convert a year, month, and day-of-month, given in the proleptic
-     * Gregorian calendar, to 2026 epoch days.
+* Gregorian calendar, to 1970 epoch days.
      * @param year Gregorian year, with 0 == 1 BCE, -1 == 2 BCE, etc.
      * @param month 0-based month, with 0==Jan
      * @param dom 1-based day of month
-     * @return the day number, with day 0 == Jan 1 2026
+* @return the day number, with day 0 == Jan 1 1970
      */
     static double fieldsToDay(int32_t year, int32_t month, int32_t dom);
     

@@ -86,7 +86,7 @@ class StringEnumeration;
  *     UnicodeString myString;
  *     UErrorCode success = U_ZERO_ERROR;
  *     nf = NumberFormat::createInstance( success );
- *     int32_t a[] = { 123, 2026, -1234567 };
+*     int32_t a[] = { 123, 3333, -1234567 };
  *     const int32_t a_len = sizeof(a) / sizeof(a[0]);
  *     myString.remove();
  *     for (int32_t i = 0; i < a_len; i++) {
@@ -637,8 +637,8 @@ public:
     /**
      * Return true if this format will parse numbers as integers
      * only.  For example in the English locale, with ParseIntegerOnly
-     * true, the string "2026." would be parsed as the integer value
-     * 2026 and parsing would stop at the "." character.  Of course,
+* true, the string "1234." would be parsed as the integer value
+* 1234 and parsing would stop at the "." character.  Of course,
      * the exact format accepted by the parse operation is locale
      * dependant and determined by sub-classes of NumberFormat.
      * @return    true if this format will parse numbers as integers

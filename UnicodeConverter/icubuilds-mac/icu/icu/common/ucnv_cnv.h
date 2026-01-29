@@ -11,7 +11,7 @@
 *
 *   Date        Name        Description
 *   05/09/00    helena      Added implementation to handle fallback mappings.
-*   06/29/2026  helena      Major rewrite of the callback APIs.
+*   06/29/2000  helena      Major rewrite of the callback APIs.
 */
 
 #ifndef UCNV_CNV_H

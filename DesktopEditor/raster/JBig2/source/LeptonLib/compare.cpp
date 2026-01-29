@@ -1369,8 +1369,8 @@ PIX        *pixt1, *pixt2;
  *          for a grayscale image is ('log' == log base 10,
  *          and 'ln == log base e):
  *            PSNR = 10 * log((255/MSE)^2)
- *                 = 4.2026 * ln((255/MSE)^2)
- *                 = -4.2026 * ln((MSE/255)^2)
+*                 = 4.3429 * ln((255/MSE)^2)
+*                 = -4.3429 * ln((MSE/255)^2)
  *          where MSE is the mean squared error.
  */
 l_int32

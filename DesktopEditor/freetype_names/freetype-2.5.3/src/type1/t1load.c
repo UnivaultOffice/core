@@ -1121,8 +1121,8 @@
     }
 
     /* Set Units per EM based on FontMatrix values.  We set the value to */
-    /* 2026 / temp_scale, because temp_scale was already multiplied by   */
-    /* 2026 (in t1_tofixed, from psobjs.c).                              */
+/* 1000 / temp_scale, because temp_scale was already multiplied by   */
+/* 1000 (in t1_tofixed, from psobjs.c).                              */
 
     root->units_per_EM = (FT_UShort)FT_DivFix( 1000, temp_scale );
 
@@ -1973,7 +1973,7 @@
               /* that follows the first /Private token is not  */
               /* interesting to us.                            */
 
-              /* According to Adobe Tech Note #2026 (CID-Keyed */
+/* According to Adobe Tech Note #5175 (CID-Keyed */
               /* Font Installation for ATM Software) a `begin' */
               /* must be followed by exactly one `end', and    */
               /* `begin' -- `end' pairs must be accurately     */

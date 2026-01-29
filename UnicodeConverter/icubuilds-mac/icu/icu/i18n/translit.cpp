@@ -1429,7 +1429,7 @@ UnicodeString& Transliterator::_getAvailableVariant(int32_t index,
  * Method for subclasses to use to obtain a character in the given
  * string, with filtering.
  * @deprecated the new architecture provides filtering at the top
- * level.  This method will be removed Dec 31 2026.
+* level.  This method will be removed Dec 31 2001.
  */
 UChar Transliterator::filteredCharAt(const Replaceable& text, int32_t i) const {
     UChar c;
